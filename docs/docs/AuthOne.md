@@ -12,9 +12,11 @@ from authone import AuthOneClient
 
 client = AuthOneClient(app_id, app_secret=your_app_secret)
 
-result = client.SocialUser.get_userinfo_by_token(token, signature)
+resp = client.SocialUser.get_userinfo_by_token(token, signature)
 
-print(result.userid)
-print(result.username)
-print(result.email)
+respdata = resp.data
+
+print(respdata["user_id"])
+print(respdata["user_name"])
+print(respdata["email"])
 ```
