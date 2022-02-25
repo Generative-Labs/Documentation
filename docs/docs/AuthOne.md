@@ -4,6 +4,18 @@ sidebar_position: 2
 
 # AuthOne
 
+
+## Auth Flow
+
+### Social Platform auth flow
+
+![image](https://github.com/Generative-Labs/Documentation/blob/main/resources/SocialAuthFlow.jpg)
+
+### MetaMask auth flow
+
+![image](https://github.com/Generative-Labs/Documentation/blob/main/resources/MetaMaskAuthFlow.jpg)
+
+
 ## Python SDK
 
 ```python
