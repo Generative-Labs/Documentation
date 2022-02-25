@@ -9,11 +9,11 @@ sidebar_position: 2
 
 ### Social Platform auth flow
 
-![image](https://github.com/Generative-Labs/Documentation/blob/main/resources/SocialAuthFlow.jpg)
+![image](https://github.com/Generative-Labs/Documentation/tree/main/docs/docs/resources/SocialAuthFlow.jpg)
 
 ### MetaMask auth flow
 
-![image](https://github.com/Generative-Labs/Documentation/blob/main/resources/MetaMaskAuthFlow.jpg)
+![image](https://github.com/Generative-Labs/Documentation/tree/main/docs/docs/resources/MetaMaskAuthFlow.jpg)
 
 
 ## Python SDK
