@@ -50,8 +50,14 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','ab3'),
+    component: ComponentCreator('/docs','65d'),
     routes: [
+      {
+        path: '/docs/AuthOne/intro',
+        component: ComponentCreator('/docs/AuthOne/intro','c33'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
       {
         path: '/docs/ChatServices/Contact/create-contanct',
         component: ComponentCreator('/docs/ChatServices/Contact/create-contanct','d94'),

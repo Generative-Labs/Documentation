@@ -11,6 +11,11 @@
           "mainDocId": "intro",
           "docs": [
             {
+              "id": "AuthOne/intro",
+              "path": "/docs/AuthOne/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "ChatServices/Contact/create-contanct",
               "path": "/docs/ChatServices/Contact/create-contanct",
               "sidebar": "tutorialSidebar"

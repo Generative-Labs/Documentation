@@ -17,6 +17,31 @@
           "contentPathLocalized": "/home/coder/WorkSpace/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
+              "unversionedId": "AuthOne/intro",
+              "id": "AuthOne/intro",
+              "title": "AuthOne",
+              "description": "Auth Flow",
+              "source": "@site/docs/AuthOne/intro.md",
+              "sourceDirName": "AuthOne",
+              "slug": "/AuthOne/intro",
+              "permalink": "/docs/AuthOne/intro",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 0,
+              "frontMatter": {
+                "sidebar_position": 0
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Intro",
+                "permalink": "/docs/intro"
+              },
+              "next": {
+                "title": "User Register",
+                "permalink": "/docs/ChatServices/User/user-register"
+              }
+            },
+            {
               "unversionedId": "ChatServices/Contact/create-contanct",
               "id": "ChatServices/Contact/create-contanct",
               "title": "Create a contract",
@@ -353,8 +378,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Intro",
-                "permalink": "/docs/intro"
+                "title": "AuthOne",
+                "permalink": "/docs/AuthOne/intro"
               },
               "next": {
                 "title": "User Login",
@@ -378,8 +403,8 @@
               },
               "sidebar": "tutorialSidebar",
               "next": {
-                "title": "User Register",
-                "permalink": "/docs/ChatServices/User/user-register"
+                "title": "AuthOne",
+                "permalink": "/docs/AuthOne/intro"
               }
             }
           ],
@@ -388,6 +413,18 @@
               {
                 "type": "doc",
                 "id": "intro"
+              },
+              {
+                "type": "category",
+                "label": "AuthOne",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "AuthOne/intro"
+                  }
+                ]
               },
               {
                 "type": "category",

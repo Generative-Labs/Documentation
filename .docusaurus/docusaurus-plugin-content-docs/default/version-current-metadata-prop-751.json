@@ -16,6 +16,20 @@
       },
       {
         "type": "category",
+        "label": "AuthOne",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "AuthOne",
+            "href": "/docs/AuthOne/intro",
+            "docId": "AuthOne/intro"
+          }
+        ]
+      },
+      {
+        "type": "category",
         "label": "ChatServices",
         "collapsible": true,
         "collapsed": true,
@@ -133,6 +147,12 @@
     ]
   },
   "docs": {
+    "AuthOne/intro": {
+      "id": "AuthOne/intro",
+      "title": "AuthOne",
+      "description": "Auth Flow",
+      "sidebar": "tutorialSidebar"
+    },
     "ChatServices/Contact/create-contanct": {
       "id": "ChatServices/Contact/create-contanct",
       "title": "Create a contract",

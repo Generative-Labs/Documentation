@@ -1,0 +1,25 @@
+{
+  "unversionedId": "AuthOne/intro",
+  "id": "AuthOne/intro",
+  "title": "AuthOne",
+  "description": "Auth Flow",
+  "source": "@site/docs/AuthOne/intro.md",
+  "sourceDirName": "AuthOne",
+  "slug": "/AuthOne/intro",
+  "permalink": "/docs/AuthOne/intro",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "sidebar_position": 0
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Intro",
+    "permalink": "/docs/intro"
+  },
+  "next": {
+    "title": "User Register",
+    "permalink": "/docs/ChatServices/User/user-register"
+  }
+}
