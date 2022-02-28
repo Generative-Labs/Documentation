@@ -1,0 +1,517 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "versionLabel": "Next",
+          "versionPath": "/docs",
+          "tagsPath": "/docs/tags",
+          "versionBanner": null,
+          "versionBadge": false,
+          "versionClassName": "docs-version-current",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "/home/coder/WorkSpace/Documentation/sidebars.js",
+          "contentPath": "/home/coder/WorkSpace/Documentation/docs",
+          "contentPathLocalized": "/home/coder/WorkSpace/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
+          "docs": [
+            {
+              "unversionedId": "ChatServices/Contact/create-contanct",
+              "id": "ChatServices/Contact/create-contanct",
+              "title": "Create a contract",
+              "description": "_",
+              "source": "@site/docs/ChatServices/Contact/create-contanct.md",
+              "sourceDirName": "ChatServices/Contact",
+              "slug": "/ChatServices/Contact/create-contanct",
+              "permalink": "/docs/ChatServices/Contact/create-contanct",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 0,
+              "frontMatter": {
+                "sidebar_position": 0
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Get User Info",
+                "permalink": "/docs/ChatServices/User/get-user-info"
+              },
+              "next": {
+                "title": "Get Contact Info",
+                "permalink": "/docs/ChatServices/Contact/get-contact-info"
+              }
+            },
+            {
+              "unversionedId": "ChatServices/Contact/get-contact-info",
+              "id": "ChatServices/Contact/get-contact-info",
+              "title": "Get Contact Info",
+              "description": "_",
+              "source": "@site/docs/ChatServices/Contact/get-contact-info.md",
+              "sourceDirName": "ChatServices/Contact",
+              "slug": "/ChatServices/Contact/get-contact-info",
+              "permalink": "/docs/ChatServices/Contact/get-contact-info",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Create a contract",
+                "permalink": "/docs/ChatServices/Contact/create-contanct"
+              },
+              "next": {
+                "title": "Join a contract",
+                "permalink": "/docs/ChatServices/Contact/join-contract"
+              }
+            },
+            {
+              "unversionedId": "ChatServices/Contact/get-contacts",
+              "id": "ChatServices/Contact/get-contacts",
+              "title": "Get Contacts",
+              "description": "_",
+              "source": "@site/docs/ChatServices/Contact/get-contacts.md",
+              "sourceDirName": "ChatServices/Contact",
+              "slug": "/ChatServices/Contact/get-contacts",
+              "permalink": "/docs/ChatServices/Contact/get-contacts",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Join a contract",
+                "permalink": "/docs/ChatServices/Contact/join-contract"
+              },
+              "next": {
+                "title": "Create Chat Room",
+                "permalink": "/docs/ChatServices/Rooms/create-room"
+              }
+            },
+            {
+              "unversionedId": "ChatServices/Contact/join-contract",
+              "id": "ChatServices/Contact/join-contract",
+              "title": "Join a contract",
+              "description": "_",
+              "source": "@site/docs/ChatServices/Contact/join-contract.md",
+              "sourceDirName": "ChatServices/Contact",
+              "slug": "/ChatServices/Contact/join-contract",
+              "permalink": "/docs/ChatServices/Contact/join-contract",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Get Contact Info",
+                "permalink": "/docs/ChatServices/Contact/get-contact-info"
+              },
+              "next": {
+                "title": "Get Contacts",
+                "permalink": "/docs/ChatServices/Contact/get-contacts"
+              }
+            },
+            {
+              "unversionedId": "ChatServices/intro",
+              "id": "ChatServices/intro",
+              "title": "Intro",
+              "description": "Wallet Direct Messaging",
+              "source": "@site/docs/ChatServices/intro.md",
+              "sourceDirName": "ChatServices",
+              "slug": "/ChatServices/intro",
+              "permalink": "/docs/ChatServices/intro",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 0
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Get Chat Rooms",
+                "permalink": "/docs/ChatServices/Rooms/get-chat-rooms"
+              }
+            },
+            {
+              "unversionedId": "ChatServices/Rooms/create-room",
+              "id": "ChatServices/Rooms/create-room",
+              "title": "Create Chat Room",
+              "description": "There are 2 ways to create a room:",
+              "source": "@site/docs/ChatServices/Rooms/create-room.md",
+              "sourceDirName": "ChatServices/Rooms",
+              "slug": "/ChatServices/Rooms/create-room",
+              "permalink": "/docs/ChatServices/Rooms/create-room",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 0,
+              "frontMatter": {
+                "sidebar_position": 0
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Get Contacts",
+                "permalink": "/docs/ChatServices/Contact/get-contacts"
+              },
+              "next": {
+                "title": "Send Messages",
+                "permalink": "/docs/ChatServices/Rooms/sent-message"
+              }
+            },
+            {
+              "unversionedId": "ChatServices/Rooms/get-chat-rooms",
+              "id": "ChatServices/Rooms/get-chat-rooms",
+              "title": "Get Chat Rooms",
+              "description": "_",
+              "source": "@site/docs/ChatServices/Rooms/get-chat-rooms.md",
+              "sourceDirName": "ChatServices/Rooms",
+              "slug": "/ChatServices/Rooms/get-chat-rooms",
+              "permalink": "/docs/ChatServices/Rooms/get-chat-rooms",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "sidebar_position": 3
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Get Room Info",
+                "permalink": "/docs/ChatServices/Rooms/get-room-info"
+              },
+              "next": {
+                "title": "Intro",
+                "permalink": "/docs/ChatServices/intro"
+              }
+            },
+            {
+              "unversionedId": "ChatServices/Rooms/get-messages",
+              "id": "ChatServices/Rooms/get-messages",
+              "title": "Get History Messages",
+              "description": "_",
+              "source": "@site/docs/ChatServices/Rooms/get-messages.md",
+              "sourceDirName": "ChatServices/Rooms",
+              "slug": "/ChatServices/Rooms/get-messages",
+              "permalink": "/docs/ChatServices/Rooms/get-messages",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Send Messages",
+                "permalink": "/docs/ChatServices/Rooms/sent-message"
+              },
+              "next": {
+                "title": "Get Room Info",
+                "permalink": "/docs/ChatServices/Rooms/get-room-info"
+              }
+            },
+            {
+              "unversionedId": "ChatServices/Rooms/get-room-info",
+              "id": "ChatServices/Rooms/get-room-info",
+              "title": "Get Room Info",
+              "description": "_",
+              "source": "@site/docs/ChatServices/Rooms/get-room-info.md",
+              "sourceDirName": "ChatServices/Rooms",
+              "slug": "/ChatServices/Rooms/get-room-info",
+              "permalink": "/docs/ChatServices/Rooms/get-room-info",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Get History Messages",
+                "permalink": "/docs/ChatServices/Rooms/get-messages"
+              },
+              "next": {
+                "title": "Get Chat Rooms",
+                "permalink": "/docs/ChatServices/Rooms/get-chat-rooms"
+              }
+            },
+            {
+              "unversionedId": "ChatServices/Rooms/sent-message",
+              "id": "ChatServices/Rooms/sent-message",
+              "title": "Send Messages",
+              "description": "_",
+              "source": "@site/docs/ChatServices/Rooms/sent-message.md",
+              "sourceDirName": "ChatServices/Rooms",
+              "slug": "/ChatServices/Rooms/sent-message",
+              "permalink": "/docs/ChatServices/Rooms/sent-message",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Create Chat Room",
+                "permalink": "/docs/ChatServices/Rooms/create-room"
+              },
+              "next": {
+                "title": "Get History Messages",
+                "permalink": "/docs/ChatServices/Rooms/get-messages"
+              }
+            },
+            {
+              "unversionedId": "ChatServices/User/bind-social-platform",
+              "id": "ChatServices/User/bind-social-platform",
+              "title": "Bind social platform",
+              "description": "_",
+              "source": "@site/docs/ChatServices/User/bind-social-platform.md",
+              "sourceDirName": "ChatServices/User",
+              "slug": "/ChatServices/User/bind-social-platform",
+              "permalink": "/docs/ChatServices/User/bind-social-platform",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "User Login",
+                "permalink": "/docs/ChatServices/User/user-login"
+              },
+              "next": {
+                "title": "Get User Info",
+                "permalink": "/docs/ChatServices/User/get-user-info"
+              }
+            },
+            {
+              "unversionedId": "ChatServices/User/get-user-info",
+              "id": "ChatServices/User/get-user-info",
+              "title": "Get User Info",
+              "description": "_",
+              "source": "@site/docs/ChatServices/User/get-user-info.md",
+              "sourceDirName": "ChatServices/User",
+              "slug": "/ChatServices/User/get-user-info",
+              "permalink": "/docs/ChatServices/User/get-user-info",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "sidebar_position": 3
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Bind social platform",
+                "permalink": "/docs/ChatServices/User/bind-social-platform"
+              },
+              "next": {
+                "title": "Create a contract",
+                "permalink": "/docs/ChatServices/Contact/create-contanct"
+              }
+            },
+            {
+              "unversionedId": "ChatServices/User/user-login",
+              "id": "ChatServices/User/user-login",
+              "title": "User Login",
+              "description": "_",
+              "source": "@site/docs/ChatServices/User/user-login.md",
+              "sourceDirName": "ChatServices/User",
+              "slug": "/ChatServices/User/user-login",
+              "permalink": "/docs/ChatServices/User/user-login",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "User Register",
+                "permalink": "/docs/ChatServices/User/user-register"
+              },
+              "next": {
+                "title": "Bind social platform",
+                "permalink": "/docs/ChatServices/User/bind-social-platform"
+              }
+            },
+            {
+              "unversionedId": "ChatServices/User/user-register",
+              "id": "ChatServices/User/user-register",
+              "title": "User Register",
+              "description": "_",
+              "source": "@site/docs/ChatServices/User/user-register.md",
+              "sourceDirName": "ChatServices/User",
+              "slug": "/ChatServices/User/user-register",
+              "permalink": "/docs/ChatServices/User/user-register",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 0,
+              "frontMatter": {
+                "sidebar_position": 0
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Intro",
+                "permalink": "/docs/intro"
+              },
+              "next": {
+                "title": "User Login",
+                "permalink": "/docs/ChatServices/User/user-login"
+              }
+            },
+            {
+              "unversionedId": "intro",
+              "id": "intro",
+              "title": "Intro",
+              "description": "This site hosts the documentation for Housechan Chat service, which you can browse by clicking on the area to the left.",
+              "source": "@site/docs/intro.md",
+              "sourceDirName": ".",
+              "slug": "/intro",
+              "permalink": "/docs/intro",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 0,
+              "frontMatter": {
+                "sidebar_position": 0
+              },
+              "sidebar": "tutorialSidebar",
+              "next": {
+                "title": "User Register",
+                "permalink": "/docs/ChatServices/User/user-register"
+              }
+            }
+          ],
+          "sidebars": {
+            "tutorialSidebar": [
+              {
+                "type": "doc",
+                "id": "intro"
+              },
+              {
+                "type": "category",
+                "label": "ChatServices",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "category",
+                    "label": "User API",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "ChatServices/User/user-register"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ChatServices/User/user-login"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ChatServices/User/bind-social-platform"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ChatServices/User/get-user-info"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
+                    "label": "Contacts Manage",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "ChatServices/Contact/create-contanct"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ChatServices/Contact/get-contact-info"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ChatServices/Contact/join-contract"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ChatServices/Contact/get-contacts"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
+                    "label": "Rooms And Messages",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "ChatServices/Rooms/create-room"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ChatServices/Rooms/sent-message"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ChatServices/Rooms/get-messages"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ChatServices/Rooms/get-room-info"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ChatServices/Rooms/get-chat-rooms"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "doc",
+                    "id": "ChatServices/intro"
+                  }
+                ]
+              }
+            ]
+          },
+          "mainDocId": "intro",
+          "categoryGeneratedIndices": []
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-blog": {
+    "default": {
+      "blogSidebarTitle": "Recent posts",
+      "blogPosts": [],
+      "blogListPaginated": [],
+      "blogTags": {},
+      "blogTagsListPath": null
+    }
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": [
+      {
+        "type": "jsx",
+        "permalink": "/",
+        "source": "@site/src/pages/index.js"
+      },
+      {
+        "type": "mdx",
+        "permalink": "/markdown-page",
+        "source": "@site/src/pages/markdown-page.md"
+      }
+    ]
+  },
+  "docusaurus-plugin-debug": {
+    "default": null
+  },
+  "docusaurus-theme-classic": {
+    "default": null
+  }
+}

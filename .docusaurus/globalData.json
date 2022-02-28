@@ -1,0 +1,93 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "ChatServices/Contact/create-contanct",
+              "path": "/docs/ChatServices/Contact/create-contanct",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ChatServices/Contact/get-contact-info",
+              "path": "/docs/ChatServices/Contact/get-contact-info",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ChatServices/Contact/get-contacts",
+              "path": "/docs/ChatServices/Contact/get-contacts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ChatServices/Contact/join-contract",
+              "path": "/docs/ChatServices/Contact/join-contract",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ChatServices/intro",
+              "path": "/docs/ChatServices/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ChatServices/Rooms/create-room",
+              "path": "/docs/ChatServices/Rooms/create-room",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ChatServices/Rooms/get-chat-rooms",
+              "path": "/docs/ChatServices/Rooms/get-chat-rooms",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ChatServices/Rooms/get-messages",
+              "path": "/docs/ChatServices/Rooms/get-messages",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ChatServices/Rooms/get-room-info",
+              "path": "/docs/ChatServices/Rooms/get-room-info",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ChatServices/Rooms/sent-message",
+              "path": "/docs/ChatServices/Rooms/sent-message",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ChatServices/User/bind-social-platform",
+              "path": "/docs/ChatServices/User/bind-social-platform",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ChatServices/User/get-user-info",
+              "path": "/docs/ChatServices/User/get-user-info",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ChatServices/User/user-login",
+              "path": "/docs/ChatServices/User/user-login",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ChatServices/User/user-register",
+              "path": "/docs/ChatServices/User/user-register",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/docs/intro",
+              "sidebar": "tutorialSidebar"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

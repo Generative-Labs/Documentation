@@ -1,0 +1,25 @@
+{
+  "unversionedId": "ChatServices/User/user-login",
+  "id": "ChatServices/User/user-login",
+  "title": "User Login",
+  "description": "_",
+  "source": "@site/docs/ChatServices/User/user-login.md",
+  "sourceDirName": "ChatServices/User",
+  "slug": "/ChatServices/User/user-login",
+  "permalink": "/docs/ChatServices/User/user-login",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "User Register",
+    "permalink": "/docs/ChatServices/User/user-register"
+  },
+  "next": {
+    "title": "Bind social platform",
+    "permalink": "/docs/ChatServices/User/bind-social-platform"
+  }
+}

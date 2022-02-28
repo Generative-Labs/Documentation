@@ -1,0 +1,20 @@
+{
+  "unversionedId": "ChatServices/intro",
+  "id": "ChatServices/intro",
+  "title": "Intro",
+  "description": "Wallet Direct Messaging",
+  "source": "@site/docs/ChatServices/intro.md",
+  "sourceDirName": "ChatServices",
+  "slug": "/ChatServices/intro",
+  "permalink": "/docs/ChatServices/intro",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "position": 0
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Get Chat Rooms",
+    "permalink": "/docs/ChatServices/Rooms/get-chat-rooms"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "unversionedId": "ChatServices/Rooms/create-room",
+  "id": "ChatServices/Rooms/create-room",
+  "title": "Create Chat Room",
+  "description": "There are 2 ways to create a room:",
+  "source": "@site/docs/ChatServices/Rooms/create-room.md",
+  "sourceDirName": "ChatServices/Rooms",
+  "slug": "/ChatServices/Rooms/create-room",
+  "permalink": "/docs/ChatServices/Rooms/create-room",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "sidebar_position": 0
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Get Contacts",
+    "permalink": "/docs/ChatServices/Contact/get-contacts"
+  },
+  "next": {
+    "title": "Send Messages",
+    "permalink": "/docs/ChatServices/Rooms/sent-message"
+  }
+}

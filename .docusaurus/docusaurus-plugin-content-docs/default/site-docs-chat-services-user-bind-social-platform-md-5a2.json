@@ -1,0 +1,25 @@
+{
+  "unversionedId": "ChatServices/User/bind-social-platform",
+  "id": "ChatServices/User/bind-social-platform",
+  "title": "Bind social platform",
+  "description": "_",
+  "source": "@site/docs/ChatServices/User/bind-social-platform.md",
+  "sourceDirName": "ChatServices/User",
+  "slug": "/ChatServices/User/bind-social-platform",
+  "permalink": "/docs/ChatServices/User/bind-social-platform",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "User Login",
+    "permalink": "/docs/ChatServices/User/user-login"
+  },
+  "next": {
+    "title": "Get User Info",
+    "permalink": "/docs/ChatServices/User/get-user-info"
+  }
+}

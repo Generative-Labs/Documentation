@@ -1,0 +1,25 @@
+{
+  "unversionedId": "ChatServices/User/user-register",
+  "id": "ChatServices/User/user-register",
+  "title": "User Register",
+  "description": "_",
+  "source": "@site/docs/ChatServices/User/user-register.md",
+  "sourceDirName": "ChatServices/User",
+  "slug": "/ChatServices/User/user-register",
+  "permalink": "/docs/ChatServices/User/user-register",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "sidebar_position": 0
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Intro",
+    "permalink": "/docs/intro"
+  },
+  "next": {
+    "title": "User Login",
+    "permalink": "/docs/ChatServices/User/user-login"
+  }
+}
