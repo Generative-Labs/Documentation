@@ -15,7 +15,7 @@ ___
 
 | Parameters  | Required |  Parameters Description|
 | ------------- | ------------- |--------|
-| platform  | Yes  |  The platform name, one of follwing values: twiiter/facebook/instagram/youtube  |
+| platform  | Yes  |  The platform name, one of follwing values: twitter/facebook/instagram/youtube  |
 | data  | Yes  |  The URL of article which include user's ETH wallet address  |
 
 > Return:

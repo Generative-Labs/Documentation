@@ -528,7 +528,8 @@
       "blogPosts": [],
       "blogListPaginated": [],
       "blogTags": {},
-      "blogTagsListPath": null
+      "blogTagsListPath": null,
+      "blogTagsPaginated": []
     }
   },
   "docusaurus-plugin-content-pages": {
@@ -541,7 +542,12 @@
       {
         "type": "mdx",
         "permalink": "/markdown-page",
-        "source": "@site/src/pages/markdown-page.md"
+        "source": "@site/src/pages/markdown-page.md",
+        "title": "Markdown page example",
+        "description": "You don't need React to write simple standalone pages.",
+        "frontMatter": {
+          "title": "Markdown page example"
+        }
       }
     ]
   },

@@ -90,9 +90,18 @@
               "path": "/docs/intro",
               "sidebar": "tutorialSidebar"
             }
-          ]
+          ],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/intro",
+                "label": "intro"
+              }
+            }
+          }
         }
-      ]
+      ],
+      "breadcrumbs": true
     }
   }
 }

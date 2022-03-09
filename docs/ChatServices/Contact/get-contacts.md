@@ -15,7 +15,7 @@ ___
 | ------------- | ------------- |--------|
 | page  | Yes  |  page number  |
 | size  | Yes  |  page size  |
-| user_type  | nO  | one of following values: creator/recipient  |
+| user_type  | No  | one of following values: creator/recipient  |
 
 > Return:
 
