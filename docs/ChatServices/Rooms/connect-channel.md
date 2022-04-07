@@ -2,10 +2,10 @@
 sidebar_position: 1
 ---
 
-# Send Messages
+# Connect Chat Channel
 ___
-## Send Messages by websocket
-> /ws
+## Connect to a Room's channel by MQTT over Websocket
+> /mqtt
 
 > JWT: Yes
 
@@ -13,7 +13,7 @@ ___
 
 | Parameters in URL | Required |  Parameters Description|
 | ------------- | ------------- |--------|
-| from_user_id  | Yes  |  User's OID  |
+| token  | Yes  |  JWT  |
 
 > Return:
 
