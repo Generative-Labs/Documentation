@@ -2,19 +2,20 @@
 sidebar_position: 1
 ---
 
-# Get Contacts Info
+# Get Contacts
 ___
-## Get contact's info
-> /contacts/<page:int>/<size:int>
+## Get contacts list with pagination parameters
+> /contacts/mine
 
 > JWT: Yes
 
-> Call Method: GET
+> Call Method: POST
 
-| Parameters in URL | Required |  Parameters Description|
+| Parameters | Required |  Parameters Description|
 | ------------- | ------------- |--------|
 | page  | Yes  |  page number  |
 | size  | Yes  |  page size  |
+| user_type  | No  | one of following values: creator/recipient  |
 
 > Return:
 
@@ -22,4 +23,4 @@ ___
 | ------------- | ------------- |--------|
 | code  | Yes  |  result code,0 means success, other code see msg's contents  |
 | msg  | Yes  | result description   |
-| data  | Yes  | return a **List** includes contacts' info |
+| data  | Yes  | return contract info **List** when code is 0, otherwise return None |

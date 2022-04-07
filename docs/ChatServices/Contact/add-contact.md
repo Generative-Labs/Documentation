@@ -1,19 +1,19 @@
 ---
-sidebar_position: 1
+sidebar_position: 0
 ---
 
-# Get Contact Info
+# Add User To Your Contact List
 ___
-## Get an contact's info
-> /contacts/<contract_id:string>
+## Add an user to your contact list by user's OID
+> /contacts
 
 > JWT: Yes
 
-> Call Method: DELETE
+> Call Method: POST
 
-| Parameters in URL | Required |  Parameters Description|
+| Parameters | Required |  Parameters Description|
 | ------------- | ------------- |--------|
-| contract_id  | Yes  | Contract's OID  |
+| user_id  | Yes  |  User's OID  |
 
 > Return:
 
@@ -21,4 +21,4 @@ ___
 | ------------- | ------------- |--------|
 | code  | Yes  |  result code,0 means success, other code see msg's contents  |
 | msg  | Yes  | result description   |
-| data  | Yes  | the contract's details |
+| data  | Yes  | Always return None|

@@ -23,3 +23,22 @@ ___
 | code  | Yes  |  result code,0 means success, other code see msg's contents  |
 | msg  | Yes  | result description   |
 | data  | Yes  | return a **List** includes all rooms you are participating in when code is 0, otherwise return None |
+
+
+
+## Get all rooms' id that you are participating in
+
+> /my_rooms
+
+> JWT: Yes
+
+> Call Method: GET
+
+
+> Return:
+
+| Parameters  | Required |  Parameters Description|
+| ------------- | ------------- |--------|
+| code  | Yes  |  result code,0 means success, other code see msg's contents  |
+| msg  | Yes  | result description   |
+| data  | Yes  | return a **List** includes all rooms' id you are participating in when code is 0, otherwise return empty list|
