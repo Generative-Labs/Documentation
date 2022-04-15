@@ -1,3 +1,3 @@
 # Website
 
-This website is documents of HouseChan Chat Service.
+This website is documents of Web3MQ Chat Service.

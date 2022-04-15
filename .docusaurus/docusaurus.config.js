@@ -11,7 +11,7 @@ export default {
   "onBrokenLinks": "throw",
   "onBrokenMarkdownLinks": "warn",
   "favicon": "img/favicon.ico",
-  "organizationName": "HouseChan",
+  "organizationName": "Web3MQ",
   "projectName": "ChatService",
   "presets": [
     [
@@ -69,7 +69,7 @@ export default {
           ]
         }
       ],
-      "copyright": "Copyright © 2022 HouseChan, Inc."
+      "copyright": "Copyright © 2022 Web3MQ, Inc."
     },
     "prism": {
       "theme": {

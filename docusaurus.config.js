@@ -8,12 +8,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'ChatServiceAPI Document',
   tagline: 'Chat anything with any body',
-  url: 'https://doc.newbietown.com',
+  url: 'https://docs.web3messaging.online/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'HouseChan', // Usually your GitHub org/user name.
+  organizationName: 'Web3MQ', // Usually your GitHub org/user name.
   projectName: 'ChatService', // Usually your repo name.
 
   presets: [
@@ -100,7 +100,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} HouseChan, Inc.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Web3MQ, Inc.`,
       },
       prism: {
         theme: lightCodeTheme,
