@@ -29,7 +29,7 @@
     "component": "component---theme-mdx-page-1-f-3-b90",
     "content": "content---markdown-page-393-028"
   },
-  "/docs-65d": {
+  "/docs-391": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
   },
@@ -37,25 +37,21 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-auth-one-intro-495-034"
   },
-  "/docs/ChatServices/Contact/create-contanct-d94": {
+  "/docs/ChatServices/Contact/add-contact-67a": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-chat-services-contact-create-contanct-0-f-4-803"
-  },
-  "/docs/ChatServices/Contact/get-contact-info-68a": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-chat-services-contact-get-contact-infoe-77-de6"
+    "content": "content---docs-chat-services-contact-add-contactfac-95d"
   },
   "/docs/ChatServices/Contact/get-contacts-d37": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-chat-services-contact-get-contacts-0-db-034"
   },
-  "/docs/ChatServices/Contact/join-contract-017": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-chat-services-contact-join-contract-1-ee-fd2"
-  },
   "/docs/ChatServices/intro-56b": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-chat-services-introb-48-7bb"
+  },
+  "/docs/ChatServices/Rooms/connect-channel-ad4": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-chat-services-rooms-connect-channelea-4-147"
   },
   "/docs/ChatServices/Rooms/create-room-6e4": {
     "component": "component---theme-doc-item-178-a40",
@@ -72,10 +68,6 @@
   "/docs/ChatServices/Rooms/get-room-info-8c6": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-chat-services-rooms-get-room-infodd-7-de4"
-  },
-  "/docs/ChatServices/Rooms/sent-message-7e8": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-chat-services-rooms-sent-message-1-cd-068"
   },
   "/docs/ChatServices/User/bind-social-platform-f7c": {
     "component": "component---theme-doc-item-178-a40",
@@ -96,6 +88,30 @@
   "/docs/intro-aed": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-intro-0-e-3-be1"
+  },
+  "/docs/web3MQ-SDK/channel/-662": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-channel-556-07c"
+  },
+  "/docs/web3MQ-SDK/client/-116": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-client-87-c-2a2"
+  },
+  "/docs/web3MQ-SDK/contact/-434": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-contact-df-6-942"
+  },
+  "/docs/web3MQ-SDK/eventCenter/-214": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-event-center-4-d-3-ee3"
+  },
+  "/docs/web3MQ-SDK/intro-7e9": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-intro-27-a-28c"
+  },
+  "/docs/web3MQ-SDK/message/-2dd": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-message-fbb-604"
   },
   "/-deb": {
     "component": "component---site-src-pages-index-jsc-4-f-f99",

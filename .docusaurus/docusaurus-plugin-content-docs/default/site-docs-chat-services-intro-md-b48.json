@@ -16,5 +16,9 @@
   "previous": {
     "title": "Get Chat Rooms",
     "permalink": "/docs/ChatServices/Rooms/get-chat-rooms"
+  },
+  "next": {
+    "title": "client",
+    "permalink": "/docs/web3MQ-SDK/client/"
   }
 }

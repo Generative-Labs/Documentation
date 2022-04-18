@@ -6,7 +6,7 @@ Modify the docusaurus.config.js file at your site's root instead.
 export default {
   "title": "ChatServiceAPI Document",
   "tagline": "Chat anything with any body",
-  "url": "https://doc.newbietown.com",
+  "url": "https://docs.web3messaging.online/",
   "baseUrl": "/",
   "onBrokenLinks": "throw",
   "onBrokenMarkdownLinks": "warn",
@@ -18,10 +18,10 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "/home/coder/WorkSpace/Documentation/sidebars.js"
+          "sidebarPath": "/Users/fanxiangyu/Work/Documentation/sidebars.js"
         },
         "theme": {
-          "customCss": "/home/coder/WorkSpace/Documentation/src/css/custom.css"
+          "customCss": "/Users/fanxiangyu/Work/Documentation/src/css/custom.css"
         }
       }
     ]

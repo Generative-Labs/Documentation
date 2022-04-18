@@ -50,7 +50,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','65d'),
+    component: ComponentCreator('/docs','391'),
     routes: [
       {
         path: '/docs/AuthOne/intro',
@@ -59,14 +59,8 @@ export default [
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/ChatServices/Contact/create-contanct',
-        component: ComponentCreator('/docs/ChatServices/Contact/create-contanct','d94'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/ChatServices/Contact/get-contact-info',
-        component: ComponentCreator('/docs/ChatServices/Contact/get-contact-info','68a'),
+        path: '/docs/ChatServices/Contact/add-contact',
+        component: ComponentCreator('/docs/ChatServices/Contact/add-contact','67a'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
@@ -77,14 +71,14 @@ export default [
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/ChatServices/Contact/join-contract',
-        component: ComponentCreator('/docs/ChatServices/Contact/join-contract','017'),
+        path: '/docs/ChatServices/intro',
+        component: ComponentCreator('/docs/ChatServices/intro','56b'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/ChatServices/intro',
-        component: ComponentCreator('/docs/ChatServices/intro','56b'),
+        path: '/docs/ChatServices/Rooms/connect-channel',
+        component: ComponentCreator('/docs/ChatServices/Rooms/connect-channel','ad4'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
@@ -109,12 +103,6 @@ export default [
       {
         path: '/docs/ChatServices/Rooms/get-room-info',
         component: ComponentCreator('/docs/ChatServices/Rooms/get-room-info','8c6'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/ChatServices/Rooms/sent-message',
-        component: ComponentCreator('/docs/ChatServices/Rooms/sent-message','7e8'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
@@ -145,6 +133,42 @@ export default [
       {
         path: '/docs/intro',
         component: ComponentCreator('/docs/intro','aed'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/web3MQ-SDK/channel/',
+        component: ComponentCreator('/docs/web3MQ-SDK/channel/','662'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/web3MQ-SDK/client/',
+        component: ComponentCreator('/docs/web3MQ-SDK/client/','116'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/web3MQ-SDK/contact/',
+        component: ComponentCreator('/docs/web3MQ-SDK/contact/','434'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/web3MQ-SDK/eventCenter/',
+        component: ComponentCreator('/docs/web3MQ-SDK/eventCenter/','214'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/web3MQ-SDK/intro',
+        component: ComponentCreator('/docs/web3MQ-SDK/intro','7e9'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/web3MQ-SDK/message/',
+        component: ComponentCreator('/docs/web3MQ-SDK/message/','2dd'),
         exact: true,
         'sidebar': "tutorialSidebar"
       }

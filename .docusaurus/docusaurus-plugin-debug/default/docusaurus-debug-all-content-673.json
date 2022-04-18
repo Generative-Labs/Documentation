@@ -12,9 +12,9 @@
           "versionClassName": "docs-version-current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/home/coder/WorkSpace/Documentation/sidebars.js",
-          "contentPath": "/home/coder/WorkSpace/Documentation/docs",
-          "contentPathLocalized": "/home/coder/WorkSpace/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/fanxiangyu/Work/Documentation/sidebars.js",
+          "contentPath": "/Users/fanxiangyu/Work/Documentation/docs",
+          "contentPathLocalized": "/Users/fanxiangyu/Work/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "AuthOne/intro",
@@ -42,14 +42,14 @@
               }
             },
             {
-              "unversionedId": "ChatServices/Contact/create-contanct",
-              "id": "ChatServices/Contact/create-contanct",
-              "title": "Create a contract",
+              "unversionedId": "ChatServices/Contact/add-contact",
+              "id": "ChatServices/Contact/add-contact",
+              "title": "Add User To Your Contact List",
               "description": "_",
-              "source": "@site/docs/ChatServices/Contact/create-contanct.md",
+              "source": "@site/docs/ChatServices/Contact/add-contact.md",
               "sourceDirName": "ChatServices/Contact",
-              "slug": "/ChatServices/Contact/create-contanct",
-              "permalink": "/docs/ChatServices/Contact/create-contanct",
+              "slug": "/ChatServices/Contact/add-contact",
+              "permalink": "/docs/ChatServices/Contact/add-contact",
               "tags": [],
               "version": "current",
               "sidebarPosition": 0,
@@ -62,39 +62,14 @@
                 "permalink": "/docs/ChatServices/User/get-user-info"
               },
               "next": {
-                "title": "Get Contact Info",
-                "permalink": "/docs/ChatServices/Contact/get-contact-info"
-              }
-            },
-            {
-              "unversionedId": "ChatServices/Contact/get-contact-info",
-              "id": "ChatServices/Contact/get-contact-info",
-              "title": "Get Contact Info",
-              "description": "_",
-              "source": "@site/docs/ChatServices/Contact/get-contact-info.md",
-              "sourceDirName": "ChatServices/Contact",
-              "slug": "/ChatServices/Contact/get-contact-info",
-              "permalink": "/docs/ChatServices/Contact/get-contact-info",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 1,
-              "frontMatter": {
-                "sidebar_position": 1
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Create a contract",
-                "permalink": "/docs/ChatServices/Contact/create-contanct"
-              },
-              "next": {
-                "title": "Join a contract",
-                "permalink": "/docs/ChatServices/Contact/join-contract"
+                "title": "Get Contacts Info",
+                "permalink": "/docs/ChatServices/Contact/get-contacts"
               }
             },
             {
               "unversionedId": "ChatServices/Contact/get-contacts",
               "id": "ChatServices/Contact/get-contacts",
-              "title": "Get Contacts",
+              "title": "Get Contacts Info",
               "description": "_",
               "source": "@site/docs/ChatServices/Contact/get-contacts.md",
               "sourceDirName": "ChatServices/Contact",
@@ -102,43 +77,18 @@
               "permalink": "/docs/ChatServices/Contact/get-contacts",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 2,
-              "frontMatter": {
-                "sidebar_position": 2
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Join a contract",
-                "permalink": "/docs/ChatServices/Contact/join-contract"
-              },
-              "next": {
-                "title": "Create Chat Room",
-                "permalink": "/docs/ChatServices/Rooms/create-room"
-              }
-            },
-            {
-              "unversionedId": "ChatServices/Contact/join-contract",
-              "id": "ChatServices/Contact/join-contract",
-              "title": "Join a contract",
-              "description": "_",
-              "source": "@site/docs/ChatServices/Contact/join-contract.md",
-              "sourceDirName": "ChatServices/Contact",
-              "slug": "/ChatServices/Contact/join-contract",
-              "permalink": "/docs/ChatServices/Contact/join-contract",
-              "tags": [],
-              "version": "current",
               "sidebarPosition": 1,
               "frontMatter": {
                 "sidebar_position": 1
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Get Contact Info",
-                "permalink": "/docs/ChatServices/Contact/get-contact-info"
+                "title": "Add User To Your Contact List",
+                "permalink": "/docs/ChatServices/Contact/add-contact"
               },
               "next": {
-                "title": "Get Contacts",
-                "permalink": "/docs/ChatServices/Contact/get-contacts"
+                "title": "Create Chat Room",
+                "permalink": "/docs/ChatServices/Rooms/create-room"
               }
             },
             {
@@ -159,6 +109,35 @@
               "previous": {
                 "title": "Get Chat Rooms",
                 "permalink": "/docs/ChatServices/Rooms/get-chat-rooms"
+              },
+              "next": {
+                "title": "client",
+                "permalink": "/docs/web3MQ-SDK/client/"
+              }
+            },
+            {
+              "unversionedId": "ChatServices/Rooms/connect-channel",
+              "id": "ChatServices/Rooms/connect-channel",
+              "title": "Connect Chat Channel",
+              "description": "_",
+              "source": "@site/docs/ChatServices/Rooms/connect-channel.md",
+              "sourceDirName": "ChatServices/Rooms",
+              "slug": "/ChatServices/Rooms/connect-channel",
+              "permalink": "/docs/ChatServices/Rooms/connect-channel",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Create Chat Room",
+                "permalink": "/docs/ChatServices/Rooms/create-room"
+              },
+              "next": {
+                "title": "Get History Messages",
+                "permalink": "/docs/ChatServices/Rooms/get-messages"
               }
             },
             {
@@ -178,12 +157,12 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Get Contacts",
+                "title": "Get Contacts Info",
                 "permalink": "/docs/ChatServices/Contact/get-contacts"
               },
               "next": {
-                "title": "Send Messages",
-                "permalink": "/docs/ChatServices/Rooms/sent-message"
+                "title": "Connect Chat Channel",
+                "permalink": "/docs/ChatServices/Rooms/connect-channel"
               }
             },
             {
@@ -228,8 +207,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Send Messages",
-                "permalink": "/docs/ChatServices/Rooms/sent-message"
+                "title": "Connect Chat Channel",
+                "permalink": "/docs/ChatServices/Rooms/connect-channel"
               },
               "next": {
                 "title": "Get Room Info",
@@ -259,31 +238,6 @@
               "next": {
                 "title": "Get Chat Rooms",
                 "permalink": "/docs/ChatServices/Rooms/get-chat-rooms"
-              }
-            },
-            {
-              "unversionedId": "ChatServices/Rooms/sent-message",
-              "id": "ChatServices/Rooms/sent-message",
-              "title": "Send Messages",
-              "description": "_",
-              "source": "@site/docs/ChatServices/Rooms/sent-message.md",
-              "sourceDirName": "ChatServices/Rooms",
-              "slug": "/ChatServices/Rooms/sent-message",
-              "permalink": "/docs/ChatServices/Rooms/sent-message",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 1,
-              "frontMatter": {
-                "sidebar_position": 1
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Create Chat Room",
-                "permalink": "/docs/ChatServices/Rooms/create-room"
-              },
-              "next": {
-                "title": "Get History Messages",
-                "permalink": "/docs/ChatServices/Rooms/get-messages"
               }
             },
             {
@@ -332,8 +286,8 @@
                 "permalink": "/docs/ChatServices/User/bind-social-platform"
               },
               "next": {
-                "title": "Create a contract",
-                "permalink": "/docs/ChatServices/Contact/create-contanct"
+                "title": "Add User To Your Contact List",
+                "permalink": "/docs/ChatServices/Contact/add-contact"
               }
             },
             {
@@ -406,6 +360,146 @@
                 "title": "AuthOne",
                 "permalink": "/docs/AuthOne/intro"
               }
+            },
+            {
+              "unversionedId": "web3MQ-SDK/channel/channel",
+              "id": "web3MQ-SDK/channel/channel",
+              "title": "channel",
+              "description": "Usag",
+              "source": "@site/docs/web3MQ-SDK/channel/channel.md",
+              "sourceDirName": "web3MQ-SDK/channel",
+              "slug": "/web3MQ-SDK/channel/",
+              "permalink": "/docs/web3MQ-SDK/channel/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 5
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "eventCenter",
+                "permalink": "/docs/web3MQ-SDK/eventCenter/"
+              },
+              "next": {
+                "title": "contact",
+                "permalink": "/docs/web3MQ-SDK/contact/"
+              }
+            },
+            {
+              "unversionedId": "web3MQ-SDK/client/client",
+              "id": "web3MQ-SDK/client/client",
+              "title": "client",
+              "description": "Usage",
+              "source": "@site/docs/web3MQ-SDK/client/client.md",
+              "sourceDirName": "web3MQ-SDK/client",
+              "slug": "/web3MQ-SDK/client/",
+              "permalink": "/docs/web3MQ-SDK/client/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Intro",
+                "permalink": "/docs/ChatServices/intro"
+              },
+              "next": {
+                "title": "message",
+                "permalink": "/docs/web3MQ-SDK/message/"
+              }
+            },
+            {
+              "unversionedId": "web3MQ-SDK/contact/contact",
+              "id": "web3MQ-SDK/contact/contact",
+              "title": "contact",
+              "description": "Usage",
+              "source": "@site/docs/web3MQ-SDK/contact/contact.md",
+              "sourceDirName": "web3MQ-SDK/contact",
+              "slug": "/web3MQ-SDK/contact/",
+              "permalink": "/docs/web3MQ-SDK/contact/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 6
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "channel",
+                "permalink": "/docs/web3MQ-SDK/channel/"
+              },
+              "next": {
+                "title": "Intro",
+                "permalink": "/docs/web3MQ-SDK/intro"
+              }
+            },
+            {
+              "unversionedId": "web3MQ-SDK/eventCenter/eventCenter",
+              "id": "web3MQ-SDK/eventCenter/eventCenter",
+              "title": "eventCenter",
+              "description": "Usage",
+              "source": "@site/docs/web3MQ-SDK/eventCenter/eventCenter.md",
+              "sourceDirName": "web3MQ-SDK/eventCenter",
+              "slug": "/web3MQ-SDK/eventCenter/",
+              "permalink": "/docs/web3MQ-SDK/eventCenter/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 3
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "message",
+                "permalink": "/docs/web3MQ-SDK/message/"
+              },
+              "next": {
+                "title": "channel",
+                "permalink": "/docs/web3MQ-SDK/channel/"
+              }
+            },
+            {
+              "unversionedId": "web3MQ-SDK/intro",
+              "id": "web3MQ-SDK/intro",
+              "title": "Intro",
+              "description": "web3-mq-js is the official JavaScript client for House Studio, a service for building chat applications.",
+              "source": "@site/docs/web3MQ-SDK/intro.md",
+              "sourceDirName": "web3MQ-SDK",
+              "slug": "/web3MQ-SDK/intro",
+              "permalink": "/docs/web3MQ-SDK/intro",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 0
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "contact",
+                "permalink": "/docs/web3MQ-SDK/contact/"
+              }
+            },
+            {
+              "unversionedId": "web3MQ-SDK/message/message",
+              "id": "web3MQ-SDK/message/message",
+              "title": "message",
+              "description": "Usage",
+              "source": "@site/docs/web3MQ-SDK/message/message.md",
+              "sourceDirName": "web3MQ-SDK/message",
+              "slug": "/web3MQ-SDK/message/",
+              "permalink": "/docs/web3MQ-SDK/message/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "client",
+                "permalink": "/docs/web3MQ-SDK/client/"
+              },
+              "next": {
+                "title": "eventCenter",
+                "permalink": "/docs/web3MQ-SDK/eventCenter/"
+              }
             }
           ],
           "sidebars": {
@@ -464,15 +558,7 @@
                     "items": [
                       {
                         "type": "doc",
-                        "id": "ChatServices/Contact/create-contanct"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "ChatServices/Contact/get-contact-info"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "ChatServices/Contact/join-contract"
+                        "id": "ChatServices/Contact/add-contact"
                       },
                       {
                         "type": "doc",
@@ -492,7 +578,7 @@
                       },
                       {
                         "type": "doc",
-                        "id": "ChatServices/Rooms/sent-message"
+                        "id": "ChatServices/Rooms/connect-channel"
                       },
                       {
                         "type": "doc",
@@ -511,6 +597,43 @@
                   {
                     "type": "doc",
                     "id": "ChatServices/intro"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "web3MQ-SDK",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "label": "Client",
+                    "id": "web3MQ-SDK/client/client"
+                  },
+                  {
+                    "type": "doc",
+                    "label": "Message",
+                    "id": "web3MQ-SDK/message/message"
+                  },
+                  {
+                    "type": "doc",
+                    "label": "Event Center",
+                    "id": "web3MQ-SDK/eventCenter/eventCenter"
+                  },
+                  {
+                    "type": "doc",
+                    "label": "Channel",
+                    "id": "web3MQ-SDK/channel/channel"
+                  },
+                  {
+                    "type": "doc",
+                    "label": "Contact",
+                    "id": "web3MQ-SDK/contact/contact"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "web3MQ-SDK/intro"
                   }
                 ]
               }

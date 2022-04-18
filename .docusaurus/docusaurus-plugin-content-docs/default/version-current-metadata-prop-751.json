@@ -74,25 +74,13 @@
             "items": [
               {
                 "type": "link",
-                "label": "Create a contract",
-                "href": "/docs/ChatServices/Contact/create-contanct",
-                "docId": "ChatServices/Contact/create-contanct"
+                "label": "Add User To Your Contact List",
+                "href": "/docs/ChatServices/Contact/add-contact",
+                "docId": "ChatServices/Contact/add-contact"
               },
               {
                 "type": "link",
-                "label": "Get Contact Info",
-                "href": "/docs/ChatServices/Contact/get-contact-info",
-                "docId": "ChatServices/Contact/get-contact-info"
-              },
-              {
-                "type": "link",
-                "label": "Join a contract",
-                "href": "/docs/ChatServices/Contact/join-contract",
-                "docId": "ChatServices/Contact/join-contract"
-              },
-              {
-                "type": "link",
-                "label": "Get Contacts",
+                "label": "Get Contacts Info",
                 "href": "/docs/ChatServices/Contact/get-contacts",
                 "docId": "ChatServices/Contact/get-contacts"
               }
@@ -112,9 +100,9 @@
               },
               {
                 "type": "link",
-                "label": "Send Messages",
-                "href": "/docs/ChatServices/Rooms/sent-message",
-                "docId": "ChatServices/Rooms/sent-message"
+                "label": "Connect Chat Channel",
+                "href": "/docs/ChatServices/Rooms/connect-channel",
+                "docId": "ChatServices/Rooms/connect-channel"
               },
               {
                 "type": "link",
@@ -143,6 +131,50 @@
             "docId": "ChatServices/intro"
           }
         ]
+      },
+      {
+        "type": "category",
+        "label": "web3MQ-SDK",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Client",
+            "href": "/docs/web3MQ-SDK/client/",
+            "docId": "web3MQ-SDK/client/client"
+          },
+          {
+            "type": "link",
+            "label": "Message",
+            "href": "/docs/web3MQ-SDK/message/",
+            "docId": "web3MQ-SDK/message/message"
+          },
+          {
+            "type": "link",
+            "label": "Event Center",
+            "href": "/docs/web3MQ-SDK/eventCenter/",
+            "docId": "web3MQ-SDK/eventCenter/eventCenter"
+          },
+          {
+            "type": "link",
+            "label": "Channel",
+            "href": "/docs/web3MQ-SDK/channel/",
+            "docId": "web3MQ-SDK/channel/channel"
+          },
+          {
+            "type": "link",
+            "label": "Contact",
+            "href": "/docs/web3MQ-SDK/contact/",
+            "docId": "web3MQ-SDK/contact/contact"
+          },
+          {
+            "type": "link",
+            "label": "Intro",
+            "href": "/docs/web3MQ-SDK/intro",
+            "docId": "web3MQ-SDK/intro"
+          }
+        ]
       }
     ]
   },
@@ -153,27 +185,15 @@
       "description": "Auth Flow",
       "sidebar": "tutorialSidebar"
     },
-    "ChatServices/Contact/create-contanct": {
-      "id": "ChatServices/Contact/create-contanct",
-      "title": "Create a contract",
-      "description": "_",
-      "sidebar": "tutorialSidebar"
-    },
-    "ChatServices/Contact/get-contact-info": {
-      "id": "ChatServices/Contact/get-contact-info",
-      "title": "Get Contact Info",
+    "ChatServices/Contact/add-contact": {
+      "id": "ChatServices/Contact/add-contact",
+      "title": "Add User To Your Contact List",
       "description": "_",
       "sidebar": "tutorialSidebar"
     },
     "ChatServices/Contact/get-contacts": {
       "id": "ChatServices/Contact/get-contacts",
-      "title": "Get Contacts",
-      "description": "_",
-      "sidebar": "tutorialSidebar"
-    },
-    "ChatServices/Contact/join-contract": {
-      "id": "ChatServices/Contact/join-contract",
-      "title": "Join a contract",
+      "title": "Get Contacts Info",
       "description": "_",
       "sidebar": "tutorialSidebar"
     },
@@ -181,6 +201,12 @@
       "id": "ChatServices/intro",
       "title": "Intro",
       "description": "Wallet Direct Messaging",
+      "sidebar": "tutorialSidebar"
+    },
+    "ChatServices/Rooms/connect-channel": {
+      "id": "ChatServices/Rooms/connect-channel",
+      "title": "Connect Chat Channel",
+      "description": "_",
       "sidebar": "tutorialSidebar"
     },
     "ChatServices/Rooms/create-room": {
@@ -204,12 +230,6 @@
     "ChatServices/Rooms/get-room-info": {
       "id": "ChatServices/Rooms/get-room-info",
       "title": "Get Room Info",
-      "description": "_",
-      "sidebar": "tutorialSidebar"
-    },
-    "ChatServices/Rooms/sent-message": {
-      "id": "ChatServices/Rooms/sent-message",
-      "title": "Send Messages",
       "description": "_",
       "sidebar": "tutorialSidebar"
     },
@@ -241,6 +261,42 @@
       "id": "intro",
       "title": "Intro",
       "description": "This site hosts the documentation for Web3MQ Chat service, which you can browse by clicking on the area to the left.",
+      "sidebar": "tutorialSidebar"
+    },
+    "web3MQ-SDK/channel/channel": {
+      "id": "web3MQ-SDK/channel/channel",
+      "title": "channel",
+      "description": "Usag",
+      "sidebar": "tutorialSidebar"
+    },
+    "web3MQ-SDK/client/client": {
+      "id": "web3MQ-SDK/client/client",
+      "title": "client",
+      "description": "Usage",
+      "sidebar": "tutorialSidebar"
+    },
+    "web3MQ-SDK/contact/contact": {
+      "id": "web3MQ-SDK/contact/contact",
+      "title": "contact",
+      "description": "Usage",
+      "sidebar": "tutorialSidebar"
+    },
+    "web3MQ-SDK/eventCenter/eventCenter": {
+      "id": "web3MQ-SDK/eventCenter/eventCenter",
+      "title": "eventCenter",
+      "description": "Usage",
+      "sidebar": "tutorialSidebar"
+    },
+    "web3MQ-SDK/intro": {
+      "id": "web3MQ-SDK/intro",
+      "title": "Intro",
+      "description": "web3-mq-js is the official JavaScript client for House Studio, a service for building chat applications.",
+      "sidebar": "tutorialSidebar"
+    },
+    "web3MQ-SDK/message/message": {
+      "id": "web3MQ-SDK/message/message",
+      "title": "message",
+      "description": "Usage",
       "sidebar": "tutorialSidebar"
     }
   }

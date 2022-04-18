@@ -16,13 +16,8 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ChatServices/Contact/create-contanct",
-              "path": "/docs/ChatServices/Contact/create-contanct",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "ChatServices/Contact/get-contact-info",
-              "path": "/docs/ChatServices/Contact/get-contact-info",
+              "id": "ChatServices/Contact/add-contact",
+              "path": "/docs/ChatServices/Contact/add-contact",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -31,13 +26,13 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ChatServices/Contact/join-contract",
-              "path": "/docs/ChatServices/Contact/join-contract",
+              "id": "ChatServices/intro",
+              "path": "/docs/ChatServices/intro",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ChatServices/intro",
-              "path": "/docs/ChatServices/intro",
+              "id": "ChatServices/Rooms/connect-channel",
+              "path": "/docs/ChatServices/Rooms/connect-channel",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -58,11 +53,6 @@
             {
               "id": "ChatServices/Rooms/get-room-info",
               "path": "/docs/ChatServices/Rooms/get-room-info",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "ChatServices/Rooms/sent-message",
-              "path": "/docs/ChatServices/Rooms/sent-message",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -88,6 +78,36 @@
             {
               "id": "intro",
               "path": "/docs/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "web3MQ-SDK/channel/channel",
+              "path": "/docs/web3MQ-SDK/channel/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "web3MQ-SDK/client/client",
+              "path": "/docs/web3MQ-SDK/client/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "web3MQ-SDK/contact/contact",
+              "path": "/docs/web3MQ-SDK/contact/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "web3MQ-SDK/eventCenter/eventCenter",
+              "path": "/docs/web3MQ-SDK/eventCenter/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "web3MQ-SDK/intro",
+              "path": "/docs/web3MQ-SDK/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "web3MQ-SDK/message/message",
+              "path": "/docs/web3MQ-SDK/message/",
               "sidebar": "tutorialSidebar"
             }
           ],

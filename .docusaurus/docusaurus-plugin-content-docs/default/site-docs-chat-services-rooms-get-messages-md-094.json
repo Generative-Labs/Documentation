@@ -15,8 +15,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Send Messages",
-    "permalink": "/docs/ChatServices/Rooms/sent-message"
+    "title": "Connect Chat Channel",
+    "permalink": "/docs/ChatServices/Rooms/connect-channel"
   },
   "next": {
     "title": "Get Room Info",

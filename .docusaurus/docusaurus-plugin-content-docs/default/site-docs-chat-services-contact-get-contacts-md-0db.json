@@ -1,7 +1,7 @@
 {
   "unversionedId": "ChatServices/Contact/get-contacts",
   "id": "ChatServices/Contact/get-contacts",
-  "title": "Get Contacts",
+  "title": "Get Contacts Info",
   "description": "_",
   "source": "@site/docs/ChatServices/Contact/get-contacts.md",
   "sourceDirName": "ChatServices/Contact",
@@ -9,14 +9,14 @@
   "permalink": "/docs/ChatServices/Contact/get-contacts",
   "tags": [],
   "version": "current",
-  "sidebarPosition": 2,
+  "sidebarPosition": 1,
   "frontMatter": {
-    "sidebar_position": 2
+    "sidebar_position": 1
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Join a contract",
-    "permalink": "/docs/ChatServices/Contact/join-contract"
+    "title": "Add User To Your Contact List",
+    "permalink": "/docs/ChatServices/Contact/add-contact"
   },
   "next": {
     "title": "Create Chat Room",

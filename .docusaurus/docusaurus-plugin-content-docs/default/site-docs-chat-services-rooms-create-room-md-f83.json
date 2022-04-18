@@ -15,11 +15,11 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Get Contacts",
+    "title": "Get Contacts Info",
     "permalink": "/docs/ChatServices/Contact/get-contacts"
   },
   "next": {
-    "title": "Send Messages",
-    "permalink": "/docs/ChatServices/Rooms/sent-message"
+    "title": "Connect Chat Channel",
+    "permalink": "/docs/ChatServices/Rooms/connect-channel"
   }
 }
