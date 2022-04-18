@@ -16,6 +16,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "ChatClientSDK/PythonSDK",
+              "path": "/docs/ChatClientSDK/PythonSDK",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "ChatServices/Contact/add-contact",
               "path": "/docs/ChatServices/Contact/add-contact",
               "sidebar": "tutorialSidebar"
@@ -98,11 +103,6 @@
             {
               "id": "web3MQ-SDK/eventCenter/eventCenter",
               "path": "/docs/web3MQ-SDK/eventCenter/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "web3MQ-SDK/intro",
-              "path": "/docs/web3MQ-SDK/intro",
               "sidebar": "tutorialSidebar"
             },
             {

@@ -19,7 +19,7 @@
     "permalink": "/docs/intro"
   },
   "next": {
-    "title": "User Register",
-    "permalink": "/docs/ChatServices/User/user-register"
+    "title": "ChatClient SDK Python",
+    "permalink": "/docs/ChatClientSDK/PythonSDK"
   }
 }

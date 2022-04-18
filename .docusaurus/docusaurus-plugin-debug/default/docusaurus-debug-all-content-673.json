@@ -37,6 +37,31 @@
                 "permalink": "/docs/intro"
               },
               "next": {
+                "title": "ChatClient SDK Python",
+                "permalink": "/docs/ChatClientSDK/PythonSDK"
+              }
+            },
+            {
+              "unversionedId": "ChatClientSDK/PythonSDK",
+              "id": "ChatClientSDK/PythonSDK",
+              "title": "ChatClient SDK Python",
+              "description": "Install",
+              "source": "@site/docs/ChatClientSDK/PythonSDK.md",
+              "sourceDirName": "ChatClientSDK",
+              "slug": "/ChatClientSDK/PythonSDK",
+              "permalink": "/docs/ChatClientSDK/PythonSDK",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 0,
+              "frontMatter": {
+                "sidebar_position": 0
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "AuthOne",
+                "permalink": "/docs/AuthOne/intro"
+              },
+              "next": {
                 "title": "User Register",
                 "permalink": "/docs/ChatServices/User/user-register"
               }
@@ -111,7 +136,7 @@
                 "permalink": "/docs/ChatServices/Rooms/get-chat-rooms"
               },
               "next": {
-                "title": "client",
+                "title": "Intro",
                 "permalink": "/docs/web3MQ-SDK/client/"
               }
             },
@@ -332,8 +357,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "AuthOne",
-                "permalink": "/docs/AuthOne/intro"
+                "title": "ChatClient SDK Python",
+                "permalink": "/docs/ChatClientSDK/PythonSDK"
               },
               "next": {
                 "title": "User Login",
@@ -388,8 +413,8 @@
             {
               "unversionedId": "web3MQ-SDK/client/client",
               "id": "web3MQ-SDK/client/client",
-              "title": "client",
-              "description": "Usage",
+              "title": "Intro",
+              "description": "web3-mq-js is the official JavaScript client for House Studio, a service for building chat applications.",
               "source": "@site/docs/web3MQ-SDK/client/client.md",
               "sourceDirName": "web3MQ-SDK/client",
               "slug": "/web3MQ-SDK/client/",
@@ -427,10 +452,6 @@
               "previous": {
                 "title": "channel",
                 "permalink": "/docs/web3MQ-SDK/channel/"
-              },
-              "next": {
-                "title": "Intro",
-                "permalink": "/docs/web3MQ-SDK/intro"
               }
             },
             {
@@ -458,26 +479,6 @@
               }
             },
             {
-              "unversionedId": "web3MQ-SDK/intro",
-              "id": "web3MQ-SDK/intro",
-              "title": "Intro",
-              "description": "web3-mq-js is the official JavaScript client for House Studio, a service for building chat applications.",
-              "source": "@site/docs/web3MQ-SDK/intro.md",
-              "sourceDirName": "web3MQ-SDK",
-              "slug": "/web3MQ-SDK/intro",
-              "permalink": "/docs/web3MQ-SDK/intro",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "position": 0
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "contact",
-                "permalink": "/docs/web3MQ-SDK/contact/"
-              }
-            },
-            {
               "unversionedId": "web3MQ-SDK/message/message",
               "id": "web3MQ-SDK/message/message",
               "title": "message",
@@ -493,7 +494,7 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "client",
+                "title": "Intro",
                 "permalink": "/docs/web3MQ-SDK/client/"
               },
               "next": {
@@ -517,6 +518,18 @@
                   {
                     "type": "doc",
                     "id": "AuthOne/intro"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "ChatClientSDK",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "ChatClientSDK/PythonSDK"
                   }
                 ]
               },
@@ -630,10 +643,6 @@
                     "type": "doc",
                     "label": "Contact",
                     "id": "web3MQ-SDK/contact/contact"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "web3MQ-SDK/intro"
                   }
                 ]
               }

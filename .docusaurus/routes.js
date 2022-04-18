@@ -50,11 +50,17 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','391'),
+    component: ComponentCreator('/docs','451'),
     routes: [
       {
         path: '/docs/AuthOne/intro',
         component: ComponentCreator('/docs/AuthOne/intro','c33'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/ChatClientSDK/PythonSDK',
+        component: ComponentCreator('/docs/ChatClientSDK/PythonSDK','7b3'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
@@ -157,12 +163,6 @@ export default [
       {
         path: '/docs/web3MQ-SDK/eventCenter/',
         component: ComponentCreator('/docs/web3MQ-SDK/eventCenter/','214'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/web3MQ-SDK/intro',
-        component: ComponentCreator('/docs/web3MQ-SDK/intro','7e9'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },

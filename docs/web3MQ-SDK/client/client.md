@@ -1,9 +1,22 @@
 ---
 position: 1
 ---
+# Intro
 
-## Usage
+web3-mq-js is the official JavaScript client for House Studio, a service for building chat applications.
 
+### Install with NPM
+
+```bash
+npm install web3-mq
+```
+
+### Install with Yarn
+
+```bash
+yarn add web3-mq
+```
+# Usage
 ### create client
 
 ```typescript

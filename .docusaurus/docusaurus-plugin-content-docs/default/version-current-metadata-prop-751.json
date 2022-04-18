@@ -30,6 +30,20 @@
       },
       {
         "type": "category",
+        "label": "ChatClientSDK",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "ChatClient SDK Python",
+            "href": "/docs/ChatClientSDK/PythonSDK",
+            "docId": "ChatClientSDK/PythonSDK"
+          }
+        ]
+      },
+      {
+        "type": "category",
         "label": "ChatServices",
         "collapsible": true,
         "collapsed": true,
@@ -167,12 +181,6 @@
             "label": "Contact",
             "href": "/docs/web3MQ-SDK/contact/",
             "docId": "web3MQ-SDK/contact/contact"
-          },
-          {
-            "type": "link",
-            "label": "Intro",
-            "href": "/docs/web3MQ-SDK/intro",
-            "docId": "web3MQ-SDK/intro"
           }
         ]
       }
@@ -183,6 +191,12 @@
       "id": "AuthOne/intro",
       "title": "AuthOne",
       "description": "Auth Flow",
+      "sidebar": "tutorialSidebar"
+    },
+    "ChatClientSDK/PythonSDK": {
+      "id": "ChatClientSDK/PythonSDK",
+      "title": "ChatClient SDK Python",
+      "description": "Install",
       "sidebar": "tutorialSidebar"
     },
     "ChatServices/Contact/add-contact": {
@@ -271,8 +285,8 @@
     },
     "web3MQ-SDK/client/client": {
       "id": "web3MQ-SDK/client/client",
-      "title": "client",
-      "description": "Usage",
+      "title": "Intro",
+      "description": "web3-mq-js is the official JavaScript client for House Studio, a service for building chat applications.",
       "sidebar": "tutorialSidebar"
     },
     "web3MQ-SDK/contact/contact": {
@@ -285,12 +299,6 @@
       "id": "web3MQ-SDK/eventCenter/eventCenter",
       "title": "eventCenter",
       "description": "Usage",
-      "sidebar": "tutorialSidebar"
-    },
-    "web3MQ-SDK/intro": {
-      "id": "web3MQ-SDK/intro",
-      "title": "Intro",
-      "description": "web3-mq-js is the official JavaScript client for House Studio, a service for building chat applications.",
       "sidebar": "tutorialSidebar"
     },
     "web3MQ-SDK/message/message": {

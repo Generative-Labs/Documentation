@@ -15,8 +15,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "AuthOne",
-    "permalink": "/docs/AuthOne/intro"
+    "title": "ChatClient SDK Python",
+    "permalink": "/docs/ChatClientSDK/PythonSDK"
   },
   "next": {
     "title": "User Login",
