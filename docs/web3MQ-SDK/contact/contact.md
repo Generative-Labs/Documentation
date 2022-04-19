@@ -4,17 +4,27 @@ position: 6
 
 ## Usage
 
-### Contact State
+### Contact Attribute
+
+| name          | type                                                     | Parameters Description |
+| ------------- | -------------------------------------------------------- | ---------------------- |
+| contactList   | [UserInfo](/docs/web3MQ-SDK/types/#userinfo) [ ] \| null | contact list           |
+| activeContact | [UserInfo](/docs/web3MQ-SDK/types/#userinfo) \| null     | current active contact |
 
 ```typescript
 export class Contact {
-  _client: Web3MQ;
-  contactList?: UserInfo[] | null;
+  contactList: UserInfo[] | null;
   activeContact: UserInfo | null;
 }
 ```
 
-### Contact Function
+### setActiveContact
+
+> Sets the currently active Contace and notifies subscribers of updates
+
+| name    | type                                         |
+| ------- | -------------------------------------------- |
+| contact | [UserInfo](/docs/web3MQ-SDK/types/#userinfo) |
 
 ```typescript
 setActiveContact = (contact: UserInfo) => {
@@ -23,14 +33,33 @@ setActiveContact = (contact: UserInfo) => {
       data: contact,
     });
   };
-
-  queryContacts(option?: PageParams) {
-    this._client.emit('contact.getList', { type: 'contact.getList', data });
-  }
 }
 ```
 
-### Contact API
+### queryContacts
+
+> get contact list and notifies subscribers of updates
+
+| name   | type                                             |
+| ------ | ------------------------------------------------ |
+| option | [PageParams](/docs/web3MQ-SDK/types/#pageparams) |
+
+```ts
+ queryContacts(option?: PageParams) {
+    const { data } = await this.getContacts(option || { page: 1, size: 10 });
+    this.contactList = data;
+    this._client.emit('contact.getList', { type: 'contact.getList', data });
+  }
+```
+
+### getContacts
+
+> get contact list API
+
+| name     | type                                                       |
+| -------- | ---------------------------------------------------------- |
+| params   | [PageParams](/docs/web3MQ-SDK/types/#pageparams)           |
+| response | { data: [UserInfo](/docs/web3MQ-SDK/types/#userinfo) [ ] } |
 
 ```typescript
 getContacts = (params: PageParams): Promise<{ data: UserInfo[] }> => {

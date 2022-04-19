@@ -148,6 +148,58 @@
       },
       {
         "type": "category",
+        "label": "web3MQ-Component",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Intro",
+            "href": "/docs/web3MQ-Component/intro",
+            "docId": "web3MQ-Component/intro"
+          },
+          {
+            "type": "category",
+            "label": "coreComponent",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Chat",
+                "href": "/docs/web3MQ-Component/coreComponent/Chat",
+                "docId": "web3MQ-Component/coreComponent/Chat"
+              },
+              {
+                "type": "link",
+                "label": "Channel",
+                "href": "/docs/web3MQ-Component/coreComponent/Channel",
+                "docId": "web3MQ-Component/coreComponent/Channel"
+              },
+              {
+                "type": "link",
+                "label": "ChannelList",
+                "href": "/docs/web3MQ-Component/coreComponent/ChannelList",
+                "docId": "web3MQ-Component/coreComponent/ChannelList"
+              },
+              {
+                "type": "link",
+                "label": "MessageList",
+                "href": "/docs/web3MQ-Component/coreComponent/MessageList",
+                "docId": "web3MQ-Component/coreComponent/MessageList"
+              },
+              {
+                "type": "link",
+                "label": "Thread",
+                "href": "/docs/web3MQ-Component/coreComponent/Thread",
+                "docId": "web3MQ-Component/coreComponent/Thread"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "category",
         "label": "web3MQ-SDK",
         "collapsible": true,
         "collapsed": true,
@@ -166,12 +218,6 @@
           },
           {
             "type": "link",
-            "label": "Event Center",
-            "href": "/docs/web3MQ-SDK/eventCenter/",
-            "docId": "web3MQ-SDK/eventCenter/eventCenter"
-          },
-          {
-            "type": "link",
             "label": "Channel",
             "href": "/docs/web3MQ-SDK/channel/",
             "docId": "web3MQ-SDK/channel/channel"
@@ -181,6 +227,18 @@
             "label": "Contact",
             "href": "/docs/web3MQ-SDK/contact/",
             "docId": "web3MQ-SDK/contact/contact"
+          },
+          {
+            "type": "link",
+            "label": "Event Center",
+            "href": "/docs/web3MQ-SDK/eventCenter/",
+            "docId": "web3MQ-SDK/eventCenter/eventCenter"
+          },
+          {
+            "type": "link",
+            "label": "TypeList",
+            "href": "/docs/web3MQ-SDK/types/",
+            "docId": "web3MQ-SDK/types/types"
           }
         ]
       }
@@ -277,10 +335,46 @@
       "description": "This site hosts the documentation for Web3MQ Chat service, which you can browse by clicking on the area to the left.",
       "sidebar": "tutorialSidebar"
     },
+    "web3MQ-Component/coreComponent/Channel": {
+      "id": "web3MQ-Component/coreComponent/Channel",
+      "title": "Channel",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "web3MQ-Component/coreComponent/ChannelList": {
+      "id": "web3MQ-Component/coreComponent/ChannelList",
+      "title": "ChannelList",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "web3MQ-Component/coreComponent/Chat": {
+      "id": "web3MQ-Component/coreComponent/Chat",
+      "title": "Chat",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "web3MQ-Component/coreComponent/MessageList": {
+      "id": "web3MQ-Component/coreComponent/MessageList",
+      "title": "MessageList",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "web3MQ-Component/coreComponent/Thread": {
+      "id": "web3MQ-Component/coreComponent/Thread",
+      "title": "Thread",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "web3MQ-Component/intro": {
+      "id": "web3MQ-Component/intro",
+      "title": "Intro",
+      "description": "Web3MQ React Component Libraries",
+      "sidebar": "tutorialSidebar"
+    },
     "web3MQ-SDK/channel/channel": {
       "id": "web3MQ-SDK/channel/channel",
       "title": "channel",
-      "description": "Usag",
+      "description": "Usage",
       "sidebar": "tutorialSidebar"
     },
     "web3MQ-SDK/client/client": {
@@ -305,6 +399,12 @@
       "id": "web3MQ-SDK/message/message",
       "title": "message",
       "description": "Usage",
+      "sidebar": "tutorialSidebar"
+    },
+    "web3MQ-SDK/types/types": {
+      "id": "web3MQ-SDK/types/types",
+      "title": "Type List",
+      "description": "EventTypes",
       "sidebar": "tutorialSidebar"
     }
   }

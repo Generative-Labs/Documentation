@@ -50,7 +50,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','451'),
+    component: ComponentCreator('/docs','c52'),
     routes: [
       {
         path: '/docs/AuthOne/intro',
@@ -143,6 +143,42 @@ export default [
         'sidebar': "tutorialSidebar"
       },
       {
+        path: '/docs/web3MQ-Component/coreComponent/Channel',
+        component: ComponentCreator('/docs/web3MQ-Component/coreComponent/Channel','b02'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/web3MQ-Component/coreComponent/ChannelList',
+        component: ComponentCreator('/docs/web3MQ-Component/coreComponent/ChannelList','23f'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/web3MQ-Component/coreComponent/Chat',
+        component: ComponentCreator('/docs/web3MQ-Component/coreComponent/Chat','29b'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/web3MQ-Component/coreComponent/MessageList',
+        component: ComponentCreator('/docs/web3MQ-Component/coreComponent/MessageList','416'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/web3MQ-Component/coreComponent/Thread',
+        component: ComponentCreator('/docs/web3MQ-Component/coreComponent/Thread','7d9'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/web3MQ-Component/intro',
+        component: ComponentCreator('/docs/web3MQ-Component/intro','a36'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
         path: '/docs/web3MQ-SDK/channel/',
         component: ComponentCreator('/docs/web3MQ-SDK/channel/','662'),
         exact: true,
@@ -169,6 +205,12 @@ export default [
       {
         path: '/docs/web3MQ-SDK/message/',
         component: ComponentCreator('/docs/web3MQ-SDK/message/','2dd'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/web3MQ-SDK/types/',
+        component: ComponentCreator('/docs/web3MQ-SDK/types/','cb7'),
         exact: true,
         'sidebar': "tutorialSidebar"
       }
