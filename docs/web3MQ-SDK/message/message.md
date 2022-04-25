@@ -38,6 +38,52 @@ getMessageList = async (props: GetRoomInfoParams) => {
 };
 ```
 
+### loadMoreMessageList
+
+> load more message list and notifies the subscriber of the update
+
+```ts
+loadMoreMessageList = () => {
+  return new Promise(async (resolve) => {
+    this._messagePage++;
+    const { data = [] } = await this.getMessages({
+      room_id: this._roomId,
+      page: this._messagePage,
+    });
+    this.messageList = [...data.reverse(), ...(this.messageList as [])];
+    this._client.emit('message.getList', { type: 'message.getList', data });
+    resolve(true);
+  });
+};
+```
+
+### loadMoreThreadList
+
+> load more thread list and notifies the subscriber of the update
+
+```ts
+loadMoreThreadList = () => {
+  const { to_room_id = '', id = '' } = this.activeMessage || {};
+  return new Promise(async (resolve) => {
+    this._threadPage++;
+    const { data = [] } = await this.getMessageListByThread({
+      room_id: to_room_id,
+      belong_to_thread_id: id,
+      page: this._threadPage,
+    });
+    this.threadList = [
+      ...(data ? data.reverse() : []),
+      ...(this.threadList as []),
+    ];
+    this._client.emit('message.getThreadList', {
+      type: 'message.getThreadList',
+      data,
+    });
+    resolve(true);
+  });
+};
+```
+
 ### openThread
 
 > Changes the activeMessage and threadList property on the current object and notifies the subscriber of the update
@@ -57,6 +103,23 @@ openThread = (message: MessageResponse | null) => {
     type: 'message.getThreadList',
     data,
   });
+};
+```
+
+### getMessages
+
+> get message list API
+
+#### params
+
+| name     | type                                                                     |
+| -------- | ------------------------------------------------------------------------ |
+| params   | [GetMessageParams](/docs/web3MQ-SDK/types/#getmessageparams)             |
+| response | { data: [MessageResponse](/docs/web3MQ-SDK/types/#messageresponse) [ ] } |
+
+```ts
+getMessages = (params: GetMessageParams): Promise<any> => {
+  return request.post('/messages', { ...params, size: PAGE_SIZE });
 };
 ```
 
