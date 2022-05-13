@@ -178,7 +178,7 @@
               },
               {
                 "type": "link",
-                "label": "ChannelList",
+                "label": "Channel List",
                 "href": "/docs/web3MQ-Component/coreComponent/ChannelList",
                 "docId": "web3MQ-Component/coreComponent/ChannelList"
               },
@@ -338,31 +338,31 @@
     "web3MQ-Component/coreComponent/Channel": {
       "id": "web3MQ-Component/coreComponent/Channel",
       "title": "Channel",
-      "description": "",
+      "description": "The Channel component is a React Context provider that wraps all of the logic, functionality, and UI for an individual chat channel. It provides five separate contexts to its children:",
       "sidebar": "tutorialSidebar"
     },
     "web3MQ-Component/coreComponent/ChannelList": {
       "id": "web3MQ-Component/coreComponent/ChannelList",
-      "title": "ChannelList",
-      "description": "",
+      "title": "Channel List",
+      "description": "The ChannelList component queries an array of channel objects from the Stream Chat API",
       "sidebar": "tutorialSidebar"
     },
     "web3MQ-Component/coreComponent/Chat": {
       "id": "web3MQ-Component/coreComponent/Chat",
       "title": "Chat",
-      "description": "",
+      "description": "Basic Usage",
       "sidebar": "tutorialSidebar"
     },
     "web3MQ-Component/coreComponent/MessageList": {
       "id": "web3MQ-Component/coreComponent/MessageList",
       "title": "MessageList",
-      "description": "",
+      "description": "The MessageList component renders a scrollable list of messages. The UI for each individual message is rendered conditionally based on its message.type value. The list renders date separators, new message notifications, system messages, deleted messages, and standard messages containing text and/or attachments.",
       "sidebar": "tutorialSidebar"
     },
     "web3MQ-Component/coreComponent/Thread": {
       "id": "web3MQ-Component/coreComponent/Thread",
       "title": "Thread",
-      "description": "",
+      "description": "The Thread component renders a list of replies tied to a single parent message in a channel's main message list. A Thread maintains its own state and renders its own MessageList and MessageInput components. Each piece of rendered UI can be overridden with custom components either drawn from the ComponentContext or supplied via props.",
       "sidebar": "tutorialSidebar"
     },
     "web3MQ-Component/intro": {
