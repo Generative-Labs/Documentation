@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Get Chat Rooms
@@ -22,8 +22,7 @@ ___
 | ------------- | ------------- |--------|
 | code  | Yes  |  result code,0 means success, other code see msg's contents  |
 | msg  | Yes  | result description   |
-| data  | Yes  | return a **List** includes all rooms you are participating in when code is 0, otherwise return None |
-
+| data  | Yes  | return a **List** includes all rooms you are participating in when code is 0, otherwise return None. See **Details** on the left for Room's structure |
 
 
 ## Get all rooms' id that you are participating in
