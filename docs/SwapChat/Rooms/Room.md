@@ -2,7 +2,7 @@
 sidebar_position: 0
 ---
 
-# What is Room
+# Details
 Room is a container for chatting behavior, and some of its properties are affected by the way it was created. It has at least one member.
 ___
 
