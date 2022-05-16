@@ -18,6 +18,24 @@ ___
 
 > Return:
 
+```json
+{
+    "code": 0,
+    "msg": "ok",
+    "data": {
+        "user_id": "user's OID",
+        "nick_name": "user's nickname on our platform",
+        "twitter_username": "",
+        "instagram_username": "",
+        "facebook_username": "",
+        "discord_username": "",
+        "eth_wallet_address": "eth wallet address",
+        "status": 0,
+        "created_at": 1652699469
+    }
+}
+```
+
 | Parameters  | Required |  Parameters Description|
 | ------------- | ------------- |--------|
 | code  | Yes  |  result code,0 means success, other code see msg's contents  |

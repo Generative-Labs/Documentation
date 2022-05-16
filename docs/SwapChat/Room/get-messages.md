@@ -20,6 +20,24 @@ ___
 
 > Return:
 
+```json
+{
+    "msg": "ok",
+    "code": 0,
+    "data": [
+        {
+            "created_at": 1643444624578432887,
+            "msg_type": "text",
+            "at_user_ids": [],
+            "to_room_id": "send to room id",
+            "msg_contents": "Hi",
+            "id": "id",
+            "from_uid": "message come from uid"
+        }
+    ]
+}
+```
+
 | Parameters  | Required |  Parameters Description|
 | ------------- | ------------- |--------|
 | code  | Yes  |  result code,0 means success, other code see msg's contents  |

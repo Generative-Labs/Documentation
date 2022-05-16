@@ -17,6 +17,14 @@ ___
 
 > Return:
 
+```json
+{
+    "code":0,
+    "msg": "Here's your login random secret.",
+    "data":"b1e069cab9827c08700280b6ed1151fe"
+}
+```
+
 | Parameters  | Required |  Parameters Description|
 | ------------- | ------------- |--------|
 | code  | Yes  |  result code,0 means success, other code see msg's contents  |
@@ -40,6 +48,16 @@ ___
 
 > Return:
 
+```json
+{
+    "code": 0,
+    "msg": "Here's your JWT.",
+    "data": {
+        "access_token": "your access token"
+    }
+}
+```
+
 | Parameters  | Required |  Parameters Description|
 | ------------- | ------------- |--------|
 | code  | Yes  |  result code,0 means success, other code see msg's contents  |
@@ -60,6 +78,16 @@ ___
 
 
 > Return:
+
+```json
+{
+    "code": 0,
+    "msg": "Here's your JWT.",
+    "data": {
+        "access_token": "your access token"
+    }
+}
+```
 
 | Parameters  | Required |  Parameters Description|
 | ------------- | ------------- |--------|

@@ -31,6 +31,14 @@ ___
 
 > Return:
 
+```json
+{
+    "code": 0,
+    "msg": "ok",
+    "data": "root id"
+}
+```
+
 | Parameters  | Required |  Parameters Description|
 | ------------- | ------------- |--------|
 | code  | Yes  |  result code,0 means success, other code see msg's contents  |

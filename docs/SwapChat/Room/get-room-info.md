@@ -17,6 +17,63 @@ ___
 
 > Return:
 
+```json
+{
+    "msg": "ok",
+    "code": 0,
+    "data": {
+        "name": "",
+        "creator": {
+            "opensea_username": "",
+            "instagram_avatar": "",
+            "user_id": "user id",
+            "twitter_avatar": "https://pbs.twimg.com/profile_images/434870163112869889/jL1GyLM9_400x400.png",
+            "nick_name": "XuJava",
+            "created_at": 0,
+            "eth_wallet_address": "eth wallet address",
+            "facebook_username": "",
+            "twitter_username": "XuJava",
+            "ens_name": "",
+            "status": "1111111",
+            "opensea_avatar": "",
+            "discord_avatar": "https://cdn.discordapp.com/avatars/384890640573530113/8f52c8903295f6d90fcabf7e6d0fc110.png?size=1024",
+            "discord_username": "XuBin#1500",
+            "instagram_username": "",
+            "facebook_avatar": ""
+        },
+        "is_opensea_coll": false,
+        "opensea_coll_cover": "",
+        "opensea_coll_slug": "",
+        "creator_id": "creator id",
+        "room_id": "room id",
+        "members": [
+            {
+                "opensea_username": "",
+                "instagram_avatar": "",
+                "user_id": "user id",
+                "twitter_avatar": "https://pbs.twimg.com/profile_images/434870163112869889/jL1GyLM9_400x400.png",
+                "nick_name": "XuJava",
+                "created_at": 0,
+                "eth_wallet_address": "eth wallet address",
+                "facebook_username": "",
+                "twitter_username": "XuJava",
+                "ens_name": "",
+                "status": "1111111",
+                "opensea_avatar": "",
+                "discord_avatar": "https://cdn.discordapp.com/avatars/384890640573530113/8f52c8903295f6d90fcabf7e6d0fc110.png?size=1024",
+                "discord_username": "XuBin#1500",
+                "instagram_username": "",
+                "facebook_avatar": ""
+            }
+        ],
+        "is_1v1": true,
+        "opensea_coll_name": "",
+        "created_at": 1643444610855372555,
+        "description": "ChatRoom"
+    }
+}
+```
+
 | Parameters  | Required |  Parameters Description|
 | ------------- | ------------- |--------|
 | code  | Yes  |  result code,0 means success, other code see msg's contents  |
