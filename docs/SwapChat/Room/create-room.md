@@ -26,7 +26,7 @@ ___
 
 | Parameters  | Required |  Parameters Description|
 | ------------- | ------------- |--------|
-| is_opensea_coll  | Yes  | true/fale  |
+| is_opensea_coll  | Yes  | true/false  |
 | opensea_coll_slug  | Yes  | opensea collection slug  |
 
 > Return:
@@ -35,7 +35,7 @@ ___
 {
     "code": 0,
     "msg": "ok",
-    "data": "root id"
+    "data": "room id"
 }
 ```
 

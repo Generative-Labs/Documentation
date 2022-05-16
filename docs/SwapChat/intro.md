@@ -1,8 +1,16 @@
 ---
-position: 0
+sidebar_position: 0
 ---
 
+
 # Intro
+
+## API endpoint
+
+- Production env: **https://chat.web3messaging.online**
+- Development env: **https://test.web3messaging.online**
+
+
 ## Wallet Direct Messaging
 
 The Web3 world is built on top of blockchains and wallet addresses are key to identity in Web3, we make it possible to message anyone in Web3.

@@ -58,7 +58,7 @@ ___
                 "at_user_ids": []
             },
             "creator_id": "creator id",
-            "room_id": "root id",
+            "room_id": "room id",
             "members": [
                 {
                     "opensea_username": "",

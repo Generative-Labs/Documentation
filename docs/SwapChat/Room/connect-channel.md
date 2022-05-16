@@ -30,7 +30,11 @@ If you have already installed one of the Client SDKs, then you can view the docu
 
 ## MQTT connection parameters
 
-> MQTT endpoint: /mqtt
+> MQTT endpoint:
+
+- Production env:     **wss://msg.web3messaging.online/mqtt**
+- Development env:    **wss://test-msg.web3messaging.online/mqtt**
+
 
 > JWT: No
 
