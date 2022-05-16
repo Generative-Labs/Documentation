@@ -5,11 +5,21 @@ sidebar_position: 5
 # Get History Messages
 ___
 ## Get History Messages by room oid
-> /messages
+> POST /messages
 
 > JWT: Yes
 
-> Call Method: POST
+*http header*
+
+| Headers  | Required |  Headers Description|
+| ------------- | ------------- |--------|
+| Authorization  | Yes  |  [login api](/docs/SwapChat/User/user-login#login-with-metamask-sign) response "access_token" |
+
+*example*
+
+```
+Authorization: Bearer (your access token from login api)
+```
 
 | Parameters | Required |  Parameters Description|
 | ------------- | ------------- |--------|

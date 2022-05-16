@@ -5,11 +5,21 @@ sidebar_position: 1
 # Get Contacts Info
 ___
 ## Get contact's info
-> /contacts/<page:int>/<size:int>
+> GET /contacts/<page:int>/<size:int>
 
 > JWT: Yes
 
-> Call Method: GET
+*http header*
+
+| Headers  | Required |  Headers Description|
+| ------------- | ------------- |--------|
+| Authorization  | Yes  |  [login api](/docs/SwapChat/User/user-login#login-with-metamask-sign) response "access_token" |
+
+*example*
+
+```
+Authorization: Bearer (your access token from login api)
+```
 
 | Parameters in URL | Required |  Parameters Description|
 | ------------- | ------------- |--------|

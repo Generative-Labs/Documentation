@@ -67,11 +67,22 @@ ___
 
 
 ## Refresh JWT
-> /refresh
+> GET /refresh
 
 > JWT: Yes
 
-> Call Method: GET
+
+*http header*
+
+| Headers  | Required |  Headers Description|
+| ------------- | ------------- |--------|
+| Authorization  | Yes  |  [login api](/docs/SwapChat/User/user-login#login-with-metamask-sign) response "access_token" |
+
+*example*
+
+```
+Authorization: Bearer (your access token from login api)
+```
 
 | Parameters  | Required |  Parameters Description|
 | ------------- | ------------- |--------|

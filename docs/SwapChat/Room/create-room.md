@@ -7,11 +7,21 @@ There are 2 ways to create a room:
 * Create a chat room by specifying users
 * Create a chat room by specifying Opensea Collection
 ___
-> /rooms
+> POST /rooms
 
 > JWT: Yes
 
-> Call Method: POST
+*http header*
+
+| Headers  | Required |  Headers Description|
+| ------------- | ------------- |--------|
+| Authorization  | Yes  |  [login api](/docs/SwapChat/User/user-login#login-with-metamask-sign) response "access_token" |
+
+*example*
+
+```
+Authorization: Bearer (your access token from login api)
+```
 
 
 ## Create a chat room by specifying users
@@ -19,7 +29,6 @@ ___
 | Parameters  | Required |  Parameters Description|
 | ------------- | ------------- |--------|
 | user_id  | Yes  |  The OID of target users  |
-
 
 ___
 ## Create a chat room by specifying Opensea Collection

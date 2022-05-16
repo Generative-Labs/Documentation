@@ -11,6 +11,27 @@ sidebar_position: 0
 - Development env: **https://test.web3messaging.online**
 
 
+## How to authorization with JWT
+
+1. call [login api](/docs/SwapChat/User/user-login#login-with-metamask-sign)
+2. put "access_token" from login api response into http header
+
+**JWT: yes** means you need pass Authorization http header
+
+
+*http header*
+
+| Headers  | Required |  Headers Description|
+| ------------- | ------------- |--------|
+| Authorization  | Yes  |  [login api](/docs/SwapChat/User/user-login#login-with-metamask-sign) response "access_token" |
+
+*example*
+
+```
+Authorization: Bearer (your access token from login api)
+```
+
+
 ## Wallet Direct Messaging
 
 The Web3 world is built on top of blockchains and wallet addresses are key to identity in Web3, we make it possible to message anyone in Web3.

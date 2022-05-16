@@ -5,11 +5,22 @@ sidebar_position: 0
 # Add User To Your Contact List
 ___
 ## Add an user to your contact list by user's OID
-> /contacts
+> POST /contacts
 
 > JWT: Yes
 
-> Call Method: POST
+*http header*
+
+| Headers  | Required |  Headers Description|
+| ------------- | ------------- |--------|
+| Authorization  | Yes  |  [login api](/docs/SwapChat/User/user-login#login-with-metamask-sign) response "access_token" |
+
+*example*
+
+```
+Authorization: Bearer (your access token from login api)
+```
+
 
 | Parameters | Required |  Parameters Description|
 | ------------- | ------------- |--------|

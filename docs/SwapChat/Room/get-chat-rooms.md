@@ -5,11 +5,22 @@ sidebar_position: 4
 # Get Chat Rooms
 ___
 ## Get the chat rooms you are participating in
-> /my_chats
+> POST /my_chats
 
 > JWT: Yes
 
-> Call Method: POST
+*http header*
+
+| Headers  | Required |  Headers Description|
+| ------------- | ------------- |--------|
+| Authorization  | Yes  |  [login api](/docs/SwapChat/User/user-login#login-with-metamask-sign) response "access_token" |
+
+*example*
+
+```
+Authorization: Bearer (your access token from login api)
+```
+
 
 | Parameters | Required |  Parameters Description|
 | ------------- | ------------- |--------|
