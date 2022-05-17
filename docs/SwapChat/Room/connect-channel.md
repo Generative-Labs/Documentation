@@ -51,6 +51,15 @@ None thing
 
 ## Send Message
 
+just call MQTT's publish function.
+> the topic where message send to is "**msg/+user's oid**"
+
+```Python
+msg = Message(...)
+client.pub("msg/e324r234r2342",msg)
+```
+
+
 ### Message's structure
 | Parameters | Required |  Parameters Description|
 | ------------- | ------------- |--------|
@@ -75,7 +84,7 @@ None thing
 
 **sudo_swap_card's structure**
 
-
+```JSON
 {
 		"orderStatus" : "OPEN",
 		"expiryDate" : "2022-05-14, 12:00 AM",
@@ -104,3 +113,4 @@ None thing
 			}
 		]
 	}
+```
