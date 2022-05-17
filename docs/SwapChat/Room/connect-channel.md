@@ -48,3 +48,59 @@ If you have already installed one of the Client SDKs, then you can view the docu
 > Return:
 
 None thing
+
+## Send Message
+
+### Message's structure
+| Parameters | Required |  Parameters Description|
+| ------------- | ------------- |--------|
+|from_uid|yes|user' oid who sent the message|
+|to_room_id|yes|room's oid which should receivced the message|
+|msg_type|yes|one of 'text' and 'sudo_swap_card'|
+|msg_contents|yes|if msg_type is 'text',it is pure text,if msg_type is 'sudo_swap_card',see **sudo_swap_card's structure** Please see the notes below this form |
+|is_thread|yes|was it a thread,default is no|
+|is_opensea_item_thread|yes|was it a OpenSea item,default is no|
+|opensea_item_contract_address|yes|if is_opensea_item_thread is true, it should be NFT's contract address|
+|opensea_item_token_id|yes|if is_opensea_item_thread is true, it should be NFT's token id|
+|opensea_item_name|yes|if is_opensea_item_thread is true, it should be NFT's name|
+|opensea_item_description|yes|if is_opensea_item_thread is true, it should be NFT's description|
+|opensea_item_image_url|yes|if is_opensea_item_thread is true, it should be NFT's image path|
+|belong_to_thread_id|yes|if message was belong to any thread,it should be the thread's oid |
+|reply_to_msg_id|yes|if message was reply to any msg,it should be the thread's oid|
+|created_at|yes|the unix time stamp when the message sent|
+|at_user_ids|yes|default value is empty list []|
+
+> message ACK: if message was sent, the sender will received the message that includes a new parameter "id"
+
+
+**sudo_swap_card's structure**
+
+
+{
+		"orderStatus" : "OPEN",
+		"expiryDate" : "2022-05-14, 12:00 AM",
+		"creatorAddress" : "0x0f4dc815bccd5da44e6ba06140c710813078510d",
+		"recipientAddress" : "",
+		"jumpUrl" : "https://sudoswap.xyz/#/swap/0x0f4dc815bccd5da44e6ba06140c710813078510d/1",
+		"asset1Data" : [
+			{
+				"address" : "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+				"type" : "1",
+				"amount" : "3.5",
+				"imgURL" : "https://zapper.fi/images/WETH-icon.png",
+				"name" : "Wrapped Ether",
+				"symbol" : "WETH"
+			}
+		],
+		"asset2Data" : [
+			{
+				"address" : "0x9df8aa7c681f33e442a0d57b838555da863504f3",
+				"type" : "2",
+				"id" : "1086",
+				"amount" : "1",
+				"imgURL" : "https://lh3.googleusercontent.com/3cYi9Y9p_ZEPKsIGcMuCnfZTKP3Q6hPDUfkaVMAZbVKRs88NpdOPCepQFMnKIT22Rh2E2Z8IcAYul4JiPhm12nfv0A0zKCUOz9AB=s250",
+				"name" : "Pixelated Llama",
+				"symbol" : "PXLLMA"
+			}
+		]
+	}
