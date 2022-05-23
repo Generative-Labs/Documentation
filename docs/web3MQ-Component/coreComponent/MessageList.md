@@ -2,7 +2,7 @@
 
 The `MessageList` component renders a scrollable list of messages. The UI for each individual message is rendered conditionally based on its `message.type` value. The list renders date separators, new message notifications, system messages, deleted messages, and standard messages containing text and/or attachments.
 
-By default, the `MessageList` loads the most recent 20 messages held in the `channel.state`. More messages are fetched from the Stream Chat API and loaded into the DOM on scrolling up the list. The currently loaded messages are held in the `ChannelStateContext` and can be referenced with our custom hook.
+By default, the `MessageList` loads the most recent 20 messages held in the `channel.state`. More messages are fetched from the Chat API and loaded into the DOM on scrolling up the list. The currently loaded messages are held in the `ChannelStateContext` and can be referenced with our custom hook.
 
 ```tsx
 const { messages } = useChannelStateContext();

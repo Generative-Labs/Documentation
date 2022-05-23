@@ -1,6 +1,6 @@
 # Channel List
 
-The `ChannelList` component queries an array of channel objects from the Stream Chat API
+The `ChannelList` component queries an array of channel objects from the Chat API
 
 ## Basic Usage
 
