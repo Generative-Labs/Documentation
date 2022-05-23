@@ -174,7 +174,7 @@ Return
 ```javascript
 import { connect } from "mqtt"  // import connect from mqtt
 
-// create a client
+
 let client  = await mqtt.connectAsync("wss://test-msg.web3messaging.online/mqtt", {
     clientId: "your user oid",
     username: "your user oid",
