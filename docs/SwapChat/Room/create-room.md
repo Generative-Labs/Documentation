@@ -26,17 +26,17 @@ Authorization: Bearer (your access token from login api)
 
 ## Create a chat room by specifying users
 
-| Parameters  | Required |  Parameters Description|
-| ------------- | ------------- |--------|
-| user_id  | Yes  |  The OID of target users  |
+| Parameters | Type | Required |  Parameters Description|
+| ---------|----- | ------------- |--------|
+| user_id |list | Yes  |  The list of target user's OID  |
 
 ___
 ## Create a chat room by specifying Opensea Collection
 
-| Parameters  | Required |  Parameters Description|
-| ------------- | ------------- |--------|
-| is_opensea_coll  | Yes  | true/false  |
-| opensea_coll_slug  | Yes  | opensea collection slug  |
+| Parameters | Type | Required |  Parameters Description|
+| ----------|----- | ------------- |--------|
+| is_opensea_coll |bool | Yes  | true/false  |
+| opensea_coll_slug |string | Yes  | opensea collection slug  |
 
 > Return:
 
@@ -48,8 +48,8 @@ ___
 }
 ```
 
-| Parameters  | Required |  Parameters Description|
-| ------------- | ------------- |--------|
-| code  | Yes  |  result code,0 means success, other code see msg's contents  |
-| msg  | Yes  | result description   |
-| data  | Yes  | return None when code is 1,return room's OID when code is 0 |
+| Parameters| Type  | Always Return |  Parameters Description|
+| ----------|----- | ------------- |--------|
+| code |int | Yes  |  result code,0 means success, other code see msg's contents  |
+| msg |string | Yes  | result description   |
+| data |null/string  | Yes  | return null when code is 1,return room's OID when code is 0 |

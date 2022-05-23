@@ -1,20 +1,21 @@
 ---
-sidebar_position: 3
+sidebar_position: 5
 ---
 
-# Get User Info
-___
-## Get user info by platform and username
-> /info
+# Search
 
-> JWT: No
+You can use this API to search all users in Swapchat,then get user's OID which you want add to your contacts list.
+___
+## Search users by keyword
+> /search
+
+> JWT: Yes
 
 > Call Method: POST
 
 | Parameters  | Type | Required |  Parameters Description|
 | ----------|---- | ------------- |--------|
-| platform |string | Yes  |  One of these values: twitter/instagram/facebook/discord  |
-| user_name |string | Yes  |  User's username on the platform  |
+| keyword |string | Yes  |  the keyword what you want to search  |
 
 > Return:
 
@@ -22,7 +23,7 @@ ___
 {
     "code": 0,
     "msg": "ok",
-    "data": {
+    "data": [{
         "user_id": "user's OID",
         "nick_name": "user's nick_name",
         "twitter_username": "user's twitter_username",
@@ -39,7 +40,7 @@ ___
         "ens_name": "user's ens_name",
         "status": "user's status",
         "created_at": "the timestamp when user created"
-    }
+    }]
 }
 ```
 
@@ -47,4 +48,4 @@ ___
 | ----------|---- | ------------- |--------|
 | code |int | Yes  |  result code,0 means success, other code see msg's contents  |
 | msg |string | Yes  | result description   |
-| data |object | Yes  | return **user** object when code is 0, otherwise return None |
+| data |list | Yes  | return List of **user** object when code is 0, otherwise return None |

@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Get Room Info
 ___
-## Get Room info by room oid
+## Get Room info by room OID
 > GET /rooms/<room_id:string>
 
 > JWT: Yes

@@ -42,7 +42,7 @@ If you have already installed one of the Client SDKs, then you can view the docu
 
 | Parameters | Required |  Parameters Description|
 | ------------- | ------------- |--------|
-| username  | Yes  |  the username of mqtt client,must be user's oid  |
+| username  | Yes  |  the username of mqtt client,must be user's OID  |
 | password  | Yes  |  the password of mqtt client,must be user's jwt  |
 
 > Return:
@@ -52,7 +52,7 @@ None thing
 ## Send Message
 
 just call MQTT's publish function.
-> the topic where message send to is "**msg/+user's oid**"
+> the topic where message send to is "**msg/+user's OID**"
 
 ```Python
 msg = Message(...)
@@ -63,8 +63,8 @@ client.pub("msg/e324r234r2342",msg)
 ### Message's structure
 | Parameters | Required |  Parameters Description|
 | ------------- | ------------- |--------|
-|from_uid|yes|user' oid who sent the message|
-|to_room_id|yes|room's oid which should receivced the message|
+|from_uid|yes|user' OID who sent the message|
+|to_room_id|yes|room's OID which should receivced the message|
 |msg_type|yes|one of 'text' and 'sudo_swap_card'|
 |msg_contents|yes|if msg_type is 'text',it is pure text,if msg_type is 'sudo_swap_card',see **sudo_swap_card's structure** Please see the notes below this form |
 |is_thread|yes|was it a thread,default is no|
@@ -74,8 +74,8 @@ client.pub("msg/e324r234r2342",msg)
 |opensea_item_name|yes|if is_opensea_item_thread is true, it should be NFT's name|
 |opensea_item_description|yes|if is_opensea_item_thread is true, it should be NFT's description|
 |opensea_item_image_url|yes|if is_opensea_item_thread is true, it should be NFT's image path|
-|belong_to_thread_id|yes|if message was belong to any thread,it should be the thread's oid |
-|reply_to_msg_id|yes|if message was reply to any msg,it should be the thread's oid|
+|belong_to_thread_id|yes|if message was belong to any thread,it should be the thread's OID |
+|reply_to_msg_id|yes|if message was reply to any msg,it should be the thread's OID|
 |created_at|yes|the unix time stamp when the message sent|
 |at_user_ids|yes|default value is empty list []|
 
@@ -114,3 +114,10 @@ client.pub("msg/e324r234r2342",msg)
 		]
 	}
 ```
+
+
+##  Subsribe your rooms
+
+##  publish messages to your room
+
+

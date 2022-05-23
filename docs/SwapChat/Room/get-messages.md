@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Get History Messages
 ___
-## Get History Messages by room oid
+## Get History Messages by room OID
 > POST /messages
 
 > JWT: Yes

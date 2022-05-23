@@ -22,10 +22,10 @@ Authorization: Bearer (your access token from login api)
 ```
 
 
-| Parameters  | Required |  Parameters Description|
-| ------------- | ------------- |--------|
-| platform  | Yes  |  The platform name, one of follwing values: twitter/facebook/instagram/youtube  |
-| data  | Yes  |  The URL of article which include user's ETH wallet address  |
+| Parameters | Type  | Required |  Parameters Description|
+| ----------|----- | ------------- |--------|
+| platform |string | Yes  |  The platform name, one of follwing values: twitter/facebook/instagram/youtube  |
+| data |string | Yes  |  The URL of article which include user's ETH wallet address  |
 
 > Return:
 
@@ -38,8 +38,8 @@ Authorization: Bearer (your access token from login api)
 }
 ```
 
-| Parameters  | Required |  Parameters Description|
-| ------------- | ------------- |--------|
-| code  | Yes  |  result code,0 means success, other code see msg's contents  |
-| msg  | Yes  | result description   |
-| data  | Yes  | always return None |
+| Parameters | Type | Always Return |  Parameters Description|
+| ------------|---- | ------------- |--------|
+| code  |int| Yes  |  result code,0 means success, other code see msg's contents  |
+| msg  |string| Yes  | result description   |
+| data | null| Yes  | always return null |
