@@ -34,6 +34,7 @@ Authorization: Bearer (your access token from login api)
 ## Quickstart
 
 Install the dependency packages first:
+
 ```bash
 npm install web3 mqtt.js -D
 ```
@@ -44,6 +45,7 @@ then follow the steps below.
 > 1. Use JavaScript code to get eth wallet address from MetaMask:
 
 for example, the following code is used to get the wallet address in the browser.
+
 ```javascript
 import Web3 from 'web3.js'
 
@@ -74,7 +76,9 @@ Return:
 ```
 
 * get MetaMask's signature:
+
 for example, the following code is used to get the MetaMask's signature in the browser.
+
 ```javascript
 let signContent = `Web3MQ wants you to sign in with your Ethereum account:
 ${account}
@@ -93,9 +97,11 @@ alert("Your MetaMask's signature is: " + signature)
 ```
 
 * signin with MetaMask's signature:
+
 ```bash
 curl -d '{"wallet_address": "your wallet address","signature":"your signature","login_random_secret":"login_random_secret"}' -H 'Content-Type: application/json' https://test.web3messaging.online/login_random_secret
 ```
+
 Return:
 
 ```json
@@ -127,6 +133,7 @@ Return:
 ```
 
 > 3. search a user in Swapchat:
+
 ```bash
 curl -d '{"keyword": "swapchat"}' -H 'Content-Type: application/json' -H 'Authorization: Bearer your_jwt' https://test.web3messaging.online/search
 ```
@@ -158,6 +165,7 @@ Return:
 ```
 
 > 4. create a room with target user's oid:
+
 ```bash
 curl -d '{"user_id": "target users oid"}' -H 'Content-Type: application/json' -H 'Authorization: Bearer your_jwt' https://test.web3messaging.online/search
 ```
@@ -171,6 +179,7 @@ Return
 ```
 
 > 5. use your 'user_id' and 'access_token' to login to message server:
+
 ```javascript
 import { connect } from "mqtt"  
 
