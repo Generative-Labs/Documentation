@@ -172,8 +172,7 @@ Return
 
 > 5. use your 'user_id' and 'access_token' to login to message server:
 ```javascript
-import { connect } from "mqtt"  // import connect from mqtt
-
+import { connect } from "mqtt"  
 
 let client  = await mqtt.connectAsync("wss://test-msg.web3messaging.online/mqtt", {
     clientId: "your user oid",
