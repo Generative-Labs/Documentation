@@ -111,12 +111,12 @@ const randomSecret = await getLoginRandomSecret({
 
 const msg = `0x${Buffer.from(randomSecret, "utf8").toString("hex")}`;
 let signContent = `Web3MQ wants you to sign in with your Ethereum account:
-${msg}
+${address}
 Sign-In With Ethereum Example Statement
 URI: https://chat.web3messaging.online
 Version: 1
 Chain ID: 1
-Nonce: pkd3mfu7g
+Nonce: ${msg}
 Issued At: 2022-05-23T12:52:57.500Z
 Expiration Time: 2022-05-25T12:52:57.489Z`;
 // @ts-ignore
