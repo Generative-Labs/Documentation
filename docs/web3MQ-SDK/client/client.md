@@ -6,6 +6,14 @@ position: 1
 
 web3-mq-js is the official JavaScript client for Web3MQ, a service for building chat applications.
 
+## Usage
+
+1. install package
+2. register Web3MQ user if you are not
+3. create Web3MQ client connection
+
+## Install
+
 ### Install with NPM
 
 ```bash
@@ -18,11 +26,11 @@ npm install web3-mq
 yarn add web3-mq
 ```
 
-# Usage
+## Register
 
-# Register your first Web3MQ user and start create Web3MQ client
+> Register your first Web3MQ user and start create Web3MQ client
 
-### register
+### register()
 
 #### Code
 
@@ -85,7 +93,9 @@ const data = await register({
 }
 ```
 
-# Now, You can create client after register success
+## Create client connection
+
+> Now, You can create client after register success
 
 ### create client
 
@@ -143,7 +153,7 @@ const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
 
 ## Utils function
 
-### getLoginRandomSecret
+### getLoginRandomSecret()
 
 > If you want to log in yourself, Then you need to call this api and get random secret
 
@@ -164,7 +174,7 @@ const data = await getLoginRandomSecret({
 | -------------- | ------ | ---------------------- |
 | wallet_address | String | eth wallet             |
 
-### login
+### login()
 
 #### Code
 
@@ -190,7 +200,27 @@ const data = await login();
 }
 ```
 
-#### Event
+## Client Class
+
+### Attributes
+
+| name      | type          | Parameters Description   |
+| --------- | ------------- | ------------------------ |
+| token     | string        | your access token        |
+| listeners | {}            | pubsub list              |
+| channel   | Channel Class | The channel correlation  |
+| messages  | Message Class | The messages correlation |
+| user      | User Class    | The user correlation     |
+| contact   | Contact Class | The contact correlation  |
+
+### Methods
+
+| name        | type     | Parameters Description               |
+| ----------- | -------- | ------------------------------------ |
+| getInstance | function | Gets a unique client instance method |
+| getMyRooms  | function | get all rooms id                     |
+
+### Event
 
 | name | type     | Parameters Description |
 | ---- | -------- | ---------------------- |
@@ -198,23 +228,3 @@ const data = await login();
 | off  | function | cancel pubsub          |
 | once | function | once pubsub            |
 | emit | function | emit pubsub            |
-
-#### Methods
-
-| name        | type     | Parameters Description               |
-| ----------- | -------- | ------------------------------------ |
-| getInstance | function | Gets a unique client instance method |
-| getMyRooms  | function | get all rooms id                     |
-
-#### attributes
-
-| name        | type          | Parameters Description               |
-| ----------- | ------------- | ------------------------------------ |
-| getInstance | function      | Gets a unique client instance method |
-| getMyRooms  | function      | get all rooms id                     |
-| token       | string        | your access token                    |
-| listeners   | {}            | pubsub list                          |
-| channel     | Channel Class | The channel correlation              |
-| messages    | Message Class | The messages correlation             |
-| user        | User Class    | The user correlation                 |
-| contact     | Contact Class | The contact correlation              |
