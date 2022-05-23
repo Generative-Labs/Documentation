@@ -117,7 +117,18 @@ client.pub("msg/e324r234r2342",msg)
 
 
 ##  Subsribe your rooms
+> first call [my_rooms](/docs/SwapChat/Room/get-chat-rooms) to get all rooms' id that you are participating in.
+
+```Python
+msg = Message(...)
+client.subscribe("chat/room_id",msg)
+```
+
 
 ##  publish messages to your room
 
 
+```Python
+msg = Message(...)
+client.pub("msg/your_user_id",msg)
+```

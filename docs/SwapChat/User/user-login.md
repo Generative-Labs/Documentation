@@ -82,7 +82,7 @@ ___
 | msg |string | Yes  | result description   |
 | data |map | Yes  | return Map if code is 0, otherwise return None |
 | -access_token |string | No  | return access_token if code is 0, otherwise return None, will expired after 7 days |
-| -user_info|object|No| **User** object|
+| -user_info|object|No| **User** object, see [User](/docs/SwapChat/User/)|
 
 
 ## Refresh JWT

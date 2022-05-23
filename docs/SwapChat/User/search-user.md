@@ -44,7 +44,7 @@ ___
 }
 ```
 
-| Parameters | Type | Required |  Parameters Description|
+| Parameters | Type | Always Return |  Parameters Description|
 | ----------|---- | ------------- |--------|
 | code |int | Yes  |  result code,0 means success, other code see msg's contents  |
 | msg |string | Yes  | result description   |

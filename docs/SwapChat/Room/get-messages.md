@@ -48,13 +48,13 @@ Authorization: Bearer (your access token from login api)
 }
 ```
 
-| Parameters  | Required |  Parameters Description|
-| ------------- | ------------- |--------|
-| code  | Yes  |  result code,0 means success, other code see msg's contents  |
-| msg  | Yes  | result description   |
-| data  | Yes  | return message **List** when code is 0, otherwise return None |
-| -from_uid  |   | sender's OID |
-| -to_room_id  |   | the room's OID which message sent to |
-| -msg_contents  |   | message's contents |
-| -msg_type  |   | message's type |
-| -created_at  |   | the date when this message created |
+| Parameters | Type | Always Return |  Parameters Description|
+| -----------|--- | ------------- |--------|
+| code |int | Yes  |  result code,0 means success, other code see msg's contents  |
+| msg  |string| Yes  | result description   |
+| data |list | Yes  | return **List** of Message when code is 0, otherwise return None |
+| -from_uid |string |   | sender's OID |
+| -to_room_id|string  |   | the room's OID which message sent to |
+| -msg_contents |string |   | message's contents |
+| -msg_type |string |   | message's type |
+| -created_at |int |   | the date when this message created |

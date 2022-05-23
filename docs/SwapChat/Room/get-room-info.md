@@ -21,9 +21,9 @@ ___
 Authorization: Bearer (your access token from login api)
 ```
 
-| Parameters in URL | Required |  Parameters Description|
-| ------------- | ------------- |--------|
-| room_id  | Yes  |  Room OID  |
+| Parameters in URL | Type | Required |  Parameters Description|
+| -----------|---- | ------------- |--------|
+| room_id |string | Yes  |  Room OID  |
 
 > Return:
 
@@ -84,20 +84,20 @@ Authorization: Bearer (your access token from login api)
 }
 ```
 
-| Parameters  | Required |  Parameters Description|
-| ------------- | ------------- |--------|
-| code  | Yes  |  result code,0 means success, other code see msg's contents  |
-| msg  | Yes  | result description   |
-| data  | Yes  | return room info when code is 0, otherwise return None |
-| -room_id  |   | room's OID |
-| -name  |   | room's name |
-| -description  |   | room's description |
-| -members  |   |room's members |
-| -creator_id  |   | the creator's OID of room |
-| -is_opensea_coll  |   | is/not created by opensea collection |
-| -opensea_coll_name  |   | opensea collection name |
-| -opensea_coll_cover  |   | opensea collection cover image |
-| -opensea_coll_slug  |   | opensea collection slug |
-| -is_1v1  |   | is/not a private room |
-| -creator  |   | room's creator's details |
-| -created_at  |   | the date when this room created |
+| Parameters | Type | Always Return |  Parameters Description|
+| -----------|--- | ------------- |--------|
+| code |int  | Yes  |  result code,0 means success, other code see msg's contents  |
+| msg |string | Yes  | result description   |
+| data | null/Room| Yes  | return room info when code is 0, otherwise return null |
+| -room_id |string |   | room's OID |
+| -name |string |   | room's name |
+| -description |string |   | room's description |
+| -members |list |   |room's members,list of User object |
+| -creator_id |string |   | the creator's OID of room |
+| -is_opensea_coll|bool  |   | is/not created by opensea collection |
+| -opensea_coll_name |string |   | opensea collection name |
+| -opensea_coll_cover|sting  |   | opensea collection cover image |
+| -opensea_coll_slug |string |   | opensea collection slug |
+| -is_1v1  |bool|   | is/not a private room |
+| -creator| User |   | room's creator's details, User object |
+| -created_at |int |   | the time stamp when this room created |

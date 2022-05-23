@@ -22,9 +22,9 @@ Authorization: Bearer (your access token from login api)
 ```
 
 
-| Parameters | Required |  Parameters Description|
-| ------------- | ------------- |--------|
-| user_id  | Yes  |  User's OID  |
+| Parameters| Type | Required |  Parameters Description|
+| ----------|----- | ------------- |--------|
+| user_id|string  | Yes  |  User's OID  |
 
 > Return:
 
@@ -36,8 +36,8 @@ Authorization: Bearer (your access token from login api)
 }
 ```
 
-| Parameters  | Required |  Parameters Description|
-| ------------- | ------------- |--------|
-| code  | Yes  |  result code,0 means success, other code see msg's contents  |
-| msg  | Yes  | result description   |
-| data  | Yes  | Always return None|
+| Parameters| Type  | Always Return |  Parameters Description|
+| ----------|----- | ------------- |--------|
+| code|int  | Yes  |  result code,0 means success, other code see msg's contents  |
+| msg |string | Yes  | result description   |
+| data |null  | Yes  | Always return null|
