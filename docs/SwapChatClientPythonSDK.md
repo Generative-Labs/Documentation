@@ -1,8 +1,5 @@
----
-sidebar_position: 4
----
 
-# Python Client SDK
+# SwapChat Client Python SDK
 
 > swapchat client python sdk
 
