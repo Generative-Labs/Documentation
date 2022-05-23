@@ -1,5 +1,5 @@
 
-# SwapChat Client Python SDK
+# SwapChat Python SDK
 
 > swapchat client python sdk
 
