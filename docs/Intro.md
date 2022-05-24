@@ -2,7 +2,6 @@
 sidebar_position: 0
 ---
 
-
 ## Wallet Direct Messaging
 
 The Web3 world is built on top of blockchains and wallet addresses are key to identity in Web3, we make it possible to message anyone in Web3.
