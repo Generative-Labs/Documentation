@@ -27,3 +27,16 @@ ___
 |status|string|user's status,default is "000000",if user was actived by invite code,6th "0" will be "1",if user has verifyed twitter,2nd "0" will be "1"|
 |created_at|int|timestamp when the user created, in nanoseconds|
 ___
+
+> status details:
+
+* (0: Not verify  1: verified)
+* status:  0000000 | 1111111
+* 1: eth_wallet
+* 2: twitter
+* 3: instagram
+* 4: facebook
+* 5: discord
+* 6: opensea
+* 7: swapchat invite code
+* js String should start at 0
