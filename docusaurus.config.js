@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'ChatServiceAPI Document',
+  title: 'Web3MQ API Document',
   tagline: 'Chat anything with any body',
   url: 'https://docs.web3messaging.online/',
   baseUrl: '/',
@@ -14,7 +14,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'Web3MQ', // Usually your GitHub org/user name.
-  projectName: 'ChatService', // Usually your repo name.
+  projectName: 'Web3MQ', // Usually your repo name.
 
   presets: [
     [
@@ -37,7 +37,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Chat Service Document',
+        title: 'Home',
         logo: {
           alt: 'Document Logo',
           src: 'img/Web3MQLogo.png',
@@ -45,7 +45,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'Intro',
             position: 'left',
             label: 'Document',
           },

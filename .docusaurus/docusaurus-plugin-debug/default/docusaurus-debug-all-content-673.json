@@ -12,368 +12,19 @@
           "versionClassName": "docs-version-current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/fanxiangyu/Work/Documentation/sidebars.js",
-          "contentPath": "/Users/fanxiangyu/Work/Documentation/docs",
-          "contentPathLocalized": "/Users/fanxiangyu/Work/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/coder/WorkSpace/Documentation/sidebars.js",
+          "contentPath": "/Users/coder/WorkSpace/Documentation/docs",
+          "contentPathLocalized": "/Users/coder/WorkSpace/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
-              "unversionedId": "AuthOne/intro",
-              "id": "AuthOne/intro",
-              "title": "AuthOne",
-              "description": "Auth Flow",
-              "source": "@site/docs/AuthOne/intro.md",
-              "sourceDirName": "AuthOne",
-              "slug": "/AuthOne/intro",
-              "permalink": "/docs/AuthOne/intro",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 0,
-              "frontMatter": {
-                "sidebar_position": 0
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Intro",
-                "permalink": "/docs/intro"
-              },
-              "next": {
-                "title": "ChatClient SDK Python",
-                "permalink": "/docs/ChatClientSDK/PythonSDK"
-              }
-            },
-            {
-              "unversionedId": "ChatClientSDK/PythonSDK",
-              "id": "ChatClientSDK/PythonSDK",
-              "title": "ChatClient SDK Python",
-              "description": "Install",
-              "source": "@site/docs/ChatClientSDK/PythonSDK.md",
-              "sourceDirName": "ChatClientSDK",
-              "slug": "/ChatClientSDK/PythonSDK",
-              "permalink": "/docs/ChatClientSDK/PythonSDK",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 0,
-              "frontMatter": {
-                "sidebar_position": 0
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "AuthOne",
-                "permalink": "/docs/AuthOne/intro"
-              },
-              "next": {
-                "title": "User Register",
-                "permalink": "/docs/ChatServices/User/user-register"
-              }
-            },
-            {
-              "unversionedId": "ChatServices/Contact/add-contact",
-              "id": "ChatServices/Contact/add-contact",
-              "title": "Add User To Your Contact List",
-              "description": "_",
-              "source": "@site/docs/ChatServices/Contact/add-contact.md",
-              "sourceDirName": "ChatServices/Contact",
-              "slug": "/ChatServices/Contact/add-contact",
-              "permalink": "/docs/ChatServices/Contact/add-contact",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 0,
-              "frontMatter": {
-                "sidebar_position": 0
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Get User Info",
-                "permalink": "/docs/ChatServices/User/get-user-info"
-              },
-              "next": {
-                "title": "Get Contacts Info",
-                "permalink": "/docs/ChatServices/Contact/get-contacts"
-              }
-            },
-            {
-              "unversionedId": "ChatServices/Contact/get-contacts",
-              "id": "ChatServices/Contact/get-contacts",
-              "title": "Get Contacts Info",
-              "description": "_",
-              "source": "@site/docs/ChatServices/Contact/get-contacts.md",
-              "sourceDirName": "ChatServices/Contact",
-              "slug": "/ChatServices/Contact/get-contacts",
-              "permalink": "/docs/ChatServices/Contact/get-contacts",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 1,
-              "frontMatter": {
-                "sidebar_position": 1
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Add User To Your Contact List",
-                "permalink": "/docs/ChatServices/Contact/add-contact"
-              },
-              "next": {
-                "title": "Create Chat Room",
-                "permalink": "/docs/ChatServices/Rooms/create-room"
-              }
-            },
-            {
-              "unversionedId": "ChatServices/intro",
-              "id": "ChatServices/intro",
+              "unversionedId": "Intro",
+              "id": "Intro",
               "title": "Intro",
               "description": "Wallet Direct Messaging",
-              "source": "@site/docs/ChatServices/intro.md",
-              "sourceDirName": "ChatServices",
-              "slug": "/ChatServices/intro",
-              "permalink": "/docs/ChatServices/intro",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "position": 0
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Get Chat Rooms",
-                "permalink": "/docs/ChatServices/Rooms/get-chat-rooms"
-              },
-              "next": {
-                "title": "Intro",
-                "permalink": "/docs/web3MQ-Component/intro"
-              }
-            },
-            {
-              "unversionedId": "ChatServices/Rooms/connect-channel",
-              "id": "ChatServices/Rooms/connect-channel",
-              "title": "Connect Chat Channel",
-              "description": "_",
-              "source": "@site/docs/ChatServices/Rooms/connect-channel.md",
-              "sourceDirName": "ChatServices/Rooms",
-              "slug": "/ChatServices/Rooms/connect-channel",
-              "permalink": "/docs/ChatServices/Rooms/connect-channel",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 1,
-              "frontMatter": {
-                "sidebar_position": 1
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Create Chat Room",
-                "permalink": "/docs/ChatServices/Rooms/create-room"
-              },
-              "next": {
-                "title": "Get History Messages",
-                "permalink": "/docs/ChatServices/Rooms/get-messages"
-              }
-            },
-            {
-              "unversionedId": "ChatServices/Rooms/create-room",
-              "id": "ChatServices/Rooms/create-room",
-              "title": "Create Chat Room",
-              "description": "There are 2 ways to create a room:",
-              "source": "@site/docs/ChatServices/Rooms/create-room.md",
-              "sourceDirName": "ChatServices/Rooms",
-              "slug": "/ChatServices/Rooms/create-room",
-              "permalink": "/docs/ChatServices/Rooms/create-room",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 0,
-              "frontMatter": {
-                "sidebar_position": 0
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Get Contacts Info",
-                "permalink": "/docs/ChatServices/Contact/get-contacts"
-              },
-              "next": {
-                "title": "Connect Chat Channel",
-                "permalink": "/docs/ChatServices/Rooms/connect-channel"
-              }
-            },
-            {
-              "unversionedId": "ChatServices/Rooms/get-chat-rooms",
-              "id": "ChatServices/Rooms/get-chat-rooms",
-              "title": "Get Chat Rooms",
-              "description": "_",
-              "source": "@site/docs/ChatServices/Rooms/get-chat-rooms.md",
-              "sourceDirName": "ChatServices/Rooms",
-              "slug": "/ChatServices/Rooms/get-chat-rooms",
-              "permalink": "/docs/ChatServices/Rooms/get-chat-rooms",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 3,
-              "frontMatter": {
-                "sidebar_position": 3
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Get Room Info",
-                "permalink": "/docs/ChatServices/Rooms/get-room-info"
-              },
-              "next": {
-                "title": "Intro",
-                "permalink": "/docs/ChatServices/intro"
-              }
-            },
-            {
-              "unversionedId": "ChatServices/Rooms/get-messages",
-              "id": "ChatServices/Rooms/get-messages",
-              "title": "Get History Messages",
-              "description": "_",
-              "source": "@site/docs/ChatServices/Rooms/get-messages.md",
-              "sourceDirName": "ChatServices/Rooms",
-              "slug": "/ChatServices/Rooms/get-messages",
-              "permalink": "/docs/ChatServices/Rooms/get-messages",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 2,
-              "frontMatter": {
-                "sidebar_position": 2
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Connect Chat Channel",
-                "permalink": "/docs/ChatServices/Rooms/connect-channel"
-              },
-              "next": {
-                "title": "Get Room Info",
-                "permalink": "/docs/ChatServices/Rooms/get-room-info"
-              }
-            },
-            {
-              "unversionedId": "ChatServices/Rooms/get-room-info",
-              "id": "ChatServices/Rooms/get-room-info",
-              "title": "Get Room Info",
-              "description": "_",
-              "source": "@site/docs/ChatServices/Rooms/get-room-info.md",
-              "sourceDirName": "ChatServices/Rooms",
-              "slug": "/ChatServices/Rooms/get-room-info",
-              "permalink": "/docs/ChatServices/Rooms/get-room-info",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 2,
-              "frontMatter": {
-                "sidebar_position": 2
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Get History Messages",
-                "permalink": "/docs/ChatServices/Rooms/get-messages"
-              },
-              "next": {
-                "title": "Get Chat Rooms",
-                "permalink": "/docs/ChatServices/Rooms/get-chat-rooms"
-              }
-            },
-            {
-              "unversionedId": "ChatServices/User/bind-social-platform",
-              "id": "ChatServices/User/bind-social-platform",
-              "title": "Bind social platform",
-              "description": "_",
-              "source": "@site/docs/ChatServices/User/bind-social-platform.md",
-              "sourceDirName": "ChatServices/User",
-              "slug": "/ChatServices/User/bind-social-platform",
-              "permalink": "/docs/ChatServices/User/bind-social-platform",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 2,
-              "frontMatter": {
-                "sidebar_position": 2
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "User Login",
-                "permalink": "/docs/ChatServices/User/user-login"
-              },
-              "next": {
-                "title": "Get User Info",
-                "permalink": "/docs/ChatServices/User/get-user-info"
-              }
-            },
-            {
-              "unversionedId": "ChatServices/User/get-user-info",
-              "id": "ChatServices/User/get-user-info",
-              "title": "Get User Info",
-              "description": "_",
-              "source": "@site/docs/ChatServices/User/get-user-info.md",
-              "sourceDirName": "ChatServices/User",
-              "slug": "/ChatServices/User/get-user-info",
-              "permalink": "/docs/ChatServices/User/get-user-info",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 3,
-              "frontMatter": {
-                "sidebar_position": 3
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Bind social platform",
-                "permalink": "/docs/ChatServices/User/bind-social-platform"
-              },
-              "next": {
-                "title": "Add User To Your Contact List",
-                "permalink": "/docs/ChatServices/Contact/add-contact"
-              }
-            },
-            {
-              "unversionedId": "ChatServices/User/user-login",
-              "id": "ChatServices/User/user-login",
-              "title": "User Login",
-              "description": "_",
-              "source": "@site/docs/ChatServices/User/user-login.md",
-              "sourceDirName": "ChatServices/User",
-              "slug": "/ChatServices/User/user-login",
-              "permalink": "/docs/ChatServices/User/user-login",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 1,
-              "frontMatter": {
-                "sidebar_position": 1
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "User Register",
-                "permalink": "/docs/ChatServices/User/user-register"
-              },
-              "next": {
-                "title": "Bind social platform",
-                "permalink": "/docs/ChatServices/User/bind-social-platform"
-              }
-            },
-            {
-              "unversionedId": "ChatServices/User/user-register",
-              "id": "ChatServices/User/user-register",
-              "title": "User Register",
-              "description": "_",
-              "source": "@site/docs/ChatServices/User/user-register.md",
-              "sourceDirName": "ChatServices/User",
-              "slug": "/ChatServices/User/user-register",
-              "permalink": "/docs/ChatServices/User/user-register",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 0,
-              "frontMatter": {
-                "sidebar_position": 0
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "ChatClient SDK Python",
-                "permalink": "/docs/ChatClientSDK/PythonSDK"
-              },
-              "next": {
-                "title": "User Login",
-                "permalink": "/docs/ChatServices/User/user-login"
-              }
-            },
-            {
-              "unversionedId": "intro",
-              "id": "intro",
-              "title": "Intro",
-              "description": "This site hosts the documentation for Web3MQ Chat service, which you can browse by clicking on the area to the left.",
-              "source": "@site/docs/intro.md",
+              "source": "@site/docs/Intro.md",
               "sourceDirName": ".",
-              "slug": "/intro",
-              "permalink": "/docs/intro",
+              "slug": "/Intro",
+              "permalink": "/docs/Intro",
               "tags": [],
               "version": "current",
               "sidebarPosition": 0,
@@ -382,63 +33,63 @@
               },
               "sidebar": "tutorialSidebar",
               "next": {
-                "title": "AuthOne",
-                "permalink": "/docs/AuthOne/intro"
+                "title": "Intro",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/client/"
               }
             },
             {
-              "unversionedId": "web3MQ-Component/coreComponent/Channel",
-              "id": "web3MQ-Component/coreComponent/Channel",
+              "unversionedId": "Web3MQ-Component/coreComponent/Channel",
+              "id": "Web3MQ-Component/coreComponent/Channel",
               "title": "Channel",
               "description": "The Channel component is a React Context provider that wraps all of the logic, functionality, and UI for an individual chat channel. It provides five separate contexts to its children:",
-              "source": "@site/docs/web3MQ-Component/coreComponent/Channel.md",
-              "sourceDirName": "web3MQ-Component/coreComponent",
-              "slug": "/web3MQ-Component/coreComponent/Channel",
-              "permalink": "/docs/web3MQ-Component/coreComponent/Channel",
+              "source": "@site/docs/Web3MQ-Component/coreComponent/Channel.md",
+              "sourceDirName": "Web3MQ-Component/coreComponent",
+              "slug": "/Web3MQ-Component/coreComponent/Channel",
+              "permalink": "/docs/Web3MQ-Component/coreComponent/Channel",
               "tags": [],
               "version": "current",
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Chat",
-                "permalink": "/docs/web3MQ-Component/coreComponent/Chat"
+                "permalink": "/docs/Web3MQ-Component/coreComponent/Chat"
               },
               "next": {
                 "title": "Channel List",
-                "permalink": "/docs/web3MQ-Component/coreComponent/ChannelList"
+                "permalink": "/docs/Web3MQ-Component/coreComponent/ChannelList"
               }
             },
             {
-              "unversionedId": "web3MQ-Component/coreComponent/ChannelList",
-              "id": "web3MQ-Component/coreComponent/ChannelList",
+              "unversionedId": "Web3MQ-Component/coreComponent/ChannelList",
+              "id": "Web3MQ-Component/coreComponent/ChannelList",
               "title": "Channel List",
-              "description": "The ChannelList component queries an array of channel objects from the Stream Chat API",
-              "source": "@site/docs/web3MQ-Component/coreComponent/ChannelList.md",
-              "sourceDirName": "web3MQ-Component/coreComponent",
-              "slug": "/web3MQ-Component/coreComponent/ChannelList",
-              "permalink": "/docs/web3MQ-Component/coreComponent/ChannelList",
+              "description": "The ChannelList component queries an array of channel objects from the Chat API",
+              "source": "@site/docs/Web3MQ-Component/coreComponent/ChannelList.md",
+              "sourceDirName": "Web3MQ-Component/coreComponent",
+              "slug": "/Web3MQ-Component/coreComponent/ChannelList",
+              "permalink": "/docs/Web3MQ-Component/coreComponent/ChannelList",
               "tags": [],
               "version": "current",
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Channel",
-                "permalink": "/docs/web3MQ-Component/coreComponent/Channel"
+                "permalink": "/docs/Web3MQ-Component/coreComponent/Channel"
               },
               "next": {
                 "title": "MessageList",
-                "permalink": "/docs/web3MQ-Component/coreComponent/MessageList"
+                "permalink": "/docs/Web3MQ-Component/coreComponent/MessageList"
               }
             },
             {
-              "unversionedId": "web3MQ-Component/coreComponent/Chat",
-              "id": "web3MQ-Component/coreComponent/Chat",
+              "unversionedId": "Web3MQ-Component/coreComponent/Chat",
+              "id": "Web3MQ-Component/coreComponent/Chat",
               "title": "Chat",
               "description": "Basic Usage",
-              "source": "@site/docs/web3MQ-Component/coreComponent/Chat.md",
-              "sourceDirName": "web3MQ-Component/coreComponent",
-              "slug": "/web3MQ-Component/coreComponent/Chat",
-              "permalink": "/docs/web3MQ-Component/coreComponent/Chat",
+              "source": "@site/docs/Web3MQ-Component/coreComponent/Chat.md",
+              "sourceDirName": "Web3MQ-Component/coreComponent",
+              "slug": "/Web3MQ-Component/coreComponent/Chat",
+              "permalink": "/docs/Web3MQ-Component/coreComponent/Chat",
               "tags": [],
               "version": "current",
               "sidebarPosition": 0,
@@ -448,66 +99,387 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Intro",
-                "permalink": "/docs/web3MQ-Component/intro"
+                "permalink": "/docs/Web3MQ-Component/intro"
               },
               "next": {
                 "title": "Channel",
-                "permalink": "/docs/web3MQ-Component/coreComponent/Channel"
+                "permalink": "/docs/Web3MQ-Component/coreComponent/Channel"
               }
             },
             {
-              "unversionedId": "web3MQ-Component/coreComponent/MessageList",
-              "id": "web3MQ-Component/coreComponent/MessageList",
+              "unversionedId": "Web3MQ-Component/coreComponent/MessageList",
+              "id": "Web3MQ-Component/coreComponent/MessageList",
               "title": "MessageList",
               "description": "The MessageList component renders a scrollable list of messages. The UI for each individual message is rendered conditionally based on its message.type value. The list renders date separators, new message notifications, system messages, deleted messages, and standard messages containing text and/or attachments.",
-              "source": "@site/docs/web3MQ-Component/coreComponent/MessageList.md",
-              "sourceDirName": "web3MQ-Component/coreComponent",
-              "slug": "/web3MQ-Component/coreComponent/MessageList",
-              "permalink": "/docs/web3MQ-Component/coreComponent/MessageList",
+              "source": "@site/docs/Web3MQ-Component/coreComponent/MessageList.md",
+              "sourceDirName": "Web3MQ-Component/coreComponent",
+              "slug": "/Web3MQ-Component/coreComponent/MessageList",
+              "permalink": "/docs/Web3MQ-Component/coreComponent/MessageList",
               "tags": [],
               "version": "current",
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Channel List",
-                "permalink": "/docs/web3MQ-Component/coreComponent/ChannelList"
+                "permalink": "/docs/Web3MQ-Component/coreComponent/ChannelList"
               },
               "next": {
                 "title": "Thread",
-                "permalink": "/docs/web3MQ-Component/coreComponent/Thread"
+                "permalink": "/docs/Web3MQ-Component/coreComponent/Thread"
               }
             },
             {
-              "unversionedId": "web3MQ-Component/coreComponent/Thread",
-              "id": "web3MQ-Component/coreComponent/Thread",
+              "unversionedId": "Web3MQ-Component/coreComponent/Thread",
+              "id": "Web3MQ-Component/coreComponent/Thread",
               "title": "Thread",
               "description": "The Thread component renders a list of replies tied to a single parent message in a channel's main message list. A Thread maintains its own state and renders its own MessageList and MessageInput components. Each piece of rendered UI can be overridden with custom components either drawn from the ComponentContext or supplied via props.",
-              "source": "@site/docs/web3MQ-Component/coreComponent/Thread.md",
-              "sourceDirName": "web3MQ-Component/coreComponent",
-              "slug": "/web3MQ-Component/coreComponent/Thread",
-              "permalink": "/docs/web3MQ-Component/coreComponent/Thread",
+              "source": "@site/docs/Web3MQ-Component/coreComponent/Thread.md",
+              "sourceDirName": "Web3MQ-Component/coreComponent",
+              "slug": "/Web3MQ-Component/coreComponent/Thread",
+              "permalink": "/docs/Web3MQ-Component/coreComponent/Thread",
               "tags": [],
               "version": "current",
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "MessageList",
-                "permalink": "/docs/web3MQ-Component/coreComponent/MessageList"
-              },
-              "next": {
-                "title": "Intro",
-                "permalink": "/docs/web3MQ-SDK/client/"
+                "permalink": "/docs/Web3MQ-Component/coreComponent/MessageList"
               }
             },
             {
-              "unversionedId": "web3MQ-Component/intro",
-              "id": "web3MQ-Component/intro",
+              "unversionedId": "Web3MQ-Component/intro",
+              "id": "Web3MQ-Component/intro",
               "title": "Intro",
               "description": "Web3MQ React Component Libraries",
-              "source": "@site/docs/web3MQ-Component/intro.md",
-              "sourceDirName": "web3MQ-Component",
-              "slug": "/web3MQ-Component/intro",
-              "permalink": "/docs/web3MQ-Component/intro",
+              "source": "@site/docs/Web3MQ-Component/intro.md",
+              "sourceDirName": "Web3MQ-Component",
+              "slug": "/Web3MQ-Component/intro",
+              "permalink": "/docs/Web3MQ-Component/intro",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 0,
+              "frontMatter": {
+                "sidebar_position": 0
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Get History Messages",
+                "permalink": "/docs/Web3MQ-RESTFul-API/Room/get-messages"
+              },
+              "next": {
+                "title": "Chat",
+                "permalink": "/docs/Web3MQ-Component/coreComponent/Chat"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-RESTFul-API/Contact/add-contact",
+              "id": "Web3MQ-RESTFul-API/Contact/add-contact",
+              "title": "Add User To Your Contact List",
+              "description": "_",
+              "source": "@site/docs/Web3MQ-RESTFul-API/Contact/add-contact.md",
+              "sourceDirName": "Web3MQ-RESTFul-API/Contact",
+              "slug": "/Web3MQ-RESTFul-API/Contact/add-contact",
+              "permalink": "/docs/Web3MQ-RESTFul-API/Contact/add-contact",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 0,
+              "frontMatter": {
+                "sidebar_position": 0
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Search Users",
+                "permalink": "/docs/Web3MQ-RESTFul-API/User/search-user"
+              },
+              "next": {
+                "title": "Get Contacts Info",
+                "permalink": "/docs/Web3MQ-RESTFul-API/Contact/get-contacts"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-RESTFul-API/Contact/get-contacts",
+              "id": "Web3MQ-RESTFul-API/Contact/get-contacts",
+              "title": "Get Contacts Info",
+              "description": "_",
+              "source": "@site/docs/Web3MQ-RESTFul-API/Contact/get-contacts.md",
+              "sourceDirName": "Web3MQ-RESTFul-API/Contact",
+              "slug": "/Web3MQ-RESTFul-API/Contact/get-contacts",
+              "permalink": "/docs/Web3MQ-RESTFul-API/Contact/get-contacts",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Add User To Your Contact List",
+                "permalink": "/docs/Web3MQ-RESTFul-API/Contact/add-contact"
+              },
+              "next": {
+                "title": "Details",
+                "permalink": "/docs/Web3MQ-RESTFul-API/Room/"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-RESTFul-API/Intro",
+              "id": "Web3MQ-RESTFul-API/Intro",
+              "title": "Intro",
+              "description": "API endpoint",
+              "source": "@site/docs/Web3MQ-RESTFul-API/Intro.md",
+              "sourceDirName": "Web3MQ-RESTFul-API",
+              "slug": "/Web3MQ-RESTFul-API/Intro",
+              "permalink": "/docs/Web3MQ-RESTFul-API/Intro",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 0,
+              "frontMatter": {
+                "sidebar_position": 0
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "SwapChat Python SDK",
+                "permalink": "/docs/Web3MQ-SDK/Python-SDK/SwapChatClientPythonSDK"
+              },
+              "next": {
+                "title": "Details",
+                "permalink": "/docs/Web3MQ-RESTFul-API/User/"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-RESTFul-API/Room/connect-channel",
+              "id": "Web3MQ-RESTFul-API/Room/connect-channel",
+              "title": "Connect Chat Channel",
+              "description": "_",
+              "source": "@site/docs/Web3MQ-RESTFul-API/Room/connect-channel.md",
+              "sourceDirName": "Web3MQ-RESTFul-API/Room",
+              "slug": "/Web3MQ-RESTFul-API/Room/connect-channel",
+              "permalink": "/docs/Web3MQ-RESTFul-API/Room/connect-channel",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Create Chat Room",
+                "permalink": "/docs/Web3MQ-RESTFul-API/Room/create-room"
+              },
+              "next": {
+                "title": "Get Room Info",
+                "permalink": "/docs/Web3MQ-RESTFul-API/Room/get-room-info"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-RESTFul-API/Room/create-room",
+              "id": "Web3MQ-RESTFul-API/Room/create-room",
+              "title": "Create Chat Room",
+              "description": "There are 2 ways to create a room:",
+              "source": "@site/docs/Web3MQ-RESTFul-API/Room/create-room.md",
+              "sourceDirName": "Web3MQ-RESTFul-API/Room",
+              "slug": "/Web3MQ-RESTFul-API/Room/create-room",
+              "permalink": "/docs/Web3MQ-RESTFul-API/Room/create-room",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Details",
+                "permalink": "/docs/Web3MQ-RESTFul-API/Room/"
+              },
+              "next": {
+                "title": "Connect Chat Channel",
+                "permalink": "/docs/Web3MQ-RESTFul-API/Room/connect-channel"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-RESTFul-API/Room/get-chat-rooms",
+              "id": "Web3MQ-RESTFul-API/Room/get-chat-rooms",
+              "title": "Get Chat Rooms",
+              "description": "_",
+              "source": "@site/docs/Web3MQ-RESTFul-API/Room/get-chat-rooms.md",
+              "sourceDirName": "Web3MQ-RESTFul-API/Room",
+              "slug": "/Web3MQ-RESTFul-API/Room/get-chat-rooms",
+              "permalink": "/docs/Web3MQ-RESTFul-API/Room/get-chat-rooms",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "sidebar_position": 4
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Get Room Info",
+                "permalink": "/docs/Web3MQ-RESTFul-API/Room/get-room-info"
+              },
+              "next": {
+                "title": "Get History Messages",
+                "permalink": "/docs/Web3MQ-RESTFul-API/Room/get-messages"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-RESTFul-API/Room/get-messages",
+              "id": "Web3MQ-RESTFul-API/Room/get-messages",
+              "title": "Get History Messages",
+              "description": "_",
+              "source": "@site/docs/Web3MQ-RESTFul-API/Room/get-messages.md",
+              "sourceDirName": "Web3MQ-RESTFul-API/Room",
+              "slug": "/Web3MQ-RESTFul-API/Room/get-messages",
+              "permalink": "/docs/Web3MQ-RESTFul-API/Room/get-messages",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "sidebar_position": 5
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Get Chat Rooms",
+                "permalink": "/docs/Web3MQ-RESTFul-API/Room/get-chat-rooms"
+              },
+              "next": {
+                "title": "Intro",
+                "permalink": "/docs/Web3MQ-Component/intro"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-RESTFul-API/Room/get-room-info",
+              "id": "Web3MQ-RESTFul-API/Room/get-room-info",
+              "title": "Get Room Info",
+              "description": "_",
+              "source": "@site/docs/Web3MQ-RESTFul-API/Room/get-room-info.md",
+              "sourceDirName": "Web3MQ-RESTFul-API/Room",
+              "slug": "/Web3MQ-RESTFul-API/Room/get-room-info",
+              "permalink": "/docs/Web3MQ-RESTFul-API/Room/get-room-info",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "sidebar_position": 3
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Connect Chat Channel",
+                "permalink": "/docs/Web3MQ-RESTFul-API/Room/connect-channel"
+              },
+              "next": {
+                "title": "Get Chat Rooms",
+                "permalink": "/docs/Web3MQ-RESTFul-API/Room/get-chat-rooms"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-RESTFul-API/Room/Room",
+              "id": "Web3MQ-RESTFul-API/Room/Room",
+              "title": "Details",
+              "description": "Room is a container for chatting behavior, and some of its properties are affected by the way it was created. It has at least one member.",
+              "source": "@site/docs/Web3MQ-RESTFul-API/Room/Room.md",
+              "sourceDirName": "Web3MQ-RESTFul-API/Room",
+              "slug": "/Web3MQ-RESTFul-API/Room/",
+              "permalink": "/docs/Web3MQ-RESTFul-API/Room/",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 0,
+              "frontMatter": {
+                "sidebar_position": 0
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Get Contacts Info",
+                "permalink": "/docs/Web3MQ-RESTFul-API/Contact/get-contacts"
+              },
+              "next": {
+                "title": "Create Chat Room",
+                "permalink": "/docs/Web3MQ-RESTFul-API/Room/create-room"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-RESTFul-API/User/bind-social-platform",
+              "id": "Web3MQ-RESTFul-API/User/bind-social-platform",
+              "title": "Bind social platform",
+              "description": "_",
+              "source": "@site/docs/Web3MQ-RESTFul-API/User/bind-social-platform.md",
+              "sourceDirName": "Web3MQ-RESTFul-API/User",
+              "slug": "/Web3MQ-RESTFul-API/User/bind-social-platform",
+              "permalink": "/docs/Web3MQ-RESTFul-API/User/bind-social-platform",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "User Login",
+                "permalink": "/docs/Web3MQ-RESTFul-API/User/user-login"
+              },
+              "next": {
+                "title": "Get User Info",
+                "permalink": "/docs/Web3MQ-RESTFul-API/User/get-user-info"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-RESTFul-API/User/get-user-info",
+              "id": "Web3MQ-RESTFul-API/User/get-user-info",
+              "title": "Get User Info",
+              "description": "_",
+              "source": "@site/docs/Web3MQ-RESTFul-API/User/get-user-info.md",
+              "sourceDirName": "Web3MQ-RESTFul-API/User",
+              "slug": "/Web3MQ-RESTFul-API/User/get-user-info",
+              "permalink": "/docs/Web3MQ-RESTFul-API/User/get-user-info",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "sidebar_position": 3
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Bind social platform",
+                "permalink": "/docs/Web3MQ-RESTFul-API/User/bind-social-platform"
+              },
+              "next": {
+                "title": "Search Users",
+                "permalink": "/docs/Web3MQ-RESTFul-API/User/search-user"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-RESTFul-API/User/search-user",
+              "id": "Web3MQ-RESTFul-API/User/search-user",
+              "title": "Search Users",
+              "description": "You can use this API to search all users in Swapchat,then get user's OID which you want add to your contacts list.",
+              "source": "@site/docs/Web3MQ-RESTFul-API/User/search-user.md",
+              "sourceDirName": "Web3MQ-RESTFul-API/User",
+              "slug": "/Web3MQ-RESTFul-API/User/search-user",
+              "permalink": "/docs/Web3MQ-RESTFul-API/User/search-user",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "sidebar_position": 5
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Get User Info",
+                "permalink": "/docs/Web3MQ-RESTFul-API/User/get-user-info"
+              },
+              "next": {
+                "title": "Add User To Your Contact List",
+                "permalink": "/docs/Web3MQ-RESTFul-API/Contact/add-contact"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-RESTFul-API/User/User",
+              "id": "Web3MQ-RESTFul-API/User/User",
+              "title": "Details",
+              "description": "User is the user you private chat with. When you private chat with a user, the user will be automatically added to your contact list.",
+              "source": "@site/docs/Web3MQ-RESTFul-API/User/User.md",
+              "sourceDirName": "Web3MQ-RESTFul-API/User",
+              "slug": "/Web3MQ-RESTFul-API/User/",
+              "permalink": "/docs/Web3MQ-RESTFul-API/User/",
               "tags": [],
               "version": "current",
               "sidebarPosition": 0,
@@ -517,22 +489,72 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Intro",
-                "permalink": "/docs/ChatServices/intro"
+                "permalink": "/docs/Web3MQ-RESTFul-API/Intro"
               },
               "next": {
-                "title": "Chat",
-                "permalink": "/docs/web3MQ-Component/coreComponent/Chat"
+                "title": "User Register",
+                "permalink": "/docs/Web3MQ-RESTFul-API/User/user-register"
               }
             },
             {
-              "unversionedId": "web3MQ-SDK/channel/channel",
-              "id": "web3MQ-SDK/channel/channel",
+              "unversionedId": "Web3MQ-RESTFul-API/User/user-login",
+              "id": "Web3MQ-RESTFul-API/User/user-login",
+              "title": "User Login",
+              "description": "_",
+              "source": "@site/docs/Web3MQ-RESTFul-API/User/user-login.md",
+              "sourceDirName": "Web3MQ-RESTFul-API/User",
+              "slug": "/Web3MQ-RESTFul-API/User/user-login",
+              "permalink": "/docs/Web3MQ-RESTFul-API/User/user-login",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "User Register",
+                "permalink": "/docs/Web3MQ-RESTFul-API/User/user-register"
+              },
+              "next": {
+                "title": "Bind social platform",
+                "permalink": "/docs/Web3MQ-RESTFul-API/User/bind-social-platform"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-RESTFul-API/User/user-register",
+              "id": "Web3MQ-RESTFul-API/User/user-register",
+              "title": "User Register",
+              "description": "_",
+              "source": "@site/docs/Web3MQ-RESTFul-API/User/user-register.md",
+              "sourceDirName": "Web3MQ-RESTFul-API/User",
+              "slug": "/Web3MQ-RESTFul-API/User/user-register",
+              "permalink": "/docs/Web3MQ-RESTFul-API/User/user-register",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 0,
+              "frontMatter": {
+                "sidebar_position": 0
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Details",
+                "permalink": "/docs/Web3MQ-RESTFul-API/User/"
+              },
+              "next": {
+                "title": "User Login",
+                "permalink": "/docs/Web3MQ-RESTFul-API/User/user-login"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/JS-SDK/channel/channel",
+              "id": "Web3MQ-SDK/JS-SDK/channel/channel",
               "title": "channel",
               "description": "Usage",
-              "source": "@site/docs/web3MQ-SDK/channel/channel.md",
-              "sourceDirName": "web3MQ-SDK/channel",
-              "slug": "/web3MQ-SDK/channel/",
-              "permalink": "/docs/web3MQ-SDK/channel/",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK/channel/channel.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK/channel",
+              "slug": "/Web3MQ-SDK/JS-SDK/channel/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK/channel/",
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -541,22 +563,22 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "message",
-                "permalink": "/docs/web3MQ-SDK/message/"
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/message/"
               },
               "next": {
                 "title": "contact",
-                "permalink": "/docs/web3MQ-SDK/contact/"
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/contact/"
               }
             },
             {
-              "unversionedId": "web3MQ-SDK/client/client",
-              "id": "web3MQ-SDK/client/client",
+              "unversionedId": "Web3MQ-SDK/JS-SDK/client/client",
+              "id": "Web3MQ-SDK/JS-SDK/client/client",
               "title": "Intro",
-              "description": "web3-mq-js is the official JavaScript client for House Studio, a service for building chat applications.",
-              "source": "@site/docs/web3MQ-SDK/client/client.md",
-              "sourceDirName": "web3MQ-SDK/client",
-              "slug": "/web3MQ-SDK/client/",
-              "permalink": "/docs/web3MQ-SDK/client/",
+              "description": "web3-mq-js is the official JavaScript client for Web3MQ, a service for building chat applications.",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK/client/client.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK/client",
+              "slug": "/Web3MQ-SDK/JS-SDK/client/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK/client/",
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -564,23 +586,23 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Thread",
-                "permalink": "/docs/web3MQ-Component/coreComponent/Thread"
+                "title": "Intro",
+                "permalink": "/docs/Intro"
               },
               "next": {
                 "title": "message",
-                "permalink": "/docs/web3MQ-SDK/message/"
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/message/"
               }
             },
             {
-              "unversionedId": "web3MQ-SDK/contact/contact",
-              "id": "web3MQ-SDK/contact/contact",
+              "unversionedId": "Web3MQ-SDK/JS-SDK/contact/contact",
+              "id": "Web3MQ-SDK/JS-SDK/contact/contact",
               "title": "contact",
               "description": "Usage",
-              "source": "@site/docs/web3MQ-SDK/contact/contact.md",
-              "sourceDirName": "web3MQ-SDK/contact",
-              "slug": "/web3MQ-SDK/contact/",
-              "permalink": "/docs/web3MQ-SDK/contact/",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK/contact/contact.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK/contact",
+              "slug": "/Web3MQ-SDK/JS-SDK/contact/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK/contact/",
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -589,22 +611,22 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "channel",
-                "permalink": "/docs/web3MQ-SDK/channel/"
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/channel/"
               },
               "next": {
                 "title": "eventCenter",
-                "permalink": "/docs/web3MQ-SDK/eventCenter/"
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/eventCenter/"
               }
             },
             {
-              "unversionedId": "web3MQ-SDK/eventCenter/eventCenter",
-              "id": "web3MQ-SDK/eventCenter/eventCenter",
+              "unversionedId": "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter",
+              "id": "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter",
               "title": "eventCenter",
               "description": "Usage",
-              "source": "@site/docs/web3MQ-SDK/eventCenter/eventCenter.md",
-              "sourceDirName": "web3MQ-SDK/eventCenter",
-              "slug": "/web3MQ-SDK/eventCenter/",
-              "permalink": "/docs/web3MQ-SDK/eventCenter/",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK/eventCenter/eventCenter.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK/eventCenter",
+              "slug": "/Web3MQ-SDK/JS-SDK/eventCenter/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK/eventCenter/",
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -613,22 +635,22 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "contact",
-                "permalink": "/docs/web3MQ-SDK/contact/"
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/contact/"
               },
               "next": {
                 "title": "Type List",
-                "permalink": "/docs/web3MQ-SDK/types/"
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/types/"
               }
             },
             {
-              "unversionedId": "web3MQ-SDK/message/message",
-              "id": "web3MQ-SDK/message/message",
+              "unversionedId": "Web3MQ-SDK/JS-SDK/message/message",
+              "id": "Web3MQ-SDK/JS-SDK/message/message",
               "title": "message",
               "description": "Usage",
-              "source": "@site/docs/web3MQ-SDK/message/message.md",
-              "sourceDirName": "web3MQ-SDK/message",
-              "slug": "/web3MQ-SDK/message/",
-              "permalink": "/docs/web3MQ-SDK/message/",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK/message/message.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK/message",
+              "slug": "/Web3MQ-SDK/JS-SDK/message/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK/message/",
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -637,29 +659,55 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Intro",
-                "permalink": "/docs/web3MQ-SDK/client/"
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/client/"
               },
               "next": {
                 "title": "channel",
-                "permalink": "/docs/web3MQ-SDK/channel/"
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/channel/"
               }
             },
             {
-              "unversionedId": "web3MQ-SDK/types/types",
-              "id": "web3MQ-SDK/types/types",
+              "unversionedId": "Web3MQ-SDK/JS-SDK/types/types",
+              "id": "Web3MQ-SDK/JS-SDK/types/types",
               "title": "Type List",
               "description": "EventTypes",
-              "source": "@site/docs/web3MQ-SDK/types/types.md",
-              "sourceDirName": "web3MQ-SDK/types",
-              "slug": "/web3MQ-SDK/types/",
-              "permalink": "/docs/web3MQ-SDK/types/",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK/types/types.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK/types",
+              "slug": "/Web3MQ-SDK/JS-SDK/types/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK/types/",
               "tags": [],
               "version": "current",
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "eventCenter",
-                "permalink": "/docs/web3MQ-SDK/eventCenter/"
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/eventCenter/"
+              },
+              "next": {
+                "title": "SwapChat Python SDK",
+                "permalink": "/docs/Web3MQ-SDK/Python-SDK/SwapChatClientPythonSDK"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/Python-SDK/SwapChatClientPythonSDK",
+              "id": "Web3MQ-SDK/Python-SDK/SwapChatClientPythonSDK",
+              "title": "SwapChat Python SDK",
+              "description": "swapchat client python sdk",
+              "source": "@site/docs/Web3MQ-SDK/Python-SDK/SwapChatClientPythonSDK.md",
+              "sourceDirName": "Web3MQ-SDK/Python-SDK",
+              "slug": "/Web3MQ-SDK/Python-SDK/SwapChatClientPythonSDK",
+              "permalink": "/docs/Web3MQ-SDK/Python-SDK/SwapChatClientPythonSDK",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Type List",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/types/"
+              },
+              "next": {
+                "title": "Intro",
+                "permalink": "/docs/Web3MQ-RESTFul-API/Intro"
               }
             }
           ],
@@ -667,61 +715,107 @@
             "tutorialSidebar": [
               {
                 "type": "doc",
-                "id": "intro"
+                "id": "Intro"
               },
               {
                 "type": "category",
-                "label": "AuthOne",
-                "collapsible": true,
-                "collapsed": true,
-                "items": [
-                  {
-                    "type": "doc",
-                    "id": "AuthOne/intro"
-                  }
-                ]
-              },
-              {
-                "type": "category",
-                "label": "ChatClientSDK",
-                "collapsible": true,
-                "collapsed": true,
-                "items": [
-                  {
-                    "type": "doc",
-                    "id": "ChatClientSDK/PythonSDK"
-                  }
-                ]
-              },
-              {
-                "type": "category",
-                "label": "ChatServices",
+                "label": "Web3MQ SDK",
                 "collapsible": true,
                 "collapsed": true,
                 "items": [
                   {
                     "type": "category",
-                    "label": "User API",
+                    "label": "JS-SDK",
                     "collapsible": true,
                     "collapsed": true,
                     "items": [
                       {
                         "type": "doc",
-                        "id": "ChatServices/User/user-register"
+                        "label": "Client",
+                        "id": "Web3MQ-SDK/JS-SDK/client/client"
                       },
                       {
                         "type": "doc",
-                        "id": "ChatServices/User/user-login"
+                        "label": "Message",
+                        "id": "Web3MQ-SDK/JS-SDK/message/message"
                       },
                       {
                         "type": "doc",
-                        "id": "ChatServices/User/bind-social-platform"
+                        "label": "Channel",
+                        "id": "Web3MQ-SDK/JS-SDK/channel/channel"
                       },
                       {
                         "type": "doc",
-                        "id": "ChatServices/User/get-user-info"
+                        "label": "Contact",
+                        "id": "Web3MQ-SDK/JS-SDK/contact/contact"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Event Center",
+                        "id": "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "TypeList",
+                        "id": "Web3MQ-SDK/JS-SDK/types/types"
                       }
                     ]
+                  },
+                  {
+                    "type": "category",
+                    "label": "Python-SDK",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "Web3MQ-SDK/Python-SDK/SwapChatClientPythonSDK"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "Web3MQ RESTFul API",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "Web3MQ-RESTFul-API/Intro"
+                  },
+                  {
+                    "type": "category",
+                    "label": "User",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "Web3MQ-RESTFul-API/User/user-register"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "Web3MQ-RESTFul-API/User/user-login"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "Web3MQ-RESTFul-API/User/bind-social-platform"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "Web3MQ-RESTFul-API/User/get-user-info"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "Web3MQ-RESTFul-API/User/search-user"
+                      }
+                    ],
+                    "link": {
+                      "type": "doc",
+                      "id": "Web3MQ-RESTFul-API/User/User"
+                    }
                   },
                   {
                     "type": "category",
@@ -731,11 +825,11 @@
                     "items": [
                       {
                         "type": "doc",
-                        "id": "ChatServices/Contact/add-contact"
+                        "id": "Web3MQ-RESTFul-API/Contact/add-contact"
                       },
                       {
                         "type": "doc",
-                        "id": "ChatServices/Contact/get-contacts"
+                        "id": "Web3MQ-RESTFul-API/Contact/get-contacts"
                       }
                     ]
                   },
@@ -747,41 +841,41 @@
                     "items": [
                       {
                         "type": "doc",
-                        "id": "ChatServices/Rooms/create-room"
+                        "id": "Web3MQ-RESTFul-API/Room/create-room"
                       },
                       {
                         "type": "doc",
-                        "id": "ChatServices/Rooms/connect-channel"
+                        "id": "Web3MQ-RESTFul-API/Room/connect-channel"
                       },
                       {
                         "type": "doc",
-                        "id": "ChatServices/Rooms/get-messages"
+                        "id": "Web3MQ-RESTFul-API/Room/get-room-info"
                       },
                       {
                         "type": "doc",
-                        "id": "ChatServices/Rooms/get-room-info"
+                        "id": "Web3MQ-RESTFul-API/Room/get-chat-rooms"
                       },
                       {
                         "type": "doc",
-                        "id": "ChatServices/Rooms/get-chat-rooms"
+                        "id": "Web3MQ-RESTFul-API/Room/get-messages"
                       }
-                    ]
-                  },
-                  {
-                    "type": "doc",
-                    "id": "ChatServices/intro"
+                    ],
+                    "link": {
+                      "type": "doc",
+                      "id": "Web3MQ-RESTFul-API/Room/Room"
+                    }
                   }
                 ]
               },
               {
                 "type": "category",
-                "label": "web3MQ-Component",
+                "label": "Web3MQ UI Components",
                 "collapsible": true,
                 "collapsed": true,
                 "items": [
                   {
                     "type": "doc",
-                    "id": "web3MQ-Component/intro"
+                    "id": "Web3MQ-Component/intro"
                   },
                   {
                     "type": "category",
@@ -791,69 +885,31 @@
                     "items": [
                       {
                         "type": "doc",
-                        "id": "web3MQ-Component/coreComponent/Chat"
+                        "id": "Web3MQ-Component/coreComponent/Chat"
                       },
                       {
                         "type": "doc",
-                        "id": "web3MQ-Component/coreComponent/Channel"
+                        "id": "Web3MQ-Component/coreComponent/Channel"
                       },
                       {
                         "type": "doc",
-                        "id": "web3MQ-Component/coreComponent/ChannelList"
+                        "id": "Web3MQ-Component/coreComponent/ChannelList"
                       },
                       {
                         "type": "doc",
-                        "id": "web3MQ-Component/coreComponent/MessageList"
+                        "id": "Web3MQ-Component/coreComponent/MessageList"
                       },
                       {
                         "type": "doc",
-                        "id": "web3MQ-Component/coreComponent/Thread"
+                        "id": "Web3MQ-Component/coreComponent/Thread"
                       }
                     ]
-                  }
-                ]
-              },
-              {
-                "type": "category",
-                "label": "web3MQ-SDK",
-                "collapsible": true,
-                "collapsed": true,
-                "items": [
-                  {
-                    "type": "doc",
-                    "label": "Client",
-                    "id": "web3MQ-SDK/client/client"
-                  },
-                  {
-                    "type": "doc",
-                    "label": "Message",
-                    "id": "web3MQ-SDK/message/message"
-                  },
-                  {
-                    "type": "doc",
-                    "label": "Channel",
-                    "id": "web3MQ-SDK/channel/channel"
-                  },
-                  {
-                    "type": "doc",
-                    "label": "Contact",
-                    "id": "web3MQ-SDK/contact/contact"
-                  },
-                  {
-                    "type": "doc",
-                    "label": "Event Center",
-                    "id": "web3MQ-SDK/eventCenter/eventCenter"
-                  },
-                  {
-                    "type": "doc",
-                    "label": "TypeList",
-                    "id": "web3MQ-SDK/types/types"
                   }
                 ]
               }
             ]
           },
-          "mainDocId": "intro",
+          "mainDocId": "Intro",
           "categoryGeneratedIndices": []
         }
       ]

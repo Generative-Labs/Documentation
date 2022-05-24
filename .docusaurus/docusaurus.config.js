@@ -4,7 +4,7 @@ Your edits in this file will be overwritten in the next build!
 Modify the docusaurus.config.js file at your site's root instead.
 */
 export default {
-  "title": "ChatServiceAPI Document",
+  "title": "Web3MQ API Document",
   "tagline": "Chat anything with any body",
   "url": "https://docs.web3messaging.online/",
   "baseUrl": "/",
@@ -12,31 +12,31 @@ export default {
   "onBrokenMarkdownLinks": "warn",
   "favicon": "img/favicon.ico",
   "organizationName": "Web3MQ",
-  "projectName": "ChatService",
+  "projectName": "Web3MQ",
   "presets": [
     [
       "classic",
       {
         "docs": {
-          "sidebarPath": "/Users/fanxiangyu/Work/Documentation/sidebars.js"
+          "sidebarPath": "/Users/coder/WorkSpace/Documentation/sidebars.js"
         },
         "theme": {
-          "customCss": "/Users/fanxiangyu/Work/Documentation/src/css/custom.css"
+          "customCss": "/Users/coder/WorkSpace/Documentation/src/css/custom.css"
         }
       }
     ]
   ],
   "themeConfig": {
     "navbar": {
-      "title": "Chat Service Document",
+      "title": "Home",
       "logo": {
         "alt": "Document Logo",
-        "src": "img/logo.svg"
+        "src": "img/Web3MQLogo.png"
       },
       "items": [
         {
           "type": "doc",
-          "docId": "intro",
+          "docId": "Intro",
           "position": "left",
           "label": "Document"
         }

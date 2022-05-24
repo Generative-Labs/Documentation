@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# Search
+# Search Users
 
 You can use this API to search all users in Swapchat,then get user's OID which you want add to your contacts list.
 ___
@@ -48,4 +48,4 @@ ___
 | ----------|---- | ------------- |--------|
 | code |int | Yes  |  result code,0 means success, other code see msg's contents  |
 | msg |string | Yes  | result description   |
-| data |list | Yes  | return List of **user** object when code is 0, otherwise return None |
+| data |list | Yes  | return List of **user** object when code is 0, otherwise return null |

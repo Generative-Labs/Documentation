@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        HC Chat Service was designed from the ground up to be easily installed and
+        Web3MQ was designed from the ground up to be easily installed and
         used to get your node up and running quickly.
       </>
     ),
@@ -18,7 +18,7 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        HC Chat Service lets you focus on your chat, and you can chat anything with anyone.
+        Web3MQ lets you focus on your chat, and you can chat anything with anyone.
       </>
     ),
   },
@@ -27,7 +27,7 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        HC Chat Service was built by Golang and GoFiber, running on K8S.
+        Web3MQ was built by Golang and GoFiber, running on K8S.
         Thanks to Golang's high concurrency performance, we can handle high loads with ease.
       </>
     ),

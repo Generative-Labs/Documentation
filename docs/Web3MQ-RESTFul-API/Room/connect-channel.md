@@ -54,37 +54,37 @@ None thing
 just call MQTT's publish function.
 > the topic where message send to is "**msg/+user's OID**"
 
-```Python
+```python
 msg = Message(...)
 client.pub("msg/e324r234r2342",msg)
 ```
 
 
 ### Message's structure
-| Parameters | Required |  Parameters Description|
-| ------------- | ------------- |--------|
-|from_uid|yes|user' OID who sent the message|
-|to_room_id|yes|room's OID which should receivced the message|
-|msg_type|yes|one of 'text' and 'sudo_swap_card'|
-|msg_contents|yes|if msg_type is 'text',it is pure text,if msg_type is 'sudo_swap_card',see **sudo_swap_card's structure** Please see the notes below this form |
-|is_thread|yes|was it a thread,default is no|
-|is_opensea_item_thread|yes|was it a OpenSea item,default is no|
-|opensea_item_contract_address|yes|if is_opensea_item_thread is true, it should be NFT's contract address|
-|opensea_item_token_id|yes|if is_opensea_item_thread is true, it should be NFT's token id|
-|opensea_item_name|yes|if is_opensea_item_thread is true, it should be NFT's name|
-|opensea_item_description|yes|if is_opensea_item_thread is true, it should be NFT's description|
-|opensea_item_image_url|yes|if is_opensea_item_thread is true, it should be NFT's image path|
-|belong_to_thread_id|yes|if message was belong to any thread,it should be the thread's OID |
-|reply_to_msg_id|yes|if message was reply to any msg,it should be the thread's OID|
-|created_at|yes|the unix time stamp when the message sent|
-|at_user_ids|yes|default value is empty list []|
+| Parameters | Type | Required |  Parameters Description|
+| ---------|------ | ------------- |--------|
+|from_uid|string|yes|user' OID who sent the message|
+|to_room_id|string|yes|room's OID which should receivced the message|
+|msg_type|string|yes|one of 'text' and 'sudo_swap_card'|
+|msg_contents|string|yes|if msg_type is 'text',it is pure text,if msg_type is 'sudo_swap_card',see **sudo_swap_card's structure** Please see the notes below this form |
+|is_thread|bool|yes|was it a thread,default is no|
+|is_opensea_item_thread|bool|yes|was it a OpenSea item,default is no|
+|opensea_item_contract_address|string|yes|if is_opensea_item_thread is true, it should be NFT's contract address|
+|opensea_item_token_id|string|yes|if is_opensea_item_thread is true, it should be NFT's token id|
+|opensea_item_name|string|yes|if is_opensea_item_thread is true, it should be NFT's name|
+|opensea_item_description|string|yes|if is_opensea_item_thread is true, it should be NFT's description|
+|opensea_item_image_url|string|yes|if is_opensea_item_thread is true, it should be NFT's image path|
+|belong_to_thread_id|string|yes|if message was belong to any thread,it should be the thread's OID |
+|reply_to_msg_id|string|yes|if message was reply to any msg,it should be the thread's OID|
+|created_at|int|yes|the unix time stamp when the message sent|
+|at_user_ids|list|yes|default value is empty list []|
 
 > message ACK: if message was sent, the sender will received the message that includes a new parameter "id"
 
 
 **sudo_swap_card's structure**
 
-```JSON
+```json
 {
 		"orderStatus" : "OPEN",
 		"expiryDate" : "2022-05-14, 12:00 AM",
@@ -119,7 +119,7 @@ client.pub("msg/e324r234r2342",msg)
 ##  Subsribe your rooms
 > first call [my_rooms](/docs/Web3MQ-RESTFul-API/Room/get-chat-rooms) to get all rooms' id that you are participating in.
 
-```Python
+```python
 msg = Message(...)
 client.subscribe("chat/room_id",msg)
 ```
@@ -128,7 +128,7 @@ client.subscribe("chat/room_id",msg)
 ##  publish messages to your room
 
 
-```Python
+```python
 msg = Message(...)
 client.pub("msg/your_user_id",msg)
 ```

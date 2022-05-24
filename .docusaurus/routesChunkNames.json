@@ -29,117 +29,125 @@
     "component": "component---theme-mdx-page-1-f-3-b90",
     "content": "content---markdown-page-393-028"
   },
-  "/docs-c52": {
+  "/docs-ee7": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
   },
-  "/docs/AuthOne/intro-c33": {
+  "/docs/Intro-1f0": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-auth-one-intro-495-034"
+    "content": "content---docs-intro-377-335"
   },
-  "/docs/ChatClientSDK/PythonSDK-7b3": {
+  "/docs/Web3MQ-Component/coreComponent/Channel-222": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-chat-client-sdk-python-sd-kab-0-67e"
+    "content": "content---docs-web-3-mq-component-core-component-channelf-59-a2a"
   },
-  "/docs/ChatServices/Contact/add-contact-67a": {
+  "/docs/Web3MQ-Component/coreComponent/ChannelList-191": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-chat-services-contact-add-contactfac-95d"
+    "content": "content---docs-web-3-mq-component-core-component-channel-listc-95-bdc"
   },
-  "/docs/ChatServices/Contact/get-contacts-d37": {
+  "/docs/Web3MQ-Component/coreComponent/Chat-e3c": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-chat-services-contact-get-contacts-0-db-034"
+    "content": "content---docs-web-3-mq-component-core-component-chate-2-d-7d7"
   },
-  "/docs/ChatServices/intro-56b": {
+  "/docs/Web3MQ-Component/coreComponent/MessageList-071": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-chat-services-introb-48-7bb"
+    "content": "content---docs-web-3-mq-component-core-component-message-list-329-15c"
   },
-  "/docs/ChatServices/Rooms/connect-channel-ad4": {
+  "/docs/Web3MQ-Component/coreComponent/Thread-9cc": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-chat-services-rooms-connect-channelea-4-147"
+    "content": "content---docs-web-3-mq-component-core-component-thread-8-eb-f9d"
   },
-  "/docs/ChatServices/Rooms/create-room-6e4": {
+  "/docs/Web3MQ-Component/intro-4d3": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-chat-services-rooms-create-roomf-83-cb5"
+    "content": "content---docs-web-3-mq-component-introc-51-e94"
   },
-  "/docs/ChatServices/Rooms/get-chat-rooms-216": {
+  "/docs/Web3MQ-RESTFul-API/Contact/add-contact-d09": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-chat-services-rooms-get-chat-rooms-191-a9a"
+    "content": "content---docs-web-3-mq-rest-ful-api-contact-add-contact-58-e-d5e"
   },
-  "/docs/ChatServices/Rooms/get-messages-27d": {
+  "/docs/Web3MQ-RESTFul-API/Contact/get-contacts-548": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-chat-services-rooms-get-messages-094-c06"
+    "content": "content---docs-web-3-mq-rest-ful-api-contact-get-contactse-3-a-d36"
   },
-  "/docs/ChatServices/Rooms/get-room-info-8c6": {
+  "/docs/Web3MQ-RESTFul-API/Intro-b17": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-chat-services-rooms-get-room-infodd-7-de4"
+    "content": "content---docs-web-3-mq-rest-ful-api-intro-5-fe-3bc"
   },
-  "/docs/ChatServices/User/bind-social-platform-f7c": {
+  "/docs/Web3MQ-RESTFul-API/Room/-b04": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-chat-services-user-bind-social-platform-5-a-2-f2a"
+    "content": "content---docs-web-3-mq-rest-ful-api-room-6-f-0-398"
   },
-  "/docs/ChatServices/User/get-user-info-9c5": {
+  "/docs/Web3MQ-RESTFul-API/Room/connect-channel-2c7": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-chat-services-user-get-user-info-1-d-9-818"
+    "content": "content---docs-web-3-mq-rest-ful-api-room-connect-channela-46-893"
   },
-  "/docs/ChatServices/User/user-login-69e": {
+  "/docs/Web3MQ-RESTFul-API/Room/create-room-c9a": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-chat-services-user-user-loginf-4-a-5b8"
+    "content": "content---docs-web-3-mq-rest-ful-api-room-create-room-6-da-a58"
   },
-  "/docs/ChatServices/User/user-register-d66": {
+  "/docs/Web3MQ-RESTFul-API/Room/get-chat-rooms-738": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-chat-services-user-user-registere-8-c-088"
+    "content": "content---docs-web-3-mq-rest-ful-api-room-get-chat-rooms-436-31d"
   },
-  "/docs/intro-aed": {
+  "/docs/Web3MQ-RESTFul-API/Room/get-messages-bb9": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-intro-0-e-3-be1"
+    "content": "content---docs-web-3-mq-rest-ful-api-room-get-messages-4-ba-152"
   },
-  "/docs/web3MQ-Component/coreComponent/Channel-b02": {
+  "/docs/Web3MQ-RESTFul-API/Room/get-room-info-6b2": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-component-core-component-channel-7-cd-f85"
+    "content": "content---docs-web-3-mq-rest-ful-api-room-get-room-infoc-7-b-201"
   },
-  "/docs/web3MQ-Component/coreComponent/ChannelList-23f": {
+  "/docs/Web3MQ-RESTFul-API/User/-354": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-component-core-component-channel-list-138-852"
+    "content": "content---docs-web-3-mq-rest-ful-api-user-28-b-71b"
   },
-  "/docs/web3MQ-Component/coreComponent/Chat-29b": {
+  "/docs/Web3MQ-RESTFul-API/User/bind-social-platform-5eb": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-component-core-component-chatad-4-4f2"
+    "content": "content---docs-web-3-mq-rest-ful-api-user-bind-social-platform-1-b-4-e04"
   },
-  "/docs/web3MQ-Component/coreComponent/MessageList-416": {
+  "/docs/Web3MQ-RESTFul-API/User/get-user-info-977": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-component-core-component-message-listdeb-072"
+    "content": "content---docs-web-3-mq-rest-ful-api-user-get-user-infod-6-f-b6b"
   },
-  "/docs/web3MQ-Component/coreComponent/Thread-7d9": {
+  "/docs/Web3MQ-RESTFul-API/User/search-user-341": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-component-core-component-thread-702-411"
+    "content": "content---docs-web-3-mq-rest-ful-api-user-search-usere-84-cf3"
   },
-  "/docs/web3MQ-Component/intro-a36": {
+  "/docs/Web3MQ-RESTFul-API/User/user-login-03d": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-component-introa-7-c-8fb"
+    "content": "content---docs-web-3-mq-rest-ful-api-user-user-login-918-c59"
   },
-  "/docs/web3MQ-SDK/channel/-662": {
+  "/docs/Web3MQ-RESTFul-API/User/user-register-59c": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-channel-556-07c"
+    "content": "content---docs-web-3-mq-rest-ful-api-user-user-registercb-6-1d2"
   },
-  "/docs/web3MQ-SDK/client/-116": {
+  "/docs/Web3MQ-SDK/JS-SDK/channel/-873": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-client-87-c-2a2"
+    "content": "content---docs-web-3-mq-sdk-js-sdk-channel-8-ee-129"
   },
-  "/docs/web3MQ-SDK/contact/-434": {
+  "/docs/Web3MQ-SDK/JS-SDK/client/-41c": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-contact-df-6-942"
+    "content": "content---docs-web-3-mq-sdk-js-sdk-client-c-21-2aa"
   },
-  "/docs/web3MQ-SDK/eventCenter/-214": {
+  "/docs/Web3MQ-SDK/JS-SDK/contact/-997": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-event-center-4-d-3-ee3"
+    "content": "content---docs-web-3-mq-sdk-js-sdk-contact-ece-988"
   },
-  "/docs/web3MQ-SDK/message/-2dd": {
+  "/docs/Web3MQ-SDK/JS-SDK/eventCenter/-0b7": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-message-fbb-604"
+    "content": "content---docs-web-3-mq-sdk-js-sdk-event-center-79-b-3be"
   },
-  "/docs/web3MQ-SDK/types/-cb7": {
+  "/docs/Web3MQ-SDK/JS-SDK/message/-fd8": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-types-2-c-6-bdc"
+    "content": "content---docs-web-3-mq-sdk-js-sdk-message-4-e-4-e6b"
+  },
+  "/docs/Web3MQ-SDK/JS-SDK/types/-e1d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-js-sdk-types-5-f-7-c37"
+  },
+  "/docs/Web3MQ-SDK/Python-SDK/SwapChatClientPythonSDK-cbc": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-python-sdk-swap-chat-client-python-sdk-6-bb-4ff"
   },
   "/-deb": {
     "component": "component---site-src-pages-index-jsc-4-f-f99",

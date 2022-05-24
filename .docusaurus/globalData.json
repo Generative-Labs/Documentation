@@ -8,149 +8,159 @@
           "label": "Next",
           "isLast": true,
           "path": "/docs",
-          "mainDocId": "intro",
+          "mainDocId": "Intro",
           "docs": [
             {
-              "id": "AuthOne/intro",
-              "path": "/docs/AuthOne/intro",
+              "id": "Intro",
+              "path": "/docs/Intro",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ChatClientSDK/PythonSDK",
-              "path": "/docs/ChatClientSDK/PythonSDK",
+              "id": "Web3MQ-Component/coreComponent/Channel",
+              "path": "/docs/Web3MQ-Component/coreComponent/Channel",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ChatServices/Contact/add-contact",
-              "path": "/docs/ChatServices/Contact/add-contact",
+              "id": "Web3MQ-Component/coreComponent/ChannelList",
+              "path": "/docs/Web3MQ-Component/coreComponent/ChannelList",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ChatServices/Contact/get-contacts",
-              "path": "/docs/ChatServices/Contact/get-contacts",
+              "id": "Web3MQ-Component/coreComponent/Chat",
+              "path": "/docs/Web3MQ-Component/coreComponent/Chat",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ChatServices/intro",
-              "path": "/docs/ChatServices/intro",
+              "id": "Web3MQ-Component/coreComponent/MessageList",
+              "path": "/docs/Web3MQ-Component/coreComponent/MessageList",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ChatServices/Rooms/connect-channel",
-              "path": "/docs/ChatServices/Rooms/connect-channel",
+              "id": "Web3MQ-Component/coreComponent/Thread",
+              "path": "/docs/Web3MQ-Component/coreComponent/Thread",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ChatServices/Rooms/create-room",
-              "path": "/docs/ChatServices/Rooms/create-room",
+              "id": "Web3MQ-Component/intro",
+              "path": "/docs/Web3MQ-Component/intro",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ChatServices/Rooms/get-chat-rooms",
-              "path": "/docs/ChatServices/Rooms/get-chat-rooms",
+              "id": "Web3MQ-RESTFul-API/Contact/add-contact",
+              "path": "/docs/Web3MQ-RESTFul-API/Contact/add-contact",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ChatServices/Rooms/get-messages",
-              "path": "/docs/ChatServices/Rooms/get-messages",
+              "id": "Web3MQ-RESTFul-API/Contact/get-contacts",
+              "path": "/docs/Web3MQ-RESTFul-API/Contact/get-contacts",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ChatServices/Rooms/get-room-info",
-              "path": "/docs/ChatServices/Rooms/get-room-info",
+              "id": "Web3MQ-RESTFul-API/Intro",
+              "path": "/docs/Web3MQ-RESTFul-API/Intro",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ChatServices/User/bind-social-platform",
-              "path": "/docs/ChatServices/User/bind-social-platform",
+              "id": "Web3MQ-RESTFul-API/Room/connect-channel",
+              "path": "/docs/Web3MQ-RESTFul-API/Room/connect-channel",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ChatServices/User/get-user-info",
-              "path": "/docs/ChatServices/User/get-user-info",
+              "id": "Web3MQ-RESTFul-API/Room/create-room",
+              "path": "/docs/Web3MQ-RESTFul-API/Room/create-room",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ChatServices/User/user-login",
-              "path": "/docs/ChatServices/User/user-login",
+              "id": "Web3MQ-RESTFul-API/Room/get-chat-rooms",
+              "path": "/docs/Web3MQ-RESTFul-API/Room/get-chat-rooms",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ChatServices/User/user-register",
-              "path": "/docs/ChatServices/User/user-register",
+              "id": "Web3MQ-RESTFul-API/Room/get-messages",
+              "path": "/docs/Web3MQ-RESTFul-API/Room/get-messages",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "intro",
-              "path": "/docs/intro",
+              "id": "Web3MQ-RESTFul-API/Room/get-room-info",
+              "path": "/docs/Web3MQ-RESTFul-API/Room/get-room-info",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "web3MQ-Component/coreComponent/Channel",
-              "path": "/docs/web3MQ-Component/coreComponent/Channel",
+              "id": "Web3MQ-RESTFul-API/Room/Room",
+              "path": "/docs/Web3MQ-RESTFul-API/Room/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "web3MQ-Component/coreComponent/ChannelList",
-              "path": "/docs/web3MQ-Component/coreComponent/ChannelList",
+              "id": "Web3MQ-RESTFul-API/User/bind-social-platform",
+              "path": "/docs/Web3MQ-RESTFul-API/User/bind-social-platform",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "web3MQ-Component/coreComponent/Chat",
-              "path": "/docs/web3MQ-Component/coreComponent/Chat",
+              "id": "Web3MQ-RESTFul-API/User/get-user-info",
+              "path": "/docs/Web3MQ-RESTFul-API/User/get-user-info",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "web3MQ-Component/coreComponent/MessageList",
-              "path": "/docs/web3MQ-Component/coreComponent/MessageList",
+              "id": "Web3MQ-RESTFul-API/User/search-user",
+              "path": "/docs/Web3MQ-RESTFul-API/User/search-user",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "web3MQ-Component/coreComponent/Thread",
-              "path": "/docs/web3MQ-Component/coreComponent/Thread",
+              "id": "Web3MQ-RESTFul-API/User/User",
+              "path": "/docs/Web3MQ-RESTFul-API/User/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "web3MQ-Component/intro",
-              "path": "/docs/web3MQ-Component/intro",
+              "id": "Web3MQ-RESTFul-API/User/user-login",
+              "path": "/docs/Web3MQ-RESTFul-API/User/user-login",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "web3MQ-SDK/channel/channel",
-              "path": "/docs/web3MQ-SDK/channel/",
+              "id": "Web3MQ-RESTFul-API/User/user-register",
+              "path": "/docs/Web3MQ-RESTFul-API/User/user-register",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "web3MQ-SDK/client/client",
-              "path": "/docs/web3MQ-SDK/client/",
+              "id": "Web3MQ-SDK/JS-SDK/channel/channel",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/channel/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "web3MQ-SDK/contact/contact",
-              "path": "/docs/web3MQ-SDK/contact/",
+              "id": "Web3MQ-SDK/JS-SDK/client/client",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/client/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "web3MQ-SDK/eventCenter/eventCenter",
-              "path": "/docs/web3MQ-SDK/eventCenter/",
+              "id": "Web3MQ-SDK/JS-SDK/contact/contact",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/contact/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "web3MQ-SDK/message/message",
-              "path": "/docs/web3MQ-SDK/message/",
+              "id": "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/eventCenter/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "web3MQ-SDK/types/types",
-              "path": "/docs/web3MQ-SDK/types/",
+              "id": "Web3MQ-SDK/JS-SDK/message/message",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/message/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/JS-SDK/types/types",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/types/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Python-SDK/SwapChatClientPythonSDK",
+              "path": "/docs/Web3MQ-SDK/Python-SDK/SwapChatClientPythonSDK",
               "sidebar": "tutorialSidebar"
             }
           ],
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/docs/intro",
-                "label": "intro"
+                "path": "/docs/Intro",
+                "label": "Intro"
               }
             }
           }
