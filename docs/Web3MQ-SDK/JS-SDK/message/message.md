@@ -8,9 +8,9 @@ position: 2
 
 | name          | type                                                                  | Parameters Description |
 | ------------- | --------------------------------------------------------------------- | ---------------------- |
-| activeMessage | [MessageResponse](/docs/web3MQ-SDK/types/#messageresponse) \| null    | current active message |
-| messageList   | [MessageResponse](/docs/web3MQ-SDK/types/#messageresponse)[ ] \| null | message list           |
-| threadList    | [MessageResponse](/docs/web3MQ-SDK/types/#messageresponse)[ ] \| null | thread list            |
+| activeMessage | [MessageResponse](/docs/Web3MQ-SDK/JS-SDK/types/#messageresponse) \| null    | current active message |
+| messageList   | [MessageResponse](/docs/Web3MQ-SDK/JS-SDK/types/#messageresponse)[ ] \| null | message list           |
+| threadList    | [MessageResponse](/docs/Web3MQ-SDK/JS-SDK/types/#messageresponse)[ ] \| null | thread list            |
 
 ```typescript
 class Message {
@@ -28,7 +28,7 @@ class Message {
 
 | name  | type                                                                   |
 | ----- | ---------------------------------------------------------------------- |
-| props | [GetRoomInfoParams](/docs/web3MQ-SDK/types/#getroominfoparams) \| null |
+| props | [GetRoomInfoParams](/docs/Web3MQ-SDK/JS-SDK/types/#getroominfoparams) \| null |
 
 ```typescript
 getMessageList = async (props: GetRoomInfoParams) => {
@@ -92,7 +92,7 @@ loadMoreThreadList = () => {
 
 | name    | type                                                               |
 | ------- | ------------------------------------------------------------------ |
-| message | [MessageResponse](/docs/web3MQ-SDK/types/#messageresponse) \| null |
+| message | [MessageResponse](/docs/Web3MQ-SDK/JS-SDK/types/#messageresponse) \| null |
 
 ```typescript
 openThread = (message: MessageResponse | null) => {
@@ -114,8 +114,8 @@ openThread = (message: MessageResponse | null) => {
 
 | name     | type                                                                     |
 | -------- | ------------------------------------------------------------------------ |
-| params   | [GetMessageParams](/docs/web3MQ-SDK/types/#getmessageparams)             |
-| response | { data: [MessageResponse](/docs/web3MQ-SDK/types/#messageresponse) [ ] } |
+| params   | [GetMessageParams](/docs/Web3MQ-SDK/JS-SDK/types/#getmessageparams)             |
+| response | { data: [MessageResponse](/docs/Web3MQ-SDK/JS-SDK/types/#messageresponse) [ ] } |
 
 ```ts
 getMessages = (params: GetMessageParams): Promise<any> => {
@@ -131,8 +131,8 @@ getMessages = (params: GetMessageParams): Promise<any> => {
 
 | name     | type                                                                     |
 | -------- | ------------------------------------------------------------------------ |
-| params   | [GetThreadsParams](/docs/web3MQ-SDK/types/#getthreadsparams)             |
-| response | { data: [MessageResponse](/docs/web3MQ-SDK/types/#messageresponse) [ ] } |
+| params   | [GetThreadsParams](/docs/Web3MQ-SDK/JS-SDK/types/#getthreadsparams)             |
+| response | { data: [MessageResponse](/docs/Web3MQ-SDK/JS-SDK/types/#messageresponse) [ ] } |
 
 ```typescript
 getMessageListByThread = (params: GetThreadsParams): Promise<any> => {

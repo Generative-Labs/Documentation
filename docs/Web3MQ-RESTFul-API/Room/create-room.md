@@ -15,7 +15,7 @@ ___
 
 | Headers  | Required |  Headers Description|
 | ------------- | ------------- |--------|
-| Authorization  | Yes  |  [login api](/docs/SwapChat/User/user-login#login-with-metamask-sign) response "access_token" |
+| Authorization  | Yes  |  [login api](/docs/Web3MQ-RESTFul-API/User/user-login#login-with-metamask-sign) response "access_token" |
 
 *example*
 

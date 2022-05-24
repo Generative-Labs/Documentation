@@ -82,7 +82,7 @@ ___
 | msg |string | Yes  | result description   |
 | data |map | Yes  | return Map if code is 0, otherwise return None |
 | -access_token |string | No  | return access_token if code is 0, otherwise return None, will expired after 7 days |
-| -user_info|object|No| **User** object, see [User](/docs/SwapChat/User/)|
+| -user_info|object|No| **User** object, see [User](/docs/Web3MQ-RESTFul-API/User/)|
 
 
 ## Refresh JWT
@@ -95,7 +95,7 @@ ___
 
 | Headers | Required |  Headers Description|
 | ------------- | ------------- |--------|
-| Authorization  | Yes  |  [login api](/docs/SwapChat/User/user-login#login-with-metamask-sign) response "access_token" |
+| Authorization  | Yes  |  [login api](/docs/Web3MQ-RESTFul-API/User/user-login#login-with-metamask-sign) response "access_token" |
 
 *example*
 

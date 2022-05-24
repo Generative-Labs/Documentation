@@ -8,8 +8,8 @@ position: 6
 
 | name          | type                                                     | Parameters Description |
 | ------------- | -------------------------------------------------------- | ---------------------- |
-| contactList   | [UserInfo](/docs/web3MQ-SDK/types/#userinfo) [ ] \| null | contact list           |
-| activeContact | [UserInfo](/docs/web3MQ-SDK/types/#userinfo) \| null     | current active contact |
+| contactList   | [UserInfo](/docs/Web3MQ-SDK/JS-SDK/types/#userinfo) [ ] \| null | contact list           |
+| activeContact | [UserInfo](/docs/Web3MQ-SDK/JS-SDK/types/#userinfo) \| null     | current active contact |
 
 ```typescript
 export class Contact {
@@ -24,7 +24,7 @@ export class Contact {
 
 | name    | type                                         |
 | ------- | -------------------------------------------- |
-| contact | [UserInfo](/docs/web3MQ-SDK/types/#userinfo) |
+| contact | [UserInfo](/docs/Web3MQ-SDK/JS-SDK/types/#userinfo) |
 
 ```typescript
 setActiveContact = (contact: UserInfo) => {
@@ -42,7 +42,7 @@ setActiveContact = (contact: UserInfo) => {
 
 | name   | type                                             |
 | ------ | ------------------------------------------------ |
-| option | [PageParams](/docs/web3MQ-SDK/types/#pageparams) |
+| option | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams) |
 
 ```ts
  queryContacts(option?: PageParams) {
@@ -58,8 +58,8 @@ setActiveContact = (contact: UserInfo) => {
 
 | name     | type                                                       |
 | -------- | ---------------------------------------------------------- |
-| params   | [PageParams](/docs/web3MQ-SDK/types/#pageparams)           |
-| response | { data: [UserInfo](/docs/web3MQ-SDK/types/#userinfo) [ ] } |
+| params   | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)           |
+| response | { data: [UserInfo](/docs/Web3MQ-SDK/JS-SDK/types/#userinfo) [ ] } |
 
 ```typescript
 getContacts = (params: PageParams): Promise<{ data: UserInfo[] }> => {

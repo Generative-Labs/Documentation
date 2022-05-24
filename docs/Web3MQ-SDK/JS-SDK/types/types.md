@@ -4,7 +4,7 @@
 
 | name      | type                                       |
 | --------- | ------------------------------------------ |
-| EVENT_MAP | [EVENT_MAP](/docs/web3MQ-SDK/eventCenter/) |
+| EVENT_MAP | [EVENT_MAP](/docs/Web3MQ-SDK/JS-SDK/eventCenter/) |
 
 ```ts
 import { EVENT_MAP } from './core/events';

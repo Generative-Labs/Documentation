@@ -13,7 +13,7 @@ pip install paho-mqtt
 
 ## How to use it
 
-- Get access_token from login api [see login api doc](https://docs.web3messaging.online/docs/SwapChat/User/user-login)
+- Get access_token from login api [see login api doc](https://docs.web3messaging.online/docs/Web3MQ-RESTFul-API/User/user-login)
 - Extract user_id from access_token
 - Set client username and password
 - Connect to server
@@ -45,7 +45,7 @@ client.connect("msg.web3messaging.online", 443)
 
 ### Send message
 
-- Get **room_id** from my_rooms api [see api doc](/docs/SwapChat/Room/get-chat-rooms#get-all-rooms-id-that-you-are-participating-in)
+- Get **room_id** from my_rooms api [see api doc](/docs/Web3MQ-RESTFul-API/Room/get-chat-rooms#get-all-rooms-id-that-you-are-participating-in)
 
 ```python
 import json

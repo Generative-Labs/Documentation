@@ -13,17 +13,18 @@ sidebar_position: 0
 
 ## How to authorization with JWT
 
-1. call [login api](/docs/SwapChat/User/user-login#login-with-metamask-sign)
+1. call [login api](/docs/Web3MQ-RESTFul-API/User/user-login#login-with-metamask-sign)
 2. put "access_token" that from login api response into http header
 
 **JWT: yes** means you need pass Authorization http header
 
+1. call [login api](/docs/Web3MQ-RESTFul-API/)
 
 *http header*
 
 | Headers  | Required |  Headers Description|
 | ------------- | ------------- |--------|
-| Authorization  | Yes  |  [login api](/docs/SwapChat/User/user-login#login-with-metamask-sign) response "access_token" |
+| Authorization  | Yes  |  [login api](/docs/Web3MQ-RESTFul-API/User/user-login#login-with-metamask-sign) response "access_token" |
 
 *example*
 

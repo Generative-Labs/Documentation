@@ -48,4 +48,4 @@ ___
 | ------------- | ------------- |--------|
 | code  | Yes  |  result code,0 means success, other code see msg's contents  |
 | msg  | Yes  | result description   |
-| data  | Yes  | **User** object, see [User](/docs/SwapChat/User/) |
+| data  | Yes  | **User** object, see [User](/docs/Web3MQ-RESTFul-API/User/) |

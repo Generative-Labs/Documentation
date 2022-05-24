@@ -8,10 +8,10 @@ position: 5
 
 | name          | type                                                                   | Parameters Description |
 | ------------- | ---------------------------------------------------------------------- | ---------------------- |
-| channelList   | [ChannelResponse](/docs/web3MQ-SDK/types/#channelresponse) [ ] \| null | channel list           |
-| activeChannel | [ChannelResponse](/docs/web3MQ-SDK/types/#channelresponse) \| null     | current active channel |
-| members       | [MembersItem](/docs/web3MQ-SDK/types/#membersitem) \| null             | member list            |
-| activeMember  | [ActiveMemberItem](/docs/web3MQ-SDK/types/#activememberitem)           | current active member  |
+| channelList   | [ChannelResponse](/docs/Web3MQ-SDK/JS-SDK/types/#channelresponse) [ ] \| null | channel list           |
+| activeChannel | [ChannelResponse](/docs/Web3MQ-SDK/JS-SDK/types/#channelresponse) \| null     | current active channel |
+| members       | [MembersItem](/docs/Web3MQ-SDK/JS-SDK/types/#membersitem) \| null             | member list            |
+| activeMember  | [ActiveMemberItem](/docs/Web3MQ-SDK/JS-SDK/types/#activememberitem)           | current active member  |
 
 ```typescript
 export class Channel {
@@ -22,13 +22,16 @@ export class Channel {
 }
 ```
 
+
+[ActiveMemberItem](/docs/Web3MQ-SDK/JS-SDK/types/)
+
 ### onNewMessage
 
 > Notify all subscribers when a new message is received
 
 | name    | type                                                       |
 | ------- | ---------------------------------------------------------- |
-| message | [MessageResponse](/docs/web3MQ-SDK/types/#messageresponse) |
+| message | [MessageResponse](/docs/Web3MQ-SDK/JS-SDK/types/#messageresponse) |
 
 ```typescript
 onNewMessage = (message: MessageResponse) => {
@@ -43,7 +46,7 @@ onNewMessage = (message: MessageResponse) => {
 
 | name    | type                                                       |
 | ------- | ---------------------------------------------------------- |
-| channel | [ChannelResponse](/docs/web3MQ-SDK/types/#channelresponse) |
+| channel | [ChannelResponse](/docs/Web3MQ-SDK/JS-SDK/types/#channelresponse) |
 
 ```ts
 setActiveChannel = (channel: ChannelResponse) => {
@@ -60,7 +63,7 @@ setActiveChannel = (channel: ChannelResponse) => {
 
 | name   | type                                                                     |
 | ------ | ------------------------------------------------------------------------ |
-| option | [GetChatsByUserIdParams](/docs/web3MQ-SDK/types/#getchatsbyuseridparams) |
+| option | [GetChatsByUserIdParams](/docs/Web3MQ-SDK/JS-SDK/types/#getchatsbyuseridparams) |
 
 ```ts
 queryChannels = (option: GetChatsByUserIdParams) => {
@@ -75,8 +78,8 @@ queryChannels = (option: GetChatsByUserIdParams) => {
 
 | name     | type                                                                     |
 | -------- | ------------------------------------------------------------------------ |
-| params   | [GetChatsByUserIdParams](/docs/web3MQ-SDK/types/#getchatsbyuseridparams) |
-| response | { data: [ChannelResponse](/docs/web3MQ-SDK/types/#channelresponse) [ ] } |
+| params   | [GetChatsByUserIdParams](/docs/Web3MQ-SDK/JS-SDK/types/#getchatsbyuseridparams) |
+| response | { data: [ChannelResponse](/docs/Web3MQ-SDK/JS-SDK/types/#channelresponse) [ ] } |
 
 ```typescript
 getChatsByUserId = (

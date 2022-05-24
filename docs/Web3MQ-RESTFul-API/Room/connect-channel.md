@@ -117,7 +117,7 @@ client.pub("msg/e324r234r2342",msg)
 
 
 ##  Subsribe your rooms
-> first call [my_rooms](/docs/SwapChat/Room/get-chat-rooms) to get all rooms' id that you are participating in.
+> first call [my_rooms](/docs/Web3MQ-RESTFul-API/Room/get-chat-rooms) to get all rooms' id that you are participating in.
 
 ```Python
 msg = Message(...)
