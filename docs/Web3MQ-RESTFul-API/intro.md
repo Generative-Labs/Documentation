@@ -18,8 +18,6 @@ sidebar_position: 0
 
 **JWT: yes** means you need pass Authorization http header
 
-1. call [login api](/docs/Web3MQ-RESTFul-API/)
-
 *http header*
 
 | Headers  | Required |  Headers Description|
