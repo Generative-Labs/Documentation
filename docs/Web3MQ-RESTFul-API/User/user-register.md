@@ -5,7 +5,9 @@ sidebar_position: 0
 # User Register
 ___
 
-## Binding User to their ETH wallet address
+## Register a user by platform
+
+The content of the `user_name` depends on the value of the `paltform`.
 
 > /register
 
@@ -13,10 +15,23 @@ ___
 
 > Call Method: POST
 
-| Parameters  | Required |  Parameters Description|
-| ------------- | ------------- |--------|
-| wallet_address  | Yes  |  User's ETH wallet address, get it by MetaMask's API  |
 
+| Parameters | Type | Required |  Parameters Description|
+| ----------|----- | ------------- |--------|
+| platform |string | Yes  | the platform where user come from, it will affect the type of account verification.  |
+| user_name |string | Yes  | the content of the `user_name` depends on the value of the `paltform`. |
+
+
+List of platforms what we support now.
+
+
+| Platforms |
+|-------|
+|twitter|
+|instagram|
+|facebook|
+|discord|
+|opensea|
 > Return:
 
 ```json

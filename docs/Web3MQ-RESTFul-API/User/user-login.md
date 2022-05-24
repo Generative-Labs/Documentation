@@ -7,26 +7,13 @@ ___
 ## Get User's Random Login Secret
 > /login_random_secret
 
-The content of the `use_rname` depends on the value of the `paltform`.
-
 > JWT: No
 
 > Call Method: POST
 
-| Parameters | Type | Required |  Parameters Description|
-| ----------|----- | ------------- |--------|
-| platform |string | Yes  | the platform where user come from, it will affect the type of account verification.  |
-| user_name |string | Yes  | the content of the `use_rname` depends on the value of the `paltform`. |
-
-
-| Platforms |
-|-------|
-|twitter|
-|instagram|
-|facebook|
-|discord|
-|opensea|
-
+| Parameters| Type  | Required |  Parameters Description|
+| ----------|--- | ------------- |--------|
+| wallet_address |string | Yes  |  User's ETH wallet address, get it by MetaMask's API  |
 
 
 > Return:
