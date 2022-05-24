@@ -40,7 +40,7 @@ const config = {
         title: 'Chat Service Document',
         logo: {
           alt: 'Document Logo',
-          src: 'img/logo.svg',
+          src: 'img/Web3MQLogo.png',
         },
         items: [
           {
