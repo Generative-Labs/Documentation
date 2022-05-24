@@ -14,7 +14,7 @@ sidebar_position: 0
 ## How to authorization with JWT
 
 1. call [login api](/docs/Web3MQ-RESTFul-API/User/user-login#login-with-metamask-sign)
-2. put "access_token" that from login api response into http header
+2. put `access_token` that from login api response into http header
 
 **JWT: yes** means you need pass Authorization http header
 
