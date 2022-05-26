@@ -6,8 +6,8 @@ position: 5
 
 ### Channel Attribute
 
-| name          | type                                                                   | Parameters Description |
-| ------------- | ---------------------------------------------------------------------- | ---------------------- |
+| name          | type                                                                          | Parameters Description |
+| ------------- | ----------------------------------------------------------------------------- | ---------------------- |
 | channelList   | [ChannelResponse](/docs/Web3MQ-SDK/JS-SDK/types/#channelresponse) [ ] \| null | channel list           |
 | activeChannel | [ChannelResponse](/docs/Web3MQ-SDK/JS-SDK/types/#channelresponse) \| null     | current active channel |
 | members       | [MembersItem](/docs/Web3MQ-SDK/JS-SDK/types/#membersitem) \| null             | member list            |
@@ -22,21 +22,20 @@ export class Channel {
 }
 ```
 
-
 [ActiveMemberItem](/docs/Web3MQ-SDK/JS-SDK/types/)
 
 ### onNewMessage
 
 > Notify all subscribers when a new message is received
 
-| name    | type                                                       |
-| ------- | ---------------------------------------------------------- |
+| name    | type                                                              |
+| ------- | ----------------------------------------------------------------- |
 | message | [MessageResponse](/docs/Web3MQ-SDK/JS-SDK/types/#messageresponse) |
 
 ```typescript
 onNewMessage = (message: MessageResponse) => {
   // ...
-  this._client.emit('channel.updated', data);
+  this._client.emit("channel.updated", data);
 };
 ```
 
@@ -44,14 +43,14 @@ onNewMessage = (message: MessageResponse) => {
 
 > Sets the currently active channel and notifies all subscribers of updates
 
-| name    | type                                                       |
-| ------- | ---------------------------------------------------------- |
+| name    | type                                                              |
+| ------- | ----------------------------------------------------------------- |
 | channel | [ChannelResponse](/docs/Web3MQ-SDK/JS-SDK/types/#channelresponse) |
 
 ```ts
 setActiveChannel = (channel: ChannelResponse) => {
-  this._client.emit('channel.activeChange', {
-    type: 'channel.activeChange',
+  this._client.emit("channel.activeChange", {
+    type: "channel.activeChange",
     data,
   });
 };
@@ -61,14 +60,14 @@ setActiveChannel = (channel: ChannelResponse) => {
 
 > Query all channel data and notifies all subscribers of updates
 
-| name   | type                                                                     |
-| ------ | ------------------------------------------------------------------------ |
+| name   | type                                                                            |
+| ------ | ------------------------------------------------------------------------------- |
 | option | [GetChatsByUserIdParams](/docs/Web3MQ-SDK/JS-SDK/types/#getchatsbyuseridparams) |
 
 ```ts
 queryChannels = (option: GetChatsByUserIdParams) => {
   //...
-  this._client.emit('channel.getList', { type: 'channel.getList', data });
+  this._client.emit("channel.getList", { type: "channel.getList", data });
 };
 ```
 
@@ -76,8 +75,8 @@ queryChannels = (option: GetChatsByUserIdParams) => {
 
 > Query all channel data API
 
-| name     | type                                                                     |
-| -------- | ------------------------------------------------------------------------ |
+| name     | type                                                                            |
+| -------- | ------------------------------------------------------------------------------- |
 | params   | [GetChatsByUserIdParams](/docs/Web3MQ-SDK/JS-SDK/types/#getchatsbyuseridparams) |
 | response | { data: [ChannelResponse](/docs/Web3MQ-SDK/JS-SDK/types/#channelresponse) [ ] } |
 
@@ -85,6 +84,6 @@ queryChannels = (option: GetChatsByUserIdParams) => {
 getChatsByUserId = (
   params: GetChatsByUserIdParams
 ): Promise<{ data: ChannelResponse[] }> => {
-  return request.post('/my_chats', params);
+  return request.post("/my_chats", params);
 };
 ```
