@@ -4,9 +4,109 @@ position: 3
 
 # Client
 
-## Intro
+## Events
 
-## Usage
+| name                                         | type     | Parameters Description |
+| -------------------------------------------- | -------- | ---------------------- |
+| [on](/docs/Web3MQ-SDK/JS-SDK/client/#on)     | function | create pubsub          |
+| [off](/docs/Web3MQ-SDK/JS-SDK/client/#off)   | function | cancel pubsub          |
+| [once](/docs/Web3MQ-SDK/JS-SDK/client/#once) | function | once pubsub            |
+| [emit](/docs/Web3MQ-SDK/JS-SDK/client/#emit) | function | emit pubsub            |
+
+## Properties
+
+| name                                        | type          | Parameters Description   |
+| ------------------------------------------- | ------------- | ------------------------ |
+| token                                       | string        | your access token        |
+| listeners                                   | {}            | pubsub list              |
+| [channel](/docs/Web3MQ-SDK/JS-SDK/channel)  | Channel Class | The channel correlation  |
+| [messages](/docs/Web3MQ-SDK/JS-SDK/message) | Message Class | The messages correlation |
+| user                                        | User Class    | The user correlation     |
+| [contact](/docs/Web3MQ-SDK/JS-SDK/contact)  | Contact Class | The contact correlation  |
+
+## Methods
+
+| name                                                       | type     | Parameters Description |
+| ---------------------------------------------------------- | -------- | ---------------------- |
+| [getInstance](/docs/Web3MQ-SDK/JS-SDK/client/#getInstance) | function | LoginParams or string  |
+
+## Events
+
+### on()
+
+```typescript
+* on: (eventName: EventTypes, callback: any) => void;
+```
+
+```typescript
+import { Web3MQ } from "web3-mq";
+
+const client = Web3MQ.getInstance('YOUR_ACCESS_TOKEN');
+
+client.on('channel.activeChange', (event) {
+  console.log(event)
+})
+```
+
+### off()
+
+```typescript
+* off: (eventName: EventTypes, callback?: any) => void;
+```
+
+```typescript
+import { Web3MQ } from "web3-mq";
+
+const client = Web3MQ.getInstance('YOUR_ACCESS_TOKEN');
+
+client.off('channel.activeChange', (event) {
+  console.log(event)
+})
+```
+
+### once()
+
+```typescript
+* once: (eventName: EventTypes, callback?: any) => void;
+```
+
+```typescript
+import { Web3MQ } from "web3-mq";
+
+const client = Web3MQ.getInstance('YOUR_ACCESS_TOKEN');
+
+client.once('channel.activeChange', (event) {
+  console.log(event)
+})
+```
+
+### emit()
+
+```typescript
+* emit: (eventName: EventTypes, ...args: any[]) => void;
+```
+
+```typescript
+import { Web3MQ } from "web3-mq";
+
+const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
+
+client.emit("channel.activeChange", {
+  data: "",
+});
+```
+
+## Methods
+
+### getInstance()
+
+```typescript
+Web3MQ.getInstance([LoginParams](/docs/Web3MQ-SDK/JS-SDK/types/#loginparams) | token: string);
+```
+
+> create a client
+
+#### Usage
 
 > call [Connect MeatMask](/docs/Web3MQ-SDK/JS-SDK/quickStart/#connect-metamask)
 >
@@ -56,29 +156,3 @@ import { Web3MQ } from "web3-mq";
 
 const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
 ```
-
-## Attrbuite
-
-| name                                        | type          | Parameters Description   |
-| ------------------------------------------- | ------------- | ------------------------ |
-| token                                       | string        | your access token        |
-| listeners                                   | {}            | pubsub list              |
-| [channel](/docs/Web3MQ-SDK/JS-SDK/channel)  | Channel Class | The channel correlation  |
-| [messages](/docs/Web3MQ-SDK/JS-SDK/message) | Message Class | The messages correlation |
-| user                                        | User Class    | The user correlation     |
-| [contact](/docs/Web3MQ-SDK/JS-SDK/contact)  | Contact Class | The contact correlation  |
-
-## Methods
-
-| name        | type     | Parameters Description               |
-| ----------- | -------- | ------------------------------------ |
-| getInstance | function | Gets a unique client instance method |
-
-## Event
-
-| name | type     | Parameters Description |
-| ---- | -------- | ---------------------- |
-| on   | function | create pubsub          |
-| off  | function | cancel pubsub          |
-| once | function | once pubsub            |
-| emit | function | emit pubsub            |
