@@ -1,5 +1,5 @@
 ---
-position: 3
+position: 2
 ---
 
 # Client
@@ -21,7 +21,7 @@ position: 3
 | listeners                                   | {}            | pubsub list              |
 | [channel](/docs/Web3MQ-SDK/JS-SDK/channel)  | Channel Class | The channel correlation  |
 | [messages](/docs/Web3MQ-SDK/JS-SDK/message) | Message Class | The messages correlation |
-| user                                        | User Class    | The user correlation     |
+| [user](/docs/Web3MQ-SDK/JS-SDK/user)        | User Class    | The user correlation     |
 | [contact](/docs/Web3MQ-SDK/JS-SDK/contact)  | Contact Class | The contact correlation  |
 
 ## Methods

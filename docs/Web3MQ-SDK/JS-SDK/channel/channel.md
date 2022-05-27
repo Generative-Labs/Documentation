@@ -1,89 +1,123 @@
 ---
-position: 5
+position: 3
 ---
 
-## Usage
+# Channel
 
-### Channel Attribute
+## Properties
 
-| name          | type                                                                          | Parameters Description |
+| name          | type                                                                          | Description            |
 | ------------- | ----------------------------------------------------------------------------- | ---------------------- |
 | channelList   | [ChannelResponse](/docs/Web3MQ-SDK/JS-SDK/types/#channelresponse) [ ] \| null | channel list           |
 | activeChannel | [ChannelResponse](/docs/Web3MQ-SDK/JS-SDK/types/#channelresponse) \| null     | current active channel |
-| members       | [MembersItem](/docs/Web3MQ-SDK/JS-SDK/types/#membersitem) \| null             | member list            |
-| activeMember  | [ActiveMemberItem](/docs/Web3MQ-SDK/JS-SDK/types/#activememberitem)           | current active member  |
+
+## Methods
+
+| name             | type     | Parameters Description                                            |
+| ---------------- | -------- | ----------------------------------------------------------------- |
+| setActiveChannel | function | [ChannelResponse](/docs/Web3MQ-SDK/JS-SDK/types/#channelresponse) |
+| queryChannels    | function | [pageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)           |
+| createRoom       | function | { user_id: string }                                               |
+
+## Properties
+
+### channelList
+
+> Chat List
+
+#### get
 
 ```typescript
-export class Channel {
-  channelList: ChannelResponse[] | null;
-  activeChannel: ChannelResponse | null;
-  members: MembersItem | null;
-  activeMember: ActiveMemberItem;
-}
+import { Web3MQ } from "web3-mq";
+
+const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
+
+client.channel.channelList;
 ```
 
-[ActiveMemberItem](/docs/Web3MQ-SDK/JS-SDK/types/)
+#### Returns
 
-### onNewMessage
+> **Array**: [ChannelResponse](/docs/Web3MQ-SDK/JS-SDK/types/#channelresponse)[]
 
-> Notify all subscribers when a new message is received
+### activeChannel
 
-| name    | type                                                              |
-| ------- | ----------------------------------------------------------------- |
-| message | [MessageResponse](/docs/Web3MQ-SDK/JS-SDK/types/#messageresponse) |
+> Currently active chat rooms
+
+#### get
 
 ```typescript
-onNewMessage = (message: MessageResponse) => {
-  // ...
-  this._client.emit("channel.updated", data);
-};
+import { Web3MQ } from "web3-mq";
+
+const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
+
+client.channel.activeChannel;
 ```
 
-### setActiveChannel
+#### Returns
+
+> **Object**: [ChannelResponse](/docs/Web3MQ-SDK/JS-SDK/types/#channelresponse)
+
+## Methods
+
+### setActiveChannel()
 
 > Sets the currently active channel and notifies all subscribers of updates
 
-| name    | type                                                              |
-| ------- | ----------------------------------------------------------------- |
-| channel | [ChannelResponse](/docs/Web3MQ-SDK/JS-SDK/types/#channelresponse) |
-
-```ts
-setActiveChannel = (channel: ChannelResponse) => {
-  this._client.emit("channel.activeChange", {
-    type: "channel.activeChange",
-    data,
-  });
-};
+```typescript
+* setActiveChannel: (channel: ChannelResponse) => void;
 ```
 
-### queryChannels
+```typescript
+import { Web3MQ } from "web3-mq";
+
+const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
+
+client.channel.setActiveChannel(channel: ChannelResponse);
+
+// After the request is completed, the data will be synchronized to the client
+console.log(client.channel.activeChannel);
+```
+
+### queryChannels()
 
 > Query all channel data and notifies all subscribers of updates
 
-| name   | type                                                                            |
-| ------ | ------------------------------------------------------------------------------- |
-| option | [GetChatsByUserIdParams](/docs/Web3MQ-SDK/JS-SDK/types/#getchatsbyuseridparams) |
-
-```ts
-queryChannels = (option: GetChatsByUserIdParams) => {
-  //...
-  this._client.emit("channel.getList", { type: "channel.getList", data });
-};
+```typescript
+* queryChannels: (option: PageParams) => Promise<void>;
 ```
 
-### getChatsByUserId
+```typescript
+import { Web3MQ } from "web3-mq";
 
-> Query all channel data API
+const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
 
-| name     | type                                                                            |
-| -------- | ------------------------------------------------------------------------------- |
-| params   | [GetChatsByUserIdParams](/docs/Web3MQ-SDK/JS-SDK/types/#getchatsbyuseridparams) |
-| response | { data: [ChannelResponse](/docs/Web3MQ-SDK/JS-SDK/types/#channelresponse) [ ] } |
+await client.channel.queryChannels({
+  page: 1,
+  size: 20,
+});
+
+// After the request is completed, the data will be synchronized to the client
+console.log(client.channel.channelList);
+```
+
+### createRoom()
+
+> Select a person to create a chat room and set the currently active chat room
 
 ```typescript
-getChatsByUserId = (
-  params: GetChatsByUserIdParams
-): Promise<{ data: ChannelResponse[] }> => {
-  return request.post("/my_chats", params);
-};
+* createRoom: (params: GetRoomInfoByTargetUserIdParams) => Promise<void>;
+```
+
+```typescript
+import { Web3MQ } from "web3-mq";
+
+const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
+
+await client.channel.createRoom({
+  user_id: "******",
+});
+
+// After the request is completed, the data will be synchronized to the client
+console.log(client.channel.activeChannel);
+console.log(client.channel.channelList);
 ```
