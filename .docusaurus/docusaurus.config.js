@@ -18,10 +18,10 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "/Users/coder/WorkSpace/Documentation/sidebars.js"
+          "sidebarPath": "/Users/fanxiangyu/Work/Documentation/sidebars.js"
         },
         "theme": {
-          "customCss": "/Users/coder/WorkSpace/Documentation/src/css/custom.css"
+          "customCss": "/Users/fanxiangyu/Work/Documentation/src/css/custom.css"
         }
       }
     ]

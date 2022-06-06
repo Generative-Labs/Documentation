@@ -19,8 +19,6 @@ position: 3
 | queryChannels    | function | [pageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)           |
 | createRoom       | function | { user_id: string }                                               |
 
-## Properties
-
 ### channelList
 
 > Chat List

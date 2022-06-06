@@ -16,36 +16,6 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-Component/coreComponent/Channel",
-              "path": "/docs/Web3MQ-Component/coreComponent/Channel",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-Component/coreComponent/ChannelList",
-              "path": "/docs/Web3MQ-Component/coreComponent/ChannelList",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-Component/coreComponent/Chat",
-              "path": "/docs/Web3MQ-Component/coreComponent/Chat",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-Component/coreComponent/MessageList",
-              "path": "/docs/Web3MQ-Component/coreComponent/MessageList",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-Component/coreComponent/Thread",
-              "path": "/docs/Web3MQ-Component/coreComponent/Thread",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-Component/intro",
-              "path": "/docs/Web3MQ-Component/intro",
-              "sidebar": "tutorialSidebar"
-            },
-            {
               "id": "Web3MQ-RESTFul-API/Contact/add-contact",
               "path": "/docs/Web3MQ-RESTFul-API/Contact/add-contact",
               "sidebar": "tutorialSidebar"
@@ -121,6 +91,26 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Web3MQ-SDK/JS-SDK/authorization/Intro",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/authorization/Intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/JS-SDK/authorization/MetaMask",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/authorization/MetaMask",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/JS-SDK/authorization/Slope",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/authorization/Slope",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/JS-SDK/authorization/Walletconnect",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/authorization/Walletconnect",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-SDK/JS-SDK/channel/channel",
               "path": "/docs/Web3MQ-SDK/JS-SDK/channel/",
               "sidebar": "tutorialSidebar"
@@ -141,8 +131,18 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Web3MQ-SDK/JS-SDK/Intro",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/Intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-SDK/JS-SDK/message/message",
               "path": "/docs/Web3MQ-SDK/JS-SDK/message/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/JS-SDK/quickStart/quickStart",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/quickStart/",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -151,8 +151,83 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-SDK/Python-SDK/SwapChatClientPythonSDK",
-              "path": "/docs/Web3MQ-SDK/Python-SDK/SwapChatClientPythonSDK",
+              "id": "Web3MQ-SDK/JS-SDK/user/user",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/user/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/JS-SDK/utils/utils",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/utils/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Python-SDK/chat",
+              "path": "/docs/Web3MQ-SDK/Python-SDK/chat",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Python-SDK/intro",
+              "path": "/docs/Web3MQ-SDK/Python-SDK/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Python-SDK/login",
+              "path": "/docs/Web3MQ-SDK/Python-SDK/login",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Python-SDK/messageapi",
+              "path": "/docs/Web3MQ-SDK/Python-SDK/messageapi",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Python-SDK/quickstart",
+              "path": "/docs/Web3MQ-SDK/Python-SDK/quickstart",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Python-SDK/register",
+              "path": "/docs/Web3MQ-SDK/Python-SDK/register",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Python-SDK/roomapi",
+              "path": "/docs/Web3MQ-SDK/Python-SDK/roomapi",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Python-SDK/userapi",
+              "path": "/docs/Web3MQ-SDK/Python-SDK/userapi",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-UI-Components/coreComponent/Channel",
+              "path": "/docs/Web3MQ-UI-Components/coreComponent/Channel",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-UI-Components/coreComponent/ChannelList",
+              "path": "/docs/Web3MQ-UI-Components/coreComponent/ChannelList",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-UI-Components/coreComponent/Chat",
+              "path": "/docs/Web3MQ-UI-Components/coreComponent/Chat",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-UI-Components/coreComponent/MessageList",
+              "path": "/docs/Web3MQ-UI-Components/coreComponent/MessageList",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-UI-Components/coreComponent/Thread",
+              "path": "/docs/Web3MQ-UI-Components/coreComponent/Thread",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-UI-Components/Intro",
+              "path": "/docs/Web3MQ-UI-Components/Intro",
               "sidebar": "tutorialSidebar"
             }
           ],

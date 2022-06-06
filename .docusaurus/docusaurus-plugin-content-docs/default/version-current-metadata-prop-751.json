@@ -28,15 +28,53 @@
             "items": [
               {
                 "type": "link",
-                "label": "Client",
-                "href": "/docs/Web3MQ-SDK/JS-SDK/client/",
-                "docId": "Web3MQ-SDK/JS-SDK/client/client"
+                "label": "Intro",
+                "href": "/docs/Web3MQ-SDK/JS-SDK/Intro",
+                "docId": "Web3MQ-SDK/JS-SDK/Intro"
               },
               {
                 "type": "link",
-                "label": "Message",
-                "href": "/docs/Web3MQ-SDK/JS-SDK/message/",
-                "docId": "Web3MQ-SDK/JS-SDK/message/message"
+                "label": "QuickStart",
+                "href": "/docs/Web3MQ-SDK/JS-SDK/quickStart/",
+                "docId": "Web3MQ-SDK/JS-SDK/quickStart/quickStart"
+              },
+              {
+                "type": "category",
+                "label": "Authorization",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Intro",
+                    "href": "/docs/Web3MQ-SDK/JS-SDK/authorization/Intro",
+                    "docId": "Web3MQ-SDK/JS-SDK/authorization/Intro"
+                  },
+                  {
+                    "type": "link",
+                    "label": "MetaMask",
+                    "href": "/docs/Web3MQ-SDK/JS-SDK/authorization/MetaMask",
+                    "docId": "Web3MQ-SDK/JS-SDK/authorization/MetaMask"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Slope",
+                    "href": "/docs/Web3MQ-SDK/JS-SDK/authorization/Slope",
+                    "docId": "Web3MQ-SDK/JS-SDK/authorization/Slope"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Walletconnect",
+                    "href": "/docs/Web3MQ-SDK/JS-SDK/authorization/Walletconnect",
+                    "docId": "Web3MQ-SDK/JS-SDK/authorization/Walletconnect"
+                  }
+                ]
+              },
+              {
+                "type": "link",
+                "label": "Client",
+                "href": "/docs/Web3MQ-SDK/JS-SDK/client/",
+                "docId": "Web3MQ-SDK/JS-SDK/client/client"
               },
               {
                 "type": "link",
@@ -46,9 +84,21 @@
               },
               {
                 "type": "link",
+                "label": "Message",
+                "href": "/docs/Web3MQ-SDK/JS-SDK/message/",
+                "docId": "Web3MQ-SDK/JS-SDK/message/message"
+              },
+              {
+                "type": "link",
                 "label": "Contact",
                 "href": "/docs/Web3MQ-SDK/JS-SDK/contact/",
                 "docId": "Web3MQ-SDK/JS-SDK/contact/contact"
+              },
+              {
+                "type": "link",
+                "label": "User",
+                "href": "/docs/Web3MQ-SDK/JS-SDK/user/",
+                "docId": "Web3MQ-SDK/JS-SDK/user/user"
               },
               {
                 "type": "link",
@@ -61,6 +111,12 @@
                 "label": "TypeList",
                 "href": "/docs/Web3MQ-SDK/JS-SDK/types/",
                 "docId": "Web3MQ-SDK/JS-SDK/types/types"
+              },
+              {
+                "type": "link",
+                "label": "Utils",
+                "href": "/docs/Web3MQ-SDK/JS-SDK/utils/",
+                "docId": "Web3MQ-SDK/JS-SDK/utils/utils"
               }
             ]
           },
@@ -72,9 +128,51 @@
             "items": [
               {
                 "type": "link",
-                "label": "SwapChat Python SDK",
-                "href": "/docs/Web3MQ-SDK/Python-SDK/SwapChatClientPythonSDK",
-                "docId": "Web3MQ-SDK/Python-SDK/SwapChatClientPythonSDK"
+                "label": "Intro",
+                "href": "/docs/Web3MQ-SDK/Python-SDK/intro",
+                "docId": "Web3MQ-SDK/Python-SDK/intro"
+              },
+              {
+                "type": "link",
+                "label": "Quickstart",
+                "href": "/docs/Web3MQ-SDK/Python-SDK/quickstart",
+                "docId": "Web3MQ-SDK/Python-SDK/quickstart"
+              },
+              {
+                "type": "link",
+                "label": "Register",
+                "href": "/docs/Web3MQ-SDK/Python-SDK/register",
+                "docId": "Web3MQ-SDK/Python-SDK/register"
+              },
+              {
+                "type": "link",
+                "label": "Login",
+                "href": "/docs/Web3MQ-SDK/Python-SDK/login",
+                "docId": "Web3MQ-SDK/Python-SDK/login"
+              },
+              {
+                "type": "link",
+                "label": "User",
+                "href": "/docs/Web3MQ-SDK/Python-SDK/userapi",
+                "docId": "Web3MQ-SDK/Python-SDK/userapi"
+              },
+              {
+                "type": "link",
+                "label": "Room",
+                "href": "/docs/Web3MQ-SDK/Python-SDK/roomapi",
+                "docId": "Web3MQ-SDK/Python-SDK/roomapi"
+              },
+              {
+                "type": "link",
+                "label": "Message",
+                "href": "/docs/Web3MQ-SDK/Python-SDK/messageapi",
+                "docId": "Web3MQ-SDK/Python-SDK/messageapi"
+              },
+              {
+                "type": "link",
+                "label": "Chat",
+                "href": "/docs/Web3MQ-SDK/Python-SDK/chat",
+                "docId": "Web3MQ-SDK/Python-SDK/chat"
               }
             ]
           }
@@ -201,8 +299,8 @@
           {
             "type": "link",
             "label": "Intro",
-            "href": "/docs/Web3MQ-Component/intro",
-            "docId": "Web3MQ-Component/intro"
+            "href": "/docs/Web3MQ-UI-Components/Intro",
+            "docId": "Web3MQ-UI-Components/Intro"
           },
           {
             "type": "category",
@@ -213,32 +311,32 @@
               {
                 "type": "link",
                 "label": "Chat",
-                "href": "/docs/Web3MQ-Component/coreComponent/Chat",
-                "docId": "Web3MQ-Component/coreComponent/Chat"
+                "href": "/docs/Web3MQ-UI-Components/coreComponent/Chat",
+                "docId": "Web3MQ-UI-Components/coreComponent/Chat"
               },
               {
                 "type": "link",
                 "label": "Channel",
-                "href": "/docs/Web3MQ-Component/coreComponent/Channel",
-                "docId": "Web3MQ-Component/coreComponent/Channel"
+                "href": "/docs/Web3MQ-UI-Components/coreComponent/Channel",
+                "docId": "Web3MQ-UI-Components/coreComponent/Channel"
               },
               {
                 "type": "link",
                 "label": "Channel List",
-                "href": "/docs/Web3MQ-Component/coreComponent/ChannelList",
-                "docId": "Web3MQ-Component/coreComponent/ChannelList"
+                "href": "/docs/Web3MQ-UI-Components/coreComponent/ChannelList",
+                "docId": "Web3MQ-UI-Components/coreComponent/ChannelList"
               },
               {
                 "type": "link",
                 "label": "MessageList",
-                "href": "/docs/Web3MQ-Component/coreComponent/MessageList",
-                "docId": "Web3MQ-Component/coreComponent/MessageList"
+                "href": "/docs/Web3MQ-UI-Components/coreComponent/MessageList",
+                "docId": "Web3MQ-UI-Components/coreComponent/MessageList"
               },
               {
                 "type": "link",
                 "label": "Thread",
-                "href": "/docs/Web3MQ-Component/coreComponent/Thread",
-                "docId": "Web3MQ-Component/coreComponent/Thread"
+                "href": "/docs/Web3MQ-UI-Components/coreComponent/Thread",
+                "docId": "Web3MQ-UI-Components/coreComponent/Thread"
               }
             ]
           }
@@ -251,42 +349,6 @@
       "id": "Intro",
       "title": "Intro",
       "description": "Wallet Direct Messaging",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-Component/coreComponent/Channel": {
-      "id": "Web3MQ-Component/coreComponent/Channel",
-      "title": "Channel",
-      "description": "The Channel component is a React Context provider that wraps all of the logic, functionality, and UI for an individual chat channel. It provides five separate contexts to its children:",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-Component/coreComponent/ChannelList": {
-      "id": "Web3MQ-Component/coreComponent/ChannelList",
-      "title": "Channel List",
-      "description": "The ChannelList component queries an array of channel objects from the Chat API",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-Component/coreComponent/Chat": {
-      "id": "Web3MQ-Component/coreComponent/Chat",
-      "title": "Chat",
-      "description": "Basic Usage",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-Component/coreComponent/MessageList": {
-      "id": "Web3MQ-Component/coreComponent/MessageList",
-      "title": "MessageList",
-      "description": "The MessageList component renders a scrollable list of messages. The UI for each individual message is rendered conditionally based on its message.type value. The list renders date separators, new message notifications, system messages, deleted messages, and standard messages containing text and/or attachments.",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-Component/coreComponent/Thread": {
-      "id": "Web3MQ-Component/coreComponent/Thread",
-      "title": "Thread",
-      "description": "The Thread component renders a list of replies tied to a single parent message in a channel's main message list. A Thread maintains its own state and renders its own MessageList and MessageInput components. Each piece of rendered UI can be overridden with custom components either drawn from the ComponentContext or supplied via props.",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-Component/intro": {
-      "id": "Web3MQ-Component/intro",
-      "title": "Intro",
-      "description": "Web3MQ React Component Libraries",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-RESTFul-API/Contact/add-contact": {
@@ -379,22 +441,46 @@
       "description": "_",
       "sidebar": "tutorialSidebar"
     },
+    "Web3MQ-SDK/JS-SDK/authorization/Intro": {
+      "id": "Web3MQ-SDK/JS-SDK/authorization/Intro",
+      "title": "Intro",
+      "description": "包含了多个钱包类的集成",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/JS-SDK/authorization/MetaMask": {
+      "id": "Web3MQ-SDK/JS-SDK/authorization/MetaMask",
+      "title": "MetaMask",
+      "description": "Properties",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/JS-SDK/authorization/Slope": {
+      "id": "Web3MQ-SDK/JS-SDK/authorization/Slope",
+      "title": "Slope",
+      "description": "Properties",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/JS-SDK/authorization/Walletconnect": {
+      "id": "Web3MQ-SDK/JS-SDK/authorization/Walletconnect",
+      "title": "Walletconnect",
+      "description": "Properties",
+      "sidebar": "tutorialSidebar"
+    },
     "Web3MQ-SDK/JS-SDK/channel/channel": {
       "id": "Web3MQ-SDK/JS-SDK/channel/channel",
-      "title": "channel",
-      "description": "Usage",
+      "title": "Channel",
+      "description": "Properties",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK/client/client": {
       "id": "Web3MQ-SDK/JS-SDK/client/client",
-      "title": "Intro",
-      "description": "web3-mq-js is the official JavaScript client for Web3MQ, a service for building chat applications.",
+      "title": "Client",
+      "description": "Events",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK/contact/contact": {
       "id": "Web3MQ-SDK/JS-SDK/contact/contact",
-      "title": "contact",
-      "description": "Usage",
+      "title": "Contact",
+      "description": "Properties",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter": {
@@ -403,22 +489,124 @@
       "description": "Usage",
       "sidebar": "tutorialSidebar"
     },
+    "Web3MQ-SDK/JS-SDK/Intro": {
+      "id": "Web3MQ-SDK/JS-SDK/Intro",
+      "title": "Intro",
+      "description": "web3-mq-js is the official JavaScript client for Web3MQ, a service for building chat applications.",
+      "sidebar": "tutorialSidebar"
+    },
     "Web3MQ-SDK/JS-SDK/message/message": {
       "id": "Web3MQ-SDK/JS-SDK/message/message",
-      "title": "message",
-      "description": "Usage",
+      "title": "Messages",
+      "description": "Properties",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/JS-SDK/quickStart/quickStart": {
+      "id": "Web3MQ-SDK/JS-SDK/quickStart/quickStart",
+      "title": "QuickStart",
+      "description": "Let's learn how to use and successfully send the first message in the chat room we created",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK/types/types": {
       "id": "Web3MQ-SDK/JS-SDK/types/types",
-      "title": "Type List",
-      "description": "EventTypes",
+      "title": "types",
+      "description": "---",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-SDK/Python-SDK/SwapChatClientPythonSDK": {
-      "id": "Web3MQ-SDK/Python-SDK/SwapChatClientPythonSDK",
-      "title": "SwapChat Python SDK",
-      "description": "swapchat client python sdk",
+    "Web3MQ-SDK/JS-SDK/user/user": {
+      "id": "Web3MQ-SDK/JS-SDK/user/user",
+      "title": "User",
+      "description": "Properties",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/JS-SDK/utils/utils": {
+      "id": "Web3MQ-SDK/JS-SDK/utils/utils",
+      "title": "Utils",
+      "description": "register()",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/Python-SDK/chat": {
+      "id": "Web3MQ-SDK/Python-SDK/chat",
+      "title": "Chat",
+      "description": "How to use it",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/Python-SDK/intro": {
+      "id": "Web3MQ-SDK/Python-SDK/intro",
+      "title": "Intro",
+      "description": "web3mq is official web3mq python sdk",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/Python-SDK/login": {
+      "id": "Web3MQ-SDK/Python-SDK/login",
+      "title": "Login",
+      "description": "Get User's Random login Secret",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/Python-SDK/messageapi": {
+      "id": "Web3MQ-SDK/Python-SDK/messageapi",
+      "title": "Message",
+      "description": "Get history messages",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/Python-SDK/quickstart": {
+      "id": "Web3MQ-SDK/Python-SDK/quickstart",
+      "title": "Quickstart",
+      "description": "_",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/Python-SDK/register": {
+      "id": "Web3MQ-SDK/Python-SDK/register",
+      "title": "Register",
+      "description": "_",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/Python-SDK/roomapi": {
+      "id": "Web3MQ-SDK/Python-SDK/roomapi",
+      "title": "Room",
+      "description": "Room api list",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/Python-SDK/userapi": {
+      "id": "Web3MQ-SDK/Python-SDK/userapi",
+      "title": "User",
+      "description": "User api list",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/coreComponent/Channel": {
+      "id": "Web3MQ-UI-Components/coreComponent/Channel",
+      "title": "Channel",
+      "description": "The Channel component is a React Context provider that wraps all of the logic, functionality, and UI for an individual chat channel. It provides five separate contexts to its children:",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/coreComponent/ChannelList": {
+      "id": "Web3MQ-UI-Components/coreComponent/ChannelList",
+      "title": "Channel List",
+      "description": "The ChannelList component queries an array of channel objects from the Chat API",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/coreComponent/Chat": {
+      "id": "Web3MQ-UI-Components/coreComponent/Chat",
+      "title": "Chat",
+      "description": "Basic Usage",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/coreComponent/MessageList": {
+      "id": "Web3MQ-UI-Components/coreComponent/MessageList",
+      "title": "MessageList",
+      "description": "The MessageList component renders a scrollable list of messages. The UI for each individual message is rendered conditionally based on its message.type value. The list renders date separators, new message notifications, system messages, deleted messages, and standard messages containing text and/or attachments.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/coreComponent/Thread": {
+      "id": "Web3MQ-UI-Components/coreComponent/Thread",
+      "title": "Thread",
+      "description": "The Thread component renders a list of replies tied to a single parent message in a channel's main message list. A Thread maintains its own state and renders its own MessageList and MessageInput components. Each piece of rendered UI can be overridden with custom components either drawn from the ComponentContext or supplied via props.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Intro": {
+      "id": "Web3MQ-UI-Components/Intro",
+      "title": "Intro",
+      "description": "Web3MQ React Component Libraries",
       "sidebar": "tutorialSidebar"
     }
   }
