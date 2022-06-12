@@ -48,9 +48,6 @@ ___
 |to_room_id|string|yes|room's OID which should receivced the message|
 |msg_type|string|yes|one of ["text","thread","reply","nft","trade"]|
 |msg_contents|string|yes|if msg_type is 'text',it is pure text,if msg_type is 'trade',see **trade's structure**,if msg_type is 'nft' see **nft's structure**,if msg_type is 'thread' see **thread's structure**,if msg_type is 'reply' see **reply's structure**, Please see the tables below this form |
-|is_thread|bool|yes|was it a thread,default is no|
-|belong_to_thread_id|string|yes|if message was belong to any thread,it should be the thread's OID |
-|reply_to_msg_id|string|yes|if message was reply to any msg,it should be the thread's OID|
 |created_at|int|yes|the unix time stamp when the message sent|
 |at_user_ids|list|yes|default value is empty list []|
 
