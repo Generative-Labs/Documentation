@@ -15,33 +15,82 @@ ___
 |members|list| a list of members' OID|
 |creator_id|string|creator's OID|
 |created_at|int|timestamp when Room was created,in nanoseconds|
-|is_opensea_coll|bool|was it created by OpenSea coll, default value is false|
-|opensea_coll_name|string|OpenSea Coll's name|
-|opensea_coll_cover|string|OpenSea Coll's cover|
-|opensea_coll_slug|string|OpenSea Coll's slug|
+|created_with|None or string|None,or one of ["nft_coll","twitter_space"]|
 |is_1v1|bool|was it a private room,default value is false,this value will be true when and only when there are only two members.|
-|is_twitter_space|bool|was it created by Twitter Space|
-|space_id|string|Twitter Sapce Id|
-|space_title|string|Twitter Space title|
 |last_msg_time|int|timestamp of the last message received in the chat room, in nanoseconds|
 
 ___
 
-### Message's structure
-| Parameters | Type | Required |  Parameters Description|
+### nft_coll's structure
+| Parameters | Type | Always return |  Parameters Description|
+| ---------|------ | ------------- |--------|
+|nft_marketplace_name|string|Yes|one of ["openseaio","cryptyocom","gamaio","binancecom","ftxcom"], but we only suport "openseaio" for now|
+|nft_coll_name|string|Yes|Coll's name|
+|nft_coll_cover|string|Yes|Coll's cover|
+|nft_coll_slug|string|Yes|Coll's slug|
+
+
+___
+
+### twitter_space's structure
+| Parameters | Type | Always return |  Parameters Description|
+| ---------|------ | ------------- |--------|
+|space_id|string|Yes|Twitter Sapce Id|
+|space_title|string|Yes|Twitter Sapce title|
+
+
+___
+
+## Message's structure
+| Parameters | Type | Always return |  Parameters Description|
 | ---------|------ | ------------- |--------|
 |from_uid|string|yes|user' OID who sent the message|
 |to_room_id|string|yes|room's OID which should receivced the message|
-|msg_type|string|yes|one of 'text' and 'sudo_swap_card'|
-|msg_contents|string|yes|if msg_type is 'text',it is pure text,if msg_type is 'sudo_swap_card',see **sudo_swap_card's structure** Please see the notes below this form |
+|msg_type|string|yes|one of ["text","thread","reply","nft","trade"]|
+|msg_contents|string|yes|if msg_type is 'text',it is pure text,if msg_type is 'trade',see **trade's structure**,if msg_type is 'nft' see **nft's structure**,if msg_type is 'thread' see **thread's structure**,if msg_type is 'reply' see **reply's structure**, Please see the tables below this form |
 |is_thread|bool|yes|was it a thread,default is no|
-|is_opensea_item_thread|bool|yes|was it a OpenSea item,default is no|
-|opensea_item_contract_address|string|yes|if is_opensea_item_thread is true, it should be NFT's contract address|
-|opensea_item_token_id|string|yes|if is_opensea_item_thread is true, it should be NFT's token id|
-|opensea_item_name|string|yes|if is_opensea_item_thread is true, it should be NFT's name|
-|opensea_item_description|string|yes|if is_opensea_item_thread is true, it should be NFT's description|
-|opensea_item_image_url|string|yes|if is_opensea_item_thread is true, it should be NFT's image path|
 |belong_to_thread_id|string|yes|if message was belong to any thread,it should be the thread's OID |
 |reply_to_msg_id|string|yes|if message was reply to any msg,it should be the thread's OID|
 |created_at|int|yes|the unix time stamp when the message sent|
 |at_user_ids|list|yes|default value is empty list []|
+
+___
+
+### trade_card's structure
+| Parameters | Type | Always return |  Parameters Description|
+| ---------|------ | ------------- |--------|
+|platform_name|string|Yes|one of ["sudoswap","swapchat","nifty"], but we only support "sudoswap" for now|
+
+___
+
+### nft's structure
+| Parameters | Type | Always return |  Parameters Description|
+| ---------|------ | ------------- |--------|
+|nft_marketplace_name|string|Yes|one of ["openseaio","cryptyocom","gamaio","binancecom","ftxcom"], but we only suport "openseaio" for now|
+|nft_chain_name|string|Yes|one of ["ethereum","polygon","solana"]|
+|nft_contract_address|string|Yes|NFT's contract address|
+|nft_token_id|string|Yes|NFT's token id|
+|nft_name|string|Yes|NFT's name|
+|nft_description|string|Yes|NFT's description|
+|nft_image_url|string|Yes|NFT's image url|
+
+___
+
+### thread's structure
+| Parameters | Type | Always return |  Parameters Description|
+| ---------|------ | ------------- |--------|
+|thread_name|string|Yes|Thread's name|
+|thread_description|string|Yes|Thread's description|
+|thread_contents|string|Yes|Thread's contents|
+|thread_cover_image_url|string|Yes|Thread's cover image url|
+
+___
+
+### reply's structure
+| Parameters | Type | Always return |  Parameters Description|
+| ---------|------ | ------------- |--------|
+|reply_to_msg_id|string|Yes|the Message's id which reply to|
+|reply_contents|string|Yes|the Reply's contents|
+
+
+
