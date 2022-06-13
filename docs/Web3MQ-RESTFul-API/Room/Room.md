@@ -53,7 +53,7 @@ ___
 
 ___
 
-### trade_card's structure
+### trade's structure
 | Parameters | Type | Always return |  Parameters Description|
 | ---------|------ | ------------- |--------|
 |platform_name|string|Yes|one of ["sudoswap","swapchat","nifty"], but we only support "sudoswap" for now|
