@@ -4,15 +4,15 @@
 
 ## Methods
 
-| name          | type     | Description                       |
-| ------------- | -------- | --------------------------------- |
-| signSlope     | function | 使用 Slope 的登陆授权等封装的函数 |
-| disconnecting | function | 断开链接                          |
+| name          | type     | Description                                               |
+| ------------- | -------- | --------------------------------------------------------- |
+| signSlope     | function | Wrapped functions such as login authorization using Slope |
+| disconnecting | function | disconnecting                                             |
 
 ## Usage
 
 ```ts
-import { Web3MQ, Slope } from 'web3-mq';
+import { Web3MQ, Slope } from "web3-mq";
 
 const token = await Slope.signSlope();
 

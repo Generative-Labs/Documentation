@@ -4,14 +4,14 @@
 
 ## Methods
 
-| name              | type     | Description                               |
-| ----------------- | -------- | ----------------------------------------- |
-| signWalletconnect | function | 使用 Walletconnect 的登陆授权等封装的函数 |
+| name              | type     | Description                                                       |
+| ----------------- | -------- | ----------------------------------------------------------------- |
+| signWalletconnect | function | Wrapped functions such as login authorization using WalletConnect |
 
 ## Usage
 
 ```ts
-import { Web3MQ, Walletconnect } from 'web3-mq';
+import { Web3MQ, Walletconnect } from "web3-mq";
 
 const token = await Walletconnect.signWalletconnect();
 

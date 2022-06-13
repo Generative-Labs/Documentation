@@ -8,55 +8,52 @@ web3-mq-js is the official JavaScript client for Web3MQ, a service for building 
 
 # Design
 
-#### client 类作为主入口，包含和挂载了基本属性和其他 Channel，Message 等其他类
+#### The client class is the main entry point and contains and mounts the basic properties and other classes such as Channel, Message, etc.
 
-#### sdk 核心思路分为两种（ 听不懂？没关系！往下看图）
+#### SDK There are two kinds of core ideas (can't understand? No problem! Look down the chart)
 
-> 1. 发布订阅模式：通过发布-订阅设计模式来管理数据，以及通知视图更新，这样做的好处是可以将数据维护在 sdk 内部，做统一管理，视图层只需要每次数据更新后，在回调函数中获取一下 sdk 对象上的最新数据，然后触发视图更新就可以看到最新的数据展示
-> 2. 正常的 api 模式：调用方法，返回对应数据给视图层，由用户自己来维护数据和视图的关系（开发中。。。）
+> 1. Pub Sub Mode：Manage data via publish-subscribe design pattern and notify view updates, The advantage of this is that the data can be maintained inside the sdk for unified management, and the view layer only needs to get the latest data on the sdk object in the callback function after each data update, and then trigger the view update to see the latest data display.
+> 2. Normal api mode：Call the method, return the corresponding data to the view layer, and let the user maintain the relationship between the data and the view（Under development...）
 
-#### sdk遵从以下规则形成闭环，（ 看不懂？没关系！往下看代码）
+#### The sdk follows the following rules to form a closed loop, (don't understand? No problem! Scroll down to see the code
+
 ![image](../../../static/img/sdkProcessEn.png)
 ![image](../../../static/img/sdkProcess.jpg)
 
-#### 使用 channle 类中的 channelList 来演示在 react 中如何使用
+#### Use the channelList in the channle class to demonstrate how to use it in react
 
 ```ts
-import React, { useState } from 'react';
-import { Web3MQ } from 'web3-mq';
+import React, { useState } from "react";
+import { Web3MQ } from "web3-mq";
 
 const App = () => {
   const [channels, setChannels] = useState<ChannelResponse[]>([]);
 
-  // 1. 首先初始化client实例
-  const client = Web3MQ.getInstance('YOUR_ACCESS_TOKEN');
+  // 1. First initialize the client instance
+  const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
 
-  // 2. 组件初始化的时候使用client下的on方法添加对channelList的监听方法
+  // 2. Add a listener method to the channelList using the on method under the client when the component is initialized
   useEffect(() => {
-    client.on('channel.getList', handleEvent);
+    client.on("channel.getList", handleEvent);
     return () => {
-      client.off('channel.getList');
+      client.off("channel.getList");
     };
   }, []);
 
-  // 3. 调用client下channel类上的queryChannels方法获取channelList列表数据
+  // 3. Call the queryChannels method on the channel class under client to get the channelList data
   await client.channel.queryChannels({
     page: 1,
     size: 20,
   });
 
-  // 4. 该方法在初始化的时候订阅了 channel.getList 事件，在client.channel.queryChannels方法中做了一些逻辑后，会调用emit方法去通知所有订阅者，也就是会执行该函数，该函数执行的时候，代表channel类上的channleList已经是最新的数据了，我们只需要从 client.channel中拿到最新的channelList数据，然后可以赋值给mobx，redux，useContext，useState等任何可以触发视图渲染的
+  // 4. This method subscribes to the channel.getList event during initialization, and after doing some logic in the client.channel.queryChannels method, it will call the emit method to notify all subscribers, which means it will execute this function, and when this function is executed, it means that the channel class We just need to get the latest channelList data from client.channel, and then we can assign it to mobx, redux, useContext, useState, etc. that can trigger view rendering.
   const handleEvent = (event: { type: string; data: any }) => {
-    //该方法会返回event对象
-    // 对象属性：type: 返回数据的类型，根据类型可以知道是哪个订阅事件触发，然后可以做不同的操作和处理
-    // 对象属性：data: 返回的数据，(暂不使用，此处data是为了支持将来第二种模式预留)
-
-    // 此处拿useState举例
-    // 此处使用 client.channel.channelList 从sdk树上获取数据，而不是使用直接返回的数据，是为了保持数据的一致性
+    // Here is an example of useState
+    // The reason for using client.channel.channelList to fetch data from the sdk tree, rather than using the data returned directly, is to maintain data consistency
     setChannels(client.channel.channelList);
   };
 
-  // 5. 此处可以打印出来最新的channleList
+  // 5. Here you can print out the latest channleList
   console.log(channels);
 };
 ```
