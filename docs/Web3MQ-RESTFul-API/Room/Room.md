@@ -2,7 +2,7 @@
 sidebar_position: 0
 ---
 
-# Details
+# Details about Room and Message
 Room is a container for chatting behavior, and some of its properties are affected by the way it was created. It has at least one member.
 ___
 
@@ -46,8 +46,8 @@ ___
 | ---------|------ | ------------- |--------|
 |from_uid|string|yes|user' OID who sent the message|
 |to_room_id|string|yes|room's OID which should receivced the message|
-|msg_type|string|yes|one of ["text","thread","reply","nft","trade"]|
-|msg_contents|string|yes|if msg_type is 'text',it is pure text,if msg_type is 'trade',see **trade's structure**,if msg_type is 'nft' see **nft's structure**,if msg_type is 'thread' see **thread's structure**,if msg_type is 'reply' see **reply's structure**, Please see the tables below this form |
+|msg_type|string|yes|one of ["text","thread","reply","nft","trade","notification"]|
+|msg_payload|object|yes|if msg_type is 'text',it is pure text,if msg_type is 'trade',see **trade's structure**,if msg_type is 'nft' see **nft's structure**,if msg_type is 'thread' see **thread's structure**,if msg_type is 'reply' see **reply's structure**,if msg_type is 'notification' see **notification's structure**, Please see the tables below this form|
 |created_at|int|yes|the unix time stamp when the message sent|
 |at_user_ids|list|yes|default value is empty list []|
 
@@ -63,8 +63,8 @@ ___
 ### nft's structure
 | Parameters | Type | Always return |  Parameters Description|
 | ---------|------ | ------------- |--------|
-|nft_marketplace_name|string|Yes|one of ["openseaio","cryptyocom","gamaio","binancecom","ftxcom"], but we only suport "openseaio" for now|
-|nft_chain_name|string|Yes|one of ["ethereum","polygon","solana"]|
+|nft_marketplace_name|string|Yes|one of ["openseaio","cryptyocom","gamaio","binancecom","ftxcom","onchain"], but we only suport "openseaio" for now|
+|nft_chain_type|string|Yes|one of ["ethereum","polygon","solana"]|
 |nft_contract_address|string|Yes|NFT's contract address|
 |nft_token_id|string|Yes|NFT's token id|
 |nft_name|string|Yes|NFT's name|
@@ -89,5 +89,26 @@ ___
 |reply_to_msg_id|string|Yes|the Message's id which reply to|
 |reply_contents|string|Yes|the Reply's contents|
 
+___
 
+### notification's structure
+| Parameters | Type | Always return |  Parameters Description|
+| ---------|------ | ------------- |--------|
+|notification_type|string|Yes|type of notification, one of ["invitecode","text","article"]|
+|notification_payload|object|Yes|if msg_type is 'text',it is pure text,if msg_type is 'invitecode',see **invitecode's structure**,if msg_type is 'article' see **article's structure**, Please see the tables below this form|
 
+___
+
+#### invitecode's structure
+| Parameters | Type | Always return |  Parameters Description|
+| ---------|------ | ------------- |--------|
+|invitecodes|list|Yes|A list of invite code|
+
+___
+
+#### article's structure
+| Parameters | Type | Always return |  Parameters Description|
+| ---------|------ | ------------- |--------|
+|title|string|Yes|the title of article|
+|subtitle|string|Yes|the subtitle of article|
+|cover_image|string|Yes|the url of cover image|
