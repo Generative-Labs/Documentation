@@ -4,14 +4,14 @@
 
 ## Methods
 
-| name         | type     | Description                          |
-| ------------ | -------- | ------------------------------------ |
-| signMetaMask | function | 使用 metaMask 的登陆授权等封装的函数 |
+| name         | type     | Description                                                  |
+| ------------ | -------- | ------------------------------------------------------------ |
+| signMetaMask | function | Wrapped functions such as login authorization using metaMask |
 
 ## Usage
 
 ```ts
-import { Web3MQ, MetaMask } from 'web3-mq';
+import { Web3MQ, MetaMask } from "web3-mq";
 
 const token = await MetaMask.signMetaMask();
 

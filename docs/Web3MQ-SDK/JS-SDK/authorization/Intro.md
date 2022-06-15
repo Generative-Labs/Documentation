@@ -1,6 +1,6 @@
 # Intro
 
-> 包含了多个钱包类的集成
+> Includes integration of multiple wallet classes
 
 ## Feature
 
@@ -11,7 +11,7 @@
 ## Usage
 
 ```ts
-import { Web3MQ, MetaMask, Slope, Walletconnect } from 'web3-mq';
+import { Web3MQ, MetaMask, Slope, Walletconnect } from "web3-mq";
 
 const token = await MetaMask.signMetaMask();
 // or
