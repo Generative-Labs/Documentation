@@ -2,7 +2,12 @@
 sidebar_position: 0
 ---
 
-# Tutorial
+# Jssdk
+
+## Intro
+
+> This article will show you how to use web3-mq to successfully initialize the client, register users, create a chat room, and send the first message of the chat room
+
 
 ## Prerequisites
 
