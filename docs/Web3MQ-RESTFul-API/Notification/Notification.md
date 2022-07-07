@@ -7,29 +7,28 @@ Notification is used to send some important or serious messages to the users. Th
 ___
 
 ## Notification' structure
-| Parameters | Type | Always return |  Parameters Description|
+| Parameters | Type | Required |  Parameters Description|
 | ---------|------ | ------------- |--------|
 |version|int| yes|we only support 1 for now |
-|from_uid|string|yes|user' OID who sent the message|
+|from_uid|string|yes|sender's id|
 |to|list|yes|a list of receivers' id,if it will send to all users,then set it to empty list "[]"|
 |notification_type|string|yes|one of ["text","image","invitecodes","audio","video","nft","trade","notification"]|
-|notification_payload|object|yes|if notification_type is 'text',it is pure text,if notification_type is 'image',it is the URL of the image,for other types, Please see the tables below this form|
+|notification_payload|object|yes|if notification_type is 'text',it is pure text,if notification_type is 'image'/'audio'/'video',it is the URL of the media, for other types, Please see the tables below this form|
 |created_at|int|yes|the unix time stamp when the message sent|
-|at_user_ids|list|yes|default value is empty list []|
 
 ___
 
 ### trade's structure
-| Parameters | Type | Always return |  Parameters Description|
+| Parameters | Type | Required |  Parameters Description|
 | ---------|------ | ------------- |--------|
 |platform_name|string|Yes|one of ["sudoswap","swapchat","nifty"], but we only support "sudoswap" for now|
 
 ___
 
 ### nft's structure
-| Parameters | Type | Always return |  Parameters Description|
+| Parameters | Type | Required |  Parameters Description|
 | ---------|------ | ------------- |--------|
-|nft_marketplace_name|string|Yes|one of ["openseaio","cryptyocom","gamaio","binancecom","ftxcom","onchain"], but we only suport "openseaio" for now|
+|nft_marketplace_name|string|Yes|one of ["openseaio","cryptocom","gamaio","binancecom","ftxcom","onchain"], but we only suport "openseaio" for now|
 |nft_chain_type|string|Yes|one of ["ethereum","polygon","solana"]|
 |nft_contract_address|string|Yes|NFT's contract address|
 |nft_token_id|string|Yes|NFT's token id|
@@ -40,14 +39,14 @@ ___
 ___
 
 ### invitecodes' structure
-| Parameters | Type | Always return |  Parameters Description|
+| Parameters | Type | Required |  Parameters Description|
 | ---------|------ | ------------- |--------|
 |invitecodes|list|Yes|A list of invite code|
 
 ___
 
 ### article's structure
-| Parameters | Type | Always return |  Parameters Description|
+| Parameters | Type | Required |  Parameters Description|
 | ---------|------ | ------------- |--------|
 |title|string|Yes|the title of article|
 |summary|string|Yes|the summary of article|
