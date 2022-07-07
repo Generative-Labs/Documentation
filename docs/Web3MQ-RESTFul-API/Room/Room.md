@@ -66,7 +66,7 @@ ___
 ### nft's structure
 | Parameters | Type | Always return |  Parameters Description|
 | ---------|------ | ------------- |--------|
-|nft_marketplace_name|string|Yes|one of ["openseaio","cryptocom","gamaio","binancecom","ftxcom","onchain"], but we only suport "openseaio" for now|
+|nft_marketplace_name|string|Yes|one of ["openseaio","x2y2io","cryptocom","gamaio","binancecom","ftxcom","onchain"], but we only suport "openseaio" for now|
 |nft_chain_type|string|Yes|one of ["ethereum","polygon","solana"]|
 |nft_contract_address|string|Yes|NFT's contract address|
 |nft_token_id|string|Yes|NFT's token id|
