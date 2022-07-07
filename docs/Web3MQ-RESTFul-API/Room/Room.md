@@ -50,7 +50,7 @@ ___
 |belong_to_thread_id|string|yes|which thread the message belong to,it is empty string when the mseeage is a general message|
 |replay_to_msg_id|string|yes|if the message is reply to an other message,then here is the other's id, otherwise is empty string "" |
 |msg_type|string|yes|one of ["text","image","audio","video","nft","trade"]|
-|msg_payload|object|yes|if msg_type is 'text',it is pure text, if msg_type is "image"/"audio"/"video",it is the URL of media, if msg_type is 'trade',see **trade's structure**,if msg_type is 'nft' see **nft's structure**,if msg_type is 'thread' see **thread's structure**,if msg_type is 'reply' see **reply's structure**, Please see the tables below this form|
+|msg_payload|object|yes|if msg_type is 'text',it is pure text, if msg_type is "image"/"audio"/"video",it is the URL of media, if msg_type is 'trade',see **trade's structure**,if msg_type is 'nft' see **nft's structure**,Please see the tables below this form|
 |created_at|int|yes|the unix time stamp when the message sent|
 |at_user_ids|list|yes|default value is empty list []|
 
