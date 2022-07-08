@@ -7,13 +7,16 @@ Notification is used to send some important or serious messages to the users. Th
 ___
 
 ## Notification' structure
+
+<br />
+
 | Parameters | Type | Required |  Parameters Description|
 | ---------|------ | ------------- |--------|
 |version|int| yes|we only support 1 for now |
-|from_uid|string|yes|sender's id|
+|from_user_id|string|yes|sender's id|
 |to|list|yes|a list of receivers' id,if it will send to all users,then set it to empty list "[]"|
-|notification_type|string|yes|one of ["text","image","invitecodes","audio","video","nft","trade","notification"]|
-|notification_payload|object|yes|if notification_type is 'text',it is pure text,if notification_type is 'image'/'audio'/'video',it is the URL of the media, for other types, Please see the tables below this form|
+|notification_type|string|yes|one of ["text","image","link","invitecodes","audio","video","nft","trade","notification"]|
+|notification_payload|object|yes|if notification_type is 'text',it is pure text, if notification_type is 'link',it is a link,if notification_type is 'image'/'audio'/'video',it is the URL of the media, for other types, Please see the tables below this form|
 |created_at|int|yes|the unix time stamp when the message sent|
 
 ___
