@@ -2,12 +2,14 @@
 sidebar_position: 1
 ---
 
-# Send Notifications to your users or room
+# Send Notifications
+
 You can send notifications to your users which specify or all of them, or you can send a notification to your room.
-<br>
+
+<br />
 
 ___
-## Send notifications
+## Send notifications to your users or room
 <br />
 
 > /notifications
@@ -50,7 +52,7 @@ ___
 
 | Parameters| Type  | Always Return |  Parameters Description|
 | ----------|----- | ------------- |--------|
-| code |int | Yes  |  result code,0 means success, other code see msg's contents  |
+| code |int | Yes  |  result code,0 means success, other code see msg's contents |
 | msg |string | Yes  | result description   |
 | data |null/string  | Yes  | return null when code is 1,return notification's id when code is 0 |
 
