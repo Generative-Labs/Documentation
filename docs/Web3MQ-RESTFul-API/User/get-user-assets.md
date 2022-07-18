@@ -7,7 +7,7 @@ The user's digital assets include NFTs, DIDs, etc.
 And DIDs means .bit/NameTag/Next.ID
 ___
 ## Get user's NFTs
-> /users/<user_id>/nft
+> /users/<user_id>/nfts
 
 > JWT: No
 
