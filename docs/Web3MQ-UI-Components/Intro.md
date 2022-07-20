@@ -46,21 +46,30 @@ import {
 
 import 'web3-mq-react/dist/css/index.css';
 
-const App = () => (
-  <Chat client={client}>
-    <DashBoard />
-    <div className='channelContainer'>
-      <ChannelList />
-      <ContactList />
-    </div>
-    <Channel>
-      <Window>
-        <MessageHeader />
-        <MessageList />
-        <MessageInput />
-      </Window>
-      <Thread />
-    </Channel>
-  </Chat>
-);
+const App = () => {
+  const client = Web3MQ.getInstance('YOUR_ACCESS_TOKEN');
+
+  const appType = () => {
+    // Use your own logic to decide which pattern to use
+    return 'pc'; // 'pc' | 'app' | 'mobile'
+  };
+
+  const logout = () => {
+    // logout function
+  };
+
+  if (client) {
+    // Redirect to the login page
+  }
+
+  return (
+    <Chat client={client} appType={appType} logout={logout}>
+      <DashBoard />
+      <Main />
+      <Channel>
+        <ChannelInner />
+      </Channel>
+    </Chat>
+  );
+};
 ```
