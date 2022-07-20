@@ -31,19 +31,8 @@ const client = Web3MQ.getInstance('YOUR_ACCESS_TOKEN');
 ## Your First App with Web3MQ React
 
 ```tsx
-import {
-  Chat,
-  Channel,
-  ChannelList,
-  DashBoard,
-  ContactList,
-  Window,
-  MessageInput,
-  MessageList,
-  Thread,
-  MessageHeader,
-} from 'web3-mq-react';
-
+import { Chat, Channel, DashBoard, Main, AppTypeEnum } from 'web3-mq-react';
+import { Web3MQ } from 'web3-mq';
 import 'web3-mq-react/dist/css/index.css';
 
 const App = () => {
