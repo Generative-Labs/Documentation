@@ -33,6 +33,31 @@
               },
               "sidebar": "tutorialSidebar",
               "next": {
+                "title": "Jssdk",
+                "permalink": "/docs/Tutorial/JS-SDK"
+              }
+            },
+            {
+              "unversionedId": "Tutorial/JS-SDK",
+              "id": "Tutorial/JS-SDK",
+              "title": "Jssdk",
+              "description": "Intro",
+              "source": "@site/docs/Tutorial/JS-SDK.md",
+              "sourceDirName": "Tutorial",
+              "slug": "/Tutorial/JS-SDK",
+              "permalink": "/docs/Tutorial/JS-SDK",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 0,
+              "frontMatter": {
+                "sidebar_position": 0
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Intro",
+                "permalink": "/docs/Intro"
+              },
+              "next": {
                 "title": "Intro",
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK/Intro"
               }
@@ -83,7 +108,7 @@
                 "permalink": "/docs/Web3MQ-RESTFul-API/Contact/add-contact"
               },
               "next": {
-                "title": "Details",
+                "title": "Details about Room/Message",
                 "permalink": "/docs/Web3MQ-RESTFul-API/Room/"
               }
             },
@@ -110,6 +135,56 @@
               "next": {
                 "title": "Details",
                 "permalink": "/docs/Web3MQ-RESTFul-API/User/"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-RESTFul-API/Notification/Notification",
+              "id": "Web3MQ-RESTFul-API/Notification/Notification",
+              "title": "Details about Notification",
+              "description": "Notification is used to send some important or serious messages to the users. The users can be all followers or a chat room.",
+              "source": "@site/docs/Web3MQ-RESTFul-API/Notification/Notification.md",
+              "sourceDirName": "Web3MQ-RESTFul-API/Notification",
+              "slug": "/Web3MQ-RESTFul-API/Notification/",
+              "permalink": "/docs/Web3MQ-RESTFul-API/Notification/",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 0,
+              "frontMatter": {
+                "sidebar_position": 0
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Get History Messages",
+                "permalink": "/docs/Web3MQ-RESTFul-API/Room/get-messages"
+              },
+              "next": {
+                "title": "Send Notifications",
+                "permalink": "/docs/Web3MQ-RESTFul-API/Notification/send-notifications"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-RESTFul-API/Notification/send-notifications",
+              "id": "Web3MQ-RESTFul-API/Notification/send-notifications",
+              "title": "Send Notifications",
+              "description": "You can send notifications to your users which specify or all of them, or you can send a notification to your room.",
+              "source": "@site/docs/Web3MQ-RESTFul-API/Notification/send-notifications.md",
+              "sourceDirName": "Web3MQ-RESTFul-API/Notification",
+              "slug": "/Web3MQ-RESTFul-API/Notification/send-notifications",
+              "permalink": "/docs/Web3MQ-RESTFul-API/Notification/send-notifications",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Details about Notification",
+                "permalink": "/docs/Web3MQ-RESTFul-API/Notification/"
+              },
+              "next": {
+                "title": "Intro",
+                "permalink": "/docs/Web3MQ-UI-Components/Intro"
               }
             },
             {
@@ -154,7 +229,7 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Details",
+                "title": "Details about Room/Message",
                 "permalink": "/docs/Web3MQ-RESTFul-API/Room/"
               },
               "next": {
@@ -208,8 +283,8 @@
                 "permalink": "/docs/Web3MQ-RESTFul-API/Room/get-chat-rooms"
               },
               "next": {
-                "title": "Intro",
-                "permalink": "/docs/Web3MQ-UI-Components/Intro"
+                "title": "Details about Notification",
+                "permalink": "/docs/Web3MQ-RESTFul-API/Notification/"
               }
             },
             {
@@ -240,7 +315,7 @@
             {
               "unversionedId": "Web3MQ-RESTFul-API/Room/Room",
               "id": "Web3MQ-RESTFul-API/Room/Room",
-              "title": "Details",
+              "title": "Details about Room/Message",
               "description": "Room is a container for chatting behavior, and some of its properties are affected by the way it was created. It has at least one member.",
               "source": "@site/docs/Web3MQ-RESTFul-API/Room/Room.md",
               "sourceDirName": "Web3MQ-RESTFul-API/Room",
@@ -288,6 +363,31 @@
               }
             },
             {
+              "unversionedId": "Web3MQ-RESTFul-API/User/get-user-assets",
+              "id": "Web3MQ-RESTFul-API/User/get-user-assets",
+              "title": "Get User's assets",
+              "description": "The user's digital assets include NFTs, DIDs, etc.",
+              "source": "@site/docs/Web3MQ-RESTFul-API/User/get-user-assets.md",
+              "sourceDirName": "Web3MQ-RESTFul-API/User",
+              "slug": "/Web3MQ-RESTFul-API/User/get-user-assets",
+              "permalink": "/docs/Web3MQ-RESTFul-API/User/get-user-assets",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "sidebar_position": 4
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Get User Info",
+                "permalink": "/docs/Web3MQ-RESTFul-API/User/get-user-info"
+              },
+              "next": {
+                "title": "Search Users",
+                "permalink": "/docs/Web3MQ-RESTFul-API/User/search-user"
+              }
+            },
+            {
               "unversionedId": "Web3MQ-RESTFul-API/User/get-user-info",
               "id": "Web3MQ-RESTFul-API/User/get-user-info",
               "title": "Get User Info",
@@ -308,8 +408,8 @@
                 "permalink": "/docs/Web3MQ-RESTFul-API/User/bind-social-platform"
               },
               "next": {
-                "title": "Search Users",
-                "permalink": "/docs/Web3MQ-RESTFul-API/User/search-user"
+                "title": "Get User's assets",
+                "permalink": "/docs/Web3MQ-RESTFul-API/User/get-user-assets"
               }
             },
             {
@@ -329,8 +429,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Get User Info",
-                "permalink": "/docs/Web3MQ-RESTFul-API/User/get-user-info"
+                "title": "Get User's assets",
+                "permalink": "/docs/Web3MQ-RESTFul-API/User/get-user-assets"
               },
               "next": {
                 "title": "Add User To Your Contact List",
@@ -413,10 +513,58 @@
               }
             },
             {
+              "unversionedId": "Web3MQ-SDK/JS-SDK-V2/client/client",
+              "id": "Web3MQ-SDK/JS-SDK-V2/client/client",
+              "title": "Client",
+              "description": "Events",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK-V2/client/client.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK-V2/client",
+              "slug": "/Web3MQ-SDK/JS-SDK-V2/client/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/client/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "QuickStart",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/quickStart/"
+              },
+              "next": {
+                "title": "Intro",
+                "permalink": "/docs/Web3MQ-SDK/Python-SDK/intro"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/JS-SDK-V2/quickStart/quickStart",
+              "id": "Web3MQ-SDK/JS-SDK-V2/quickStart/quickStart",
+              "title": "QuickStart",
+              "description": "Let's learn how to use and successfully send the first message in the chat room we created",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK-V2/quickStart/quickStart.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK-V2/quickStart",
+              "slug": "/Web3MQ-SDK/JS-SDK-V2/quickStart/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/quickStart/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Utils",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/utils/"
+              },
+              "next": {
+                "title": "Client",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/client/"
+              }
+            },
+            {
               "unversionedId": "Web3MQ-SDK/JS-SDK/authorization/Intro",
               "id": "Web3MQ-SDK/JS-SDK/authorization/Intro",
               "title": "Intro",
-              "description": "包含了多个钱包类的集成",
+              "description": "Includes integration of multiple wallet classes",
               "source": "@site/docs/Web3MQ-SDK/JS-SDK/authorization/Intro.md",
               "sourceDirName": "Web3MQ-SDK/JS-SDK/authorization",
               "slug": "/Web3MQ-SDK/JS-SDK/authorization/Intro",
@@ -613,8 +761,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Intro",
-                "permalink": "/docs/Intro"
+                "title": "Jssdk",
+                "permalink": "/docs/Tutorial/JS-SDK"
               },
               "next": {
                 "title": "QuickStart",
@@ -733,8 +881,8 @@
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK/types/"
               },
               "next": {
-                "title": "Intro",
-                "permalink": "/docs/Web3MQ-SDK/Python-SDK/intro"
+                "title": "QuickStart",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/quickStart/"
               }
             },
             {
@@ -776,8 +924,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Utils",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/utils/"
+                "title": "Client",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/client/"
               },
               "next": {
                 "title": "Quickstart",
@@ -1060,8 +1208,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Get History Messages",
-                "permalink": "/docs/Web3MQ-RESTFul-API/Room/get-messages"
+                "title": "Send Notifications",
+                "permalink": "/docs/Web3MQ-RESTFul-API/Notification/send-notifications"
               },
               "next": {
                 "title": "Chat",
@@ -1074,6 +1222,18 @@
               {
                 "type": "doc",
                 "id": "Intro"
+              },
+              {
+                "type": "category",
+                "label": "Tutorial",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "Tutorial/JS-SDK"
+                  }
+                ]
               },
               {
                 "type": "category",
@@ -1164,6 +1324,24 @@
                   },
                   {
                     "type": "category",
+                    "label": "JS-SDK-V2",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "label": "QuickStart",
+                        "id": "Web3MQ-SDK/JS-SDK-V2/quickStart/quickStart"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Client",
+                        "id": "Web3MQ-SDK/JS-SDK-V2/client/client"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
                     "label": "Python-SDK",
                     "collapsible": true,
                     "collapsed": true,
@@ -1238,6 +1416,10 @@
                       },
                       {
                         "type": "doc",
+                        "id": "Web3MQ-RESTFul-API/User/get-user-assets"
+                      },
+                      {
+                        "type": "doc",
                         "id": "Web3MQ-RESTFul-API/User/search-user"
                       }
                     ],
@@ -1292,6 +1474,22 @@
                     "link": {
                       "type": "doc",
                       "id": "Web3MQ-RESTFul-API/Room/Room"
+                    }
+                  },
+                  {
+                    "type": "category",
+                    "label": "Notification",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "Web3MQ-RESTFul-API/Notification/send-notifications"
+                      }
+                    ],
+                    "link": {
+                      "type": "doc",
+                      "id": "Web3MQ-RESTFul-API/Notification/Notification"
                     }
                   }
                 ]

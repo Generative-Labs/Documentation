@@ -87,12 +87,12 @@ client.once('channel.activeChange', (event) {
 ```
 
 ```typescript
-import { Web3MQ } from "web3-mq";
+import { Web3MQ } from 'web3-mq';
 
-const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
+const client = Web3MQ.getInstance('YOUR_ACCESS_TOKEN');
 
-client.emit("channel.activeChange", {
-  data: "",
+client.emit('channel.activeChange', {
+  data: '',
 });
 ```
 
@@ -113,7 +113,10 @@ Web3MQ.getInstance([LoginParams](/docs/Web3MQ-SDK/JS-SDK/types/#loginparams) | t
 > call [getLoginRandomSecret()](/docs/Web3MQ-SDK/JS-SDK/utils/#getloginrandomsecret)
 
 ```typescript
-import { Web3MQ, login, getLoginRandomSecret } from "web3-mq";
+import { Web2MQ } from 'web3-mq';
+
+const { login, getLoginRandomSecret } = Web2MQ;
+
 async function getParams() {
   const address = ethereum.selectedAddress; //  call Connect MeatMask
   // call getLoginRandomSecret
@@ -121,7 +124,7 @@ async function getParams() {
     wallet_address: address,
   });
 
-  const msg = `0x${Buffer.from(randomSecret, "utf8").toString("hex")}`;
+  const msg = `0x${Buffer.from(randomSecret, 'utf8').toString('hex')}`;
   let signContent = `Web3MQ wants you to sign in with your Ethereum account:
 ${address}
 Sign-In With Ethereum Example Statement
@@ -133,8 +136,8 @@ Issued At: 2022-05-23T12:52:57.500Z
 Expiration Time: 2022-05-25T12:52:57.489Z`;
   // @ts-ignore
   const signature = await ethereum.request({
-    method: "personal_sign",
-    params: [signContent, address, "swapchat"],
+    method: 'personal_sign',
+    params: [signContent, address, 'swapchat'],
   });
 
   return {
@@ -146,13 +149,13 @@ Expiration Time: 2022-05-25T12:52:57.489Z`;
 const initParams = getParams();
 
 // create client
-const client = Web3MQ.getInstance(Params);
+const client = Web2MQ.Client.getInstance(Params);
 ```
 
 or
 
 ```typescript
-import { Web3MQ } from "web3-mq";
+import { Web2MQ } from 'web3-mq';
 
-const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
+const client = Web2MQ.Client.getInstance('YOUR_ACCESS_TOKEN');
 ```

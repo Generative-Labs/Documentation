@@ -16,6 +16,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Tutorial/JS-SDK",
+              "path": "/docs/Tutorial/JS-SDK",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-RESTFul-API/Contact/add-contact",
               "path": "/docs/Web3MQ-RESTFul-API/Contact/add-contact",
               "sidebar": "tutorialSidebar"
@@ -28,6 +33,16 @@
             {
               "id": "Web3MQ-RESTFul-API/Intro",
               "path": "/docs/Web3MQ-RESTFul-API/Intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-RESTFul-API/Notification/Notification",
+              "path": "/docs/Web3MQ-RESTFul-API/Notification/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-RESTFul-API/Notification/send-notifications",
+              "path": "/docs/Web3MQ-RESTFul-API/Notification/send-notifications",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -66,6 +81,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Web3MQ-RESTFul-API/User/get-user-assets",
+              "path": "/docs/Web3MQ-RESTFul-API/User/get-user-assets",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-RESTFul-API/User/get-user-info",
               "path": "/docs/Web3MQ-RESTFul-API/User/get-user-info",
               "sidebar": "tutorialSidebar"
@@ -88,6 +108,16 @@
             {
               "id": "Web3MQ-RESTFul-API/User/user-register",
               "path": "/docs/Web3MQ-RESTFul-API/User/user-register",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/JS-SDK-V2/client/client",
+              "path": "/docs/Web3MQ-SDK/JS-SDK-V2/client/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/JS-SDK-V2/quickStart/quickStart",
+              "path": "/docs/Web3MQ-SDK/JS-SDK-V2/quickStart/",
               "sidebar": "tutorialSidebar"
             },
             {

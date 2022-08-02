@@ -24,13 +24,13 @@ web3-mq-js is the official JavaScript client for Web3MQ, a service for building 
 
 ```ts
 import React, { useState } from "react";
-import { Web3MQ } from "web3-mq";
+import { Web2MQ } from "web3-mq";
 
 const App = () => {
   const [channels, setChannels] = useState<ChannelResponse[]>([]);
 
   // 1. First initialize the client instance
-  const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
+  const client = Web2MQ.Client.getInstance("YOUR_ACCESS_TOKEN");
 
   // 2. Add a listener method to the channelList using the on method under the client when the component is initialized
   useEffect(() => {

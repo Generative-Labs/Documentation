@@ -29,13 +29,17 @@
     "component": "component---theme-mdx-page-1-f-3-b90",
     "content": "content---markdown-page-393-028"
   },
-  "/docs-a8f": {
+  "/docs-ab0": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
   },
   "/docs/Intro-1f0": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-intro-377-335"
+  },
+  "/docs/Tutorial/JS-SDK-c01": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-tutorial-js-sd-kcd-7-c8f"
   },
   "/docs/Web3MQ-RESTFul-API/Contact/add-contact-d09": {
     "component": "component---theme-doc-item-178-a40",
@@ -48,6 +52,14 @@
   "/docs/Web3MQ-RESTFul-API/Intro-b17": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-rest-ful-api-intro-5-fe-3bc"
+  },
+  "/docs/Web3MQ-RESTFul-API/Notification/-762": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-rest-ful-api-notification-09-e-634"
+  },
+  "/docs/Web3MQ-RESTFul-API/Notification/send-notifications-762": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-rest-ful-api-notification-send-notificationsb-18-db4"
   },
   "/docs/Web3MQ-RESTFul-API/Room/-b04": {
     "component": "component---theme-doc-item-178-a40",
@@ -81,6 +93,10 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-rest-ful-api-user-bind-social-platform-1-b-4-e04"
   },
+  "/docs/Web3MQ-RESTFul-API/User/get-user-assets-00f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-rest-ful-api-user-get-user-assets-060-7b8"
+  },
   "/docs/Web3MQ-RESTFul-API/User/get-user-info-977": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-rest-ful-api-user-get-user-infod-6-f-b6b"
@@ -96,6 +112,14 @@
   "/docs/Web3MQ-RESTFul-API/User/user-register-59c": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-rest-ful-api-user-user-registercb-6-1d2"
+  },
+  "/docs/Web3MQ-SDK/JS-SDK-V2/client/-9b5": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-js-sdk-v-2-client-b-71-879"
+  },
+  "/docs/Web3MQ-SDK/JS-SDK-V2/quickStart/-adf": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-js-sdk-v-2-quick-start-719-845"
   },
   "/docs/Web3MQ-SDK/JS-SDK/authorization/Intro-022": {
     "component": "component---theme-doc-item-178-a40",

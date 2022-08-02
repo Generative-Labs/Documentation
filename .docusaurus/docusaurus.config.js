@@ -5,7 +5,7 @@ Modify the docusaurus.config.js file at your site's root instead.
 */
 export default {
   "title": "Web3MQ API Document",
-  "tagline": "Chat anything with any body",
+  "tagline": "Chat anything with anybody",
   "url": "https://docs.web3messaging.online/",
   "baseUrl": "/",
   "onBrokenLinks": "throw",
