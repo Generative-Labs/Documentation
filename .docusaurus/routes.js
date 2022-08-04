@@ -15,7 +15,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','ab0'),
+    component: ComponentCreator('/docs','42b'),
     routes: [
       {
         path: '/docs/Intro',
@@ -138,14 +138,56 @@ export default [
         'sidebar': "tutorialSidebar"
       },
       {
+        path: '/docs/Web3MQ-SDK/JS-SDK-V2/authorization/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK-V2/authorization/','5ad'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/JS-SDK-V2/channel/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK-V2/channel/','669'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
         path: '/docs/Web3MQ-SDK/JS-SDK-V2/client/',
         component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK-V2/client/','9b5'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
+        path: '/docs/Web3MQ-SDK/JS-SDK-V2/contact/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK-V2/contact/','eb4'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/JS-SDK-V2/message/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK-V2/message/','d2f'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
         path: '/docs/Web3MQ-SDK/JS-SDK-V2/quickStart/',
         component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK-V2/quickStart/','adf'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/JS-SDK-V2/types/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK-V2/types/','48d'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/JS-SDK-V2/user/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK-V2/user/','7a8'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/JS-SDK-V2/utils/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK-V2/utils/','f74'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },

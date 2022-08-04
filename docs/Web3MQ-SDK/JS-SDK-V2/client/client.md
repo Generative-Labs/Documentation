@@ -15,14 +15,14 @@ position: 2
 
 ## Properties
 
-| name      | type                                    | Parameters Description        |
-| --------- | --------------------------------------- | ----------------------------- |
-| keys      | {PrivateKey: string, PublicKey: string} | your PrivateKey and PublicKey |
-| listeners | {}                                      | pubsub list                   |
-| channel   | {}                                      |                               |
-| message   | {}                                      |                               |
-| user      | {}                                      |                               |
-| contact   | {}                                      |                               |
+| name                                          | type                                                           | Parameters Description        |
+| --------------------------------------------- | -------------------------------------------------------------- | ----------------------------- |
+| keys                                          | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#keypairstype) | your PrivateKey and PublicKey |
+| listeners                                     | {}                                                             | pubsub list                   |
+| [channel](/docs/Web3MQ-SDK/JS-SDK-V2/channel) | Channel Class                                                  | The channel correlation       |
+| [message](/docs/Web3MQ-SDK/JS-SDK-V2/message) | Message Class                                                  | The messages correlation      |
+| [user](/docs/Web3MQ-SDK/JS-SDK-V2/user)       | User Class                                                     | The user correlation          |
+| [contact](/docs/Web3MQ-SDK/JS-SDK-V2/contact) | Contact Class                                                  | The contact correlation       |
 
 ## Methods
 

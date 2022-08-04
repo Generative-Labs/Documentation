@@ -513,6 +513,54 @@
               }
             },
             {
+              "unversionedId": "Web3MQ-SDK/JS-SDK-V2/authorization/authorization",
+              "id": "Web3MQ-SDK/JS-SDK-V2/authorization/authorization",
+              "title": "Authorization",
+              "description": "Methods",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK-V2/authorization/authorization.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK-V2/authorization",
+              "slug": "/Web3MQ-SDK/JS-SDK-V2/authorization/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/authorization/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 5
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Message",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/message/"
+              },
+              "next": {
+                "title": "Contact",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/contact/"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/JS-SDK-V2/channel/channel",
+              "id": "Web3MQ-SDK/JS-SDK-V2/channel/channel",
+              "title": "Channel",
+              "description": "Properties",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK-V2/channel/channel.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK-V2/channel",
+              "slug": "/Web3MQ-SDK/JS-SDK-V2/channel/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/channel/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 3
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Client",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/client/"
+              },
+              "next": {
+                "title": "Message",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/message/"
+              }
+            },
+            {
               "unversionedId": "Web3MQ-SDK/JS-SDK-V2/client/client",
               "id": "Web3MQ-SDK/JS-SDK-V2/client/client",
               "title": "Client",
@@ -532,8 +580,56 @@
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/quickStart/"
               },
               "next": {
-                "title": "Intro",
-                "permalink": "/docs/Web3MQ-SDK/Python-SDK/intro"
+                "title": "Channel",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/channel/"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/JS-SDK-V2/contact/contact",
+              "id": "Web3MQ-SDK/JS-SDK-V2/contact/contact",
+              "title": "Contact",
+              "description": "Properties",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK-V2/contact/contact.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK-V2/contact",
+              "slug": "/Web3MQ-SDK/JS-SDK-V2/contact/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/contact/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 6
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Authorization",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/authorization/"
+              },
+              "next": {
+                "title": "User",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/user/"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/JS-SDK-V2/message/message",
+              "id": "Web3MQ-SDK/JS-SDK-V2/message/message",
+              "title": "Message",
+              "description": "messageList",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK-V2/message/message.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK-V2/message",
+              "slug": "/Web3MQ-SDK/JS-SDK-V2/message/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/message/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 4
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Channel",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/channel/"
+              },
+              "next": {
+                "title": "Authorization",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/authorization/"
               }
             },
             {
@@ -558,6 +654,78 @@
               "next": {
                 "title": "Client",
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/client/"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/JS-SDK-V2/types/types",
+              "id": "Web3MQ-SDK/JS-SDK-V2/types/types",
+              "title": "Type List",
+              "description": "EventTypes",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK-V2/types/types.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK-V2/types",
+              "slug": "/Web3MQ-SDK/JS-SDK-V2/types/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/types/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 7
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Utils",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/utils/"
+              },
+              "next": {
+                "title": "Intro",
+                "permalink": "/docs/Web3MQ-SDK/Python-SDK/intro"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/JS-SDK-V2/user/user",
+              "id": "Web3MQ-SDK/JS-SDK-V2/user/user",
+              "title": "User",
+              "description": "Methods",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK-V2/user/user.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK-V2/user",
+              "slug": "/Web3MQ-SDK/JS-SDK-V2/user/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/user/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 7
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Contact",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/contact/"
+              },
+              "next": {
+                "title": "Utils",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/utils/"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/JS-SDK-V2/utils/utils",
+              "id": "Web3MQ-SDK/JS-SDK-V2/utils/utils",
+              "title": "Utils",
+              "description": "Methods",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK-V2/utils/utils.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK-V2/utils",
+              "slug": "/Web3MQ-SDK/JS-SDK-V2/utils/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/utils/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 7
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "User",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/user/"
+              },
+              "next": {
+                "title": "Type List",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/types/"
               }
             },
             {
@@ -924,8 +1092,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Client",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/client/"
+                "title": "Type List",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/types/"
               },
               "next": {
                 "title": "Quickstart",
@@ -1337,6 +1505,41 @@
                         "type": "doc",
                         "label": "Client",
                         "id": "Web3MQ-SDK/JS-SDK-V2/client/client"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Channel",
+                        "id": "Web3MQ-SDK/JS-SDK-V2/channel/channel"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Message",
+                        "id": "Web3MQ-SDK/JS-SDK-V2/message/message"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Authorization",
+                        "id": "Web3MQ-SDK/JS-SDK-V2/authorization/authorization"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Contact",
+                        "id": "Web3MQ-SDK/JS-SDK-V2/contact/contact"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "User",
+                        "id": "Web3MQ-SDK/JS-SDK-V2/user/user"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Utils",
+                        "id": "Web3MQ-SDK/JS-SDK-V2/utils/utils"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "TypeList",
+                        "id": "Web3MQ-SDK/JS-SDK-V2/types/types"
                       }
                     ]
                   },

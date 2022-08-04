@@ -151,6 +151,48 @@
                 "label": "Client",
                 "href": "/docs/Web3MQ-SDK/JS-SDK-V2/client/",
                 "docId": "Web3MQ-SDK/JS-SDK-V2/client/client"
+              },
+              {
+                "type": "link",
+                "label": "Channel",
+                "href": "/docs/Web3MQ-SDK/JS-SDK-V2/channel/",
+                "docId": "Web3MQ-SDK/JS-SDK-V2/channel/channel"
+              },
+              {
+                "type": "link",
+                "label": "Message",
+                "href": "/docs/Web3MQ-SDK/JS-SDK-V2/message/",
+                "docId": "Web3MQ-SDK/JS-SDK-V2/message/message"
+              },
+              {
+                "type": "link",
+                "label": "Authorization",
+                "href": "/docs/Web3MQ-SDK/JS-SDK-V2/authorization/",
+                "docId": "Web3MQ-SDK/JS-SDK-V2/authorization/authorization"
+              },
+              {
+                "type": "link",
+                "label": "Contact",
+                "href": "/docs/Web3MQ-SDK/JS-SDK-V2/contact/",
+                "docId": "Web3MQ-SDK/JS-SDK-V2/contact/contact"
+              },
+              {
+                "type": "link",
+                "label": "User",
+                "href": "/docs/Web3MQ-SDK/JS-SDK-V2/user/",
+                "docId": "Web3MQ-SDK/JS-SDK-V2/user/user"
+              },
+              {
+                "type": "link",
+                "label": "Utils",
+                "href": "/docs/Web3MQ-SDK/JS-SDK-V2/utils/",
+                "docId": "Web3MQ-SDK/JS-SDK-V2/utils/utils"
+              },
+              {
+                "type": "link",
+                "label": "TypeList",
+                "href": "/docs/Web3MQ-SDK/JS-SDK-V2/types/",
+                "docId": "Web3MQ-SDK/JS-SDK-V2/types/types"
               }
             ]
           },
@@ -520,16 +562,58 @@
       "description": "_",
       "sidebar": "tutorialSidebar"
     },
+    "Web3MQ-SDK/JS-SDK-V2/authorization/authorization": {
+      "id": "Web3MQ-SDK/JS-SDK-V2/authorization/authorization",
+      "title": "Authorization",
+      "description": "Methods",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/JS-SDK-V2/channel/channel": {
+      "id": "Web3MQ-SDK/JS-SDK-V2/channel/channel",
+      "title": "Channel",
+      "description": "Properties",
+      "sidebar": "tutorialSidebar"
+    },
     "Web3MQ-SDK/JS-SDK-V2/client/client": {
       "id": "Web3MQ-SDK/JS-SDK-V2/client/client",
       "title": "Client",
       "description": "Events",
       "sidebar": "tutorialSidebar"
     },
+    "Web3MQ-SDK/JS-SDK-V2/contact/contact": {
+      "id": "Web3MQ-SDK/JS-SDK-V2/contact/contact",
+      "title": "Contact",
+      "description": "Properties",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/JS-SDK-V2/message/message": {
+      "id": "Web3MQ-SDK/JS-SDK-V2/message/message",
+      "title": "Message",
+      "description": "messageList",
+      "sidebar": "tutorialSidebar"
+    },
     "Web3MQ-SDK/JS-SDK-V2/quickStart/quickStart": {
       "id": "Web3MQ-SDK/JS-SDK-V2/quickStart/quickStart",
       "title": "QuickStart",
       "description": "Let's learn how to use and successfully send the first message in the chat room we created",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/JS-SDK-V2/types/types": {
+      "id": "Web3MQ-SDK/JS-SDK-V2/types/types",
+      "title": "Type List",
+      "description": "EventTypes",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/JS-SDK-V2/user/user": {
+      "id": "Web3MQ-SDK/JS-SDK-V2/user/user",
+      "title": "User",
+      "description": "Methods",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/JS-SDK-V2/utils/utils": {
+      "id": "Web3MQ-SDK/JS-SDK-V2/utils/utils",
+      "title": "Utils",
+      "description": "Methods",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK/authorization/Intro": {

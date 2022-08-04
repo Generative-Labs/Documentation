@@ -7,7 +7,7 @@
     "component": "1f391b9e",
     "content": "393be207"
   },
-  "/docs-ab0": {
+  "/docs-42b": {
     "component": "1be78505",
     "versionMetadata": "935f2afb"
   },
@@ -91,13 +91,41 @@
     "component": "17896441",
     "content": "cb6ddfb9"
   },
+  "/docs/Web3MQ-SDK/JS-SDK-V2/authorization/-5ad": {
+    "component": "17896441",
+    "content": "bbea474f"
+  },
+  "/docs/Web3MQ-SDK/JS-SDK-V2/channel/-669": {
+    "component": "17896441",
+    "content": "4293e7ea"
+  },
   "/docs/Web3MQ-SDK/JS-SDK-V2/client/-9b5": {
     "component": "17896441",
     "content": "b7122b64"
   },
+  "/docs/Web3MQ-SDK/JS-SDK-V2/contact/-eb4": {
+    "component": "17896441",
+    "content": "5b57bad5"
+  },
+  "/docs/Web3MQ-SDK/JS-SDK-V2/message/-d2f": {
+    "component": "17896441",
+    "content": "3c1a6d12"
+  },
   "/docs/Web3MQ-SDK/JS-SDK-V2/quickStart/-adf": {
     "component": "17896441",
     "content": "71903843"
+  },
+  "/docs/Web3MQ-SDK/JS-SDK-V2/types/-48d": {
+    "component": "17896441",
+    "content": "e6006d78"
+  },
+  "/docs/Web3MQ-SDK/JS-SDK-V2/user/-7a8": {
+    "component": "17896441",
+    "content": "ec18a324"
+  },
+  "/docs/Web3MQ-SDK/JS-SDK-V2/utils/-f74": {
+    "component": "17896441",
+    "content": "e5788e66"
   },
   "/docs/Web3MQ-SDK/JS-SDK/authorization/Intro-022": {
     "component": "17896441",
