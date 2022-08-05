@@ -144,3 +144,24 @@ export type UpdateMyProfileResponse = {
   avatar_url: string;
 };
 ```
+
+## ChangeNotificationStatusParams
+
+```ts
+export interface ChangeNotificationStatusParams extends BaseParams {
+  messages: string[];
+  status: MessageStatus;
+}
+```
+
+## NotifyResponse
+
+```ts
+export type NotifyResponse = {
+  title: string;
+  content: string;
+  type: string;
+  version: number;
+  timestamp: number;
+};
+```

@@ -4,8 +4,6 @@ position: 4
 
 # Message
 
-messageList
-
 ## Properties
 
 | name        | type                                                                             | Description  |
@@ -79,8 +77,9 @@ export const App = () => {
   return (
     <div>
       <button
-        onClick={() => {
-          client.message.changeMessageStatus(['msgId']);
+        onClick={async () => {
+          const data = await client.message.changeMessageStatus(['msgId']);
+          console.log(data);
         }}>
         Change Message Status
       </button>

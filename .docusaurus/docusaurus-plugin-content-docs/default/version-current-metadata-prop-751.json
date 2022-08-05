@@ -190,6 +190,12 @@
               },
               {
                 "type": "link",
+                "label": "Notify",
+                "href": "/docs/Web3MQ-SDK/JS-SDK-V2/notify/",
+                "docId": "Web3MQ-SDK/JS-SDK-V2/notify/notify"
+              },
+              {
+                "type": "link",
                 "label": "TypeList",
                 "href": "/docs/Web3MQ-SDK/JS-SDK-V2/types/",
                 "docId": "Web3MQ-SDK/JS-SDK-V2/types/types"
@@ -589,7 +595,13 @@
     "Web3MQ-SDK/JS-SDK-V2/message/message": {
       "id": "Web3MQ-SDK/JS-SDK-V2/message/message",
       "title": "Message",
-      "description": "messageList",
+      "description": "Properties",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/JS-SDK-V2/notify/notify": {
+      "id": "Web3MQ-SDK/JS-SDK-V2/notify/notify",
+      "title": "Notify",
+      "description": "Properties",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK-V2/quickStart/quickStart": {

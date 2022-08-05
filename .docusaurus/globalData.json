@@ -136,6 +136,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Web3MQ-SDK/JS-SDK-V2/notify/notify",
+              "path": "/docs/Web3MQ-SDK/JS-SDK-V2/notify/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-SDK/JS-SDK-V2/quickStart/quickStart",
               "path": "/docs/Web3MQ-SDK/JS-SDK-V2/quickStart/",
               "sidebar": "tutorialSidebar"

@@ -612,7 +612,7 @@
               "unversionedId": "Web3MQ-SDK/JS-SDK-V2/message/message",
               "id": "Web3MQ-SDK/JS-SDK-V2/message/message",
               "title": "Message",
-              "description": "messageList",
+              "description": "Properties",
               "source": "@site/docs/Web3MQ-SDK/JS-SDK-V2/message/message.md",
               "sourceDirName": "Web3MQ-SDK/JS-SDK-V2/message",
               "slug": "/Web3MQ-SDK/JS-SDK-V2/message/",
@@ -630,6 +630,30 @@
               "next": {
                 "title": "Authorization",
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/authorization/"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/JS-SDK-V2/notify/notify",
+              "id": "Web3MQ-SDK/JS-SDK-V2/notify/notify",
+              "title": "Notify",
+              "description": "Properties",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK-V2/notify/notify.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK-V2/notify",
+              "slug": "/Web3MQ-SDK/JS-SDK-V2/notify/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/notify/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 8
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Utils",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/utils/"
+              },
+              "next": {
+                "title": "Type List",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/types/"
               }
             },
             {
@@ -672,8 +696,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Utils",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/utils/"
+                "title": "Notify",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/notify/"
               },
               "next": {
                 "title": "Intro",
@@ -724,8 +748,8 @@
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/user/"
               },
               "next": {
-                "title": "Type List",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/types/"
+                "title": "Notify",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/notify/"
               }
             },
             {
@@ -1535,6 +1559,11 @@
                         "type": "doc",
                         "label": "Utils",
                         "id": "Web3MQ-SDK/JS-SDK-V2/utils/utils"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Notify",
+                        "id": "Web3MQ-SDK/JS-SDK-V2/notify/notify"
                       },
                       {
                         "type": "doc",
