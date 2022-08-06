@@ -14,8 +14,8 @@
 ```python
 import paho.mqtt.client as mqtt
 
-CHAT_SERVER_DOMAIN = "msg.web3messaging.online"
-# test env test-msg.web3messaging.online
+CHAT_SERVER_DOMAIN = "msg.swapchat.me"
+# test env test-msg.swapchat.me
 
 def get_chat_client(client_id):
     mqttc = mqtt.Client(client_id, transport="websockets")

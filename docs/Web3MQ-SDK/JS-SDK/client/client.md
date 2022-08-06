@@ -128,7 +128,7 @@ async function getParams() {
   let signContent = `Web3MQ wants you to sign in with your Ethereum account:
 ${address}
 Sign-In With Ethereum Example Statement
-URI: https://chat.web3messaging.online
+URI: https://swapchat.me
 Version: 1
 Chain ID: 1
 Nonce: ${msg}

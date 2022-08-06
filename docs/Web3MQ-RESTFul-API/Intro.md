@@ -7,8 +7,8 @@ sidebar_position: 0
 
 ## API endpoint
 
-- Production env: **https://chat.web3messaging.online**
-- Development env: **https://test.web3messaging.online**
+- Production env: **https://swapchat.me**
+- Development env: **https://test.swapchat.me**
 
 
 ## How to authorization with JWT
@@ -62,7 +62,7 @@ alert('Your wallet address is: ' + account)
 
 * get login random secret:
 ```bash
-curl -d '{"wallet_address": "your wallet address"}' -H 'Content-Type: application/json' https://test.web3messaging.online/login_random_secret
+curl -d '{"wallet_address": "your wallet address"}' -H 'Content-Type: application/json' https://test.swapchat.me/login_random_secret
 ```
 Return:
 
@@ -82,7 +82,7 @@ for example, the following code is used to get the MetaMask's signature in the b
 let signContent = `Web3MQ wants you to sign in with your Ethereum account:
 ${account}
 Sign-In With Ethereum Example Statement
-URI: https://chat.web3messaging.online
+URI: https://swapchat.me
 Version: 1
 Chain ID: 1
 Nonce: ${your login random secret}
@@ -98,7 +98,7 @@ alert("Your MetaMask's signature is: " + signature)
 * signin with MetaMask's signature:
 
 ```bash
-curl -d '{"wallet_address": "your wallet address","signature":"your signature","login_random_secret":"login_random_secret"}' -H 'Content-Type: application/json' https://test.web3messaging.online/login_random_secret
+curl -d '{"wallet_address": "your wallet address","signature":"your signature","login_random_secret":"login_random_secret"}' -H 'Content-Type: application/json' https://test.swapchat.me/login_random_secret
 ```
 
 Return:
@@ -134,7 +134,7 @@ Return:
 > 3. search a user in Swapchat:
 
 ```bash
-curl -d '{"keyword": "swapchat"}' -H 'Content-Type: application/json' -H 'Authorization: Bearer your_jwt' https://test.web3messaging.online/search
+curl -d '{"keyword": "swapchat"}' -H 'Content-Type: application/json' -H 'Authorization: Bearer your_jwt' https://test.swapchat.me/search
 ```
 Return:
 
@@ -166,7 +166,7 @@ Return:
 > 4. create a room with target user's oid:
 
 ```bash
-curl -d '{"user_id": "target users oid"}' -H 'Content-Type: application/json' -H 'Authorization: Bearer your_jwt' https://test.web3messaging.online/search
+curl -d '{"user_id": "target users oid"}' -H 'Content-Type: application/json' -H 'Authorization: Bearer your_jwt' https://test.swapchat.me/search
 ```
 Return
 ```json
@@ -182,7 +182,7 @@ Return
 ```javascript
 import { connect } from "mqtt"  
 
-let client  = await mqtt.connectAsync("wss://test-msg.web3messaging.online/mqtt", {
+let client  = await mqtt.connectAsync("wss://test-msg.swapchat.me/mqtt", {
     clientId: "your user oid",
     username: "your user oid",
     password: "your jwt(access_token)"

@@ -68,7 +68,7 @@ login_random_secret = client.login_random_secret(wallet_address)
 let signContent = `Web3MQ wants you to sign in with your Ethereum account:
 ${your_wallet_address}
 Sign-In With Ethereum Example Statement
-URI: https://chat.web3messaging.online
+URI: https://swapchat.me
 Version: 1
 Chain ID: 1
 Nonce: ${your login random secret}
@@ -103,8 +103,8 @@ jwt_data = result['access_token']
 ```python
 import paho.mqtt.client as mqtt
 
-CHAT_SERVER_DOMAIN = "msg.web3messaging.online"
-# test env test-msg.web3messaging.online
+CHAT_SERVER_DOMAIN = "msg.swapchat.me"
+# test env test-msg.swapchat.me
 
 def get_chat_client(client_id):
     mqttc = mqtt.Client(client_id, transport="websockets")

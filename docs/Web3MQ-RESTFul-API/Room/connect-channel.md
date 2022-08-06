@@ -32,8 +32,8 @@ If you have already installed one of the Client SDKs, then you can view the docu
 
 > MQTT endpoint:
 
-- Production env:     **wss://msg.web3messaging.online/mqtt**
-- Development env:    **wss://test-msg.web3messaging.online/mqtt**
+- Production env:     **wss://msg.swapchat.me/mqtt**
+- Development env:    **wss://test-msg.swapchat.me/mqtt**
 
 
 > JWT: No

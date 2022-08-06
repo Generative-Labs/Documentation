@@ -40,7 +40,7 @@ client = get_client(user_id)
 client.tls_set()
 client.username_pw_set(username=user_id, password=jwt_data)
 
-client.connect("msg.web3messaging.online", 443)
+client.connect("msg.swapchat.me", 443)
 ```
 
 ### Send message
