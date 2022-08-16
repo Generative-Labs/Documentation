@@ -609,6 +609,30 @@
               }
             },
             {
+              "unversionedId": "Web3MQ-SDK/JS-SDK-V2/encryption/encryption",
+              "id": "Web3MQ-SDK/JS-SDK-V2/encryption/encryption",
+              "title": "Encryption",
+              "description": "Methods",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK-V2/encryption/encryption.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK-V2/encryption",
+              "slug": "/Web3MQ-SDK/JS-SDK-V2/encryption/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/encryption/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 9
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Notify",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/notify/"
+              },
+              "next": {
+                "title": "Utils",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/utils/"
+              }
+            },
+            {
               "unversionedId": "Web3MQ-SDK/JS-SDK-V2/message/message",
               "id": "Web3MQ-SDK/JS-SDK-V2/message/message",
               "title": "Message",
@@ -648,12 +672,12 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Utils",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/utils/"
+                "title": "User",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/user/"
               },
               "next": {
-                "title": "Type List",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/types/"
+                "title": "Encryption",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/encryption/"
               }
             },
             {
@@ -696,8 +720,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Notify",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/notify/"
+                "title": "Utils",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/utils/"
               },
               "next": {
                 "title": "Intro",
@@ -724,8 +748,8 @@
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/contact/"
               },
               "next": {
-                "title": "Utils",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/utils/"
+                "title": "Notify",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/notify/"
               }
             },
             {
@@ -740,16 +764,16 @@
               "tags": [],
               "version": "current",
               "frontMatter": {
-                "position": 7
+                "position": 19
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "User",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/user/"
+                "title": "Encryption",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/encryption/"
               },
               "next": {
-                "title": "Notify",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/notify/"
+                "title": "Type List",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK-V2/types/"
               }
             },
             {
@@ -1557,13 +1581,18 @@
                       },
                       {
                         "type": "doc",
-                        "label": "Utils",
-                        "id": "Web3MQ-SDK/JS-SDK-V2/utils/utils"
+                        "label": "Notify",
+                        "id": "Web3MQ-SDK/JS-SDK-V2/notify/notify"
                       },
                       {
                         "type": "doc",
-                        "label": "Notify",
-                        "id": "Web3MQ-SDK/JS-SDK-V2/notify/notify"
+                        "label": "Encryption",
+                        "id": "Web3MQ-SDK/JS-SDK-V2/encryption/encryption"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Utils",
+                        "id": "Web3MQ-SDK/JS-SDK-V2/utils/utils"
                       },
                       {
                         "type": "doc",

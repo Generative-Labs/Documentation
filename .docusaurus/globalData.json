@@ -131,6 +131,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Web3MQ-SDK/JS-SDK-V2/encryption/encryption",
+              "path": "/docs/Web3MQ-SDK/JS-SDK-V2/encryption/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-SDK/JS-SDK-V2/message/message",
               "path": "/docs/Web3MQ-SDK/JS-SDK-V2/message/",
               "sidebar": "tutorialSidebar"

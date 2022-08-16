@@ -63,7 +63,7 @@ export default {
           "title": "More",
           "items": [
             {
-              "label": "This Website build with Docusaurus",
+              "label": "This Website is build with Docusaurus and love❤️",
               "href": "https://github.com/facebook/docusaurus"
             }
           ]

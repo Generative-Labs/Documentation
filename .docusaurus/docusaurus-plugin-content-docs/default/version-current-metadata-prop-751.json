@@ -184,15 +184,21 @@
               },
               {
                 "type": "link",
-                "label": "Utils",
-                "href": "/docs/Web3MQ-SDK/JS-SDK-V2/utils/",
-                "docId": "Web3MQ-SDK/JS-SDK-V2/utils/utils"
-              },
-              {
-                "type": "link",
                 "label": "Notify",
                 "href": "/docs/Web3MQ-SDK/JS-SDK-V2/notify/",
                 "docId": "Web3MQ-SDK/JS-SDK-V2/notify/notify"
+              },
+              {
+                "type": "link",
+                "label": "Encryption",
+                "href": "/docs/Web3MQ-SDK/JS-SDK-V2/encryption/",
+                "docId": "Web3MQ-SDK/JS-SDK-V2/encryption/encryption"
+              },
+              {
+                "type": "link",
+                "label": "Utils",
+                "href": "/docs/Web3MQ-SDK/JS-SDK-V2/utils/",
+                "docId": "Web3MQ-SDK/JS-SDK-V2/utils/utils"
               },
               {
                 "type": "link",
@@ -590,6 +596,12 @@
       "id": "Web3MQ-SDK/JS-SDK-V2/contact/contact",
       "title": "Contact",
       "description": "Properties",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/JS-SDK-V2/encryption/encryption": {
+      "id": "Web3MQ-SDK/JS-SDK-V2/encryption/encryption",
+      "title": "Encryption",
+      "description": "Methods",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK-V2/message/message": {

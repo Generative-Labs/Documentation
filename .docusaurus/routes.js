@@ -50,7 +50,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','4a0'),
+    component: ComponentCreator('/docs','efb'),
     routes: [
       {
         path: '/docs/Intro',
@@ -193,6 +193,12 @@ export default [
       {
         path: '/docs/Web3MQ-SDK/JS-SDK-V2/contact/',
         component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK-V2/contact/','eb4'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/JS-SDK-V2/encryption/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK-V2/encryption/','a00'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },

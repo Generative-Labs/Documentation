@@ -1,5 +1,5 @@
 ---
-position: 7
+position: 19
 ---
 
 # Utils
@@ -14,7 +14,7 @@ position: 7
 ## GenerateEd25519KeyPair
 
 ```tsx
-const keys = GenerateEd25519KeyPair();
+const keys = await GenerateEd25519KeyPair();
 ```
 
 ## DownloadKeyPair
@@ -22,7 +22,7 @@ const keys = GenerateEd25519KeyPair();
 ```tsx
 <button
   onClick={() => {
-    DownloadKeyPair();
+    DownloadKeyPair('text', 'filename');
   }}>
   DownloadKeyPair
 </button>
