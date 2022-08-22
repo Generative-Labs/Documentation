@@ -16,9 +16,7 @@ position: 5
 ### Code
 
 ```tsx
-import { Web3MQ } from 'web3-mq';
-
-const { MetaMask } = Web3MQ;
+import { MetaMask } from 'web3-mq';
 
 const account = await MetaMask.EthAccountType();
 
@@ -30,9 +28,7 @@ console.log(account);
 ### Code
 
 ```tsx
-import { Web3MQ } from 'web3-mq';
-
-const { MetaMask } = Web3MQ;
+import { MetaMask } from 'web3-mq';
 
 const { PrivateKey, PublicKey } = await MetaMask.signMetaMask(
   'https://www.web3mq.com' // your_domain_url

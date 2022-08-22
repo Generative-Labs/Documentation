@@ -6,6 +6,22 @@ position: 1
 
 **Let's learn how to use and successfully send the first message in the chat room we created**
 
+## Attention
+
+**Currently, only Webpack 4 is supported, temporary does not support Weboack 5 and above**
+
+### If you build your project using create-react-app, you need to de-escalate
+
+1.  install react-scripts
+
+```bash
+npm install react-scripts@latest4
+or
+yarn add react-scripts@latest4
+```
+
+2. Select the latest 4.x version (4.0.3)
+
 ## Usage
 
 1. Install MetaMask extension
@@ -31,9 +47,7 @@ yarn add web3-mq
 #### Code
 
 ```ts
-import { Web3MQ } from 'web3-mq';
-
-const { MetaMask } = Web3MQ;
+import { MetaMask } from 'web3-mq';
 
 const { PrivateKey, PublicKey } = await MetaMask.signMetaMask(
   'https://www.web3mq.com' // your_domain_url
@@ -49,13 +63,15 @@ localStorage.setItem('PUBLICKEY', PublicKey);
 #### Code
 
 ```typescript
+import { Client } from 'web3-mq';
+
 // sign MetaMask get keys
 const keys = { PrivateKey, PublicKey };
 
 // ws host url
 const HostURL = '94.16.119.221:23333/messages';
 
-const client = Web3MQ.Client.getInstance(keys, HostURL);
+const client = Client.getInstance(keys, HostURL);
 ```
 
 ## Create room
@@ -89,11 +105,9 @@ const client = Web3MQ.Client.getInstance(keys, HostURL);
 #### Code
 
 ```tsx
-import { useMemo, useState } from 'react';
-import { Web3MQ } from 'web3-mq';
+import { useMemo, useState, useEffect } from 'react';
+import { MetaMask, Client } from 'web3-mq';
 import { KeyPairsType } from 'web3-mq/dist/web3MQ';
-
-const { MetaMask } = Web3MQ;
 
 const App = () => {
   const hasKeys = useMemo(() => {
@@ -124,10 +138,7 @@ const App = () => {
       </div>
     );
   }
-  const client = Web3MQ.Client.getInstance(
-    keys,
-    '94.16.119.221:23333/messages'
-  );
+  const client = Client.getInstance(keys, '94.16.119.221:23333/messages');
 
   const handleEvent = (event: { type: any }) => {
     if (event.type === 'channel.getList') {

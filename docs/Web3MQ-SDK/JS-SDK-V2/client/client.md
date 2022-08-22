@@ -35,13 +35,14 @@ position: 2
 ### getInstance()
 
 ```typescript
+import { Client } from 'web3-mq';
 // sign MetaMask get keys
 const keys = { PrivateKey, PublicKey };
 
 // ws host url
 const HostURL = '94.16.119.221:23333/messages';
 
-const client = Web3MQ.Client.getInstance(keys, HostURL);
+const client = Client.getInstance(keys, HostURL);
 ```
 
 ## Events

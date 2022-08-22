@@ -39,9 +39,9 @@ position: 2
 ```
 
 ```typescript
-import { Web3MQ } from "web3-mq";
+import { Client } from "web2-mq";
 
-const client = Web3MQ.getInstance('YOUR_ACCESS_TOKEN');
+const client = Client.getInstance('YOUR_ACCESS_TOKEN');
 
 client.on('channel.activeChange', (event) {
   console.log(event)
@@ -55,9 +55,9 @@ client.on('channel.activeChange', (event) {
 ```
 
 ```typescript
-import { Web3MQ } from "web3-mq";
+import { Client } from "web2-mq";
 
-const client = Web3MQ.getInstance('YOUR_ACCESS_TOKEN');
+const client = Client.getInstance('YOUR_ACCESS_TOKEN');
 
 client.off('channel.activeChange', (event) {
   console.log(event)
@@ -71,9 +71,9 @@ client.off('channel.activeChange', (event) {
 ```
 
 ```typescript
-import { Web3MQ } from "web3-mq";
+import { Client } from "web2-mq";
 
-const client = Web3MQ.getInstance('YOUR_ACCESS_TOKEN');
+const client = Client.getInstance('YOUR_ACCESS_TOKEN');
 
 client.once('channel.activeChange', (event) {
   console.log(event)
@@ -87,9 +87,9 @@ client.once('channel.activeChange', (event) {
 ```
 
 ```typescript
-import { Web3MQ } from 'web3-mq';
+import { Client } from 'web2-mq';
 
-const client = Web3MQ.getInstance('YOUR_ACCESS_TOKEN');
+const client = Client.getInstance('YOUR_ACCESS_TOKEN');
 
 client.emit('channel.activeChange', {
   data: '',
@@ -101,7 +101,7 @@ client.emit('channel.activeChange', {
 ### getInstance()
 
 ```typescript
-Web3MQ.getInstance([LoginParams](/docs/Web3MQ-SDK/JS-SDK/types/#loginparams) | token: string);
+Client.getInstance([LoginParams](/docs/Web3MQ-SDK/JS-SDK/types/#loginparams) | token: string);
 ```
 
 > create a client
@@ -113,9 +113,7 @@ Web3MQ.getInstance([LoginParams](/docs/Web3MQ-SDK/JS-SDK/types/#loginparams) | t
 > call [getLoginRandomSecret()](/docs/Web3MQ-SDK/JS-SDK/utils/#getloginrandomsecret)
 
 ```typescript
-import { Web2MQ } from 'web3-mq';
-
-const { login, getLoginRandomSecret } = Web2MQ;
+import { login, getLoginRandomSecret } from 'web2-mq';
 
 async function getParams() {
   const address = ethereum.selectedAddress; //  call Connect MeatMask
@@ -149,13 +147,13 @@ Expiration Time: 2022-05-25T12:52:57.489Z`;
 const initParams = getParams();
 
 // create client
-const client = Web2MQ.Client.getInstance(Params);
+const client = Client.getInstance(Params);
 ```
 
 or
 
 ```typescript
-import { Web2MQ } from 'web3-mq';
+import { Client } from 'web2-mq';
 
-const client = Web2MQ.Client.getInstance('YOUR_ACCESS_TOKEN');
+const client = Client.getInstance('YOUR_ACCESS_TOKEN');
 ```

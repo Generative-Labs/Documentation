@@ -26,9 +26,9 @@ position: 3
 #### get
 
 ```typescript
-import { Web3MQ } from "web3-mq";
+import { Client } from "web2-mq";
 
-const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
+const client = Client.getInstance("YOUR_ACCESS_TOKEN");
 
 client.channel.channelList;
 ```
