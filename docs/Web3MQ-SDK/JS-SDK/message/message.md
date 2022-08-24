@@ -2,147 +2,119 @@
 position: 4
 ---
 
-# Messages
+# Message
 
 ## Properties
 
-| name          | type                                                                         | Parameters Description |
-| ------------- | ---------------------------------------------------------------------------- | ---------------------- |
-| activeMessage | [MessageResponse](/docs/Web3MQ-SDK/JS-SDK/types/#messageresponse) \| null    | current active message |
-| messageList   | [MessageResponse](/docs/Web3MQ-SDK/JS-SDK/types/#messageresponse)[ ] \| null | message list           |
-| threadList    | [MessageResponse](/docs/Web3MQ-SDK/JS-SDK/types/#messageresponse)[ ] \| null | thread list            |
+| name        | type                                                                             | Description  |
+| ----------- | -------------------------------------------------------------------------------- | ------------ |
+| messageList | [MessageListItem](/docs/Web3MQ-SDK/JS-SDK-V2/types/#messagelistitem) [ ] \| null | message list |
 
 ## Methods
 
-| name                                                                        | type     | Parameters Description                                            |
-| --------------------------------------------------------------------------- | -------- | ----------------------------------------------------------------- |
-| [getMessageList](/docs/Web3MQ-SDK/JS-SDK/message/#getmessagelist)           | function | { room_id: string }                                               |
-| [loadMoreMessageList](/docs/Web3MQ-SDK/JS-SDK/message/#loadmoremessagelist) | function | null                                                              |
-| [openThread](/docs/Web3MQ-SDK/JS-SDK/message/#openthread)                   | function | [MessageResponse](/docs/Web3MQ-SDK/JS-SDK/types/#messageresponse) |
-| [loadMoreThreadList](/docs/Web3MQ-SDK/JS-SDK/message/#loadmorethreadlist)   | function | null                                                              |
+| name                | type     | Parameters Description                                                                         | response |
+| ------------------- | -------- | ---------------------------------------------------------------------------------------------- | -------- |
+| getMessageList      | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK-V2/types/#pageparams)                                     | none     |
+| changeMessageStatus | function | (messages: string[], status: [MessageStatus](/docs/Web3MQ-SDK/JS-SDK-V2/types/#messagestatus)) | none     |
+| sendMessage         | function | (msg: string)                                                                                  | none     |
+| receive             | function | receive message callback                                                                       | none     |
 
-## Properties
+## init Client
 
-### activeMessage
+```tsx
+import { Client, MetaMask } from 'web3-mq';
+// sign MetaMask get keys
+const { PrivateKey, PublicKey } = await MetaMask.signMetaMask(
+  'https://www.web3mq.com' // your_domain_url
+);
+const keys = { PrivateKey, PublicKey };
+// ws host url
+const HostURL = 'us-west-2.web3mq.com';
+// init client
+const client = Client.getInstance(keys, HostURL);
 
-> The currently selected message
+console.log(client);
 
-#### Get
-
-```typescript
-import { Web3MQ } from "web3-mq";
-
-const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
-
-client.messages.activeMessage;
+export const Child = () => {
+  return (
+    <div>
+      <Child client={client} />
+    </div>
+  );
+};
 ```
 
-#### Returns
+## GetMessageList & SendMessage
 
-> **Object**: [MessageResponse](/docs/Web3MQ-SDK/JS-SDK/types/#messageresponse)
+```tsx
+import { useEffect } from 'react';
+import { Client } from 'web3-mq';
 
-### messageList
+interface IProps {
+  client: Client;
+}
 
-> Current chat room message logs
+export const Child = (props: IProps) => {
+  const { client } = props;
 
-#### Get
+  const handleEvent = (event: { type: any }) => {
+    if (event.type === 'message.getList' || event.type === 'message.new') {
+      console.log(client.message.messageList);
+    }
+  };
 
-```typescript
-import { Web3MQ } from "web3-mq";
+  useEffect(() => {
+    client.on('message.getList', handleEvent);
+    client.on('message.new', handleEvent);
+    return () => {
+      client.off('message.getList');
+      client.off('message.new');
+    };
+  }, []);
 
-const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
+  useEffect(() => {
+    client.message.getMessageList({
+      page: 1,
+      size: 20,
+    });
+  }, []);
 
-client.messages.messageList;
+  return (
+    <div>
+      <button
+        onClick={() => {
+          client.message.sendMessage('text');
+        }}>
+        send Message
+      </button>
+    </div>
+  );
+};
 ```
 
-#### Returns
+## ChangeMessageStatus
 
-> **Array**: [MessageResponse](/docs/Web3MQ-SDK/JS-SDK/types/#messageresponse)[]
+```tsx
+import { useEffect } from 'react';
+import { Client } from 'web3-mq';
 
-## Methods
+interface IProps {
+  client: Client;
+}
 
-### getMessageList()
+export const Child = (props: IProps) => {
+  const { client } = props;
 
-> Changes the messageList property on the current object and notifies the subscriber of the update
-
-```typescript
-* getMessageList: (props: { room_id: string; }) => Promise<void>;
-```
-
-```typescript
-import { Web3MQ } from "web3-mq";
-
-const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
-
-client.messages
-  .getMessageList({
-    room_id: "YOUR_ROOM_ID",
-  })
-  .then((res) => {
-    console.log(res);
-  });
-// After the request is completed, the data will be synchronized to the client
-console.log(client.messages.messageList);
-```
-
-### loadMoreMessageList()
-
-> load more message list and notifies the subscriber of the update
-
-```typescript
-* loadMoreMessageList: () => Promise<unknown>;
-```
-
-```typescript
-import { Web3MQ } from "web3-mq";
-
-const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
-
-client.messages.loadMoreMessageList().then((res) => {
-  console.log(res);
-});
-
-// After the request is completed, the data will be synchronized to the client
-console.log(client.messages.messageList);
-```
-
-### openThread()
-
-> Changes the activeMessage and threadList property on the current object and notifies the subscriber of the update
-
-```typescript
-* openThread: (message: MessageResponse | null) => Promise<void>;
-```
-
-```typescript
-import { Web3MQ } from "web3-mq";
-
-const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
-
-client.messages.openThread(message: MessageResponse);
-
-// After the request is completed, the data will be synchronized to the client
-console.log(client.messages.threadList);
-
-```
-
-### loadMoreThreadList()
-
-> load more thread list and notifies the subscriber of the update
-
-```typescript
-loadMoreThreadList: () => Promise<unknown>;
-```
-
-```typescript
-import { Web3MQ } from "web3-mq";
-
-const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
-
-client.messages.loadMoreThreadList().then((res) => {
-  console.log(res);
-});
-
-// After the request is completed, the data will be synchronized to the client
-console.log(client.messages.messageList);
+  return (
+    <div>
+      <button
+        onClick={async () => {
+          const data = await client.message.changeMessageStatus(['msgId']);
+          console.log(data);
+        }}>
+        Change Message Status
+      </button>
+    </div>
+  );
+};
 ```

@@ -19,19 +19,40 @@ position: 8
 ## init Client
 
 ```tsx
-import { Client } from 'web3-mq';
+import { Client, MetaMask } from 'web3-mq';
 // sign MetaMask get keys
+const { PrivateKey, PublicKey } = await MetaMask.signMetaMask(
+  'https://www.web3mq.com' // your_domain_url
+);
 const keys = { PrivateKey, PublicKey };
 // ws host url
-const HostURL = '94.16.119.221:23333/messages';
+const HostURL = 'us-west-2.web3mq.com';
 // init client
 const client = Client.getInstance(keys, HostURL);
+
+console.log(client);
+
+export const Child = () => {
+  return (
+    <div>
+      <Child client={client} />
+    </div>
+  );
+};
 ```
 
 ## ChangeNotificationStatus
 
 ```tsx
-export const App = () => {
+import { Client } from 'web3-mq';
+
+interface IProps {
+  client: Client;
+}
+
+export const Child = (props: IProps) => {
+  const { client } = props;
+
   return (
     <div>
       <button
@@ -49,8 +70,15 @@ export const App = () => {
 
 ```tsx
 import { useEffect } from 'react';
+import { Client } from 'web3-mq';
 
-export const App = () => {
+interface IProps {
+  client: Client;
+}
+
+export const Child = (props: IProps) => {
+  const { client } = props;
+  
   const handleEvent = (event: { type: any }) => {
     if (event.type === 'notification.getList' || event.type === 'message.new') {
       console.log(client.notify.notificationList);

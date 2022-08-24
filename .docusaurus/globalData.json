@@ -111,78 +111,8 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-SDK/JS-SDK-V2/authorization/authorization",
-              "path": "/docs/Web3MQ-SDK/JS-SDK-V2/authorization/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-SDK/JS-SDK-V2/channel/channel",
-              "path": "/docs/Web3MQ-SDK/JS-SDK-V2/channel/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-SDK/JS-SDK-V2/client/client",
-              "path": "/docs/Web3MQ-SDK/JS-SDK-V2/client/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-SDK/JS-SDK-V2/contact/contact",
-              "path": "/docs/Web3MQ-SDK/JS-SDK-V2/contact/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-SDK/JS-SDK-V2/encryption/encryption",
-              "path": "/docs/Web3MQ-SDK/JS-SDK-V2/encryption/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-SDK/JS-SDK-V2/message/message",
-              "path": "/docs/Web3MQ-SDK/JS-SDK-V2/message/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-SDK/JS-SDK-V2/notify/notify",
-              "path": "/docs/Web3MQ-SDK/JS-SDK-V2/notify/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-SDK/JS-SDK-V2/quickStart/quickStart",
-              "path": "/docs/Web3MQ-SDK/JS-SDK-V2/quickStart/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-SDK/JS-SDK-V2/types/types",
-              "path": "/docs/Web3MQ-SDK/JS-SDK-V2/types/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-SDK/JS-SDK-V2/user/user",
-              "path": "/docs/Web3MQ-SDK/JS-SDK-V2/user/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-SDK/JS-SDK-V2/utils/utils",
-              "path": "/docs/Web3MQ-SDK/JS-SDK-V2/utils/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-SDK/JS-SDK/authorization/Intro",
-              "path": "/docs/Web3MQ-SDK/JS-SDK/authorization/Intro",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-SDK/JS-SDK/authorization/MetaMask",
-              "path": "/docs/Web3MQ-SDK/JS-SDK/authorization/MetaMask",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-SDK/JS-SDK/authorization/Slope",
-              "path": "/docs/Web3MQ-SDK/JS-SDK/authorization/Slope",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-SDK/JS-SDK/authorization/Walletconnect",
-              "path": "/docs/Web3MQ-SDK/JS-SDK/authorization/Walletconnect",
+              "id": "Web3MQ-SDK/JS-SDK/authorization/authorization",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/authorization/",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -201,18 +131,18 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter",
-              "path": "/docs/Web3MQ-SDK/JS-SDK/eventCenter/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-SDK/JS-SDK/Intro",
-              "path": "/docs/Web3MQ-SDK/JS-SDK/Intro",
+              "id": "Web3MQ-SDK/JS-SDK/encryption/encryption",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/encryption/",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "Web3MQ-SDK/JS-SDK/message/message",
               "path": "/docs/Web3MQ-SDK/JS-SDK/message/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/JS-SDK/notify/notify",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/notify/",
               "sidebar": "tutorialSidebar"
             },
             {

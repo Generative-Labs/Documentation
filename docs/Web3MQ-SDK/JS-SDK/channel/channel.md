@@ -6,116 +6,139 @@ position: 3
 
 ## Properties
 
-| name          | type                                                                          | Description            |
-| ------------- | ----------------------------------------------------------------------------- | ---------------------- |
-| channelList   | [ChannelResponse](/docs/Web3MQ-SDK/JS-SDK/types/#channelresponse) [ ] \| null | channel list           |
-| activeChannel | [ChannelResponse](/docs/Web3MQ-SDK/JS-SDK/types/#channelresponse) \| null     | current active channel |
+| name          | type                                                                                 | Description            |
+| ------------- | ------------------------------------------------------------------------------------ | ---------------------- |
+| channelList   | [activechannelType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#activechanneltype) [ ] \| null | channel list           |
+| activeChannel | [activechannelType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#activechanneltype) \| null     | current active channel |
 
 ## Methods
 
-| name             | type     | Parameters Description                                            |
-| ---------------- | -------- | ----------------------------------------------------------------- |
-| setActiveChannel | function | [ChannelResponse](/docs/Web3MQ-SDK/JS-SDK/types/#channelresponse) |
-| queryChannels    | function | [pageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)           |
-| createRoom       | function | { user_id: string }                                               |
+| name               | type     | Parameters Description                                                   | response                                                                        |
+| ------------------ | -------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
+| createRoom         | function | none                                                                     | none                                                                            |
+| queryChannels      | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK-V2/types/#pageparams)               | none                                                                            |
+| setActiveChannel   | function | [activechannelType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#activechanneltype) | none                                                                            |
+| getGroupMemberList | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK-V2/types/#pageparams)               | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#contactlistitemtype)[ ] |
+| inviteGroupMember  | function | (members: string[])                                                      | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#contactlistitemtype)[ ] |
 
-### channelList
+## init Client
 
-> Chat List
+```tsx
+import { Client, MetaMask } from 'web3-mq';
+// sign MetaMask get keys
+const { PrivateKey, PublicKey } = await MetaMask.signMetaMask(
+  'https://www.web3mq.com' // your_domain_url
+);
+const keys = { PrivateKey, PublicKey };
+// ws host url
+const HostURL = 'us-west-2.web3mq.com';
+// init client
+const client = Client.getInstance(keys, HostURL);
 
-#### get
+console.log(client);
 
-```typescript
-import { Client } from "web2-mq";
-
-const client = Client.getInstance("YOUR_ACCESS_TOKEN");
-
-client.channel.channelList;
+export const App = () => {
+  return (
+    <div>
+      <Child client={client} />
+    </div>
+  );
+};
 ```
 
-#### Returns
+## CreateRoom & QueryChannels & SetActiveChannel
 
-> **Array**: [ChannelResponse](/docs/Web3MQ-SDK/JS-SDK/types/#channelresponse)[]
+```tsx
+import { useEffect } from 'react';
+import { Client } from 'web3-mq';
 
-### activeChannel
+interface IProps {
+  client: Client;
+}
 
-> Currently active chat rooms
+export const Child = (props: IProps) => {
+  const { client } = props;
 
-#### get
+  const handleEvent = (event: { type: any }) => {
+    if (event.type === 'channel.getList') {
+      // Get the latest channelList
+      console.log(client.channel.channelList);
+    }
+  };
 
-```typescript
-import { Web3MQ } from "web3-mq";
+  useEffect(() => {
+    client.on('channel.getList', handleEvent);
+    return () => {
+      client.off('channel.getList');
+    };
+  }, []);
 
-const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
+  useEffect(() => {
+    client.channel.queryChannels({ page: 1, size: 100 });
+  }, []);
 
-client.channel.activeChannel;
+  return (
+    <div>
+      <button
+        onClick={() => {
+          client.channel.createRoom();
+        }}>
+        create group
+      </button>
+      <button
+        onClick={() => {
+          client.channel.setActiveChannel({ topic: 'xxx', topic_type: 'xxx' });
+        }}>
+        set active channel
+      </button>
+    </div>
+  );
+};
 ```
 
-#### Returns
+## getGroupMemberList
 
-> **Object**: [ChannelResponse](/docs/Web3MQ-SDK/JS-SDK/types/#channelresponse)
+```tsx
+import { useEffect } from 'react';
+import { Client } from 'web3-mq';
 
-## Methods
+interface IProps {
+  client: Client;
+}
 
-### setActiveChannel()
+export const Child = (props: IProps) => {
+  const { client } = props;
 
-> Sets the currently active channel and notifies all subscribers of updates
-
-```typescript
-* setActiveChannel: (channel: ChannelResponse) => void;
+  useEffect(async () => {
+    const data = await client.channel.getGroupMemberList({
+      page: 1,
+      size: 100,
+    });
+    console.log(data);
+  }, []);
+};
 ```
 
-```typescript
-import { Web3MQ } from "web3-mq";
+## InviteGroupMember
 
-const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
+```tsx
+import { Client } from 'web3-mq';
 
-client.channel.setActiveChannel(channel: ChannelResponse);
+interface IProps {
+  client: Client;
+}
 
-// After the request is completed, the data will be synchronized to the client
-console.log(client.channel.activeChannel);
-```
+export const Child = (props: IProps) => {
+  const { client } = props;
 
-### queryChannels()
-
-> Query all channel data and notifies all subscribers of updates
-
-```typescript
-* queryChannels: (option: PageParams) => Promise<void>;
-```
-
-```typescript
-import { Web3MQ } from "web3-mq";
-
-const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
-
-await client.channel.queryChannels({
-  page: 1,
-  size: 20,
-});
-
-// After the request is completed, the data will be synchronized to the client
-console.log(client.channel.channelList);
-```
-
-### createRoom()
-
-> Select a person to create a chat room and set the currently active chat room
-
-```typescript
-* createRoom: (params: GetRoomInfoByTargetUserIdParams) => Promise<void>;
-```
-
-```typescript
-import { Web3MQ } from "web3-mq";
-
-const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
-
-await client.channel.createRoom({
-  user_id: "******",
-});
-
-// After the request is completed, the data will be synchronized to the client
-console.log(client.channel.activeChannel);
-console.log(client.channel.channelList);
+  return (
+    <button
+      onClick={async () => {
+        const data = await client.channel.inviteGroupMember('memberid');
+        console.log(data);
+      }}>
+      invite Group Member
+    </button>
+  );
+};
 ```

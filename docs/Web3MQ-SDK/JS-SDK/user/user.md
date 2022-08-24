@@ -1,31 +1,119 @@
 ---
-position: 6
+position: 7
 ---
 
 # User
 
-## Properties
+## Methods
 
-| name     | type                                                        | Parameters Description  |
-| -------- | ----------------------------------------------------------- | ----------------------- |
-| userInfo | [userInfo](/docs/Web3MQ-SDK/JS-SDK/types/#userinfo) \| null | current login user info |
+| name            | type     | Parameters Description                 | response                                                                             |
+| --------------- | -------- | -------------------------------------- | ------------------------------------------------------------------------------------ |
+| searchUsers     | function | (walletAddress: string)                | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK-V2/types/#searchusersresponse)         |
+| getMyProfile    | function | none                                   | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK-V2/types/#searchusersresponse)         |
+| updateMyProfile | function | (nickname: string, avatar_url: string) | [UpdateMyProfileResponse](/docs/Web3MQ-SDK/JS-SDK-V2/types/#updatemyprofileresponse) |
 
-## Properties
+## init Client
 
-### userInfo
+```tsx
+import { Client, MetaMask } from 'web3-mq';
+// sign MetaMask get keys
+const { PrivateKey, PublicKey } = await MetaMask.signMetaMask(
+  'https://www.web3mq.com' // your_domain_url
+);
+const keys = { PrivateKey, PublicKey };
+// ws host url
+const HostURL = 'us-west-2.web3mq.com';
+// init client
+const client = Client.getInstance(keys, HostURL);
 
-> Login user info
+console.log(client);
 
-#### get
-
-```typescript
-import { Web3MQ } from "web3-mq";
-
-const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
-
-client.channel.userInfo;
+export const Child = () => {
+  return (
+    <div>
+      <Child client={client} />
+    </div>
+  );
+};
 ```
 
-#### Returns
+## SearchUsers
 
-> **Object**: [userInfo](/docs/Web3MQ-SDK/JS-SDK/types/#userinfo)
+```tsx
+import { Client } from 'web3-mq';
+
+interface IProps {
+  client: Client;
+}
+
+export const Child = (props: IProps) => {
+  const { client } = props;
+
+  return (
+    <div>
+      <button
+        onClick={async () => {
+          const data = await client.user.searchUsers('walletAddress');
+          console.log(data);
+        }}>
+        Search Users
+      </button>
+    </div>
+  );
+};
+```
+
+## GetMyProfile
+
+```tsx
+import { Client } from 'web3-mq';
+
+interface IProps {
+  client: Client;
+}
+
+export const Child = (props: IProps) => {
+  const { client } = props;
+
+  return (
+    <div>
+      <button
+        onClick={async () => {
+          const data = await client.user.getMyProfile();
+          console.log(data);
+        }}>
+        Get My Profile
+      </button>
+    </div>
+  );
+};
+```
+
+## UpdateMyProfile
+
+```tsx
+import { Client } from 'web3-mq';
+
+interface IProps {
+  client: Client;
+}
+
+export const Child = (props: IProps) => {
+  const { client } = props;
+  
+  return (
+    <div>
+      <button
+        onClick={async () => {
+          const data = await client.user.updateMyProfile(
+            'nickname',
+            'avatar_url'
+          );
+          console.log(data);
+        }}>
+        Update My Profile
+      </button>
+    </div>
+  );
+};
+```

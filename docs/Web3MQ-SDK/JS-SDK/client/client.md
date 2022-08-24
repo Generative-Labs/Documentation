@@ -6,29 +6,48 @@ position: 2
 
 ## Events
 
-| name                                         | type     | Parameters Description |
-| -------------------------------------------- | -------- | ---------------------- |
-| [on](/docs/Web3MQ-SDK/JS-SDK/client/#on)     | function | create pubsub          |
-| [off](/docs/Web3MQ-SDK/JS-SDK/client/#off)   | function | cancel pubsub          |
-| [once](/docs/Web3MQ-SDK/JS-SDK/client/#once) | function | once pubsub            |
-| [emit](/docs/Web3MQ-SDK/JS-SDK/client/#emit) | function | emit pubsub            |
+| name                                            | type     | Parameters Description |
+| ----------------------------------------------- | -------- | ---------------------- |
+| [on](/docs/Web3MQ-SDK/JS-SDK-V2/client/#on)     | function | create pubsub          |
+| [off](/docs/Web3MQ-SDK/JS-SDK-V2/client/#off)   | function | cancel pubsub          |
+| [once](/docs/Web3MQ-SDK/JS-SDK-V2/client/#once) | function | once pubsub            |
+| [emit](/docs/Web3MQ-SDK/JS-SDK-V2/client/#emit) | function | emit pubsub            |
 
 ## Properties
 
-| name                                        | type          | Parameters Description   |
-| ------------------------------------------- | ------------- | ------------------------ |
-| token                                       | string        | your access token        |
-| listeners                                   | {}            | pubsub list              |
-| [channel](/docs/Web3MQ-SDK/JS-SDK/channel)  | Channel Class | The channel correlation  |
-| [messages](/docs/Web3MQ-SDK/JS-SDK/message) | Message Class | The messages correlation |
-| [user](/docs/Web3MQ-SDK/JS-SDK/user)        | User Class    | The user correlation     |
-| [contact](/docs/Web3MQ-SDK/JS-SDK/contact)  | Contact Class | The contact correlation  |
+| name                                          | type                                                           | Parameters Description        |
+| --------------------------------------------- | -------------------------------------------------------------- | ----------------------------- |
+| keys                                          | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#keypairstype) | your PrivateKey and PublicKey |
+| listeners                                     | {}                                                             | pubsub list                   |
+| [channel](/docs/Web3MQ-SDK/JS-SDK-V2/channel) | Channel Class                                                  | The channel correlation       |
+| [message](/docs/Web3MQ-SDK/JS-SDK-V2/message) | Message Class                                                  | The messages correlation      |
+| [user](/docs/Web3MQ-SDK/JS-SDK-V2/user)       | User Class                                                     | The user correlation          |
+| [contact](/docs/Web3MQ-SDK/JS-SDK-V2/contact) | Contact Class                                                  | The contact correlation       |
 
 ## Methods
 
-| name                                                       | type     | Parameters Description |
-| ---------------------------------------------------------- | -------- | ---------------------- |
-| [getInstance](/docs/Web3MQ-SDK/JS-SDK/client/#getInstance) | function | LoginParams or string  |
+| name                                                          | type     | Parameters Description |
+| ------------------------------------------------------------- | -------- | ---------------------- |
+| [getInstance](/docs/Web3MQ-SDK/JS-SDK-V2/client/#getInstance) | function | LoginParams or string  |
+
+## Methods
+
+### getInstance()
+
+```typescript
+import { Client, MetaMask } from 'web3-mq';
+// sign MetaMask get keys
+const { PrivateKey, PublicKey } = await MetaMask.signMetaMask(
+  'https://www.web3mq.com' // your_domain_url
+);
+const keys = { PrivateKey, PublicKey };
+// ws host url
+const HostURL = 'us-west-2.web3mq.com';
+// init client
+const client = Client.getInstance(keys, HostURL);
+
+console.log(client);
+```
 
 ## Events
 
@@ -39,10 +58,6 @@ position: 2
 ```
 
 ```typescript
-import { Client } from "web2-mq";
-
-const client = Client.getInstance('YOUR_ACCESS_TOKEN');
-
 client.on('channel.activeChange', (event) {
   console.log(event)
 })
@@ -55,10 +70,6 @@ client.on('channel.activeChange', (event) {
 ```
 
 ```typescript
-import { Client } from "web2-mq";
-
-const client = Client.getInstance('YOUR_ACCESS_TOKEN');
-
 client.off('channel.activeChange', (event) {
   console.log(event)
 })
@@ -71,10 +82,6 @@ client.off('channel.activeChange', (event) {
 ```
 
 ```typescript
-import { Client } from "web2-mq";
-
-const client = Client.getInstance('YOUR_ACCESS_TOKEN');
-
 client.once('channel.activeChange', (event) {
   console.log(event)
 })
@@ -87,73 +94,7 @@ client.once('channel.activeChange', (event) {
 ```
 
 ```typescript
-import { Client } from 'web2-mq';
-
-const client = Client.getInstance('YOUR_ACCESS_TOKEN');
-
 client.emit('channel.activeChange', {
   data: '',
 });
-```
-
-## Methods
-
-### getInstance()
-
-```typescript
-Client.getInstance([LoginParams](/docs/Web3MQ-SDK/JS-SDK/types/#loginparams) | token: string);
-```
-
-> create a client
-
-#### Usage
-
-> call [Connect MeatMask](/docs/Web3MQ-SDK/JS-SDK/quickStart/#connect-metamask)
->
-> call [getLoginRandomSecret()](/docs/Web3MQ-SDK/JS-SDK/utils/#getloginrandomsecret)
-
-```typescript
-import { login, getLoginRandomSecret } from 'web2-mq';
-
-async function getParams() {
-  const address = ethereum.selectedAddress; //  call Connect MeatMask
-  // call getLoginRandomSecret
-  const randomSecret = await getLoginRandomSecret({
-    wallet_address: address,
-  });
-
-  const msg = `0x${Buffer.from(randomSecret, 'utf8').toString('hex')}`;
-  let signContent = `Web3MQ wants you to sign in with your Ethereum account:
-${address}
-Sign-In With Ethereum Example Statement
-URI: https://swapchat.me
-Version: 1
-Chain ID: 1
-Nonce: ${msg}
-Issued At: 2022-05-23T12:52:57.500Z
-Expiration Time: 2022-05-25T12:52:57.489Z`;
-  // @ts-ignore
-  const signature = await ethereum.request({
-    method: 'personal_sign',
-    params: [signContent, address, 'swapchat'],
-  });
-
-  return {
-    login_random_secret: randomSecret,
-    wallet_address: address,
-    signature,
-  };
-}
-const initParams = getParams();
-
-// create client
-const client = Client.getInstance(Params);
-```
-
-or
-
-```typescript
-import { Client } from 'web2-mq';
-
-const client = Client.getInstance('YOUR_ACCESS_TOKEN');
 ```

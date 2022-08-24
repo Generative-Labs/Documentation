@@ -6,14 +6,35 @@ position: 1
 
 **Let's learn how to use and successfully send the first message in the chat room we created**
 
+## Attention
+
+<font size="4" color="red" background="red">
+Currently, only Webpack 4 is supported, temporary does not support Weboack 5 and above
+</font>
+
+## Using create-react-app
+
+### If you build your project using create-react-app, you need to de-escalate
+
+> 1.  **install react-scripts**
+>
+> ```bash
+> npm install react-scripts@latest4
+> or
+> yarn add react-scripts@latest4
+> ```
+>
+> 2. **Select the latest 4.x version (4.0.3)**
+
 ## Usage
 
 1. Install MetaMask extension
-1. Install package
-1. Register Web2MQ user if you are not
-1. Create Web2MQ client connection
-1. Create Web2MQ chat room
-1. Send message
+2. Install package
+3. Register Web3MQ user if you are not
+4. Create Web3MQ client connection
+5. Create Web3MQ chat room
+6. Send message
+7. Example
 
 ## Install
 
@@ -23,170 +44,240 @@ or
 yarn add web3-mq
 ```
 
+## API endpoint
+
+**When using remove 'https://'**
+
+- https://us-west-2.web3mq.com
+- https://ap-jp-1.web3mq.com
+- https://ap-singapore-1.web3mq.com
+
+## Example
+
+#### Code
+
+```tsx
+import React, { useMemo, useState, useEffect } from 'react';
+import { MetaMask, Client, KeyPairsType } from 'web3-mq';
+
+// Child components
+interface IProps {
+  client: Client;
+}
+
+const Child: React.FC<IProps> = (props) => {
+  const { client } = props;
+
+  const [list, setList] = useState<any>(null);
+  const [activeChannel, setActiveChannel] = useState<any>(null);
+  const [text, setText] = useState<string>('');
+  const [messageList, setMessageList] = useState<any>([]);
+
+  const handleEvent = (event: { type: any }) => {
+    if (event.type === 'channel.getList') {
+      setList(client.channel.channelList);
+    }
+    if (event.type === 'channel.activeChange') {
+      setActiveChannel(client.channel.activeChannel);
+      client.message.getMessageList({
+        page: 1,
+        size: 20,
+      });
+    }
+    if (event.type === 'message.getList') {
+      setMessageList(client.message.messageList);
+    }
+    if (event.type === 'message.new') {
+      setText('');
+      const list = client.message.messageList || [];
+      setMessageList([...list, { content: text, id: list.length + 1 }]);
+    }
+  };
+
+  useEffect(() => {
+    client.on('channel.getList', handleEvent);
+    client.on('channel.activeChange', handleEvent);
+    client.on('message.getList', handleEvent);
+    client.on('message.new', handleEvent);
+    return () => {
+      client.off('channel.getList');
+      client.off('channel.activeChange');
+      client.off('message.getList');
+      client.off('message.new');
+    };
+  }, [text]);
+
+  useEffect(() => {
+    client.channel.queryChannels({ page: 1, size: 100 });
+  }, []);
+
+  const handleChangeActive = (channel: any) => {
+    client.channel.setActiveChannel(channel);
+  };
+
+  const handleSendMessage = () => {
+    client.message.sendMessage(text);
+  };
+
+  const List = () => {
+    if (!list) {
+      return null;
+    }
+    return (
+      <ul>
+        {list.map((item: any, idx: number) => {
+          return (
+            <li
+              style={{ cursor: 'pointer' }}
+              key={item.topic}
+              onClick={() => handleChangeActive(item)}>
+              {idx}-{item.topic}
+            </li>
+          );
+        })}
+      </ul>
+    );
+  };
+
+  return (
+    <div>
+      <h1>room list</h1>
+      <List />
+      <h1>message list</h1>
+      {activeChannel && (
+        <div>
+          <div>
+            <b>activeChannel:</b>
+            <span style={{ color: 'blue' }}>{activeChannel.topic}</span>
+          </div>
+          <div style={{ minHeight: 300, border: '1px solid #000' }}>
+            {messageList.map((item: any) => {
+              return <div key={item.id}>message: {item.content}</div>;
+            })}
+          </div>
+          <div>
+            <input
+              value={text}
+              type='text'
+              onChange={(e) => {
+                setText(e.target.value);
+              }}
+            />
+            <button onClick={handleSendMessage}>send Message</button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+// Root components
+const App: React.FC = () => {
+  const hasKeys = useMemo(() => {
+    const PrivateKey = localStorage.getItem('PRIVATE_KEY') || '';
+    const PublicKey = localStorage.getItem('PUBLICKEY') || '';
+    if (PrivateKey && PublicKey) {
+      return { PrivateKey, PublicKey };
+    }
+    return null;
+  }, []);
+
+  const [keys, setKeys] = useState<KeyPairsType | null>(hasKeys);
+
+  const signMetaMask = async () => {
+    const { PrivateKey, PublicKey } = await MetaMask.signMetaMask(
+      'https://www.web3mq.com'
+    );
+    localStorage.setItem('PRIVATE_KEY', PrivateKey);
+    localStorage.setItem('PUBLICKEY', PublicKey);
+    setKeys({ PrivateKey, PublicKey });
+  };
+
+  if (!keys) {
+    return (
+      <div>
+        <button onClick={signMetaMask}>signMetaMask</button>
+      </div>
+    );
+  }
+  const client = Client.getInstance(keys);
+
+  return (
+    <div>
+      <button
+        onClick={() => {
+          client.channel.createRoom();
+        }}>
+        create Room
+      </button>
+      <Child client={client} />
+    </div>
+  );
+};
+
+export default App;
+```
+
 ## Connect MetaMask
 
 > Connect MetaMask get your eth wallet
 
 #### Code
 
-```typescript
-// request permissions and get your wallet address
-async function getEthAccount() {
-  let res = '';
-  // first request permission
-  const requestPermissionsRes = await window.ethereum
-    .request({
-      method: 'wallet_requestPermissions',
-      params: [{ eth_accounts: {} }],
-    })
-    .catch((e: any) => {
-      console.log(e, 'e');
-    });
-  if (!requestPermissionsRes) return null;
-  // call func to connect MetaMask and get your account
-  try {
-    let address = await window.ethereum.request({
-      method: 'eth_accounts',
-    });
-    if (address && address.length > 0) {
-      res = address[0];
-    }
-  } catch (e) {
-    console.log(e);
-  }
-  return res;
-}
+```ts
+import { MetaMask } from 'web3-mq';
 
-getEthAccount();
+const { PrivateKey, PublicKey } = await MetaMask.signMetaMask(
+  'https://www.web3mq.com' // your_domain_url
+);
+
+console.log(PrivateKey, PublicKey);
+
+// Keep your private key in safe place
+localStorage.setItem('PRIVATE_KEY', PrivateKey);
+localStorage.setItem('PUBLICKEY', PublicKey);
 ```
 
-## Register Web2MQ user
-
-> call [register()](/docs/Web3MQ-SDK/JS-SDK/utils/#register)
+## Create Web3MQ client connection
 
 #### Code
 
 ```typescript
-import { Web2MQ } from 'web3-mq';
+import { Client } from 'web3-mq';
 
-const { register } = Web2MQ;
+// sign MetaMask get keys
+const keys = { PrivateKey, PublicKey };
 
-async function registerUser() {
-  const data = await register({
-    platform: 'opensea',
-    username: '0x000000000',
-  });
-  return data;
-}
-registerUser();
+// ws host url
+const HostURL = 'us-west-2.web3mq.com';
+
+const client = Client.getInstance(keys, HostURL);
+
+console.log(client);
 ```
 
-## Create Web2MQ client connection
-
-### Get Parameters
-
-> call [Connect MeatMask](/docs/Web3MQ-SDK/JS-SDK/quickStart/#connect-metamask)
-> call [getLoginRandomSecret()](/docs/Web3MQ-SDK/JS-SDK/utils/#getloginrandomsecret)
+## Create room
 
 #### Code
 
-```typescript
-import { Web2MQ } from 'web3-mq';
-
-const { login, getLoginRandomSecret } = Web2MQ;
-
-async function getParams() {
-  const address = ethereum.selectedAddress; //  call Connect MeatMask
-  // call getLoginRandomSecret
-  const randomSecret = await getLoginRandomSecret({
-    wallet_address: address,
-  });
-
-  const msg = `0x${Buffer.from(randomSecret, 'utf8').toString('hex')}`;
-  let signContent = `Web3MQ wants you to sign in with your Ethereum account:
-${address}
-Sign-In With Ethereum Example Statement
-URI: https://swapchat.me
-Version: 1
-Chain ID: 1
-Nonce: ${msg}
-Issued At: 2022-05-23T12:52:57.500Z
-Expiration Time: 2022-05-25T12:52:57.489Z`;
-  // @ts-ignore
-  const signature = await ethereum.request({
-    method: 'personal_sign',
-    params: [signContent, address, 'swapchat'],
-  });
-
-  return {
-    login_random_secret: randomSecret,
-    wallet_address: address,
-    signature,
-  };
-}
-getParams();
+```tsx
+<button
+  onClick={() => {
+    client.channel.createRoom();
+  }}>
+  createGroup
+</button>
 ```
 
-> There are two ways to init client
-
-### Initialize the client with parameters
-
-```typescript
-import { Web2MQ } from 'web3-mq';
-
-const client = Web2MQ.Client.getInstance({
-  login_random_secret: randomSecret,
-  wallet_address: address,
-  signature,
-});
-```
-
-#### or
-
-### Initialize the client with login token
-
-```typescript
-import { Web2MQ } from "web3-mq";
-
-const {login} = Web2MQ;
-
-const  data = await login({
-  login_random_secret: randomSecret,
-  wallet_address: address,
-  signature,
-})
-const client = Web2MQ.Client.getInstance(token: data.access_token);
-```
-
-## Create Web2MQ chat room and send message
+## send message
 
 #### Code
 
-```typescript
-import { Web2MQ } from 'web3-mq';
-
-const { login } = Web2MQ;
-
-const client = Web2MQ.getInstance('YOUR_ACCESS_TOKEN');
-
-async function testSend() {
-  // 1st: Find a person you want to talk to
-  // Eg: SwapChatNFT's twitter
-  const data = await register({
-    platform: 'twitter',
-    username: 'SwapChatNFT',
-  });
-
-  // 2nd: Create room and set avtive room
-  await client.channel.createRoom({
-    user_id: data.user_id,
-  });
-
-  // 3rd: Get active room from client context
-  const activeRoom = client.channel.active;
-  // 4th: send a message to active room
-  client.send(hello, false);
-}
-
-testSend();
+```tsx
+<button
+  onClick={() => {
+    client.message.sendMessage('your send message');
+  }}>
+  sendMessage
+</button>
 ```

@@ -42,47 +42,9 @@
             "items": [
               {
                 "type": "link",
-                "label": "Intro",
-                "href": "/docs/Web3MQ-SDK/JS-SDK/Intro",
-                "docId": "Web3MQ-SDK/JS-SDK/Intro"
-              },
-              {
-                "type": "link",
                 "label": "QuickStart",
                 "href": "/docs/Web3MQ-SDK/JS-SDK/quickStart/",
                 "docId": "Web3MQ-SDK/JS-SDK/quickStart/quickStart"
-              },
-              {
-                "type": "category",
-                "label": "Authorization",
-                "collapsible": true,
-                "collapsed": true,
-                "items": [
-                  {
-                    "type": "link",
-                    "label": "Intro",
-                    "href": "/docs/Web3MQ-SDK/JS-SDK/authorization/Intro",
-                    "docId": "Web3MQ-SDK/JS-SDK/authorization/Intro"
-                  },
-                  {
-                    "type": "link",
-                    "label": "MetaMask",
-                    "href": "/docs/Web3MQ-SDK/JS-SDK/authorization/MetaMask",
-                    "docId": "Web3MQ-SDK/JS-SDK/authorization/MetaMask"
-                  },
-                  {
-                    "type": "link",
-                    "label": "Slope",
-                    "href": "/docs/Web3MQ-SDK/JS-SDK/authorization/Slope",
-                    "docId": "Web3MQ-SDK/JS-SDK/authorization/Slope"
-                  },
-                  {
-                    "type": "link",
-                    "label": "Walletconnect",
-                    "href": "/docs/Web3MQ-SDK/JS-SDK/authorization/Walletconnect",
-                    "docId": "Web3MQ-SDK/JS-SDK/authorization/Walletconnect"
-                  }
-                ]
               },
               {
                 "type": "link",
@@ -104,6 +66,12 @@
               },
               {
                 "type": "link",
+                "label": "Authorization",
+                "href": "/docs/Web3MQ-SDK/JS-SDK/authorization/",
+                "docId": "Web3MQ-SDK/JS-SDK/authorization/authorization"
+              },
+              {
+                "type": "link",
                 "label": "Contact",
                 "href": "/docs/Web3MQ-SDK/JS-SDK/contact/",
                 "docId": "Web3MQ-SDK/JS-SDK/contact/contact"
@@ -116,95 +84,27 @@
               },
               {
                 "type": "link",
-                "label": "Event Center",
-                "href": "/docs/Web3MQ-SDK/JS-SDK/eventCenter/",
-                "docId": "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter"
+                "label": "Notify",
+                "href": "/docs/Web3MQ-SDK/JS-SDK/notify/",
+                "docId": "Web3MQ-SDK/JS-SDK/notify/notify"
               },
               {
                 "type": "link",
-                "label": "TypeList",
-                "href": "/docs/Web3MQ-SDK/JS-SDK/types/",
-                "docId": "Web3MQ-SDK/JS-SDK/types/types"
+                "label": "Encryption",
+                "href": "/docs/Web3MQ-SDK/JS-SDK/encryption/",
+                "docId": "Web3MQ-SDK/JS-SDK/encryption/encryption"
               },
               {
                 "type": "link",
                 "label": "Utils",
                 "href": "/docs/Web3MQ-SDK/JS-SDK/utils/",
                 "docId": "Web3MQ-SDK/JS-SDK/utils/utils"
-              }
-            ]
-          },
-          {
-            "type": "category",
-            "label": "JS-SDK-V2",
-            "collapsible": true,
-            "collapsed": true,
-            "items": [
-              {
-                "type": "link",
-                "label": "QuickStart",
-                "href": "/docs/Web3MQ-SDK/JS-SDK-V2/quickStart/",
-                "docId": "Web3MQ-SDK/JS-SDK-V2/quickStart/quickStart"
-              },
-              {
-                "type": "link",
-                "label": "Client",
-                "href": "/docs/Web3MQ-SDK/JS-SDK-V2/client/",
-                "docId": "Web3MQ-SDK/JS-SDK-V2/client/client"
-              },
-              {
-                "type": "link",
-                "label": "Channel",
-                "href": "/docs/Web3MQ-SDK/JS-SDK-V2/channel/",
-                "docId": "Web3MQ-SDK/JS-SDK-V2/channel/channel"
-              },
-              {
-                "type": "link",
-                "label": "Message",
-                "href": "/docs/Web3MQ-SDK/JS-SDK-V2/message/",
-                "docId": "Web3MQ-SDK/JS-SDK-V2/message/message"
-              },
-              {
-                "type": "link",
-                "label": "Authorization",
-                "href": "/docs/Web3MQ-SDK/JS-SDK-V2/authorization/",
-                "docId": "Web3MQ-SDK/JS-SDK-V2/authorization/authorization"
-              },
-              {
-                "type": "link",
-                "label": "Contact",
-                "href": "/docs/Web3MQ-SDK/JS-SDK-V2/contact/",
-                "docId": "Web3MQ-SDK/JS-SDK-V2/contact/contact"
-              },
-              {
-                "type": "link",
-                "label": "User",
-                "href": "/docs/Web3MQ-SDK/JS-SDK-V2/user/",
-                "docId": "Web3MQ-SDK/JS-SDK-V2/user/user"
-              },
-              {
-                "type": "link",
-                "label": "Notify",
-                "href": "/docs/Web3MQ-SDK/JS-SDK-V2/notify/",
-                "docId": "Web3MQ-SDK/JS-SDK-V2/notify/notify"
-              },
-              {
-                "type": "link",
-                "label": "Encryption",
-                "href": "/docs/Web3MQ-SDK/JS-SDK-V2/encryption/",
-                "docId": "Web3MQ-SDK/JS-SDK-V2/encryption/encryption"
-              },
-              {
-                "type": "link",
-                "label": "Utils",
-                "href": "/docs/Web3MQ-SDK/JS-SDK-V2/utils/",
-                "docId": "Web3MQ-SDK/JS-SDK-V2/utils/utils"
               },
               {
                 "type": "link",
                 "label": "TypeList",
-                "href": "/docs/Web3MQ-SDK/JS-SDK-V2/types/",
-                "docId": "Web3MQ-SDK/JS-SDK-V2/types/types"
+                "href": "/docs/Web3MQ-SDK/JS-SDK/types/",
+                "docId": "Web3MQ-SDK/JS-SDK/types/types"
               }
             ]
           },
@@ -574,94 +474,10 @@
       "description": "_",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-SDK/JS-SDK-V2/authorization/authorization": {
-      "id": "Web3MQ-SDK/JS-SDK-V2/authorization/authorization",
+    "Web3MQ-SDK/JS-SDK/authorization/authorization": {
+      "id": "Web3MQ-SDK/JS-SDK/authorization/authorization",
       "title": "Authorization",
       "description": "Methods",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/JS-SDK-V2/channel/channel": {
-      "id": "Web3MQ-SDK/JS-SDK-V2/channel/channel",
-      "title": "Channel",
-      "description": "Properties",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/JS-SDK-V2/client/client": {
-      "id": "Web3MQ-SDK/JS-SDK-V2/client/client",
-      "title": "Client",
-      "description": "Events",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/JS-SDK-V2/contact/contact": {
-      "id": "Web3MQ-SDK/JS-SDK-V2/contact/contact",
-      "title": "Contact",
-      "description": "Properties",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/JS-SDK-V2/encryption/encryption": {
-      "id": "Web3MQ-SDK/JS-SDK-V2/encryption/encryption",
-      "title": "Encryption",
-      "description": "Methods",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/JS-SDK-V2/message/message": {
-      "id": "Web3MQ-SDK/JS-SDK-V2/message/message",
-      "title": "Message",
-      "description": "Properties",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/JS-SDK-V2/notify/notify": {
-      "id": "Web3MQ-SDK/JS-SDK-V2/notify/notify",
-      "title": "Notify",
-      "description": "Properties",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/JS-SDK-V2/quickStart/quickStart": {
-      "id": "Web3MQ-SDK/JS-SDK-V2/quickStart/quickStart",
-      "title": "QuickStart",
-      "description": "Let's learn how to use and successfully send the first message in the chat room we created",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/JS-SDK-V2/types/types": {
-      "id": "Web3MQ-SDK/JS-SDK-V2/types/types",
-      "title": "Type List",
-      "description": "EventTypes",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/JS-SDK-V2/user/user": {
-      "id": "Web3MQ-SDK/JS-SDK-V2/user/user",
-      "title": "User",
-      "description": "Methods",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/JS-SDK-V2/utils/utils": {
-      "id": "Web3MQ-SDK/JS-SDK-V2/utils/utils",
-      "title": "Utils",
-      "description": "Methods",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/JS-SDK/authorization/Intro": {
-      "id": "Web3MQ-SDK/JS-SDK/authorization/Intro",
-      "title": "Intro",
-      "description": "Includes integration of multiple wallet classes",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/JS-SDK/authorization/MetaMask": {
-      "id": "Web3MQ-SDK/JS-SDK/authorization/MetaMask",
-      "title": "MetaMask",
-      "description": "Properties",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/JS-SDK/authorization/Slope": {
-      "id": "Web3MQ-SDK/JS-SDK/authorization/Slope",
-      "title": "Slope",
-      "description": "Properties",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/JS-SDK/authorization/Walletconnect": {
-      "id": "Web3MQ-SDK/JS-SDK/authorization/Walletconnect",
-      "title": "Walletconnect",
-      "description": "Properties",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK/channel/channel": {
@@ -682,21 +498,21 @@
       "description": "Properties",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter": {
-      "id": "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter",
-      "title": "eventCenter",
-      "description": "Usage",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/JS-SDK/Intro": {
-      "id": "Web3MQ-SDK/JS-SDK/Intro",
-      "title": "Intro",
-      "description": "web3-mq-js is the official JavaScript client for Web3MQ, a service for building chat applications.",
+    "Web3MQ-SDK/JS-SDK/encryption/encryption": {
+      "id": "Web3MQ-SDK/JS-SDK/encryption/encryption",
+      "title": "Encryption",
+      "description": "Methods",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK/message/message": {
       "id": "Web3MQ-SDK/JS-SDK/message/message",
-      "title": "Messages",
+      "title": "Message",
+      "description": "Properties",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/JS-SDK/notify/notify": {
+      "id": "Web3MQ-SDK/JS-SDK/notify/notify",
+      "title": "Notify",
       "description": "Properties",
       "sidebar": "tutorialSidebar"
     },
@@ -708,20 +524,20 @@
     },
     "Web3MQ-SDK/JS-SDK/types/types": {
       "id": "Web3MQ-SDK/JS-SDK/types/types",
-      "title": "types",
-      "description": "---",
+      "title": "Type List",
+      "description": "EventTypes",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK/user/user": {
       "id": "Web3MQ-SDK/JS-SDK/user/user",
       "title": "User",
-      "description": "Properties",
+      "description": "Methods",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK/utils/utils": {
       "id": "Web3MQ-SDK/JS-SDK/utils/utils",
       "title": "Utils",
-      "description": "register()",
+      "description": "Methods",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/Python-SDK/chat": {

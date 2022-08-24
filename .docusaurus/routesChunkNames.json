@@ -29,7 +29,7 @@
     "component": "component---theme-mdx-page-1-f-3-b90",
     "content": "content---markdown-page-393-028"
   },
-  "/docs-efb": {
+  "/docs-de8": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
   },
@@ -113,65 +113,9 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-rest-ful-api-user-user-registercb-6-1d2"
   },
-  "/docs/Web3MQ-SDK/JS-SDK-V2/authorization/-5ad": {
+  "/docs/Web3MQ-SDK/JS-SDK/authorization/-ac5": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-js-sdk-v-2-authorization-bbe-65b"
-  },
-  "/docs/Web3MQ-SDK/JS-SDK-V2/channel/-669": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-js-sdk-v-2-channel-429-dc9"
-  },
-  "/docs/Web3MQ-SDK/JS-SDK-V2/client/-9b5": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-js-sdk-v-2-client-b-71-879"
-  },
-  "/docs/Web3MQ-SDK/JS-SDK-V2/contact/-eb4": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-js-sdk-v-2-contact-5-b-5-40a"
-  },
-  "/docs/Web3MQ-SDK/JS-SDK-V2/encryption/-a00": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-js-sdk-v-2-encryption-7-f-9-51a"
-  },
-  "/docs/Web3MQ-SDK/JS-SDK-V2/message/-d2f": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-js-sdk-v-2-message-3-c-1-a3c"
-  },
-  "/docs/Web3MQ-SDK/JS-SDK-V2/notify/-51e": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-js-sdk-v-2-notify-d-98-ebe"
-  },
-  "/docs/Web3MQ-SDK/JS-SDK-V2/quickStart/-adf": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-js-sdk-v-2-quick-start-719-845"
-  },
-  "/docs/Web3MQ-SDK/JS-SDK-V2/types/-48d": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-js-sdk-v-2-types-e-60-174"
-  },
-  "/docs/Web3MQ-SDK/JS-SDK-V2/user/-7a8": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-js-sdk-v-2-user-ec-1-d84"
-  },
-  "/docs/Web3MQ-SDK/JS-SDK-V2/utils/-f74": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-js-sdk-v-2-utils-e-57-1bc"
-  },
-  "/docs/Web3MQ-SDK/JS-SDK/authorization/Intro-022": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-js-sdk-authorization-introb-95-294"
-  },
-  "/docs/Web3MQ-SDK/JS-SDK/authorization/MetaMask-24e": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-js-sdk-authorization-meta-mask-629-133"
-  },
-  "/docs/Web3MQ-SDK/JS-SDK/authorization/Slope-7f4": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-js-sdk-authorization-slope-728-192"
-  },
-  "/docs/Web3MQ-SDK/JS-SDK/authorization/Walletconnect-4a4": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-js-sdk-authorization-walletconnect-12-c-f5d"
+    "content": "content---docs-web-3-mq-sdk-js-sdk-authorization-cfe-15b"
   },
   "/docs/Web3MQ-SDK/JS-SDK/channel/-873": {
     "component": "component---theme-doc-item-178-a40",
@@ -185,17 +129,17 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-sdk-js-sdk-contact-ece-988"
   },
-  "/docs/Web3MQ-SDK/JS-SDK/eventCenter/-0b7": {
+  "/docs/Web3MQ-SDK/JS-SDK/encryption/-7b4": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-js-sdk-event-center-79-b-3be"
-  },
-  "/docs/Web3MQ-SDK/JS-SDK/Intro-b78": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-js-sdk-intro-685-875"
+    "content": "content---docs-web-3-mq-sdk-js-sdk-encryption-b-78-da2"
   },
   "/docs/Web3MQ-SDK/JS-SDK/message/-fd8": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-sdk-js-sdk-message-4-e-4-e6b"
+  },
+  "/docs/Web3MQ-SDK/JS-SDK/notify/-e4e": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-js-sdk-notify-8-b-6-f1d"
   },
   "/docs/Web3MQ-SDK/JS-SDK/quickStart/-332": {
     "component": "component---theme-doc-item-178-a40",

@@ -50,7 +50,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','efb'),
+    component: ComponentCreator('/docs','de8'),
     routes: [
       {
         path: '/docs/Intro',
@@ -173,92 +173,8 @@ export default [
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-SDK/JS-SDK-V2/authorization/',
-        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK-V2/authorization/','5ad'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-SDK/JS-SDK-V2/channel/',
-        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK-V2/channel/','669'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-SDK/JS-SDK-V2/client/',
-        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK-V2/client/','9b5'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-SDK/JS-SDK-V2/contact/',
-        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK-V2/contact/','eb4'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-SDK/JS-SDK-V2/encryption/',
-        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK-V2/encryption/','a00'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-SDK/JS-SDK-V2/message/',
-        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK-V2/message/','d2f'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-SDK/JS-SDK-V2/notify/',
-        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK-V2/notify/','51e'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-SDK/JS-SDK-V2/quickStart/',
-        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK-V2/quickStart/','adf'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-SDK/JS-SDK-V2/types/',
-        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK-V2/types/','48d'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-SDK/JS-SDK-V2/user/',
-        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK-V2/user/','7a8'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-SDK/JS-SDK-V2/utils/',
-        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK-V2/utils/','f74'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-SDK/JS-SDK/authorization/Intro',
-        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/authorization/Intro','022'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-SDK/JS-SDK/authorization/MetaMask',
-        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/authorization/MetaMask','24e'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-SDK/JS-SDK/authorization/Slope',
-        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/authorization/Slope','7f4'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-SDK/JS-SDK/authorization/Walletconnect',
-        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/authorization/Walletconnect','4a4'),
+        path: '/docs/Web3MQ-SDK/JS-SDK/authorization/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/authorization/','ac5'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
@@ -281,20 +197,20 @@ export default [
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-SDK/JS-SDK/eventCenter/',
-        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/eventCenter/','0b7'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-SDK/JS-SDK/Intro',
-        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/Intro','b78'),
+        path: '/docs/Web3MQ-SDK/JS-SDK/encryption/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/encryption/','7b4'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
         path: '/docs/Web3MQ-SDK/JS-SDK/message/',
         component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/message/','fd8'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/JS-SDK/notify/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/notify/','e4e'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
