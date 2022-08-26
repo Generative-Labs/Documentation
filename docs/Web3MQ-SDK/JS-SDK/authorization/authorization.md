@@ -6,19 +6,19 @@ position: 5
 
 ## Methods
 
-| name          | type     | Parameters Description | response                                                           |
-| ------------- | -------- | ---------------------- | ------------------------------------------------------------------ |
-| SignMetaMask  | function | (domainUrl:string)     | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK/types/#keypairstype)     |
-| getEthAccount | function | none                   | [EthAccountType](/docs/Web3MQ-SDK/JS-SDK/types/#ethaccounttype) |
+| name          | type     | Parameters Description                  | response                                                        |
+| ------------- | -------- | --------------------------------------- | --------------------------------------------------------------- |
+| SignMetaMask  | function | (domainUrl:string, connectUrl?: string) | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK/types/#keypairstype)     |
+| getEthAccount | function | none                                    | [EthAccountType](/docs/Web3MQ-SDK/JS-SDK/types/#ethaccounttype) |
 
 ## GetEthAccount
 
 ### Code
 
 ```tsx
-import { MetaMask } from 'web3-mq';
+import { Register } from 'web3-mq';
 
-const account = await MetaMask.EthAccountType();
+const account = await Register.EthAccountType();
 
 console.log(account);
 ```
@@ -28,10 +28,14 @@ console.log(account);
 ### Code
 
 ```tsx
-import { MetaMask } from 'web3-mq';
+import { Register } from 'web3-mq';
 
-const { PrivateKey, PublicKey } = await MetaMask.signMetaMask(
-  'https://www.web3mq.com' // your_domain_url
+// request host url
+const HostURL = 'us-west-2.web3mq.com';
+
+const { PrivateKey, PublicKey } = await Register.signMetaMask(
+  'https://www.web3mq.com', // your domain url
+  HostURL // register domain url
 );
 
 console.log(PrivateKey, PublicKey);

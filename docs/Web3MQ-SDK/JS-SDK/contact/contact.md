@@ -6,19 +6,19 @@ position: 6
 
 ## Properties
 
-| name                     | type                                                                                     | Description                  |
-| ------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------- |
+| name                     | type                                                                                  | Description                  |
+| ------------------------ | ------------------------------------------------------------------------------------- | ---------------------------- |
 | contactList              | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype) [ ] \| null | contact list                 |
 | myFriendRequestList      | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)[ ] \| null  | i send friend requests       |
 | receiveFriendRequestList | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)[ ] \| null  | receive friend requests list |
 
 ## Methods
 
-| name                        | type     | Parameters Description                                                                       | response                                                                         |
-| --------------------------- | -------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| searchContact               | function | (walletAddress: string)                                                                      | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype) [ ] |
-| sendFriend                  | function | (target_userid: string)                                                                      | {code: 0, msg: 'ok'}                                                             |
-| operationFriend             | function | (target_userid: string, action?: [ActionType](/docs/Web3MQ-SDK/JS-SDK/types/#actiontype)) | {code: 0, msg: 'ok'}                                                             |
+| name                        | type     | Parameters Description                                                                    | response                                                                      |
+| --------------------------- | -------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| searchContact               | function | (walletAddress: string)                                                                   | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype) [ ] |
+| sendFriend                  | function | (target_userid: string)                                                                   | {code: 0, msg: 'ok'}                                                          |
+| operationFriend             | function | (target_userid: string, action?: [ActionType](/docs/Web3MQ-SDK/JS-SDK/types/#actiontype)) | {code: 0, msg: 'ok'}                                                          |
 | getContactList              | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                   | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)     |
 | getMyFriendRequestList      | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                   | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)     |
 | getReceiveFriendRequestList | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                   | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)     |
@@ -26,14 +26,16 @@ position: 6
 ## init Client
 
 ```tsx
-import { Client, MetaMask } from 'web3-mq';
+import { Client, Register } from 'web3-mq';
+
+// ws and request host url
+const HostURL = 'us-west-2.web3mq.com';
 // sign MetaMask get keys
-const { PrivateKey, PublicKey } = await MetaMask.signMetaMask(
-  'https://www.web3mq.com' // your_domain_url
+const { PrivateKey, PublicKey } = await Register.signMetaMask(
+  'https://www.web3mq.com', // your_domain_url
+  HostURL
 );
 const keys = { PrivateKey, PublicKey };
-// ws host url
-const HostURL = 'us-west-2.web3mq.com';
 // init client
 const client = Client.getInstance(keys, HostURL);
 
@@ -150,7 +152,7 @@ interface IProps {
 
 export const Child = (props: IProps) => {
   const { client } = props;
-  
+
   return (
     <button
       onClick={async () => {

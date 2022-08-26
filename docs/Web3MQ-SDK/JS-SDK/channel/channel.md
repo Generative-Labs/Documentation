@@ -24,14 +24,15 @@ position: 3
 ## init Client
 
 ```tsx
-import { Client, MetaMask } from 'web3-mq';
+import { Client, Register } from 'web3-mq';
+// ws and request host url
+const HostURL = 'us-west-2.web3mq.com';
 // sign MetaMask get keys
-const { PrivateKey, PublicKey } = await MetaMask.signMetaMask(
-  'https://www.web3mq.com' // your_domain_url
+const { PrivateKey, PublicKey } = await Register.signMetaMask(
+  'https://www.web3mq.com', // your_domain_url
+  HostURL
 );
 const keys = { PrivateKey, PublicKey };
-// ws host url
-const HostURL = 'us-west-2.web3mq.com';
 // init client
 const client = Client.getInstance(keys, HostURL);
 

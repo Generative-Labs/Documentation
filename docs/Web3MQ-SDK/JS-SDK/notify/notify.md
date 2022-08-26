@@ -6,27 +6,29 @@ position: 8
 
 ## Properties
 
-| name             | type                                                                           | Description       |
-| ---------------- | ------------------------------------------------------------------------------ | ----------------- |
+| name             | type                                                                        | Description       |
+| ---------------- | --------------------------------------------------------------------------- | ----------------- |
 | notificationList | [NotifyResponse](/docs/Web3MQ-SDK/JS-SDK/types/#notifyresponse) [ ] \| null | notification list |
 
 ## Methods
 
-| name                     | type     | Parameters Description                                                                       | response                  |
-| ------------------------ | -------- | -------------------------------------------------------------------------------------------- | ------------------------- |
+| name                     | type     | Parameters Description                                                                    | response                  |
+| ------------------------ | -------- | ----------------------------------------------------------------------------------------- | ------------------------- |
 | changeNotificationStatus | function | messages: string[], status: [MessageStatus](/docs/Web3MQ-SDK/JS-SDK/types/#messagestatus) | { "code": 0, "msg": "ok"} |
 
 ## init Client
 
 ```tsx
-import { Client, MetaMask } from 'web3-mq';
+import { Client, Register } from 'web3-mq';
+
+// ws and request host url
+const HostURL = 'us-west-2.web3mq.com';
 // sign MetaMask get keys
-const { PrivateKey, PublicKey } = await MetaMask.signMetaMask(
-  'https://www.web3mq.com' // your_domain_url
+const { PrivateKey, PublicKey } = await Register.signMetaMask(
+  'https://www.web3mq.com', // your_domain_url
+  HostURL
 );
 const keys = { PrivateKey, PublicKey };
-// ws host url
-const HostURL = 'us-west-2.web3mq.com';
 // init client
 const client = Client.getInstance(keys, HostURL);
 
@@ -78,7 +80,7 @@ interface IProps {
 
 export const Child = (props: IProps) => {
   const { client } = props;
-  
+
   const handleEvent = (event: { type: any }) => {
     if (event.type === 'notification.getList' || event.type === 'message.new') {
       console.log(client.notify.notificationList);

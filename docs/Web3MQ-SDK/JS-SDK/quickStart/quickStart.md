@@ -58,7 +58,7 @@ yarn add web3-mq
 
 ```tsx
 import React, { useMemo, useState, useEffect } from 'react';
-import { MetaMask, Client, KeyPairsType } from 'web3-mq';
+import { Register, Client, KeyPairsType } from 'web3-mq';
 
 // Child components
 interface IProps {
@@ -185,7 +185,7 @@ const App: React.FC = () => {
   const [keys, setKeys] = useState<KeyPairsType | null>(hasKeys);
 
   const signMetaMask = async () => {
-    const { PrivateKey, PublicKey } = await MetaMask.signMetaMask(
+    const { PrivateKey, PublicKey } = await Register.signMetaMask(
       'https://www.web3mq.com'
     );
     localStorage.setItem('PRIVATE_KEY', PrivateKey);
