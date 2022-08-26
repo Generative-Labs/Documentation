@@ -8,7 +8,7 @@ position: 19
 
 | name                   | type     | Parameters Description            | response                                                       |
 | ---------------------- | -------- | --------------------------------- | -------------------------------------------------------------- |
-| GenerateEd25519KeyPair | function | none                              | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#keypairstype) |
+| GenerateEd25519KeyPair | function | none                              | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK/types/#keypairstype) |
 | DownloadKeyPair        | function | (text: string, filename: string ) | none                                                           |
 
 ## GenerateEd25519KeyPair

@@ -8,18 +8,18 @@ position: 3
 
 | name          | type                                                                                 | Description            |
 | ------------- | ------------------------------------------------------------------------------------ | ---------------------- |
-| channelList   | [activechannelType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#activechanneltype) [ ] \| null | channel list           |
-| activeChannel | [activechannelType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#activechanneltype) \| null     | current active channel |
+| channelList   | [activechannelType](/docs/Web3MQ-SDK/JS-SDK/types/#activechanneltype) [ ] \| null | channel list           |
+| activeChannel | [activechannelType](/docs/Web3MQ-SDK/JS-SDK/types/#activechanneltype) \| null     | current active channel |
 
 ## Methods
 
 | name               | type     | Parameters Description                                                   | response                                                                        |
 | ------------------ | -------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
 | createRoom         | function | none                                                                     | none                                                                            |
-| queryChannels      | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK-V2/types/#pageparams)               | none                                                                            |
-| setActiveChannel   | function | [activechannelType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#activechanneltype) | none                                                                            |
-| getGroupMemberList | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK-V2/types/#pageparams)               | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#contactlistitemtype)[ ] |
-| inviteGroupMember  | function | (members: string[])                                                      | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#contactlistitemtype)[ ] |
+| queryChannels      | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)               | none                                                                            |
+| setActiveChannel   | function | [activechannelType](/docs/Web3MQ-SDK/JS-SDK/types/#activechanneltype) | none                                                                            |
+| getGroupMemberList | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)               | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)[ ] |
+| inviteGroupMember  | function | (members: string[])                                                      | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)[ ] |
 
 ## init Client
 

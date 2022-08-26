@@ -8,9 +8,9 @@ position: 7
 
 | name            | type     | Parameters Description                 | response                                                                             |
 | --------------- | -------- | -------------------------------------- | ------------------------------------------------------------------------------------ |
-| searchUsers     | function | (walletAddress: string)                | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK-V2/types/#searchusersresponse)         |
-| getMyProfile    | function | none                                   | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK-V2/types/#searchusersresponse)         |
-| updateMyProfile | function | (nickname: string, avatar_url: string) | [UpdateMyProfileResponse](/docs/Web3MQ-SDK/JS-SDK-V2/types/#updatemyprofileresponse) |
+| searchUsers     | function | (walletAddress: string)                | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)         |
+| getMyProfile    | function | none                                   | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)         |
+| updateMyProfile | function | (nickname: string, avatar_url: string) | [UpdateMyProfileResponse](/docs/Web3MQ-SDK/JS-SDK/types/#updatemyprofileresponse) |
 
 ## init Client
 

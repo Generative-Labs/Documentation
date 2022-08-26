@@ -136,6 +136,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/eventCenter/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-SDK/JS-SDK/message/message",
               "path": "/docs/Web3MQ-SDK/JS-SDK/message/",
               "sidebar": "tutorialSidebar"

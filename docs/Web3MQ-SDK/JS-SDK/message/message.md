@@ -8,14 +8,14 @@ position: 4
 
 | name        | type                                                                             | Description  |
 | ----------- | -------------------------------------------------------------------------------- | ------------ |
-| messageList | [MessageListItem](/docs/Web3MQ-SDK/JS-SDK-V2/types/#messagelistitem) [ ] \| null | message list |
+| messageList | [MessageListItem](/docs/Web3MQ-SDK/JS-SDK/types/#messagelistitem) [ ] \| null | message list |
 
 ## Methods
 
 | name                | type     | Parameters Description                                                                         | response |
 | ------------------- | -------- | ---------------------------------------------------------------------------------------------- | -------- |
-| getMessageList      | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK-V2/types/#pageparams)                                     | none     |
-| changeMessageStatus | function | (messages: string[], status: [MessageStatus](/docs/Web3MQ-SDK/JS-SDK-V2/types/#messagestatus)) | none     |
+| getMessageList      | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                     | none     |
+| changeMessageStatus | function | (messages: string[], status: [MessageStatus](/docs/Web3MQ-SDK/JS-SDK/types/#messagestatus)) | none     |
 | sendMessage         | function | (msg: string)                                                                                  | none     |
 | receive             | function | receive message callback                                                                       | none     |
 

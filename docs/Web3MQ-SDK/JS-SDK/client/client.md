@@ -8,27 +8,27 @@ position: 2
 
 | name                                            | type     | Parameters Description |
 | ----------------------------------------------- | -------- | ---------------------- |
-| [on](/docs/Web3MQ-SDK/JS-SDK-V2/client/#on)     | function | create pubsub          |
-| [off](/docs/Web3MQ-SDK/JS-SDK-V2/client/#off)   | function | cancel pubsub          |
-| [once](/docs/Web3MQ-SDK/JS-SDK-V2/client/#once) | function | once pubsub            |
-| [emit](/docs/Web3MQ-SDK/JS-SDK-V2/client/#emit) | function | emit pubsub            |
+| [on](/docs/Web3MQ-SDK/JS-SDK/client/#on)     | function | create pubsub          |
+| [off](/docs/Web3MQ-SDK/JS-SDK/client/#off)   | function | cancel pubsub          |
+| [once](/docs/Web3MQ-SDK/JS-SDK/client/#once) | function | once pubsub            |
+| [emit](/docs/Web3MQ-SDK/JS-SDK/client/#emit) | function | emit pubsub            |
 
 ## Properties
 
 | name                                          | type                                                           | Parameters Description        |
 | --------------------------------------------- | -------------------------------------------------------------- | ----------------------------- |
-| keys                                          | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#keypairstype) | your PrivateKey and PublicKey |
+| keys                                          | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK/types/#keypairstype) | your PrivateKey and PublicKey |
 | listeners                                     | {}                                                             | pubsub list                   |
-| [channel](/docs/Web3MQ-SDK/JS-SDK-V2/channel) | Channel Class                                                  | The channel correlation       |
-| [message](/docs/Web3MQ-SDK/JS-SDK-V2/message) | Message Class                                                  | The messages correlation      |
-| [user](/docs/Web3MQ-SDK/JS-SDK-V2/user)       | User Class                                                     | The user correlation          |
-| [contact](/docs/Web3MQ-SDK/JS-SDK-V2/contact) | Contact Class                                                  | The contact correlation       |
+| [channel](/docs/Web3MQ-SDK/JS-SDK/channel) | Channel Class                                                  | The channel correlation       |
+| [message](/docs/Web3MQ-SDK/JS-SDK/message) | Message Class                                                  | The messages correlation      |
+| [user](/docs/Web3MQ-SDK/JS-SDK/user)       | User Class                                                     | The user correlation          |
+| [contact](/docs/Web3MQ-SDK/JS-SDK/contact) | Contact Class                                                  | The contact correlation       |
 
 ## Methods
 
 | name                                                          | type     | Parameters Description |
 | ------------------------------------------------------------- | -------- | ---------------------- |
-| [getInstance](/docs/Web3MQ-SDK/JS-SDK-V2/client/#getInstance) | function | LoginParams or string  |
+| [getInstance](/docs/Web3MQ-SDK/JS-SDK/client/#getInstance) | function | LoginParams or string  |
 
 ## Methods
 

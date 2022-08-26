@@ -8,8 +8,8 @@ position: 5
 
 | name          | type     | Parameters Description | response                                                           |
 | ------------- | -------- | ---------------------- | ------------------------------------------------------------------ |
-| SignMetaMask  | function | (domainUrl:string)     | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#keypairstype)     |
-| getEthAccount | function | none                   | [EthAccountType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#ethaccounttype) |
+| SignMetaMask  | function | (domainUrl:string)     | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK/types/#keypairstype)     |
+| getEthAccount | function | none                   | [EthAccountType](/docs/Web3MQ-SDK/JS-SDK/types/#ethaccounttype) |
 
 ## GetEthAccount
 

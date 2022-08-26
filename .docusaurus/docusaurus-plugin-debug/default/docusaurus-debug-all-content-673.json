@@ -633,6 +633,30 @@
               }
             },
             {
+              "unversionedId": "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter",
+              "id": "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter",
+              "title": "eventCenter",
+              "description": "Usage",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK/eventCenter/eventCenter.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK/eventCenter",
+              "slug": "/Web3MQ-SDK/JS-SDK/eventCenter/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK/eventCenter/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 7
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Type List",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/types/"
+              },
+              "next": {
+                "title": "Intro",
+                "permalink": "/docs/Web3MQ-SDK/Python-SDK/intro"
+              }
+            },
+            {
               "unversionedId": "Web3MQ-SDK/JS-SDK/message/message",
               "id": "Web3MQ-SDK/JS-SDK/message/message",
               "title": "Message",
@@ -724,8 +748,8 @@
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK/utils/"
               },
               "next": {
-                "title": "Intro",
-                "permalink": "/docs/Web3MQ-SDK/Python-SDK/intro"
+                "title": "eventCenter",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/eventCenter/"
               }
             },
             {
@@ -815,8 +839,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Type List",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/types/"
+                "title": "eventCenter",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/eventCenter/"
               },
               "next": {
                 "title": "Quickstart",
@@ -1192,6 +1216,11 @@
                         "type": "doc",
                         "label": "TypeList",
                         "id": "Web3MQ-SDK/JS-SDK/types/types"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Event Center",
+                        "id": "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter"
                       }
                     ]
                   },

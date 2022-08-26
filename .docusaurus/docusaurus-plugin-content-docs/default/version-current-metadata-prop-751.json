@@ -105,6 +105,12 @@
                 "label": "TypeList",
                 "href": "/docs/Web3MQ-SDK/JS-SDK/types/",
                 "docId": "Web3MQ-SDK/JS-SDK/types/types"
+              },
+              {
+                "type": "link",
+                "label": "Event Center",
+                "href": "/docs/Web3MQ-SDK/JS-SDK/eventCenter/",
+                "docId": "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter"
               }
             ]
           },
@@ -502,6 +508,12 @@
       "id": "Web3MQ-SDK/JS-SDK/encryption/encryption",
       "title": "Encryption",
       "description": "Methods",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter": {
+      "id": "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter",
+      "title": "eventCenter",
+      "description": "Usage",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK/message/message": {

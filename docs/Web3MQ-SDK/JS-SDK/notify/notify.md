@@ -8,13 +8,13 @@ position: 8
 
 | name             | type                                                                           | Description       |
 | ---------------- | ------------------------------------------------------------------------------ | ----------------- |
-| notificationList | [NotifyResponse](/docs/Web3MQ-SDK/JS-SDK-V2/types/#notifyresponse) [ ] \| null | notification list |
+| notificationList | [NotifyResponse](/docs/Web3MQ-SDK/JS-SDK/types/#notifyresponse) [ ] \| null | notification list |
 
 ## Methods
 
 | name                     | type     | Parameters Description                                                                       | response                  |
 | ------------------------ | -------- | -------------------------------------------------------------------------------------------- | ------------------------- |
-| changeNotificationStatus | function | messages: string[], status: [MessageStatus](/docs/Web3MQ-SDK/JS-SDK-V2/types/#messagestatus) | { "code": 0, "msg": "ok"} |
+| changeNotificationStatus | function | messages: string[], status: [MessageStatus](/docs/Web3MQ-SDK/JS-SDK/types/#messagestatus) | { "code": 0, "msg": "ok"} |
 
 ## init Client
 

@@ -8,20 +8,20 @@ position: 6
 
 | name                     | type                                                                                     | Description                  |
 | ------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------- |
-| contactList              | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#contactlistitemtype) [ ] \| null | contact list                 |
-| myFriendRequestList      | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#contactlistitemtype)[ ] \| null  | i send friend requests       |
-| receiveFriendRequestList | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#contactlistitemtype)[ ] \| null  | receive friend requests list |
+| contactList              | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype) [ ] \| null | contact list                 |
+| myFriendRequestList      | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)[ ] \| null  | i send friend requests       |
+| receiveFriendRequestList | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)[ ] \| null  | receive friend requests list |
 
 ## Methods
 
 | name                        | type     | Parameters Description                                                                       | response                                                                         |
 | --------------------------- | -------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| searchContact               | function | (walletAddress: string)                                                                      | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#contactlistitemtype) [ ] |
+| searchContact               | function | (walletAddress: string)                                                                      | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype) [ ] |
 | sendFriend                  | function | (target_userid: string)                                                                      | {code: 0, msg: 'ok'}                                                             |
-| operationFriend             | function | (target_userid: string, action?: [ActionType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#actiontype)) | {code: 0, msg: 'ok'}                                                             |
-| getContactList              | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK-V2/types/#pageparams)                                   | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#contactlistitemtype)     |
-| getMyFriendRequestList      | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK-V2/types/#pageparams)                                   | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#contactlistitemtype)     |
-| getReceiveFriendRequestList | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK-V2/types/#pageparams)                                   | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK-V2/types/#contactlistitemtype)     |
+| operationFriend             | function | (target_userid: string, action?: [ActionType](/docs/Web3MQ-SDK/JS-SDK/types/#actiontype)) | {code: 0, msg: 'ok'}                                                             |
+| getContactList              | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                   | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)     |
+| getMyFriendRequestList      | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                   | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)     |
+| getReceiveFriendRequestList | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                   | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)     |
 
 ## init Client
 

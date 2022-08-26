@@ -29,7 +29,7 @@
     "component": "component---theme-mdx-page-1-f-3-b90",
     "content": "content---markdown-page-393-028"
   },
-  "/docs-de8": {
+  "/docs-79d": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
   },
@@ -132,6 +132,10 @@
   "/docs/Web3MQ-SDK/JS-SDK/encryption/-7b4": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-sdk-js-sdk-encryption-b-78-da2"
+  },
+  "/docs/Web3MQ-SDK/JS-SDK/eventCenter/-0b7": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-js-sdk-event-center-79-b-3be"
   },
   "/docs/Web3MQ-SDK/JS-SDK/message/-fd8": {
     "component": "component---theme-doc-item-178-a40",
