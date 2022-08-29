@@ -20,21 +20,18 @@
               "unversionedId": "Intro",
               "id": "Intro",
               "title": "Intro",
-              "description": "Wallet Direct Messaging",
+              "description": "Web3MQ is a decentralized secure communication protocol dedicated to becoming crypto-native communication infrastructure. We reconnect isolated social platforms with a unified inbox, enabling information to be freely generated, flowed and communicated across terminals. We support end-to-end encrypted communication with distributed storage, ensuring that no third party can access users' chat messages and that users have full ownership of their data.",
               "source": "@site/docs/Intro.md",
               "sourceDirName": ".",
               "slug": "/Intro",
               "permalink": "/docs/Intro",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 0,
-              "frontMatter": {
-                "sidebar_position": 0
-              },
+              "frontMatter": {},
               "sidebar": "tutorialSidebar",
-              "next": {
-                "title": "Jssdk",
-                "permalink": "/docs/Tutorial/JS-SDK"
+              "previous": {
+                "title": "Thread",
+                "permalink": "/docs/Web3MQ-UI-Components/coreComponent/Thread"
               }
             },
             {
@@ -53,10 +50,6 @@
                 "sidebar_position": 0
               },
               "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Intro",
-                "permalink": "/docs/Intro"
-              },
               "next": {
                 "title": "QuickStart",
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK/quickStart/"
@@ -1518,6 +1511,10 @@
               "previous": {
                 "title": "MessageList",
                 "permalink": "/docs/Web3MQ-UI-Components/coreComponent/MessageList"
+              },
+              "next": {
+                "title": "Intro",
+                "permalink": "/docs/Intro"
               }
             },
             {
@@ -1548,10 +1545,6 @@
           ],
           "sidebars": {
             "tutorialSidebar": [
-              {
-                "type": "doc",
-                "id": "Intro"
-              },
               {
                 "type": "category",
                 "label": "Tutorial",
@@ -1891,10 +1884,14 @@
                     ]
                   }
                 ]
+              },
+              {
+                "type": "doc",
+                "id": "Intro"
               }
             ]
           },
-          "mainDocId": "Intro",
+          "mainDocId": "Tutorial/JS-SDK",
           "categoryGeneratedIndices": []
         }
       ]
