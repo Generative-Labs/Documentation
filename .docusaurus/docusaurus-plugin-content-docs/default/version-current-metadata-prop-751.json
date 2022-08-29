@@ -113,62 +113,6 @@
                 "docId": "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter"
               }
             ]
-          },
-          {
-            "type": "category",
-            "label": "Python-SDK",
-            "collapsible": true,
-            "collapsed": true,
-            "items": [
-              {
-                "type": "link",
-                "label": "Intro",
-                "href": "/docs/Web3MQ-SDK/Python-SDK/intro",
-                "docId": "Web3MQ-SDK/Python-SDK/intro"
-              },
-              {
-                "type": "link",
-                "label": "Quickstart",
-                "href": "/docs/Web3MQ-SDK/Python-SDK/quickstart",
-                "docId": "Web3MQ-SDK/Python-SDK/quickstart"
-              },
-              {
-                "type": "link",
-                "label": "Register",
-                "href": "/docs/Web3MQ-SDK/Python-SDK/register",
-                "docId": "Web3MQ-SDK/Python-SDK/register"
-              },
-              {
-                "type": "link",
-                "label": "Login",
-                "href": "/docs/Web3MQ-SDK/Python-SDK/login",
-                "docId": "Web3MQ-SDK/Python-SDK/login"
-              },
-              {
-                "type": "link",
-                "label": "User",
-                "href": "/docs/Web3MQ-SDK/Python-SDK/userapi",
-                "docId": "Web3MQ-SDK/Python-SDK/userapi"
-              },
-              {
-                "type": "link",
-                "label": "Room",
-                "href": "/docs/Web3MQ-SDK/Python-SDK/roomapi",
-                "docId": "Web3MQ-SDK/Python-SDK/roomapi"
-              },
-              {
-                "type": "link",
-                "label": "Message",
-                "href": "/docs/Web3MQ-SDK/Python-SDK/messageapi",
-                "docId": "Web3MQ-SDK/Python-SDK/messageapi"
-              },
-              {
-                "type": "link",
-                "label": "Chat",
-                "href": "/docs/Web3MQ-SDK/Python-SDK/chat",
-                "docId": "Web3MQ-SDK/Python-SDK/chat"
-              }
-            ]
           }
         ]
       },
@@ -180,9 +124,114 @@
         "items": [
           {
             "type": "link",
-            "label": "Intro",
-            "href": "/docs/Web3MQ-RESTFul-API/Intro",
-            "docId": "Web3MQ-RESTFul-API/Intro"
+            "label": "Overview",
+            "href": "/docs/Web3MQ-API/Intro",
+            "docId": "Web3MQ-API/Intro"
+          },
+          {
+            "type": "category",
+            "label": "QuickStart",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "1. Generate key pairs",
+                "href": "/docs/Web3MQ-API/quickstart/Generate_Key_pairs",
+                "docId": "Web3MQ-API/quickstart/Generate_Key_pairs"
+              },
+              {
+                "type": "link",
+                "label": "2. MetaMask Signing",
+                "href": "/docs/Web3MQ-API/quickstart/Signing_data_with_MetaMask",
+                "docId": "Web3MQ-API/quickstart/Signing_data_with_MetaMask"
+              },
+              {
+                "type": "link",
+                "label": "3. Save your public key",
+                "href": "/docs/Web3MQ-API/quickstart/Save_your_public_key",
+                "docId": "Web3MQ-API/quickstart/Save_your_public_key"
+              },
+              {
+                "type": "link",
+                "label": "4. Create group",
+                "href": "/docs/Web3MQ-API/quickstart/Create_group",
+                "docId": "Web3MQ-API/quickstart/Create_group"
+              },
+              {
+                "type": "link",
+                "label": "5. Send Connect Command",
+                "href": "/docs/Web3MQ-API/quickstart/Send_Connect_Command",
+                "docId": "Web3MQ-API/quickstart/Send_Connect_Command"
+              },
+              {
+                "type": "link",
+                "label": "6. Send a message",
+                "href": "/docs/Web3MQ-API/quickstart/Send_message_in_Group",
+                "docId": "Web3MQ-API/quickstart/Send_message_in_Group"
+              }
+            ],
+            "href": "/docs/Web3MQ-API/quickstart/"
+          },
+          {
+            "type": "category",
+            "label": "Pubkey",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Save PublicKey",
+                "href": "/docs/Web3MQ-API/pubkey/Save_pubkey",
+                "docId": "Web3MQ-API/pubkey/Save_pubkey"
+              }
+            ],
+            "href": "/docs/Web3MQ-API/pubkey/"
+          },
+          {
+            "type": "category",
+            "label": "Contact",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Get my contact list",
+                "href": "/docs/Web3MQ-API/contact/Get_my_contact_list",
+                "docId": "Web3MQ-API/contact/Get_my_contact_list"
+              },
+              {
+                "type": "link",
+                "label": "Search contacts",
+                "href": "/docs/Web3MQ-API/contact/Search_contacts",
+                "docId": "Web3MQ-API/contact/Search_contacts"
+              },
+              {
+                "type": "link",
+                "label": "Send friend request",
+                "href": "/docs/Web3MQ-API/contact/Send_friend_request",
+                "docId": "Web3MQ-API/contact/Send_friend_request"
+              },
+              {
+                "type": "link",
+                "label": "Get i send friend requests",
+                "href": "/docs/Web3MQ-API/contact/addfriend_list",
+                "docId": "Web3MQ-API/contact/addfriend_list"
+              },
+              {
+                "type": "link",
+                "label": "Agree or reject friend request",
+                "href": "/docs/Web3MQ-API/contact/change_friend_requests",
+                "docId": "Web3MQ-API/contact/change_friend_requests"
+              },
+              {
+                "type": "link",
+                "label": "Get receive friend requests list",
+                "href": "/docs/Web3MQ-API/contact/friend_requests",
+                "docId": "Web3MQ-API/contact/friend_requests"
+              }
+            ],
+            "href": "/docs/Web3MQ-API/contact/"
           },
           {
             "type": "category",
@@ -192,101 +241,84 @@
             "items": [
               {
                 "type": "link",
-                "label": "User Register",
-                "href": "/docs/Web3MQ-RESTFul-API/User/user-register",
-                "docId": "Web3MQ-RESTFul-API/User/user-register"
+                "label": "Get my profile",
+                "href": "/docs/Web3MQ-API/user/Get_my_profile",
+                "docId": "Web3MQ-API/user/Get_my_profile"
               },
               {
                 "type": "link",
-                "label": "User Login",
-                "href": "/docs/Web3MQ-RESTFul-API/User/user-login",
-                "docId": "Web3MQ-RESTFul-API/User/user-login"
+                "label": "Update my profile",
+                "href": "/docs/Web3MQ-API/user/Update_my_profile",
+                "docId": "Web3MQ-API/user/Update_my_profile"
               },
               {
                 "type": "link",
-                "label": "Bind social platform",
-                "href": "/docs/Web3MQ-RESTFul-API/User/bind-social-platform",
-                "docId": "Web3MQ-RESTFul-API/User/bind-social-platform"
-              },
-              {
-                "type": "link",
-                "label": "Get User Info",
-                "href": "/docs/Web3MQ-RESTFul-API/User/get-user-info",
-                "docId": "Web3MQ-RESTFul-API/User/get-user-info"
-              },
-              {
-                "type": "link",
-                "label": "Get User's assets",
-                "href": "/docs/Web3MQ-RESTFul-API/User/get-user-assets",
-                "docId": "Web3MQ-RESTFul-API/User/get-user-assets"
-              },
-              {
-                "type": "link",
-                "label": "Search Users",
-                "href": "/docs/Web3MQ-RESTFul-API/User/search-user",
-                "docId": "Web3MQ-RESTFul-API/User/search-user"
+                "label": "Search users",
+                "href": "/docs/Web3MQ-API/user/search_user",
+                "docId": "Web3MQ-API/user/search_user"
               }
             ],
-            "href": "/docs/Web3MQ-RESTFul-API/User/"
+            "href": "/docs/Web3MQ-API/user/"
           },
           {
             "type": "category",
-            "label": "Contacts Manage",
+            "label": "Group",
             "collapsible": true,
             "collapsed": true,
             "items": [
               {
                 "type": "link",
-                "label": "Add User To Your Contact List",
-                "href": "/docs/Web3MQ-RESTFul-API/Contact/add-contact",
-                "docId": "Web3MQ-RESTFul-API/Contact/add-contact"
+                "label": "Create Group",
+                "href": "/docs/Web3MQ-API/group/create_group",
+                "docId": "Web3MQ-API/group/create_group"
               },
               {
                 "type": "link",
-                "label": "Get Contacts Info",
-                "href": "/docs/Web3MQ-RESTFul-API/Contact/get-contacts",
-                "docId": "Web3MQ-RESTFul-API/Contact/get-contacts"
+                "label": "Group Invitation",
+                "href": "/docs/Web3MQ-API/group/group_invitation",
+                "docId": "Web3MQ-API/group/group_invitation"
+              },
+              {
+                "type": "link",
+                "label": "Group List",
+                "href": "/docs/Web3MQ-API/group/group_list",
+                "docId": "Web3MQ-API/group/group_list"
+              },
+              {
+                "type": "link",
+                "label": "Group members",
+                "href": "/docs/Web3MQ-API/group/group_members",
+                "docId": "Web3MQ-API/group/group_members"
               }
-            ]
+            ],
+            "href": "/docs/Web3MQ-API/group/"
           },
           {
             "type": "category",
-            "label": "Rooms And Messages",
+            "label": "Message",
             "collapsible": true,
             "collapsed": true,
             "items": [
               {
                 "type": "link",
-                "label": "Create Chat Room",
-                "href": "/docs/Web3MQ-RESTFul-API/Room/create-room",
-                "docId": "Web3MQ-RESTFul-API/Room/create-room"
+                "label": "Change Message Status",
+                "href": "/docs/Web3MQ-API/message/change_message_status",
+                "docId": "Web3MQ-API/message/change_message_status"
               },
               {
                 "type": "link",
-                "label": "Connect Chat Channel",
-                "href": "/docs/Web3MQ-RESTFul-API/Room/connect-channel",
-                "docId": "Web3MQ-RESTFul-API/Room/connect-channel"
+                "label": "Message History",
+                "href": "/docs/Web3MQ-API/message/message_list",
+                "docId": "Web3MQ-API/message/message_list"
               },
               {
                 "type": "link",
-                "label": "Get Room Info",
-                "href": "/docs/Web3MQ-RESTFul-API/Room/get-room-info",
-                "docId": "Web3MQ-RESTFul-API/Room/get-room-info"
-              },
-              {
-                "type": "link",
-                "label": "Get Chat Rooms",
-                "href": "/docs/Web3MQ-RESTFul-API/Room/get-chat-rooms",
-                "docId": "Web3MQ-RESTFul-API/Room/get-chat-rooms"
-              },
-              {
-                "type": "link",
-                "label": "Get History Messages",
-                "href": "/docs/Web3MQ-RESTFul-API/Room/get-messages",
-                "docId": "Web3MQ-RESTFul-API/Room/get-messages"
+                "label": "Send Message",
+                "href": "/docs/Web3MQ-API/message/send_message",
+                "docId": "Web3MQ-API/message/send_message"
               }
             ],
-            "href": "/docs/Web3MQ-RESTFul-API/Room/"
+            "href": "/docs/Web3MQ-API/message/"
           },
           {
             "type": "category",
@@ -296,12 +328,42 @@
             "items": [
               {
                 "type": "link",
-                "label": "Send Notifications",
-                "href": "/docs/Web3MQ-RESTFul-API/Notification/send-notifications",
-                "docId": "Web3MQ-RESTFul-API/Notification/send-notifications"
+                "label": "Change Notification Status",
+                "href": "/docs/Web3MQ-API/notification/change_notification_status",
+                "docId": "Web3MQ-API/notification/change_notification_status"
+              },
+              {
+                "type": "link",
+                "label": "Receive Notification",
+                "href": "/docs/Web3MQ-API/notification/receive_notification",
+                "docId": "Web3MQ-API/notification/receive_notification"
               }
             ],
-            "href": "/docs/Web3MQ-RESTFul-API/Notification/"
+            "href": "/docs/Web3MQ-API/notification/"
+          },
+          {
+            "type": "link",
+            "label": "Chat",
+            "href": "/docs/Web3MQ-API/chat",
+            "docId": "Web3MQ-API/chat"
+          },
+          {
+            "type": "link",
+            "label": "Signature",
+            "href": "/docs/Web3MQ-API/signature",
+            "docId": "Web3MQ-API/signature"
+          },
+          {
+            "type": "link",
+            "label": "ProtoType",
+            "href": "/docs/Web3MQ-API/ProtoType",
+            "docId": "Web3MQ-API/ProtoType"
+          },
+          {
+            "type": "link",
+            "label": "ed25519key",
+            "href": "/docs/Web3MQ-API/ed25519key",
+            "docId": "Web3MQ-API/ed25519key"
           }
         ]
       },
@@ -372,112 +434,226 @@
       "description": "Intro",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-RESTFul-API/Contact/add-contact": {
-      "id": "Web3MQ-RESTFul-API/Contact/add-contact",
-      "title": "Add User To Your Contact List",
-      "description": "_",
+    "Web3MQ-API/chat": {
+      "id": "Web3MQ-API/chat",
+      "title": "Chat",
+      "description": "All http post request and response content type are application/json",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-RESTFul-API/Contact/get-contacts": {
-      "id": "Web3MQ-RESTFul-API/Contact/get-contacts",
-      "title": "Get Contacts Info",
-      "description": "_",
+    "Web3MQ-API/contact/addfriend_list": {
+      "id": "Web3MQ-API/contact/addfriend_list",
+      "title": "Get i send friend requests",
+      "description": "Get i send friend requests",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-RESTFul-API/Intro": {
-      "id": "Web3MQ-RESTFul-API/Intro",
-      "title": "Intro",
+    "Web3MQ-API/contact/change_friend_requests": {
+      "id": "Web3MQ-API/contact/change_friend_requests",
+      "title": "Agree or reject friend request",
+      "description": "Agree or reject friend request",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/contact/friend_requests": {
+      "id": "Web3MQ-API/contact/friend_requests",
+      "title": "Get receive friend requests list",
+      "description": "Get receive friend requests list",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/contact/Get_my_contact_list": {
+      "id": "Web3MQ-API/contact/Get_my_contact_list",
+      "title": "Get my contact list",
+      "description": "Get my contact list",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/contact/index": {
+      "id": "Web3MQ-API/contact/index",
+      "title": "Overview",
+      "description": "All http post request and response content type are application/json",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/contact/Search_contacts": {
+      "id": "Web3MQ-API/contact/Search_contacts",
+      "title": "Search contacts",
+      "description": "Search contacts",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/contact/Send_friend_request": {
+      "id": "Web3MQ-API/contact/Send_friend_request",
+      "title": "Send friend request",
+      "description": "Send friend request",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/ed25519key": {
+      "id": "Web3MQ-API/ed25519key",
+      "title": "ed25519key",
+      "description": "Generate ed25519 key pair",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/group/create_group": {
+      "id": "Web3MQ-API/group/create_group",
+      "title": "Create Group",
+      "description": "Create group",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/group/group_invitation": {
+      "id": "Web3MQ-API/group/group_invitation",
+      "title": "Group Invitation",
+      "description": "Invite users join group",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/group/group_list": {
+      "id": "Web3MQ-API/group/group_list",
+      "title": "Group List",
+      "description": "Get list of groups i have joined",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/group/group_members": {
+      "id": "Web3MQ-API/group/group_members",
+      "title": "Group members",
+      "description": "Get group member list",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/group/index": {
+      "id": "Web3MQ-API/group/index",
+      "title": "Overview",
+      "description": "All http post request and response content type are application/json",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/Intro": {
+      "id": "Web3MQ-API/Intro",
+      "title": "Overview",
       "description": "API endpoint",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-RESTFul-API/Notification/Notification": {
-      "id": "Web3MQ-RESTFul-API/Notification/Notification",
-      "title": "Details about Notification",
-      "description": "Notification is used to send some important or serious messages to the users. The users can be all followers or a chat room.",
+    "Web3MQ-API/message/change_message_status": {
+      "id": "Web3MQ-API/message/change_message_status",
+      "title": "Change Message Status",
+      "description": "---",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-RESTFul-API/Notification/send-notifications": {
-      "id": "Web3MQ-RESTFul-API/Notification/send-notifications",
-      "title": "Send Notifications",
-      "description": "You can send notifications to your users which specify or all of them, or you can send a notification to your room.",
+    "Web3MQ-API/message/index": {
+      "id": "Web3MQ-API/message/index",
+      "title": "Overview",
+      "description": "All http post request and response content type are application/json",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-RESTFul-API/Room/connect-channel": {
-      "id": "Web3MQ-RESTFul-API/Room/connect-channel",
-      "title": "Connect Chat Channel",
-      "description": "_",
+    "Web3MQ-API/message/message_list": {
+      "id": "Web3MQ-API/message/message_list",
+      "title": "Message History",
+      "description": "Get history messages",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-RESTFul-API/Room/create-room": {
-      "id": "Web3MQ-RESTFul-API/Room/create-room",
-      "title": "Create Chat Room",
-      "description": "There are 2 ways to create a room:",
+    "Web3MQ-API/message/send_message": {
+      "id": "Web3MQ-API/message/send_message",
+      "title": "Send Message",
+      "description": "---",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-RESTFul-API/Room/get-chat-rooms": {
-      "id": "Web3MQ-RESTFul-API/Room/get-chat-rooms",
-      "title": "Get Chat Rooms",
-      "description": "_",
+    "Web3MQ-API/notification/change_notification_status": {
+      "id": "Web3MQ-API/notification/change_notification_status",
+      "title": "Change Notification Status",
+      "description": "---",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-RESTFul-API/Room/get-messages": {
-      "id": "Web3MQ-RESTFul-API/Room/get-messages",
-      "title": "Get History Messages",
-      "description": "_",
+    "Web3MQ-API/notification/index": {
+      "id": "Web3MQ-API/notification/index",
+      "title": "Overview",
+      "description": "Notification",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-RESTFul-API/Room/get-room-info": {
-      "id": "Web3MQ-RESTFul-API/Room/get-room-info",
-      "title": "Get Room Info",
-      "description": "_",
+    "Web3MQ-API/notification/receive_notification": {
+      "id": "Web3MQ-API/notification/receive_notification",
+      "title": "Receive Notification",
+      "description": "Receive Notification",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-RESTFul-API/Room/Room": {
-      "id": "Web3MQ-RESTFul-API/Room/Room",
-      "title": "Details about Room/Message",
-      "description": "Room is a container for chatting behavior, and some of its properties are affected by the way it was created. It has at least one member.",
+    "Web3MQ-API/ProtoType": {
+      "id": "Web3MQ-API/ProtoType",
+      "title": "ProtoType",
+      "description": "",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-RESTFul-API/User/bind-social-platform": {
-      "id": "Web3MQ-RESTFul-API/User/bind-social-platform",
-      "title": "Bind social platform",
-      "description": "_",
+    "Web3MQ-API/pubkey/index": {
+      "id": "Web3MQ-API/pubkey/index",
+      "title": "Overview",
+      "description": "All http post request and response content type are application/json",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-RESTFul-API/User/get-user-assets": {
-      "id": "Web3MQ-RESTFul-API/User/get-user-assets",
-      "title": "Get User's assets",
-      "description": "The user's digital assets include NFTs, DIDs, etc.",
+    "Web3MQ-API/pubkey/Save_pubkey": {
+      "id": "Web3MQ-API/pubkey/Save_pubkey",
+      "title": "Save PublicKey",
+      "description": "---",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-RESTFul-API/User/get-user-info": {
-      "id": "Web3MQ-RESTFul-API/User/get-user-info",
-      "title": "Get User Info",
-      "description": "_",
+    "Web3MQ-API/quickstart/Create_group": {
+      "id": "Web3MQ-API/quickstart/Create_group",
+      "title": "4. Create group",
+      "description": "---",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-RESTFul-API/User/search-user": {
-      "id": "Web3MQ-RESTFul-API/User/search-user",
-      "title": "Search Users",
-      "description": "You can use this API to search all users in Swapchat,then get user's OID which you want add to your contacts list.",
+    "Web3MQ-API/quickstart/Generate_Key_pairs": {
+      "id": "Web3MQ-API/quickstart/Generate_Key_pairs",
+      "title": "1. Generate key pairs",
+      "description": "Generate key pairs",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-RESTFul-API/User/User": {
-      "id": "Web3MQ-RESTFul-API/User/User",
-      "title": "Details",
-      "description": "User is the user you private chat with. When you private chat with a user, the user will be automatically added to your contact list.",
+    "Web3MQ-API/quickstart/index": {
+      "id": "Web3MQ-API/quickstart/index",
+      "title": "Overview",
+      "description": "Let's learn how to use and successfully send the first message in the chat room we created",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-RESTFul-API/User/user-login": {
-      "id": "Web3MQ-RESTFul-API/User/user-login",
-      "title": "User Login",
-      "description": "_",
+    "Web3MQ-API/quickstart/Save_your_public_key": {
+      "id": "Web3MQ-API/quickstart/Save_your_public_key",
+      "title": "3. Save your public key",
+      "description": "Save your public key, request Web3MQ network with some params",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-RESTFul-API/User/user-register": {
-      "id": "Web3MQ-RESTFul-API/User/user-register",
-      "title": "User Register",
-      "description": "_",
+    "Web3MQ-API/quickstart/Send_Connect_Command": {
+      "id": "Web3MQ-API/quickstart/Send_Connect_Command",
+      "title": "5. Send Connect Command",
+      "description": "use Web3MQ JSSDK or build protobuf yourself",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/quickstart/Send_message_in_Group": {
+      "id": "Web3MQ-API/quickstart/Send_message_in_Group",
+      "title": "6. Send a message",
+      "description": "- Chat with someone contentTopic is userid",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/quickstart/Signing_data_with_MetaMask": {
+      "id": "Web3MQ-API/quickstart/Signing_data_with_MetaMask",
+      "title": "2. MetaMask Signing",
+      "description": "Signing data with MetaMask",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/signature": {
+      "id": "Web3MQ-API/signature",
+      "title": "Signature",
+      "description": "- Web3MQ use ed25519 key pair for signing of requests",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/user/Get_my_profile": {
+      "id": "Web3MQ-API/user/Get_my_profile",
+      "title": "Get my profile",
+      "description": "Get my profile",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/user/index": {
+      "id": "Web3MQ-API/user/index",
+      "title": "Overview",
+      "description": "All http post request and response content type are application/json",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/user/search_user": {
+      "id": "Web3MQ-API/user/search_user",
+      "title": "Search users",
+      "description": "Search users",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/user/Update_my_profile": {
+      "id": "Web3MQ-API/user/Update_my_profile",
+      "title": "Update my profile",
+      "description": "Update my profile",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK/authorization/authorization": {
@@ -550,54 +726,6 @@
       "id": "Web3MQ-SDK/JS-SDK/utils/utils",
       "title": "Utils",
       "description": "Methods",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/Python-SDK/chat": {
-      "id": "Web3MQ-SDK/Python-SDK/chat",
-      "title": "Chat",
-      "description": "How to use it",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/Python-SDK/intro": {
-      "id": "Web3MQ-SDK/Python-SDK/intro",
-      "title": "Intro",
-      "description": "web3mq is official web3mq python sdk",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/Python-SDK/login": {
-      "id": "Web3MQ-SDK/Python-SDK/login",
-      "title": "Login",
-      "description": "Get User's Random login Secret",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/Python-SDK/messageapi": {
-      "id": "Web3MQ-SDK/Python-SDK/messageapi",
-      "title": "Message",
-      "description": "Get history messages",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/Python-SDK/quickstart": {
-      "id": "Web3MQ-SDK/Python-SDK/quickstart",
-      "title": "Quickstart",
-      "description": "_",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/Python-SDK/register": {
-      "id": "Web3MQ-SDK/Python-SDK/register",
-      "title": "Register",
-      "description": "_",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/Python-SDK/roomapi": {
-      "id": "Web3MQ-SDK/Python-SDK/roomapi",
-      "title": "Room",
-      "description": "Room api list",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/Python-SDK/userapi": {
-      "id": "Web3MQ-SDK/Python-SDK/userapi",
-      "title": "User",
-      "description": "User api list",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/coreComponent/Channel": {

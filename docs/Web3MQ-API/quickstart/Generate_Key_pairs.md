@@ -1,0 +1,58 @@
+---
+order: 2
+sidebar_position: 0
+title: 1. Generate key pairs
+group:
+  title: Quickstart
+---
+
+# Generate key pairs
+
+**Generate key pairs**
+
+- Ed25519 key pair for signing of requests
+<!-- - <a href="#RSA">Another is RSA key pair for message encryption and decryption</a> -->
+
+<Alert type="error">
+  Keep your private key in safe place
+</Alert>
+
+## Ed25519 key pair
+
+
+https://github.com/starcoinorg/stc-ed25519
+
+```bash
+yarn add @starcoin/stc-ed25519
+
+# or
+npm install @starcoin/stc-ed25519
+```
+
+```js
+// Common.js and ECMAScript Modules (ESM)
+import * as ed from '@starcoin/stc-ed25519';
+
+function ByteArrayToHexString(byteArray) {
+  return Array.from(byteArray, function (byte) {
+    return ('0' + (byte & 0xff).toString(16)).slice(-2);
+  }).join('');
+}
+
+const GenerateEd25519KeyPair = async () => {
+  let privateObj = ed.utils.randomPrivateKey();
+
+  let pubkeyObj = await ed.getPublicKey(privateObj);
+
+  let PrivateKey = ByteArrayToHexString(privateObj);
+  let PublicKey = ByteArrayToHexString(pubkeyObj);
+  return {
+    PrivateKey,
+    PublicKey,
+  };
+};
+
+const { PrivateKey, PublicKey } = await GenerateEd25519KeyPair();
+
+// ⚠️ Keep your private key in safe place
+```
