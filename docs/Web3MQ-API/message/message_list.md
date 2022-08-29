@@ -12,13 +12,13 @@ group:
 
 > **GET** `/api/messages/history/`
 
-| Parameters in URL | Type   | Required | Parameters Description                                                |
-| ----------------- | ------ | -------- | --------------------------------------------------------------------- |
+| Parameters in URL | Type   | Required | Parameters Description                                                        |
+| ----------------- | ------ | -------- | ----------------------------------------------------------------------------- |
 | userid            | string | Yes      | [see userid detail](/docs/Web3MQ-API/pubkey/Save_pubkey#generate-your-userid) |
-| topic             | string | Yes      | topic id                                                              |
-| size              | int    | Yes      | size                                                                  |
-| page              | int    | Yes      | page                                                                  |
-| timestamp         | int    | Yes      | timestamp milliseconds                                                |
+| topic             | string | Yes      | topic id                                                                      |
+| size              | int    | Yes      | size                                                                          |
+| page              | int    | Yes      | page                                                                          |
+| timestamp         | int    | Yes      | timestamp milliseconds                                                        |
 | web3mq_signature  | string | Yes      | use ed25519 [see signing detail](/docs/Web3MQ-API/signature)                  |
 |                   |
 
@@ -40,20 +40,20 @@ _url query params_
 
 ### Response
 
-| Parameters      | Type   | Always Return | Parameters Description                                                        |
-| --------------- | ------ | ------------- | ----------------------------------------------------------------------------- |
-| code            | int    | Yes           | result code, 0 means success, other code see msg's contents                   |
-| msg             | string | Yes           | result description                                                            |
-| data            | dict   | Yes           | return includes response info                                                 |
-| -messageid      | string | Yes           | messageid                                                                     |
-| -from           | string | Yes           | message sender user id                                                        |
-| -from_sign      | int    | Yes           | from signature                                                                |
-| -topic          | string | Yes           | topic                                                                         |
-| -message_status | object | Yes           | message status                                                                |
-| -cipher_suite   | string | Yes           | cipher suite [see cipher suite options](/web3mq/message#ciphersuite-options)  |
-| -payload_type   | string | Yes           | payload_type [see payload type options ](/web3mq/message#payloadtype-options) |
-| -pyaload        | string | Yes           | payload base64 encode content                                                 |
-| -timestamp      | int    | Yes           | timestamp                                                                     |
+| Parameters      | Type   | Always Return | Parameters Description                                      |
+| --------------- | ------ | ------------- | ----------------------------------------------------------- |
+| code            | int    | Yes           | result code, 0 means success, other code see msg's contents |
+| msg             | string | Yes           | result description                                          |
+| data            | dict   | Yes           | return includes response info                               |
+| -messageid      | string | Yes           | messageid                                                   |
+| -from           | string | Yes           | message sender user id                                      |
+| -from_sign      | int    | Yes           | from signature                                              |
+| -topic          | string | Yes           | topic                                                       |
+| -message_status | object | Yes           | message status                                              |
+| -cipher_suite   | string | Yes           | cipher suite [see cipher suite options]                     |
+| -payload_type   | string | Yes           | payload_type [see payload type options ]                    |
+| -pyaload        | string | Yes           | payload base64 encode content                               |
+| -timestamp      | int    | Yes           | timestamp                                                   |
 
 `message status`
 
