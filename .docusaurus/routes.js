@@ -50,17 +50,11 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','b2e'),
+    component: ComponentCreator('/docs','d2f'),
     routes: [
       {
         path: '/docs/Intro',
         component: ComponentCreator('/docs/Intro','1f0'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/Tutorial/JS-SDK',
-        component: ComponentCreator('/docs/Tutorial/JS-SDK','c01'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
@@ -287,12 +281,6 @@ export default [
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-SDK/JS-SDK/authorization/',
-        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/authorization/','ac5'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
         path: '/docs/Web3MQ-SDK/JS-SDK/channel/',
         component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/channel/','873'),
         exact: true,
@@ -337,6 +325,12 @@ export default [
       {
         path: '/docs/Web3MQ-SDK/JS-SDK/quickStart/',
         component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/quickStart/','332'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/JS-SDK/register/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/register/','978'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },

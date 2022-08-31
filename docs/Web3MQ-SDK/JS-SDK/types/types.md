@@ -64,6 +64,15 @@ export type EthAccountType = {
 };
 ```
 
+### InitOptions
+
+```ts
+export type initOptions = {
+  connectUrl?: string;
+  app_key?: string;
+};
+```
+
 ### ActiveChannelType
 
 ```ts

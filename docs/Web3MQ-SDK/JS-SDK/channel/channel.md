@@ -1,40 +1,41 @@
 ---
-position: 3
+position: 4
 ---
 
 # Channel
 
 ## Properties
 
-| name          | type                                                                                 | Description            |
-| ------------- | ------------------------------------------------------------------------------------ | ---------------------- |
+| name          | type                                                                              | Description            |
+| ------------- | --------------------------------------------------------------------------------- | ---------------------- |
 | channelList   | [activechannelType](/docs/Web3MQ-SDK/JS-SDK/types/#activechanneltype) [ ] \| null | channel list           |
 | activeChannel | [activechannelType](/docs/Web3MQ-SDK/JS-SDK/types/#activechanneltype) \| null     | current active channel |
 
 ## Methods
 
-| name               | type     | Parameters Description                                                   | response                                                                        |
-| ------------------ | -------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
-| createRoom         | function | none                                                                     | none                                                                            |
-| queryChannels      | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)               | none                                                                            |
-| setActiveChannel   | function | [activechannelType](/docs/Web3MQ-SDK/JS-SDK/types/#activechanneltype) | none                                                                            |
+| name               | type     | Parameters Description                                                | response                                                                     |
+| ------------------ | -------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| createRoom         | function | none                                                                  | none                                                                         |
+| queryChannels      | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)               | none                                                                         |
+| setActiveChannel   | function | [activechannelType](/docs/Web3MQ-SDK/JS-SDK/types/#activechanneltype) | none                                                                         |
 | getGroupMemberList | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)               | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)[ ] |
-| inviteGroupMember  | function | (members: string[])                                                      | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)[ ] |
+| inviteGroupMember  | function | (members: string[])                                                   | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)[ ] |
 
 ## init Client
 
 ```tsx
-import { Client, Register } from 'web3-mq';
+import { Client } from 'web3-mq';
 // ws and request host url
-const HostURL = 'us-west-2.web3mq.com';
+const connectUrl = 'us-west-2.web3mq.com';
+// init sdk
+const register = Client.init({ connectUrl, app_key: 'vAUJTFXbBZRkEDRE' });
 // sign MetaMask get keys
-const { PrivateKey, PublicKey } = await Register.signMetaMask(
-  'https://www.web3mq.com', // your_domain_url
-  HostURL
+const { PrivateKey, PublicKey } = await register.signMetaMask(
+  'https://www.web3mq.com' // your signContent URI
 );
 const keys = { PrivateKey, PublicKey };
 // init client
-const client = Client.getInstance(keys, HostURL);
+const client = Client.getInstance(keys);
 
 console.log(client);
 

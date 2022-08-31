@@ -52,13 +52,18 @@ yarn add web3-mq
 - https://ap-jp-1.web3mq.com
 - https://ap-singapore-1.web3mq.com
 
+## Test App_key
+
+- vAUJTFXbBZRkEDRE
+- MlfWdfEUHtVsdDmM
+
 ## Example
 
 #### Code
 
 ```tsx
 import React, { useMemo, useState, useEffect } from 'react';
-import { Register, Client, KeyPairsType } from 'web3-mq';
+import { Client, KeyPairsType } from 'web3-mq';
 
 // Child components
 interface IProps {
@@ -87,9 +92,9 @@ const Child: React.FC<IProps> = (props) => {
     if (event.type === 'message.getList') {
       setMessageList(client.message.messageList);
     }
-    if (event.type === 'message.new') {
+    if (event.type === 'message.delivered') {
       setText('');
-      const list = client.message.messageList || [];
+      const list = messageList || [];
       setMessageList([...list, { content: text, id: list.length + 1 }]);
     }
   };
@@ -98,12 +103,12 @@ const Child: React.FC<IProps> = (props) => {
     client.on('channel.getList', handleEvent);
     client.on('channel.activeChange', handleEvent);
     client.on('message.getList', handleEvent);
-    client.on('message.new', handleEvent);
+    client.on('message.delivered', handleEvent);
     return () => {
       client.off('channel.getList');
       client.off('channel.activeChange');
       client.off('message.getList');
-      client.off('message.new');
+      client.off('message.delivered');
     };
   }, [text]);
 
@@ -117,6 +122,12 @@ const Child: React.FC<IProps> = (props) => {
 
   const handleSendMessage = () => {
     client.message.sendMessage(text);
+  };
+
+  const changeMsgStatus = async () => {
+    const ids = messageList.map((item: any) => item.messageid);
+    const data = await client.message.changeMessageStatus(ids, 'read');
+    console.log(data);
   };
 
   const List = () => {
@@ -152,7 +163,11 @@ const Child: React.FC<IProps> = (props) => {
           </div>
           <div style={{ minHeight: 300, border: '1px solid #000' }}>
             {messageList.map((item: any) => {
-              return <div key={item.id}>message: {item.content}</div>;
+              return (
+                <div key={item.id} onClick={changeMsgStatus}>
+                  message: {item.content}
+                </div>
+              );
             })}
           </div>
           <div>
@@ -184,8 +199,10 @@ const App: React.FC = () => {
 
   const [keys, setKeys] = useState<KeyPairsType | null>(hasKeys);
 
+  const register = Client.init({ app_key: 'vAUJTFXbBZRkEDRE' });
+
   const signMetaMask = async () => {
-    const { PrivateKey, PublicKey } = await Register.signMetaMask(
+    const { PrivateKey, PublicKey } = await register.signMetaMask(
       'https://www.web3mq.com'
     );
     localStorage.setItem('PRIVATE_KEY', PrivateKey);
@@ -225,10 +242,12 @@ export default App;
 #### Code
 
 ```ts
-import { MetaMask } from 'web3-mq';
+import { Client } from 'web3-mq';
 
-const { PrivateKey, PublicKey } = await MetaMask.signMetaMask(
-  'https://www.web3mq.com' // your_domain_url
+const register = Client.init({ app_key: 'vAUJTFXbBZRkEDRE' });
+
+const { PrivateKey, PublicKey } = await register.signMetaMask(
+  'https://www.web3mq.com' // your signContent URI
 );
 
 console.log(PrivateKey, PublicKey);
@@ -248,10 +267,7 @@ import { Client } from 'web3-mq';
 // sign MetaMask get keys
 const keys = { PrivateKey, PublicKey };
 
-// ws host url
-const HostURL = 'us-west-2.web3mq.com';
-
-const client = Client.getInstance(keys, HostURL);
+const client = Client.getInstance(keys);
 
 console.log(client);
 ```

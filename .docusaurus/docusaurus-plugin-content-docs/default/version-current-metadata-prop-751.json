@@ -9,18 +9,10 @@
   "docsSidebars": {
     "tutorialSidebar": [
       {
-        "type": "category",
-        "label": "Tutorial",
-        "collapsible": true,
-        "collapsed": true,
-        "items": [
-          {
-            "type": "link",
-            "label": "Jssdk",
-            "href": "/docs/Tutorial/JS-SDK",
-            "docId": "Tutorial/JS-SDK"
-          }
-        ]
+        "type": "link",
+        "label": "Intro",
+        "href": "/docs/Intro",
+        "docId": "Intro"
       },
       {
         "type": "category",
@@ -42,6 +34,12 @@
               },
               {
                 "type": "link",
+                "label": "Register",
+                "href": "/docs/Web3MQ-SDK/JS-SDK/register/",
+                "docId": "Web3MQ-SDK/JS-SDK/register/register"
+              },
+              {
+                "type": "link",
                 "label": "Client",
                 "href": "/docs/Web3MQ-SDK/JS-SDK/client/",
                 "docId": "Web3MQ-SDK/JS-SDK/client/client"
@@ -57,12 +55,6 @@
                 "label": "Message",
                 "href": "/docs/Web3MQ-SDK/JS-SDK/message/",
                 "docId": "Web3MQ-SDK/JS-SDK/message/message"
-              },
-              {
-                "type": "link",
-                "label": "Authorization",
-                "href": "/docs/Web3MQ-SDK/JS-SDK/authorization/",
-                "docId": "Web3MQ-SDK/JS-SDK/authorization/authorization"
               },
               {
                 "type": "link",
@@ -412,12 +404,6 @@
             ]
           }
         ]
-      },
-      {
-        "type": "link",
-        "label": "Intro",
-        "href": "/docs/Intro",
-        "docId": "Intro"
       }
     ]
   },
@@ -426,12 +412,6 @@
       "id": "Intro",
       "title": "Intro",
       "description": "Web3MQ is a decentralized secure communication protocol dedicated to becoming crypto-native communication infrastructure. We reconnect isolated social platforms with a unified inbox, enabling information to be freely generated, flowed and communicated across terminals. We support end-to-end encrypted communication with distributed storage, ensuring that no third party can access users' chat messages and that users have full ownership of their data.",
-      "sidebar": "tutorialSidebar"
-    },
-    "Tutorial/JS-SDK": {
-      "id": "Tutorial/JS-SDK",
-      "title": "Jssdk",
-      "description": "Intro",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-API/chat": {
@@ -656,12 +636,6 @@
       "description": "Update my profile",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-SDK/JS-SDK/authorization/authorization": {
-      "id": "Web3MQ-SDK/JS-SDK/authorization/authorization",
-      "title": "Authorization",
-      "description": "Methods",
-      "sidebar": "tutorialSidebar"
-    },
     "Web3MQ-SDK/JS-SDK/channel/channel": {
       "id": "Web3MQ-SDK/JS-SDK/channel/channel",
       "title": "Channel",
@@ -708,6 +682,12 @@
       "id": "Web3MQ-SDK/JS-SDK/quickStart/quickStart",
       "title": "QuickStart",
       "description": "Let's learn how to use and successfully send the first message in the chat room we created",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/JS-SDK/register/register": {
+      "id": "Web3MQ-SDK/JS-SDK/register/register",
+      "title": "Register",
+      "description": "Methods",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK/types/types": {

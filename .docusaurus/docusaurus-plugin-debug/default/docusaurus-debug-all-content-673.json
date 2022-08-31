@@ -12,9 +12,9 @@
           "versionClassName": "docs-version-current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/coder/WorkSpace/Documentation/sidebars.js",
-          "contentPath": "/Users/coder/WorkSpace/Documentation/docs",
-          "contentPathLocalized": "/Users/coder/WorkSpace/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/fanxiangyu/Work/Documentation/sidebars.js",
+          "contentPath": "/Users/fanxiangyu/Work/Documentation/docs",
+          "contentPathLocalized": "/Users/fanxiangyu/Work/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "Intro",
@@ -25,24 +25,6 @@
               "sourceDirName": ".",
               "slug": "/Intro",
               "permalink": "/docs/Intro",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {},
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Thread",
-                "permalink": "/docs/Web3MQ-UI-Components/coreComponent/Thread"
-              }
-            },
-            {
-              "unversionedId": "Tutorial/JS-SDK",
-              "id": "Tutorial/JS-SDK",
-              "title": "Jssdk",
-              "description": "Intro",
-              "source": "@site/docs/Tutorial/JS-SDK.md",
-              "sourceDirName": "Tutorial",
-              "slug": "/Tutorial/JS-SDK",
-              "permalink": "/docs/Tutorial/JS-SDK",
               "tags": [],
               "version": "current",
               "sidebarPosition": 0,
@@ -1117,30 +1099,6 @@
               }
             },
             {
-              "unversionedId": "Web3MQ-SDK/JS-SDK/authorization/authorization",
-              "id": "Web3MQ-SDK/JS-SDK/authorization/authorization",
-              "title": "Authorization",
-              "description": "Methods",
-              "source": "@site/docs/Web3MQ-SDK/JS-SDK/authorization/authorization.md",
-              "sourceDirName": "Web3MQ-SDK/JS-SDK/authorization",
-              "slug": "/Web3MQ-SDK/JS-SDK/authorization/",
-              "permalink": "/docs/Web3MQ-SDK/JS-SDK/authorization/",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "position": 5
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Message",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/message/"
-              },
-              "next": {
-                "title": "Contact",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/contact/"
-              }
-            },
-            {
               "unversionedId": "Web3MQ-SDK/JS-SDK/channel/channel",
               "id": "Web3MQ-SDK/JS-SDK/channel/channel",
               "title": "Channel",
@@ -1152,7 +1110,7 @@
               "tags": [],
               "version": "current",
               "frontMatter": {
-                "position": 3
+                "position": 4
               },
               "sidebar": "tutorialSidebar",
               "previous": {
@@ -1176,12 +1134,12 @@
               "tags": [],
               "version": "current",
               "frontMatter": {
-                "position": 2
+                "position": 3
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "QuickStart",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/quickStart/"
+                "title": "Register",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/register/"
               },
               "next": {
                 "title": "Channel",
@@ -1204,8 +1162,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Authorization",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/authorization/"
+                "title": "Message",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/message/"
               },
               "next": {
                 "title": "User",
@@ -1272,7 +1230,7 @@
               "tags": [],
               "version": "current",
               "frontMatter": {
-                "position": 4
+                "position": 5
               },
               "sidebar": "tutorialSidebar",
               "previous": {
@@ -1280,8 +1238,8 @@
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK/channel/"
               },
               "next": {
-                "title": "Authorization",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/authorization/"
+                "title": "Contact",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/contact/"
               }
             },
             {
@@ -1324,8 +1282,32 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Jssdk",
-                "permalink": "/docs/Tutorial/JS-SDK"
+                "title": "Intro",
+                "permalink": "/docs/Intro"
+              },
+              "next": {
+                "title": "Register",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/register/"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/JS-SDK/register/register",
+              "id": "Web3MQ-SDK/JS-SDK/register/register",
+              "title": "Register",
+              "description": "Methods",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK/register/register.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK/register",
+              "slug": "/Web3MQ-SDK/JS-SDK/register/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK/register/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "QuickStart",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/quickStart/"
               },
               "next": {
                 "title": "Client",
@@ -1511,10 +1493,6 @@
               "previous": {
                 "title": "MessageList",
                 "permalink": "/docs/Web3MQ-UI-Components/coreComponent/MessageList"
-              },
-              "next": {
-                "title": "Intro",
-                "permalink": "/docs/Intro"
               }
             },
             {
@@ -1546,16 +1524,8 @@
           "sidebars": {
             "tutorialSidebar": [
               {
-                "type": "category",
-                "label": "Tutorial",
-                "collapsible": true,
-                "collapsed": true,
-                "items": [
-                  {
-                    "type": "doc",
-                    "id": "Tutorial/JS-SDK"
-                  }
-                ]
+                "type": "doc",
+                "id": "Intro"
               },
               {
                 "type": "category",
@@ -1576,6 +1546,11 @@
                       },
                       {
                         "type": "doc",
+                        "label": "Register",
+                        "id": "Web3MQ-SDK/JS-SDK/register/register"
+                      },
+                      {
+                        "type": "doc",
                         "label": "Client",
                         "id": "Web3MQ-SDK/JS-SDK/client/client"
                       },
@@ -1588,11 +1563,6 @@
                         "type": "doc",
                         "label": "Message",
                         "id": "Web3MQ-SDK/JS-SDK/message/message"
-                      },
-                      {
-                        "type": "doc",
-                        "label": "Authorization",
-                        "id": "Web3MQ-SDK/JS-SDK/authorization/authorization"
                       },
                       {
                         "type": "doc",
@@ -1884,14 +1854,10 @@
                     ]
                   }
                 ]
-              },
-              {
-                "type": "doc",
-                "id": "Intro"
               }
             ]
           },
-          "mainDocId": "Tutorial/JS-SDK",
+          "mainDocId": "Intro",
           "categoryGeneratedIndices": []
         }
       ]

@@ -1,5 +1,5 @@
 ---
-position: 2
+position: 3
 ---
 
 # Client
@@ -26,23 +26,34 @@ position: 2
 
 ## Methods
 
-| name                                                       | type     | Parameters Description |
-| ---------------------------------------------------------- | -------- | ---------------------- |
-| [getInstance](/docs/Web3MQ-SDK/JS-SDK/client/#getInstance) | function | LoginParams or string  |
+| name                                                       | type     | Parameters Description                                      | response                                     |
+| ---------------------------------------------------------- | -------- | ----------------------------------------------------------- | -------------------------------------------- |
+| [getInstance](/docs/Web3MQ-SDK/JS-SDK/client/#getInstance) | function | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK/types/#keypairstype) | [Client](/docs/Web3MQ-SDK/JS-SDK/client)     |
+| [init](/docs/Web3MQ-SDK/JS-SDK/client/#init)               | function | [initOptions](/docs/Web3MQ-SDK/JS-SDK/types/#initoptions)   | [Register](/docs/Web3MQ-SDK/JS-SDK/register) |
 
 ## Methods
+
+### init()
+
+```ts
+import { Client } from 'web3-mq';
+// ws and request host url
+const connectUrl = 'us-west-2.web3mq.com';
+// init sdk
+Client.init({ connectUrl, app_key: 'vAUJTFXbBZRkEDRE' });
+```
 
 ### getInstance()
 
 ```typescript
-import { Client, Register } from 'web3-mq';
-
+import { Client } from 'web3-mq';
 // ws and request host url
-const HostURL = 'us-west-2.web3mq.com';
+const connectUrl = 'us-west-2.web3mq.com';
+// init sdk
+const register = Client.init({ connectUrl, app_key: 'vAUJTFXbBZRkEDRE' });
 // sign MetaMask get keys
-const { PrivateKey, PublicKey } = await Register.signMetaMask(
-  'https://www.web3mq.com', // your_domain_url
-  HostURL
+const { PrivateKey, PublicKey } = await register.signMetaMask(
+  'https://www.web3mq.com' // your signContent URI
 );
 const keys = { PrivateKey, PublicKey };
 // init client

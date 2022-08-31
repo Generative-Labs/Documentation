@@ -18,15 +18,16 @@ position: 7
 import { Client, Register } from 'web3-mq';
 
 // ws and request host url
-const HostURL = 'us-west-2.web3mq.com';
+const connectUrl = 'us-west-2.web3mq.com';
+// init sdk
+const register = Client.init({ connectUrl, app_key: 'vAUJTFXbBZRkEDRE' });
 // sign MetaMask get keys
-const { PrivateKey, PublicKey } = await Register.signMetaMask(
-  'https://www.web3mq.com', // your_domain_url
-  HostURL
+const { PrivateKey, PublicKey } = await register.signMetaMask(
+  'https://www.web3mq.com' // your signContent URI
 );
 const keys = { PrivateKey, PublicKey };
 // init client
-const client = Client.getInstance(keys, HostURL);
+const client = Client.getInstance(keys);
 
 console.log(client);
 

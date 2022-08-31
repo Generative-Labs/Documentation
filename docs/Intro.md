@@ -1,3 +1,7 @@
+---
+sidebar_position: 0
+---
+
 # Intro
 
 Web3MQ is a **decentralized secure communication protocol** dedicated to becoming crypto-native communication infrastructure. We reconnect isolated social platforms with a unified inbox, enabling information to be freely generated, flowed and communicated across terminals. We support end-to-end encrypted communication with distributed storage, ensuring that no third party can access users' chat messages and that users have full ownership of their data.

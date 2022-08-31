@@ -29,17 +29,13 @@
     "component": "component---theme-mdx-page-1-f-3-b90",
     "content": "content---markdown-page-393-028"
   },
-  "/docs-b2e": {
+  "/docs-d2f": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
   },
   "/docs/Intro-1f0": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-intro-377-335"
-  },
-  "/docs/Tutorial/JS-SDK-c01": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-tutorial-js-sd-kcd-7-c8f"
   },
   "/docs/Web3MQ-API/chat-b21": {
     "component": "component---theme-doc-item-178-a40",
@@ -189,10 +185,6 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-api-user-update-my-profile-86-a-de4"
   },
-  "/docs/Web3MQ-SDK/JS-SDK/authorization/-ac5": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-js-sdk-authorization-cfe-15b"
-  },
   "/docs/Web3MQ-SDK/JS-SDK/channel/-873": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-sdk-js-sdk-channel-8-ee-129"
@@ -224,6 +216,10 @@
   "/docs/Web3MQ-SDK/JS-SDK/quickStart/-332": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-sdk-js-sdk-quick-start-1-e-9-f6b"
+  },
+  "/docs/Web3MQ-SDK/JS-SDK/register/-978": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-js-sdk-register-c-31-e4d"
   },
   "/docs/Web3MQ-SDK/JS-SDK/types/-e1d": {
     "component": "component---theme-doc-item-178-a40",

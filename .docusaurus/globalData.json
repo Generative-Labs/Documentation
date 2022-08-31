@@ -8,16 +8,11 @@
           "label": "Next",
           "isLast": true,
           "path": "/docs",
-          "mainDocId": "Tutorial/JS-SDK",
+          "mainDocId": "Intro",
           "docs": [
             {
               "id": "Intro",
               "path": "/docs/Intro",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Tutorial/JS-SDK",
-              "path": "/docs/Tutorial/JS-SDK",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -206,11 +201,6 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-SDK/JS-SDK/authorization/authorization",
-              "path": "/docs/Web3MQ-SDK/JS-SDK/authorization/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
               "id": "Web3MQ-SDK/JS-SDK/channel/channel",
               "path": "/docs/Web3MQ-SDK/JS-SDK/channel/",
               "sidebar": "tutorialSidebar"
@@ -248,6 +238,11 @@
             {
               "id": "Web3MQ-SDK/JS-SDK/quickStart/quickStart",
               "path": "/docs/Web3MQ-SDK/JS-SDK/quickStart/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/JS-SDK/register/register",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/register/",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -299,8 +294,8 @@
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/docs/Tutorial/JS-SDK",
-                "label": "Tutorial/JS-SDK"
+                "path": "/docs/Intro",
+                "label": "Intro"
               }
             }
           }
