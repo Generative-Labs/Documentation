@@ -18,9 +18,11 @@ position: 2
 ```tsx
 import { Client } from 'web3-mq';
 
-const register = Client.init();
+// 1. You must initialize the SDK, the init function is asynchronous
+await Client.init();
 
-const account = await Register.getEthAccount();
+// 2. Meke sure your sdk is initialize
+const account = await Client.register.getEthAccount();
 
 console.log(account);
 ```
@@ -32,9 +34,14 @@ console.log(account);
 ```tsx
 import { Client } from 'web3-mq';
 
-const register = Client.init({ app_key: 'vAUJTFXbBZRkEDRE' });
+// 1. You can save the fastUrl locally to reduce requests
+const fastUrl = await Client.init({
+  connectUrl: 'example url', // The fastURL you saved to local
+  app_key: 'app_key',// Appkey applied from our team
+});
 
-const { PrivateKey, PublicKey } = await register.signMetaMask(
+// 2. You must ensure that the Client.init initialization is complete
+const { PrivateKey, PublicKey } = await Client.register.signMetaMask(
   'https://www.web3mq.com' // your signContent URI
 );
 

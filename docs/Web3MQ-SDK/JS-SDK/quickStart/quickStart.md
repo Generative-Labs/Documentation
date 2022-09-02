@@ -30,11 +30,11 @@ Currently, only Webpack 4 is supported, temporary does not support Weboack 5 and
 
 1. Install MetaMask extension
 2. Install package
-3. Register Web3MQ user if you are not
-4. Create Web3MQ client connection
-5. Create Web3MQ chat room
-6. Send message
-7. Example
+3. Init Web3MQ
+4. Register Web3MQ user if you are not
+5. Create Web3MQ client connection
+6. Create Web3MQ chat room
+7. Send message
 
 ## Install
 
@@ -46,24 +46,92 @@ yarn add web3-mq
 
 ## API endpoint
 
-**When using remove 'https://'**
-
-- https://us-west-2.web3mq.com
-- https://ap-jp-1.web3mq.com
-- https://ap-singapore-1.web3mq.com
-
-## Test App_key
-
-- vAUJTFXbBZRkEDRE
-- MlfWdfEUHtVsdDmM
+- https://dev-us-west-2.web3mq.com,
+- https://dev-ap-jp-1.web3mq.com,
+- https://dev-ap-singapore-1.web3mq.com,
 
 ## Example
 
-#### Code
+> 1. Copy the Root Components Code to App.tsx
+> 2. Create a Child.tsx file and copy the Child Components Code to Child.tsx
+
+#### Root Components Code
 
 ```tsx
 import React, { useMemo, useState, useEffect } from 'react';
 import { Client, KeyPairsType } from 'web3-mq';
+import Child from './Child';
+// Root components
+const App: React.FC = () => {
+  const hasKeys = useMemo(() => {
+    const PrivateKey = localStorage.getItem('PRIVATE_KEY') || '';
+    const PublicKey = localStorage.getItem('PUBLICKEY') || '';
+    if (PrivateKey && PublicKey) {
+      return { PrivateKey, PublicKey };
+    }
+    return null;
+  }, []);
+
+  const [keys, setKeys] = useState<KeyPairsType | null>(hasKeys);
+  const [fastestUrl, setFastUrl] = useState<string | null>(null);
+
+  useEffect(() => {
+    init();
+  }, []);
+
+  const init = async () => {
+    const fastUrl = await Client.init({
+      connectUrl: localStorage.getItem('FAST_URL'),
+      app_key: 'Appkey applied from our team',
+    });
+    localStorage.setItem('FAST_URL', fastUrl);
+    setFastUrl(fastUrl);
+  };
+
+  const signMetaMask = async () => {
+    const { PrivateKey, PublicKey } = await Client.register.signMetaMask(
+      'https://www.web3mq.com'
+    );
+    localStorage.setItem('PRIVATE_KEY', PrivateKey);
+    localStorage.setItem('PUBLICKEY', PublicKey);
+    setKeys({ PrivateKey, PublicKey });
+  };
+
+  if (!keys) {
+    return (
+      <div>
+        <button onClick={signMetaMask}>signMetaMask</button>
+      </div>
+    );
+  }
+
+  if (!fastestUrl) {
+    return null;
+  }
+
+  const client = Client.getInstance(keys);
+
+  return (
+    <div>
+      <button
+        onClick={() => {
+          client.channel.createRoom();
+        }}>
+        create Room
+      </button>
+      <Child client={client} />
+    </div>
+  );
+};
+
+export default App;
+```
+
+#### Child Components Code
+
+```tsx
+import React, { useState, useEffect } from 'react';
+import { Client } from 'web3-mq';
 
 // Child components
 interface IProps {
@@ -186,53 +254,7 @@ const Child: React.FC<IProps> = (props) => {
   );
 };
 
-// Root components
-const App: React.FC = () => {
-  const hasKeys = useMemo(() => {
-    const PrivateKey = localStorage.getItem('PRIVATE_KEY') || '';
-    const PublicKey = localStorage.getItem('PUBLICKEY') || '';
-    if (PrivateKey && PublicKey) {
-      return { PrivateKey, PublicKey };
-    }
-    return null;
-  }, []);
-
-  const [keys, setKeys] = useState<KeyPairsType | null>(hasKeys);
-
-  const register = Client.init({ app_key: 'vAUJTFXbBZRkEDRE' });
-
-  const signMetaMask = async () => {
-    const { PrivateKey, PublicKey } = await register.signMetaMask(
-      'https://www.web3mq.com'
-    );
-    localStorage.setItem('PRIVATE_KEY', PrivateKey);
-    localStorage.setItem('PUBLICKEY', PublicKey);
-    setKeys({ PrivateKey, PublicKey });
-  };
-
-  if (!keys) {
-    return (
-      <div>
-        <button onClick={signMetaMask}>signMetaMask</button>
-      </div>
-    );
-  }
-  const client = Client.getInstance(keys);
-
-  return (
-    <div>
-      <button
-        onClick={() => {
-          client.channel.createRoom();
-        }}>
-        create Room
-      </button>
-      <Child client={client} />
-    </div>
-  );
-};
-
-export default App;
+export default Child;
 ```
 
 ## Connect MetaMask
@@ -244,9 +266,14 @@ export default App;
 ```ts
 import { Client } from 'web3-mq';
 
-const register = Client.init({ app_key: 'vAUJTFXbBZRkEDRE' });
+// 1. You can save the fastUrl locally to reduce requests
+const fastUrl = await Client.init({
+  connectUrl: 'example url', // The fastURL you saved to local
+  app_key: 'app_key', // Appkey applied from our team
+});
 
-const { PrivateKey, PublicKey } = await register.signMetaMask(
+// 2. You must ensure that the Client.init initialization is complete
+const { PrivateKey, PublicKey } = await Client.register.signMetaMask(
   'https://www.web3mq.com' // your signContent URI
 );
 
@@ -264,9 +291,10 @@ localStorage.setItem('PUBLICKEY', PublicKey);
 ```typescript
 import { Client } from 'web3-mq';
 
-// sign MetaMask get keys
+// 1. Sign MetaMask get keys
 const keys = { PrivateKey, PublicKey };
 
+// 2. You must ensure that the Client.init initialization is complete and that you have a key pair
 const client = Client.getInstance(keys);
 
 console.log(client);

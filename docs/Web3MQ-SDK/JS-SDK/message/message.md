@@ -23,18 +23,18 @@ position: 5
 
 ```tsx
 import { Client } from 'web3-mq';
-
-// ws and request host url
-const connectUrl = 'us-west-2.web3mq.com';
-// init sdk
-const register = Client.init({ connectUrl, app_key: 'vAUJTFXbBZRkEDRE' });
-// sign MetaMask get keys
-const { PrivateKey, PublicKey } = await register.signMetaMask(
+// 1. You must initialize the SDK, the init function is asynchronous
+await Client.init({
+  connectUrl: 'example url', // The fastURL you saved to local
+  app_key: 'app_key', // Appkey applied from our team
+});
+// 2. sign MetaMask get keys
+const { PrivateKey, PublicKey } = await Client.register.signMetaMask(
   'https://www.web3mq.com' // your signContent URI
 );
 const keys = { PrivateKey, PublicKey };
-// init client
-const client = Client.getInstance(keys);
+// 3. You must ensure that the Client.init initialization is complete and that you have a key pair
+const client = Client.getInstance(keys, HostURL);
 
 console.log(client);
 
