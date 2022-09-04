@@ -50,8 +50,8 @@ _url query params_
 | -from_sign      | int    | Yes           | from signature                                              |
 | -topic          | string | Yes           | topic                                                       |
 | -message_status | object | Yes           | message status                                              |
-| -cipher_suite   | string | Yes           | cipher suite [see cipher suite options]                     |
-| -payload_type   | string | Yes           | payload_type [see payload type options ]                    |
+| -cipher_suite   | string | Yes           | cipher suite                  |
+| -payload_type   | string | Yes           | payload_type                    |
 | -pyaload        | string | Yes           | payload base64 encode content                               |
 | -timestamp      | int    | Yes           | timestamp                                                   |
 

@@ -47,8 +47,8 @@ _url query params_
 | -from         | string | Yes           | message sender id                                                             |
 | -from_sign    | int    | Yes           | from signature                                                                |
 | -topic        | string | Yes           | topic                                                                         |
-| -cipher_suite | string | Yes           | cipher suite [see cipher suite options](/web3mq/message#ciphersuite-options)  |
-| -payload_type | string | Yes           | payload_type [see payload type options ](/web3mq/message#payloadtype-options) |
+| -cipher_suite | string | Yes           | cipher suite  |
+| -payload_type | string | Yes           | payload_type  |
 | -pyaload      | string | Yes           | payload base64 encode content                                                 |
 | -timestamp    | int    | Yes           | timestamp                                                                     |
 
