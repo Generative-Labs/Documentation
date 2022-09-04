@@ -4,17 +4,17 @@ position: 1
 
 # QuickStart
 
-**Let's learn how to use and successfully send the first message in the chat room we created**
+**This Quickstart tutorial walks you through the key concepts of Web3MQ using a sample react project and successfully send your first "hello world" to your friend!**
 
-## Attention
+## Note
 
 <font size="4" color="red" background="red">
-Currently, only Webpack 4 is supported, temporary does not support Weboack 5 and above
+Web3MQ's JS SDK only supports Webpack 4 for now, we are working hard to upgrade dependencies to be compatible with Webpack 5 and above.
 </font>
 
-## Using create-react-app
+### Using create-react-app
 
-### If you build your project using create-react-app, you need to de-escalate
+ If you are building your project using a recent version of create-react-app that's running Webpack 5 or above, you might need to downgrade in order to integrate Web3MQ into your project.
 
 > 1.  **install react-scripts**
 >
@@ -38,13 +38,16 @@ Currently, only Webpack 4 is supported, temporary does not support Weboack 5 and
 
 ## Install
 
+Install Web3MQ's JS SDK using a package manager of your choice
+
 ```bash
 npm install web3-mq
 or
 yarn add web3-mq
 ```
 
-## API endpoint
+## API endpoints
+During this initial testing phase, we've hosted complete networks of Web3MQ nodes in different regions around the globe. Connect to these endpoints below, to access the Web3MQ Testnet.
 
 - https://dev-us-west-2.web3mq.com,
 - https://dev-ap-jp-1.web3mq.com,

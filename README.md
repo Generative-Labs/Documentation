@@ -1,3 +1,3 @@
 # Website
 
-This website is documents of Web3MQ Chat Service.
+This is the repository for Web3MQ's documentation.
