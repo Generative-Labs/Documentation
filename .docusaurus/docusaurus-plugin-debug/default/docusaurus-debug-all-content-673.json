@@ -596,8 +596,8 @@
                 "permalink": "/docs/Web3MQ-API/notification/"
               },
               "next": {
-                "title": "Receive Notification",
-                "permalink": "/docs/Web3MQ-API/notification/receive_notification"
+                "title": "Notification History",
+                "permalink": "/docs/Web3MQ-API/notification/notification_list"
               }
             },
             {
@@ -630,6 +630,35 @@
               }
             },
             {
+              "unversionedId": "Web3MQ-API/notification/notification_list",
+              "id": "Web3MQ-API/notification/notification_list",
+              "title": "Notification History",
+              "description": "Get history Notification",
+              "source": "@site/docs/Web3MQ-API/notification/notification_list.md",
+              "sourceDirName": "Web3MQ-API/notification",
+              "slug": "/Web3MQ-API/notification/notification_list",
+              "permalink": "/docs/Web3MQ-API/notification/notification_list",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Notification History",
+                "order": 1,
+                "group": {
+                  "title": "Notification",
+                  "order": 7
+                }
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Change Notification Status",
+                "permalink": "/docs/Web3MQ-API/notification/change_notification_status"
+              },
+              "next": {
+                "title": "Receive Notification",
+                "permalink": "/docs/Web3MQ-API/notification/receive_notification"
+              }
+            },
+            {
               "unversionedId": "Web3MQ-API/notification/receive_notification",
               "id": "Web3MQ-API/notification/receive_notification",
               "title": "Receive Notification",
@@ -650,8 +679,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Change Notification Status",
-                "permalink": "/docs/Web3MQ-API/notification/change_notification_status"
+                "title": "Notification History",
+                "permalink": "/docs/Web3MQ-API/notification/notification_list"
               },
               "next": {
                 "title": "Chat",
@@ -1786,6 +1815,10 @@
                       {
                         "type": "doc",
                         "id": "Web3MQ-API/notification/change_notification_status"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "Web3MQ-API/notification/notification_list"
                       },
                       {
                         "type": "doc",

@@ -7,9 +7,12 @@ sidebar_position: 0
 
 `API endpoint`
 
-- https://us-west-2.web3mq.com
-- https://ap-jp-1.web3mq.com
-- https://ap-singapore-1.web3mq.com
+- https://testnet-us-west-2-1.web3mq.com
+- https://testnet-us-west-2-2.web3mq.com
+- https://testnet-ap-jp-1.web3mq.com
+- https://testnet-ap-jp-2.web3mq.com
+- https://testnet-ap-singapore-1.web3mq.com
+- https://testnet-ap-singapore-2.web3mq.com
 
 ## HTTP API list
 

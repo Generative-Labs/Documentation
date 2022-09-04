@@ -24,7 +24,7 @@ group:
 | userid             | string | Yes      | "user:" + ed25519_pubkey_hex_string |
 | pubkey             | string | Yes      | ed25519 public key hex string       |
 | timestamp          | int    | Yes      | timestamp milliseconds              |
-| signature          | string | Yes      | metamask signature                  |
+| metamask_signature          | string | Yes      | metamask signature                  |
 | sign_content       | string | Yes      | metamask signing content            |
 | wallet_address     | string | Yes      | wallet address                      |
 | wallet_type        | string | Yes      | eth                                 |
@@ -39,7 +39,7 @@ _body params_
 {
   "userid": "userid",
   "pubkey": "ed25519 pubkey",
-  "signature": "metamask signature",
+  "metamask_signature": "metamask signature",
   "sign_content": "metamask sign_content",
   "timestamp": 1656991509327,
   "wallet_address": "0x1234t3jfjadiosf",

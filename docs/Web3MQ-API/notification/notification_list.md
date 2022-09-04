@@ -17,19 +17,19 @@ group:
 | size              | int    | Yes      | size                                                                  |
 | page              | int    | Yes      | page                                                                  |
 | timestamp         | int    | Yes      | timestamp milliseconds                                                |
-| signature         | string | Yes      | use ed25519 [see signing detail](/docs/Web3MQ-API/signature)                  |
+| web3mq_signature         | string | Yes      | use ed25519 [see signing detail](/docs/Web3MQ-API/signature)                  |
 |                   |
 
-_signature signing rule_
+_web3mq_signature_ signing rule_
 
-> signature = ed25519 private key signing(userid + topic + timestamp)
+> web3mq_signature = ed25519 private key signing(userid + topic + timestamp)
 
 _url query params_
 
 ```json
 {
   "userid": "your userid",
-  "signature": "signature",
+  "web3mq_signature": "web3mq_signature",
   "timestamp": 1656991509327,
   "size": 20,
   "page": 1
@@ -70,7 +70,7 @@ _url query params_
         "payload": {
           "title": "notification",
           "content": "notification",
-          "type": "AgreeFriendRequest"
+          "type": "system"
         },
         "version": 1
       }

@@ -320,6 +320,12 @@
               },
               {
                 "type": "link",
+                "label": "Notification History",
+                "href": "/docs/Web3MQ-API/notification/notification_list",
+                "docId": "Web3MQ-API/notification/notification_list"
+              },
+              {
+                "type": "link",
                 "label": "Receive Notification",
                 "href": "/docs/Web3MQ-API/notification/receive_notification",
                 "docId": "Web3MQ-API/notification/receive_notification"
@@ -538,6 +544,12 @@
       "id": "Web3MQ-API/notification/index",
       "title": "Overview",
       "description": "Notification",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/notification/notification_list": {
+      "id": "Web3MQ-API/notification/notification_list",
+      "title": "Notification History",
+      "description": "Get history Notification",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-API/notification/receive_notification": {

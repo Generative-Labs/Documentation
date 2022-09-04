@@ -121,6 +121,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Web3MQ-API/notification/notification_list",
+              "path": "/docs/Web3MQ-API/notification/notification_list",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-API/notification/receive_notification",
               "path": "/docs/Web3MQ-API/notification/receive_notification",
               "sidebar": "tutorialSidebar"

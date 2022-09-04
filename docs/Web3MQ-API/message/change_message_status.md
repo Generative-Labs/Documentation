@@ -21,11 +21,11 @@ group:
 | topic             | string       | Yes      | topic                                                                 |
 | status            | string       | Yes      | status delivered or read                                              |
 | timestamp         | int          | Yes      | timestamp milliseconds                                                |
-| signature         | string       | Yes      | use ed25519 [see signing detail](/docs/Web3MQ-API/signature)                  |
+| web3mq_signature         | string       | Yes      | use ed25519 [see signing detail](/docs/Web3MQ-API/signature)                  |
 
-_signature signing rule_
+_web3mq_signature signing rule_
 
-> signature = ed25519 private key signing(userid + status + timestamp)
+> web3mq_signature = ed25519 private key signing(userid + status + timestamp)
 
 ```ts
 if message from group chat:
@@ -41,7 +41,7 @@ _url query params_
 {
   "userid": "your userid",
   "topic": "topic",
-  "signature": "signature",
+  "web3mq_signature": "web3mq_signature",
   "timestamp": 1656991509327,
   "messages": ["messageid", "messageid"],
   "status": "delivered" // delivered or read
