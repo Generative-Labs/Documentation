@@ -50,7 +50,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','d2f'),
+    component: ComponentCreator('/docs','48a'),
     routes: [
       {
         path: '/docs/Intro',
@@ -181,6 +181,12 @@ export default [
       {
         path: '/docs/Web3MQ-API/notification/change_notification_status',
         component: ComponentCreator('/docs/Web3MQ-API/notification/change_notification_status','4d6'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-API/notification/notification_list',
+        component: ComponentCreator('/docs/Web3MQ-API/notification/notification_list','1cb'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },

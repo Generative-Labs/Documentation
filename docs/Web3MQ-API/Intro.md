@@ -7,8 +7,8 @@ sidebar_position: 0
 
 `API endpoint`
 
-- https://testnet-us-west-2-1.web3mq.com
-- https://testnet-us-west-2-2.web3mq.com
+- https://testnet-us-west-1-1.web3mq.com
+- https://testnet-us-west-1-2.web3mq.com
 - https://testnet-ap-jp-1.web3mq.com
 - https://testnet-ap-jp-2.web3mq.com
 - https://testnet-ap-singapore-1.web3mq.com
