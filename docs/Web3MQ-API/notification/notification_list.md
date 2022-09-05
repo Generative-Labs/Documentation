@@ -52,6 +52,14 @@ _url query params_
 | -pyaload      | string | Yes           | payload base64 encode content                                                 |
 | -timestamp    | int    | Yes           | timestamp                                                                     |
 
+
+*payload.type*
+- system
+  - (system notification include user agree your friend request etc.)
+- subscription
+  - (subscription topic new message notification)
+
+
 ```json
 {
   "code": 0,

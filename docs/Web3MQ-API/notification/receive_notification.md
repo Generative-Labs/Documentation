@@ -63,6 +63,8 @@ _notfication type_
 
 - system
   - (system notification include user agree your friend request etc.)
+- subscription
+  - (subscription topic new message notification)
 
 ```json
 {
