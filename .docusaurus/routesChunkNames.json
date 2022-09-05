@@ -29,7 +29,7 @@
     "component": "component---theme-mdx-page-1-f-3-b90",
     "content": "content---markdown-page-393-028"
   },
-  "/docs-48a": {
+  "/docs-548": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
   },
@@ -172,6 +172,22 @@
   "/docs/Web3MQ-API/signature-798": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-api-signature-304-971"
+  },
+  "/docs/Web3MQ-API/topic/-21a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-api-topic-a-95-a43"
+  },
+  "/docs/Web3MQ-API/topic/create_topic-b82": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-api-topic-create-topic-40-e-da6"
+  },
+  "/docs/Web3MQ-API/topic/publish_topic_message-682": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-api-topic-publish-topic-messagea-80-91d"
+  },
+  "/docs/Web3MQ-API/topic/subscribe_topic-eb2": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-api-topic-subscribe-topicb-02-f35"
   },
   "/docs/Web3MQ-API/user/-def": {
     "component": "component---theme-doc-item-178-a40",

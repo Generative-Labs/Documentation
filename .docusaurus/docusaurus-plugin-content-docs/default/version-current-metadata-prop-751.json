@@ -308,6 +308,33 @@
           },
           {
             "type": "category",
+            "label": "Topic",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Create Topic",
+                "href": "/docs/Web3MQ-API/topic/create_topic",
+                "docId": "Web3MQ-API/topic/create_topic"
+              },
+              {
+                "type": "link",
+                "label": "Publish Topic Message",
+                "href": "/docs/Web3MQ-API/topic/publish_topic_message",
+                "docId": "Web3MQ-API/topic/publish_topic_message"
+              },
+              {
+                "type": "link",
+                "label": "Subscribe Topic",
+                "href": "/docs/Web3MQ-API/topic/subscribe_topic",
+                "docId": "Web3MQ-API/topic/subscribe_topic"
+              }
+            ],
+            "href": "/docs/Web3MQ-API/topic/"
+          },
+          {
+            "type": "category",
             "label": "Notification",
             "collapsible": true,
             "collapsed": true,
@@ -622,6 +649,30 @@
       "id": "Web3MQ-API/signature",
       "title": "Signature",
       "description": "- Web3MQ use ed25519 key pair for signing of requests",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/topic/create_topic": {
+      "id": "Web3MQ-API/topic/create_topic",
+      "title": "Create Topic",
+      "description": "---",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/topic/index": {
+      "id": "Web3MQ-API/topic/index",
+      "title": "Overview",
+      "description": "Topic API list",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/topic/publish_topic_message": {
+      "id": "Web3MQ-API/topic/publish_topic_message",
+      "title": "Publish Topic Message",
+      "description": "---",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/topic/subscribe_topic": {
+      "id": "Web3MQ-API/topic/subscribe_topic",
+      "title": "Subscribe Topic",
+      "description": "---",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-API/user/Get_my_profile": {

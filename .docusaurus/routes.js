@@ -50,7 +50,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','48a'),
+    component: ComponentCreator('/docs','548'),
     routes: [
       {
         path: '/docs/Intro',
@@ -259,6 +259,30 @@ export default [
       {
         path: '/docs/Web3MQ-API/signature',
         component: ComponentCreator('/docs/Web3MQ-API/signature','798'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-API/topic/',
+        component: ComponentCreator('/docs/Web3MQ-API/topic/','21a'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-API/topic/create_topic',
+        component: ComponentCreator('/docs/Web3MQ-API/topic/create_topic','b82'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-API/topic/publish_topic_message',
+        component: ComponentCreator('/docs/Web3MQ-API/topic/publish_topic_message','682'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-API/topic/subscribe_topic',
+        component: ComponentCreator('/docs/Web3MQ-API/topic/subscribe_topic','eb2'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
