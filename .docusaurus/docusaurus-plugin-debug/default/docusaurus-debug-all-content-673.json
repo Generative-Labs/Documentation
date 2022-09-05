@@ -12,9 +12,9 @@
           "versionClassName": "docs-version-current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/coder/WorkSpace/Documentation/sidebars.js",
-          "contentPath": "/Users/coder/WorkSpace/Documentation/docs",
-          "contentPathLocalized": "/Users/coder/WorkSpace/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/fanxiangyu/Work/Documentation/sidebars.js",
+          "contentPath": "/Users/fanxiangyu/Work/Documentation/docs",
+          "contentPathLocalized": "/Users/fanxiangyu/Work/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "Intro",

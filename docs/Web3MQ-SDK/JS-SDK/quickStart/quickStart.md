@@ -16,7 +16,7 @@ Web3MQ's JS SDK only supports Webpack 4 for now, we are working hard to upgrade 
 
 If you are building your project using a recent version of create-react-app that's running Webpack 5 or above, you might need to downgrade in order to integrate Web3MQ into your project.
 
-> 1.  **install react-scripts**
+> 1.  **Copy the following command to the terminal to install the lower version of react-scripts**
 >
 > ```bash
 > npm install react-scripts@latest4
@@ -24,7 +24,7 @@ If you are building your project using a recent version of create-react-app that
 > yarn add react-scripts@latest4
 > ```
 >
-> 2. **Select the latest 4.x version (4.0.3)**
+> 2. **Select the latest 4.x version (4.0.3) in terminal**
 
 ## Usage
 
@@ -50,9 +50,12 @@ yarn add web3-mq
 
 During this initial testing phase, we've hosted complete networks of Web3MQ nodes in different regions around the globe. Connect to these endpoints below, to access the Web3MQ Testnet.
 
-- https://dev-us-west-2.web3mq.com,
-- https://dev-ap-jp-1.web3mq.com,
-- https://dev-ap-singapore-1.web3mq.com,
+- https://testnet-us-west-1-1.web3mq.com
+- https://testnet-us-west-1-2.web3mq.com
+- https://testnet-ap-jp-1.web3mq.com
+- https://testnet-ap-jp-2.web3mq.com
+- https://testnet-ap-singapore-1.web3mq.com
+- https://testnet-ap-singapore-2.web3mq.com
 
 ## Example
 

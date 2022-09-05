@@ -70,7 +70,14 @@ export type EthAccountType = {
 export type initOptions = {
   connectUrl?: string;
   app_key?: string;
+  env?: EnvTypes;
 };
+```
+
+### EnvTypes
+
+```ts
+export type EnvTypes = 'dev' | 'test';
 ```
 
 ### ActiveChannelType

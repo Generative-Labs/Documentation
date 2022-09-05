@@ -41,6 +41,7 @@ import { Client } from 'web3-mq';
 await Client.init({
   connectUrl: 'example url', // The fastURL you saved to local
   app_key: 'app_key', // Appkey applied from our team
+  env: 'test', // The default is the test environment
 });
 ```
 
