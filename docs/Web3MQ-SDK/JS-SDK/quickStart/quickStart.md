@@ -14,7 +14,7 @@ Web3MQ's JS SDK only supports Webpack 4 for now, we are working hard to upgrade 
 
 ### Using create-react-app
 
- If you are building your project using a recent version of create-react-app that's running Webpack 5 or above, you might need to downgrade in order to integrate Web3MQ into your project.
+If you are building your project using a recent version of create-react-app that's running Webpack 5 or above, you might need to downgrade in order to integrate Web3MQ into your project.
 
 > 1.  **install react-scripts**
 >
@@ -47,6 +47,7 @@ yarn add web3-mq
 ```
 
 ## API endpoints
+
 During this initial testing phase, we've hosted complete networks of Web3MQ nodes in different regions around the globe. Connect to these endpoints below, to access the Web3MQ Testnet.
 
 - https://dev-us-west-2.web3mq.com,
@@ -294,11 +295,19 @@ localStorage.setItem('PUBLICKEY', PublicKey);
 ```typescript
 import { Client } from 'web3-mq';
 
-// 1. Sign MetaMask get keys
-const keys = { PrivateKey, PublicKey };
+// 1. init SDK
+await Client.init({
+  connectUrl: 'example url', // The fastURL you saved to local
+  app_key: 'app_key', // Appkey applied from our team
+});
 
-// 2. You must ensure that the Client.init initialization is complete and that you have a key pair
-const client = Client.getInstance(keys);
+// 2. Sign MetaMask get keys
+const { PrivateKey, PublicKey } = await Client.register.signMetaMask(
+  'https://www.web3mq.com'
+);
+
+// 3. You must ensure that the Client.init initialization is complete and that you have a key pair
+const client = Client.getInstance({ PrivateKey, PublicKey });
 
 console.log(client);
 ```
