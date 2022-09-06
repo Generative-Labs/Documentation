@@ -14,7 +14,7 @@ group:
 
 > **POST** `/api/create_topic/`
 
-| Parameters in URL | Type   | Required | Parameters Description                                                |
+| Parameters in Body json | Type   | Required | Parameters Description                                                |
 | ----------------- | ------ | -------- | --------------------------------------------------------------------- |
 | userid            | string | Yes      | [see userid detail](/docs/Web3MQ-API/pubkey/save_pubkey#generate-your-userid) |
 | timestamp         | int    | Yes      | timestamp milliseconds                                                |

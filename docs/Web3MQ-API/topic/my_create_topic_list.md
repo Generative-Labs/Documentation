@@ -1,39 +1,35 @@
 ---
-title: Subscribe Topic
+title: My Create Topic List
 order: 1
 group:
   title: Topic
   order: 7
 ---
 
-# Subscribe Topic
+# My Create Topic list
 
 ---
 
-## Subscribe Topic
+## My Create Topic list
 
-> **POST** `/api/subscribe_topic/`
+> **GET** `/api/my_create_topic_list/`
 
-| Parameters in Body json | Type   | Required | Parameters Description                                                |
+| Parameters in URL | Type   | Required | Parameters Description                                                |
 | ----------------- | ------ | -------- | --------------------------------------------------------------------- |
 | userid            | string | Yes      | [see userid detail](/docs/Web3MQ-API/pubkey/save_pubkey#generate-your-userid) |
-| topicid           | string | Yes      | topic id                                                              |
 | timestamp         | int    | Yes      | timestamp milliseconds                                                |
 | web3mq_signature  | string | Yes      | use ed25519 [see signing detail](/docs/Web3MQ-API/signature)                  |
+| page              | not    | Yes      |                                                                       |
+| size              | not    | Yes      |                                                                       |
 
 _web3mq_signature signing rule_
 
-> web3mq_signature = ed25519 private key signing(userid + topicid + timestamp)
+> web3mq_signature = ed25519 private key signing(userid + timestamp)
 
 _url query params_
 
-```json
-{
-  "userid": "your userid",
-  "topicid": "topicid",
-  "web3mq_signature": "web3mq_signature",
-  "timestamp": 1656991509327
-}
+```bash
+/api/my_create_topic_list/?userid=userid&web3mq_signature=web3mq_signature&timestamp=timestamp&page=1&size=20
 ```
 
 **response**
@@ -46,6 +42,11 @@ _url query params_
 ```json
 {
   "code": 0,
-  "msg": "ok"
+  "msg": "ok",
+  "data": [
+     {
+        "topicid": "topic:asdfasdfasdfa"
+     }
+  ]
 }
 ```
