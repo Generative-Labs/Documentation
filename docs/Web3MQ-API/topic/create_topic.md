@@ -19,10 +19,11 @@ group:
 | userid            | string | Yes      | [see userid detail](/docs/Web3MQ-API/pubkey/save_pubkey#generate-your-userid) |
 | timestamp         | int    | Yes      | timestamp milliseconds                                                |
 | web3mq_signature  | string | Yes      | use ed25519 [see signing detail](/docs/Web3MQ-API/signature)                  |
+| topic_name        | string | No       | topic name                                                            |
 
 _web3mq_signature signing rule_
 
-> web3mq_signature = ed25519 private key signing(userid + status + timestamp)
+> web3mq_signature = ed25519 private key signing(userid + timestamp)
 
 _url query params_
 
@@ -30,6 +31,7 @@ _url query params_
 {
   "userid": "your userid",
   "web3mq_signature": "web3mq_signature",
+  "topic_name": "",
   "timestamp": 1656991509327
 }
 ```

@@ -25,7 +25,7 @@ group:
 
 _web3mq_signature signing rule_
 
-> web3mq_signature = ed25519 private key signing(userid + status + timestamp)
+> web3mq_signature = ed25519 private key signing(userid + topicid + timestamp)
 
 _url query params_
 
