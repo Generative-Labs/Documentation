@@ -181,3 +181,51 @@ export type NotifyResponse = {
   timestamp: number;
 };
 ```
+
+## CreateTopicParams
+
+```ts
+export interface CreateTopicParams extends BaseParams {
+  topic_name: string;
+}
+```
+
+## SubscribeTopicParams
+
+```ts
+export interface SubscribeTopicParams extends BaseParams {
+  topicid: string;
+}
+```
+
+## PublishTopicMessageParams
+
+```ts
+export interface PublishTopicMessageParams extends SubscribeTopicParams {
+  title: string;
+  content: string;
+}
+```
+
+## GetTopicListParams
+
+```ts
+export interface GetTopicListParams extends PageParams, BaseParams {}
+```
+
+## SubscribeListType
+
+```ts
+export type SubscribeListType = {
+  topicid: string;
+  create_at: number;
+};
+```
+
+## TopicListType
+
+```ts
+export interface TopicListType extends SubscribeListType {
+  topic_name: string;
+}
+```

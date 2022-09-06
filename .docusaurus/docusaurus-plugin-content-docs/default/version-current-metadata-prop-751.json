@@ -738,7 +738,7 @@
     "Web3MQ-SDK/JS-SDK/notify/notify": {
       "id": "Web3MQ-SDK/JS-SDK/notify/notify",
       "title": "Notify",
-      "description": "Properties",
+      "description": "myTopicList: TopicListType[] | null;",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK/quickStart/quickStart": {

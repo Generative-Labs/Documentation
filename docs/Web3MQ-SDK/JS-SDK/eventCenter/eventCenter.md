@@ -26,6 +26,8 @@ export const EVENT_MAP = {
   'message.openAllThread': true,
   'notification.messageNew': true,
   'notification.getList': true,
+  'notification.getMyTopicList': true,
+  'notification.getMySubscribeList': true,
 };
 };
 ```
