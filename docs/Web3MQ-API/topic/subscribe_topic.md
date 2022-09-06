@@ -16,10 +16,10 @@ group:
 
 | Parameters in URL | Type   | Required | Parameters Description                                                |
 | ----------------- | ------ | -------- | --------------------------------------------------------------------- |
-| userid            | string | Yes      | [see userid detail](/apidocs/pubkey/save_pubkey#generate-your-userid) |
+| userid            | string | Yes      | [see userid detail](/docs/Web3MQ-API/pubkey/save_pubkey#generate-your-userid) |
 | topicid           | string | Yes      | topic id                                                              |
 | timestamp         | int    | Yes      | timestamp milliseconds                                                |
-| web3mq_signature  | string | Yes      | use ed25519 [see signing detail](/apidocs/signature)                  |
+| web3mq_signature  | string | Yes      | use ed25519 [see signing detail](/docs/Web3MQ-API/signature)                  |
 
 _web3mq_signature signing rule_
 
