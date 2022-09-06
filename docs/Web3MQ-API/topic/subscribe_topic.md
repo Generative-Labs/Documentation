@@ -25,7 +25,7 @@ _web3mq_signature signing rule_
 
 > web3mq_signature = ed25519 private key signing(userid + topicid + timestamp)
 
-_url query params_
+_Body json params_
 
 ```json
 {
