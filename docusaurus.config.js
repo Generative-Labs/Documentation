@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Web3MQ API Document',
-  tagline: 'Chat anything with anybody',
-  url: 'https://docs.web3messaging.online/',
+  title: 'Web3MQ API Documentation',
+  tagline: 'The Web3 Communications Protocol',
+  url: 'https://docs.web3mq.com/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
