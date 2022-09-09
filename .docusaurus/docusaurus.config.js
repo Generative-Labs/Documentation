@@ -4,9 +4,9 @@ Your edits in this file will be overwritten in the next build!
 Modify the docusaurus.config.js file at your site's root instead.
 */
 export default {
-  "title": "Web3MQ API Document",
-  "tagline": "Chat anything with anybody",
-  "url": "https://docs.web3messaging.online/",
+  "title": "Web3MQ API Documentation",
+  "tagline": "The Web3 Communications Protocol",
+  "url": "https://docs.web3mq.com/",
   "baseUrl": "/",
   "onBrokenLinks": "throw",
   "onBrokenMarkdownLinks": "warn",

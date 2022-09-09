@@ -196,6 +196,16 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Web3MQ-API/topic/my_create_topic_list",
+              "path": "/docs/Web3MQ-API/topic/my_create_topic_list",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-API/topic/my_subscribe_topic_list",
+              "path": "/docs/Web3MQ-API/topic/my_subscribe_topic_list",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-API/topic/publish_topic_message",
               "path": "/docs/Web3MQ-API/topic/publish_topic_message",
               "sidebar": "tutorialSidebar"
@@ -268,6 +278,11 @@
             {
               "id": "Web3MQ-SDK/JS-SDK/register/register",
               "path": "/docs/Web3MQ-SDK/JS-SDK/register/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/JS-SDK/topic/topic",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/topic/",
               "sidebar": "tutorialSidebar"
             },
             {

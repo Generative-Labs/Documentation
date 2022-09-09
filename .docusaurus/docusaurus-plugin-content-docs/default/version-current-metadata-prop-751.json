@@ -76,6 +76,12 @@
               },
               {
                 "type": "link",
+                "label": "Topic",
+                "href": "/docs/Web3MQ-SDK/JS-SDK/topic/",
+                "docId": "Web3MQ-SDK/JS-SDK/topic/topic"
+              },
+              {
+                "type": "link",
                 "label": "Encryption",
                 "href": "/docs/Web3MQ-SDK/JS-SDK/encryption/",
                 "docId": "Web3MQ-SDK/JS-SDK/encryption/encryption"
@@ -317,6 +323,18 @@
                 "label": "Create Topic",
                 "href": "/docs/Web3MQ-API/topic/create_topic",
                 "docId": "Web3MQ-API/topic/create_topic"
+              },
+              {
+                "type": "link",
+                "label": "My Create Topic List",
+                "href": "/docs/Web3MQ-API/topic/my_create_topic_list",
+                "docId": "Web3MQ-API/topic/my_create_topic_list"
+              },
+              {
+                "type": "link",
+                "label": "My Subscribe Topic List",
+                "href": "/docs/Web3MQ-API/topic/my_subscribe_topic_list",
+                "docId": "Web3MQ-API/topic/my_subscribe_topic_list"
               },
               {
                 "type": "link",
@@ -663,6 +681,18 @@
       "description": "Topic API list",
       "sidebar": "tutorialSidebar"
     },
+    "Web3MQ-API/topic/my_create_topic_list": {
+      "id": "Web3MQ-API/topic/my_create_topic_list",
+      "title": "My Create Topic List",
+      "description": "---",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/topic/my_subscribe_topic_list": {
+      "id": "Web3MQ-API/topic/my_subscribe_topic_list",
+      "title": "My Subscribe Topic List",
+      "description": "---",
+      "sidebar": "tutorialSidebar"
+    },
     "Web3MQ-API/topic/publish_topic_message": {
       "id": "Web3MQ-API/topic/publish_topic_message",
       "title": "Publish Topic Message",
@@ -738,7 +768,7 @@
     "Web3MQ-SDK/JS-SDK/notify/notify": {
       "id": "Web3MQ-SDK/JS-SDK/notify/notify",
       "title": "Notify",
-      "description": "myTopicList: TopicListType[] | null;",
+      "description": "Properties",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK/quickStart/quickStart": {
@@ -751,6 +781,12 @@
       "id": "Web3MQ-SDK/JS-SDK/register/register",
       "title": "Register",
       "description": "Methods",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/JS-SDK/topic/topic": {
+      "id": "Web3MQ-SDK/JS-SDK/topic/topic",
+      "title": "Topic",
+      "description": "Properties",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK/types/types": {

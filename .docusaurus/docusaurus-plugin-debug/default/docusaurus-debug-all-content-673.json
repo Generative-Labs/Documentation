@@ -1036,8 +1036,8 @@
                 "permalink": "/docs/Web3MQ-API/topic/"
               },
               "next": {
-                "title": "Publish Topic Message",
-                "permalink": "/docs/Web3MQ-API/topic/publish_topic_message"
+                "title": "My Create Topic List",
+                "permalink": "/docs/Web3MQ-API/topic/my_create_topic_list"
               }
             },
             {
@@ -1070,6 +1070,64 @@
               }
             },
             {
+              "unversionedId": "Web3MQ-API/topic/my_create_topic_list",
+              "id": "Web3MQ-API/topic/my_create_topic_list",
+              "title": "My Create Topic List",
+              "description": "---",
+              "source": "@site/docs/Web3MQ-API/topic/my_create_topic_list.md",
+              "sourceDirName": "Web3MQ-API/topic",
+              "slug": "/Web3MQ-API/topic/my_create_topic_list",
+              "permalink": "/docs/Web3MQ-API/topic/my_create_topic_list",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "My Create Topic List",
+                "order": 1,
+                "group": {
+                  "title": "Topic",
+                  "order": 7
+                }
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Create Topic",
+                "permalink": "/docs/Web3MQ-API/topic/create_topic"
+              },
+              "next": {
+                "title": "My Subscribe Topic List",
+                "permalink": "/docs/Web3MQ-API/topic/my_subscribe_topic_list"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-API/topic/my_subscribe_topic_list",
+              "id": "Web3MQ-API/topic/my_subscribe_topic_list",
+              "title": "My Subscribe Topic List",
+              "description": "---",
+              "source": "@site/docs/Web3MQ-API/topic/my_subscribe_topic_list.md",
+              "sourceDirName": "Web3MQ-API/topic",
+              "slug": "/Web3MQ-API/topic/my_subscribe_topic_list",
+              "permalink": "/docs/Web3MQ-API/topic/my_subscribe_topic_list",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "My Subscribe Topic List",
+                "order": 1,
+                "group": {
+                  "title": "Topic",
+                  "order": 7
+                }
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "My Create Topic List",
+                "permalink": "/docs/Web3MQ-API/topic/my_create_topic_list"
+              },
+              "next": {
+                "title": "Publish Topic Message",
+                "permalink": "/docs/Web3MQ-API/topic/publish_topic_message"
+              }
+            },
+            {
               "unversionedId": "Web3MQ-API/topic/publish_topic_message",
               "id": "Web3MQ-API/topic/publish_topic_message",
               "title": "Publish Topic Message",
@@ -1090,8 +1148,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Create Topic",
-                "permalink": "/docs/Web3MQ-API/topic/create_topic"
+                "title": "My Subscribe Topic List",
+                "permalink": "/docs/Web3MQ-API/topic/my_subscribe_topic_list"
               },
               "next": {
                 "title": "Subscribe Topic",
@@ -1331,8 +1389,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Notify",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/notify/"
+                "title": "Topic",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/topic/"
               },
               "next": {
                 "title": "Utils",
@@ -1391,7 +1449,7 @@
               "unversionedId": "Web3MQ-SDK/JS-SDK/notify/notify",
               "id": "Web3MQ-SDK/JS-SDK/notify/notify",
               "title": "Notify",
-              "description": "myTopicList: TopicListType[] | null;",
+              "description": "Properties",
               "source": "@site/docs/Web3MQ-SDK/JS-SDK/notify/notify.md",
               "sourceDirName": "Web3MQ-SDK/JS-SDK/notify",
               "slug": "/Web3MQ-SDK/JS-SDK/notify/",
@@ -1407,8 +1465,8 @@
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK/user/"
               },
               "next": {
-                "title": "Encryption",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/encryption/"
+                "title": "Topic",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/topic/"
               }
             },
             {
@@ -1457,6 +1515,30 @@
               "next": {
                 "title": "Client",
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK/client/"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/JS-SDK/topic/topic",
+              "id": "Web3MQ-SDK/JS-SDK/topic/topic",
+              "title": "Topic",
+              "description": "Properties",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK/topic/topic.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK/topic",
+              "slug": "/Web3MQ-SDK/JS-SDK/topic/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK/topic/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 8.1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Notify",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/notify/"
+              },
+              "next": {
+                "title": "Encryption",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/encryption/"
               }
             },
             {
@@ -1726,6 +1808,11 @@
                       },
                       {
                         "type": "doc",
+                        "label": "Topic",
+                        "id": "Web3MQ-SDK/JS-SDK/topic/topic"
+                      },
+                      {
+                        "type": "doc",
                         "label": "Encryption",
                         "id": "Web3MQ-SDK/JS-SDK/encryption/encryption"
                       },
@@ -1931,6 +2018,14 @@
                       {
                         "type": "doc",
                         "id": "Web3MQ-API/topic/create_topic"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "Web3MQ-API/topic/my_create_topic_list"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "Web3MQ-API/topic/my_subscribe_topic_list"
                       },
                       {
                         "type": "doc",
