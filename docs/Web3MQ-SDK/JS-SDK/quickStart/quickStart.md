@@ -8,9 +8,12 @@ position: 1
 
 ## Note
 
-<font size="4" color="red" background="red">
+:::caution
+
 Web3MQ's JS SDK only supports Webpack 4 for now, we are working hard to upgrade dependencies to be compatible with Webpack 5 and above.
-</font>
+
+:::
+
 
 ### Using create-react-app
 
