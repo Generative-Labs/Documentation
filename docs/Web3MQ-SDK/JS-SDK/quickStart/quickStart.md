@@ -6,6 +6,16 @@ position: 1
 
 **This Quickstart tutorial walks you through the key concepts of Web3MQ using a sample react project and successfully send your first "hello world" to your friend!**
 
+## Installation
+
+Install Web3MQ's JS SDK using a package manager of your choice
+
+```bash
+npm install web3-mq
+or
+yarn add web3-mq
+```
+
 ## Note
 
 :::caution
@@ -29,27 +39,43 @@ If you are building your project using a recent version of create-react-app that
 >
 > 2. **Select the latest 4.x version (4.0.3) in terminal**
 
-## Usage
+## Initialize Client and Connect to Web3MQ Network
+In order to connect to the Web3MQ Network, both users and developers authenticate through wallet signatures, we demonstrate below with an Ethereum wallet via Metamask, but Web3MQ is built to be compatible with wallets across different chains.
 
-1. Install MetaMask extension
-2. Install package
-3. Init Web3MQ
-4. Register Web3MQ user if you are not
-5. Create Web3MQ client connection
-6. Create Web3MQ chat room
-7. Send message
+### Initialize Client
+:::note
 
-## Install
+While we are committed to building an open and collectively owned public good, our early stage testnet requires an API key in order to connect. This is to control capacity to make sure that each early partner and developer is able to build a great experience on top of Web3MQ. [Apply here](https://web3mq.com/apply).
 
-Install Web3MQ's JS SDK using a package manager of your choice
+:::
 
-```bash
-npm install web3-mq
-or
-yarn add web3-mq
+As Web3MQ is a federated network, our default JS SDK client has a method to help you connect to the best node for you.
+
+Simply calling Client.init without connectUrl or an empty string returns a url of the best node determined for you, and this url can be stored locally.
+
+```ts
+import { Client } from 'web3-mq';
+
+// You can save the bestEndpointUrl locally to skip endpoint search next time, which will save time, and
+const bestEndpointUrl = await Client.init({
+  connectUrl: '', //
+  app_key: 'app_key', // temporary authorization key obtained by applying, will be removed in future testnets and mainnet
+});
+
+```
+Calling Client.init with a specific connectUrl forces the client to connect to that specific node. When bestEndpointUrl is stored, it might be time-saving to connect directly instead of running the search again.
+
+```ts
+import { Client } from 'web3-mq';
+
+const fastUrl = await Client.init({
+  connectUrl: bestEndpointUrl, // takes in a valid endpoint url as input, when this paramter is given, client will always connect to that specific node.
+  app_key: 'app_key', // Appkey applied from our team
+});
+
 ```
 
-## API endpoints
+#### API endpoints
 
 During this initial testing phase, we've hosted complete networks of Web3MQ nodes in different regions around the globe. Connect to these endpoints below, to access the Web3MQ Testnet.
 
@@ -60,7 +86,59 @@ During this initial testing phase, we've hosted complete networks of Web3MQ node
 - https://testnet-ap-singapore-1.web3mq.com
 - https://testnet-ap-singapore-2.web3mq.com
 
-## Example
+
+### Sign with wallet to register user and obtain message encryption keys
+For any first-time user of Web3MQ's network, you'll need to register on Web3MQ's network. Web3MQ's JS SDK takes care of the key generation process and subsequent wallet signing process. Client.register.signMetaMask is a utility method that does this automatically.
+
+#### Code
+
+```ts
+// You must ensure that the Client.init initialization is complete before running this
+const { PrivateKey, PublicKey } = await Client.register.signMetaMask(
+  'https://www.web3mq.com' // your signContent URI
+);
+
+console.log(PrivateKey, PublicKey);
+
+// Keep your private key in a safe place, this is for demo purposes only
+localStorage.setItem('PRIVATE_KEY', PrivateKey);
+localStorage.setItem('PUBLICKEY', PublicKey);
+```
+
+## Create room
+After initializing the client and registering your user, the next step is to connect to a room
+#### Code
+
+```ts
+client.channel.createRoom();
+```
+
+```tsx
+<button
+  onClick={() => {
+    client.channel.createRoom();
+  }}>
+  createGroup
+</button>
+```
+
+## Send message
+
+#### Code
+```ts
+client.channel.sendMessage('Hello World');
+```
+
+```tsx
+<button
+  onClick={() => {
+    client.message.sendMessage('Hello World');
+  }}>
+  sendMessage
+</button>
+```
+
+## Full Example
 
 > 1. Copy the Root Components Code to App.tsx
 > 2. Create a Child.tsx file and copy the Child Components Code to Child.tsx
@@ -265,81 +343,4 @@ const Child: React.FC<IProps> = (props) => {
 };
 
 export default Child;
-```
-
-## Connect MetaMask
-
-> Connect MetaMask get your eth wallet
-
-#### Code
-
-```ts
-import { Client } from 'web3-mq';
-
-// 1. You can save the fastUrl locally to reduce requests
-const fastUrl = await Client.init({
-  connectUrl: 'example url', // The fastURL you saved to local
-  app_key: 'app_key', // Appkey applied from our team
-});
-
-// 2. You must ensure that the Client.init initialization is complete
-const { PrivateKey, PublicKey } = await Client.register.signMetaMask(
-  'https://www.web3mq.com' // your signContent URI
-);
-
-console.log(PrivateKey, PublicKey);
-
-// Keep your private key in safe place
-localStorage.setItem('PRIVATE_KEY', PrivateKey);
-localStorage.setItem('PUBLICKEY', PublicKey);
-```
-
-## Create Web3MQ client connection
-
-#### Code
-
-```typescript
-import { Client } from 'web3-mq';
-
-// 1. init SDK
-await Client.init({
-  connectUrl: 'example url', // The fastURL you saved to local
-  app_key: 'app_key', // Appkey applied from our team
-});
-
-// 2. Sign MetaMask get keys
-const { PrivateKey, PublicKey } = await Client.register.signMetaMask(
-  'https://www.web3mq.com'
-);
-
-// 3. You must ensure that the Client.init initialization is complete and that you have a key pair
-const client = Client.getInstance({ PrivateKey, PublicKey });
-
-console.log(client);
-```
-
-## Create room
-
-#### Code
-
-```tsx
-<button
-  onClick={() => {
-    client.channel.createRoom();
-  }}>
-  createGroup
-</button>
-```
-
-## send message
-
-#### Code
-
-```tsx
-<button
-  onClick={() => {
-    client.message.sendMessage('your send message');
-  }}>
-  sendMessage
-</button>
 ```
