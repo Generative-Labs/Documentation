@@ -12,7 +12,7 @@ import {
   MessageInput,
 } from 'web3-mq-react';
 import 'web3-mq-react/dist/css/index.css';
-import './index.module.css';
+import ss from './index.module.css';
 
 import Login from './components/Login';
 import useLogin from './hooks/useLogin';
@@ -43,9 +43,9 @@ const App: React.FC = () => {
   return (
     <Chat client={client} appType={appType} logout={logout}>
       <DashBoard />
-      <Main />
+      <Main className={ss['example-main']} />
       <Channel>
-        <Window>
+        <Window className={ss['expample-window']}>
           <MessageHeader avatarSize={40} />
           <MessageList />
           <MessageInput />

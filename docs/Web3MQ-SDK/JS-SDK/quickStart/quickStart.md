@@ -16,7 +16,7 @@ or
 yarn add web3-mq
 ```
 
-## Note
+<!-- ## Note
 
 :::caution
 
@@ -37,7 +37,7 @@ If you are building your project using a recent version of create-react-app that
 > yarn add react-scripts@latest4
 > ```
 >
-> 2. **Select the latest 4.x version (4.0.3) in terminal**
+> 2. **Select the latest 4.x version (4.0.3) in terminal** -->
 
 ## Initialize Client and Connect to Web3MQ Network
 In order to connect to the Web3MQ Network, both users and developers authenticate through wallet signatures, we demonstrate below with an Ethereum wallet via Metamask, but Web3MQ is built to be compatible with wallets across different chains.

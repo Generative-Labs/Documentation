@@ -17,7 +17,7 @@ export const Layout: FC<PropsWithChildren<LayoutProps>> = (props) => {
   return (
     <div className={ss['code-lineout']}>
       <div className={ss['code-box-demo']}>
-        <button onClick={() => setVisible(true)}>开始聊天</button>  
+        <button onClick={() => setVisible(true)}>show the demo</button>  
       </div>
       <div className={ss['code-box-meta']}>
         <div className={ss['code-box-title']}>{title}</div>
