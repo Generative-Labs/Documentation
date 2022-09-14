@@ -20,7 +20,7 @@ export const Layout: FC<PropsWithChildren<LayoutProps>> = (props) => {
       { () => (
         <div className={ss['code-lineout']}>
           <div className={ss['code-box-demo']}>
-            {/* <button onClick={() => setVisible(true)}>show the demo</button>   */}
+            <button onClick={() => setVisible(true)}>show the demo</button>  
           </div>
           <div className={ss['code-box-meta']}>
             <div className={ss['code-box-title']}>{title}</div>
@@ -52,7 +52,7 @@ export const Layout: FC<PropsWithChildren<LayoutProps>> = (props) => {
             })}>
             {code}
           </div>
-          {/* <Modal 
+          <Modal 
               className={ss['code-modal']}
               dialogClassName={ss['code-modal-dialog']}
               visible={visible} 
@@ -62,7 +62,7 @@ export const Layout: FC<PropsWithChildren<LayoutProps>> = (props) => {
               <div style={{ overflow: 'scroll', height: 'calc(100% - 56px)'}}>
                 {children}
               </div>  
-            </Modal> */}
+            </Modal>
         </div>
       )}
     </BrowserOnly>
