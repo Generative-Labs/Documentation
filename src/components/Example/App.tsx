@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Client } from 'web3-mq';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 import {
   Chat,
   Channel,
@@ -20,14 +21,18 @@ import useLogin from './hooks/useLogin';
 const App: React.FC = () => {
   const { keys, fastestUrl, init, signMetaMask, logout } = useLogin();
   const [appType, setAppType] = useState(
-    window.innerWidth <= 600 ? AppTypeEnum['h5'] : AppTypeEnum['pc'],
+    window.innerWidth <= 600 ? AppTypeEnum['h5'] : AppTypeEnum['pc']
   );
 
   useEffect(() => {
     init();
-    window.addEventListener('resize', () => {
-      setAppType(window.innerWidth <= 600 ? AppTypeEnum['h5'] : AppTypeEnum['pc']);
-    });
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', () => {
+        setAppType(
+          window.innerWidth <= 600 ? AppTypeEnum['h5'] : AppTypeEnum['pc']
+        );
+      });
+    }
   }, []);
 
   if (!keys) {
