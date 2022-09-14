@@ -16,53 +16,55 @@ export const Layout: FC<PropsWithChildren<LayoutProps>> = (props) => {
   const [visible, setVisible] = useState(false);
 
   return (
-    <div className={ss['code-lineout']}>
-      <div className={ss['code-box-demo']}>
-        <button onClick={() => setVisible(true)}>show the demo</button>  
-      </div>
-      <div className={ss['code-box-meta']}>
-        <div className={ss['code-box-title']}>{title}</div>
-        <div className={ss['code-box-description']}>{description}</div>
-        <div className={ss['code-box-actions']}>
-          <span className={ss['code-box-show-code']}>
-            <img
-              className={cx(ss['code-icon'], {
-                [ss['code-icon-hide']]: open,
-              })}
-              onClick={() => setOpen(!open)}
-              src='https://gw.alipayobjects.com/zos/antfincdn/Z5c7kzvi30/expand.svg'
-              alt=''
-            />
-            <img
-              className={cx(ss['code-icon'], {
-                [ss['code-icon-hide']]: !open,
-              })}
-              onClick={() => setOpen(!open)}
-              src='https://gw.alipayobjects.com/zos/antfincdn/4zAaozCvUH/unexpand.svg'
-              alt=''
-            />
-          </span>
+    <BrowserOnly>
+      { () => (
+        <div className={ss['code-lineout']}>
+          <div className={ss['code-box-demo']}>
+            <button onClick={() => setVisible(true)}>show the demo</button>  
+          </div>
+          <div className={ss['code-box-meta']}>
+            <div className={ss['code-box-title']}>{title}</div>
+            <div className={ss['code-box-description']}>{description}</div>
+            <div className={ss['code-box-actions']}>
+              <span className={ss['code-box-show-code']}>
+                <img
+                  className={cx(ss['code-icon'], {
+                    [ss['code-icon-hide']]: open,
+                  })}
+                  onClick={() => setOpen(!open)}
+                  src='https://gw.alipayobjects.com/zos/antfincdn/Z5c7kzvi30/expand.svg'
+                  alt=''
+                />
+                <img
+                  className={cx(ss['code-icon'], {
+                    [ss['code-icon-hide']]: !open,
+                  })}
+                  onClick={() => setOpen(!open)}
+                  src='https://gw.alipayobjects.com/zos/antfincdn/4zAaozCvUH/unexpand.svg'
+                  alt=''
+                />
+              </span>
+            </div>
+          </div>
+          <div
+            className={cx(ss['highlight-wrapper'], {
+              [ss['highlight-wrapper-hide']]: !open,
+            })}>
+            {code}
+          </div>
+          <Modal 
+              className={ss['code-modal']}
+              dialogClassName={ss['code-modal-dialog']}
+              visible={visible} 
+              closeModal={() => setVisible(false)} 
+              title='SwapChat' 
+            >
+              <div style={{ overflow: 'scroll', height: 'calc(100% - 56px)'}}>
+                {children}
+              </div>  
+            </Modal>
         </div>
-      </div>
-      <div
-        className={cx(ss['highlight-wrapper'], {
-          [ss['highlight-wrapper-hide']]: !open,
-        })}>
-        {code}
-      </div>
-      <BrowserOnly>
-        <Modal 
-          className={ss['code-modal']}
-          dialogClassName={ss['code-modal-dialog']}
-          visible={visible} 
-          closeModal={() => setVisible(false)} 
-          title='SwapChat' 
-        >
-          <div style={{ overflow: 'scroll', height: 'calc(100% - 56px)'}}>
-            {children}
-          </div>  
-        </Modal>
-      </BrowserOnly>
-    </div>
+      )}
+    </BrowserOnly>
   );
 };
