@@ -19,9 +19,15 @@ import useLogin from './hooks/useLogin';
 
 const App: React.FC = () => {
   const { keys, fastestUrl, init, signMetaMask, logout } = useLogin();
+  const [appType, setAppType] = useState(
+    window.innerWidth <= 600 ? AppTypeEnum['h5'] : AppTypeEnum['pc'],
+  );
 
   useEffect(() => {
     init();
+    window.addEventListener('resize', () => {
+      setAppType(window.innerWidth <= 600 ? AppTypeEnum['h5'] : AppTypeEnum['pc']);
+    });
   }, []);
 
   if (!keys) {
@@ -35,7 +41,7 @@ const App: React.FC = () => {
   const client = Client.getInstance(keys);
 
   return (
-    <Chat client={client} appType={AppTypeEnum['pc']} logout={logout}>
+    <Chat client={client} appType={appType} logout={logout}>
       <DashBoard />
       <Main />
       <Channel>

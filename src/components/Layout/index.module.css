@@ -83,4 +83,16 @@
   display: none;
 }
 
+div.code-modal {
+  z-index: var(--ifm-z-index-fixed);
+}
+div.code-modal-dialog {
+  height: 100vh;
+}
+
+@media screen and (max-width: 600px) {
+  div.code-modal-dialog {
+    min-width: 100%;
+  }
+}
 

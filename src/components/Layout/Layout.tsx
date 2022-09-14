@@ -1,4 +1,5 @@
 import React, { FC, PropsWithChildren, useEffect, useState } from 'react';
+import { Modal } from 'web3-mq-react';
 import cx from 'classnames';
 import ss from './index.module.css';
 
@@ -11,10 +12,13 @@ interface LayoutProps {
 export const Layout: FC<PropsWithChildren<LayoutProps>> = (props) => {
   const { title, description, code, children } = props;
   const [open, setOpen] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   return (
     <div className={ss['code-lineout']}>
-      <div className={ss['code-box-demo']}>{children}</div>
+      <div className={ss['code-box-demo']}>
+        <button onClick={() => setVisible(true)}>开始聊天</button>  
+      </div>
       <div className={ss['code-box-meta']}>
         <div className={ss['code-box-title']}>{title}</div>
         <div className={ss['code-box-description']}>{description}</div>
@@ -45,6 +49,17 @@ export const Layout: FC<PropsWithChildren<LayoutProps>> = (props) => {
         })}>
         {code}
       </div>
+      <Modal 
+        className={ss['code-modal']}
+        dialogClassName={ss['code-modal-dialog']}
+        visible={visible} 
+        closeModal={() => setVisible(false)} 
+        title='SwapChat' 
+      >
+        <div style={{ overflow: 'scroll', height: 'calc(100% - 56px)'}}>
+          {children}
+        </div>  
+      </Modal>
     </div>
   );
 };
