@@ -60,7 +60,7 @@ const { PrivateKey, PublicKey } = await Client.register.signMetaMask(
 );
 const keys = { PrivateKey, PublicKey };
 // 3. You must ensure that the Client.init initialization is complete and that you have a key pair
-const client = Client.getInstance(keys, HostURL);
+const client = Client.getInstance(keys);
 
 console.log(client);
 ```

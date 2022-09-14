@@ -40,9 +40,11 @@ If you are building your project using a recent version of create-react-app that
 > 2. **Select the latest 4.x version (4.0.3) in terminal** -->
 
 ## Initialize Client and Connect to Web3MQ Network
+
 In order to connect to the Web3MQ Network, both users and developers authenticate through wallet signatures, we demonstrate below with an Ethereum wallet via Metamask, but Web3MQ is built to be compatible with wallets across different chains.
 
 ### Initialize Client
+
 :::note
 
 While we are committed to building an open and collectively owned public good, our early stage testnet requires an API key in order to connect. This is to control capacity to make sure that each early partner and developer is able to build a great experience on top of Web3MQ. [Apply here](https://web3mq.com/apply).
@@ -61,8 +63,8 @@ const bestEndpointUrl = await Client.init({
   connectUrl: '', //
   app_key: 'app_key', // temporary authorization key obtained by applying, will be removed in future testnets and mainnet
 });
-
 ```
+
 Calling Client.init with a specific connectUrl forces the client to connect to that specific node. When bestEndpointUrl is stored, it might be time-saving to connect directly instead of running the search again.
 
 ```ts
@@ -72,7 +74,6 @@ const fastUrl = await Client.init({
   connectUrl: bestEndpointUrl, // takes in a valid endpoint url as input, when this paramter is given, client will always connect to that specific node.
   app_key: 'app_key', // Appkey applied from our team
 });
-
 ```
 
 #### API endpoints
@@ -86,8 +87,8 @@ During this initial testing phase, we've hosted complete networks of Web3MQ node
 - https://testnet-ap-singapore-1.web3mq.com
 - https://testnet-ap-singapore-2.web3mq.com
 
-
 ### Sign with wallet to register user and obtain message encryption keys
+
 For any first-time user of Web3MQ's network, you'll need to register on Web3MQ's network. Web3MQ's JS SDK takes care of the key generation process and subsequent wallet signing process. Client.register.signMetaMask is a utility method that does this automatically.
 
 #### Code
@@ -105,8 +106,20 @@ localStorage.setItem('PRIVATE_KEY', PrivateKey);
 localStorage.setItem('PUBLICKEY', PublicKey);
 ```
 
+### Get Client Instance
+
+#### Code
+
+```ts
+const keys = { PrivateKey, PublicKey };
+
+const client = Client.getInstance(keys);
+```
+
 ## Create room
+
 After initializing the client and registering your user, the next step is to connect to a room
+
 #### Code
 
 ```ts
@@ -125,6 +138,7 @@ client.channel.createRoom();
 ## Send message
 
 #### Code
+
 ```ts
 client.channel.sendMessage('Hello World');
 ```
@@ -143,17 +157,15 @@ client.channel.sendMessage('Hello World');
 > 1. Copy the Root Components Code to App.tsx
 > 2. Create a Child.tsx file and copy the Child Components Code to Child.tsx
 
-
 import { Layout } from '@site/src/components/Layout'
 import App from '@site/src/components/Example/App.tsx';
 import AppMdx from '@site/src/components/Example/example.mdx'
 
 <Layout
-  title='Example'
-  description='This is the full example'
-  code={<AppMdx />}
->
-  <App />
+title='Example'
+description='This is the full example'
+code={<AppMdx />}>
+<App />
 </Layout>
 
 <!-- #### Root Components Code

@@ -16,6 +16,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Tutorials/topic/topic",
+              "path": "/docs/Tutorials/topic/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-API/chat",
               "path": "/docs/Web3MQ-API/chat",
               "sidebar": "tutorialSidebar"

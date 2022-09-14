@@ -16,6 +16,20 @@
       },
       {
         "type": "category",
+        "label": "Tutorials",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Topic Tutorials",
+            "href": "/docs/Tutorials/topic/",
+            "docId": "Tutorials/topic/topic"
+          }
+        ]
+      },
+      {
+        "type": "category",
         "label": "Web3MQ SDK",
         "collapsible": true,
         "collapsed": true,
@@ -463,6 +477,12 @@
       "id": "Intro",
       "title": "Intro",
       "description": "Web3MQ is a decentralized secure communication protocol dedicated to becoming crypto-native communication infrastructure. We reconnect isolated social platforms with a unified inbox, enabling information to be freely generated, flowed and communicated across terminals. We support end-to-end encrypted communication with distributed storage, ensuring that no third party can access users' chat messages and that users have full ownership of their data.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Tutorials/topic/topic": {
+      "id": "Tutorials/topic/topic",
+      "title": "topic",
+      "description": "Topic Tutorials",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-API/chat": {
