@@ -143,7 +143,20 @@ client.channel.sendMessage('Hello World');
 > 1. Copy the Root Components Code to App.tsx
 > 2. Create a Child.tsx file and copy the Child Components Code to Child.tsx
 
-#### Root Components Code
+
+import { Layout } from '@site/src/components/Layout'
+import App from '@site/src/components/Example/App.tsx';
+import AppMdx from '@site/src/components/Example/example.mdx'
+
+<Layout
+  title='Example'
+  description='This is the full example'
+  code={<AppMdx />}
+>
+  <App />
+</Layout>
+
+<!-- #### Root Components Code
 
 ```tsx
 import React, { useMemo, useState, useEffect } from 'react';
@@ -343,4 +356,4 @@ const Child: React.FC<IProps> = (props) => {
 };
 
 export default Child;
-```
+``` -->
