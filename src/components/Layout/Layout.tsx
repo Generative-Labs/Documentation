@@ -1,4 +1,5 @@
 import React, { FC, PropsWithChildren, useEffect, useState } from 'react';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 import { Modal } from 'web3-mq-react';
 import cx from 'classnames';
 import ss from './index.module.css';
@@ -49,17 +50,19 @@ export const Layout: FC<PropsWithChildren<LayoutProps>> = (props) => {
         })}>
         {code}
       </div>
-      <Modal 
-        className={ss['code-modal']}
-        dialogClassName={ss['code-modal-dialog']}
-        visible={visible} 
-        closeModal={() => setVisible(false)} 
-        title='SwapChat' 
-      >
-        <div style={{ overflow: 'scroll', height: 'calc(100% - 56px)'}}>
-          {children}
-        </div>  
-      </Modal>
+      <BrowserOnly>
+        <Modal 
+          className={ss['code-modal']}
+          dialogClassName={ss['code-modal-dialog']}
+          visible={visible} 
+          closeModal={() => setVisible(false)} 
+          title='SwapChat' 
+        >
+          <div style={{ overflow: 'scroll', height: 'calc(100% - 56px)'}}>
+            {children}
+          </div>  
+        </Modal>
+      </BrowserOnly>
     </div>
   );
 };
