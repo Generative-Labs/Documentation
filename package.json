@@ -21,7 +21,7 @@
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "web3-mq": "^1.2.37",
+    "web3-mq": "^1.2.38",
     "web3-mq-react": "^1.1.0"
   },
   "browserslist": {
