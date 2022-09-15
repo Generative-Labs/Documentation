@@ -54,6 +54,15 @@ export type KeyPairsType = {
 };
 ```
 
+### signMetaMaskParams
+
+```ts
+export type signMetaMaskParams = {
+  signContentURI: string;
+  EthAddress?: string;
+};
+```
+
 ### EthAccountType
 
 ```ts

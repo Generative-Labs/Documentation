@@ -22,7 +22,25 @@
         "items": [
           {
             "type": "link",
-            "label": "Topic Tutorials",
+            "label": "Dotbit",
+            "href": "/docs/Tutorials/dotbit/",
+            "docId": "Tutorials/dotbit/dotbit"
+          },
+          {
+            "type": "link",
+            "label": "Ens",
+            "href": "/docs/Tutorials/ens/",
+            "docId": "Tutorials/ens/ens"
+          },
+          {
+            "type": "link",
+            "label": "Notifications",
+            "href": "/docs/Tutorials/notifications/",
+            "docId": "Tutorials/notifications/notifications"
+          },
+          {
+            "type": "link",
+            "label": "Topic",
             "href": "/docs/Tutorials/topic/",
             "docId": "Tutorials/topic/topic"
           }
@@ -479,10 +497,28 @@
       "description": "Web3MQ is a decentralized secure communication protocol dedicated to becoming crypto-native communication infrastructure. We reconnect isolated social platforms with a unified inbox, enabling information to be freely generated, flowed and communicated across terminals. We support end-to-end encrypted communication with distributed storage, ensuring that no third party can access users' chat messages and that users have full ownership of their data.",
       "sidebar": "tutorialSidebar"
     },
+    "Tutorials/dotbit/dotbit": {
+      "id": "Tutorials/dotbit/dotbit",
+      "title": "dotbit",
+      "description": "DotBit",
+      "sidebar": "tutorialSidebar"
+    },
+    "Tutorials/ens/ens": {
+      "id": "Tutorials/ens/ens",
+      "title": "ens",
+      "description": "ENS",
+      "sidebar": "tutorialSidebar"
+    },
+    "Tutorials/notifications/notifications": {
+      "id": "Tutorials/notifications/notifications",
+      "title": "notifications",
+      "description": "Notifications",
+      "sidebar": "tutorialSidebar"
+    },
     "Tutorials/topic/topic": {
       "id": "Tutorials/topic/topic",
       "title": "topic",
-      "description": "Topic Tutorials",
+      "description": "Topic",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-API/chat": {

@@ -18,10 +18,10 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "/Users/edy/Desktop/web3-mq documentation/Documentation/sidebars.js"
+          "sidebarPath": "/Users/fanxiangyu/Work/Documentation/sidebars.js"
         },
         "theme": {
-          "customCss": "/Users/edy/Desktop/web3-mq documentation/Documentation/src/css/custom.css"
+          "customCss": "/Users/fanxiangyu/Work/Documentation/src/css/custom.css"
         }
       }
     ]

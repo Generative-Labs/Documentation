@@ -95,9 +95,10 @@ For any first-time user of Web3MQ's network, you'll need to register on Web3MQ's
 
 ```ts
 // You must ensure that the Client.init initialization is complete before running this
-const { PrivateKey, PublicKey } = await Client.register.signMetaMask(
-  'https://www.web3mq.com' // your signContent URI
-);
+const { PrivateKey, PublicKey } = await Client.register.signMetaMask({
+  signContentURI: 'https://www.web3mq.com', // your signContent URI
+  EthAddress: 'your eth address', // *Not required*  your eth address, if not use your MetaMask eth address
+});
 
 console.log(PrivateKey, PublicKey);
 

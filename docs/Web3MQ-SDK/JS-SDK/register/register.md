@@ -6,10 +6,10 @@ position: 2
 
 ## Methods
 
-| name          | type     | Parameters Description  | response                                                        |
-| ------------- | -------- | ----------------------- | --------------------------------------------------------------- |
-| SignMetaMask  | function | (signContentURI:string) | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK/types/#keypairstype)     |
-| getEthAccount | function | none                    | [EthAccountType](/docs/Web3MQ-SDK/JS-SDK/types/#ethaccounttype) |
+| name          | type     | Parameters Description                                                  | response                                                        |
+| ------------- | -------- | ----------------------------------------------------------------------- | --------------------------------------------------------------- |
+| SignMetaMask  | function | [signMetaMaskParams](/docs/Web3MQ-SDK/JS-SDK/types/#signmetamaskparams) | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK/types/#keypairstype)     |
+| getEthAccount | function | none                                                                    | [EthAccountType](/docs/Web3MQ-SDK/JS-SDK/types/#ethaccounttype) |
 
 ## GetEthAccount
 
@@ -37,13 +37,14 @@ import { Client } from 'web3-mq';
 // 1. You can save the fastUrl locally to reduce requests
 const fastUrl = await Client.init({
   connectUrl: 'example url', // The fastURL you saved to local
-  app_key: 'app_key',// Appkey applied from our team
+  app_key: 'app_key', // Appkey applied from our team
 });
 
 // 2. You must ensure that the Client.init initialization is complete
-const { PrivateKey, PublicKey } = await Client.register.signMetaMask(
-  'https://www.web3mq.com' // your signContent URI
-);
+const { PrivateKey, PublicKey } = await Client.register.signMetaMask({
+  signContentURI: 'https://www.web3mq.com', // your signContent URI
+  EthAddress: 'your eth address', //  *Not required* your eth address, if not use your MetaMask eth address
+});
 
 console.log(PrivateKey, PublicKey);
 ```

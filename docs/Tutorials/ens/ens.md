@@ -1,12 +1,16 @@
----
-position: 4
----
+## ENS
 
-## Topic
-
-**Topic Tutorials**
+**ENS Tutorials**
 
 ## Installation
+
+install web3.js
+
+```bash
+npm install web3
+or
+yarn add web3
+```
 
 Install Web3MQ's JS SDK using a package manager of your choice
 
@@ -64,6 +68,20 @@ During this initial testing phase, we've hosted complete networks of Web3MQ node
 - https://testnet-ap-singapore-1.web3mq.com
 - https://testnet-ap-singapore-2.web3mq.com
 
+### Get ETH address by Ens
+
+```javascript
+import Web3 from 'web3';
+
+const web3 = new Web3(window.ethereum);
+
+const getEthAddressByEns = async () => {
+  const address = await web3.eth.ens.getAddress('alice.eth');
+  console.log(address, 'address');
+  return address;
+};
+```
+
 ### Sign with wallet to register user and obtain message encryption keys
 
 For any first-time user of Web3MQ's network, you'll need to register on Web3MQ's network. Web3MQ's JS SDK takes care of the key generation process and subsequent wallet signing process. Client.register.signMetaMask is a utility method that does this automatically.
@@ -71,10 +89,13 @@ For any first-time user of Web3MQ's network, you'll need to register on Web3MQ's
 #### Code
 
 ```ts
+// get your eth address
+const address = getEthAddressByEns();
+
 // You must ensure that the Client.init initialization is complete before running this
 const { PrivateKey, PublicKey } = await Client.register.signMetaMask({
   signContentURI: 'https://www.web3mq.com', // your signContent URI
-  EthAddress: 'your eth address', // *Not required*  your eth address, if not use your MetaMask eth address
+  EthAddress: address,
 });
 
 console.log(PrivateKey, PublicKey);
@@ -94,109 +115,38 @@ const keys = { PrivateKey, PublicKey };
 const client = Client.getInstance(keys);
 ```
 
-## Create topic
+## Create room
 
-After initializing the client and registering your user, the next step is to create topic
-
-#### Code
-
-```ts
-client.topic.createTopic('topicName');
-```
-
-```tsx
-const handleCreate = async () => {
-  const data = await client.topic.createTopic(topicName);
-  console.log(data);
-};
-
-<button onClick={handleCreate}>createGroup</button>;
-```
-
-## Subscribe Topic
+After initializing the client and registering your user, the next step is to connect to a room
 
 #### Code
 
 ```ts
-client.topic.subscribeTopic('topicId');
+client.channel.createRoom();
 ```
 
 ```tsx
-const handleSubscribe = async () => {
-  const data = await client.topic.subscribeTopic(topicId);
-  console.log(data);
-};
-<button onClick={handleSubscribe}>Subscribe Topic</button>;
+<button
+  onClick={() => {
+    client.channel.createRoom();
+  }}>
+  createGroup
+</button>
 ```
 
-## Receive Notifications
+## Send message
 
 #### Code
 
 ```ts
-const handleEvent = (event: { type: string }) => {
-  const { type } = event;
-  if (type === 'notification.getList') {
-    console.log('notification list -------', client.notify.notificationList);
-  }
-};
-
-client.on('notification.getList', handleEvent);
+client.channel.sendMessage('Hello World');
 ```
 
 ```tsx
-const [notifyList, setNotifyList] = useState<any>([]);
-
-const handleEvent = (event: { type: string }) => {
-  const { type } = event;
-  if (type === 'notification.getList') {
-    console.log('notification list -------', client.notify.notificationList);
-  }
-};
-
-useEffect(() => {
-  client.on('notification.getList', handleEvent);
-  return () => {
-    client.off('notification.getList', handleEvent);
-  };
-}, [notifyList]);
-
-<div>
-<h1>Notify List</h1>
-{
-  notifyList?.map((item: any, idx: number) => (
-    <div key={item.timestamp}>
-      {`notify${idx + 1}-------title:`}
-      <b>{item.title}</b>, content: <b>{item.content}</b>
-    </div>
-  ));
-}
-</div>
-```
-
-## Publish Notifications
-
-#### Code
-
-```ts
-const params = {
-  topicid: 'topicId',
-  title: 'test title',
-  content: 'test content',
-};
-
-client.topic.publishTopicMessage(params);
-```
-
-```tsx
-const handlePublishMsg = async () => {
-  const params = {
-    topicid: topicId,
-    title: 'test title',
-    content: 'test content',
-  };
-  await client.topic.publishTopicMessage(params);
-};
-
-<button onClick={handlePublishMsg}>publish Msg</button>;
+<button
+  onClick={() => {
+    client.message.sendMessage('Hello World');
+  }}>
+  sendMessage
+</button>
 ```

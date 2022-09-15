@@ -50,11 +50,29 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','020'),
+    component: ComponentCreator('/docs','e8f'),
     routes: [
       {
         path: '/docs/Intro',
         component: ComponentCreator('/docs/Intro','1f0'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Tutorials/dotbit/',
+        component: ComponentCreator('/docs/Tutorials/dotbit/','59e'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Tutorials/ens/',
+        component: ComponentCreator('/docs/Tutorials/ens/','d06'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Tutorials/notifications/',
+        component: ComponentCreator('/docs/Tutorials/notifications/','f99'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },

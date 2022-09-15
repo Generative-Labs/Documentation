@@ -12,9 +12,9 @@
           "versionClassName": "docs-version-current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/edy/Desktop/web3-mq documentation/Documentation/sidebars.js",
-          "contentPath": "/Users/edy/Desktop/web3-mq documentation/Documentation/docs",
-          "contentPathLocalized": "/Users/edy/Desktop/web3-mq documentation/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/fanxiangyu/Work/Documentation/sidebars.js",
+          "contentPath": "/Users/fanxiangyu/Work/Documentation/docs",
+          "contentPathLocalized": "/Users/fanxiangyu/Work/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "Intro",
@@ -33,6 +33,74 @@
               },
               "sidebar": "tutorialSidebar",
               "next": {
+                "title": "dotbit",
+                "permalink": "/docs/Tutorials/dotbit/"
+              }
+            },
+            {
+              "unversionedId": "Tutorials/dotbit/dotbit",
+              "id": "Tutorials/dotbit/dotbit",
+              "title": "dotbit",
+              "description": "DotBit",
+              "source": "@site/docs/Tutorials/dotbit/dotbit.md",
+              "sourceDirName": "Tutorials/dotbit",
+              "slug": "/Tutorials/dotbit/",
+              "permalink": "/docs/Tutorials/dotbit/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Intro",
+                "permalink": "/docs/Intro"
+              },
+              "next": {
+                "title": "ens",
+                "permalink": "/docs/Tutorials/ens/"
+              }
+            },
+            {
+              "unversionedId": "Tutorials/ens/ens",
+              "id": "Tutorials/ens/ens",
+              "title": "ens",
+              "description": "ENS",
+              "source": "@site/docs/Tutorials/ens/ens.md",
+              "sourceDirName": "Tutorials/ens",
+              "slug": "/Tutorials/ens/",
+              "permalink": "/docs/Tutorials/ens/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "dotbit",
+                "permalink": "/docs/Tutorials/dotbit/"
+              },
+              "next": {
+                "title": "notifications",
+                "permalink": "/docs/Tutorials/notifications/"
+              }
+            },
+            {
+              "unversionedId": "Tutorials/notifications/notifications",
+              "id": "Tutorials/notifications/notifications",
+              "title": "notifications",
+              "description": "Notifications",
+              "source": "@site/docs/Tutorials/notifications/notifications.md",
+              "sourceDirName": "Tutorials/notifications",
+              "slug": "/Tutorials/notifications/",
+              "permalink": "/docs/Tutorials/notifications/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 3
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "ens",
+                "permalink": "/docs/Tutorials/ens/"
+              },
+              "next": {
                 "title": "topic",
                 "permalink": "/docs/Tutorials/topic/"
               }
@@ -41,7 +109,7 @@
               "unversionedId": "Tutorials/topic/topic",
               "id": "Tutorials/topic/topic",
               "title": "topic",
-              "description": "Topic Tutorials",
+              "description": "Topic",
               "source": "@site/docs/Tutorials/topic/topic.md",
               "sourceDirName": "Tutorials/topic",
               "slug": "/Tutorials/topic/",
@@ -49,12 +117,12 @@
               "tags": [],
               "version": "current",
               "frontMatter": {
-                "position": 1
+                "position": 4
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Intro",
-                "permalink": "/docs/Intro"
+                "title": "notifications",
+                "permalink": "/docs/Tutorials/notifications/"
               },
               "next": {
                 "title": "QuickStart",
@@ -1786,7 +1854,22 @@
                 "items": [
                   {
                     "type": "doc",
-                    "label": "Topic Tutorials",
+                    "label": "Dotbit",
+                    "id": "Tutorials/dotbit/dotbit"
+                  },
+                  {
+                    "type": "doc",
+                    "label": "Ens",
+                    "id": "Tutorials/ens/ens"
+                  },
+                  {
+                    "type": "doc",
+                    "label": "Notifications",
+                    "id": "Tutorials/notifications/notifications"
+                  },
+                  {
+                    "type": "doc",
+                    "label": "Topic",
                     "id": "Tutorials/topic/topic"
                   }
                 ]

@@ -16,6 +16,21 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Tutorials/dotbit/dotbit",
+              "path": "/docs/Tutorials/dotbit/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Tutorials/ens/ens",
+              "path": "/docs/Tutorials/ens/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Tutorials/notifications/notifications",
+              "path": "/docs/Tutorials/notifications/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Tutorials/topic/topic",
               "path": "/docs/Tutorials/topic/",
               "sidebar": "tutorialSidebar"

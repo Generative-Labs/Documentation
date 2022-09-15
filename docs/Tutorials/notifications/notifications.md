@@ -1,10 +1,10 @@
 ---
-position: 4
+position: 3
 ---
 
-## Topic
+## Notifications
 
-**Topic Tutorials**
+**Notifications Tutorials**
 
 ## Installation
 
