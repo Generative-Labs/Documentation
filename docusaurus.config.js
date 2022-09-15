@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Web3MQ API Documentation',
-  tagline: 'The Web3 Communications Protocol',
+  tagline: 'Web3-native decentralized communication protocol. Encrypted, efficient and borderless.',
   url: 'https://docs.web3mq.com/',
   baseUrl: '/',
   onBrokenLinks: 'throw',

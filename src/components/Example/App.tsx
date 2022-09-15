@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Client } from 'web3-mq';
-import BrowserOnly from '@docusaurus/BrowserOnly';
 import {
   Chat,
   Channel,

@@ -4,31 +4,31 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'ID-to-ID Chat',
+    Svg: require('../../static/img/ID_to_IDChat.svg').default,
     description: (
       <>
-        Web3MQ was designed from the ground up to be easily installed and
-        used to get your node up and running quickly.
+        Cross-platform&Cross-chain: Use 1 Web3MQ UserID to communicate with 
+        users from any chain on any platform.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Actionable Social Connection',
+    Svg: require('../../static/img/ActionableSocialConnection.svg').default,
     description: (
       <>
-        Web3MQ lets you focus on your chat, and you can chat anything with anyone.
+        Web3MQ is compatible with a wide range of social identities and social graph protocols, 
+        unlocking the potential of every social relationship in dynamic communication.
       </>
     ),
   },
   {
-    title: 'High Performance',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    title: 'Real-Time Notifications',
+    Svg: require('../../static/img/Real-TimeNotifications.svg').default,
     description: (
       <>
-        Web3MQ was built by Golang and GoFiber, running on K8S.
-        Thanks to Golang's high concurrency performance, we can handle high loads with ease.
+        Provide true real-time notifications via "Push”, ensuring important information reaches every real user.
       </>
     ),
   },
