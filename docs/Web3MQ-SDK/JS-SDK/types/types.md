@@ -51,6 +51,7 @@ export type BaseParams = {
 export type KeyPairsType = {
   PrivateKey: string;
   PublicKey: string;
+  userid: string;
 };
 ```
 
@@ -60,6 +61,9 @@ export type KeyPairsType = {
 export type signMetaMaskParams = {
   signContentURI: string;
   EthAddress?: string;
+  nickname?: string;
+  avatar_url?: string;
+  avatar_base64?: string;
 };
 ```
 
@@ -168,6 +172,22 @@ export type UpdateMyProfileResponse = {
   nickname: string;
   avatar_url: string;
 };
+```
+
+## GetUserBindDidsParams
+
+```ts
+export interface GetUserBindDidsParams extends BaseParams {}
+```
+
+## UserBindDidParams
+
+```ts
+export interface UserBindDidParams extends BaseParams {
+  provider_id: string;
+  did_type: string;
+  did_value: string;
+}
 ```
 
 ## ChangeNotificationStatusParams

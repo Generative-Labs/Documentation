@@ -33,13 +33,13 @@ await Client.init({
   app_key: 'app_key', // Appkey applied from our team
 });
 // 2. sign MetaMask get keys
-const { PrivateKey, PublicKey } = await Client.register.signMetaMask({
+const { PrivateKey, PublicKey, userid } = await Client.register.signMetaMask({
   signContentURI: 'https://www.web3mq.com', // your signContent URI
   EthAddress: 'your eth address', // *Not required*  your eth address, if not use your MetaMask eth address
 });
-const keys = { PrivateKey, PublicKey };
+const keys = { PrivateKey, PublicKey, userid };
 // 3. You must ensure that the Client.init initialization is complete and that you have a key pair
-const client = Client.getInstance(keys, HostURL);
+const client = Client.getInstance(keys);
 
 console.log(client);
 

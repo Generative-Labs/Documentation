@@ -41,10 +41,10 @@ const fastUrl = await Client.init({
 });
 
 // 2. You must ensure that the Client.init initialization is complete
-const { PrivateKey, PublicKey } = await Client.register.signMetaMask({
+const { PrivateKey, PublicKey, userid } = await Client.register.signMetaMask({
   signContentURI: 'https://www.web3mq.com', // your signContent URI
   EthAddress: 'your eth address', //  *Not required* your eth address, if not use your MetaMask eth address
 });
 
-console.log(PrivateKey, PublicKey);
+console.log(PrivateKey, PublicKey, userid);
 ```

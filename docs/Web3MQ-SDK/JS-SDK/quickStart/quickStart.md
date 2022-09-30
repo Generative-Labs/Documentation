@@ -95,16 +95,17 @@ For any first-time user of Web3MQ's network, you'll need to register on Web3MQ's
 
 ```ts
 // You must ensure that the Client.init initialization is complete before running this
-const { PrivateKey, PublicKey } = await Client.register.signMetaMask({
+const { PrivateKey, PublicKey, userid } = await Client.register.signMetaMask({
   signContentURI: 'https://www.web3mq.com', // your signContent URI
   EthAddress: 'your eth address', // *Not required*  your eth address, if not use your MetaMask eth address
 });
 
-console.log(PrivateKey, PublicKey);
+console.log(PrivateKey, PublicKey, userid);
 
 // Keep your private key in a safe place, this is for demo purposes only
 localStorage.setItem('PRIVATE_KEY', PrivateKey);
 localStorage.setItem('PUBLICKEY', PublicKey);
+localStorage.setItem('USERID', userid);
 ```
 
 ### Get Client Instance
@@ -112,7 +113,7 @@ localStorage.setItem('PUBLICKEY', PublicKey);
 #### Code
 
 ```ts
-const keys = { PrivateKey, PublicKey };
+const keys = { PrivateKey, PublicKey, userid };
 
 const client = Client.getInstance(keys);
 ```
