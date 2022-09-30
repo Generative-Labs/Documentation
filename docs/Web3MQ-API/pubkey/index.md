@@ -12,4 +12,7 @@ group:
 
 ## PublicKey API list
 
-- Save my PublicKey
+
+### `Deprecation` Save my PublicKey
+
+> This is a `deprecated` API; Use [UserLogin](/docs/Web3MQ-API/user/user_login) API

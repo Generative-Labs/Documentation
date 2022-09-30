@@ -4,6 +4,7 @@
   "label": "Next",
   "banner": null,
   "badge": false,
+  "noIndex": false,
   "className": "docs-version-current",
   "isLast": true,
   "docsSidebars": {
@@ -198,19 +199,10 @@
             "href": "/docs/Web3MQ-API/quickstart/"
           },
           {
-            "type": "category",
+            "type": "link",
             "label": "Pubkey",
-            "collapsible": true,
-            "collapsed": true,
-            "items": [
-              {
-                "type": "link",
-                "label": "Save PublicKey",
-                "href": "/docs/Web3MQ-API/pubkey/Save_pubkey",
-                "docId": "Web3MQ-API/pubkey/Save_pubkey"
-              }
-            ],
-            "href": "/docs/Web3MQ-API/pubkey/"
+            "href": "/docs/Web3MQ-API/pubkey/",
+            "docId": "Web3MQ-API/pubkey/index"
           },
           {
             "type": "category",
@@ -280,6 +272,12 @@
                 "label": "Search users",
                 "href": "/docs/Web3MQ-API/user/search_user",
                 "docId": "Web3MQ-API/user/search_user"
+              },
+              {
+                "type": "link",
+                "label": "User Login",
+                "href": "/docs/Web3MQ-API/user/user_login",
+                "docId": "Web3MQ-API/user/user_login"
               }
             ],
             "href": "/docs/Web3MQ-API/user/"
@@ -409,6 +407,46 @@
               }
             ],
             "href": "/docs/Web3MQ-API/notification/"
+          },
+          {
+            "type": "category",
+            "label": "DID",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Get User Bind DID profile",
+                "href": "/docs/Web3MQ-API/did/get_user_bindlist",
+                "docId": "Web3MQ-API/did/get_user_bindlist"
+              },
+              {
+                "type": "link",
+                "label": "User Bind DID",
+                "href": "/docs/Web3MQ-API/did/user_binddid",
+                "docId": "Web3MQ-API/did/user_binddid"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "label": "Provider",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Create Provider",
+                "href": "/docs/Web3MQ-API/provider/create_provider",
+                "docId": "Web3MQ-API/provider/create_provider"
+              },
+              {
+                "type": "link",
+                "label": "Provider Callback",
+                "href": "/docs/Web3MQ-API/provider/provider_callback",
+                "docId": "Web3MQ-API/provider/provider_callback"
+              }
+            ]
           },
           {
             "type": "link",
@@ -569,6 +607,18 @@
       "description": "Send friend request",
       "sidebar": "tutorialSidebar"
     },
+    "Web3MQ-API/did/get_user_bindlist": {
+      "id": "Web3MQ-API/did/get_user_bindlist",
+      "title": "Get User Bind DID profile",
+      "description": "POST /api/getuserbinddids/",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/did/user_binddid": {
+      "id": "Web3MQ-API/did/user_binddid",
+      "title": "User Bind DID",
+      "description": "POST /api/user_binddid/",
+      "sidebar": "tutorialSidebar"
+    },
     "Web3MQ-API/ed25519key": {
       "id": "Web3MQ-API/ed25519key",
       "title": "ed25519key",
@@ -665,16 +715,22 @@
       "description": "",
       "sidebar": "tutorialSidebar"
     },
+    "Web3MQ-API/provider/create_provider": {
+      "id": "Web3MQ-API/provider/create_provider",
+      "title": "Create Provider",
+      "description": "POST /api/create_provider/",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/provider/provider_callback": {
+      "id": "Web3MQ-API/provider/provider_callback",
+      "title": "Provider Callback",
+      "description": "- Provider should callback Web3MQ when validation passed;",
+      "sidebar": "tutorialSidebar"
+    },
     "Web3MQ-API/pubkey/index": {
       "id": "Web3MQ-API/pubkey/index",
       "title": "Overview",
       "description": "All http post request and response content type are application/json",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-API/pubkey/Save_pubkey": {
-      "id": "Web3MQ-API/pubkey/Save_pubkey",
-      "title": "Save PublicKey",
-      "description": "---",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-API/quickstart/Create_group": {
@@ -783,6 +839,12 @@
       "id": "Web3MQ-API/user/Update_my_profile",
       "title": "Update my profile",
       "description": "Update my profile",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/user/user_login": {
+      "id": "Web3MQ-API/user/user_login",
+      "title": "User Login",
+      "description": "User Login",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK/channel/channel": {

@@ -76,6 +76,16 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Web3MQ-API/did/get_user_bindlist",
+              "path": "/docs/Web3MQ-API/did/get_user_bindlist",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-API/did/user_binddid",
+              "path": "/docs/Web3MQ-API/did/user_binddid",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-API/ed25519key",
               "path": "/docs/Web3MQ-API/ed25519key",
               "sidebar": "tutorialSidebar"
@@ -156,13 +166,18 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-API/pubkey/index",
-              "path": "/docs/Web3MQ-API/pubkey/",
+              "id": "Web3MQ-API/provider/create_provider",
+              "path": "/docs/Web3MQ-API/provider/create_provider",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-API/pubkey/Save_pubkey",
-              "path": "/docs/Web3MQ-API/pubkey/Save_pubkey",
+              "id": "Web3MQ-API/provider/provider_callback",
+              "path": "/docs/Web3MQ-API/provider/provider_callback",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-API/pubkey/index",
+              "path": "/docs/Web3MQ-API/pubkey/",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -253,6 +268,11 @@
             {
               "id": "Web3MQ-API/user/Update_my_profile",
               "path": "/docs/Web3MQ-API/user/Update_my_profile",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-API/user/user_login",
+              "path": "/docs/Web3MQ-API/user/user_login",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -351,6 +371,7 @@
               "sidebar": "tutorialSidebar"
             }
           ],
+          "draftIds": [],
           "sidebars": {
             "tutorialSidebar": {
               "link": {
