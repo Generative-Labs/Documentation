@@ -23,6 +23,7 @@ group:
 | nickname           | string | No       | nickname               |
 | avatar_url         | string | No       | avatar_url             |
 | avatar_base64      | string | No       | avatar_base64          |
+| testnet_access_key | string | Yes | testnet_access_key |
 
 ```js
 // NonceContent = contact string and sha3_224 hash
@@ -40,6 +41,7 @@ Issued At: ${moment().utc().local().format('DD/MM/YYYY hh:mm')}`;
 
 ```json
 {
+  "testnet_access_key": "testnet_access_key",
   "userid": "user:3fasdf324234",
   "did_type": "eth",
   "did_value": "0x123456",
