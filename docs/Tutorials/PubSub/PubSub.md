@@ -2,9 +2,9 @@
 position: 4
 ---
 
-## Topic
+## Pub/Sub
 
-**Topic Tutorials**
+**This is a quick tutorial around experimental raw Pub/Sub capabilities of Web3MQ.**
 
 ## Installation
 
@@ -96,7 +96,7 @@ const client = Client.getInstance(keys);
 
 ## Create topic
 
-After initializing the client and registering your user, the next step is to create topic
+After initializing the client and registering your user, the next step is to create a topic.
 
 #### Code
 
@@ -113,7 +113,43 @@ const handleCreate = async () => {
 <button onClick={handleCreate}>createGroup</button>;
 ```
 
+## Publish Message to Topic
+
+Now that we've created a topic, let's try publishing a message to the topic we've just created.
+
+#### Code
+
+```ts
+const params = {
+  topicid: 'topicId',
+  title: 'test title',
+  content: 'test content',
+};
+
+client.topic.publishTopicMessage(params);
+```
+
+```tsx
+const handlePublishMsg = async () => {
+  const params = {
+    topicid: topicId,
+    title: 'test title',
+    content: 'test content',
+  };
+  await client.topic.publishTopicMessage(params);
+};
+
+<button onClick={handlePublishMsg}>publish Msg</button>;
+```
+
 ## Subscribe Topic
+Subscribe to topics to receive messages.
+
+:::tip
+
+This subscription function only tells the Web3MQ network that the user wants to subscribe to a topic. This is not where applications subscribe to the actual data feed via a WebSocket persistent connection. This happens in the notifications section below.
+
+:::
 
 #### Code
 
@@ -130,6 +166,7 @@ const handleSubscribe = async () => {
 ```
 
 ## Receive Notifications
+Each Web3MQ account is equipped with a notifications queue, currently, all subscriptions go to this notifications queue, and applications can subscribe to this notifications queue for real-time content, data, and event updates.
 
 #### Code
 
@@ -174,29 +211,4 @@ useEffect(() => {
 </div>
 ```
 
-## Publish Notifications
 
-#### Code
-
-```ts
-const params = {
-  topicid: 'topicId',
-  title: 'test title',
-  content: 'test content',
-};
-
-client.topic.publishTopicMessage(params);
-```
-
-```tsx
-const handlePublishMsg = async () => {
-  const params = {
-    topicid: topicId,
-    title: 'test title',
-    content: 'test content',
-  };
-  await client.topic.publishTopicMessage(params);
-};
-
-<button onClick={handlePublishMsg}>publish Msg</button>;
-```

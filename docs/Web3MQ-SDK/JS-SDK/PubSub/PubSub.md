@@ -2,7 +2,7 @@
 position: 8.1
 ---
 
-# Topic
+# Pub/Sub
 
 ## Properties
 
@@ -21,7 +21,7 @@ position: 8.1
 | getMyCreateTopicList    | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)     | [TopicListType](/docs/Web3MQ-SDK/JS-SDK/types/#topiclisttype)         |
 | getMySubscribeTopicList | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)     | [SubscribeListType](/docs/Web3MQ-SDK/JS-SDK/types/#subscribelisttype) |
 
-## Sub/Pub Example
+## Pub/Sub Example
 
 > 1. Copy the [Root Components](/docs/Web3MQ-SDK/JS-SDK/quickStart/#root-components-code) Code to App.tsx
 > 2. Create a Child.tsx file and copy the Child Components Code to Child.tsx
