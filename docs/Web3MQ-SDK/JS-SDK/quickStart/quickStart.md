@@ -170,19 +170,20 @@ code={<AppMdx />}>
 <App />
 </Layout>
 
-<!-- #### Root Components Code
+#### Root Components Code
 
 ```tsx
 import React, { useMemo, useState, useEffect } from 'react';
 import { Client, KeyPairsType } from 'web3-mq';
-import Child from './Child';
+
 // Root components
 const App: React.FC = () => {
   const hasKeys = useMemo(() => {
     const PrivateKey = localStorage.getItem('PRIVATE_KEY') || '';
     const PublicKey = localStorage.getItem('PUBLICKEY') || '';
-    if (PrivateKey && PublicKey) {
-      return { PrivateKey, PublicKey };
+    const userid = localStorage.getItem('USERID') || '';
+    if (PrivateKey && PublicKey && userid) {
+      return { PrivateKey, PublicKey, userid };
     }
     return null;
   }, []);
@@ -197,19 +198,20 @@ const App: React.FC = () => {
   const init = async () => {
     const fastUrl = await Client.init({
       connectUrl: localStorage.getItem('FAST_URL'),
-      app_key: 'Appkey applied from our team',
+      app_key: 'vAUJTFXbBZRkEDRE',
+      env: 'dev',
     });
     localStorage.setItem('FAST_URL', fastUrl);
     setFastUrl(fastUrl);
   };
 
   const signMetaMask = async () => {
-    const { PrivateKey, PublicKey } = await Client.register.signMetaMask(
-      'https://www.web3mq.com'
-    );
+    const { PrivateKey, PublicKey, userid } =
+      await Client.register.signMetaMask('https://www.web3mq.com');
     localStorage.setItem('PRIVATE_KEY', PrivateKey);
     localStorage.setItem('PUBLICKEY', PublicKey);
-    setKeys({ PrivateKey, PublicKey });
+    localStorage.setItem('USERID', userid);
+    setKeys({ PrivateKey, PublicKey, userid });
   };
 
   if (!keys) {
@@ -242,7 +244,7 @@ const App: React.FC = () => {
 export default App;
 ```
 
-#### Child Components Code
+<!-- #### Child Components Code
 
 ```tsx
 import React, { useState, useEffect } from 'react';
