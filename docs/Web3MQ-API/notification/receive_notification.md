@@ -36,8 +36,8 @@ wsconn = GetWSConn();
 wsconn.onmessage = function (event) {
   var respData = new Uint8Array(event.data);
 
-  const PbType = respData[0];
-  const bytes = respData.slice(1, respData.length);
+  const PbType = respData[1];
+  const bytes = respData.slice(2, respData.length);
 
   if (PbType == PbTypeNotificationListResp) {
     console.log('Receive notification');

@@ -13,7 +13,8 @@ group:
 | Parameters in URL | Type   | Required | Parameters Description                                                |
 | ----------------- | ------ | -------- | --------------------------------------------------------------------- |
 | userid            | string | Yes      | [see userid detail](/docs/Web3MQ-API/pubkey/Save_pubkey#generate-your-userid) |
-| topic             | string | Yes      | topic id                                                              |
+<!-- | topic             | string | No      | topic id                                                              | -->
+| notice_type             | string | Yes      | notice_type                                                              |
 | size              | int    | Yes      | size                                                                  |
 | page              | int    | Yes      | page                                                                  |
 | timestamp         | int    | Yes      | timestamp milliseconds                                                |
@@ -26,11 +27,20 @@ _web3mq_signature_ signing rule_
 
 _url query params_
 
+`notice_type`
+
+- `system.friend_request` (Friend request notification type)
+- `system.agree_friend_request` (Agree friend request notification type)
+- `system.group_invitation` (Group invitation notification type)
+- `subscription` (subscription topic new message notification)
+
+
 ```json
 {
   "userid": "your userid",
   "web3mq_signature": "web3mq_signature",
   "timestamp": 1656991509327,
+  "notice_type": "system.friend_request",
   "size": 20,
   "page": 1
 }

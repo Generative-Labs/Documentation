@@ -101,11 +101,10 @@ const GetWSConn = () => {
 };
 
 const GetContactBytes = (command: any, bytes: Uint8Array) => {
-  const concatArray = new Uint8Array(bytes.length + 1);
-  concatArray[0] = command;
-  for (let i = 0; i < bytes.length; i++) {
-    concatArray[i + 1] = bytes[i];
-  }
+  // client category type
+  const categoryType = 10;
+  const concatArray = new Uint8Array([categoryType, command, ...bytes]);
+
   return concatArray;
 };
 ```
@@ -151,8 +150,8 @@ wsconn = GetWSConn();
 wsconn.onmessage = function (event) {
   var respData = new Uint8Array(event.data);
 
-  const PbType = respData[0];
-  const bytes = respData.slice(1, respData.length);
+  const PbType = respData[1];
+  const bytes = respData.slice(2, respData.length);
 
   if (PbType == PbTypeConnectRespCommand) {
     console.log('Connect success');
@@ -191,6 +190,15 @@ let msgReq: Web3MQRequestMessage = {
 
 let bytes = Web3MQRequestMessage.toBinary(msgReq);
 
+const GetContactBytes = (command: any, bytes: Uint8Array) => {
+  // client category type
+  const categoryType = 10;
+  const concatArray = new Uint8Array([categoryType, command, ...bytes]);
+
+  return concatArray;
+};
+
+
 const concatArray = GetContactBytes(PbTypeMessage, bytes);
 
 wsconn.send(concatArray);
@@ -213,8 +221,8 @@ wsconn = GetWSConn();
 wsconn.onmessage = function (event) {
   var respData = new Uint8Array(event.data);
 
-  const PbType = respData[0];
-  const bytes = respData.slice(1, respData.length);
+  const PbType = respData[1];
+  const bytes = respData.slice(2, respData.length);
 
   if (PbType == PbTypeMessage) {
     console.log('Receive message');

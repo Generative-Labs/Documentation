@@ -15,6 +15,7 @@ group:
 | creator_id              | string | Yes      | userid                                               |
 | provider_id             | string | Yes      | provider_id                                          |
 | provider_name           | string | Yes      | Web3MQ email service                                 |
+| provider_description           | string | Yes      | provider description                               |
 | provider_type           | string | Yes      | email or other type                                  |
 | provider_pubkey         | string | Yes      | provider ed25519 pubkey                              |
 | timestamp               | int    | Yes      | timestamp milliseconds                               |
