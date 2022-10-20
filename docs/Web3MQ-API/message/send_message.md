@@ -100,7 +100,7 @@ message Web3MQMessage {
 | fromSign     | string | message come from user's unique id signature |
 | nodeId       | string | nodeId                                       |
 
-## Javascript example
+### Javascript example
 
 ```js
 // Common.js and ECMAScript Modules (ESM)
@@ -173,3 +173,83 @@ const concatArray = GetContactBytes(PbTypeMessage, bytes);
 
 wsconn.send(concatArray);
 ```
+
+
+
+## Receive message response status
+
+
+**Message Status Response protobuf**
+
+```go
+syntax = "proto3";
+
+package pb;
+
+message Web3MQMessageStatusResp {
+    string messageId = 1;
+    string contentTopic = 2;
+    string messageStatus = 3; // received delivered read
+    string version = 4;
+    string comeFrom = 5;
+    string fromSign = 6;
+    uint64 timestamp = 7;
+}
+```
+
+`Web3MQMessageStatusResp description`
+
+| Field        | type   | Description                                  |
+| ------------ | ------ | -------------------------------------------- |
+| messageId      | string  | message id                              |
+| contentTopic | string | content topic                                |
+| messageStatus       | string | messageStatus                              |
+| version  | string | version                                 |
+| comeFrom     | string | message come from user's unique id           |
+| fromSign     | string | message come from user's unique id signature |
+| timestamp       | uint64 | timestamp                                       |
+
+
+*messageStatus*
+
+- userNotFound
+- invalidSignature
+- received (Node received message)
+- read     (Message already read)
+
+
+```js
+// pb/message build from protobuf file
+import { Web3MQRequestMessage } from 'pb/message';
+
+
+const WS_PROTOCOL = 'wss'; // ws or wss
+
+const HostURL = 'us-west-2.web3mq.com'; // choose one domain
+
+const GetWSConn = () => {
+  const wsurl = WS_PROTOCOL + '://' + HostURL + '/messages';
+  const wsconn = new WebSocket(wsurl);
+  wsconn.binaryType = 'arraybuffer'; // !important Web3MQ send message use protobuf
+  return wsconn;
+};
+
+// message response status
+const PbTypeMessageStatusResp = 0b00010101
+
+let wsconn;
+wsconn = GetWSConn();
+
+wsconn.onmessage = function (event) {
+  var respData = new Uint8Array(event.data);
+
+  const PbType = respData[1];
+  const bytes = respData.slice(2, respData.length);
+
+  if (PbType == PbTypeMessageStatusResp) {
+     let statusResp = Web3MQMessageStatusResp.fromBinary(bytes);
+     console.log(statusResp.messageStatus == "invalidSignature");
+  }
+}
+```
+

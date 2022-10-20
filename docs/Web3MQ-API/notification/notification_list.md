@@ -23,6 +23,9 @@ group:
 
 _web3mq_signature_ signing rule_
 
+if notice_type not empty
+> web3mq_signature = ed25519 private key signing(userid + notice_type + timestamp)
+else
 > web3mq_signature = ed25519 private key signing(userid + topic + timestamp)
 
 _url query params_
