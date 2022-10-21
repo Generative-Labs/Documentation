@@ -41,9 +41,9 @@
           },
           {
             "type": "link",
-            "label": "Topic",
-            "href": "/docs/Tutorials/topic/",
-            "docId": "Tutorials/topic/topic"
+            "label": "Pub/Sub",
+            "href": "/docs/Tutorials/PubSub/",
+            "docId": "Tutorials/PubSub/PubSub"
           }
         ]
       },
@@ -110,8 +110,8 @@
               {
                 "type": "link",
                 "label": "Topic",
-                "href": "/docs/Web3MQ-SDK/JS-SDK/topic/",
-                "docId": "Web3MQ-SDK/JS-SDK/topic/topic"
+                "href": "/docs/Web3MQ-SDK/JS-SDK/PubSub/",
+                "docId": "Web3MQ-SDK/JS-SDK/PubSub/PubSub"
               },
               {
                 "type": "link",
@@ -269,6 +269,12 @@
               },
               {
                 "type": "link",
+                "label": "Get user info",
+                "href": "/docs/Web3MQ-API/user/get_user_info",
+                "docId": "Web3MQ-API/user/get_user_info"
+              },
+              {
+                "type": "link",
                 "label": "Search users",
                 "href": "/docs/Web3MQ-API/user/search_user",
                 "docId": "Web3MQ-API/user/search_user"
@@ -317,6 +323,45 @@
           },
           {
             "type": "category",
+            "label": "Pub/Sub",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Create Topic",
+                "href": "/docs/Web3MQ-API/PubSub/create_topic",
+                "docId": "Web3MQ-API/PubSub/create_topic"
+              },
+              {
+                "type": "link",
+                "label": "My Create Topic List",
+                "href": "/docs/Web3MQ-API/PubSub/my_create_topic_list",
+                "docId": "Web3MQ-API/PubSub/my_create_topic_list"
+              },
+              {
+                "type": "link",
+                "label": "My Subscribe Topic List",
+                "href": "/docs/Web3MQ-API/PubSub/my_subscribe_topic_list",
+                "docId": "Web3MQ-API/PubSub/my_subscribe_topic_list"
+              },
+              {
+                "type": "link",
+                "label": "Publish Topic Message",
+                "href": "/docs/Web3MQ-API/PubSub/publish_topic_message",
+                "docId": "Web3MQ-API/PubSub/publish_topic_message"
+              },
+              {
+                "type": "link",
+                "label": "Subscribe Topic",
+                "href": "/docs/Web3MQ-API/PubSub/subscribe_topic",
+                "docId": "Web3MQ-API/PubSub/subscribe_topic"
+              }
+            ],
+            "href": "/docs/Web3MQ-API/PubSub/"
+          },
+          {
+            "type": "category",
             "label": "Message",
             "collapsible": true,
             "collapsed": true,
@@ -341,45 +386,6 @@
               }
             ],
             "href": "/docs/Web3MQ-API/message/"
-          },
-          {
-            "type": "category",
-            "label": "Topic",
-            "collapsible": true,
-            "collapsed": true,
-            "items": [
-              {
-                "type": "link",
-                "label": "Create Topic",
-                "href": "/docs/Web3MQ-API/topic/create_topic",
-                "docId": "Web3MQ-API/topic/create_topic"
-              },
-              {
-                "type": "link",
-                "label": "My Create Topic List",
-                "href": "/docs/Web3MQ-API/topic/my_create_topic_list",
-                "docId": "Web3MQ-API/topic/my_create_topic_list"
-              },
-              {
-                "type": "link",
-                "label": "My Subscribe Topic List",
-                "href": "/docs/Web3MQ-API/topic/my_subscribe_topic_list",
-                "docId": "Web3MQ-API/topic/my_subscribe_topic_list"
-              },
-              {
-                "type": "link",
-                "label": "Publish Topic Message",
-                "href": "/docs/Web3MQ-API/topic/publish_topic_message",
-                "docId": "Web3MQ-API/topic/publish_topic_message"
-              },
-              {
-                "type": "link",
-                "label": "Subscribe Topic",
-                "href": "/docs/Web3MQ-API/topic/subscribe_topic",
-                "docId": "Web3MQ-API/topic/subscribe_topic"
-              }
-            ],
-            "href": "/docs/Web3MQ-API/topic/"
           },
           {
             "type": "category",
@@ -439,12 +445,6 @@
                 "label": "Create Provider",
                 "href": "/docs/Web3MQ-API/provider/create_provider",
                 "docId": "Web3MQ-API/provider/create_provider"
-              },
-              {
-                "type": "link",
-                "label": "Provider Callback",
-                "href": "/docs/Web3MQ-API/provider/provider_callback",
-                "docId": "Web3MQ-API/provider/provider_callback"
               }
             ]
           },
@@ -553,10 +553,10 @@
       "description": "Notifications",
       "sidebar": "tutorialSidebar"
     },
-    "Tutorials/topic/topic": {
-      "id": "Tutorials/topic/topic",
-      "title": "topic",
-      "description": "Topic",
+    "Tutorials/PubSub/PubSub": {
+      "id": "Tutorials/PubSub/PubSub",
+      "title": "PubSub",
+      "description": "Pub/Sub",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-API/chat": {
@@ -721,16 +721,46 @@
       "description": "POST /api/create_provider/",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-API/provider/provider_callback": {
-      "id": "Web3MQ-API/provider/provider_callback",
-      "title": "Provider Callback",
-      "description": "- Provider should callback Web3MQ when validation passed;",
-      "sidebar": "tutorialSidebar"
-    },
     "Web3MQ-API/pubkey/index": {
       "id": "Web3MQ-API/pubkey/index",
       "title": "Overview",
       "description": "All http post request and response content type are application/json",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/PubSub/create_topic": {
+      "id": "Web3MQ-API/PubSub/create_topic",
+      "title": "Create Topic",
+      "description": "---",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/PubSub/index": {
+      "id": "Web3MQ-API/PubSub/index",
+      "title": "Overview",
+      "description": "Topic API list",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/PubSub/my_create_topic_list": {
+      "id": "Web3MQ-API/PubSub/my_create_topic_list",
+      "title": "My Create Topic List",
+      "description": "---",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/PubSub/my_subscribe_topic_list": {
+      "id": "Web3MQ-API/PubSub/my_subscribe_topic_list",
+      "title": "My Subscribe Topic List",
+      "description": "---",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/PubSub/publish_topic_message": {
+      "id": "Web3MQ-API/PubSub/publish_topic_message",
+      "title": "Publish Topic Message",
+      "description": "---",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/PubSub/subscribe_topic": {
+      "id": "Web3MQ-API/PubSub/subscribe_topic",
+      "title": "Subscribe Topic",
+      "description": "---",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-API/quickstart/Create_group": {
@@ -781,46 +811,16 @@
       "description": "- Web3MQ use ed25519 key pair for signing of requests",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-API/topic/create_topic": {
-      "id": "Web3MQ-API/topic/create_topic",
-      "title": "Create Topic",
-      "description": "---",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-API/topic/index": {
-      "id": "Web3MQ-API/topic/index",
-      "title": "Overview",
-      "description": "Topic API list",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-API/topic/my_create_topic_list": {
-      "id": "Web3MQ-API/topic/my_create_topic_list",
-      "title": "My Create Topic List",
-      "description": "---",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-API/topic/my_subscribe_topic_list": {
-      "id": "Web3MQ-API/topic/my_subscribe_topic_list",
-      "title": "My Subscribe Topic List",
-      "description": "---",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-API/topic/publish_topic_message": {
-      "id": "Web3MQ-API/topic/publish_topic_message",
-      "title": "Publish Topic Message",
-      "description": "---",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-API/topic/subscribe_topic": {
-      "id": "Web3MQ-API/topic/subscribe_topic",
-      "title": "Subscribe Topic",
-      "description": "---",
-      "sidebar": "tutorialSidebar"
-    },
     "Web3MQ-API/user/Get_my_profile": {
       "id": "Web3MQ-API/user/Get_my_profile",
       "title": "Get my profile",
       "description": "Get my profile",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/user/get_user_info": {
+      "id": "Web3MQ-API/user/get_user_info",
+      "title": "Get user info",
+      "description": "Get user info",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-API/user/index": {
@@ -889,6 +889,12 @@
       "description": "Properties",
       "sidebar": "tutorialSidebar"
     },
+    "Web3MQ-SDK/JS-SDK/PubSub/PubSub": {
+      "id": "Web3MQ-SDK/JS-SDK/PubSub/PubSub",
+      "title": "Pub/Sub",
+      "description": "Properties",
+      "sidebar": "tutorialSidebar"
+    },
     "Web3MQ-SDK/JS-SDK/quickStart/quickStart": {
       "id": "Web3MQ-SDK/JS-SDK/quickStart/quickStart",
       "title": "QuickStart",
@@ -899,12 +905,6 @@
       "id": "Web3MQ-SDK/JS-SDK/register/register",
       "title": "Register",
       "description": "Methods",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/JS-SDK/topic/topic": {
-      "id": "Web3MQ-SDK/JS-SDK/topic/topic",
-      "title": "Topic",
-      "description": "Properties",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK/types/types": {

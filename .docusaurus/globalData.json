@@ -31,8 +31,8 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Tutorials/topic/topic",
-              "path": "/docs/Tutorials/topic/",
+              "id": "Tutorials/PubSub/PubSub",
+              "path": "/docs/Tutorials/PubSub/",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -171,13 +171,38 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-API/provider/provider_callback",
-              "path": "/docs/Web3MQ-API/provider/provider_callback",
+              "id": "Web3MQ-API/pubkey/index",
+              "path": "/docs/Web3MQ-API/pubkey/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-API/pubkey/index",
-              "path": "/docs/Web3MQ-API/pubkey/",
+              "id": "Web3MQ-API/PubSub/create_topic",
+              "path": "/docs/Web3MQ-API/PubSub/create_topic",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-API/PubSub/index",
+              "path": "/docs/Web3MQ-API/PubSub/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-API/PubSub/my_create_topic_list",
+              "path": "/docs/Web3MQ-API/PubSub/my_create_topic_list",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-API/PubSub/my_subscribe_topic_list",
+              "path": "/docs/Web3MQ-API/PubSub/my_subscribe_topic_list",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-API/PubSub/publish_topic_message",
+              "path": "/docs/Web3MQ-API/PubSub/publish_topic_message",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-API/PubSub/subscribe_topic",
+              "path": "/docs/Web3MQ-API/PubSub/subscribe_topic",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -221,38 +246,13 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-API/topic/create_topic",
-              "path": "/docs/Web3MQ-API/topic/create_topic",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-API/topic/index",
-              "path": "/docs/Web3MQ-API/topic/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-API/topic/my_create_topic_list",
-              "path": "/docs/Web3MQ-API/topic/my_create_topic_list",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-API/topic/my_subscribe_topic_list",
-              "path": "/docs/Web3MQ-API/topic/my_subscribe_topic_list",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-API/topic/publish_topic_message",
-              "path": "/docs/Web3MQ-API/topic/publish_topic_message",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-API/topic/subscribe_topic",
-              "path": "/docs/Web3MQ-API/topic/subscribe_topic",
-              "sidebar": "tutorialSidebar"
-            },
-            {
               "id": "Web3MQ-API/user/Get_my_profile",
               "path": "/docs/Web3MQ-API/user/Get_my_profile",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-API/user/get_user_info",
+              "path": "/docs/Web3MQ-API/user/get_user_info",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -311,6 +311,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Web3MQ-SDK/JS-SDK/PubSub/PubSub",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/PubSub/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-SDK/JS-SDK/quickStart/quickStart",
               "path": "/docs/Web3MQ-SDK/JS-SDK/quickStart/",
               "sidebar": "tutorialSidebar"
@@ -318,11 +323,6 @@
             {
               "id": "Web3MQ-SDK/JS-SDK/register/register",
               "path": "/docs/Web3MQ-SDK/JS-SDK/register/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-SDK/JS-SDK/topic/topic",
-              "path": "/docs/Web3MQ-SDK/JS-SDK/topic/",
               "sidebar": "tutorialSidebar"
             },
             {

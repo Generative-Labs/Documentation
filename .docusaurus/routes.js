@@ -44,7 +44,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', 'e42'),
+    component: ComponentCreator('/docs', '81f'),
     routes: [
       {
         path: '/docs/Intro',
@@ -71,8 +71,8 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/docs/Tutorials/topic/',
-        component: ComponentCreator('/docs/Tutorials/topic/', '3f8'),
+        path: '/docs/Tutorials/PubSub/',
+        component: ComponentCreator('/docs/Tutorials/PubSub/', 'eba'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -239,14 +239,44 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-API/provider/provider_callback',
-        component: ComponentCreator('/docs/Web3MQ-API/provider/provider_callback', 'cf3'),
+        path: '/docs/Web3MQ-API/pubkey/',
+        component: ComponentCreator('/docs/Web3MQ-API/pubkey/', '28c'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-API/pubkey/',
-        component: ComponentCreator('/docs/Web3MQ-API/pubkey/', '28c'),
+        path: '/docs/Web3MQ-API/PubSub/',
+        component: ComponentCreator('/docs/Web3MQ-API/PubSub/', 'b13'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-API/PubSub/create_topic',
+        component: ComponentCreator('/docs/Web3MQ-API/PubSub/create_topic', '8c6'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-API/PubSub/my_create_topic_list',
+        component: ComponentCreator('/docs/Web3MQ-API/PubSub/my_create_topic_list', 'd8b'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-API/PubSub/my_subscribe_topic_list',
+        component: ComponentCreator('/docs/Web3MQ-API/PubSub/my_subscribe_topic_list', '3ae'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-API/PubSub/publish_topic_message',
+        component: ComponentCreator('/docs/Web3MQ-API/PubSub/publish_topic_message', '3c3'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-API/PubSub/subscribe_topic',
+        component: ComponentCreator('/docs/Web3MQ-API/PubSub/subscribe_topic', 'f25'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -299,42 +329,6 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-API/topic/',
-        component: ComponentCreator('/docs/Web3MQ-API/topic/', '21a'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-API/topic/create_topic',
-        component: ComponentCreator('/docs/Web3MQ-API/topic/create_topic', 'b82'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-API/topic/my_create_topic_list',
-        component: ComponentCreator('/docs/Web3MQ-API/topic/my_create_topic_list', 'e88'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-API/topic/my_subscribe_topic_list',
-        component: ComponentCreator('/docs/Web3MQ-API/topic/my_subscribe_topic_list', 'bbc'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-API/topic/publish_topic_message',
-        component: ComponentCreator('/docs/Web3MQ-API/topic/publish_topic_message', '682'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-API/topic/subscribe_topic',
-        component: ComponentCreator('/docs/Web3MQ-API/topic/subscribe_topic', 'eb2'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
         path: '/docs/Web3MQ-API/user/',
         component: ComponentCreator('/docs/Web3MQ-API/user/', 'def'),
         exact: true,
@@ -343,6 +337,12 @@ export default [
       {
         path: '/docs/Web3MQ-API/user/Get_my_profile',
         component: ComponentCreator('/docs/Web3MQ-API/user/Get_my_profile', '9fb'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-API/user/get_user_info',
+        component: ComponentCreator('/docs/Web3MQ-API/user/get_user_info', 'f45'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -407,6 +407,12 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
+        path: '/docs/Web3MQ-SDK/JS-SDK/PubSub/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/PubSub/', 'e65'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
         path: '/docs/Web3MQ-SDK/JS-SDK/quickStart/',
         component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/quickStart/', '332'),
         exact: true,
@@ -415,12 +421,6 @@ export default [
       {
         path: '/docs/Web3MQ-SDK/JS-SDK/register/',
         component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/register/', '978'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-SDK/JS-SDK/topic/',
-        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/topic/', '874'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
