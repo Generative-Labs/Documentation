@@ -20,7 +20,7 @@ group:
 | provider_pubkey         | string | Yes      | provider ed25519 pubkey                              |
 | timestamp               | int    | Yes      | timestamp milliseconds                               |
 | webhook_url             | string | Yes      | https://provider.domain.com/api/webhook_url/         |
-| web3mq_signature        | string | Yes      | use ed25519 [see signing detail](/apidocs/signature) |
+| web3mq_signature        | string | Yes      | use ed25519 [see signing detail](/docs/Web3MQ-API/signature) |
 
 _web3mq_signature signing rule_
 

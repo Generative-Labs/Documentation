@@ -14,7 +14,7 @@ group:
 
 | Parameters in URL | Type   | Required | Parameters Description                                                        |
 | ----------------- | ------ | -------- | ----------------------------------------------------------------------------- |
-| userid            | string | Yes      | [see userid detail](/docs/Web3MQ-API/pubkey/Save_pubkey#generate-your-userid) |
+| userid            | string | Yes      | userid |
 | topic             | string | Yes      | topic id                                                                      |
 | size              | int    | Yes      | size                                                                          |
 | page              | int    | Yes      | page                                                                          |

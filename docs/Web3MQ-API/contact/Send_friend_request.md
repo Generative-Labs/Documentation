@@ -13,7 +13,7 @@ group:
 
 | Parameters in Body | Type   | Required | Parameters Description                                                |
 | ------------------ | ------ | -------- | --------------------------------------------------------------------- |
-| userid             | string | Yes      | [see userid detail](/docs/Web3MQ-API/pubkey/Save_pubkey#generate-your-userid) |
+| userid             | string | Yes      | userid |
 | target_userid      | string | Yes      | who your want to send friend request                                  |
 | timestamp          | int    | Yes      | timestamp milliseconds                                                |
 | web3mq_signature   | string | Yes      | use ed25519 [see signing detail](/docs/Web3MQ-API/signature)                  |

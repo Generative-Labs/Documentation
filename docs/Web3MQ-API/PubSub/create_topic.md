@@ -16,7 +16,7 @@ group:
 
 | Parameters in Body json | Type   | Required | Parameters Description                                                |
 | ----------------- | ------ | -------- | --------------------------------------------------------------------- |
-| userid            | string | Yes      | [see userid detail](/docs/Web3MQ-API/pubkey/save_pubkey#generate-your-userid) |
+| userid            | string | Yes      | userid |
 | timestamp         | int    | Yes      | timestamp milliseconds                                                |
 | web3mq_signature  | string | Yes      | use ed25519 [see signing detail](/docs/Web3MQ-API/signature)                  |
 | topic_name        | string | No       | topic name                                                            |

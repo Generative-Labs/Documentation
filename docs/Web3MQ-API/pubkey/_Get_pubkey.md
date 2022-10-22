@@ -14,7 +14,7 @@ group:
 
 | Parameters in URL | Type   | Required | Parameters Description                                                |
 | ----------------- | ------ | -------- | --------------------------------------------------------------------- |
-| userid            | string | Yes      | [see userid detail](/docs/Web3MQ-API/pubkey/Save_pubkey#generate-your-userid) |
+| userid            | string | Yes      | userid |
 | target_userid     | string | Yes      | target userid                                                         |
 | timestamp         | int    | Yes      | timestamp milliseconds                                                |
 | signature         | string | Yes      | use ed25519 [see signing detail](/docs/Web3MQ-API/signature)                  |

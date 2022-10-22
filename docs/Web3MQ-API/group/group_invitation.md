@@ -12,7 +12,7 @@ group:
 
 | Parameters in body | Type         | Required | Parameters Description                                                |
 | ------------------ | ------------ | -------- | --------------------------------------------------------------------- |
-| userid             | string       | Yes      | [see userid detail](/docs/Web3MQ-API/pubkey/Save_pubkey#generate-your-userid) |
+| userid             | string       | Yes      | userid |
 | groupid            | string       | Yes      | group id                                                              |
 | members            | string array | Yes      | you want to invite user list                                          |
 | timestamp          | int          | Yes      | timestamp milliseconds                                                |

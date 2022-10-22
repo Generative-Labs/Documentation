@@ -16,7 +16,7 @@ group:
 
 | Parameters in URL | Type         | Required | Parameters Description                                                |
 | ----------------- | ------------ | -------- | --------------------------------------------------------------------- |
-| userid            | string       | Yes      | [see userid detail](/docs/Web3MQ-API/pubkey/Save_pubkey#generate-your-userid) |
+| userid            | string       | Yes      | userid |
 | messages          | string array | Yes      | message id list                                                       |
 | topic             | string       | Yes      | topic                                                                 |
 | status            | string       | Yes      | status delivered or read                                              |

@@ -15,7 +15,7 @@ group:
 
 | Parameters in Body | Type   | Required | Parameters Description                                                |
 | ------------------ | ------ | -------- | --------------------------------------------------------------------- |
-| userid             | string | Yes      | [see userid detail](/docs/Web3MQ-API/pubkey/Save_pubkey#generate-your-userid) |
+| userid             | string | Yes      | userid |
 | target_userid      | string | Yes      | who your want to reject or agree friend request                       |
 | timestamp          | int    | Yes      | timestamp milliseconds                                                |
 | action             | string | Yes      | `agree`                                                               |
