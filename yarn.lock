@@ -7402,10 +7402,10 @@ web3-mq-react@^1.1.0:
   resolved "https://registry.npmmirror.com/web3-mq-react/-/web3-mq-react-1.1.2.tgz#d9673d977abbddd0f5ca502d1639f4b3efc9dee5"
   integrity sha512-Zy1gks1dOn9c6RifzL1VUNmj99i1K30ZQC6f7C7GqnF5zwEpsxtrwosRdpkFq6/rx1g4s67C18cAlJDDGe4HGA==
 
-web3-mq@^1.2.37:
-  version "1.2.42"
-  resolved "https://registry.npmmirror.com/web3-mq/-/web3-mq-1.2.42.tgz#5026b745aa318905afddbb76238ed758eb4e0b66"
-  integrity sha512-C5A0zTHg2yT05OtrObpkhJsnr2feTdIOVIk51uyTslszQuGNaGDc4R8yC1u4HKJ7xe7VvQyiRXHAq1GEVdJU0Q==
+web3-mq@^1.2.38:
+  version "1.2.44"
+  resolved "https://registry.yarnpkg.com/web3-mq/-/web3-mq-1.2.44.tgz#8626dd864a110286e6548692c2ab3efc7ab7050f"
+  integrity sha512-NQDiBPL3OLtpqnXWrPnH15UePpvjBFlGVfAPUEjWEot/VDu2l5fSl32VGTbGSakm1WfkB7mmHhQnSOWmCekPiA==
   dependencies:
     "@noble/ed25519" "^1.6.1"
     "@protobuf-ts/plugin" "^2.7.0"

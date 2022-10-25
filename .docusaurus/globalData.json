@@ -369,6 +369,36 @@
               "id": "Web3MQ-UI-Components/Intro",
               "path": "/docs/Web3MQ-UI-Components/Intro",
               "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-Vue/coreComponent/Channel",
+              "path": "/docs/Web3MQ-Vue/coreComponent/Channel",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-Vue/coreComponent/ChannelList",
+              "path": "/docs/Web3MQ-Vue/coreComponent/ChannelList",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-Vue/coreComponent/chat",
+              "path": "/docs/Web3MQ-Vue/coreComponent/chat",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-Vue/coreComponent/MessageInput",
+              "path": "/docs/Web3MQ-Vue/coreComponent/MessageInput",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-Vue/coreComponent/MessageList",
+              "path": "/docs/Web3MQ-Vue/coreComponent/MessageList",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-Vue/Intro",
+              "path": "/docs/Web3MQ-Vue/Intro",
+              "sidebar": "tutorialSidebar"
             }
           ],
           "draftIds": [],

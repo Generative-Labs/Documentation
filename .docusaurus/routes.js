@@ -3,13 +3,48 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
+    path: '/__docusaurus/debug',
+    component: ComponentCreator('/__docusaurus/debug', '2b8'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/config',
+    component: ComponentCreator('/__docusaurus/debug/config', 'efe'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/content',
+    component: ComponentCreator('/__docusaurus/debug/content', 'd76'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/globalData',
+    component: ComponentCreator('/__docusaurus/debug/globalData', 'e34'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/metadata',
+    component: ComponentCreator('/__docusaurus/debug/metadata', 'a0d'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/registry',
+    component: ComponentCreator('/__docusaurus/debug/registry', '054'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/routes',
+    component: ComponentCreator('/__docusaurus/debug/routes', '0ce'),
+    exact: true
+  },
+  {
     path: '/markdown-page',
-    component: ComponentCreator('/markdown-page', '5c7'),
+    component: ComponentCreator('/markdown-page', 'e0b'),
     exact: true
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', '81f'),
+    component: ComponentCreator('/docs', '56f'),
     routes: [
       {
         path: '/docs/Intro',
@@ -442,12 +477,48 @@ export default [
         component: ComponentCreator('/docs/Web3MQ-UI-Components/Intro', '982'),
         exact: true,
         sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-Vue/coreComponent/Channel',
+        component: ComponentCreator('/docs/Web3MQ-Vue/coreComponent/Channel', '807'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-Vue/coreComponent/ChannelList',
+        component: ComponentCreator('/docs/Web3MQ-Vue/coreComponent/ChannelList', 'ffe'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-Vue/coreComponent/chat',
+        component: ComponentCreator('/docs/Web3MQ-Vue/coreComponent/chat', '30e'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-Vue/coreComponent/MessageInput',
+        component: ComponentCreator('/docs/Web3MQ-Vue/coreComponent/MessageInput', '05a'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-Vue/coreComponent/MessageList',
+        component: ComponentCreator('/docs/Web3MQ-Vue/coreComponent/MessageList', '05a'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-Vue/Intro',
+        component: ComponentCreator('/docs/Web3MQ-Vue/Intro', '1ae'),
+        exact: true,
+        sidebar: "tutorialSidebar"
       }
     ]
   },
   {
     path: '/',
-    component: ComponentCreator('/', '1ab'),
+    component: ComponentCreator('/', '953'),
     exact: true
   },
   {
