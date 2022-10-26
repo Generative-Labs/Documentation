@@ -46,7 +46,7 @@ Any child of the `Chat` component has access to the `ChatProvide`. Each Vue Prov
 
 :::tip
 
-When using client data in the `Chat` component's descendants, must be accessed through `client.value`; It seems redundant and performance consuming and will be fixed later
+`client` Object is not a reactive State, cannot be used for view rendering.
 
 :::
 
@@ -54,7 +54,7 @@ When using client data in the `Chat` component's descendants, must be accessed t
 
 | name                 | type                      | Description                                                    |
 | -------------------- | ------------------------- | -------------------------------------------------------------- |
-| client               | ComputedRef< Client >     | Chat Client Object                                             |
+| client               | [Client](/docs/Web3MQ-SDK/JS-SDK/client/) | Chat Client Object                             |
 | appType              | ComputedRef<'pc' \| 'h5'> | Viewport type                                                  |
 | userInfo             | Ref<[SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)> | user Info |
 | showCreateChannel    | Ref< Boolean >            | Whether to display the `CreateChannel` component               |
