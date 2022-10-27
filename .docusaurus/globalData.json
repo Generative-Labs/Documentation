@@ -401,7 +401,6 @@
               "sidebar": "tutorialSidebar"
             }
           ],
-          "draftIds": [],
           "sidebars": {
             "tutorialSidebar": {
               "link": {

@@ -4,18 +4,17 @@
       "loadedVersions": [
         {
           "versionName": "current",
-          "label": "Next",
-          "banner": null,
-          "badge": false,
-          "noIndex": false,
-          "className": "docs-version-current",
-          "path": "/docs",
+          "versionLabel": "Next",
+          "versionPath": "/docs",
           "tagsPath": "/docs/tags",
+          "versionBanner": null,
+          "versionBadge": false,
+          "versionClassName": "docs-version-current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/edy/Desktop/web3-mq documentation/Documentation/sidebars.js",
-          "contentPath": "/Users/edy/Desktop/web3-mq documentation/Documentation/docs",
-          "contentPathLocalized": "/Users/edy/Desktop/web3-mq documentation/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/fanxiangyu/Work/Documentation/sidebars.js",
+          "contentPath": "/Users/fanxiangyu/Work/Documentation/docs",
+          "contentPathLocalized": "/Users/fanxiangyu/Work/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "Intro",
@@ -26,7 +25,6 @@
               "sourceDirName": ".",
               "slug": "/Intro",
               "permalink": "/docs/Intro",
-              "draft": false,
               "tags": [],
               "version": "current",
               "sidebarPosition": 0,
@@ -48,7 +46,6 @@
               "sourceDirName": "Tutorials/dotbit",
               "slug": "/Tutorials/dotbit/",
               "permalink": "/docs/Tutorials/dotbit/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -71,7 +68,6 @@
               "sourceDirName": "Tutorials/ens",
               "slug": "/Tutorials/ens/",
               "permalink": "/docs/Tutorials/ens/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -94,7 +90,6 @@
               "sourceDirName": "Tutorials/notifications",
               "slug": "/Tutorials/notifications/",
               "permalink": "/docs/Tutorials/notifications/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -119,7 +114,6 @@
               "sourceDirName": "Tutorials/PubSub",
               "slug": "/Tutorials/PubSub/",
               "permalink": "/docs/Tutorials/PubSub/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -144,7 +138,6 @@
               "sourceDirName": "Web3MQ-API",
               "slug": "/Web3MQ-API/chat",
               "permalink": "/docs/Web3MQ-API/chat",
-              "draft": false,
               "tags": [],
               "version": "current",
               "sidebarPosition": 10,
@@ -175,7 +168,6 @@
               "sourceDirName": "Web3MQ-API/contact",
               "slug": "/Web3MQ-API/contact/addfriend_list",
               "permalink": "/docs/Web3MQ-API/contact/addfriend_list",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -204,7 +196,6 @@
               "sourceDirName": "Web3MQ-API/contact",
               "slug": "/Web3MQ-API/contact/change_friend_requests",
               "permalink": "/docs/Web3MQ-API/contact/change_friend_requests",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -233,7 +224,6 @@
               "sourceDirName": "Web3MQ-API/contact",
               "slug": "/Web3MQ-API/contact/friend_requests",
               "permalink": "/docs/Web3MQ-API/contact/friend_requests",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -262,7 +252,6 @@
               "sourceDirName": "Web3MQ-API/contact",
               "slug": "/Web3MQ-API/contact/Get_my_contact_list",
               "permalink": "/docs/Web3MQ-API/contact/Get_my_contact_list",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -291,7 +280,6 @@
               "sourceDirName": "Web3MQ-API/contact",
               "slug": "/Web3MQ-API/contact/",
               "permalink": "/docs/Web3MQ-API/contact/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -321,7 +309,6 @@
               "sourceDirName": "Web3MQ-API/contact",
               "slug": "/Web3MQ-API/contact/Search_contacts",
               "permalink": "/docs/Web3MQ-API/contact/Search_contacts",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -351,7 +338,6 @@
               "sourceDirName": "Web3MQ-API/contact",
               "slug": "/Web3MQ-API/contact/Send_friend_request",
               "permalink": "/docs/Web3MQ-API/contact/Send_friend_request",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -380,7 +366,6 @@
               "sourceDirName": "Web3MQ-API/did",
               "slug": "/Web3MQ-API/did/get_user_bindlist",
               "permalink": "/docs/Web3MQ-API/did/get_user_bindlist",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -410,7 +395,6 @@
               "sourceDirName": "Web3MQ-API/did",
               "slug": "/Web3MQ-API/did/user_binddid",
               "permalink": "/docs/Web3MQ-API/did/user_binddid",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -440,7 +424,6 @@
               "sourceDirName": "Web3MQ-API",
               "slug": "/Web3MQ-API/ed25519key",
               "permalink": "/docs/Web3MQ-API/ed25519key",
-              "draft": false,
               "tags": [],
               "version": "current",
               "sidebarPosition": 35,
@@ -466,7 +449,6 @@
               "sourceDirName": "Web3MQ-API/group",
               "slug": "/Web3MQ-API/group/create_group",
               "permalink": "/docs/Web3MQ-API/group/create_group",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -495,7 +477,6 @@
               "sourceDirName": "Web3MQ-API/group",
               "slug": "/Web3MQ-API/group/group_invitation",
               "permalink": "/docs/Web3MQ-API/group/group_invitation",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -523,7 +504,6 @@
               "sourceDirName": "Web3MQ-API/group",
               "slug": "/Web3MQ-API/group/group_list",
               "permalink": "/docs/Web3MQ-API/group/group_list",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -552,7 +532,6 @@
               "sourceDirName": "Web3MQ-API/group",
               "slug": "/Web3MQ-API/group/group_members",
               "permalink": "/docs/Web3MQ-API/group/group_members",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -581,7 +560,6 @@
               "sourceDirName": "Web3MQ-API/group",
               "slug": "/Web3MQ-API/group/",
               "permalink": "/docs/Web3MQ-API/group/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -611,7 +589,6 @@
               "sourceDirName": "Web3MQ-API",
               "slug": "/Web3MQ-API/Intro",
               "permalink": "/docs/Web3MQ-API/Intro",
-              "draft": false,
               "tags": [],
               "version": "current",
               "sidebarPosition": 0,
@@ -637,7 +614,6 @@
               "sourceDirName": "Web3MQ-API/message",
               "slug": "/Web3MQ-API/message/change_message_status",
               "permalink": "/docs/Web3MQ-API/message/change_message_status",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -667,7 +643,6 @@
               "sourceDirName": "Web3MQ-API/message",
               "slug": "/Web3MQ-API/message/",
               "permalink": "/docs/Web3MQ-API/message/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -697,7 +672,6 @@
               "sourceDirName": "Web3MQ-API/message",
               "slug": "/Web3MQ-API/message/message_list",
               "permalink": "/docs/Web3MQ-API/message/message_list",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -727,7 +701,6 @@
               "sourceDirName": "Web3MQ-API/message",
               "slug": "/Web3MQ-API/message/send_message",
               "permalink": "/docs/Web3MQ-API/message/send_message",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -757,7 +730,6 @@
               "sourceDirName": "Web3MQ-API/notification",
               "slug": "/Web3MQ-API/notification/change_notification_status",
               "permalink": "/docs/Web3MQ-API/notification/change_notification_status",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -787,7 +759,6 @@
               "sourceDirName": "Web3MQ-API/notification",
               "slug": "/Web3MQ-API/notification/",
               "permalink": "/docs/Web3MQ-API/notification/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -817,7 +788,6 @@
               "sourceDirName": "Web3MQ-API/notification",
               "slug": "/Web3MQ-API/notification/notification_list",
               "permalink": "/docs/Web3MQ-API/notification/notification_list",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -847,7 +817,6 @@
               "sourceDirName": "Web3MQ-API/notification",
               "slug": "/Web3MQ-API/notification/receive_notification",
               "permalink": "/docs/Web3MQ-API/notification/receive_notification",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -877,7 +846,6 @@
               "sourceDirName": "Web3MQ-API",
               "slug": "/Web3MQ-API/ProtoType",
               "permalink": "/docs/Web3MQ-API/ProtoType",
-              "draft": false,
               "tags": [],
               "version": "current",
               "sidebarPosition": 30,
@@ -908,7 +876,6 @@
               "sourceDirName": "Web3MQ-API/provider",
               "slug": "/Web3MQ-API/provider/create_provider",
               "permalink": "/docs/Web3MQ-API/provider/create_provider",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -938,7 +905,6 @@
               "sourceDirName": "Web3MQ-API/pubkey",
               "slug": "/Web3MQ-API/pubkey/",
               "permalink": "/docs/Web3MQ-API/pubkey/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -968,7 +934,6 @@
               "sourceDirName": "Web3MQ-API/PubSub",
               "slug": "/Web3MQ-API/PubSub/create_topic",
               "permalink": "/docs/Web3MQ-API/PubSub/create_topic",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -998,7 +963,6 @@
               "sourceDirName": "Web3MQ-API/PubSub",
               "slug": "/Web3MQ-API/PubSub/",
               "permalink": "/docs/Web3MQ-API/PubSub/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1028,7 +992,6 @@
               "sourceDirName": "Web3MQ-API/PubSub",
               "slug": "/Web3MQ-API/PubSub/my_create_topic_list",
               "permalink": "/docs/Web3MQ-API/PubSub/my_create_topic_list",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1058,7 +1021,6 @@
               "sourceDirName": "Web3MQ-API/PubSub",
               "slug": "/Web3MQ-API/PubSub/my_subscribe_topic_list",
               "permalink": "/docs/Web3MQ-API/PubSub/my_subscribe_topic_list",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1088,7 +1050,6 @@
               "sourceDirName": "Web3MQ-API/PubSub",
               "slug": "/Web3MQ-API/PubSub/publish_topic_message",
               "permalink": "/docs/Web3MQ-API/PubSub/publish_topic_message",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1118,7 +1079,6 @@
               "sourceDirName": "Web3MQ-API/PubSub",
               "slug": "/Web3MQ-API/PubSub/subscribe_topic",
               "permalink": "/docs/Web3MQ-API/PubSub/subscribe_topic",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1148,7 +1108,6 @@
               "sourceDirName": "Web3MQ-API/quickstart",
               "slug": "/Web3MQ-API/quickstart/Create_group",
               "permalink": "/docs/Web3MQ-API/quickstart/Create_group",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1178,7 +1137,6 @@
               "sourceDirName": "Web3MQ-API/quickstart",
               "slug": "/Web3MQ-API/quickstart/Generate_Key_pairs",
               "permalink": "/docs/Web3MQ-API/quickstart/Generate_Key_pairs",
-              "draft": false,
               "tags": [],
               "version": "current",
               "sidebarPosition": 0,
@@ -1209,7 +1167,6 @@
               "sourceDirName": "Web3MQ-API/quickstart",
               "slug": "/Web3MQ-API/quickstart/",
               "permalink": "/docs/Web3MQ-API/quickstart/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "sidebarPosition": 2,
@@ -1240,7 +1197,6 @@
               "sourceDirName": "Web3MQ-API/quickstart",
               "slug": "/Web3MQ-API/quickstart/Save_your_public_key",
               "permalink": "/docs/Web3MQ-API/quickstart/Save_your_public_key",
-              "draft": false,
               "tags": [],
               "version": "current",
               "sidebarPosition": 2,
@@ -1272,7 +1228,6 @@
               "sourceDirName": "Web3MQ-API/quickstart",
               "slug": "/Web3MQ-API/quickstart/Send_Connect_Command",
               "permalink": "/docs/Web3MQ-API/quickstart/Send_Connect_Command",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1301,7 +1256,6 @@
               "sourceDirName": "Web3MQ-API/quickstart",
               "slug": "/Web3MQ-API/quickstart/Send_message_in_Group",
               "permalink": "/docs/Web3MQ-API/quickstart/Send_message_in_Group",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1330,7 +1284,6 @@
               "sourceDirName": "Web3MQ-API/quickstart",
               "slug": "/Web3MQ-API/quickstart/Signing_data_with_MetaMask",
               "permalink": "/docs/Web3MQ-API/quickstart/Signing_data_with_MetaMask",
-              "draft": false,
               "tags": [],
               "version": "current",
               "sidebarPosition": 1,
@@ -1361,7 +1314,6 @@
               "sourceDirName": "Web3MQ-API",
               "slug": "/Web3MQ-API/signature",
               "permalink": "/docs/Web3MQ-API/signature",
-              "draft": false,
               "tags": [],
               "version": "current",
               "sidebarPosition": 20,
@@ -1392,7 +1344,6 @@
               "sourceDirName": "Web3MQ-API/user",
               "slug": "/Web3MQ-API/user/Get_my_profile",
               "permalink": "/docs/Web3MQ-API/user/Get_my_profile",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1422,7 +1373,6 @@
               "sourceDirName": "Web3MQ-API/user",
               "slug": "/Web3MQ-API/user/get_user_info",
               "permalink": "/docs/Web3MQ-API/user/get_user_info",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1452,7 +1402,6 @@
               "sourceDirName": "Web3MQ-API/user",
               "slug": "/Web3MQ-API/user/",
               "permalink": "/docs/Web3MQ-API/user/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1482,7 +1431,6 @@
               "sourceDirName": "Web3MQ-API/user",
               "slug": "/Web3MQ-API/user/search_user",
               "permalink": "/docs/Web3MQ-API/user/search_user",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1512,7 +1460,6 @@
               "sourceDirName": "Web3MQ-API/user",
               "slug": "/Web3MQ-API/user/Update_my_profile",
               "permalink": "/docs/Web3MQ-API/user/Update_my_profile",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1542,7 +1489,6 @@
               "sourceDirName": "Web3MQ-API/user",
               "slug": "/Web3MQ-API/user/user_login",
               "permalink": "/docs/Web3MQ-API/user/user_login",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1572,7 +1518,6 @@
               "sourceDirName": "Web3MQ-SDK/JS-SDK/channel",
               "slug": "/Web3MQ-SDK/JS-SDK/channel/",
               "permalink": "/docs/Web3MQ-SDK/JS-SDK/channel/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1597,7 +1542,6 @@
               "sourceDirName": "Web3MQ-SDK/JS-SDK/client",
               "slug": "/Web3MQ-SDK/JS-SDK/client/",
               "permalink": "/docs/Web3MQ-SDK/JS-SDK/client/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1622,7 +1566,6 @@
               "sourceDirName": "Web3MQ-SDK/JS-SDK/contact",
               "slug": "/Web3MQ-SDK/JS-SDK/contact/",
               "permalink": "/docs/Web3MQ-SDK/JS-SDK/contact/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1647,7 +1590,6 @@
               "sourceDirName": "Web3MQ-SDK/JS-SDK/encryption",
               "slug": "/Web3MQ-SDK/JS-SDK/encryption/",
               "permalink": "/docs/Web3MQ-SDK/JS-SDK/encryption/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1672,7 +1614,6 @@
               "sourceDirName": "Web3MQ-SDK/JS-SDK/eventCenter",
               "slug": "/Web3MQ-SDK/JS-SDK/eventCenter/",
               "permalink": "/docs/Web3MQ-SDK/JS-SDK/eventCenter/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1697,7 +1638,6 @@
               "sourceDirName": "Web3MQ-SDK/JS-SDK/message",
               "slug": "/Web3MQ-SDK/JS-SDK/message/",
               "permalink": "/docs/Web3MQ-SDK/JS-SDK/message/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1722,7 +1662,6 @@
               "sourceDirName": "Web3MQ-SDK/JS-SDK/notify",
               "slug": "/Web3MQ-SDK/JS-SDK/notify/",
               "permalink": "/docs/Web3MQ-SDK/JS-SDK/notify/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1747,7 +1686,6 @@
               "sourceDirName": "Web3MQ-SDK/JS-SDK/PubSub",
               "slug": "/Web3MQ-SDK/JS-SDK/PubSub/",
               "permalink": "/docs/Web3MQ-SDK/JS-SDK/PubSub/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1772,7 +1710,6 @@
               "sourceDirName": "Web3MQ-SDK/JS-SDK/quickStart",
               "slug": "/Web3MQ-SDK/JS-SDK/quickStart/",
               "permalink": "/docs/Web3MQ-SDK/JS-SDK/quickStart/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1797,7 +1734,6 @@
               "sourceDirName": "Web3MQ-SDK/JS-SDK/register",
               "slug": "/Web3MQ-SDK/JS-SDK/register/",
               "permalink": "/docs/Web3MQ-SDK/JS-SDK/register/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1822,7 +1758,6 @@
               "sourceDirName": "Web3MQ-SDK/JS-SDK/types",
               "slug": "/Web3MQ-SDK/JS-SDK/types/",
               "permalink": "/docs/Web3MQ-SDK/JS-SDK/types/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1847,7 +1782,6 @@
               "sourceDirName": "Web3MQ-SDK/JS-SDK/user",
               "slug": "/Web3MQ-SDK/JS-SDK/user/",
               "permalink": "/docs/Web3MQ-SDK/JS-SDK/user/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1872,7 +1806,6 @@
               "sourceDirName": "Web3MQ-SDK/JS-SDK/utils",
               "slug": "/Web3MQ-SDK/JS-SDK/utils/",
               "permalink": "/docs/Web3MQ-SDK/JS-SDK/utils/",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -1897,7 +1830,6 @@
               "sourceDirName": "Web3MQ-UI-Components/coreComponent",
               "slug": "/Web3MQ-UI-Components/coreComponent/Channel",
               "permalink": "/docs/Web3MQ-UI-Components/coreComponent/Channel",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -1920,7 +1852,6 @@
               "sourceDirName": "Web3MQ-UI-Components/coreComponent",
               "slug": "/Web3MQ-UI-Components/coreComponent/ChannelList",
               "permalink": "/docs/Web3MQ-UI-Components/coreComponent/ChannelList",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -1943,7 +1874,6 @@
               "sourceDirName": "Web3MQ-UI-Components/coreComponent",
               "slug": "/Web3MQ-UI-Components/coreComponent/Chat",
               "permalink": "/docs/Web3MQ-UI-Components/coreComponent/Chat",
-              "draft": false,
               "tags": [],
               "version": "current",
               "sidebarPosition": 0,
@@ -1969,7 +1899,6 @@
               "sourceDirName": "Web3MQ-UI-Components/coreComponent",
               "slug": "/Web3MQ-UI-Components/coreComponent/MessageList",
               "permalink": "/docs/Web3MQ-UI-Components/coreComponent/MessageList",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -1992,7 +1921,6 @@
               "sourceDirName": "Web3MQ-UI-Components/coreComponent",
               "slug": "/Web3MQ-UI-Components/coreComponent/Thread",
               "permalink": "/docs/Web3MQ-UI-Components/coreComponent/Thread",
-              "draft": false,
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -2015,7 +1943,6 @@
               "sourceDirName": "Web3MQ-UI-Components",
               "slug": "/Web3MQ-UI-Components/Intro",
               "permalink": "/docs/Web3MQ-UI-Components/Intro",
-              "draft": false,
               "tags": [],
               "version": "current",
               "sidebarPosition": 0,
@@ -2041,7 +1968,6 @@
               "sourceDirName": "Web3MQ-Vue/coreComponent",
               "slug": "/Web3MQ-Vue/coreComponent/Channel",
               "permalink": "/docs/Web3MQ-Vue/coreComponent/Channel",
-              "draft": false,
               "tags": [],
               "version": "current",
               "sidebarPosition": 1,
@@ -2067,7 +1993,6 @@
               "sourceDirName": "Web3MQ-Vue/coreComponent",
               "slug": "/Web3MQ-Vue/coreComponent/ChannelList",
               "permalink": "/docs/Web3MQ-Vue/coreComponent/ChannelList",
-              "draft": false,
               "tags": [],
               "version": "current",
               "sidebarPosition": 2,
@@ -2093,7 +2018,6 @@
               "sourceDirName": "Web3MQ-Vue/coreComponent",
               "slug": "/Web3MQ-Vue/coreComponent/chat",
               "permalink": "/docs/Web3MQ-Vue/coreComponent/chat",
-              "draft": false,
               "tags": [],
               "version": "current",
               "sidebarPosition": 0,
@@ -2119,7 +2043,6 @@
               "sourceDirName": "Web3MQ-Vue/coreComponent",
               "slug": "/Web3MQ-Vue/coreComponent/MessageInput",
               "permalink": "/docs/Web3MQ-Vue/coreComponent/MessageInput",
-              "draft": false,
               "tags": [],
               "version": "current",
               "sidebarPosition": 4,
@@ -2141,7 +2064,6 @@
               "sourceDirName": "Web3MQ-Vue/coreComponent",
               "slug": "/Web3MQ-Vue/coreComponent/MessageList",
               "permalink": "/docs/Web3MQ-Vue/coreComponent/MessageList",
-              "draft": false,
               "tags": [],
               "version": "current",
               "sidebarPosition": 3,
@@ -2167,7 +2089,6 @@
               "sourceDirName": "Web3MQ-Vue",
               "slug": "/Web3MQ-Vue/Intro",
               "permalink": "/docs/Web3MQ-Vue/Intro",
-              "draft": false,
               "tags": [],
               "version": "current",
               "sidebarPosition": 0,
@@ -2185,7 +2106,6 @@
               }
             }
           ],
-          "drafts": [],
           "sidebars": {
             "tutorialSidebar": [
               {
@@ -2655,7 +2575,9 @@
                 ]
               }
             ]
-          }
+          },
+          "mainDocId": "Intro",
+          "categoryGeneratedIndices": []
         }
       ]
     }
@@ -2666,7 +2588,7 @@
       "blogPosts": [],
       "blogListPaginated": [],
       "blogTags": {},
-      "blogTagsListPath": "/blog/tags",
+      "blogTagsListPath": null,
       "blogTagsPaginated": []
     }
   },
@@ -2689,8 +2611,10 @@
       }
     ]
   },
-  "docusaurus-plugin-debug": {},
-  "docusaurus-theme-classic": {},
-  "docusaurus-bootstrap-plugin": {},
-  "docusaurus-mdx-fallback-plugin": {}
+  "docusaurus-plugin-debug": {
+    "default": null
+  },
+  "docusaurus-theme-classic": {
+    "default": null
+  }
 }
