@@ -28,6 +28,10 @@ const client = Web3MQ.getInstance('YOUR_ACCESS_TOKEN');
 
 ## Your First App with Web3MQ Vue
 
+#### Link to [the full example](https://main.d3igpcgqw8xy7h.amplifyapp.com/)
+
+#### code
+
 ```vue
 <script lang="ts" setup>
 import { Client } from 'web3-mq';
