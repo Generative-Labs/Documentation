@@ -326,6 +326,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Web3MQ-SDK/JS-SDK/signConnect/signConnect",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/signConnect/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-SDK/JS-SDK/types/types",
               "path": "/docs/Web3MQ-SDK/JS-SDK/types/",
               "sidebar": "tutorialSidebar"

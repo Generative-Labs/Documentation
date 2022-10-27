@@ -87,6 +87,35 @@ export type initOptions = {
 };
 ```
 
+### SendTempConnectOptions
+
+```ts
+export type SendTempConnectOptions = {
+  dAppID: string;
+  topicID: string;
+  signatureTimestamp: number;
+  dAppSignature: string;
+};
+```
+
+### SignClientCallBackType
+
+```ts
+export type SignClientCallBackType = {
+  type: 'connect' | 'messageStatus' | 'keys';
+  data: any;
+};
+```
+
+### getUserInfoParams
+
+```ts
+export type getUserInfoParams = {
+  did_type: string;
+  did_value: string;
+};
+```
+
 ### EnvTypes
 
 ```ts

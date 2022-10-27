@@ -1573,8 +1573,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Message",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/message/"
+                "title": "SignConnect",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/signConnect/"
               },
               "next": {
                 "title": "User",
@@ -1649,8 +1649,8 @@
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK/channel/"
               },
               "next": {
-                "title": "Contact",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/contact/"
+                "title": "SignConnect",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/signConnect/"
               }
             },
             {
@@ -1747,6 +1747,30 @@
               "next": {
                 "title": "Client",
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK/client/"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/JS-SDK/signConnect/signConnect",
+              "id": "Web3MQ-SDK/JS-SDK/signConnect/signConnect",
+              "title": "SignConnect",
+              "description": "Properties",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK/signConnect/signConnect.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK/signConnect",
+              "slug": "/Web3MQ-SDK/JS-SDK/signConnect/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK/signConnect/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 5.1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Message",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/message/"
+              },
+              "next": {
+                "title": "Contact",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/contact/"
               }
             },
             {
@@ -2179,6 +2203,11 @@
                       },
                       {
                         "type": "doc",
+                        "label": "SignConnect",
+                        "id": "Web3MQ-SDK/JS-SDK/signConnect/signConnect"
+                      },
+                      {
+                        "type": "doc",
                         "label": "Contact",
                         "id": "Web3MQ-SDK/JS-SDK/contact/contact"
                       },
@@ -2194,7 +2223,7 @@
                       },
                       {
                         "type": "doc",
-                        "label": "Topic",
+                        "label": "PubSub",
                         "id": "Web3MQ-SDK/JS-SDK/PubSub/PubSub"
                       },
                       {

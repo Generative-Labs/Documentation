@@ -108,6 +108,48 @@ localStorage.setItem('PUBLICKEY', PublicKey);
 localStorage.setItem('USERID', userid);
 ```
 
+### Use mobile authentication to log in
+
+Authorize dapp and other applications to log in directly through the mobile terminal device that has been logged in
+
+#### Code
+
+```ts
+let keys: KeyPairsType;
+
+const handleEvent = (options: SignClientCallBackType) => {
+  const { type, data } = options;
+  console.log(`${type} ====>`, data);
+  if (type === 'keys') {
+    const { private_key: PrivateKey, pubkey: PublicKey, userid } = data;
+    localStorage.setItem('PRIVATE_KEY', PrivateKey);
+    localStorage.setItem('PUBLICKEY', PublicKey);
+    localStorage.setItem('USERID', userid);
+    keys = { PrivateKey, PublicKey, userid };
+  }
+};
+
+// 1. Make sure that init is complete
+await Client.getSignClient(
+  {
+    dAppID: dapp_id,
+    topicID: topic_id,
+    signatureTimestamp: signature_timestamp,
+    dAppSignature: dapp_signature,
+  },
+  handleEvent
+);
+
+// 2. Make sure that getSignClient is complete
+await Client.signClient.sendDappBridge({
+  did_type: 'your did type', // eth
+  did_value: 'your did value', // eth wallet address
+});
+
+const tempCode = Client.signClient.tempCode;
+console.log(tempCode);
+```
+
 ### Get Client Instance
 
 #### Code

@@ -90,6 +90,12 @@
               },
               {
                 "type": "link",
+                "label": "SignConnect",
+                "href": "/docs/Web3MQ-SDK/JS-SDK/signConnect/",
+                "docId": "Web3MQ-SDK/JS-SDK/signConnect/signConnect"
+              },
+              {
+                "type": "link",
                 "label": "Contact",
                 "href": "/docs/Web3MQ-SDK/JS-SDK/contact/",
                 "docId": "Web3MQ-SDK/JS-SDK/contact/contact"
@@ -108,7 +114,7 @@
               },
               {
                 "type": "link",
-                "label": "Topic",
+                "label": "PubSub",
                 "href": "/docs/Web3MQ-SDK/JS-SDK/PubSub/",
                 "docId": "Web3MQ-SDK/JS-SDK/PubSub/PubSub"
               },
@@ -956,6 +962,12 @@
       "id": "Web3MQ-SDK/JS-SDK/register/register",
       "title": "Register",
       "description": "Methods",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/JS-SDK/signConnect/signConnect": {
+      "id": "Web3MQ-SDK/JS-SDK/signConnect/signConnect",
+      "title": "SignConnect",
+      "description": "Properties",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK/types/types": {

@@ -23,13 +23,16 @@ position: 3
 | [message](/docs/Web3MQ-SDK/JS-SDK/message) | Message Class                                               | The messages correlation      |
 | [user](/docs/Web3MQ-SDK/JS-SDK/user)       | User Class                                                  | The user correlation          |
 | [contact](/docs/Web3MQ-SDK/JS-SDK/contact) | Contact Class                                               | The contact correlation       |
+| [notify](/docs/Web3MQ-SDK/JS-SDK/notify)   | Notify Class                                                | The notify correlation        |
+| [topic](/docs/Web3MQ-SDK/JS-SDK/pubsub)    | Topic Class                                                 | The topic correlation         |
 
 ## Methods
 
-| name                                                       | type     | Parameters Description                                      | response                                 |
-| ---------------------------------------------------------- | -------- | ----------------------------------------------------------- | ---------------------------------------- |
-| [getInstance](/docs/Web3MQ-SDK/JS-SDK/client/#getInstance) | function | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK/types/#keypairstype) | [Client](/docs/Web3MQ-SDK/JS-SDK/client) |
-| [init](/docs/Web3MQ-SDK/JS-SDK/client/#init)               | function | [initOptions](/docs/Web3MQ-SDK/JS-SDK/types/#initoptions)   | fastUrl: string                          |
+| name                                                           | type     | Parameters Description                                                                        | response                                 |
+| -------------------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| [init](/docs/Web3MQ-SDK/JS-SDK/client/#init)                   | function | [initOptions](/docs/Web3MQ-SDK/JS-SDK/types/#initoptions)                                     | fastUrl: string                          |
+| [getInstance](/docs/Web3MQ-SDK/JS-SDK/client/#getinstance)     | function | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK/types/#keypairstype)                                   | [Client](/docs/Web3MQ-SDK/JS-SDK/client) |
+| [getSignClient](/docs/Web3MQ-SDK/JS-SDK/client/#getsignclient) | function | ([SendTempConnectOptions](/docs/Web3MQ-SDK/JS-SDK/types/#sendtempconnectoptions), callbackFn) | null                                     |
 
 ## Methods
 
@@ -64,6 +67,31 @@ const keys = { PrivateKey, PublicKey, userid };
 const client = Client.getInstance(keys);
 
 console.log(client);
+```
+
+### getSignClient
+
+```ts
+import { Client, SignClientCallBackType } from 'web3-mq';
+// 1. You must initialize the SDK, the init function is asynchronous
+await Client.init({
+  connectUrl: 'example url', // The fastURL you saved to local
+  app_key: 'app_key', // Appkey applied from our team
+});
+// 2. Create the handleEvent function to receive events
+const handleEvent = (options: SignClientCallBackType) => {
+  console.log(options);
+};
+// 3. get Sign Client, Make sure that init is complete
+await Client.getSignClient(
+  {
+    dAppID: dapp_id,
+    topicID: topic_id,
+    signatureTimestamp: signature_timestamp,
+    dAppSignature: dapp_signature,
+  },
+  handleEvent
+);
 ```
 
 ## Events
