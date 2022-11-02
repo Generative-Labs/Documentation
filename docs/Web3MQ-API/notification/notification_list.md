@@ -13,7 +13,6 @@ group:
 | Parameters in URL | Type   | Required | Parameters Description                                                |
 | ----------------- | ------ | -------- | --------------------------------------------------------------------- |
 | userid            | string | Yes      | userid |
-<!-- | topic             | string | No      | topic id                                                              | -->
 | notice_type             | string | Yes      | notice_type                                                              |
 | size              | int    | Yes      | size                                                                  |
 | page              | int    | Yes      | page                                                                  |
@@ -30,12 +29,12 @@ else
 
 _url query params_
 
-`notice_type`
 
-- `system.friend_request` (Friend request notification type)
-- `system.agree_friend_request` (Agree friend request notification type)
-- `system.group_invitation` (Group invitation notification type)
-- `subscription` (subscription topic new message notification)
+- notice_type
+    - `system.friend_request` (Friend request notification type)
+    - `system.agree_friend_request` (Agree friend request notification type)
+    - `system.group_invitation` (Group invitation notification type)
+    - `subscription` (subscription topic new message notification)
 
 
 ```json
