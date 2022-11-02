@@ -3,9 +3,9 @@
 `Get Web3MQ Binary`
 
 ```bash
-v=v0.1.1-beta.9; curl -LO "curl -LO "https://github.com/Generative-Labs/Web3MQ-Node-Setup/releases/download/$v/Web3MQ-Node-$(uname -s | awk '{ print tolower($0) }')-x64-$v.zip"
+curl -LO "https://github.com/Generative-Labs/Web3MQ-Node-Setup/releases/download/latest/Web3MQ-Node-$(uname -s | awk '{ print tolower($0) }')-x64-latest.zip"
 
-v=v0.1.1-beta.9; unzip Web3MQ-Node-*-$v.zip
+unzip Web3MQ-Node-*-latest.zip
 ```
 
 ## QuickStart
