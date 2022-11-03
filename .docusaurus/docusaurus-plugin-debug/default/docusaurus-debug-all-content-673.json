@@ -12,9 +12,9 @@
           "versionClassName": "docs-version-current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/fanxiangyu/Work/Documentation/sidebars.js",
-          "contentPath": "/Users/fanxiangyu/Work/Documentation/docs",
-          "contentPathLocalized": "/Users/fanxiangyu/Work/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/edy/Desktop/web3-mq documentation/Documentation/sidebars.js",
+          "contentPath": "/Users/edy/Desktop/web3-mq documentation/Documentation/docs",
+          "contentPathLocalized": "/Users/edy/Desktop/web3-mq documentation/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "Intro",
@@ -436,8 +436,8 @@
                 "permalink": "/docs/Web3MQ-API/ProtoType"
               },
               "next": {
-                "title": "Intro",
-                "permalink": "/docs/Web3MQ-UI-Components/Intro"
+                "title": "Install Web3MQ and deploy",
+                "permalink": "/docs/Web3MQ-Node/"
               }
             },
             {
@@ -1510,6 +1510,28 @@
               }
             },
             {
+              "unversionedId": "Web3MQ-Node/index",
+              "id": "Web3MQ-Node/index",
+              "title": "Install Web3MQ and deploy",
+              "description": "Get Web3MQ Binary",
+              "source": "@site/docs/Web3MQ-Node/index.md",
+              "sourceDirName": "Web3MQ-Node",
+              "slug": "/Web3MQ-Node/",
+              "permalink": "/docs/Web3MQ-Node/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "ed25519key",
+                "permalink": "/docs/Web3MQ-API/ed25519key"
+              },
+              "next": {
+                "title": "Intro",
+                "permalink": "/docs/Web3MQ-UI-Components/Intro"
+              }
+            },
+            {
               "unversionedId": "Web3MQ-SDK/JS-SDK/channel/channel",
               "id": "Web3MQ-SDK/JS-SDK/channel/channel",
               "title": "Channel",
@@ -1975,8 +1997,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "ed25519key",
-                "permalink": "/docs/Web3MQ-API/ed25519key"
+                "title": "Install Web3MQ and deploy",
+                "permalink": "/docs/Web3MQ-Node/"
               },
               "next": {
                 "title": "Chat",
@@ -2522,6 +2544,11 @@
                     "id": "Web3MQ-API/ed25519key"
                   }
                 ]
+              },
+              {
+                "type": "doc",
+                "label": "Web3MQ Node setup",
+                "id": "Web3MQ-Node/index"
               },
               {
                 "type": "category",

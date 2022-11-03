@@ -28,7 +28,18 @@ const client = Web3MQ.getInstance('YOUR_ACCESS_TOKEN');
 
 ## Your First App with Web3MQ Vue
 
-#### Link to [the full example](https://main.d3igpcgqw8xy7h.amplifyapp.com/)
+#### Full Example
+
+import { Layout } from '@site/src/components/Layout'
+import { Example } from '@site/src/components/Example';
+import AppMdx from '@site/src/components/Example/example.mdx'
+
+<Layout
+title='Example'
+description='This is the full example'
+code={<AppMdx />}>
+<Example src="https://main.d3igpcgqw8xy7h.amplifyapp.com/" />
+</Layout>
 
 #### code
 

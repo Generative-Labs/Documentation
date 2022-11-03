@@ -50,7 +50,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','471'),
+    component: ComponentCreator('/docs','f94'),
     routes: [
       {
         path: '/docs/Intro',
@@ -367,6 +367,12 @@ export default [
       {
         path: '/docs/Web3MQ-API/user/user_login',
         component: ComponentCreator('/docs/Web3MQ-API/user/user_login','e52'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-Node/',
+        component: ComponentCreator('/docs/Web3MQ-Node/','a53'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },

@@ -276,6 +276,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Web3MQ-Node/index",
+              "path": "/docs/Web3MQ-Node/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-SDK/JS-SDK/channel/channel",
               "path": "/docs/Web3MQ-SDK/JS-SDK/channel/",
               "sidebar": "tutorialSidebar"

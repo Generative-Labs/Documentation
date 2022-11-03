@@ -202,14 +202,14 @@ client.channel.sendMessage('Hello World');
 > 2. Create a Child.tsx file and copy the Child Components Code to Child.tsx
 
 import { Layout } from '@site/src/components/Layout'
-import App from '@site/src/components/Example/App.tsx';
+import { Example } from '@site/src/components/Example';
 import AppMdx from '@site/src/components/Example/example.mdx'
 
 <Layout
 title='Example'
 description='This is the full example'
 code={<AppMdx />}>
-<App />
+<Example src="https://web3-mq-react-example.pages.dev/" />
 </Layout>
 
 #### Root Components Code
