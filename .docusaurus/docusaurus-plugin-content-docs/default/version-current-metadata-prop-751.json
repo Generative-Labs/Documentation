@@ -480,12 +480,6 @@
         ]
       },
       {
-        "type": "link",
-        "label": "Web3MQ Node setup",
-        "href": "/docs/Web3MQ-Node/",
-        "docId": "Web3MQ-Node/index"
-      },
-      {
         "type": "category",
         "label": "Web3MQ UI Components",
         "collapsible": true,
@@ -908,12 +902,6 @@
       "id": "Web3MQ-API/user/user_login",
       "title": "User Login",
       "description": "User Login",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-Node/index": {
-      "id": "Web3MQ-Node/index",
-      "title": "Install Web3MQ and deploy",
-      "description": "Get Web3MQ Binary",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK/channel/channel": {

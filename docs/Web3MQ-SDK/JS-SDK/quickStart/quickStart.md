@@ -93,6 +93,15 @@ For any first-time user of Web3MQ's network, you'll need to register on Web3MQ's
 
 #### Code
 
+import { SignMetaMaskButton } from '@site/src/components/QuickStartStep/SignMetaMaskButton';
+
+<Layout
+title='signMetaMask'
+description='Get your userid and key pair.'
+>
+<SignMetaMaskButton />
+</Layout>
+
 ```ts
 // You must ensure that the Client.init initialization is complete before running this
 const { PrivateKey, PublicKey, userid } = await Client.register.signMetaMask({
@@ -154,6 +163,15 @@ console.log(tempCode);
 
 #### Code
 
+import { InitClientButton } from '@site/src/components/QuickStartStep/InitClientButton';
+
+<Layout
+title='Client'
+description='Get the client instance.You can see the Client object in the console.'
+>
+<InitClientButton />
+</Layout>
+
 ```ts
 const keys = { PrivateKey, PublicKey, userid };
 
@@ -165,6 +183,15 @@ const client = Client.getInstance(keys);
 After initializing the client and registering your user, the next step is to connect to a room
 
 #### Code
+
+import { CreateRoomButton } from '@site/src/components/QuickStartStep/CreateRoomButton'
+
+<Layout
+title='create Room'
+description='create your Chat Room.'
+>
+<CreateRoomButton />
+</Layout>
 
 ```ts
 client.channel.createRoom();
@@ -182,6 +209,15 @@ client.channel.createRoom();
 ## Send message
 
 #### Code
+
+import { SendMessageButton } from '@site/src/components/QuickStartStep/SendMessageButton'
+
+<Layout
+title='send message'
+description='send your first message.'
+>
+<SendMessageButton />
+</Layout>
 
 ```ts
 client.channel.sendMessage('Hello World');
