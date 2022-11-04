@@ -1,30 +1,37 @@
-import React from "react";
-import { Client } from 'web3-mq'
+import React, { useState, useEffect, useMemo } from "react";
+import { Client, EventTypes } from 'web3-mq'
 import { CommonButton } from '../CommonButton';
+import ss from './index.module.css';
 
-
-export const CreateRoomButton = () => {
-  let client: Client;
-
-  const getInstance = () => {
-    const PrivateKey = localStorage.getItem('PRIVATE_KEY') || '';
-    const PublicKey = localStorage.getItem('PUBLICKEY') || '';
-    const userid = localStorage.getItem("USERID") || "";
-    if(PrivateKey &&  PublicKey && userid) {
-      client = Client.getInstance({ PrivateKey, PublicKey, userid });
-    } else {
-      alert('You should execute the signMetaMask method first')
-    };
-  }
+type IProps = {
+  client?: Client
+}
+export const CreateRoomButton = (props: IProps) => {
+  const { client } = props;
+  const [channels, setChannels] = useState<any>([]);
   const createRoom = async () => {
-    getInstance();
-    await client.channel.createRoom({});
+    await client?.channel.createRoom({});
     console.log('create Chat Room successful')
   };
-  
+  const getChannelList = async() => {
+    await client?.channel.queryChannels({page: 1, size: 20});
+  };
+  const handleEvent = (props: { type: EventTypes }) => {
+    const { channelList } = (client as any).channel;
+  }
+
+  useEffect(() => {
+    client?.on('channel.getList', handleEvent);
+    getChannelList();
+    () => {
+      client?.off('channel.getList', handleEvent)
+    }
+  }, []);
+
   return (
-    <div>
+    <div className={ss.createRoomContent}>
       <CommonButton text="create Room" onClick={createRoom} />
+      <div className={ss.text}>your create Room currently: {channels[0]?.chatid}</div>
     </div>
   )
 }

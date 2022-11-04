@@ -1,3 +1,16 @@
 .commonButton {
   padding: 12px;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: rgb(79,70,230);
+  cursor: pointer;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: all .3s cubic-bezier(.645,.045,.355,1);
+}
+
+.commonButton:hover, .commonButton:focus {
+  background: rgba(79,70,230, 0.80);
+  box-shadow: 1px 1px 4px 4px rgba(79,70,230, 0.15);
 }

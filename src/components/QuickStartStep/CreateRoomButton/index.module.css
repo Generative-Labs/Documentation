@@ -1,0 +1,8 @@
+.createRoomContent {
+  position: relative;
+}
+.createRoomContent .text {
+  padding-top: 5px;
+  background: #fff;
+  word-break: break-all;
+}

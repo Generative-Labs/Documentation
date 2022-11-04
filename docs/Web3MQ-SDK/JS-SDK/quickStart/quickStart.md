@@ -183,14 +183,14 @@ const client = Client.getInstance(keys);
 After initializing the client and registering your user, the next step is to connect to a room
 
 #### Code
-
+import { PreButton } from '@site/src/components/QuickStartStep/PreButton'
 import { CreateRoomButton } from '@site/src/components/QuickStartStep/CreateRoomButton'
 
 <Layout
 title='create Room'
 description='create your Chat Room.'
 >
-<CreateRoomButton />
+<PreButton><CreateRoomButton /></PreButton>
 </Layout>
 
 ```ts
@@ -216,7 +216,7 @@ import { SendMessageButton } from '@site/src/components/QuickStartStep/SendMessa
 title='send message'
 description='send your first message.'
 >
-<SendMessageButton />
+<PreButton><SendMessageButton /></PreButton>
 </Layout>
 
 ```ts
