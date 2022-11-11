@@ -11,7 +11,8 @@ export const CreateRoomButton = (props: IProps) => {
   const [channels, setChannels] = useState<any>([]);
   const createRoom = async () => {
     await client?.channel.createRoom({});
-    console.log('create Chat Room successful')
+    console.log('create Chat Room successful');
+    setChannels(client?.channel.channelList)
   };
   const getChannelList = async() => {
     await client?.channel.queryChannels({page: 1, size: 20});
