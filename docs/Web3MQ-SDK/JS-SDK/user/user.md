@@ -6,13 +6,16 @@ position: 7
 
 ## Methods
 
-| name            | type     | Parameters Description                                        | response                                                                          |
-| --------------- | -------- | ------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| searchUsers     | function | (walletAddress: string)                                       | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)         |
-| getMyProfile    | function | none                                                          | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)         |
-| updateMyProfile | function | (nickname: string, avatar_url: string)                        | [UpdateMyProfileResponse](/docs/Web3MQ-SDK/JS-SDK/types/#updatemyprofileresponse) |
-| getUserBindDids | function | none                                                          |                                                                                   |
-| userBindDid     | function | ( { provider_id: string, did_type: string,did_value: string}) |                                                                                   |
+| name             | type     | Parameters Description                                       | response                                                                          |
+| ---------------- | -------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------- |
+| searchUsers      | function | (walletAddress: string)                                      | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)         |
+| getMyProfile     | function | none                                                         | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)         |
+| updateMyProfile  | function | (nickname: string, avatar_url: string)                       | [UpdateMyProfileResponse](/docs/Web3MQ-SDK/JS-SDK/types/#updatemyprofileresponse) |
+| getUserBindDids  | function | none                                                         |                                                                                   |
+| userBindDid      | function | ({ provider_id: string, did_type: string,did_value: string}) |                                                                                   |
+| followOperation  | function | {target_userid: string, action: string}                      | none                                                                              |
+| getFollowerList  | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)      |                                                                                   |
+| getFollowingList | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)      |                                                                                   |
 
 ## init Client
 
@@ -176,6 +179,92 @@ export const Child = (props: IProps) => {
           console.log(data);
         }}>
         User Bind Did
+      </button>
+    </div>
+  );
+};
+```
+
+## FollowOperation
+
+```tsx
+import { Client } from 'web3-mq';
+
+interface IProps {
+  client: Client;
+}
+
+export const Child = (props: IProps) => {
+  const { client } = props;
+
+  return (
+    <div>
+      <button
+        onClick={async () => {
+          const data = await client.user.followOperation({
+            target_userid: 'target_userid',
+            action: 'follwo or cancel',
+          });
+          console.log(data);
+        }}>
+        Follow Operation Btn
+      </button>
+    </div>
+  );
+};
+```
+
+## GetFollowerList
+
+```tsx
+import { Client } from 'web3-mq';
+
+interface IProps {
+  client: Client;
+}
+
+export const Child = (props: IProps) => {
+  const { client } = props;
+
+  return (
+    <div>
+      <button
+        onClick={async () => {
+          const data = await client.user.getFollowerList({
+            page: 1,
+            size: 20,
+          });
+          console.log(data);
+        }}>
+        Get Follower List
+      </button>
+    </div>
+  );
+};
+```
+## GetFollowingList
+
+```tsx
+import { Client } from 'web3-mq';
+
+interface IProps {
+  client: Client;
+}
+
+export const Child = (props: IProps) => {
+  const { client } = props;
+
+  return (
+    <div>
+      <button
+        onClick={async () => {
+          const data = await client.user.getFollowingList({
+            page: 1,
+            size: 20,
+          });
+          console.log(data);
+        }}>
+        Get Following List
       </button>
     </div>
   );

@@ -1,11 +1,13 @@
 .docs-demo-device {
+  display: flex;
+  justify-content: center;
   position: relative;
-  width: 384px;
-  min-width: 354px;
-  height: 664px;
+  padding-top: 20px;
+  min-width: 350px;
   border: 12px solid black;
   border-radius: 54px;
   overflow: hidden;
+  transform: scale(0.9);
 }
 .docs-demo-device::after {
   display: block;
