@@ -12,6 +12,7 @@ export default {
   'component---theme-doc-item-178-a40': [() => import(/* webpackChunkName: 'component---theme-doc-item-178-a40' */ '@theme/DocItem'), '@theme/DocItem', require.resolveWeak('@theme/DocItem')],
   'component---theme-doc-page-1-be-9be': [() => import(/* webpackChunkName: 'component---theme-doc-page-1-be-9be' */ '@theme/DocPage'), '@theme/DocPage', require.resolveWeak('@theme/DocPage')],
   'component---theme-mdx-page-1-f-3-b90': [() => import(/* webpackChunkName: 'component---theme-mdx-page-1-f-3-b90' */ '@theme/MDXPage'), '@theme/MDXPage', require.resolveWeak('@theme/MDXPage')],
+  'component---theme-search-page-1-a-4-d6f': [() => import(/* webpackChunkName: 'component---theme-search-page-1-a-4-d6f' */ '@theme/SearchPage'), '@theme/SearchPage', require.resolveWeak('@theme/SearchPage')],
   'config---5-e-9-4f3': [() => import(/* webpackChunkName: 'config---5-e-9-4f3' */ '@generated/docusaurus.config'), '@generated/docusaurus.config', require.resolveWeak('@generated/docusaurus.config')],
   'content---docs-intro-377-335': [() => import(/* webpackChunkName: 'content---docs-intro-377-335' */ '@site/docs/Intro.md'), '@site/docs/Intro.md', require.resolveWeak('@site/docs/Intro.md')],
   'content---docs-tutorials-dotbit-9-c-4-19e': [() => import(/* webpackChunkName: 'content---docs-tutorials-dotbit-9-c-4-19e' */ '@site/docs/Tutorials/dotbit/dotbit.md'), '@site/docs/Tutorials/dotbit/dotbit.md', require.resolveWeak('@site/docs/Tutorials/dotbit/dotbit.md')],

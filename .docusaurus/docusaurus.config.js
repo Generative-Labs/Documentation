@@ -18,10 +18,10 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "/Users/fanxiangyu/Work/Documentation/sidebars.js"
+          "sidebarPath": "/Users/edy/Desktop/a/Documentation/sidebars.js"
         },
         "theme": {
-          "customCss": "/Users/fanxiangyu/Work/Documentation/src/css/custom.css"
+          "customCss": "/Users/edy/Desktop/a/Documentation/src/css/custom.css"
         }
       }
     ]
@@ -264,6 +264,14 @@ export default {
         ]
       },
       "additionalLanguages": []
+    },
+    "algolia": {
+      "appId": "LULEB9WV0U",
+      "apiKey": "9933043110ab8e7cf101b9bb08cd03bc",
+      "indexName": "web3mq",
+      "contextualSearch": true,
+      "searchParameters": {},
+      "searchPagePath": "search"
     },
     "colorMode": {
       "defaultMode": "light",
