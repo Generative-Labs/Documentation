@@ -16,7 +16,7 @@ position: 5
 | ------------------- | -------- | ------------------------------------------------------------------------------------------- | -------- |
 | getMessageList      | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                     | none     |
 | changeMessageStatus | function | (messages: string[], status: [MessageStatus](/docs/Web3MQ-SDK/JS-SDK/types/#messagestatus)) | none     |
-| sendMessage         | function | (msg: string)                                                                               | none     |
+| sendMessage         | function | (msg: string, secondParams: (target_userid or target_user_wallet_address) )                 | none     |
 | receive             | function | receive message callback                                                                    | none     |
 
 ## init Client
@@ -90,7 +90,11 @@ export const Child = (props: IProps) => {
     <div>
       <button
         onClick={() => {
-          client.message.sendMessage('text');
+          client.message.sendMessage('text'); // Basic use
+          // or
+          client.message.sendMessage('text', 'userid: xxxxx...'); // Send it directly to someone using a userid
+          // or
+          client.message.sendMessage('text', '0xABCD...'); // Send it directly to someone using a wallet address
         }}>
         send Message
       </button>
