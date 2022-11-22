@@ -1,0 +1,22 @@
+.login_btn {
+  width: 195px;
+  height: 48px;
+  border-radius: 49px;
+  border: none;
+  color: #FFFFFF;
+  background: #337DCF;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login_btn:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.custom_box div span {
+  font-size: 15px;
+  font-weight: 800;
+}

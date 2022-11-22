@@ -1,0 +1,15 @@
+.dataInner span {
+  white-space: nowrap;
+  font-size: 11px;
+  color: #4c5667;
+  font-weight: 500;
+  display: inline-block;
+  line-height: 23px;
+}
+
+.dataInner .name {
+  font-weight: 700;
+  margin-right: 8px;
+  color: #000;
+  font-size: 14px;
+}

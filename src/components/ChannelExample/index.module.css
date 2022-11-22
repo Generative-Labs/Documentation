@@ -1,0 +1,46 @@
+.link_btn, .back_btn {
+  width: 195px;
+  height: 48px;
+  border-radius: 49px;
+  border: none;
+  color: #FFFFFF;
+  background: #337DCF;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.link_btn a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.link_btn:hover, .back_btn:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.back_btn {
+  margin: 5px auto;
+}
+
+.custom_box span {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.dataInner span {
+  white-space: nowrap;
+  font-size: 11px;
+  color: #4c5667;
+  font-weight: 500;
+  display: inline-block;
+  line-height: 23px;
+}
+
+.dataInner .name {
+  font-weight: 700;
+  margin-right: 8px;
+  color: #000;
+  font-size: 14px;
+}

@@ -1,0 +1,65 @@
+```tsx 
+
+import React, { useEffect, PropsWithChildren } from 'react';
+import { Client } from 'web3-mq';
+import { AppTypeEnum, Chat, ChannelList, ChannelPreviewUIComponentProps } from 'web3-mq-react';
+import cx from 'classnames';
+
+import useLogin from '../ChatExample/hooks/useLogin';
+
+const CustomPreview = (props: ChannelPreviewUIComponentProps) => {
+  const {
+    displayTitle,
+    setActiveChannel,
+    channel,
+    active,
+  } = props;
+
+  const onSetActiveChannel = () => {
+    setActiveChannel && setActiveChannel(channel);
+  };
+
+  return (
+    <div
+      className={cx(ss.customPreviewContainer, {
+        [ss.selected]: active,
+      })}
+      onClick={onSetActiveChannel}
+    >
+      <div>{displayTitle}</div>
+    </div>
+  )
+};
+
+export const ChannelListExample: React.FC = (props: any) => {
+  const { type } = props;
+  const { keys, init, fastestUrl, logout, signMetaMask } = useLogin();
+
+  useEffect(() => {
+    init();
+  }, [])
+
+  if (!keys) {
+    return (
+      <div>
+        <button onClick={signMetaMask}>signMetaMask</button>
+      </div>
+    );
+  }
+  if (!fastestUrl) {
+    return null;
+  }
+
+  const client = Client.getInstance(keys);
+
+  return (
+    <div id='box' style={{position: 'relative', border: '1px solid #f2f2f2', width: '100%',height: '300px',overflow: 'auto'}}>
+      <Chat client={client} appType={AppTypeEnum['h5']} logout={logout}>
+        <ChannelList 
+          Preview={type === 'Preview' ? CustomPreview : undefined}
+        />
+      </Chat>
+    </div>
+  );
+};
+```

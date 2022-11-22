@@ -276,6 +276,41 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Web3MQ-React/coreComponent/Channel",
+              "path": "/docs/Web3MQ-React/coreComponent/Channel",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-React/coreComponent/ChannelList",
+              "path": "/docs/Web3MQ-React/coreComponent/ChannelList",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-React/coreComponent/Chat",
+              "path": "/docs/Web3MQ-React/coreComponent/Chat",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-React/coreComponent/DashBoard",
+              "path": "/docs/Web3MQ-React/coreComponent/DashBoard",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-React/coreComponent/MessageList",
+              "path": "/docs/Web3MQ-React/coreComponent/MessageList",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-React/coreComponent/Thread",
+              "path": "/docs/Web3MQ-React/coreComponent/Thread",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-React/Intro",
+              "path": "/docs/Web3MQ-React/Intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-SDK/JS-SDK/channel/channel",
               "path": "/docs/Web3MQ-SDK/JS-SDK/channel/",
               "sidebar": "tutorialSidebar"
@@ -343,36 +378,6 @@
             {
               "id": "Web3MQ-SDK/JS-SDK/utils/utils",
               "path": "/docs/Web3MQ-SDK/JS-SDK/utils/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-UI-Components/coreComponent/Channel",
-              "path": "/docs/Web3MQ-UI-Components/coreComponent/Channel",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-UI-Components/coreComponent/ChannelList",
-              "path": "/docs/Web3MQ-UI-Components/coreComponent/ChannelList",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-UI-Components/coreComponent/Chat",
-              "path": "/docs/Web3MQ-UI-Components/coreComponent/Chat",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-UI-Components/coreComponent/MessageList",
-              "path": "/docs/Web3MQ-UI-Components/coreComponent/MessageList",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-UI-Components/coreComponent/Thread",
-              "path": "/docs/Web3MQ-UI-Components/coreComponent/Thread",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-UI-Components/Intro",
-              "path": "/docs/Web3MQ-UI-Components/Intro",
               "sidebar": "tutorialSidebar"
             },
             {
