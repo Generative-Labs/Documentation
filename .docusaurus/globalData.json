@@ -346,6 +346,51 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Web3MQ-SDK/Swift-SDK/Channels/Channels",
+              "path": "/docs/Web3MQ-SDK/Swift-SDK/Channels/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Swift-SDK/Contacts/Contacts",
+              "path": "/docs/Web3MQ-SDK/Swift-SDK/Contacts/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Swift-SDK/Messages/Messages",
+              "path": "/docs/Web3MQ-SDK/Swift-SDK/Messages/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Swift-SDK/Notifications/Notifications",
+              "path": "/docs/Web3MQ-SDK/Swift-SDK/Notifications/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Swift-SDK/QuickStart/QuickStart",
+              "path": "/docs/Web3MQ-SDK/Swift-SDK/QuickStart/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Swift-SDK/Register/Register",
+              "path": "/docs/Web3MQ-SDK/Swift-SDK/Register/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Swift-SDK/Structs/Structs",
+              "path": "/docs/Web3MQ-SDK/Swift-SDK/Structs/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Swift-SDK/Topics/Topics",
+              "path": "/docs/Web3MQ-SDK/Swift-SDK/Topics/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Swift-SDK/Users/Users",
+              "path": "/docs/Web3MQ-SDK/Swift-SDK/Users/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel",
               "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel",
               "sidebar": "tutorialSidebar"

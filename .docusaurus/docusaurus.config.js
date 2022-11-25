@@ -18,10 +18,10 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "/Users/edy/Desktop/a/Documentation/sidebars.js"
+          "sidebarPath": "/Users/fanxiangyu/Work/Documentation/sidebars.js"
         },
         "theme": {
-          "customCss": "/Users/edy/Desktop/a/Documentation/src/css/custom.css"
+          "customCss": "/Users/fanxiangyu/Work/Documentation/src/css/custom.css"
         }
       }
     ]

@@ -12,9 +12,9 @@
           "versionClassName": "docs-version-current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/edy/Desktop/a/Documentation/sidebars.js",
-          "contentPath": "/Users/edy/Desktop/a/Documentation/docs",
-          "contentPathLocalized": "/Users/edy/Desktop/a/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/fanxiangyu/Work/Documentation/sidebars.js",
+          "contentPath": "/Users/fanxiangyu/Work/Documentation/docs",
+          "contentPathLocalized": "/Users/fanxiangyu/Work/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "Intro",
@@ -597,8 +597,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "eventCenter",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/eventCenter/"
+                "title": "Structs",
+                "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Structs/"
               },
               "next": {
                 "title": "Overview",
@@ -1625,8 +1625,8 @@
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK/types/"
               },
               "next": {
-                "title": "Overview",
-                "permalink": "/docs/Web3MQ-API/Intro"
+                "title": "Quick Start",
+                "permalink": "/docs/Web3MQ-SDK/Swift-SDK/QuickStart/"
               }
             },
             {
@@ -1843,6 +1843,222 @@
               "next": {
                 "title": "Type List",
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK/types/"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/Swift-SDK/Channels/Channels",
+              "id": "Web3MQ-SDK/Swift-SDK/Channels/Channels",
+              "title": "Channels",
+              "description": "Methods",
+              "source": "@site/docs/Web3MQ-SDK/Swift-SDK/Channels/Channels.md",
+              "sourceDirName": "Web3MQ-SDK/Swift-SDK/Channels",
+              "slug": "/Web3MQ-SDK/Swift-SDK/Channels/",
+              "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Channels/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 3
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Register",
+                "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Register/"
+              },
+              "next": {
+                "title": "Messages",
+                "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Messages/"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/Swift-SDK/Contacts/Contacts",
+              "id": "Web3MQ-SDK/Swift-SDK/Contacts/Contacts",
+              "title": "Contact",
+              "description": "Methods",
+              "source": "@site/docs/Web3MQ-SDK/Swift-SDK/Contacts/Contacts.md",
+              "sourceDirName": "Web3MQ-SDK/Swift-SDK/Contacts",
+              "slug": "/Web3MQ-SDK/Swift-SDK/Contacts/",
+              "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Contacts/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 5
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Messages",
+                "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Messages/"
+              },
+              "next": {
+                "title": "User",
+                "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Users/"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/Swift-SDK/Messages/Messages",
+              "id": "Web3MQ-SDK/Swift-SDK/Messages/Messages",
+              "title": "Messages",
+              "description": "Methods",
+              "source": "@site/docs/Web3MQ-SDK/Swift-SDK/Messages/Messages.md",
+              "sourceDirName": "Web3MQ-SDK/Swift-SDK/Messages",
+              "slug": "/Web3MQ-SDK/Swift-SDK/Messages/",
+              "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Messages/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 4
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Channels",
+                "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Channels/"
+              },
+              "next": {
+                "title": "Contact",
+                "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Contacts/"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/Swift-SDK/Notifications/Notifications",
+              "id": "Web3MQ-SDK/Swift-SDK/Notifications/Notifications",
+              "title": "Notifications",
+              "description": "Methods",
+              "source": "@site/docs/Web3MQ-SDK/Swift-SDK/Notifications/Notifications.md",
+              "sourceDirName": "Web3MQ-SDK/Swift-SDK/Notifications",
+              "slug": "/Web3MQ-SDK/Swift-SDK/Notifications/",
+              "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Notifications/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 7
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "User",
+                "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Users/"
+              },
+              "next": {
+                "title": "Topics",
+                "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Topics/"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/Swift-SDK/QuickStart/QuickStart",
+              "id": "Web3MQ-SDK/Swift-SDK/QuickStart/QuickStart",
+              "title": "Quick Start",
+              "description": "iOS Main Features",
+              "source": "@site/docs/Web3MQ-SDK/Swift-SDK/QuickStart/QuickStart.md",
+              "sourceDirName": "Web3MQ-SDK/Swift-SDK/QuickStart",
+              "slug": "/Web3MQ-SDK/Swift-SDK/QuickStart/",
+              "permalink": "/docs/Web3MQ-SDK/Swift-SDK/QuickStart/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "eventCenter",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/eventCenter/"
+              },
+              "next": {
+                "title": "Register",
+                "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Register/"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/Swift-SDK/Register/Register",
+              "id": "Web3MQ-SDK/Swift-SDK/Register/Register",
+              "title": "Register",
+              "description": "Methods",
+              "source": "@site/docs/Web3MQ-SDK/Swift-SDK/Register/Register.md",
+              "sourceDirName": "Web3MQ-SDK/Swift-SDK/Register",
+              "slug": "/Web3MQ-SDK/Swift-SDK/Register/",
+              "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Register/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Quick Start",
+                "permalink": "/docs/Web3MQ-SDK/Swift-SDK/QuickStart/"
+              },
+              "next": {
+                "title": "Channels",
+                "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Channels/"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/Swift-SDK/Structs/Structs",
+              "id": "Web3MQ-SDK/Swift-SDK/Structs/Structs",
+              "title": "Structs",
+              "description": "EthAccount",
+              "source": "@site/docs/Web3MQ-SDK/Swift-SDK/Structs/Structs.md",
+              "sourceDirName": "Web3MQ-SDK/Swift-SDK/Structs",
+              "slug": "/Web3MQ-SDK/Swift-SDK/Structs/",
+              "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Structs/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 9
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Topics",
+                "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Topics/"
+              },
+              "next": {
+                "title": "Overview",
+                "permalink": "/docs/Web3MQ-API/Intro"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/Swift-SDK/Topics/Topics",
+              "id": "Web3MQ-SDK/Swift-SDK/Topics/Topics",
+              "title": "Topics",
+              "description": "Methods",
+              "source": "@site/docs/Web3MQ-SDK/Swift-SDK/Topics/Topics.md",
+              "sourceDirName": "Web3MQ-SDK/Swift-SDK/Topics",
+              "slug": "/Web3MQ-SDK/Swift-SDK/Topics/",
+              "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Topics/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 8
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Notifications",
+                "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Notifications/"
+              },
+              "next": {
+                "title": "Structs",
+                "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Structs/"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/Swift-SDK/Users/Users",
+              "id": "Web3MQ-SDK/Swift-SDK/Users/Users",
+              "title": "User",
+              "description": "Methods",
+              "source": "@site/docs/Web3MQ-SDK/Swift-SDK/Users/Users.md",
+              "sourceDirName": "Web3MQ-SDK/Swift-SDK/Users",
+              "slug": "/Web3MQ-SDK/Swift-SDK/Users/",
+              "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Users/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 6
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Contact",
+                "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Contacts/"
+              },
+              "next": {
+                "title": "Notifications",
+                "permalink": "/docs/Web3MQ-SDK/Swift-SDK/Notifications/"
               }
             },
             {
@@ -2279,6 +2495,59 @@
                         "type": "doc",
                         "label": "Event Center",
                         "id": "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
+                    "label": "Swift-SDK",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "label": "QuickStart",
+                        "id": "Web3MQ-SDK/Swift-SDK/QuickStart/QuickStart"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Register",
+                        "id": "Web3MQ-SDK/Swift-SDK/Register/Register"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Channels",
+                        "id": "Web3MQ-SDK/Swift-SDK/Channels/Channels"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Messages",
+                        "id": "Web3MQ-SDK/Swift-SDK/Messages/Messages"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Contacts",
+                        "id": "Web3MQ-SDK/Swift-SDK/Contacts/Contacts"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Users",
+                        "id": "Web3MQ-SDK/Swift-SDK/Users/Users"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Notifications",
+                        "id": "Web3MQ-SDK/Swift-SDK/Notifications/Notifications"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Topics",
+                        "id": "Web3MQ-SDK/Swift-SDK/Topics/Topics"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Structs",
+                        "id": "Web3MQ-SDK/Swift-SDK/Structs/Structs"
                       }
                     ]
                   }

@@ -55,7 +55,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','088'),
+    component: ComponentCreator('/docs','2d8'),
     routes: [
       {
         path: '/docs/Intro',
@@ -456,6 +456,60 @@ export default [
       {
         path: '/docs/Web3MQ-SDK/JS-SDK/utils/',
         component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/utils/','65d'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/Swift-SDK/Channels/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/Swift-SDK/Channels/','e39'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/Swift-SDK/Contacts/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/Swift-SDK/Contacts/','840'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/Swift-SDK/Messages/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/Swift-SDK/Messages/','87b'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/Swift-SDK/Notifications/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/Swift-SDK/Notifications/','160'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/Swift-SDK/QuickStart/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/Swift-SDK/QuickStart/','916'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/Swift-SDK/Register/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/Swift-SDK/Register/','ea9'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/Swift-SDK/Structs/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/Swift-SDK/Structs/','e55'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/Swift-SDK/Topics/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/Swift-SDK/Topics/','6dd'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/Swift-SDK/Users/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/Swift-SDK/Users/','be8'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },

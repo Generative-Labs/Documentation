@@ -32,7 +32,7 @@
   "/search-79a": {
     "component": "component---theme-search-page-1-a-4-d6f"
   },
-  "/docs-088": {
+  "/docs-2d8": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
   },
@@ -303,6 +303,42 @@
   "/docs/Web3MQ-SDK/JS-SDK/utils/-65d": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-sdk-js-sdk-utils-1-e-7-9f5"
+  },
+  "/docs/Web3MQ-SDK/Swift-SDK/Channels/-e39": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-swift-sdk-channels-797-c45"
+  },
+  "/docs/Web3MQ-SDK/Swift-SDK/Contacts/-840": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-swift-sdk-contacts-14-b-768"
+  },
+  "/docs/Web3MQ-SDK/Swift-SDK/Messages/-87b": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-swift-sdk-messages-128-de7"
+  },
+  "/docs/Web3MQ-SDK/Swift-SDK/Notifications/-160": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-swift-sdk-notifications-688-710"
+  },
+  "/docs/Web3MQ-SDK/Swift-SDK/QuickStart/-916": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-swift-sdk-quick-start-aed-061"
+  },
+  "/docs/Web3MQ-SDK/Swift-SDK/Register/-ea9": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-swift-sdk-register-f-25-dc1"
+  },
+  "/docs/Web3MQ-SDK/Swift-SDK/Structs/-e55": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-swift-sdk-structs-950-136"
+  },
+  "/docs/Web3MQ-SDK/Swift-SDK/Topics/-6dd": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-swift-sdk-topics-283-578"
+  },
+  "/docs/Web3MQ-SDK/Swift-SDK/Users/-be8": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-swift-sdk-users-5-b-9-eb7"
   },
   "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel-90c": {
     "component": "component---theme-doc-item-178-a40",
