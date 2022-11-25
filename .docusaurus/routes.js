@@ -55,7 +55,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','694'),
+    component: ComponentCreator('/docs','088'),
     routes: [
       {
         path: '/docs/Intro',
@@ -460,38 +460,38 @@ export default [
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-UI-Components/Web3MQ-React/coreComponent/Channel',
-        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/coreComponent/Channel','e5e'),
+        path: '/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel',
+        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel','90c'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-UI-Components/Web3MQ-React/coreComponent/ChannelList',
-        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/coreComponent/ChannelList','980'),
+        path: '/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelList',
+        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelList','c2b'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-UI-Components/Web3MQ-React/coreComponent/Chat',
-        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/coreComponent/Chat','568'),
+        path: '/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat',
+        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat','dee'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-UI-Components/Web3MQ-React/coreComponent/DashBoard',
-        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/coreComponent/DashBoard','01a'),
+        path: '/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel',
+        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel','a9a'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-UI-Components/Web3MQ-React/coreComponent/MessageList',
-        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/coreComponent/MessageList','c36'),
+        path: '/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard',
+        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard','09b'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-UI-Components/Web3MQ-React/coreComponent/Thread',
-        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/coreComponent/Thread','c8e'),
+        path: '/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList',
+        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList','a56'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
@@ -502,32 +502,32 @@ export default [
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-UI-Components/Web3MQ-Vue/coreComponent/Channel',
-        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-Vue/coreComponent/Channel','f30'),
+        path: '/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/Channel',
+        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/Channel','baa'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-UI-Components/Web3MQ-Vue/coreComponent/ChannelList',
-        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-Vue/coreComponent/ChannelList','610'),
+        path: '/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/ChannelList',
+        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/ChannelList','984'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-UI-Components/Web3MQ-Vue/coreComponent/chat',
-        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-Vue/coreComponent/chat','cd4'),
+        path: '/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/chat',
+        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/chat','348'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-UI-Components/Web3MQ-Vue/coreComponent/MessageInput',
-        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-Vue/coreComponent/MessageInput','7d0'),
+        path: '/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/MessageInput',
+        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/MessageInput','c7b'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-UI-Components/Web3MQ-Vue/coreComponent/MessageList',
-        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-Vue/coreComponent/MessageList','1a7'),
+        path: '/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/MessageList',
+        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/MessageList','a57'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },

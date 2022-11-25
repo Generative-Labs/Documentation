@@ -16,7 +16,7 @@ export const InitClientButton = () => {
   }
   
   return (
-    <div>
+    <div style={{width: '100%'}}>
       <CommonButton text="get Client instance" onClick={getInstance} />
     </div>
   )

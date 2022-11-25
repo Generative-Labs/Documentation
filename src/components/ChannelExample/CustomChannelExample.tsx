@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Client } from 'web3-mq';
 import { 
   AppTypeEnum, 
+  Avatar,
   Chat, 
   Channel, 
   ChatAutoComplete,
@@ -19,8 +20,8 @@ import ss from './index.module.css';
 const CustomInput: React.FC = () => {
 
   return (
-    <div style={{display: 'flex', width: "100%"}}>
-      this is cutomInput:
+    <div style={{display: 'flex', alignItems: 'center'}}>
+      this is CutomInput:
       <ChatAutoComplete />
     </div>
   )
@@ -34,12 +35,19 @@ const CustomMessage: React.FC = () => {
   };
 
   return (
-    <div>
-      <div className={ss.dataInner}>
-        <span className={ss.name}>{getShortAddress(message.senderId)}</span>
-        <span>{message.date}&nbsp;{message.timestamp}</span>
+    <div style={{ display: 'flex', alignItems: 'flex-start', padding: '16px 24px', borderBottom: '1px solid #f2f2f2', position: 'relative'}}>
+      <Avatar
+        name="user"
+        image={message?.avatar || ''}
+        size={30} 
+      />
+      <div style={{position: 'relative', width: '100%'}}>
+        <div className={ss.dataInner}>
+          <span className={ss.name}>{getShortAddress(message.senderId)}</span>
+          <span>{message.date}&nbsp;{message.timestamp}</span>
+        </div>
+        <div>{message.content}</div>
       </div>
-      <div>{message.content}</div>
     </div>
   )
 }
@@ -54,7 +62,7 @@ export const CustomChannelExample: React.FC = () => {
   if (!keys) {
     return (
       <div>
-        <button className={ss.link_btn}><a href="/docs/Web3MQ-React/coreComponent/Chat#basic-usage">请先在Chat部分进行登录操作</a></button>
+        <button className={ss.link_btn}><a href="/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#basic-usage">请先在Chat部分进行登录操作</a></button>
       </div>
     );
   }
@@ -63,6 +71,10 @@ export const CustomChannelExample: React.FC = () => {
   }
 
   const client = Client.getInstance(keys);
+  
+  const handleClose = () => {
+    client.channel.setActiveChannel(null);
+  };
 
   return (
     <div id='box' style={{position: 'relative', border: '1px solid #f2f2f2',  width: '100%',height: '300px',overflow: 'auto'}}>
@@ -71,7 +83,10 @@ export const CustomChannelExample: React.FC = () => {
         <Channel Input={CustomInput} Message={CustomMessage}>
           <Window>
             <MessageList />
-            <MessageInput />
+            <div style={{display: 'flex', width: '100%'}}>
+              <button className={ss.back_btn} onClick={handleClose} >Back</button>
+              <MessageInput />
+            </div>
           </Window>
         </Channel>
       </Chat>

@@ -1,3 +1,6 @@
+---
+sidebar_position: 3
+---
 # Channel
 
 The `Channel` component is a React Context provider that wraps all of the logic, functionality, and UI for an individual chat channel. It provides five separate contexts to its children:
@@ -22,26 +25,6 @@ code={<ChannelMdx />}>
 <ChannelExample />
 </Layout>
 
-## useChannelStateContext
-```ts
-const { activeChannel } = useChannelStateContext();
-```
-**context data**
-
-| Property      | Description               | Type                                                                  | Default |
-| ------------- | ------------------------- | --------------------------------------------------------------------- | ------- |
-| activeChannel | current active channel    | [activechannelType](/docs/Web3MQ-SDK/JS-SDK/types/#activechanneltype) |   -     |
-
-## useComponentContext
-```ts
-const { Message, Input } = useComponentContext();
-```
-**context data**
-
-| Property      | Description                            | Type              | Default |
-| ------------- | -------------------------------------- | ----------------- | ------- |
-| Input         | set custom `MessageInput` component    | React.Component   |   -     |
-| Message       | set custom `Message` component         | React.Component   |   -     |
 
 ## Custom Input 
 在`channel`可以传入自定义样式和功能的Input输入框组件，在该组件中可以通过useMessageInputContext方法获取sendMessage方法。
@@ -82,6 +65,17 @@ code={<CustomChannelMdx />}>
 <CustomChannelExample />
 </Layout>
 
+## useChannelStateContext
+`Channel`的子组件都可以访问ChannelStateContext和ComponentContext。
+```ts
+const { activeChannel } = useChannelStateContext();
+```
+
+## useComponentContext
+```ts
+const { Message, Input } = useComponentContext();
+```
+
 ## Api
 
 **The properties of the Channel are described as follows:**
@@ -89,4 +83,17 @@ code={<CustomChannelMdx />}>
 | Property | Description                               | Type                                      | Default |
 | -------- | ----------------------------------------- | ----------------------------------------- | ------- |
 | Input    | set your custom `Input` component         | React.ComponentType                       |   -     |
-| Message  | set your custom `Message` component | React.ComponentType                       |   -     |
+| Message  | set your custom `Message` component       | React.ComponentType                       |   -     |
+
+**useChannelStateContext data**
+
+| Property      | Description               | Type                                                                  | Default |
+| ------------- | ------------------------- | --------------------------------------------------------------------- | ------- |
+| activeChannel | current active channel    | [activechannelType](/docs/Web3MQ-SDK/JS-SDK/types/#activechanneltype) |   -     |
+
+**useComponentContext data**
+
+| Property      | Description                            | Type              | Default |
+| ------------- | -------------------------------------- | ----------------- | ------- |
+| Input         | set custom `MessageInput` component    | React.Component   |   -     |
+| Message       | set custom `Message` component         | React.Component   |   -     |

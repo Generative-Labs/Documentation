@@ -2,7 +2,7 @@
 
 import React, { useEffect, PropsWithChildren } from 'react';
 import { Client } from 'web3-mq';
-import { AppTypeEnum, Chat, ChannelList, ChannelPreviewUIComponentProps } from 'web3-mq-react';
+import { AppTypeEnum, Avatar, Chat, ChannelList, ChannelPreviewUIComponentProps } from 'web3-mq-react';
 import cx from 'classnames';
 
 import useLogin from '../ChatExample/hooks/useLogin';
@@ -26,6 +26,11 @@ const CustomPreview = (props: ChannelPreviewUIComponentProps) => {
       })}
       onClick={onSetActiveChannel}
     >
+      <Avatar
+        name="user"
+        image={channel?.avatar_base64 || channel.avatar_url || ''}
+        size={30} 
+      />
       <div>{displayTitle}</div>
     </div>
   )

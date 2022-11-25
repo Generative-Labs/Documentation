@@ -16,7 +16,7 @@ const CustomComponent: React.FC = () => {
       <div><span>showListTypeView:</span> {showListTypeView}</div>
       <div><span>userId:</span> {userInfo?.userid}</div>
       <div><span>wallet_address:</span> {userInfo?.wallet_address}</div>
-      <div><span>wallet_address:</span> {userInfo?.wallet_type}</div>
+      <div><span>wallet_type:</span> {userInfo?.wallet_type}</div>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 # DashBoard
 
-`DashBoard`是一个Tabs组件。当不传入任何props时，tabs内容默认渲染组件库中`ChannelList`、`ContactList`、`Profile`三个组件。
+`DashBoard`是一个Tabs组件。当不传入任何props时，tabs内容默认渲染组件库中`ChannelList`、`ContactList`、`Profile`三个组件。`DashBoar`组件通过useChatContext获取setShowListTypeView方法，并修改showListTypeView，即无法在`Chat`组件之外使用。
 
 ## Basic Usage
 

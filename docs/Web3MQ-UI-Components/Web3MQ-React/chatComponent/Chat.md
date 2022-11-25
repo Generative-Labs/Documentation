@@ -20,21 +20,6 @@ code={<ChatMdx />}>
 <ChatExample />
 </Layout>
 
-## useChatContext
-
-Any child of the `Chat` component has access to the `ChatContext`. Each React Context in the component library can be accessed with one of our custom hooks, which must be imported individually.
-
-```ts
-const { client } = useChatContext();
-```
-**context data**
-
-| Property             | Description                                      | Type                                      | Default |
-| -------------------- | ------------------------------------------------ | ----------------------------------------- | ------- |
-| showListTypeView     | Tabs type in `DashBoard` component               | string                                    | 'room'  |
-| userInfo             | user Info   | Ref<[SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)> |  -      |
-| setShowListTypeView  | Update showListTypeView                          | setState Function                         |  -      |
-
 ## containerId
 
 用于给组件库包裹一个容器，需要将该容器Id作为containerId属性在`Chat`组件传入，组件库中的组件将会适配在该容器之中。
@@ -54,6 +39,15 @@ const { client } = useChatContext();
   </Chat>
 </div>
 ```
+
+## useChatContext
+
+Any child of the `Chat` component has access to the `ChatContext`. Each React Context in the component library can be accessed with one of our custom hooks, which must be imported individually.
+
+```ts
+const { client } = useChatContext();
+```
+
 ## Api
 
 **The properties of the Chat are described as follows:**
@@ -66,4 +60,12 @@ const { client } = useChatContext();
 | containerId | set container Id of your web3-mq-react | string                                    |   -     |
 | style       | set your custom style                  | React.CSSProperties                       |   -     |
 | logout      | Set your exit method                   | Function                                  |   -     |
+
+**useChatContext data**
+
+| Property             | Description                                      | Type                                      | Default |
+| -------------------- | ------------------------------------------------ | ----------------------------------------- | ------- |
+| showListTypeView     | Tabs type in `DashBoard` component               | string                                    | 'room'  |
+| userInfo             | user Info   | Ref<[SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)> |  -      |
+| setShowListTypeView  | Update showListTypeView                          | setState Function                         |  -      |
 

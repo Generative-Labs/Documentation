@@ -2,6 +2,7 @@ import React, { useEffect, PropsWithChildren } from 'react';
 import { Client } from 'web3-mq';
 import { 
   AppTypeEnum, 
+  Avatar,
   Chat, 
   ChannelList, 
   Channel, 
@@ -23,12 +24,19 @@ const CustomMessage = (props: PropsWithChildren<MessageProps>) => {
     return address.substring(0, 5) + '...' + address.substring(strLength - 4, strLength);
   };
   return (
-    <div>
-      <div className={ss.dataInner}>
-        <span className={ss.name}>{getShortAddress(message.senderId)}</span>
-        <span>{message.date}&nbsp;{message.timestamp}</span>
+    <div style={{ display: 'flex', alignItems: 'flex-start', padding: '16px 24px', borderBottom: '1px solid #f2f2f2', position: 'relative'}}>
+      <Avatar
+        name="user"
+        image={message?.avatar || ''}
+        size={30} 
+      />
+      <div style={{position: 'relative', width: '100%'}}>
+        <div className={ss.dataInner}>
+          <span className={ss.name}>{getShortAddress(message.senderId)}</span>
+          <span>{message.date}&nbsp;{message.timestamp}</span>
+        </div>
+        <div>{message.content}</div>
       </div>
-      <div>{message.content}</div>
     </div>
   )
 }
@@ -43,7 +51,7 @@ export const MessageListExample: React.FC = () => {
   if (!keys) {
     return (
       <div>
-        <button className={ss.link_btn}><a href="/docs/Web3MQ-React/coreComponent/Chat#basic-usage">请先在Chat部分进行登录操作</a></button>
+        <button className={ss.link_btn}><a href="/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#basic-usage">请先在Chat部分进行登录操作</a></button>
       </div>
     );
   }

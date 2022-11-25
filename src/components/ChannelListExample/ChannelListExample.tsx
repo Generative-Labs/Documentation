@@ -1,6 +1,6 @@
 import React, { useEffect, PropsWithChildren } from 'react';
 import { Client } from 'web3-mq';
-import { AppTypeEnum, Chat, ChannelList, ChannelListMessengerProps, ChannelPreviewUIComponentProps, Loading } from 'web3-mq-react';
+import { AppTypeEnum, Avatar, Chat, ChannelList, ChannelListMessengerProps, ChannelPreviewUIComponentProps, Loading } from 'web3-mq-react';
 import cx from 'classnames';
 
 import useLogin from '../ChatExample/hooks/useLogin';
@@ -48,6 +48,11 @@ const CustomPreview = (props: ChannelPreviewUIComponentProps) => {
       })}
       onClick={onSetActiveChannel}
     >
+      <Avatar
+        name="user"
+        image={channel?.avatar_base64 || channel.avatar_url || ''}
+        size={30} 
+      />
       <div>{displayTitle}</div>
     </div>
   )
@@ -110,7 +115,7 @@ export const ChannelListExample: React.FC = (props: any) => {
   if (!keys) {
     return (
       <div>
-        <button className={ss.link_btn}><a href="/docs/Web3MQ-React/coreComponent/Chat#basic-usage">请先在Chat部分进行登录操作</a></button>
+        <button className={ss.link_btn}><a href="/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#basic-usage">请先在Chat部分进行登录操作</a></button>
       </div>
     );
   }

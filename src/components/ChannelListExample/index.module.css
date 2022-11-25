@@ -1,5 +1,5 @@
 .link_btn, .clear_btn {
-  width: 195px;
+  width: 215px;
   height: 48px;
   border-radius: 49px;
   border: none;
@@ -23,7 +23,6 @@
 .customPreviewContainer {
   background-color: #fff;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   cursor: pointer;
   padding: 10px 24px;

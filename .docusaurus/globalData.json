@@ -346,33 +346,33 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-UI-Components/Web3MQ-React/coreComponent/Channel",
-              "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/coreComponent/Channel",
+              "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel",
+              "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-UI-Components/Web3MQ-React/coreComponent/ChannelList",
-              "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/coreComponent/ChannelList",
+              "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelList",
+              "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelList",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-UI-Components/Web3MQ-React/coreComponent/Chat",
-              "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/coreComponent/Chat",
+              "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat",
+              "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-UI-Components/Web3MQ-React/coreComponent/DashBoard",
-              "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/coreComponent/DashBoard",
+              "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel",
+              "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-UI-Components/Web3MQ-React/coreComponent/MessageList",
-              "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/coreComponent/MessageList",
+              "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard",
+              "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-UI-Components/Web3MQ-React/coreComponent/Thread",
-              "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/coreComponent/Thread",
+              "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList",
+              "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -381,28 +381,28 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-UI-Components/Web3MQ-Vue/coreComponent/Channel",
-              "path": "/docs/Web3MQ-UI-Components/Web3MQ-Vue/coreComponent/Channel",
+              "id": "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/Channel",
+              "path": "/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/Channel",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-UI-Components/Web3MQ-Vue/coreComponent/ChannelList",
-              "path": "/docs/Web3MQ-UI-Components/Web3MQ-Vue/coreComponent/ChannelList",
+              "id": "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/ChannelList",
+              "path": "/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/ChannelList",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-UI-Components/Web3MQ-Vue/coreComponent/chat",
-              "path": "/docs/Web3MQ-UI-Components/Web3MQ-Vue/coreComponent/chat",
+              "id": "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/chat",
+              "path": "/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/chat",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-UI-Components/Web3MQ-Vue/coreComponent/MessageInput",
-              "path": "/docs/Web3MQ-UI-Components/Web3MQ-Vue/coreComponent/MessageInput",
+              "id": "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/MessageInput",
+              "path": "/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/MessageInput",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-UI-Components/Web3MQ-Vue/coreComponent/MessageList",
-              "path": "/docs/Web3MQ-UI-Components/Web3MQ-Vue/coreComponent/MessageList",
+              "id": "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/MessageList",
+              "path": "/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/MessageList",
               "sidebar": "tutorialSidebar"
             },
             {
