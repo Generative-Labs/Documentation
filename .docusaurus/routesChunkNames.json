@@ -32,7 +32,7 @@
   "/search-79a": {
     "component": "component---theme-search-page-1-a-4-d6f"
   },
-  "/docs-471": {
+  "/docs-088": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
   },
@@ -304,53 +304,57 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-sdk-js-sdk-utils-1-e-7-9f5"
   },
-  "/docs/Web3MQ-UI-Components/coreComponent/Channel-4bb": {
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel-90c": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-ui-components-core-component-channelf-40-544"
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-channel-8-a-0-0c3"
   },
-  "/docs/Web3MQ-UI-Components/coreComponent/ChannelList-9a3": {
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelList-c2b": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-ui-components-core-component-channel-listb-9-a-592"
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-channel-listdee-c76"
   },
-  "/docs/Web3MQ-UI-Components/coreComponent/Chat-b48": {
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat-dee": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-ui-components-core-component-chat-74-f-1ab"
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-chatcac-484"
   },
-  "/docs/Web3MQ-UI-Components/coreComponent/MessageList-c67": {
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel-a9a": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-ui-components-core-component-message-list-427-7e1"
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-create-channelc-7-a-338"
   },
-  "/docs/Web3MQ-UI-Components/coreComponent/Thread-056": {
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard-09b": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-ui-components-core-component-thread-511-c54"
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-dash-board-9-a-5-44c"
   },
-  "/docs/Web3MQ-UI-Components/Intro-982": {
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList-a56": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-ui-components-introd-55-f64"
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-message-list-0-ef-60c"
   },
-  "/docs/Web3MQ-Vue/coreComponent/Channel-807": {
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/Intro-afb": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-vue-core-component-channel-24-c-a78"
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-intro-49-e-168"
   },
-  "/docs/Web3MQ-Vue/coreComponent/ChannelList-ffe": {
+  "/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/Channel-baa": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-vue-core-component-channel-list-126-e20"
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-vue-chat-component-channel-5-ed-29a"
   },
-  "/docs/Web3MQ-Vue/coreComponent/chat-30e": {
+  "/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/ChannelList-984": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-vue-core-component-chat-73-c-aaa"
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-vue-chat-component-channel-list-682-3db"
   },
-  "/docs/Web3MQ-Vue/coreComponent/MessageInput-05a": {
+  "/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/chat-348": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-vue-core-component-message-input-5-a-8-48c"
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-vue-chat-component-chat-664-4c5"
   },
-  "/docs/Web3MQ-Vue/coreComponent/MessageList-05a": {
+  "/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/MessageInput-c7b": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-vue-core-component-message-liste-56-c63"
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-vue-chat-component-message-inputd-82-5ec"
   },
-  "/docs/Web3MQ-Vue/Intro-1ae": {
+  "/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/MessageList-a57": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-vue-intro-0-b-8-5bd"
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-vue-chat-component-message-listbbc-228"
+  },
+  "/docs/Web3MQ-UI-Components/Web3MQ-Vue/Intro-295": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-vue-intro-552-75d"
   },
   "/-deb": {
     "component": "component---site-src-pages-index-jsc-4-f-f99",

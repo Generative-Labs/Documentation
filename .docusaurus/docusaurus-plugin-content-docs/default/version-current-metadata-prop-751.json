@@ -486,98 +486,112 @@
         "collapsed": true,
         "items": [
           {
-            "type": "link",
-            "label": "Intro",
-            "href": "/docs/Web3MQ-UI-Components/Intro",
-            "docId": "Web3MQ-UI-Components/Intro"
-          },
-          {
             "type": "category",
-            "label": "coreComponent",
+            "label": "Web3MQ React",
             "collapsible": true,
             "collapsed": true,
             "items": [
               {
                 "type": "link",
-                "label": "Chat",
-                "href": "/docs/Web3MQ-UI-Components/coreComponent/Chat",
-                "docId": "Web3MQ-UI-Components/coreComponent/Chat"
+                "label": "Intro",
+                "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/Intro",
+                "docId": "Web3MQ-UI-Components/Web3MQ-React/Intro"
               },
               {
-                "type": "link",
-                "label": "Channel",
-                "href": "/docs/Web3MQ-UI-Components/coreComponent/Channel",
-                "docId": "Web3MQ-UI-Components/coreComponent/Channel"
-              },
-              {
-                "type": "link",
-                "label": "Channel List",
-                "href": "/docs/Web3MQ-UI-Components/coreComponent/ChannelList",
-                "docId": "Web3MQ-UI-Components/coreComponent/ChannelList"
-              },
-              {
-                "type": "link",
-                "label": "MessageList",
-                "href": "/docs/Web3MQ-UI-Components/coreComponent/MessageList",
-                "docId": "Web3MQ-UI-Components/coreComponent/MessageList"
-              },
-              {
-                "type": "link",
-                "label": "Thread",
-                "href": "/docs/Web3MQ-UI-Components/coreComponent/Thread",
-                "docId": "Web3MQ-UI-Components/coreComponent/Thread"
+                "type": "category",
+                "label": "chatComponent",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Chat",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat"
+                  },
+                  {
+                    "type": "link",
+                    "label": "CreateChannel",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Channel List",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelList",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelList"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Channel",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel"
+                  },
+                  {
+                    "type": "link",
+                    "label": "MessageList",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList"
+                  },
+                  {
+                    "type": "link",
+                    "label": "DashBoard",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard"
+                  }
+                ]
               }
             ]
-          }
-        ]
-      },
-      {
-        "type": "category",
-        "label": "Web3MQ Vue",
-        "collapsible": true,
-        "collapsed": true,
-        "items": [
-          {
-            "type": "link",
-            "label": "Intro",
-            "href": "/docs/Web3MQ-Vue/Intro",
-            "docId": "Web3MQ-Vue/Intro"
           },
           {
             "type": "category",
-            "label": "coreComponent",
+            "label": "Web3MQ Vue",
             "collapsible": true,
             "collapsed": true,
             "items": [
               {
                 "type": "link",
-                "label": "Chat",
-                "href": "/docs/Web3MQ-Vue/coreComponent/chat",
-                "docId": "Web3MQ-Vue/coreComponent/chat"
+                "label": "Intro",
+                "href": "/docs/Web3MQ-UI-Components/Web3MQ-Vue/Intro",
+                "docId": "Web3MQ-UI-Components/Web3MQ-Vue/Intro"
               },
               {
-                "type": "link",
-                "label": "Channel",
-                "href": "/docs/Web3MQ-Vue/coreComponent/Channel",
-                "docId": "Web3MQ-Vue/coreComponent/Channel"
-              },
-              {
-                "type": "link",
-                "label": "Channel List",
-                "href": "/docs/Web3MQ-Vue/coreComponent/ChannelList",
-                "docId": "Web3MQ-Vue/coreComponent/ChannelList"
-              },
-              {
-                "type": "link",
-                "label": "MessageList",
-                "href": "/docs/Web3MQ-Vue/coreComponent/MessageList",
-                "docId": "Web3MQ-Vue/coreComponent/MessageList"
-              },
-              {
-                "type": "link",
-                "label": "Message Input",
-                "href": "/docs/Web3MQ-Vue/coreComponent/MessageInput",
-                "docId": "Web3MQ-Vue/coreComponent/MessageInput"
+                "type": "category",
+                "label": "chatComponent",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Chat",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/chat",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/chat"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Channel",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/Channel",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/Channel"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Channel List",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/ChannelList",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/ChannelList"
+                  },
+                  {
+                    "type": "link",
+                    "label": "MessageList",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/MessageList",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/MessageList"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Message Input",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/MessageInput",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/MessageInput"
+                  }
+                ]
               }
             ]
           }
@@ -988,74 +1002,80 @@
       "description": "Methods",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-UI-Components/coreComponent/Channel": {
-      "id": "Web3MQ-UI-Components/coreComponent/Channel",
+    "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel",
       "title": "Channel",
       "description": "The Channel component is a React Context provider that wraps all of the logic, functionality, and UI for an individual chat channel. It provides five separate contexts to its children:",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-UI-Components/coreComponent/ChannelList": {
-      "id": "Web3MQ-UI-Components/coreComponent/ChannelList",
+    "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelList": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelList",
       "title": "Channel List",
       "description": "The ChannelList component queries an array of channel objects from the Chat API",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-UI-Components/coreComponent/Chat": {
-      "id": "Web3MQ-UI-Components/coreComponent/Chat",
+    "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat",
       "title": "Chat",
       "description": "Basic Usage",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-UI-Components/coreComponent/MessageList": {
-      "id": "Web3MQ-UI-Components/coreComponent/MessageList",
+    "Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel",
+      "title": "CreateChannel",
+      "description": "CreateChannel是发送好友及创建聊天室的集功能和UI的组件，在组件内需要通过useChatContext获取client的属性，即无法在Chat组件外部单独使用。",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard",
+      "title": "DashBoard",
+      "description": "DashBoard是一个Tabs组件。当不传入任何props时，tabs内容默认渲染组件库中ChannelList、ContactList、Profile三个组件。DashBoar组件通过useChatContext获取setShowListTypeView方法，并修改showListTypeView，即无法在Chat组件之外使用。",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList",
       "title": "MessageList",
       "description": "The MessageList component renders a scrollable list of messages. The UI for each individual message is rendered conditionally based on its message.type value. The list renders date separators, new message notifications, system messages, deleted messages, and standard messages containing text and/or attachments.",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-UI-Components/coreComponent/Thread": {
-      "id": "Web3MQ-UI-Components/coreComponent/Thread",
-      "title": "Thread",
-      "description": "The Thread component renders a list of replies tied to a single parent message in a channel's main message list. A Thread maintains its own state and renders its own MessageList and MessageInput components. Each piece of rendered UI can be overridden with custom components either drawn from the ComponentContext or supplied via props.",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-UI-Components/Intro": {
-      "id": "Web3MQ-UI-Components/Intro",
+    "Web3MQ-UI-Components/Web3MQ-React/Intro": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/Intro",
       "title": "Intro",
       "description": "Web3MQ React Component Libraries",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-Vue/coreComponent/Channel": {
-      "id": "Web3MQ-Vue/coreComponent/Channel",
+    "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/Channel": {
+      "id": "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/Channel",
       "title": "Channel",
       "description": "The Channel component is a Vue dependency provider that wraps all of the logic, functionality, and UI for an individual chat channel. It provides two separate Vue Provide to its children:",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-Vue/coreComponent/ChannelList": {
-      "id": "Web3MQ-Vue/coreComponent/ChannelList",
+    "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/ChannelList": {
+      "id": "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/ChannelList",
       "title": "Channel List",
       "description": "The ChannelList component queries an array of channel objects from the Chat API, it subscribes internally to the channel.type event and updates the channel list data based on it.",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-Vue/coreComponent/chat": {
-      "id": "Web3MQ-Vue/coreComponent/chat",
+    "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/chat": {
+      "id": "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/chat",
       "title": "Chat",
       "description": "Basic Usage",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-Vue/coreComponent/MessageInput": {
-      "id": "Web3MQ-Vue/coreComponent/MessageInput",
+    "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/MessageInput": {
+      "id": "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/MessageInput",
       "title": "Message Input",
       "description": "The MessageInput component is the method provider, such as send messages.",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-Vue/coreComponent/MessageList": {
-      "id": "Web3MQ-Vue/coreComponent/MessageList",
+    "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/MessageList": {
+      "id": "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/MessageList",
       "title": "MessageList",
       "description": "The MessageList component renders a scrollable list of messages. The UI for each individual message is rendered conditionally based on its message.type value. The list renders standard messages.",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-Vue/Intro": {
-      "id": "Web3MQ-Vue/Intro",
+    "Web3MQ-UI-Components/Web3MQ-Vue/Intro": {
+      "id": "Web3MQ-UI-Components/Web3MQ-Vue/Intro",
       "title": "Intro",
       "description": "Web3MQ Vue Component Libraries",
       "sidebar": "tutorialSidebar"

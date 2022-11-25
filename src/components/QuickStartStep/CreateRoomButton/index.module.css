@@ -1,5 +1,6 @@
 .createRoomContent {
   position: relative;
+  width: 100%;
 }
 .createRoomContent .text {
   padding-top: 5px;

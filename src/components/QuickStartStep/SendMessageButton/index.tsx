@@ -24,7 +24,6 @@ export const SendMessageButton = (props: IProps) => {
 
   const handleEvent = (props: { type: EventTypes }) => {
     const { type } = props;
-    console.log('??')
     const { msg_text } = client.message;
     if (type === 'message.delivered') {
       setMessage(msg_text);
@@ -39,7 +38,7 @@ export const SendMessageButton = (props: IProps) => {
     }
   }, [])
   return (
-    <div>
+    <div style={{width: '100%'}}>
       <input
         style={{
           padding: '12px',

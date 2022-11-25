@@ -7537,6 +7537,11 @@ web-namespaces@^1.0.0, web-namespaces@^1.1.2:
   resolved "https://registry.npmmirror.com/web-namespaces/download/web-namespaces-1.1.4.tgz"
   integrity sha1-vJij3mDa3X+u/EA9EHbVKfXgMOw=
 
+web3-mq-react@^1.1.11:
+  version "1.1.11"
+  resolved "https://registry.npmmirror.com/web3-mq-react/-/web3-mq-react-1.1.11.tgz#c71a0c90ba0a8bbb1539e05d901ed0a6e457379d"
+  integrity sha512-D4WAZ53s3SalAdX7J4NcQH8wxVrXzkTOVjEggOXgZ0S88XrHeV/dBNpbhOD2MtWVVWwxCQuQkXU3qF9lxkqpbQ==
+
 web3-mq@^1.2.45:
   version "1.2.45"
   resolved "https://registry.yarnpkg.com/web3-mq/-/web3-mq-1.2.45.tgz#ccc52b56d2bb8ed5b85b7909992197b86631da09"
