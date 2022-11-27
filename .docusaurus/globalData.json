@@ -421,11 +421,6 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Message",
-              "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Message",
-              "sidebar": "tutorialSidebar"
-            },
-            {
               "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead",
               "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead",
               "sidebar": "tutorialSidebar"

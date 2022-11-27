@@ -2206,31 +2206,6 @@
               }
             },
             {
-              "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Message",
-              "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Message",
-              "title": "Message",
-              "description": "",
-              "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Message.md",
-              "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React/chatComponent",
-              "slug": "/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Message",
-              "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Message",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 5,
-              "frontMatter": {
-                "sidebar_position": 5
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "MessageList",
-                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList"
-              },
-              "next": {
-                "title": "MessageHead",
-                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead"
-              }
-            },
-            {
               "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead",
               "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead",
               "title": "MessageHead",
@@ -2247,8 +2222,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Message",
-                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Message"
+                "title": "MessageList",
+                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList"
               },
               "next": {
                 "title": "MessageInput",
@@ -2301,8 +2276,8 @@
                 "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel"
               },
               "next": {
-                "title": "Message",
-                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Message"
+                "title": "MessageHead",
+                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead"
               }
             },
             {
@@ -3234,10 +3209,6 @@
                           {
                             "type": "doc",
                             "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList"
-                          },
-                          {
-                            "type": "doc",
-                            "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Message"
                           },
                           {
                             "type": "doc",

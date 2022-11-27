@@ -597,12 +597,6 @@
                   },
                   {
                     "type": "link",
-                    "label": "Message",
-                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Message",
-                    "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Message"
-                  },
-                  {
-                    "type": "link",
                     "label": "MessageHead",
                     "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead",
                     "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead"
@@ -1256,12 +1250,6 @@
       "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard",
       "title": "DashBoard",
       "description": "DashBoard是一个Tabs组件。当不传入任何props时，tabs内容默认渲染组件库中ChannelList、ContactList、Profile三个组件。DashBoar组件通过useChatContext获取setShowListTypeView方法，并修改showListTypeView，即无法在Chat组件之外使用。",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Message": {
-      "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Message",
-      "title": "Message",
-      "description": "",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead": {
