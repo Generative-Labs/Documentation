@@ -32,7 +32,7 @@
   "/search-79a": {
     "component": "component---theme-search-page-1-a-4-d6f"
   },
-  "/docs-2d8": {
+  "/docs-32b": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
   },
@@ -344,6 +344,10 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-channel-8-a-0-0c3"
   },
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead-211": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-channel-head-1-d-2-63b"
+  },
   "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelList-c2b": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-channel-listdee-c76"
@@ -360,13 +364,73 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-dash-board-9-a-5-44c"
   },
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Message-475": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-messagedef-4a6"
+  },
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead-27c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-message-headce-5-a7d"
+  },
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageInput-203": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-message-inpute-65-59d"
+  },
   "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList-a56": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-message-list-0-ef-60c"
   },
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify-5cd": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-notifyd-7-a-a62"
+  },
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Profile-9c7": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-profile-17-b-0ce"
+  },
   "/docs/Web3MQ-UI-Components/Web3MQ-React/Intro-afb": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-intro-49-e-168"
+  },
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Avatar-557": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-utility-component-avatar-16-b-f71"
+  },
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/ChannelListMessenger-812": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-utility-component-channel-list-messengerb-8-c-112"
+  },
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/ChatDown-be2": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-utility-component-chat-downc-35-455"
+  },
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Loading-01c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-utility-component-loading-829-79e"
+  },
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Modal-9d8": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-utility-component-modal-234-f99"
+  },
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Popover-65d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-utility-component-popover-51-d-6d3"
+  },
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/RadioGroup-e38": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-utility-component-radio-group-068-f0a"
+  },
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Skeleton-45f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-utility-component-skeleton-7-c-9-199"
+  },
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Toast-5ab": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-utility-component-toast-83-c-f2a"
+  },
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Window-e81": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-utility-component-window-213-3d7"
   },
   "/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/Channel-baa": {
     "component": "component---theme-doc-item-178-a40",

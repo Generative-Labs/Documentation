@@ -14,8 +14,8 @@ The `Channel` component is a React Context provider that wraps all of the logic,
 The `Channel` component does not inject any UI, so its implementation is fairly simple and can be handled in one of two ways, both with and without a `ChannelList` component. If you are using a `ChannelList`, do not add a `channel` object as a prop on `Channel`. However in the absence of a `ChannelList`, the `channel` prop is required. By default, the `ChannelList` sets the active `channel` object, which is then injected it into the `ChannelStateContext`, so manual prop passing is not required.
 
 import { Layout } from '@site/src/components/Layout'
-import { ChannelExample } from '@site/src/components/ChannelExample';
-import ChannelMdx from '@site/src/components/ChannelExample/ChannelExample.mdx';
+import { ChannelExample } from '@site/src/components/Web3MQ-React/ChannelExample';
+import ChannelMdx from '@site/src/components/Web3MQ-React/ChannelExample/ChannelExample.mdx';
 import 'web3-mq-react/dist/css/index.css';
 
 <Layout
@@ -55,8 +55,8 @@ code={<ChannelMdx />}>
 
 **How to use custom Component Example**
 
-import { CustomChannelExample } from '@site/src/components/ChannelExample';
-import CustomChannelMdx from '@site/src/components/ChannelExample/CustomChannelExample.mdx';
+import { CustomChannelExample } from '@site/src/components/Web3MQ-React/ChannelExample';
+import CustomChannelMdx from '@site/src/components/Web3MQ-React/ChannelExample/CustomChannelExample.mdx';
 
 <Layout
 title='Example'

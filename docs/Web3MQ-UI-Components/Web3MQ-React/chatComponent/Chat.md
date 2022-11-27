@@ -9,8 +9,8 @@ sidebar_position: 0
 The `Chat` component does not inject any UI, so its implementation is fairly simple. Once an instance of the `Chat` client has been created, you pass the client object as a prop to add it to the `ChatContext`.
 
 import { Layout } from '@site/src/components/Layout'
-import { ChatExample } from '@site/src/components/ChatExample';
-import ChatMdx from '@site/src/components/ChatExample/ChatExample.mdx';
+import { ChatExample } from '@site/src/components/Web3MQ-React/ChatExample';
+import ChatMdx from '@site/src/components/Web3MQ-React/ChatExample/ChatExample.mdx';
 import 'web3-mq-react/dist/css/index.css';
 
 <Layout

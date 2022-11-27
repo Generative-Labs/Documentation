@@ -597,9 +597,113 @@
                   },
                   {
                     "type": "link",
+                    "label": "Message",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Message",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Message"
+                  },
+                  {
+                    "type": "link",
+                    "label": "MessageHead",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead"
+                  },
+                  {
+                    "type": "link",
+                    "label": "MessageInput",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageInput",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageInput"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Notify",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify"
+                  },
+                  {
+                    "type": "link",
+                    "label": "ChannelHead",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead"
+                  },
+                  {
+                    "type": "link",
                     "label": "DashBoard",
                     "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard",
                     "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Profile",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Profile",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Profile"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "utilityComponent",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Avatar",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Avatar",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Avatar"
+                  },
+                  {
+                    "type": "link",
+                    "label": "ChannelListMessenger",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/ChannelListMessenger",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/ChannelListMessenger"
+                  },
+                  {
+                    "type": "link",
+                    "label": "ChatDown",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/ChatDown",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/ChatDown"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Loading",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Loading",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Loading"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Modal",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Modal",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Modal"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Popover",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Popover",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Popover"
+                  },
+                  {
+                    "type": "link",
+                    "label": "RadioGroup",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/RadioGroup",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/RadioGroup"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Skeleton",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Skeleton",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Skeleton"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Toast",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Toast",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Toast"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Window",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Window",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Window"
                   }
                 ]
               }
@@ -1124,6 +1228,12 @@
       "description": "The Channel component is a React Context provider that wraps all of the logic, functionality, and UI for an individual chat channel. It provides five separate contexts to its children:",
       "sidebar": "tutorialSidebar"
     },
+    "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead",
+      "title": "ChannelHead",
+      "description": "ChannelHead作为DashBoard的head部分，内部有Notifition及CreateChannel组件，需要在Chat组件中使用。",
+      "sidebar": "tutorialSidebar"
+    },
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelList": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelList",
       "title": "Channel List",
@@ -1148,16 +1258,106 @@
       "description": "DashBoard是一个Tabs组件。当不传入任何props时，tabs内容默认渲染组件库中ChannelList、ContactList、Profile三个组件。DashBoar组件通过useChatContext获取setShowListTypeView方法，并修改showListTypeView，即无法在Chat组件之外使用。",
       "sidebar": "tutorialSidebar"
     },
+    "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Message": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Message",
+      "title": "Message",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead",
+      "title": "MessageHead",
+      "description": "MessageHead是作为消息头部组件，需要作为Chat和Channel的子组件使用，从context获取activeChannel和client来渲染当前频道内容，和一些功能实现。",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageInput": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageInput",
+      "title": "MessageInput",
+      "description": "MessageInput本质是一个React Context Provider，没有注入任何UI；若在MessageInput中没有传入Input参数，则默认渲染我们自己Input组件样式；通过context传递给默认或自定义Input组件sendMessage的方法。",
+      "sidebar": "tutorialSidebar"
+    },
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList",
       "title": "MessageList",
       "description": "The MessageList component renders a scrollable list of messages. The UI for each individual message is rendered conditionally based on its message.type value. The list renders date separators, new message notifications, system messages, deleted messages, and standard messages containing text and/or attachments.",
       "sidebar": "tutorialSidebar"
     },
+    "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify",
+      "title": "Notify",
+      "description": "Notify是给用户发送通知的功能组件，组件内功能需要基于client的api进行实现，只能在Chat中使用。",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Profile": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Profile",
+      "title": "Profile",
+      "description": "Profile是展示个人信息页的组件，组件内会通过ChatContext获取logout方法，需要在配合Chat使用。",
+      "sidebar": "tutorialSidebar"
+    },
     "Web3MQ-UI-Components/Web3MQ-React/Intro": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/Intro",
       "title": "Intro",
       "description": "Web3MQ React Component Libraries",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Avatar": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Avatar",
+      "title": "Avatar",
+      "description": "Basic Usage",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/ChannelListMessenger": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/ChannelListMessenger",
+      "title": "ChannelListMessenger",
+      "description": "Basic Usage",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/ChatDown": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/ChatDown",
+      "title": "ChatDown",
+      "description": "Basic Usage",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Loading": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Loading",
+      "title": "Loading",
+      "description": "Basic Usage",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Modal": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Modal",
+      "title": "Modal",
+      "description": "Modal是模态对话框组件",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Popover": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Popover",
+      "title": "Popover",
+      "description": "鼠标移入元素，弹出气泡式的卡片浮层。",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/RadioGroup": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/RadioGroup",
+      "title": "RadioGroup",
+      "description": "Basic Usage",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Skeleton": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Skeleton",
+      "title": "Skeleton",
+      "description": "Skeleton是一个在需要等待加载内容的位置提供一个占位图形组合的UI组件。",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Toast": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Toast",
+      "title": "Toast",
+      "description": "toast是在全局用于展示操作反馈信息。",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Window": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Window",
+      "title": "Window",
+      "description": "Window是样式组件，用于兼容视图。",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/Channel": {
