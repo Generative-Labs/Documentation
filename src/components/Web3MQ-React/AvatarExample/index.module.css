@@ -1,0 +1,14 @@
+.avatarExample {
+  width: 100%;
+}
+.avatarExample .group {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  padding: 12px 0px;
+}
+.group span {
+  font-size: 16px;
+  font-weight: 800px;
+  padding-right: 10px;
+}

@@ -1,0 +1,49 @@
+```tsx 
+import React, { useEffect, PropsWithChildren } from 'react';
+import { Client } from 'web3-mq';
+import { Chat, ChannelList, AppTypeEnum } from 'web3-mq-react';
+
+import useLogin from '../ChatExample/hooks/useLogin';
+
+const CustomDefaultEmptyStateIndicator = () => {
+  return <div style={{textAlign: 'center'}}>You have no Channels currently</div>
+}
+
+export const ChannelListExample: React.FC = () => {
+  const { keys, init, fastestUrl, logout, signMetaMask } = useLogin();
+
+  useEffect(() => {
+    init();
+  }, [])
+
+  if (!keys) {
+    return (
+      <div>
+        <button onClick={signMetaMask}>signMetaMask</button>
+      </div>
+    );
+  }
+  if (!fastestUrl) {
+    return null;
+  }
+
+  const client = Client.getInstance(keys);
+  const handleClear = () => {
+    client.channel.channelList = [];
+    client.emit('channel.getList', { type: 'channel.getList' })
+  }
+
+  return (
+    <div id='box' style={{position: 'relative', border: '1px solid #f2f2f2',  width: '100%',height: '300px',overflow: 'auto'}}>
+      <Chat client={client} appType={AppTypeEnum['h5']} logout={logout}>
+        <div style={{height: '100%', display: 'flex', flexDirection: 'column'}}>
+          <ChannelList 
+            DefaultEmptyStateIndicator={CustomDefaultEmptyStateIndicator}
+          />
+          <button className={ss.clear_btn} onClick={() => handleClear()}>clear channel</button>
+        </div>
+      </Chat>
+    </div>
+  );
+};
+```

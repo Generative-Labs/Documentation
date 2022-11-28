@@ -5,8 +5,8 @@
 ## Basic Usage
 
 import { Layout } from '@site/src/components/Layout'
-import { DashBoardExample } from '@site/src/components/DashBoardExample';
-import DashBoardExampleMdx from '@site/src/components/DashBoardExample/DashBoardExample.mdx';
+import { DashBoardExample } from '@site/src/components/Web3MQ-React/DashBoardExample';
+import DashBoardExampleMdx from '@site/src/components/Web3MQ-React/DashBoardExample/DashBoardExample.mdx';
 import 'web3-mq-react/dist/css/index.css';
 
 <Layout
@@ -19,7 +19,7 @@ code={<DashBoardExampleMdx />}>
 ## Use Custom Props
 在`DashBoard`中，用户可以自定义标签及内容部分，在使用自定义MoblieTabMaps或PcTabMaps时必须配合defaultType来使用，来确认默认的第一项。在组件库中可以通过`useChatContext`获取showListTypeView来获取当前项。可以在`DashBoard`传入ChannelHeader参数，来渲染内容的自定义头部部分。
 
-import UseCustomPropsMdx from '@site/src/components/DashBoardExample/UseCustomProps.mdx';
+import UseCustomPropsMdx from '@site/src/components/Web3MQ-React/DashBoardExample/UseCustomProps.mdx';
 
 <Layout
 title='Example'

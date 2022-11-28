@@ -10,8 +10,8 @@ sidebar_position: 1
 `CreateChannel`由一个button和modal组成，button控制modal显示隐藏；modal展示发送好友请求及创建room的功能部分；该组件无需传入任何props。
 
 import { Layout } from '@site/src/components/Layout'
-import { CreateChannelExample } from '@site/src/components/CreateChannelExample';
-import CreateChannelMdx from '@site/src/components/CreateChannelExample/CreateChannelExample.mdx';
+import { CreateChannelExample } from '@site/src/components/Web3MQ-React/CreateChannelExample';
+import CreateChannelMdx from '@site/src/components/Web3MQ-React/CreateChannelExample/CreateChannelExample.mdx';
 import 'web3-mq-react/dist/css/index.css';
 
 <Layout

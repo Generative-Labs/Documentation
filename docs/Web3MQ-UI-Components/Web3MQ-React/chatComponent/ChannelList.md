@@ -10,8 +10,8 @@ The `ChannelList` component queries an array of channel objects from the Chat AP
 The ChannelList does not have any required props
 
 import { Layout } from '@site/src/components/Layout'
-import { ChannelListExample } from '@site/src/components/ChannelListExample';
-import ChannelListMdx from '@site/src/components/ChannelListExample/ChannelListExample.mdx';
+import { ChannelListExample } from '@site/src/components/Web3MQ-React/ChannelListExample';
+import ChannelListMdx from '@site/src/components/Web3MQ-React/ChannelListExample/ChannelListExample.mdx';
 
 import 'web3-mq-react/dist/css/index.css';
 
@@ -25,7 +25,7 @@ code={<ChannelListMdx />}>
 ## Custom List
 `List`组件是`ChannelList`的根组件，`List`可以传入listRef,error,loading等参数，通过error或loading用于渲染当前Channel列表在加载中、加载失败及加载成功的UI。
 
-import CustomListMdx from '@site/src/components/ChannelListExample/CustomList.mdx';
+import CustomListMdx from '@site/src/components/Web3MQ-React/ChannelListExample/CustomList.mdx';
 
 <Layout
 title='Example'
@@ -39,7 +39,7 @@ code={<CustomListMdx />}>
 ## Custom DefaultEmptyStateIndicator
 `DefaultEmptyStateIndicator`用于渲染Channel列表为空的UI组件。
 
-import CustomDefaultEmptyStateIndicatorMdx from '@site/src/components/ChannelListExample/CustomDefaultEmptyStateIndicator.mdx';
+import CustomDefaultEmptyStateIndicatorMdx from '@site/src/components/Web3MQ-React/ChannelListExample/CustomDefaultEmptyStateIndicator.mdx';
 
 <Layout
 title='Example'
@@ -60,7 +60,7 @@ code={<CustomDefaultEmptyStateIndicatorMdx />}>
 ## Custom Preview
 `Preview`是用于展示Channel行的UI组件
 
-import CustomPreviewMdx from '@site/src/components/ChannelListExample/CustomPreview.mdx';
+import CustomPreviewMdx from '@site/src/components/Web3MQ-React/ChannelListExample/CustomPreview.mdx';
 
 <Layout
 title='Example'

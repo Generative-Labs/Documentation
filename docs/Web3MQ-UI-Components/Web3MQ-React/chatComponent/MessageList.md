@@ -18,8 +18,8 @@ The `MessageList` has no required props and by default pulls overridable data fr
 As a context consumer, the `MessageList` component must be rendered as a child of the `Channel` component. It can be rendered with or without a provided `messages` prop. Providing your own `messages` value will override the default value drawn from the `ChannelStateContext`.
 
 import { Layout } from '@site/src/components/Layout'
-import { MessageListExample } from '@site/src/components/MessageListExample';
-import MessageListExampleMdx from '@site/src/components/MessageListExample/MessageListExample.mdx';
+import { MessageListExample } from '@site/src/components/Web3MQ-React/MessageListExample';
+import MessageListExampleMdx from '@site/src/components/Web3MQ-React/MessageListExample/MessageListExample.mdx';
 import 'web3-mq-react/dist/css/index.css';
 
 <Layout
