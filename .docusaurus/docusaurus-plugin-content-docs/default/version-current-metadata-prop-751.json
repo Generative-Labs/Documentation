@@ -653,12 +653,6 @@
                   },
                   {
                     "type": "link",
-                    "label": "ChatDown",
-                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/ChatDown",
-                    "docId": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/ChatDown"
-                  },
-                  {
-                    "type": "link",
                     "label": "Loading",
                     "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Loading",
                     "docId": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Loading"
@@ -752,6 +746,26 @@
                     "docId": "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/MessageInput"
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "label": "UIKit",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Integration",
+                "href": "/docs/Web3MQ-UI-Components/Web3MQ-Swift/Integration",
+                "docId": "Web3MQ-UI-Components/Web3MQ-Swift/Integration"
+              },
+              {
+                "type": "link",
+                "label": "Channel List",
+                "href": "/docs/Web3MQ-UI-Components/Web3MQ-Swift/ChannelList",
+                "docId": "Web3MQ-UI-Components/Web3MQ-Swift/ChannelList"
               }
             ]
           }
@@ -1300,12 +1314,6 @@
       "description": "Basic Usage",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/ChatDown": {
-      "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/ChatDown",
-      "title": "ChatDown",
-      "description": "Basic Usage",
-      "sidebar": "tutorialSidebar"
-    },
     "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Loading": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Loading",
       "title": "Loading",
@@ -1346,6 +1354,18 @@
       "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Window",
       "title": "Window",
       "description": "Window是样式组件，用于兼容视图。",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-Swift/ChannelList": {
+      "id": "Web3MQ-UI-Components/Web3MQ-Swift/ChannelList",
+      "title": "Channel List",
+      "description": "The ChannelListViewController is the UI component used to display a list of channels matching the given query.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-Swift/Integration": {
+      "id": "Web3MQ-UI-Components/Web3MQ-Swift/Integration",
+      "title": "Integration",
+      "description": "To get started integrating Web3MQ in your UIKit iOS app, check our Integration page",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/Channel": {

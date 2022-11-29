@@ -55,7 +55,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','afd'),
+    component: ComponentCreator('/docs','692'),
     routes: [
       {
         path: '/docs/Intro',
@@ -598,12 +598,6 @@ export default [
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/ChatDown',
-        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/ChatDown','be2'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
         path: '/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Loading',
         component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Loading','01c'),
         exact: true,
@@ -642,6 +636,18 @@ export default [
       {
         path: '/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Window',
         component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Window','e81'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-UI-Components/Web3MQ-Swift/ChannelList',
+        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-Swift/ChannelList','667'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-UI-Components/Web3MQ-Swift/Integration',
+        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-Swift/Integration','f37'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },

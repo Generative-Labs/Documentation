@@ -461,11 +461,6 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/ChatDown",
-              "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/ChatDown",
-              "sidebar": "tutorialSidebar"
-            },
-            {
               "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Loading",
               "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Loading",
               "sidebar": "tutorialSidebar"
@@ -498,6 +493,16 @@
             {
               "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Window",
               "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Window",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-UI-Components/Web3MQ-Swift/ChannelList",
+              "path": "/docs/Web3MQ-UI-Components/Web3MQ-Swift/ChannelList",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-UI-Components/Web3MQ-Swift/Integration",
+              "path": "/docs/Web3MQ-UI-Components/Web3MQ-Swift/Integration",
               "sidebar": "tutorialSidebar"
             },
             {

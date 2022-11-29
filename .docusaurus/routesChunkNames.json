@@ -32,7 +32,7 @@
   "/search-79a": {
     "component": "component---theme-search-page-1-a-4-d6f"
   },
-  "/docs-afd": {
+  "/docs-692": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
   },
@@ -396,10 +396,6 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-utility-component-channel-list-messengerb-8-c-112"
   },
-  "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/ChatDown-be2": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-utility-component-chat-downc-35-455"
-  },
   "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Loading-01c": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-utility-component-loading-829-79e"
@@ -427,6 +423,14 @@
   "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Window-e81": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-utility-component-window-213-3d7"
+  },
+  "/docs/Web3MQ-UI-Components/Web3MQ-Swift/ChannelList-667": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-swift-channel-listc-34-987"
+  },
+  "/docs/Web3MQ-UI-Components/Web3MQ-Swift/Integration-f37": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-swift-integration-295-ea4"
   },
   "/docs/Web3MQ-UI-Components/Web3MQ-Vue/chatComponent/Channel-baa": {
     "component": "component---theme-doc-item-178-a40",
