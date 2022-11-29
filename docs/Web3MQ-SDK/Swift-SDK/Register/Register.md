@@ -8,12 +8,12 @@ position: 2
 
 | Name | Parameters | response |
 | --- | --- | --- |
-| connectWithMateMask | keychainStore:  Bool | [KeyPair](/docs/Web3MQ-SDK/Swift-SDK/Structs/###KeyPair) |
+| register | didType: String, didValue: String, signatureContent: String, didSignature: String, timestamp: UInt64, keychainStore: Bool | [KeyPair](/docs/Web3MQ-SDK/Swift-SDK/Structs/###KeyPair), userId |
 
-### **Sign MetaMask**
+## **Register**
 
-This will wake up the MetaMask app on your phone and communicate with it, and call the `personal_sign` method of MetaMask to get the MetaMask signature, and call `/api/pubkey` to complete the registration. The key pair will be stored in Keychain by default, set the keychainStore parameter to false to disable keychain storage. You need to keep the private key in a safe place.
+You should get the Wallet signature firstly. The keypair will be stored in Keychain by default, set the keychainStore parameter to false to disable keychain storage. You need to keep the private key in a safe place.
 
 ```swift
-let result: (KeyPair, UserId) = await Client.shared.connectWithMateMask(keychainStore: false)
+let result: (KeyPair, UserId) = await Client.shared.register(didType: String, didValue: String, signatureContent: String, didSignature: String, timestamp: UInt64, keychainStore: Bool)
 ```
