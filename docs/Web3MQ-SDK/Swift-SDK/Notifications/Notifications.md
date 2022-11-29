@@ -28,11 +28,7 @@ let notifications: [Notifications] = await Client.shared.notificationManager.get
 The notification is also a specific message. Just subscribe the `notificationPublisher` to receive notifications.
 
 ```swift
-Client.shared.notificationManager
-            .notificationPublisher
-            .sink { notification in
-
-            }
+Client.shared.notificationManager.notificationPublisher
 ```
 
 ## Notification Content
