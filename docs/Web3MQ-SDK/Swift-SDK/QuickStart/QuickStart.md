@@ -29,7 +29,7 @@ Once you have your Swift package set up, adding Web3MQSDK as a dependency is as 
 
 ```swift
 dependencies: [
-    .package(url: "", .upToNextMajor(from: "0.1.0"))
+    .package(url: "git@github.com:Generative-Labs/Web3MQ-SDK-Swift.git", .upToNextMajor(from: "0.1.0"))
 ]
 ```
 
@@ -127,11 +127,9 @@ Client.shared.messageManager.sendMessage("{Text}", topicId: "{TopicId}") async t
 ```
 
 ### Receiving Message
-
+subscribe the messagePublisher to receive messages.
 ```swift
-Client.shared.messageManager.messagePublisher.sink { messages in 
-
-}
+Client.shared.messageManager.messagePublisher
 ```
 
 ## Notifications
@@ -141,11 +139,7 @@ Client.shared.messageManager.messagePublisher.sink { messages in
 The notification is also a specific message. Just subscribe the `notificationPublisher` to receive notifications.
 
 ```swift
-Client.shared.notificationManager
-            .notificationPublisher
-            .sink { notification in
-                
-            }
+Client.shared.notificationManager.notificationPublisher
 ```
 
 <!-- ### Notification Content
