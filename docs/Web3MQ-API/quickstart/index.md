@@ -21,9 +21,9 @@ group:
 
    - Signing data use MetaMask
 
-3. **Save your public key**
+3. **User login**
 
-   - Save your two public to server
+   - Save user data
 
 4. **Create a group (chat room)**
 
