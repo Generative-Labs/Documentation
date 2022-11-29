@@ -15,13 +15,13 @@ sidebar_position: 0
 - https://testnet-ap-singapore-2.web3mq.com
 
 ## HTTP API list
-
+<!-- 
 - Public Key
 
   - Save PublicKey [see detail](/docs/Web3MQ-API/pubkey)
     - Create your public key and save to Web3MQ;
     - Web3MQ use the public key `verify` your all subsequent requests
-
+ -->
 - Contact
   - Get my contact list
   - Send friend request
