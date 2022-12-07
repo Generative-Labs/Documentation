@@ -2,7 +2,7 @@
 position: 9
 ---
 
-# Structs
+# Data Types
 
 ### EthAccount
 ```swift
