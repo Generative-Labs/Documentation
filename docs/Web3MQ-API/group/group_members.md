@@ -21,6 +21,7 @@ group:
 | groupid           | string | Yes      | group id                                                              |
 
 _web3mq_signature signing rule_
+
 `base64 encode` signature
 
 > web3mq_signature = ed25519 private key signing(userid + groupid + timestamp)

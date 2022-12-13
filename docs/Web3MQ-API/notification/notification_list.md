@@ -13,26 +13,31 @@ group:
 | Parameters in URL | Type   | Required | Parameters Description                                                |
 | ----------------- | ------ | -------- | --------------------------------------------------------------------- |
 | userid            | string | Yes      | userid |
-| notice_type             | string | Yes      | notice_type                                                              |
+| topic             | string | No      | topic                                                              |
+| notice_type             | string | No      | notice_type                                                              |
 | size              | int    | Yes      | size                                                                  |
 | page              | int    | Yes      | page                                                                  |
 | timestamp         | int    | Yes      | timestamp milliseconds                                                |
 | web3mq_signature         | string | Yes      | use ed25519 `base64 encode` web3mq_signature [see signing detail](/docs/Web3MQ-API/signature)                  |
 
 _web3mq_signature_ signing rule_
+
 `base64 encode` web3mq_signature
 
+
 if notice_type not empty
+
 > web3mq_signature = ed25519 private key signing(userid + notice_type + timestamp)
 
-else
+else if topic not empty
 
 > web3mq_signature = ed25519 private key signing(userid + topic + timestamp)
 
+else
+> web3mq_signature = ed25519 private key signing(userid + timestamp)
+
 
 _url query params_
-
-
 
 - notice_type
     - `system.friend_request` (Friend request notification type)

@@ -17,11 +17,13 @@ group:
 | userid            | string | Yes      | userid |
 | keyword           | string | Yes      | search keyword                                                        |
 | timestamp         | int    | Yes      | timestamp milliseconds                                                |
-| web3mq_signature  | string | Yes      | use ed25519 [see signing detail](/docs/Web3MQ-API/signature)                  |
+| web3mq_signature  | string | Yes      | use ed25519 `base64 encode` [see signing detail](/docs/Web3MQ-API/signature)                  |
 
 _url query params_
 
 _web3mq_signature signing rule_
+
+`base64 encode` web3mq_signature
 
 > web3mq_signature = ed25519 private key signing(userid + keyword + timestamp)
 

@@ -23,6 +23,7 @@ group:
 | web3mq_signature        | string | Yes      | use ed25519 `base64 encode` signature [see signing detail](/docs/Web3MQ-API/signature) |
 
 _web3mq_signature signing rule_
+
 `base64 encode` signature
 
 > web3mq_signature = ed25519 private key signing(creator_id + providerid + provider_type + provider_name + provider_pubkey + webhook_url + timestamp)

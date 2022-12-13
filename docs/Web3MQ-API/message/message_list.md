@@ -19,10 +19,10 @@ group:
 | size              | int    | Yes      | size                                                                          |
 | page              | int    | Yes      | page                                                                          |
 | timestamp         | int    | Yes      | timestamp milliseconds                                                        |
-| web3mq_signature  | string | Yes      | use ed25519 `base64 encode` signature
- [see signing detail](/docs/Web3MQ-API/signature)                  |
+| web3mq_signature  | string | Yes      | use ed25519 `base64 encode` signature [see signing detail](/docs/Web3MQ-API/signature)                  |
 
 _signature signing rule_
+
 `base64 encode` signature
 
 

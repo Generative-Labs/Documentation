@@ -16,9 +16,11 @@ group:
 | ------------------ | ------ | -------- | --------------------------------------------------------------------- |
 | userid             | string | Yes      | userid |
 | timestamp          | int    | Yes      | timestamp milliseconds                                                |
-| web3mq_signature   | string | Yes      | use ed25519 private key signing                                       |
+| web3mq_signature  | string | Yes      | use ed25519 `base64 encode` signature [see signing detail](/docs/Web3MQ-API/signature) 
 
 _body params_
+
+`base64 encode` web3mq_signature
 
 ```json
 {
