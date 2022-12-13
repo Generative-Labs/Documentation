@@ -61,6 +61,9 @@ let reqCmd: ConnectCommand = {
 };
 
 let bytes = ConnectCommand.toBinary(reqCmd);
+
+const concatArray = GetContactBytes(PbTypeConnectReqCommand, bytes);
+
 wsconn.send(concatArray);
 ```
 
@@ -210,8 +213,7 @@ message Web3MQMessageStatusResp {
 | timestamp       | uint64 | timestamp                                       |
 
 
-*messageStatus*
-
+`messageStatus`
 - userNotFound
 - invalidSignature
 - received (Node received message)

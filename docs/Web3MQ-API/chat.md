@@ -25,10 +25,10 @@ sidebar_position: 10
 | size              | int    | Yes      | page size                                            |
 | userid            | string | Yes      | userid                                               |
 | timestamp         | int    | Yes      | timestamp milliseconds                               |
-| web3mq_signature  | string | Yes      | use ed25519 [see signing detail](/docs/Web3MQ-API/signature) |
-|                   |
+| web3mq_signature  | string | Yes      | use ed25519 `base64 encode` signature [see signing detail](/docs/Web3MQ-API/signature) |
 
 _web3mq_signature signing rule_
+`base64 encode` signature
 
 > web3mq_signature = ed25519 private key signing(userid + timestamp)
 
@@ -51,8 +51,14 @@ _url query params_
 | code        | int    | Yes           | result code, 0 means success, other code see msg's contents |
 | msg         | string | Yes           | result description                                          |
 | data        | dict   | Yes           | return includes response info                               |
-| -topic      | string | Yes           | userid or group id                                          |
-| -topic_type | string | Yes           | user or group                                               |
+| -topic    |  string    |  Yes   |  `Remove in future` version use `chatid` instead; userid or group id    | 
+| -topic_type    | string    |  Yes   |  `Remove in future` version use `chat_type` instead; user or group    | 
+| -chatid    | string    |  Yes   |  userid or group id | 
+| -chat_type     | string    |  Yes   |  user or group | 
+| -chat_name    |  string    |  Yes    | user nickname or group_name | 
+| -avatar_url    | string     | Yes   |  user avatar or group avatar | 
+| -avatar_base64    |  string    |  Yes   |  user avatar or group avatar | 
+| -timestamp     | int   |  Yes   |  last update timestamp | 
 
 ```json
 {
@@ -63,11 +69,21 @@ _url query params_
     "result": [
       {
         "topic": "topic id",
-        "topic_type": "user"
+        "topic_type": "user",
+        "chatid": "topic id",
+        "chat_type": "user",
+        "chat_name": "user nickname",
+        "avatar_url": "",
+        "avatar_base64": ""
       },
       {
         "topic": "topic id",
-        "topic_type": "group"
+        "topic_type": "group",
+        "chatid": "topic id",
+        "chat_type": "group",
+        "chat_name": "group name",
+        "avatar_url": "",
+        "avatar_base64": ""
       }
     ]
   }
@@ -82,11 +98,12 @@ _url query params_
 | ------------------ | ------ | -------- | ---------------------------------------------------- |
 | userid             | string | Yes      | userid                                               |
 | timestamp          | int    | Yes      | timestamp milliseconds                               |
-| web3mq_signature   | string | Yes      | use ed25519 [see signing detail](/docs/Web3MQ-API/signature) |
+| web3mq_signature   | string | Yes      | use ed25519 `base64 encode` signature [see signing detail](/docs/Web3MQ-API/signature) |
 | topic              | string | Yes      | userid or groupid                                    |
 | topic_type         | string | Yes      | user or group                                        |
 
 _web3mq_signature signing rule_
+`base64 encode` signature
 
 > web3mq_signature = ed25519 private key signing(userid + topic + topic_type + timestamp)
 

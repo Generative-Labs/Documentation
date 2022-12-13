@@ -21,6 +21,8 @@ group:
 _url query params_
 
 _web3mq_signature signing rule_
+`base64 encode` signature
+
 
 > web3mq_signature = ed25519 private key signing(userid + timestamp)
 
@@ -50,7 +52,9 @@ _web3mq_signature signing rule_
     "total": 35,
     "result": [
       {
-        "userid": "userid"
+        "userid": "userid",
+        "nickname": "nickename",
+        "avatar_url": "avatar_url"
       }
     ]
   }

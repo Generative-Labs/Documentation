@@ -17,9 +17,10 @@ group:
 | did_type                | string | Yes      | email or other type                                  |
 | did_value               | string | Yes      | web3mq@gmail.com                                     |
 | timestamp               | int    | Yes      | timestamp milliseconds                               |
-| web3mq_signature        | string | Yes      | use ed25519 [see signing detail](/docs/Web3MQ-API/signature) |
+| web3mq_signature        | string | Yes      | use ed25519 `base64 encode` web3mq_signature [see signing detail](/docs/Web3MQ-API/signature) |
 
 _web3mq_signature signing rule_
+`base64 encode` web3mq_signature
 
 > web3mq_signature = ed25519 private key signing(userid + did_type + did_value + timestamp)
 

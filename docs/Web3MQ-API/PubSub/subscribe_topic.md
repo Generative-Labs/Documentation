@@ -19,9 +19,11 @@ group:
 | userid            | string | Yes      | userid |
 | topicid           | string | Yes      | topic id                                                              |
 | timestamp         | int    | Yes      | timestamp milliseconds                                                |
-| web3mq_signature  | string | Yes      | use ed25519 [see signing detail](/docs/Web3MQ-API/signature)                  |
+| web3mq_signature  | string | Yes      | use ed25519 `base64 encode` signature
+ [see signing detail](/docs/Web3MQ-API/signature)                  |
 
 _web3mq_signature signing rule_
+`base64 encode` signature
 
 > web3mq_signature = ed25519 private key signing(userid + topicid + timestamp)
 

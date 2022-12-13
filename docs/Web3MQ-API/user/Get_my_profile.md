@@ -16,11 +16,12 @@ group:
 | ----------------- | ------ | -------- | ---------------------------------------------------- |
 | userid            | string | Yes      | your userid                                          |
 | timestamp         | int    | Yes      | timestamp milliseconds                               |
-| web3mq_signature  | string | Yes      | use ed25519 [see signing detail](/docs/Web3MQ-API/signature) |
+| web3mq_signature  | string | Yes      | use ed25519 `base64 encode` signature [see signing detail](/docs/Web3MQ-API/signature) |
 
 _url query params_
 
 _signature signing rule_
+`base64 encode` signature
 
 > web3mq_signature = ed25519 private key signing(userid + timestamp)
 
@@ -47,7 +48,9 @@ _signature signing rule_
   "data": {
     "userid": "userid",
     "wallet_address": "wallet_address",
-    "wallet_type": "eth"
+    "wallet_type": "eth",
+    "nickname": "nickename",
+    "avatar_url": "avatar_url"
   }
 }
 ```

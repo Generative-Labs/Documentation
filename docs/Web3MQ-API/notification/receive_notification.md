@@ -57,14 +57,12 @@ _notification.payload_
 | type       | int    | Yes      | notfication type       |
 | version    | int    | Yes      | 1                      |
 | timestamp  | int    | Yes      | timestamp milliseconds |
-|            |
 
-_notfication type_
-
-- system
-  - (system notification include user agree your friend request etc.)
-- subscription
-  - (subscription topic new message notification)
+- _notfication type_
+    - `system.friend_request` (Friend request notification type)
+    - `system.agree_friend_request` (Agree friend request notification type)
+    - `system.group_invitation` (Group invitation notification type)
+    - `subscription` (subscription topic new message notification)
 
 ```json
 {

@@ -20,18 +20,19 @@ group:
 | messages          | string array | Yes      | message id list                                                       |
 | status            | string       | Yes      | read                                                                  |
 | timestamp         | int          | Yes      | timestamp milliseconds                                                |
-| signature         | string       | Yes      | use ed25519 [see signing detail](/docs/Web3MQ-API/signature)                  |
+| web3mq_signature         | string       | Yes      | use ed25519 `base64 encode` signature [see signing detail](/docs/Web3MQ-API/signature)                  |
 
 _signature signing rule_
+`base64 encode` web3mq_signature
 
-> signature = ed25519 private key signing(userid + status + timestamp)
+> web3mq_signature = ed25519 private key signing(userid + status + timestamp)
 
 _url query params_
 
 ```json
 {
   "userid": "your userid",
-  "signature": "signature",
+  "web3mq_signature": "web3mq_signature",
   "timestamp": 1656991509327,
   "messages": ["messageid", "messageid"],
   "status": "read"
