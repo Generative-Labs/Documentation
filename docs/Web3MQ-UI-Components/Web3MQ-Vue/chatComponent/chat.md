@@ -50,15 +50,23 @@ Any child of the `Chat` component has access to the `ChatProvide`. Each Vue Prov
 
 :::
 
-**Inject data**
+## Api
 
-| name                 | type                      | Description                                                    |
-| -------------------- | ------------------------- | -------------------------------------------------------------- |
-| client               | [Client](/docs/Web3MQ-SDK/JS-SDK/client/) | Chat Client Object                             |
-| appType              | ComputedRef<'pc' \| 'h5'> | Viewport type                                                  |
-| userInfo             | Ref<[SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)> | user Info |
-| showCreateChannel    | Ref< Boolean >            | Whether to display the `CreateChannel` component               |
-| showListTypeView     | Ref<'room' \| 'chat'>     | Navigation Bar Type                                            |
-| setShowCreateChannel | Function                  | Update showCreateChannel                                       |
-| setShowListTypeView  | Function                  | Update showListTypeView                                        |
-| logout               | Function                  | Logged out                                                     |
+**The properties of the Chat are described as follows:**
+
+| Property    | Description                            | Type                                      | Default |
+| ----------- | -------------------------------------- | ----------------------------------------- | ------- |
+| appType     | set viewport type of web3-mq-react     | `pc` \| `h5`                              |  `pc`   |
+| classNmae   | set your custom className              | string                                    |   -     |
+| client      | Chat Client Object                     | [Client](/docs/Web3MQ-SDK/JS-SDK/client/) |   -     |
+| containerId | set container Id of your web3-mq-react | string                                    |   -     |
+| style       | set your custom style                  | CSSProperties                       |   -     |
+| logout      | Set your exit method                   | Function                                  |   -     |
+
+**useInjectChat data**
+
+| Property             | Description                                      | Type                                      | Default |
+| -------------------- | ------------------------------------------------ | ----------------------------------------- | ------- |
+| showListTypeView     | Tabs type in `DashBoard` component               | string                                    | 'room'  |
+| userInfo             | user Info   | Ref<[SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)> |  -      |
+| setShowListTypeView  | Update showListTypeView                          | Function                                  |  -      |

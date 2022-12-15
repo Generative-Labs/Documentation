@@ -37,22 +37,24 @@ const { Message } = useInjectMessage();
 </script>
 ```
 
-**state**
+## Api
 
-| name          | type                                                                              | Description            |
-| ------------- | --------------------------------------------------------------------------------- | ---------------------- |
-| activeChannel | [activechannelType](/docs/Web3MQ-SDK/JS-SDK/types/#activechanneltype) \| null     | current active channel |
+**The properties of the Channel are described as follows:**
 
-```json
-{
-  "activeChannel": {
-    "avatar_base64": "image base64",
-    "avatar_url": "image url",
-    "chat_name": "chat name",
-    "chatid": "chat id",
-    "chat_type": "chat type", // "user" | "group"
-    "topic": "chat id",
-    "topic_type": "chat type", // "user" | "group"
-  }
-}
-```
+| Property | Description                               | Type                                      | Default |
+| -------- | ----------------------------------------- | ----------------------------------------- | ------- |
+| Input    | set your custom `Input` component         | Component                                 |   -     |
+| Message  | set your custom `Message` component       | Component                                 |   -     |
+
+**useInjectChannelState data**
+
+| Property      | Description               | Type                                                                  | Default |
+| ------------- | ------------------------- | --------------------------------------------------------------------- | ------- |
+| activeChannel | current active channel    | [activechannelType](/docs/Web3MQ-SDK/JS-SDK/types/#activechanneltype) |   -     |
+
+**useInjectMessage data**
+
+| Property      | Description                            | Type              | Default |
+| ------------- | -------------------------------------- | ----------------- | ------- |
+| Input         | set custom `MessageInput` component    |   Component       |   -     |
+| Message       | set custom `Message` component         |   Component       |   -     |

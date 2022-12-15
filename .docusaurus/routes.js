@@ -55,7 +55,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','692'),
+    component: ComponentCreator('/docs','d0a'),
     routes: [
       {
         path: '/docs/Intro',
@@ -250,12 +250,6 @@ export default [
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-API/pubkey/',
-        component: ComponentCreator('/docs/Web3MQ-API/pubkey/','28c'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
         path: '/docs/Web3MQ-API/PubSub/',
         component: ComponentCreator('/docs/Web3MQ-API/PubSub/','b13'),
         exact: true,
@@ -310,12 +304,6 @@ export default [
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-API/quickstart/Save_your_public_key',
-        component: ComponentCreator('/docs/Web3MQ-API/quickstart/Save_your_public_key','13a'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
         path: '/docs/Web3MQ-API/quickstart/Send_Connect_Command',
         component: ComponentCreator('/docs/Web3MQ-API/quickstart/Send_Connect_Command','d41'),
         exact: true,
@@ -330,6 +318,12 @@ export default [
       {
         path: '/docs/Web3MQ-API/quickstart/Signing_data_with_MetaMask',
         component: ComponentCreator('/docs/Web3MQ-API/quickstart/Signing_data_with_MetaMask','3f9'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-API/quickstart/User_login',
+        component: ComponentCreator('/docs/Web3MQ-API/quickstart/User_login','a97'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },

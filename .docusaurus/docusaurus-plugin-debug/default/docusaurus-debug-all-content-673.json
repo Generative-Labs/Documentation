@@ -292,8 +292,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Overview",
-                "permalink": "/docs/Web3MQ-API/pubkey/"
+                "title": "6. Send a message",
+                "permalink": "/docs/Web3MQ-API/quickstart/Send_message_in_Group"
               },
               "next": {
                 "title": "Get my contact list",
@@ -897,35 +897,6 @@
               }
             },
             {
-              "unversionedId": "Web3MQ-API/pubkey/index",
-              "id": "Web3MQ-API/pubkey/index",
-              "title": "Overview",
-              "description": "All http post request and response content type are application/json",
-              "source": "@site/docs/Web3MQ-API/pubkey/index.md",
-              "sourceDirName": "Web3MQ-API/pubkey",
-              "slug": "/Web3MQ-API/pubkey/",
-              "permalink": "/docs/Web3MQ-API/pubkey/",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "title": "Overview",
-                "order": 1,
-                "group": {
-                  "title": "PublicKey",
-                  "order": 4
-                }
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "6. Send a message",
-                "permalink": "/docs/Web3MQ-API/quickstart/Send_message_in_Group"
-              },
-              "next": {
-                "title": "Overview",
-                "permalink": "/docs/Web3MQ-API/contact/"
-              }
-            },
-            {
               "unversionedId": "Web3MQ-API/PubSub/create_topic",
               "id": "Web3MQ-API/PubSub/create_topic",
               "title": "Create Topic",
@@ -1120,8 +1091,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "3. Save your public key",
-                "permalink": "/docs/Web3MQ-API/quickstart/Save_your_public_key"
+                "title": "3. User Login",
+                "permalink": "/docs/Web3MQ-API/quickstart/User_login"
               },
               "next": {
                 "title": "5. Send Connect Command",
@@ -1189,37 +1160,6 @@
               }
             },
             {
-              "unversionedId": "Web3MQ-API/quickstart/Save_your_public_key",
-              "id": "Web3MQ-API/quickstart/Save_your_public_key",
-              "title": "3. Save your public key",
-              "description": "Save your public key, request Web3MQ network with some params",
-              "source": "@site/docs/Web3MQ-API/quickstart/Save_your_public_key.md",
-              "sourceDirName": "Web3MQ-API/quickstart",
-              "slug": "/Web3MQ-API/quickstart/Save_your_public_key",
-              "permalink": "/docs/Web3MQ-API/quickstart/Save_your_public_key",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 2,
-              "frontMatter": {
-                "sidebar_position": 2,
-                "title": "3. Save your public key",
-                "order": 4,
-                "group": {
-                  "title": "Quickstart",
-                  "order": 4
-                }
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "2. MetaMask Signing",
-                "permalink": "/docs/Web3MQ-API/quickstart/Signing_data_with_MetaMask"
-              },
-              "next": {
-                "title": "4. Create group",
-                "permalink": "/docs/Web3MQ-API/quickstart/Create_group"
-              }
-            },
-            {
               "unversionedId": "Web3MQ-API/quickstart/Send_Connect_Command",
               "id": "Web3MQ-API/quickstart/Send_Connect_Command",
               "title": "5. Send Connect Command",
@@ -1272,7 +1212,7 @@
               },
               "next": {
                 "title": "Overview",
-                "permalink": "/docs/Web3MQ-API/pubkey/"
+                "permalink": "/docs/Web3MQ-API/contact/"
               }
             },
             {
@@ -1301,8 +1241,38 @@
                 "permalink": "/docs/Web3MQ-API/quickstart/Generate_Key_pairs"
               },
               "next": {
-                "title": "3. Save your public key",
-                "permalink": "/docs/Web3MQ-API/quickstart/Save_your_public_key"
+                "title": "3. User Login",
+                "permalink": "/docs/Web3MQ-API/quickstart/User_login"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-API/quickstart/User_login",
+              "id": "Web3MQ-API/quickstart/User_login",
+              "title": "3. User Login",
+              "description": "User Login",
+              "source": "@site/docs/Web3MQ-API/quickstart/User_login.md",
+              "sourceDirName": "Web3MQ-API/quickstart",
+              "slug": "/Web3MQ-API/quickstart/User_login",
+              "permalink": "/docs/Web3MQ-API/quickstart/User_login",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1,
+                "title": "3. User Login",
+                "order": 3,
+                "group": {
+                  "title": "Quickstart"
+                }
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "2. MetaMask Signing",
+                "permalink": "/docs/Web3MQ-API/quickstart/Signing_data_with_MetaMask"
+              },
+              "next": {
+                "title": "4. Create group",
+                "permalink": "/docs/Web3MQ-API/quickstart/Create_group"
               }
             },
             {
@@ -2949,7 +2919,7 @@
                       },
                       {
                         "type": "doc",
-                        "id": "Web3MQ-API/quickstart/Save_your_public_key"
+                        "id": "Web3MQ-API/quickstart/User_login"
                       },
                       {
                         "type": "doc",
@@ -2968,11 +2938,6 @@
                       "type": "doc",
                       "id": "Web3MQ-API/quickstart/index"
                     }
-                  },
-                  {
-                    "type": "doc",
-                    "label": "Pubkey",
-                    "id": "Web3MQ-API/pubkey/index"
                   },
                   {
                     "type": "category",

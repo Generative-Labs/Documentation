@@ -240,9 +240,9 @@
               },
               {
                 "type": "link",
-                "label": "3. Save your public key",
-                "href": "/docs/Web3MQ-API/quickstart/Save_your_public_key",
-                "docId": "Web3MQ-API/quickstart/Save_your_public_key"
+                "label": "3. User Login",
+                "href": "/docs/Web3MQ-API/quickstart/User_login",
+                "docId": "Web3MQ-API/quickstart/User_login"
               },
               {
                 "type": "link",
@@ -264,12 +264,6 @@
               }
             ],
             "href": "/docs/Web3MQ-API/quickstart/"
-          },
-          {
-            "type": "link",
-            "label": "Pubkey",
-            "href": "/docs/Web3MQ-API/pubkey/",
-            "docId": "Web3MQ-API/pubkey/index"
           },
           {
             "type": "category",
@@ -966,12 +960,6 @@
       "description": "POST /api/create_provider/",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-API/pubkey/index": {
-      "id": "Web3MQ-API/pubkey/index",
-      "title": "Overview",
-      "description": "All http post request and response content type are application/json",
-      "sidebar": "tutorialSidebar"
-    },
     "Web3MQ-API/PubSub/create_topic": {
       "id": "Web3MQ-API/PubSub/create_topic",
       "title": "Create Topic",
@@ -1026,12 +1014,6 @@
       "description": "Let's learn how to use and successfully send the first message in the chat room we created",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-API/quickstart/Save_your_public_key": {
-      "id": "Web3MQ-API/quickstart/Save_your_public_key",
-      "title": "3. Save your public key",
-      "description": "Save your public key, request Web3MQ network with some params",
-      "sidebar": "tutorialSidebar"
-    },
     "Web3MQ-API/quickstart/Send_Connect_Command": {
       "id": "Web3MQ-API/quickstart/Send_Connect_Command",
       "title": "5. Send Connect Command",
@@ -1048,6 +1030,12 @@
       "id": "Web3MQ-API/quickstart/Signing_data_with_MetaMask",
       "title": "2. MetaMask Signing",
       "description": "Signing data with MetaMask",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/quickstart/User_login": {
+      "id": "Web3MQ-API/quickstart/User_login",
+      "title": "3. User Login",
+      "description": "User Login",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-API/signature": {

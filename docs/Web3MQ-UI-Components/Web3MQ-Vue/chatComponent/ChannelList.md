@@ -23,3 +23,14 @@ The ChannelList does not have any required props.
   </Chat>
 </template>
 ```
+
+## Api
+
+**The properties of the ChannelList are described as follows:**
+
+| Property | Description                               | Type                                      | Default |
+| -------- | ----------------------------------------- | ----------------------------------------- | ------- |
+| List     | as `ChannelList`‘s root component, used to display a component that the list load and failed to load | Component |   -     |
+| Preview                    | set your custom `ChannelItem` component | Component                 |   -     |
+| DefaultEmptyStateIndicator | displays an empty list of components    | Component                 |   -     |
+| Paginator                  | set your custom `paging` component      | Component                 |   -     |

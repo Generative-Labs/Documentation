@@ -42,4 +42,12 @@ const { message } = useInjectMessage();
 
 ```
 
+## Api
+
+**The properties of the Channel are described as follows:**
+
+| Property | Description                               | Type                                      | Default |
+| -------- | ----------------------------------------- | ----------------------------------------- | ------- |
+| Message  | set your custom `Message` component       |    Component                              |   -     |
+
 

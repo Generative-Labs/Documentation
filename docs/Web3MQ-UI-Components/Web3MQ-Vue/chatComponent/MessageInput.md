@@ -36,3 +36,17 @@ The `MessageInput` component's descendants could inject message sending function
   const { sendMessage } = useInjectMessageInput();
 </script>
 ```
+
+## API
+
+**The properties of the MessageInput are described as follows:**
+
+| Property | Description                               | Type                                      | Default |
+| -------- | ----------------------------------------- | ----------------------------------------- | ------- |
+|  Input   | set your custom `Input` component         |        Component                          |   -     |
+
+**useInjectMessageInput data**
+
+| Property      | Description                            | Type              | Default |
+| ------------- | -------------------------------------- | ----------------- | ------- |
+| sendMessage   |    发送消息方法                          | Function          |   -     |
