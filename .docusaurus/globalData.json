@@ -171,11 +171,6 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-API/pubkey/index",
-              "path": "/docs/Web3MQ-API/pubkey/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
               "id": "Web3MQ-API/PubSub/create_topic",
               "path": "/docs/Web3MQ-API/PubSub/create_topic",
               "sidebar": "tutorialSidebar"
@@ -221,11 +216,6 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-API/quickstart/Save_your_public_key",
-              "path": "/docs/Web3MQ-API/quickstart/Save_your_public_key",
-              "sidebar": "tutorialSidebar"
-            },
-            {
               "id": "Web3MQ-API/quickstart/Send_Connect_Command",
               "path": "/docs/Web3MQ-API/quickstart/Send_Connect_Command",
               "sidebar": "tutorialSidebar"
@@ -238,6 +228,11 @@
             {
               "id": "Web3MQ-API/quickstart/Signing_data_with_MetaMask",
               "path": "/docs/Web3MQ-API/quickstart/Signing_data_with_MetaMask",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-API/quickstart/User_login",
+              "path": "/docs/Web3MQ-API/quickstart/User_login",
               "sidebar": "tutorialSidebar"
             },
             {

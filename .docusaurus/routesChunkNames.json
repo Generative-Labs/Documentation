@@ -32,7 +32,7 @@
   "/search-79a": {
     "component": "component---theme-search-page-1-a-4-d6f"
   },
-  "/docs-692": {
+  "/docs-d0a": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
   },
@@ -164,10 +164,6 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-api-provider-create-provider-335-ac3"
   },
-  "/docs/Web3MQ-API/pubkey/-28c": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-api-pubkey-fdb-6a2"
-  },
   "/docs/Web3MQ-API/PubSub/-b13": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-api-pub-sub-a-52-fd5"
@@ -204,10 +200,6 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-api-quickstart-generate-key-pairs-8-c-9-4aa"
   },
-  "/docs/Web3MQ-API/quickstart/Save_your_public_key-13a": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-api-quickstart-save-your-public-key-710-b1e"
-  },
   "/docs/Web3MQ-API/quickstart/Send_Connect_Command-d41": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-api-quickstart-send-connect-commandf-8-b-1a3"
@@ -219,6 +211,10 @@
   "/docs/Web3MQ-API/quickstart/Signing_data_with_MetaMask-3f9": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-api-quickstart-signing-data-with-meta-mask-98-d-e7e"
+  },
+  "/docs/Web3MQ-API/quickstart/User_login-a97": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-api-quickstart-user-login-401-a5c"
   },
   "/docs/Web3MQ-API/signature-798": {
     "component": "component---theme-doc-item-178-a40",
