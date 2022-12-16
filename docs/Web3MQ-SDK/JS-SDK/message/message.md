@@ -14,7 +14,7 @@ position: 5
 
 | name                | type     | Parameters Description                                                                      | response |
 | ------------------- | -------- | ------------------------------------------------------------------------------------------- | -------- |
-| getMessageList      | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                     | none     |
+| getMessageList      | function | ([PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams), userId?: string)                  | none     |
 | changeMessageStatus | function | (messages: string[], status: [MessageStatus](/docs/Web3MQ-SDK/JS-SDK/types/#messagestatus)) | none     |
 | sendMessage         | function | (msg: string, secondParams: (target_userid or target_user_wallet_address) )                 | none     |
 | receive             | function | receive message callback                                                                    | none     |

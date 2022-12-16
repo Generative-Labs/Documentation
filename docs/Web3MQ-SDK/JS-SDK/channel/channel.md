@@ -15,7 +15,7 @@ position: 4
 
 | name               | type     | Parameters Description                                                | response                                                                     |
 | ------------------ | -------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| createRoom         | function | none                                                                  | none                                                                         |
+| createRoom         | function | [CreateRoomParams](/docs/Web3MQ-SDK/JS-SDK/types/#createroomparams)   | none                                                                         |
 | queryChannels      | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)               | none                                                                         |
 | setActiveChannel   | function | [activechannelType](/docs/Web3MQ-SDK/JS-SDK/types/#activechanneltype) | none                                                                         |
 | getGroupMemberList | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)               | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)[ ] |
@@ -85,7 +85,10 @@ export const Child = (props: IProps) => {
     <div>
       <button
         onClick={() => {
-          client.channel.createRoom();
+          client.channel.createRoom({
+            group_name: 'your favourite group name'
+            avatar_url: 'your favourite image url'
+          });
         }}>
         create group
       </button>

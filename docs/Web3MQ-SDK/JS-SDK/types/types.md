@@ -131,6 +131,16 @@ export type ActiveChannelType = {
 };
 ```
 
+### CreateRoomParams
+
+```ts
+export interface CreateRoomParams extends BaseParams {
+  group_name?: string;
+  avatar_url?: string;
+  avatar_base64?: string;
+}
+```
+
 ### ContactListItemType
 
 ```ts

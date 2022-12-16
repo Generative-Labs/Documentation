@@ -11,11 +11,11 @@ position: 7
 | searchUsers      | function | (walletAddress: string)                                      | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)         |
 | getMyProfile     | function | none                                                         | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)         |
 | updateMyProfile  | function | (nickname: string, avatar_url: string)                       | [UpdateMyProfileResponse](/docs/Web3MQ-SDK/JS-SDK/types/#updatemyprofileresponse) |
-| getUserBindDids  | function | none                                                         |                                                                                   |
-| userBindDid      | function | ({ provider_id: string, did_type: string,did_value: string}) |                                                                                   |
+| getUserBindDids  | function | none                                                         | Array<{did_type: string, did_value: string, metadata: any, provider_id: string}>  |
+| userBindDid      | function | ({ provider_id: string, did_type: string,did_value: string}) | none                                                                              |
 | followOperation  | function | {target_userid: string, action: string}                      | none                                                                              |
-| getFollowerList  | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)      |                                                                                   |
-| getFollowingList | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)      |                                                                                   |
+| getFollowerList  | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)      | {total_count: number, user_list: Array<{userid: string, follow_status: string}>}  |
+| getFollowingList | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)      | {total_count: number, user_list: Array<{userid: string, follow_status: string}>}  |
 
 ## init Client
 

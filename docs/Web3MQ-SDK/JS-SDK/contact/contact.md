@@ -19,9 +19,9 @@ position: 6
 | searchContact               | function | (walletAddress: string)                                                                   | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype) [ ] |
 | sendFriend                  | function | (target_userid: string)                                                                   | {code: 0, msg: 'ok'}                                                          |
 | operationFriend             | function | (target_userid: string, action?: [ActionType](/docs/Web3MQ-SDK/JS-SDK/types/#actiontype)) | {code: 0, msg: 'ok'}                                                          |
-| getContactList              | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                   | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)     |
-| getMyFriendRequestList      | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                   | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)     |
-| getReceiveFriendRequestList | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                   | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)     |
+| getContactList              | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                   |  none     |
+| getMyFriendRequestList      | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                   |  none     |
+| getReceiveFriendRequestList | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                   |  none     |
 
 ## init Client
 
