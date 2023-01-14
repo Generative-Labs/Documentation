@@ -1,5 +1,5 @@
 # Modal
-`Modal`是模态对话框组件
+Modal dialog.
 
 ## Basic Usage
 
@@ -21,12 +21,12 @@ code={<ModalMdx />}>
 
 | Property         | Description                      | Type                                      | Default       |
 | ---------------- | -------------------------------- | ----------------------------------------- | ------------- |
-|  appType         | 设置appType类型                   | `pc` \| `h5`                              |   ‘pc’        |
-|  className       | 可用于设置遮罩层的class             | String                                    |    -          |
-|  dialogClassName | 可用于设置浮层的class              | String                                     |    -          |
-|  modalHeader     | 设置头部样式                       | React.ReactNode                           |    -          |
-|  rightBtn        | 设置头部右边按钮样式                | React.ReactNode                           |    -           |
-|  style           | 可用于设置遮罩层的样式               | React.CSSProperties                       |    -          |
-|  title           | 标题                              | String                                    |    -          |
-|  visible         | 对话框是否可见                     | Boolean                                   |    -           |
-|  closeModal      | 点击遮罩层或右上角叉或取消按钮的回调   | Function                                  | () => void     |
+|  appType         | set the appType                  | `pc` \| `h5`                              |   ‘pc’        |
+|  className       | set the mask class selector      | String                                    |    -          |
+|  dialogClassName | set the dialog class selector    | String                                     |    -          |
+|  modalHeader     | set the header                   | React.ReactNode                           |    -          |
+|  rightBtn        | custom close button              | React.ReactNode                           |    -           |
+|  style           | set the mask style               | React.CSSProperties                       |    -          |
+|  title           | set the title                    | String                                    |    -          |
+|  visible         | set display                      | Boolean                                   |    -           |
+|  closeModal      | specify a function that will be called when a user clicks mask, close button on top right or close button | Function                                  | () => void     |

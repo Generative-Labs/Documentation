@@ -1,30 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Client } from 'web3-mq';
 import { 
   AppTypeEnum, 
+  Button,
   Channel, 
   ChannelList, 
   Chat, 
   MessageHeader, 
+  Window
 } from 'web3-mq-react';
 
 import useLogin from '../ChatExample/hooks/useLogin';
 
-import ss from './index.module.css';
-
-export const MessageHeadExample: React.FC = (props: any) => {
-  const { type } = props;
+export const MessageHeadExample: React.FC = () => {
   const { keys, init, fastestUrl, logout } = useLogin();
   
   useEffect(() => {
     init();
+    document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
   }, [])
 
   if (!keys) {
     return (
-      <div>
-        <button className={ss.link_btn}><a href="/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#basic-usage">请先在Chat部分进行登录操作</a></button>
-      </div>
+      <Button size='large' type='ghost'><a href="/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal#basic-usage" style={{textDecoration: 'none'}}>Please login first</a></Button>
     );
   }
   if (!fastestUrl) {
@@ -40,9 +38,9 @@ export const MessageHeadExample: React.FC = (props: any) => {
           <ChannelList />
         </div>
         <Channel>
-          <div style={{ position: 'relative', width: '100%', height: '100%', display: 'flex', flexDirection: 'column' }}>
+          <Window hasContainer>
             <MessageHeader />
-          </div>
+          </Window>
         </Channel>
       </Chat>
     </div>

@@ -1,7 +1,7 @@
 # ChannelListMessenger
 
 ## Basic Usage
-`ChannelListMessenger`用于展示List加载、加载失败及成功的UI组件。用户也可以通过LoadingErrorIndicator和LoadingIndicator来设置自定义失败或加载样式。
+`ChannelListMessenger` is used to show the UI components for List loading, loading failure, and loading success. Users can also set custom failure or load styles by using the `LoadingErrorIndicator` and `LoadingIndicator` properties.
 
 import { Layout } from '@site/src/components/Layout'
 import { ChannelListMessengerExample } from '@site/src/components/Web3MQ-React/ChannelListMessengerExample';
@@ -21,9 +21,9 @@ code={<ChannelListMessengerMdx />}>
 
 | Property               | Description                      | Type                                      | Default       |
 | ---------------------- | -------------------------------- | ----------------------------------------- | ------------- |
-|  children              | 设置展示UI                        | React.ReactNode                           |    -          |
-|  error                 | 设置List加载失败状态                | Boolean                                  |    -          |
-|  listRef               | 设置绑定当前根节点ref               | HTMLDivElement | nul                      |    -          |
-|  loading               | 设置当前List加载的状态              | Boolean                                   |    -          |
-|  LoadingErrorIndicator | 设置自定义List加载失败的UI组件       | React.ComponentType                       | ChatDown组件   |
-|  LoadingIndicator      | 设置自定义List加载的UI组件          | React.ComponentType                       | Skeleton组件   |
+|  children              | set the node                     | React.ReactNode                           |    -          |
+|  error                 | Set the failed state             | Boolean                                  |    -          |
+|  listRef               | bind the current root node       | HTMLDivElement | nul                      |    -          |
+|  loading               | Set the load state               | Boolean                                   |    -          |
+|  LoadingErrorIndicator | set the component with custom failure state | React.ComponentType                       | `ChatDown`   |
+|  LoadingIndicator      | set the component with custom load state | React.ComponentType                       | `Skeleton`   |

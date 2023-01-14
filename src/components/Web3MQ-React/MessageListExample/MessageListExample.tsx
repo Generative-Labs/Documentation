@@ -6,6 +6,7 @@ import {
   Chat, 
   ChannelList, 
   Channel, 
+  Button,
   MessageList, 
   MessageHeader, 
   MessageInput,
@@ -50,9 +51,7 @@ export const MessageListExample: React.FC = () => {
 
   if (!keys) {
     return (
-      <div>
-        <button className={ss.link_btn}><a href="/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#basic-usage">请先在Chat部分进行登录操作</a></button>
-      </div>
+      <Button size='large' type='ghost'><a href="/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal#basic-usage" style={{textDecoration: 'none'}}>Please login first</a></Button>
     );
   }
   if (!fastestUrl) {
@@ -68,7 +67,7 @@ export const MessageListExample: React.FC = () => {
           <ChannelList />
         </div>
         <Channel>
-          <Window>
+          <Window hasContainer>
             <MessageHeader />
             <MessageList Message={CustomMessage} />
             <MessageInput />

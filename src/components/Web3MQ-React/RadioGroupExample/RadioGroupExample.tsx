@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { RadioGroup } from 'web3-mq-react';
 
 const values = [
@@ -20,6 +20,9 @@ const values = [
   }
 ]
 export const RadioGroupExample: React.FC = () => {
+  useEffect(() => {
+    document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
+  }, [])
   const handleChange = (value) => {
     console.log(value, 'value')
   }

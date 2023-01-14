@@ -1,10 +1,9 @@
-# ChannelHead
-
-`ChannelHead`作为`DashBoard`的head部分，内部有`Notifition`及`CreateChannel`组件，需要在`Chat`组件中使用。
+# ChanelHead
+`ChannelHead` as a fixed header in `DashBoard`, and it integrates `CreateChannel` inside which needs to be used in the `Chat` component.
 
 ## Basic Usage
 
-`ChannelHead`无需注入任何props。`Channelhead`组件中集成`Notifition`及`CreateChannel`两个组件功能，可以查看订阅通知及创建聊天室。
+`ChannelHead` does not injected any props.
 
 import { Layout } from '@site/src/components/Layout'
 import { ChannelHeadExample } from '@site/src/components/Web3MQ-React/ChannelHeadExample';

@@ -1,8 +1,7 @@
 # Popover
-鼠标移入元素，弹出气泡式的卡片浮层。
+The floating card popped by clicking or hovering.
 
 ## Basic Usage
-`Popover`组件目前鼠标移入只展示top方向。
 
 import { Layout } from '@site/src/components/Layout'
 import { PopoverExample } from '@site/src/components/Web3MQ-React/PopoverExample';
@@ -22,6 +21,6 @@ code={<PopoverMdx />}>
 
 | Property     | Description                      | Type                | Default    |
 | ------------ | -------------------------------- | ------------------- | ---------- |
-|  content     | 卡片内容                           | ReactNode           |    -       |
-|  className   | 设置根节点class                    | string              |    -       |
-|  style       | 设置根节点style                    | React.CSSProperties |    -       |
+|  content     | content of the card              | ReactNode           |    -       |
+|  className   | set class selector               | string              |    -       |
+|  style       | set the style                    | React.CSSProperties |    -       |

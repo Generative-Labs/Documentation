@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Popover } from 'web3-mq-react';
 
 
 export const PopoverExample: React.FC = () => {
-  
+  useEffect(() => {
+    document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
+  }, [])
   return (
     <div style={{display: 'flex', width: '100%', padding: '20px 10px'}}>
       <Popover content='content'>

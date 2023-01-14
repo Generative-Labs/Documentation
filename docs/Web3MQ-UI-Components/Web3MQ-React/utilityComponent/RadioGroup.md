@@ -1,7 +1,7 @@
 # RadioGroup
 
 ## Basic Usage
-用户在使用`RadioGroup`组件时，传入value数组时必须设置任意项中id为'1'且该id为唯一的，`RadioGroup`内部会默认将id为'1'这项设置为选中项。
+`RadioGroup` is used to select a single state from multiple options. The default id is '1' in value.
 
 import { Layout } from '@site/src/components/Layout'
 import { RadioGroupExample } from '@site/src/components/Web3MQ-React/RadioGroupExample';
@@ -19,9 +19,10 @@ code={<RadioGroupMdx />}>
 
 **The properties of the RadioGroup are Popover as follows:**
 
-| Property     | Description      | Type                | Default    |
-| ------------ | ---------------- | ------------------- | ---------- |
-|  className   | 设置根节点class    | string              |    -       |
-|  style       | 设置根节点style    | React.CSSProperties |    -       |
-|  value       | 以配置形式设置子元素 | Array<{id: string;name: string}> |    -       |
-|  onChange    | 选项变化时的回调函数  | Function            |    -       |
+| Property     | Description           | Type                | Default    |
+| ------------ | --------------------- | ------------------- | ---------- |
+|  className   | set class selector    | string              |    -       |
+|  style       | set the style         | React.CSSProperties |    -       |
+|  value       | set children optional | Array<{id: string;name: string}> |    -       |
+|  onChange    | the callback function that is triggered when the state changes	function(e:Event)	-	
+  | Function            |    -       |
