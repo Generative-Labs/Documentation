@@ -116,6 +116,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Web3MQ-API/heartbeat",
+              "path": "/docs/Web3MQ-API/heartbeat",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-API/Intro",
               "path": "/docs/Web3MQ-API/Intro",
               "sidebar": "tutorialSidebar"

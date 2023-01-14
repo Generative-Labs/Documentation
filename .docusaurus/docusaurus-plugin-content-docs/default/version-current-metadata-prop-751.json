@@ -529,6 +529,12 @@
           },
           {
             "type": "link",
+            "label": "Heartbeat",
+            "href": "/docs/Web3MQ-API/heartbeat",
+            "docId": "Web3MQ-API/heartbeat"
+          },
+          {
+            "type": "link",
             "label": "ed25519key",
             "href": "/docs/Web3MQ-API/ed25519key",
             "docId": "Web3MQ-API/ed25519key"
@@ -892,6 +898,12 @@
       "id": "Web3MQ-API/group/index",
       "title": "Overview",
       "description": "All http post request and response content type are application/json",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-API/heartbeat": {
+      "id": "Web3MQ-API/heartbeat",
+      "title": "Heartbeat",
+      "description": "Keep websocket connection alive",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-API/Intro": {

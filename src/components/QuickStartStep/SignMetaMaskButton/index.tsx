@@ -1,46 +1,36 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Client, KeyPairsType } from 'web3-mq'
-import { CommonButton } from '../CommonButton';
-import ss from './index.module.css';
+import { Client, KeyPairsType } from "web3-mq";
+import { AppTypeEnum, LoginModal } from "web3-mq-react";
+import { CommonButton } from "../CommonButton";
+import ss from "./index.module.css";
+import "web3-mq-react/dist/css/index.css";
+import useLogin from "../hooks/useLogin";
 
 export const SignMetaMaskButton = () => {
-  const hasKeys = useMemo(() => {
-    const PrivateKey = localStorage.getItem('PRIVATE_KEY') || '';
-    const PublicKey = localStorage.getItem('PUBLICKEY') || '';
-    const userid = localStorage.getItem("USERID") || "";
-    if (PrivateKey && PublicKey && userid) {
-      return { PrivateKey, PublicKey, userid };
-    }
-    return null;
-  }, []);
-  const [keys, setKeys] = useState<KeyPairsType | null>(hasKeys);
+  const { login, getEthAccount, register, keys, init } = useLogin();
 
-  const init = async () => {
-    const fastUrl = await Client.init({
-      connectUrl: localStorage.getItem('FAST_URL'),
-      app_key: 'vAUJTFXbBZRkEDRE',
-      env: 'dev',
-    });
-    localStorage.setItem('FAST_URL', fastUrl);
-  };
-
-  const sign = async() => {
-    const { PrivateKey, PublicKey, userid } = await Client.register.signMetaMask({
-      signContentURI: 'https://www.web3mq.com'
-    });
-    localStorage.setItem('PRIVATE_KEY', PrivateKey);
-    localStorage.setItem('PUBLICKEY', PublicKey);
-    localStorage.setItem("USERID", userid);
-    setKeys({ PrivateKey, PublicKey, userid });
-  }
   useEffect(() => {
-    init();
-  }, [])
+    init().then();
+    document
+      .getElementsByTagName("body")[0]
+      .setAttribute("data-theme", "light");
+  }, []);
 
   return (
-    <div className={ss.signMetaMaskContent}>
-      <CommonButton text="signMetaMask" onClick={sign} />
-      <div className={ss.userId}>your userid: {keys && keys.userid}</div>
+    <div className={ss.signMetaMaskContent} id="register-demo">
+      {keys ? (
+        <div className={ss.userId}>your userid: {keys && keys.userid}</div>
+      ) : (
+        <LoginModal
+          appType={AppTypeEnum.pc}
+          register={register}
+          login={login}
+          getEthAccount={getEthAccount}
+          loginBtnNode={
+            <CommonButton text="Register or login" onClick={() => {}} />
+          }
+        />
+      )}
     </div>
-  )
-}
+  );
+};

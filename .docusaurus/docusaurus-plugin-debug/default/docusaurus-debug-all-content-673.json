@@ -12,9 +12,9 @@
           "versionClassName": "docs-version-current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/edy/Desktop/web3-mq documentation/Documentation/sidebars.js",
-          "contentPath": "/Users/edy/Desktop/web3-mq documentation/Documentation/docs",
-          "contentPathLocalized": "/Users/edy/Desktop/web3-mq documentation/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/zhaowei/Desktop/trunk/ty/Documentation/sidebars.js",
+          "contentPath": "/Users/zhaowei/Desktop/trunk/ty/Documentation/docs",
+          "contentPathLocalized": "/Users/zhaowei/Desktop/trunk/ty/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "Intro",
@@ -432,8 +432,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "ProtoType",
-                "permalink": "/docs/Web3MQ-API/ProtoType"
+                "title": "Heartbeat",
+                "permalink": "/docs/Web3MQ-API/heartbeat"
               },
               "next": {
                 "title": "Intro",
@@ -578,6 +578,36 @@
               "next": {
                 "title": "Create Group",
                 "permalink": "/docs/Web3MQ-API/group/create_group"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-API/heartbeat",
+              "id": "Web3MQ-API/heartbeat",
+              "title": "Heartbeat",
+              "description": "Keep websocket connection alive",
+              "source": "@site/docs/Web3MQ-API/heartbeat.md",
+              "sourceDirName": "Web3MQ-API",
+              "slug": "/Web3MQ-API/heartbeat",
+              "permalink": "/docs/Web3MQ-API/heartbeat",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 30,
+              "frontMatter": {
+                "nav": {
+                  "title": "docs"
+                },
+                "title": "Heartbeat",
+                "order": 30,
+                "sidebar_position": 30
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "ProtoType",
+                "permalink": "/docs/Web3MQ-API/ProtoType"
+              },
+              "next": {
+                "title": "ed25519key",
+                "permalink": "/docs/Web3MQ-API/ed25519key"
               }
             },
             {
@@ -863,8 +893,8 @@
                 "permalink": "/docs/Web3MQ-API/signature"
               },
               "next": {
-                "title": "ed25519key",
-                "permalink": "/docs/Web3MQ-API/ed25519key"
+                "title": "Heartbeat",
+                "permalink": "/docs/Web3MQ-API/heartbeat"
               }
             },
             {
@@ -3154,6 +3184,10 @@
                   {
                     "type": "doc",
                     "id": "Web3MQ-API/ProtoType"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Web3MQ-API/heartbeat"
                   },
                   {
                     "type": "doc",

@@ -89,14 +89,14 @@ During this initial testing phase, we've hosted complete networks of Web3MQ node
 
 ### Sign with wallet to register user and obtain message encryption keys
 
-For any first-time user of Web3MQ's network, you'll need to register on Web3MQ's network. Web3MQ's JS SDK takes care of the key generation process and subsequent wallet signing process. Client.register.signMetaMask is a utility method that does this automatically.
+For any first-time user of Web3MQ's network, you'll need to register on Web3MQ's network. Web3MQ's JS SDK takes care of the key generation process and subsequent wallet signing process. Client.register.register is a utility method that does this automatically.
 
 #### Code
 
 import { SignMetaMaskButton } from '@site/src/components/QuickStartStep/SignMetaMaskButton';
 
 <Layout
-title='signMetaMask'
+title='register'
 description='Get your userid and key pair.'
 >
 <SignMetaMaskButton />
@@ -104,17 +104,36 @@ description='Get your userid and key pair.'
 
 ```ts
 // You must ensure that the Client.init initialization is complete before running this
-const { PrivateKey, PublicKey, userid } = await Client.register.signMetaMask({
-  signContentURI: 'https://www.web3mq.com', // your signContent URI
-  EthAddress: 'your eth address', // *Not required*  your eth address, if not use your MetaMask eth address
+
+/**
+ *
+ Two pairs of secret key pairs are returned after login
+ 1. Main secret key pairs
+ Same as the public-private key pair returned after registration, please keep it safe
+ 2. Temp secret key pairs
+ A temporary public-private key pair with an expiry time that marks whether the user is online or not
+ */
+const password = '123456';
+const didType = 'eth' | 'starknet';
+const {
+    TempPrivateKey,
+    TempPublicKey,
+    pubkeyExpiredTimestamp,
+    mainPrivateKey,
+    mainPublicKey,
+} = await Client.register.login({
+    password,
+    userid,
+    did_value: 'Your Address', //eg: 0x000000
+    did_type: didType,
 });
 
-console.log(PrivateKey, PublicKey, userid);
-
 // Keep your private key in a safe place, this is for demo purposes only
-localStorage.setItem('PRIVATE_KEY', PrivateKey);
-localStorage.setItem('PUBLICKEY', PublicKey);
-localStorage.setItem('USERID', userid);
+localStorage.setItem("PRIVATE_KEY", TempPrivateKey);
+localStorage.setItem("PUBLIC_KEY", TempPublicKey);
+localStorage.setItem(`${didType}_MAIN_PRIVATE_KEY`, mainPrivateKey);
+localStorage.setItem(`${didType}_MAIN_PUBLIC_KEY`, mainPublicKey);
+localStorage.setItem(`DID_KEY`, `${didType}:${address}`);
 ```
 
 ### Use mobile authentication to log in
@@ -253,49 +272,126 @@ code={<AppMdx />}>
 ```tsx
 import React, { useMemo, useState, useEffect } from 'react';
 import { Client, KeyPairsType } from 'web3-mq';
+import { LoginModal } from 'web3-mq-react';
 
 // Root components
 const App: React.FC = () => {
-  const hasKeys = useMemo(() => {
-    const PrivateKey = localStorage.getItem('PRIVATE_KEY') || '';
-    const PublicKey = localStorage.getItem('PUBLICKEY') || '';
-    const userid = localStorage.getItem('USERID') || '';
-    if (PrivateKey && PublicKey && userid) {
-      return { PrivateKey, PublicKey, userid };
-    }
-    return null;
-  }, []);
+    const hasKeys = useMemo(() => {
+        const PrivateKey = localStorage.getItem('PRIVATE_KEY') || '';
+        const PublicKey = localStorage.getItem('PUBLIC_KEY') || '';
+        const userid = localStorage.getItem('userid') || '';
+        if (PrivateKey && PublicKey && userid) {
+            return { PrivateKey, PublicKey, userid };
+        }
+        return null;
+    }, []);
+    const [keys, setKeys] = useState<KeyPairsType | null>(hasKeys);
+    const [fastestUrl, setFastUrl] = useState<string | null>(null); const [userAccount, setUserAccount] = useState<{
+        userid: string;
+        address: string;
+    }>();
+    const [appType, setAppType] = useState(AppTypeEnum.pc);
 
-  const [keys, setKeys] = useState<KeyPairsType | null>(hasKeys);
-  const [fastestUrl, setFastUrl] = useState<string | null>(null);
+    const init = async () => {
+        const tempPubkey = localStorage.getItem('PUBLIC_KEY') || '';
+        const didKey = localStorage.getItem('DID_KEY') || '';
+        const fastUrl = await Client.init({
+            connectUrl: localStorage.getItem('FAST_URL'),
+            app_key: 'vAUJTFXbBZRkEDRE',
+            env: 'dev',
+            didKey,
+            tempPubkey,
+        });
+        localStorage.setItem('FAST_URL', fastUrl);
+        setFastUrl(fastUrl);
+    };
 
-  useEffect(() => {
-    init();
-  }, []);
+    const getAccount = async (didType: WalletType = 'eth') => {
+        let address = ''
+        let account = await Client.register.getAccount(didType);
+        address = account.address
+        const { userid, userExist } = await Client.register.getUserInfo({
+            did_value: address,
+            did_type: didType,
+        });
+        localStorage.setItem('userid', userid);
+        setUserAccount({
+            userid,
+            address,
+        });
+        return {
+            address,
+            userid,
+            userExist,
+        };
+    };
 
-  const init = async () => {
-    const fastUrl = await Client.init({
-      connectUrl: localStorage.getItem('FAST_URL'),
-      app_key: 'vAUJTFXbBZRkEDRE',
-      env: 'dev',
-    });
-    localStorage.setItem('FAST_URL', fastUrl);
-    setFastUrl(fastUrl);
-  };
+    const login = async (password: string, didType: WalletType = 'eth') => {
+        if (!userAccount) {
+            return;
+        }
 
-  const signMetaMask = async () => {
-    const { PrivateKey, PublicKey, userid } =
-      await Client.register.signMetaMask('https://www.web3mq.com');
-    localStorage.setItem('PRIVATE_KEY', PrivateKey);
-    localStorage.setItem('PUBLICKEY', PublicKey);
-    localStorage.setItem('USERID', userid);
-    setKeys({ PrivateKey, PublicKey, userid });
-  };
+        const localMainPrivateKey = localStorage.getItem(`${didType}_MAIN_PRIVATE_KEY`) || '';
+        const localMainPublicKey = localStorage.getItem(`${didType}_MAIN_PUBLIC_KEY`) || '';
+
+        const { userid, address } = userAccount;
+        const { TempPrivateKey, TempPublicKey, pubkeyExpiredTimestamp, mainPrivateKey, mainPublicKey } =
+            await Client.register.login({
+                password,
+                userid,
+                did_value: address,
+                did_type: didType,
+                mainPublicKey: localMainPublicKey,
+                mainPrivateKey: localMainPrivateKey,
+            });
+        localStorage.setItem('PRIVATE_KEY', TempPrivateKey);
+        localStorage.setItem('PUBLIC_KEY', TempPublicKey);
+        localStorage.setItem(`${didType}_MAIN_PRIVATE_KEY`, mainPrivateKey);
+        localStorage.setItem(`${didType}_MAIN_PUBLIC_KEY`, mainPublicKey);
+        localStorage.setItem(`DID_KEY`, `${didType}:${address}`);
+        localStorage.setItem('PUBKEY_EXPIRED_TIMESTAMP', String(pubkeyExpiredTimestamp));
+        setKeys({
+            PrivateKey: TempPrivateKey,
+            PublicKey: TempPublicKey,
+            userid,
+        });
+    };
+
+    const register = async (password: string, didType: WalletType = 'eth') => {
+        if (!userAccount) {
+            return;
+        }
+        const { address, userid } = userAccount;
+        const { mainPrivateKey, mainPublicKey } = await Client.register.register({
+            password,
+            did_value: address,
+            userid,
+            did_type: didType,
+            avatar_url: `https://cdn.stamp.fyi/avatar/${address}?s=300`,
+        });
+        localStorage.setItem(`${didType}_MAIN_PRIVATE_KEY`, mainPrivateKey);
+        localStorage.setItem(`${didType}_MAIN_PUBLIC_KEY`, mainPublicKey);
+    };
+    useEffect(() => {
+        init();
+        document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
+        window.addEventListener('resize', () => {
+            setAppType(window.innerWidth <= 600 ? AppTypeEnum['h5'] : AppTypeEnum['pc']);
+        });
+    }, []);
 
   if (!keys) {
     return (
       <div>
-        <button onClick={signMetaMask}>signMetaMask</button>
+          <LoginModal
+              appType={AppTypeEnum.pc}
+              register={register}
+              login={login}
+              getEthAccount={getAccount}
+              loginBtnNode={
+                  <button>  Login</button>
+              }
+          />
       </div>
     );
   }

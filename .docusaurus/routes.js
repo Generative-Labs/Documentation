@@ -55,7 +55,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','d0a'),
+    component: ComponentCreator('/docs','49b'),
     routes: [
       {
         path: '/docs/Intro',
@@ -180,6 +180,12 @@ export default [
       {
         path: '/docs/Web3MQ-API/group/group_members',
         component: ComponentCreator('/docs/Web3MQ-API/group/group_members','b98'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-API/heartbeat',
+        component: ComponentCreator('/docs/Web3MQ-API/heartbeat','440'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },

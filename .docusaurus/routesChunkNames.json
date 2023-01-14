@@ -32,7 +32,7 @@
   "/search-79a": {
     "component": "component---theme-search-page-1-a-4-d6f"
   },
-  "/docs-d0a": {
+  "/docs-49b": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
   },
@@ -119,6 +119,10 @@
   "/docs/Web3MQ-API/group/group_members-b98": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-api-group-group-membersa-8-d-a3c"
+  },
+  "/docs/Web3MQ-API/heartbeat-440": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-api-heartbeat-885-3e4"
   },
   "/docs/Web3MQ-API/Intro-b15": {
     "component": "component---theme-doc-item-178-a40",
