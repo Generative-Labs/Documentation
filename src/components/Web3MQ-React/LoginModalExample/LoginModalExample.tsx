@@ -45,7 +45,7 @@ export const LoginModalExample: React.FC = () => {
           register={register}
           login={login}
           getEthAccount={getAccount}
-          loginBtnNode={<Button size='large' type='ghost'>MetaMask</Button>}
+          loginBtnNode={<Button size='large' type='ghost'>Login</Button>}
         />
       </div>
     );
