@@ -1,26 +1,11 @@
 ```tsx
 import React, { useEffect, useState } from 'react';
 import { Client } from 'web3-mq';
-import { Chat, AppTypeEnum, Button, LoginModal, useChatContext } from 'web3-mq-react';
+import { Chat, AppTypeEnum, Button, LoginModal } from 'web3-mq-react';
 
 import useLogin from './hooks/useLogin';
 
-const CustomComponent: React.FC = () => {
-  const { client, appType, userInfo, containerId, showListTypeView } = useChatContext();
-  console.log(client, 'Client Instance')
-  return (
-    <div className={ss.custom_box} style={{wordBreak: 'break-all'}}>
-      <div>appType: {appType}</div>
-      <div>containerId: {containerId}</div>
-      <div>showListTypeView: {showListTypeView}</div>
-      <div>userId: {userInfo?.userid}</div>
-      <div>wallet_address: {userInfo?.wallet_address}</div>
-      <div>wallet_type: {userInfo?.wallet_type}</div>
-    </div>
-  )
-}
-
-export const ChatExample: React.FC = () => {
+export const LoginModalExample: React.FC = () => {
   const { keys, fastestUrl, init, login, logout, getEthAccount, register } = useLogin();
   const [appType, setAppType] = useState(
     window.innerWidth <= 600 ? AppTypeEnum['h5'] : AppTypeEnum['pc'],
@@ -41,6 +26,8 @@ export const ChatExample: React.FC = () => {
     return (
       <LoginModal 
         appType={appType}
+        containerId='box'
+        modalClassName={ss.modalClassName}
         register={register}
         login={login}
         getEthAccount={getEthAccount}
@@ -56,12 +43,14 @@ export const ChatExample: React.FC = () => {
   const client = Client.getInstance(keys);
 
   return (
-    <div id='box' style={{position: 'relative', width: '100%', overflow: 'auto'}}>
-      <Chat containerId='box' client={client} appType={appType} logout={logout}>
-        <CustomComponent />
-      </Chat>
-    </div>
+    <Chat containerId='box' client={client} appType={appType} logout={logout}>
+      <h4>
+        Login success
+      </h4>
+      <Button onClick={logout}>logout</Button>
+    </Chat>
   );
 };
 
-``
+
+```

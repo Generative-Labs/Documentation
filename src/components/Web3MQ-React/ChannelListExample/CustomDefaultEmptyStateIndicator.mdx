@@ -1,26 +1,31 @@
 ```tsx 
 import React, { useEffect, PropsWithChildren } from 'react';
 import { Client } from 'web3-mq';
-import { Chat, ChannelList, AppTypeEnum } from 'web3-mq-react';
+import { AppTypeEnum, Button, Chat, ChannelList, LoginModal  } from 'web3-mq-react';
 
-import useLogin from '../ChatExample/hooks/useLogin';
+import useLogin from './hooks/useLogin';
 
 const CustomDefaultEmptyStateIndicator = () => {
-  return <div style={{textAlign: 'center'}}>You have no Channels currently</div>
+  return <div style={{textAlign: 'center'}}>No Reasult...</div>
 }
 
 export const ChannelListExample: React.FC = () => {
-  const { keys, init, fastestUrl, logout, signMetaMask } = useLogin();
+  const { keys, init, fastestUrl, getEthAccount, login, logout, register } = useLogin();
 
   useEffect(() => {
     init();
+    document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
   }, [])
 
   if (!keys) {
     return (
-      <div>
-        <button onClick={signMetaMask}>signMetaMask</button>
-      </div>
+       <LoginModal 
+        appType={AppTypeEnum.pc}
+        register={register}
+        login={login}
+        getEthAccount={getEthAccount}
+        loginBtnNode={<Button size='large' type='ghost'>login</Button>}
+      />
     );
   }
   if (!fastestUrl) {
@@ -28,20 +33,13 @@ export const ChannelListExample: React.FC = () => {
   }
 
   const client = Client.getInstance(keys);
-  const handleClear = () => {
-    client.channel.channelList = [];
-    client.emit('channel.getList', { type: 'channel.getList' })
-  }
 
   return (
-    <div id='box' style={{position: 'relative', border: '1px solid #f2f2f2',  width: '100%',height: '300px',overflow: 'auto'}}>
+    <div id='box' style={{position: 'relative'}}>
       <Chat client={client} appType={AppTypeEnum['h5']} logout={logout}>
-        <div style={{height: '100%', display: 'flex', flexDirection: 'column'}}>
-          <ChannelList 
-            DefaultEmptyStateIndicator={CustomDefaultEmptyStateIndicator}
-          />
-          <button className={ss.clear_btn} onClick={() => handleClear()}>clear channel</button>
-        </div>
+        <ChannelList 
+          DefaultEmptyStateIndicator={CustomDefaultEmptyStateIndicator}
+        />
       </Chat>
     </div>
   );

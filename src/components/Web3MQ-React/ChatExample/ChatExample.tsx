@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Client } from 'web3-mq';
-import { Chat, AppTypeEnum, useChatContext } from 'web3-mq-react';
+import { Chat, AppTypeEnum, Button, useChatContext } from 'web3-mq-react';
 
 import useLogin from './hooks/useLogin';
 
@@ -22,7 +22,7 @@ const CustomComponent: React.FC = () => {
 }
 
 export const ChatExample: React.FC = () => {
-  const { keys, fastestUrl, init, signMetaMask, logout } = useLogin();
+  const { keys, fastestUrl, init, logout, } = useLogin();
   const [appType, setAppType] = useState(
     window.innerWidth <= 600 ? AppTypeEnum['h5'] : AppTypeEnum['pc'],
   );
@@ -31,6 +31,7 @@ export const ChatExample: React.FC = () => {
   };
   useEffect(() => {
     init();
+    document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
     window.addEventListener('resize', handleAppType);
     () => {
       window.removeEventListener('resize', handleAppType)
@@ -39,9 +40,7 @@ export const ChatExample: React.FC = () => {
 
   if (!keys) {
     return (
-      <div>
-        <button className={ss.login_btn} onClick={signMetaMask}>MetaMask</button>
-      </div>
+      <Button size='large' type='ghost'><a href="/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal#basic-usage" style={{textDecoration: 'none'}}>Please login first</a></Button>
     );
   }
 

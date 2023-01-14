@@ -1,5 +1,5 @@
 # Toast
-`toast`是在全局用于展示操作反馈信息。
+`toast` display global messages as feedback in response to user operations.
 
 ## Basic Usage
 
@@ -17,7 +17,7 @@ code={<ToastMdx />}>
 
 ## API
 
-**组件提供了一些静态方法，使用方式和参数如下：**
+**Supports passing parameters wrapped in an object：**
 
 > 1. message.success(content, {duration})
 > 2. message.error(content, {duration})

@@ -4,10 +4,10 @@ sidebar_position: 1
 
 # CreateChannel
 
-`CreateChannel`是发送好友及创建聊天室的集功能和UI的组件，在组件内需要通过`useChatContext`获取client的属性，即无法在`Chat`组件外部单独使用。
+`CreateChannel` is a set of features and UI components for sending friends and creating chat rooms, it needs to get the `client` property through `useChatContext` and cannot be used alone outside the `Chat` component.
 
 ## Basic Usage
-`CreateChannel`由一个button和modal组成，button控制modal显示隐藏；modal展示发送好友请求及创建room的功能部分；该组件无需传入任何props。
+`CreateChannel` made up of a button and modal, the button part control modal display and hidden, and the modal show the function part of sending friend request and creating room; This component does not need to pass any props.
 
 import { Layout } from '@site/src/components/Layout'
 import { CreateChannelExample } from '@site/src/components/Web3MQ-React/CreateChannelExample';

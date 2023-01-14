@@ -1,5 +1,5 @@
 ---
-sidebar_position: 0
+sidebar_position: 1
 ---
 
 # Chat
@@ -22,10 +22,10 @@ code={<ChatMdx />}>
 
 ## containerId
 
-用于给组件库包裹一个容器，需要将该容器Id作为containerId属性在`Chat`组件传入，组件库中的组件将会适配在该容器之中。
+Used to wrap a container around a `Chat` component.You need to pass the id selector for the container as the property to the `Chat` component,components from the `Web3-mq-react` will fit into the container.
 
 :::tip
-  容器样式必须设置position为static以外的属性
+  The container style must set position is a property other than static
 :::
 
 ```tsx
@@ -67,5 +67,5 @@ const { client } = useChatContext();
 | -------------------- | ------------------------------------------------ | ----------------------------------------- | ------- |
 | showListTypeView     | Tabs type in `DashBoard` component               | string                                    | 'room'  |
 | userInfo             | user Info   | Ref<[SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)> |  -      |
-| setShowListTypeView  | Update showListTypeView                          | setState Function                         |  -      |
+| setShowListTypeView  | Update showListTypeView                          | React.Dispatch                            |  -      |
 

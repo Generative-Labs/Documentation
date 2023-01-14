@@ -1,7 +1,7 @@
 # Loading
 
 ## Basic Usage
-`Loading`组件用于页面和区块的加载中状态。
+`Loading` component is used for the loading state of pages and blocks.
 
 import { Layout } from '@site/src/components/Layout'
 import { LoadingExample } from '@site/src/components/Web3MQ-React/LoadingExample';
@@ -21,6 +21,6 @@ code={<LoadingMdx />}>
 
 | Property     | Description                      | Type                | Default    |
 | ------------ | -------------------------------- | ------------------- | ---------- |
-|  className   | 设置根节点class                    | string              |    -       |
-|  style       | 设置根节点style                    | React.CSSProperties |    -       |
-|  type        | 设置Loading样式                    | 'spin’ ｜ null      |    -       |
+|  className   | set class selector               | string              |    -       |
+|  style       | set the style                    | React.CSSProperties |    -       |
+|  type        | set the loading type             | 'spin’ ｜ null      |    -       |

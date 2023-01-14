@@ -69,7 +69,7 @@ export default {
           ]
         }
       ],
-      "copyright": "Copyright © 2022 Web3MQ, Inc."
+      "copyright": "Copyright © 2023 Web3MQ, Inc."
     },
     "prism": {
       "theme": {

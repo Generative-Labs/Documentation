@@ -116,6 +116,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Web3MQ-API/heartbeat",
+              "path": "/docs/Web3MQ-API/heartbeat",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-API/Intro",
               "path": "/docs/Web3MQ-API/Intro",
               "sidebar": "tutorialSidebar"
@@ -413,6 +418,11 @@
             {
               "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard",
               "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal",
+              "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal",
               "sidebar": "tutorialSidebar"
             },
             {

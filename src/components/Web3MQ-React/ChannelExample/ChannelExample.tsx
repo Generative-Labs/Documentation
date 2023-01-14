@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Client } from 'web3-mq';
-import { Chat, Channel, ChannelList, AppTypeEnum, useChannelStateContext, useChatContext } from 'web3-mq-react';
+import { Chat, Channel, ChannelList, AppTypeEnum, Button,useChannelStateContext, useChatContext } from 'web3-mq-react';
 
 import useLogin from '../ChatExample/hooks/useLogin';
 
@@ -16,12 +16,10 @@ const CustomComponent: React.FC = () => {
 
   return (
     <div className={ss.custom_box} style={{wordBreak: 'break-all'}}>
-      <div><span>current Chat avatar_base64 is</span> {activeChannel.avatar_base64}</div>
-      <div><span>current Chat avatar_url is</span> {activeChannel.avatar_url}</div>
       <div><span>current Chat name is</span> {activeChannel.chat_name}</div>
       <div><span>current Chat type is</span> {activeChannel.chat_type}</div>
       <div><span>current Chat ID is</span> {activeChannel.chatid}</div>
-      <button className={ss.back_btn} onClick={handleClose}>back</button>
+      <Button type='ghost' onClick={handleClose} style={{margin: '10px 12px'}}>back</Button>
     </div>
   )
 }
@@ -31,13 +29,12 @@ export const ChannelExample: React.FC = () => {
   
   useEffect(() => {
     init();
+    document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
   }, [])
 
   if (!keys) {
     return (
-      <div>
-        <button className={ss.link_btn}><a href="/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#basic-usage">请先在Chat部分进行登录操作</a></button>
-      </div>
+      <Button size='large' type='ghost'><a href="/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal#basic-usage" style={{textDecoration: 'none'}}>Please login first</a></Button>
     );
   }
   if (!fastestUrl) {

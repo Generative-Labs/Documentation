@@ -27,10 +27,12 @@ code={<ChannelMdx />}>
 
 
 ## Custom Input 
-在`channel`可以传入自定义样式和功能的Input输入框组件，在该组件中可以通过useMessageInputContext方法获取sendMessage方法。
+In the `channel` component, you can pass in an Input component with custom styles and functionality, where you can get the `sendMessage` method through the `useMessageInputContext` method.
+
 :::tip
-  `channel`传入自定义Input组件优先级低于`MessageInput`传入的Input组件，建议只在MessageInput中作为Input传入。
+  The Input property of 'channel' has a lower priority than the Input property of 'MessageInput', and it is recommended to pass in as the Input property of 'MessageInput'.
 :::
+
 ```tsx
 <Chat client={client} >
   <ChannelList />
@@ -66,7 +68,7 @@ code={<CustomChannelMdx />}>
 </Layout>
 
 ## useChannelStateContext
-`Channel`的子组件都可以访问ChannelStateContext和ComponentContext。
+Any child of the `Channel` component has access to the channelStateContext and componentContext. Each React Context in the component library can be accessed with one of our custom hooks, which must be imported individually.
 ```ts
 const { activeChannel } = useChannelStateContext();
 ```

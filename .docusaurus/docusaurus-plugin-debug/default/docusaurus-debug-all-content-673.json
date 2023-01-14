@@ -432,8 +432,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "ProtoType",
-                "permalink": "/docs/Web3MQ-API/ProtoType"
+                "title": "Heartbeat",
+                "permalink": "/docs/Web3MQ-API/heartbeat"
               },
               "next": {
                 "title": "Intro",
@@ -578,6 +578,36 @@
               "next": {
                 "title": "Create Group",
                 "permalink": "/docs/Web3MQ-API/group/create_group"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-API/heartbeat",
+              "id": "Web3MQ-API/heartbeat",
+              "title": "Heartbeat",
+              "description": "Keep websocket connection alive",
+              "source": "@site/docs/Web3MQ-API/heartbeat.md",
+              "sourceDirName": "Web3MQ-API",
+              "slug": "/Web3MQ-API/heartbeat",
+              "permalink": "/docs/Web3MQ-API/heartbeat",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 30,
+              "frontMatter": {
+                "nav": {
+                  "title": "docs"
+                },
+                "title": "Heartbeat",
+                "order": 30,
+                "sidebar_position": 30
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "ProtoType",
+                "permalink": "/docs/Web3MQ-API/ProtoType"
+              },
+              "next": {
+                "title": "ed25519key",
+                "permalink": "/docs/Web3MQ-API/ed25519key"
               }
             },
             {
@@ -863,8 +893,8 @@
                 "permalink": "/docs/Web3MQ-API/signature"
               },
               "next": {
-                "title": "ed25519key",
-                "permalink": "/docs/Web3MQ-API/ed25519key"
+                "title": "Heartbeat",
+                "permalink": "/docs/Web3MQ-API/heartbeat"
               }
             },
             {
@@ -2059,8 +2089,8 @@
             {
               "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead",
               "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead",
-              "title": "ChannelHead",
-              "description": "ChannelHead作为DashBoard的head部分，内部有Notifition及CreateChannel组件，需要在Chat组件中使用。",
+              "title": "ChanelHead",
+              "description": "ChannelHead as a fixed header in DashBoard, and it integrates CreateChannel inside which needs to be used in the Chat component.",
               "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead.md",
               "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React/chatComponent",
               "slug": "/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead",
@@ -2114,14 +2144,14 @@
               "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 0,
+              "sidebarPosition": 1,
               "frontMatter": {
-                "sidebar_position": 0
+                "sidebar_position": 1
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Intro",
-                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/Intro"
+                "title": "LoginModal",
+                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal"
               },
               "next": {
                 "title": "CreateChannel",
@@ -2132,7 +2162,7 @@
               "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel",
               "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel",
               "title": "CreateChannel",
-              "description": "CreateChannel是发送好友及创建聊天室的集功能和UI的组件，在组件内需要通过useChatContext获取client的属性，即无法在Chat组件外部单独使用。",
+              "description": "CreateChannel is a set of features and UI components for sending friends and creating chat rooms, it needs to get the client property through useChatContext and cannot be used alone outside the Chat component.",
               "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel.md",
               "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React/chatComponent",
               "slug": "/Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel",
@@ -2157,7 +2187,7 @@
               "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard",
               "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard",
               "title": "DashBoard",
-              "description": "DashBoard是一个Tabs组件。当不传入任何props时，tabs内容默认渲染组件库中ChannelList、ContactList、Profile三个组件。DashBoar组件通过useChatContext获取setShowListTypeView方法，并修改showListTypeView，即无法在Chat组件之外使用。",
+              "description": "AS The Tabs component, DashBoard renders ChannelList、ContactList and Profile by default when no props are passed, it gets showListTypeView property that the current type of tab panel  through the useChatContext, and cannot be used outside the Chat component.",
               "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard.md",
               "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React/chatComponent",
               "slug": "/Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard",
@@ -2167,7 +2197,7 @@
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "ChannelHead",
+                "title": "ChanelHead",
                 "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead"
               },
               "next": {
@@ -2176,10 +2206,35 @@
               }
             },
             {
+              "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal",
+              "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal",
+              "title": "LoginModal",
+              "description": "In LoginModal, you can connect wallets to register user or login web3mq.",
+              "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal.md",
+              "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React/chatComponent",
+              "slug": "/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal",
+              "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 0,
+              "frontMatter": {
+                "sidebar_position": 0
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Intro",
+                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/Intro"
+              },
+              "next": {
+                "title": "Chat",
+                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat"
+              }
+            },
+            {
               "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead",
               "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead",
               "title": "MessageHead",
-              "description": "MessageHead是作为消息头部组件，需要作为Chat和Channel的子组件使用，从context获取activeChannel和client来渲染当前频道内容，和一些功能实现。",
+              "description": "As the fixed header in chat room, MessageHead is used to render the chat room information and provide functions, such as inviting people into a group. It must exist as the Chat and Channel subcomponent, because MessageHead needs to get the activeChannel and client properties from the context.",
               "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead.md",
               "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React/chatComponent",
               "slug": "/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead",
@@ -2204,7 +2259,7 @@
               "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageInput",
               "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageInput",
               "title": "MessageInput",
-              "description": "MessageInput本质是一个React Context Provider，没有注入任何UI；若在MessageInput中没有传入Input参数，则默认渲染我们自己Input组件样式；通过context传递给默认或自定义Input组件sendMessage的方法。",
+              "description": "The MessageInput component is a React Context provider that does not inject any UI. The MessageInput renders ChatAutoComplete component by default when it does not inject the Input as the props.",
               "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageInput.md",
               "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React/chatComponent",
               "slug": "/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageInput",
@@ -2254,7 +2309,7 @@
               "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify",
               "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify",
               "title": "Notify",
-              "description": "Notify是给用户发送通知的功能组件，组件内功能需要基于client的api进行实现，只能在Chat中使用。",
+              "description": "The Notify is a function component that sends notifications to users, the functions in the Notify are implemented based on the client api and can only be used in Chat.",
               "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify.md",
               "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React/chatComponent",
               "slug": "/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify",
@@ -2271,7 +2326,7 @@
                 "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageInput"
               },
               "next": {
-                "title": "ChannelHead",
+                "title": "ChanelHead",
                 "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead"
               }
             },
@@ -2279,7 +2334,7 @@
               "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Profile",
               "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Profile",
               "title": "Profile",
-              "description": "Profile是展示个人信息页的组件，组件内会通过ChatContext获取logout方法，需要在配合Chat使用。",
+              "description": "Profile is a component that displays display userinfo.",
               "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Profile.md",
               "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React/chatComponent",
               "slug": "/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Profile",
@@ -2318,8 +2373,8 @@
                 "permalink": "/docs/Web3MQ-API/ed25519key"
               },
               "next": {
-                "title": "Chat",
-                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat"
+                "title": "LoginModal",
+                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal"
               }
             },
             {
@@ -2395,7 +2450,7 @@
               "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Modal",
               "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Modal",
               "title": "Modal",
-              "description": "Modal是模态对话框组件",
+              "description": "Modal dialog.",
               "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Modal.md",
               "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent",
               "slug": "/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Modal",
@@ -2417,7 +2472,7 @@
               "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Popover",
               "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Popover",
               "title": "Popover",
-              "description": "鼠标移入元素，弹出气泡式的卡片浮层。",
+              "description": "The floating card popped by clicking or hovering.",
               "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Popover.md",
               "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent",
               "slug": "/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Popover",
@@ -2461,7 +2516,7 @@
               "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Skeleton",
               "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Skeleton",
               "title": "Skeleton",
-              "description": "Skeleton是一个在需要等待加载内容的位置提供一个占位图形组合的UI组件。",
+              "description": "Skeleton provide a placeholder while you wait for content to load, or to visualize content that doesn't exist yet.",
               "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Skeleton.md",
               "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent",
               "slug": "/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Skeleton",
@@ -2483,7 +2538,7 @@
               "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Toast",
               "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Toast",
               "title": "Toast",
-              "description": "toast是在全局用于展示操作反馈信息。",
+              "description": "toast display global messages as feedback in response to user operations.",
               "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Toast.md",
               "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent",
               "slug": "/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Toast",
@@ -2505,7 +2560,7 @@
               "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Window",
               "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Window",
               "title": "Window",
-              "description": "Window是样式组件，用于兼容视图。",
+              "description": "In web3-mq-react, Window is used to wrap the MessageList, MessageHeader, and MessageInput components to compatibility with views.",
               "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Window.md",
               "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent",
               "slug": "/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Window",
@@ -3157,6 +3212,10 @@
                   },
                   {
                     "type": "doc",
+                    "id": "Web3MQ-API/heartbeat"
+                  },
+                  {
+                    "type": "doc",
                     "id": "Web3MQ-API/ed25519key"
                   }
                 ]
@@ -3183,6 +3242,10 @@
                         "collapsible": true,
                         "collapsed": true,
                         "items": [
+                          {
+                            "type": "doc",
+                            "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal"
+                          },
                           {
                             "type": "doc",
                             "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat"

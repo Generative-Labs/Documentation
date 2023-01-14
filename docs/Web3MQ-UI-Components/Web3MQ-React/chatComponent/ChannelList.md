@@ -23,7 +23,7 @@ code={<ChannelListMdx />}>
 </Layout>
 
 ## Custom List
-`List`组件是`ChannelList`的根组件，`List`可以传入listRef,error,loading等参数，通过error或loading用于渲染当前Channel列表在加载中、加载失败及加载成功的UI。
+`List` renders loading failure, loading, and loading success views by `error` and `loading` properties.
 
 import CustomListMdx from '@site/src/components/Web3MQ-React/ChannelListExample/CustomList.mdx';
 
@@ -34,10 +34,10 @@ code={<CustomListMdx />}>
 <ChannelListExample type='List' />
 </Layout>
 
-在`ChannelList`中会创建ref并传递给`List`，即当使用自定义`List`组件，要有必要参数listRef并绑定到`List`中跟节点，在后续Paginator组件中会通过该ref进行分页操作。
+`listRef` is a required attribute and must be bound to the Custom `List` root node. This is necessary for the `ChannelList` to implement paging
 
 ## Custom DefaultEmptyStateIndicator
-`DefaultEmptyStateIndicator`用于渲染Channel列表为空的UI组件。
+`DefaultEmptyStateIndicator` is used to show the empty state view.
 
 import CustomDefaultEmptyStateIndicatorMdx from '@site/src/components/Web3MQ-React/ChannelListExample/CustomDefaultEmptyStateIndicator.mdx';
 
@@ -49,7 +49,7 @@ code={<CustomDefaultEmptyStateIndicatorMdx />}>
 </Layout>
 
 ## Custom Paginator
-`Paginator`是`channelList`子组件，用于分页的功能组件，`Paginator`组件从`ChannelList`组件接受elment、loadNextPage、showLoading属性；
+`Paginator` is a `channelList` subcomponent for pagination, `Paginator` component accepts elment, loadNextPage, and showLoading properties from `ChannelList` component;
 
 :::tip
 
@@ -58,7 +58,7 @@ code={<CustomDefaultEmptyStateIndicatorMdx />}>
 :::
 
 ## Custom Preview
-`Preview`是用于展示Channel行的UI组件
+`Preview` is used to render list item.
 
 import CustomPreviewMdx from '@site/src/components/Web3MQ-React/ChannelListExample/CustomPreview.mdx';
 
@@ -84,26 +84,26 @@ code={<CustomPreviewMdx />}>
 
 | Property | Description            | Type           | Default |
 | -------- | ---------------------- | -------------- | ------- |
-| error    | 获取Channel数据失败的状态 | Boolean        |   -     |
-| loading  | 获取Channel数据加载的状态 | Boolean        |   -     |
-| listRef  | ref用于绑定`List`根组件  | HTMLDivElement |   -     |
+| error    | set the error state    | Boolean        |   -     |
+| loading  | set the load state     | Boolean        |   -     |
+| listRef  | bind `List` root node  | HTMLDivElement |   -     |
 
 **The properties of the Paginator are described as follows:**
 
 | Property     | Description           | Type           | Default |
 | ------------ | --------------------- | -------------- | ------- |
-| element      | `ChannelList`根节点ref | HTMLDivElement |   -     |
-| showLoading  | 获取Channel数据状态     | Boolean        | false   |
-| loadNextPage | 分页功能方法            | Function       |   -     |
+| element      | `List` root node      | HTMLDivElement |   -     |
+| showLoading  | set the load state    | Boolean        | false   |
+| loadNextPage | Load more             | Function       |   -     |
 
 **The properties of the Preview are described as follows:**
 
 | Property         | Description           | Type     | Default |
 | ---------------- | --------------------- | -------- | ------- |
-| active           | 是否为当前的Channel     | Boolean  |   -     |
-| avatarUrl        | 聊天室中对方的头像       | String   |   -     |
-| channel          | Channel聊天室的信息     | [activechannelType](/docs/Web3MQ-SDK/JS-SDK/types/#activechanneltype) |   -     |
-| displayTitle     | 聊天对象的用户名或ID     | String   |   -     |
-| lastMessage      | 当前聊天室最新信息       | String   |   -     |
-| updatedAt        | 当前聊天室最新消息的时间  | String   |   -     |
-| setActiveChannel | 设置当前Channel        | Function |   -     |
+| active           | Whether it is the current Channel    | Boolean  |   -     |
+| avatarUrl        | resource address of the image avatar | String   |   -     |
+| channel          | Chat room information | [activechannelType](/docs/Web3MQ-SDK/JS-SDK/types/#activechanneltype) |   -     |
+| displayTitle     | the user name or ID   | String   |   -     |
+| lastMessage      | the latest news       | String   |   -     |
+| updatedAt        | the Latest time       | String   |   -     |
+| setActiveChannel | the callback when clicked | Function |   -     |
