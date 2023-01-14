@@ -32,7 +32,7 @@
   "/search-79a": {
     "component": "component---theme-search-page-1-a-4-d6f"
   },
-  "/docs-9a4": {
+  "/docs-49b": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
   },
@@ -363,10 +363,6 @@
   "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard-09b": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-dash-board-9-a-5-44c"
-  },
-  "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal-efa": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-login-modal-40-e-8c4"
   },
   "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead-27c": {
     "component": "component---theme-doc-item-178-a40",

@@ -55,7 +55,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','9a4'),
+    component: ComponentCreator('/docs','49b'),
     routes: [
       {
         path: '/docs/Intro',
@@ -546,12 +546,6 @@ export default [
       {
         path: '/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard',
         component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard','09b'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal',
-        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal','efa'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },

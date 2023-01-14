@@ -81,9 +81,11 @@ export type EthAccountType = {
 
 ```ts
 export type initOptions = {
-  connectUrl?: string;
-  app_key?: string;
-  env?: EnvTypes;
+    connectUrl?: string | null;
+    app_key?: string;
+    env?: EnvTypes;
+    tempPubkey?: string;
+    didKey?: string;
 };
 ```
 
@@ -111,8 +113,9 @@ export type SignClientCallBackType = {
 
 ```ts
 export type getUserInfoParams = {
-  did_type: string;
-  did_value: string;
+    did_type: string;
+    did_value: string;
+    timestamp: number;
 };
 ```
 
@@ -296,4 +299,46 @@ export type SubscribeListType = {
 export interface TopicListType extends SubscribeListType {
   topic_name: string;
 }
+```
+
+## WalletType
+
+```ts
+export type WalletType = "eth" | "starknet";
+```
+
+## WalletType
+
+```ts
+export type WalletSignRes = {
+  sign: string;
+  publicKey?: string;
+};
+```
+## RegisterMetaMaskParams
+
+```ts
+export type RegisterMetaMaskParams = {
+  password: string;
+  userid: string;
+  did_value: string;
+  did_type?: WalletType;
+  signContentURI?: string;
+  nickname?: string;
+  avatar_url?: string;
+  avatar_base64?: string;
+};
+```
+## SignMetaMaskParams
+
+```ts
+export type SignMetaMaskParams = {
+  password: string;
+  userid: string;
+  did_value: string;
+  did_type?: WalletType;
+  mainPrivateKey?: string;
+  mainPublicKey?: string;
+  pubkeyExpiredTimestamp?: number;
+};
 ```

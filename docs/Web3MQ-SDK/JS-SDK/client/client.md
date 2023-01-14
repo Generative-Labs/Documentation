@@ -41,10 +41,23 @@ position: 3
 ```ts
 import { Client } from 'web3-mq';
 // 1. You must initialize the SDK, the init function is asynchronous
+
+const tempPubkey = localStorage.getItem('PUBLIC_KEY') || '';
+// 1. tempPubkey
+// We will give you the exclusive tempPubkey when you log in successfully;
+// Usually this key is kept by you eg: save in localStorage
+const didKey = localStorage.getItem('DID_KEY') || '';
+//  2. didKey
+//  A concatenated string of the account and account type to be logged into
+// eg: eth:0x0000000000000
+
+
 await Client.init({
   connectUrl: 'example url', // The fastURL you saved to local
   app_key: 'app_key', // Appkey applied from our team
   env: 'test', // The default is the test environment
+  tempPubkey, // After login get temp public key
+  didKey // did_key:did_value  eg: eth:0x00000000123123;
 });
 ```
 
