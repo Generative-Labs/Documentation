@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Client, KeyPairsType } from "web3-mq";
+import { Client, KeyPairsType, WalletType } from "web3-mq";
 
 const useLogin = () => {
   const hasKeys = useMemo(() => {
@@ -21,8 +21,7 @@ const useLogin = () => {
 
   const init = async () => {
     const tempPubkey = localStorage.getItem("PUBLIC_KEY") || "";
-    const walletAddress = localStorage.getItem("WALLET_ADDRESS");
-    const didKey = walletAddress ? `eth:${walletAddress}` : "";
+    const didKey = localStorage.getItem("DID_KEY") || "";
     const fastUrl = await Client.init({
       connectUrl: localStorage.getItem("FAST_URL"),
       app_key: "vAUJTFXbBZRkEDRE",
@@ -34,11 +33,13 @@ const useLogin = () => {
     setFastUrl(fastUrl);
   };
 
-  const getEthAccount = async () => {
-    const { address } = await Client.register.getEthAccount();
+  const getAccount = async (didType: WalletType = "eth") => {
+    let address = "";
+    let account = await Client.register.getAccount(didType);
+    address = account.address;
     const { userid, userExist } = await Client.register.getUserInfo({
       did_value: address,
-      did_type: "eth",
+      did_type: didType,
     });
     localStorage.setItem("userid", userid);
     setUserAccount({
@@ -52,13 +53,15 @@ const useLogin = () => {
     };
   };
 
-  const login = async (password: string) => {
+  const login = async (password: string, didType: WalletType = "eth") => {
     if (!userAccount) {
       return;
     }
 
-    const localMainPrivateKey = localStorage.getItem("MAIN_PRIVATE_KEY") || "";
-    const localMainPublicKey = localStorage.getItem("MAIN_PUBLIC_KEY") || "";
+    const localMainPrivateKey =
+      localStorage.getItem(`${didType}_MAIN_PRIVATE_KEY`) || "";
+    const localMainPublicKey =
+      localStorage.getItem(`${didType}_MAIN_PUBLIC_KEY`) || "";
 
     const { userid, address } = userAccount;
     const {
@@ -67,18 +70,19 @@ const useLogin = () => {
       pubkeyExpiredTimestamp,
       mainPrivateKey,
       mainPublicKey,
-    } = await Client.register.signMetaMask({
+    } = await Client.register.login({
       password,
       userid,
       did_value: address,
+      did_type: didType,
       mainPublicKey: localMainPublicKey,
       mainPrivateKey: localMainPrivateKey,
     });
     localStorage.setItem("PRIVATE_KEY", TempPrivateKey);
     localStorage.setItem("PUBLIC_KEY", TempPublicKey);
-    localStorage.setItem("MAIN_PRIVATE_KEY", mainPrivateKey);
-    localStorage.setItem("MAIN_PUBLIC_KEY", mainPublicKey);
-    localStorage.setItem("WALLET_ADDRESS", address);
+    localStorage.setItem(`${didType}_MAIN_PRIVATE_KEY`, mainPrivateKey);
+    localStorage.setItem(`${didType}_MAIN_PUBLIC_KEY`, mainPublicKey);
+    localStorage.setItem(`DID_KEY`, `${didType}:${address}`);
     localStorage.setItem(
       "PUBKEY_EXPIRED_TIMESTAMP",
       String(pubkeyExpiredTimestamp)
@@ -90,31 +94,31 @@ const useLogin = () => {
     });
   };
 
-  const register = async (password: string) => {
+  const register = async (password: string, didType: WalletType = "eth") => {
     if (!userAccount) {
       return;
     }
     const { address, userid } = userAccount;
-    const { mainPrivateKey, mainPublicKey } =
-      await Client.register.registerMetaMask({
-        password,
-        did_value: address,
-        userid,
-        avatar_url: `https://cdn.stamp.fyi/avatar/${address}?s=300`,
-      });
-    localStorage.setItem("MAIN_PRIVATE_KEY", mainPrivateKey);
-    localStorage.setItem("MAIN_PUBLIC_KEY", mainPublicKey);
+    const { mainPrivateKey, mainPublicKey } = await Client.register.register({
+      password,
+      did_value: address,
+      userid,
+      did_type: didType,
+      avatar_url: `https://cdn.stamp.fyi/avatar/${address}?s=300`,
+    });
+    localStorage.setItem(`${didType}_MAIN_PRIVATE_KEY`, mainPrivateKey);
+    localStorage.setItem(`${didType}_MAIN_PUBLIC_KEY`, mainPublicKey);
   };
 
   const logout = () => {
     localStorage.setItem("PRIVATE_KEY", "");
     localStorage.setItem("PUBLIC_KEY", "");
-    localStorage.setItem("WALLET_ADDRESS", "");
+    localStorage.setItem("DID_KEY", "");
     localStorage.setItem("userid", "");
     setKeys(null);
   };
 
-  return { keys, fastestUrl, init, login, logout, getEthAccount, register };
+  return { keys, fastestUrl, init, login, logout, getAccount, register };
 };
 
 export default useLogin;

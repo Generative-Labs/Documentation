@@ -2187,7 +2187,7 @@
               "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard",
               "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard",
               "title": "DashBoard",
-              "description": "AS The Tabs component, DashBoard renders ChannelList、ContactList and Profile by default when no props are passed, it gets showListTypeView property that the current type of tab panel  through the useChatContext, and cannot be used outside the Chat component.",
+              "description": "AS The Tabs component, DashBoard renders ChannelList、ContactList、NotificationList and Profile by default when no props are passed, it gets showListTypeView property that the current type of tab panel  through the useChatContext, and cannot be used outside the Chat component.",
               "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard.md",
               "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React/chatComponent",
               "slug": "/Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard",

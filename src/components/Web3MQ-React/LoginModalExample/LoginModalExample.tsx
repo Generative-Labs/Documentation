@@ -7,7 +7,7 @@ import useLogin from '../ChatExample/hooks/useLogin';
 import ss from './index.module.css';
 
 export const LoginModalExample: React.FC = () => {
-  const { keys, fastestUrl, init, login, logout, getEthAccount, register } = useLogin();
+  const { keys, fastestUrl, init, login, logout, getAccount, register } = useLogin();
   const [appType, setAppType] = useState(
     window.innerWidth <= 600 ? AppTypeEnum['h5'] : AppTypeEnum['pc'],
   );
@@ -44,7 +44,7 @@ export const LoginModalExample: React.FC = () => {
           modalClassName={ss.modalClassName}
           register={register}
           login={login}
-          getEthAccount={getEthAccount}
+          getEthAccount={getAccount}
           loginBtnNode={<Button size='large' type='ghost'>MetaMask</Button>}
         />
       </div>

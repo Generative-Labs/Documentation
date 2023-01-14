@@ -1,9 +1,16 @@
 import React, { useEffect } from 'react';
 import { Client } from 'web3-mq';
-import { AppTypeEnum, Button, ChannelHead, Chat, Notify } from 'web3-mq-react';
+import { AppTypeEnum, Button, Chat, Notify, DashBoard } from 'web3-mq-react';
 
 import useLogin from '../ChatExample/hooks/useLogin';
 
+const CustomHead = () => {
+  return (
+    <div style={{borderBottom: '1px solid rgba(0, 0, 0, 0.06)'}}>
+      <Notify />
+    </div>
+  )
+}
 export const NotifyExample: React.FC = (props: any) => {
   const { keys, init, fastestUrl, logout } = useLogin();
   
@@ -24,14 +31,9 @@ export const NotifyExample: React.FC = (props: any) => {
   const client = Client.getInstance(keys);
 
   return (
-    <div id='box' style={{position: 'relative', border: '1px solid #f2f2f2',  width: '100%',height: '600px',overflow: 'auto'}}>
+    <div id='box' style={{position: 'relative', border: '1px solid #f2f2f2',  minWidth: '375px',height: '600px',overflow: 'auto'}}>
       <Chat containerId='box' client={client} appType={AppTypeEnum['h5']} logout={logout}>
-        <div style={{height: '100%'}}>
-          <ChannelHead />
-          <div style={{borderTop: '1px solid rgba(0,0,0,.06)'}}>
-            <Notify />
-          </div>
-        </div>
+        <DashBoard ChannelHead={CustomHead} />
       </Chat>
     </div>
   );

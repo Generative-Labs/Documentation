@@ -1,5 +1,5 @@
 # DashBoard
-AS The Tabs component, `DashBoard` renders `ChannelList`、`ContactList` and `Profile` by default when no props are passed, it gets `showListTypeView` property that the current type of tab panel  through the `useChatContext`, and cannot be used outside the `Chat` component.
+AS The Tabs component, `DashBoard` renders `ChannelList`、`ContactList`、`NotificationList` and `Profile` by default when no props are passed, it gets `showListTypeView` property that the current type of tab panel  through the `useChatContext`, and cannot be used outside the `Chat` component.
 
 ## Basic Usage
 
