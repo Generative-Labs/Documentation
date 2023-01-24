@@ -15,10 +15,10 @@ import {
   useMessageInputContext 
 } from 'web3-mq-react';
 
-import useLogin from '/hooks/useLogin';
+import useLogin from './hooks/useLogin';
 
-export const MessageInputExample: React.FC = () => {
-  const { keys, init, fastestUrl, getEthAccount, login, logout, register } = useLogin();
+export const App: React.FC = () => {
+  const { keys, fastestUrl, init, logout, handleLoginEvent } = useLogin();
 
   useEffect(() => {
     init();
@@ -29,9 +29,7 @@ export const MessageInputExample: React.FC = () => {
     return (
        <LoginModal 
         appType={AppTypeEnum.pc}
-        register={register}
-        login={login}
-        getEthAccount={getEthAccount}
+        handleLoginEvent={handleLoginEvent}
         loginBtnNode={<Button size='large' type='ghost'>login</Button>}
       />
     );

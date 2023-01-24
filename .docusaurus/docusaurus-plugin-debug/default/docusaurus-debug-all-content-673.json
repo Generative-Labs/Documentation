@@ -12,9 +12,9 @@
           "versionClassName": "docs-version-current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/zhaowei/Desktop/trunk/ty/Documentation/sidebars.js",
-          "contentPath": "/Users/zhaowei/Desktop/trunk/ty/Documentation/docs",
-          "contentPathLocalized": "/Users/zhaowei/Desktop/trunk/ty/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/edy/Desktop/web3-mq documentation/Documentation/sidebars.js",
+          "contentPath": "/Users/edy/Desktop/web3-mq documentation/Documentation/docs",
+          "contentPathLocalized": "/Users/edy/Desktop/web3-mq documentation/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "Intro",
@@ -2104,8 +2104,8 @@
                 "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify"
               },
               "next": {
-                "title": "DashBoard",
-                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard"
+                "title": "ConnectMessage",
+                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ConnectMessage"
               }
             },
             {
@@ -2159,6 +2159,28 @@
               }
             },
             {
+              "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ConnectMessage",
+              "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ConnectMessage",
+              "title": "ConnectMessage",
+              "description": "ConnectMessage is a global prompt component used to indicate the status of a Websocket connection,and can only be used in the chat component.",
+              "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ConnectMessage.md",
+              "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React/chatComponent",
+              "slug": "/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ConnectMessage",
+              "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ConnectMessage",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "ChanelHead",
+                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead"
+              },
+              "next": {
+                "title": "DashBoard",
+                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard"
+              }
+            },
+            {
               "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel",
               "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel",
               "title": "CreateChannel",
@@ -2197,8 +2219,8 @@
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "ChanelHead",
-                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead"
+                "title": "ConnectMessage",
+                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ConnectMessage"
               },
               "next": {
                 "title": "Profile",
@@ -2209,7 +2231,7 @@
               "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal",
               "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal",
               "title": "LoginModal",
-              "description": "In LoginModal, you can connect wallets to register user or login web3mq.",
+              "description": "LoginModal component implements login and registration operations,",
               "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal.md",
               "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React/chatComponent",
               "slug": "/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal",
@@ -2228,6 +2250,31 @@
               "next": {
                 "title": "Chat",
                 "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole",
+              "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole",
+              "title": "MessageConsole",
+              "description": "MessageConsole is essentially a functional component that works with user permissions. It renders the input or button group based on the permissions of both users in the current chat.And can only be used in the chat component.",
+              "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole.md",
+              "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React/chatComponent",
+              "slug": "/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole",
+              "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 7,
+              "frontMatter": {
+                "sidebar_position": 7
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "MessageInput",
+                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageInput"
+              },
+              "next": {
+                "title": "Notify",
+                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify"
               }
             },
             {
@@ -2276,8 +2323,8 @@
                 "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead"
               },
               "next": {
-                "title": "Notify",
-                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify"
+                "title": "MessageConsole",
+                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole"
               }
             },
             {
@@ -2316,14 +2363,14 @@
               "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 6,
+              "sidebarPosition": 8,
               "frontMatter": {
-                "sidebar_position": 6
+                "sidebar_position": 8
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "MessageInput",
-                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageInput"
+                "title": "MessageConsole",
+                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole"
               },
               "next": {
                 "title": "ChanelHead",
@@ -2398,6 +2445,28 @@
                 "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Profile"
               },
               "next": {
+                "title": "Button",
+                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Button"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Button",
+              "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Button",
+              "title": "Button",
+              "description": "Basic Usage",
+              "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Button.md",
+              "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent",
+              "slug": "/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Button",
+              "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Button",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Avatar",
+                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Avatar"
+              },
+              "next": {
                 "title": "ChannelListMessenger",
                 "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/ChannelListMessenger"
               }
@@ -2416,8 +2485,8 @@
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Avatar",
-                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Avatar"
+                "title": "Button",
+                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Button"
               },
               "next": {
                 "title": "Loading",
@@ -3276,11 +3345,19 @@
                           },
                           {
                             "type": "doc",
+                            "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole"
+                          },
+                          {
+                            "type": "doc",
                             "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify"
                           },
                           {
                             "type": "doc",
                             "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead"
+                          },
+                          {
+                            "type": "doc",
+                            "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ConnectMessage"
                           },
                           {
                             "type": "doc",
@@ -3301,6 +3378,10 @@
                           {
                             "type": "doc",
                             "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Avatar"
+                          },
+                          {
+                            "type": "doc",
+                            "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Button"
                           },
                           {
                             "type": "doc",

@@ -7,16 +7,16 @@ import useLogin from './hooks/useLogin';
 import ss from './index.module.css';
 
 const CustomComponent: React.FC = () => {
-  const { client, appType, userInfo, containerId, showListTypeView } = useChatContext();
+  const { client, appType, loginUserInfo, containerId, showListTypeView } = useChatContext();
   console.log(client, 'Client Instance')
   return (
     <div className={ss.custom_box} style={{wordBreak: 'break-all'}}>
       <div><span>appType:</span> {appType}</div>
       <div><span>containerId:</span> {containerId}</div>
       <div><span>showListTypeView:</span> {showListTypeView}</div>
-      <div><span>userId:</span> {userInfo?.userid}</div>
-      <div><span>wallet_address:</span> {userInfo?.wallet_address}</div>
-      <div><span>wallet_type:</span> {userInfo?.wallet_type}</div>
+      <div><span>userId:</span> {loginUserInfo?.userid}</div>
+      <div><span>wallet_address:</span> {loginUserInfo?.wallet_address}</div>
+      <div><span>wallet_type:</span> {loginUserInfo?.wallet_type}</div>
     </div>
   )
 }

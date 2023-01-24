@@ -615,6 +615,12 @@
                   },
                   {
                     "type": "link",
+                    "label": "MessageConsole",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole"
+                  },
+                  {
+                    "type": "link",
                     "label": "Notify",
                     "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify",
                     "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify"
@@ -624,6 +630,12 @@
                     "label": "ChanelHead",
                     "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead",
                     "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead"
+                  },
+                  {
+                    "type": "link",
+                    "label": "ConnectMessage",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ConnectMessage",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ConnectMessage"
                   },
                   {
                     "type": "link",
@@ -650,6 +662,12 @@
                     "label": "Avatar",
                     "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Avatar",
                     "docId": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Avatar"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Button",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Button",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Button"
                   },
                   {
                     "type": "link",
@@ -1260,6 +1278,12 @@
       "description": "Basic Usage",
       "sidebar": "tutorialSidebar"
     },
+    "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ConnectMessage": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ConnectMessage",
+      "title": "ConnectMessage",
+      "description": "ConnectMessage is a global prompt component used to indicate the status of a Websocket connection,and can only be used in the chat component.",
+      "sidebar": "tutorialSidebar"
+    },
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel",
       "title": "CreateChannel",
@@ -1275,7 +1299,13 @@
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal",
       "title": "LoginModal",
-      "description": "In LoginModal, you can connect wallets to register user or login web3mq.",
+      "description": "LoginModal component implements login and registration operations,",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole",
+      "title": "MessageConsole",
+      "description": "MessageConsole is essentially a functional component that works with user permissions. It renders the input or button group based on the permissions of both users in the current chat.And can only be used in the chat component.",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead": {
@@ -1317,6 +1347,12 @@
     "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Avatar": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Avatar",
       "title": "Avatar",
+      "description": "Basic Usage",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Button": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Button",
+      "title": "Button",
       "description": "Basic Usage",
       "sidebar": "tutorialSidebar"
     },

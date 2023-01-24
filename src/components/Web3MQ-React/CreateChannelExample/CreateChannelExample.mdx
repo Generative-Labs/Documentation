@@ -6,7 +6,7 @@ import { AppTypeEnum, Chat, CreateChannel, ChannelList, ContactList, Button, Log
 import useLogin from './hooks/useLogin';
 
 export const CreateChannelExample: React.FC = () => {
-  const { keys, init, fastestUrl, getEthAccount, login, logout, register } = useLogin();
+  const { keys, fastestUrl, init, logout, handleLoginEvent } = useLogin();
   
   useEffect(() => {
     init();
@@ -17,9 +17,8 @@ export const CreateChannelExample: React.FC = () => {
     return (
       <LoginModal 
         appType={AppTypeEnum.pc}
-        register={register}
-        login={login}
-        getEthAccount={getEthAccount}
+        containerId=''
+        handleLoginEvent={handleLoginEvent}
         loginBtnNode={<Button size='large' type='ghost'>login</Button>}
       />
     );

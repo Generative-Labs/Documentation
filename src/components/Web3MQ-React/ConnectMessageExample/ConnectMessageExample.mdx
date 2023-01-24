@@ -1,13 +1,13 @@
-```tsx 
+```tsx
 import React, { useEffect } from 'react';
 import { Client } from 'web3-mq';
-import { AppTypeEnum, Chat, Button, DashBoard, LoginModal, useChatContext } from 'web3-mq-react';
+import { AppTypeEnum, Chat, ConnectMessage, Button } from 'web3-mq-react';
 
 import useLogin from './hooks/useLogin';
 
-export const DashBoardExample: React.FC = () => {
-  const { keys, fastestUrl, init, logout, handleLoginEvent } = useLogin();
-
+export const ConnectMessageExample: React.FC = () => {
+  const { keys, init, fastestUrl, logout } = useLogin();
+  
   useEffect(() => {
     init();
     document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
@@ -15,12 +15,12 @@ export const DashBoardExample: React.FC = () => {
 
   if (!keys) {
     return (
-       <LoginModal 
-        appType={AppTypeEnum.pc}
+      <LoginModal 
+        appType={appType}
         handleLoginEvent={handleLoginEvent}
-        loginBtnNode={<Button size='large' type='ghost'>login</Button>}
+        loginBtnNode={<Button size='large' type='ghost'>Login</Button>}
       />
-    );
+    )
   }
   if (!fastestUrl) {
     return null;
@@ -29,9 +29,10 @@ export const DashBoardExample: React.FC = () => {
   const client = Client.getInstance(keys);
 
   return (
-    <div id='box' style={{position: 'relative'}}>
+    <div id='box' style={{position: 'relative', width: '100%',overflow: 'auto'}}>
       <Chat containerId='box' client={client} appType={AppTypeEnum['h5']} logout={logout}>
-        <DashBoard />
+        <ConnectMessage />
+        <div>Part of Content</div>
       </Chat>
     </div>
   );

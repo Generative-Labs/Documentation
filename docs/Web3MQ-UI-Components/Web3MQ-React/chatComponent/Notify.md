@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 8
 ---
 
 # Notify
@@ -7,7 +7,7 @@ sidebar_position: 6
 The `Notify` is a function component that sends notifications to users, the functions in the `Notify` are implemented based on the `client` api and can only be used in `Chat`.
 
 ## Basic Usage
-When the user successfully sends a notification in the `Notify`, `NotificationList` in the `ChannelHead` component will receive a prompt.
+When the user successfully sends a notification in the `Notify`, `NotificationList` in the `DashBoard` component will receive a prompt.
 
 import { Layout } from '@site/src/components/Layout'
 import { NotifyExample } from '@site/src/components/Web3MQ-React/NotifyExample';

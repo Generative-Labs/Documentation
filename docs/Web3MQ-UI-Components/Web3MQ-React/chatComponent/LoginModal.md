@@ -3,10 +3,10 @@ sidebar_position: 0
 ---
 
 # LoginModal
-In `LoginModal`, you can connect wallets to register user or login `web3mq`.
+`LoginModal` component implements login and registration operations,
 
 ## Basic Usage
-You need to provide getEthAccount, login and register as props for LoginModal.[how to use](/docs/Web3MQ-UI-Components/Web3MQ-React/Intro#an-example-of-initializing-login-hooks)
+User can pass the `handleLoginEvent` as props to customize the callback when logging in or registering, and also can pass `account` as props to specify the user information to render the current page as a login or registration page.[how to use](/docs/Web3MQ-UI-Components/Web3MQ-React/Intro#an-example-of-initializing-login-hooks)
 
 import { Layout } from '@site/src/components/Layout'
 import { LoginModalExample } from '@site/src/components/Web3MQ-React/LoginModalExample';
@@ -21,19 +21,39 @@ code={<LoginModalMdx />}>
 </Layout>
 
 ## Api
+**LoginEventDataType**
+```tsx
+export type LoginResType = {
+  privateKey: string;
+  publicKey: string;
+  tempPrivateKey: string;
+  tempPublicKey: string;
+  didKey: string;
+  userid: string;
+  address: string;
+  pubkeyExpiredTimestamp: number;
+};
+```
+**RegisterResType**
+```tsx
+export type RegisterResType = {
+  privateKey: string;
+  publicKey: string;
+  address: string;
+};
+```
 
 **The properties of the LoginModal are described as follows:**
 
 | Property      | Description                            | Type                                      | Default |
 | ------------- | -------------------------------------- | ----------------------------------------- | ------- |
-| account       | Set account info                       | {address: string;userExist: boolean}      |   -     |
+| account       | Set account info                       | {address: string,userid: string,walletType: [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype),userExist: boolean}      |   -     |
 | appType       | set viewport type of web3-mq-react     | `pc` \| `h5`                              |  `pc`   |
 | containerId   | set container Id of `LoginModal`       | String                                    |    -    |
 | isShow        | Whether the modal dialog is visible or not | Boolean                               |   -     |
 | loginBtnNode  | Set the custom `Button`                | React.ReactNode                           |   -     |
+| keys          | Set the user master key pair for skipping the login signature operation | {publicKey: string,privateKey: string,walletAddress: string} |   -     |
 | modalClassName| set the dialog class selector          | String                                    |   -     |
-| login         | login method                           | (password: string) => Promise< void >     |   -     |
-| register      | register method                        | (password: string) => Promise< void >     |   -     |
-| getEthAccount | method of get wallet info              | (walletType?: WalletType) => Promise<{address: string;userid: string;userExist:boolean> |   -     |
 | style         | set your custom style                  |  React.CSSProperties                      |   -     |
+| handleLoginEvent | Callback when login or register     | (eventData: {type: 'login' \| 'register' \| 'error',msg: string,data: LoginResType \| RegisterResType \| null}) => void   |   -     |
 

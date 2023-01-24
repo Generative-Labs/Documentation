@@ -411,6 +411,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ConnectMessage",
+              "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ConnectMessage",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel",
               "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel",
               "sidebar": "tutorialSidebar"
@@ -423,6 +428,11 @@
             {
               "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal",
               "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole",
+              "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -458,6 +468,11 @@
             {
               "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Avatar",
               "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Avatar",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Button",
+              "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Button",
               "sidebar": "tutorialSidebar"
             },
             {

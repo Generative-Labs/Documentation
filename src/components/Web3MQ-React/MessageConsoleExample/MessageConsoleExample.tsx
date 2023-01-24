@@ -1,17 +1,22 @@
 import React, { useEffect } from 'react';
 import { Client } from 'web3-mq';
-import { AppTypeEnum, Button, Chat, Notify, DashBoard } from 'web3-mq-react';
+import { 
+  AppTypeEnum, 
+  Button,
+  Channel, 
+  ChannelList, 
+  Chat, 
+  MessageConsole,
+  MessageHeader, 
+  MessageInput, 
+  MessageList, 
+  Window,
+} from 'web3-mq-react';
 
 import useLogin from '../ChatExample/hooks/useLogin';
 
-const CustomHead = () => {
-  return (
-    <div style={{borderBottom: '1px solid rgba(0, 0, 0, 0.06)'}}>
-      <Notify />
-    </div>
-  )
-}
-export const NotifyExample: React.FC = (props: any) => {
+export const MessageConsoleExample: React.FC = (props: any) => {
+  const { type } = props;
   const { keys, init, fastestUrl, logout } = useLogin();
   
   useEffect(() => {
@@ -31,9 +36,18 @@ export const NotifyExample: React.FC = (props: any) => {
   const client = Client.getInstance(keys);
 
   return (
-    <div id='box' style={{position: 'relative', border: '1px solid #f2f2f2',  width: '375px',height: '600px',overflow: 'auto'}}>
+    <div id='box' style={{position: 'relative', border: '1px solid #f2f2f2',  width: '100%',height: '600px',overflow: 'auto'}}>
       <Chat containerId='box' client={client} appType={AppTypeEnum['h5']} logout={logout}>
-        <DashBoard ChannelHead={CustomHead} />
+        <div style={{height: '100%', display: 'flex', flexDirection: 'column'}}>
+          <ChannelList />
+        </div>
+        <Channel>
+          <Window hasContainer>
+            <MessageHeader />
+            <MessageList />
+            <MessageConsole Input={<MessageInput />}/>
+          </Window>
+        </Channel>
       </Chat>
     </div>
   );

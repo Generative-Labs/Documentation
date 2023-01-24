@@ -7,7 +7,7 @@ import useLogin from './hooks/useLogin';
 
 export const ProfileExample: React.FC = () => {
   const [appType, setAppType] = useState(AppTypeEnum['h5']);
-  const { keys, init, fastestUrl, getEthAccount, login, logout, register } = useLogin();
+  const { keys, fastestUrl, init, logout, handleLoginEvent } = useLogin();
 
   useEffect(() => {
     init();
@@ -18,9 +18,7 @@ export const ProfileExample: React.FC = () => {
     return (
        <LoginModal 
         appType={AppTypeEnum.pc}
-        register={register}
-        login={login}
-        getEthAccount={getEthAccount}
+        handleLoginEvent={handleLoginEvent}
         loginBtnNode={<Button size='large' type='ghost'>login</Button>}
       />
     );

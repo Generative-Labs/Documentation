@@ -22,9 +22,41 @@ const CustomList = (props: PropsWithChildren<ChannelListMessengerProps>) => {
     <div ref={listRef} style={{height: '100%', overflowY: 'auto'}}>{children}</div>
   )
 }
+const CustomDefaultEmptyStateIndicator = () => {
+  return <div style={{textAlign: 'center'}}>No Reasult...</div>
+}
+const CustomPreview = (props: ChannelPreviewUIComponentProps) => {
+  const {
+    active,
+    avatarUrl,
+    channel,
+    lastMessage,
+    displayTitle,
+    setActiveChannel,
+    unread,
+    updatedAt,
+  } = props;
+
+  const onSetActiveChannel = () => {
+    setActiveChannel && setActiveChannel(channel);
+  };
+
+  return (
+    <div
+      onClick={onSetActiveChannel}
+    >
+      <Avatar
+        name="user"
+        image={avatarUrl}
+        size={30} 
+      />
+      <div>{displayTitle}</div>
+    </div>
+  )
+};
 
 export const ChannelListExample: React.FC = () => {
-  const { keys, init, fastestUrl, getEthAccount, login, logout, register } = useLogin();
+  const { keys, fastestUrl, init, logout, handleLoginEvent } = useLogin();
   
   useEffect(() => {
     init();
@@ -35,9 +67,7 @@ export const ChannelListExample: React.FC = () => {
     return (
       <LoginModal 
         appType={AppTypeEnum.pc}
-        register={register}
-        login={login}
-        getEthAccount={getEthAccount}
+        handleLoginEvent={handleLoginEvent}
         loginBtnNode={<Button size='large' type='ghost'>login</Button>}
       />
     );
@@ -51,7 +81,11 @@ export const ChannelListExample: React.FC = () => {
   return (
     <div id='box' style={{position: 'relative'}}>
       <Chat client={client} appType={AppTypeEnum['h5']} logout={logout}>
-        <ChannelList List={CustomList}/>
+        <ChannelList 
+          List={CustomList}
+          DefaultEmptyStateIndicator={CustomDefaultEmptyStateIndicator}
+          Preview={CustomPreview}
+        />
       </Chat>
     </div>
   );

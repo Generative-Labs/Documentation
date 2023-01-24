@@ -36,7 +36,7 @@ const CustomChannelHead = () => {
 }
 
 export const DashBoardExample: React.FC = () => {
-  const { keys, init, fastestUrl, getEthAccount, login, logout, register } = useLogin();
+  const { keys, fastestUrl, init, logout, handleLoginEvent } = useLogin();
 
   useEffect(() => {
     init();
@@ -47,9 +47,7 @@ export const DashBoardExample: React.FC = () => {
     return (
        <LoginModal 
         appType={AppTypeEnum.pc}
-        register={register}
-        login={login}
-        getEthAccount={getEthAccount}
+        handleLoginEvent={handleLoginEvent}
         loginBtnNode={<Button size='large' type='ghost'>login</Button>}
       />
     );

@@ -7,7 +7,7 @@ import useLogin from '../ChatExample/hooks/useLogin';
 import ss from './index.module.css';
 
 export const LoginModalExample: React.FC = () => {
-  const { keys, fastestUrl, init, login, logout, getAccount, register } = useLogin();
+  const { keys, fastestUrl, init, logout, handleLoginEvent } = useLogin();
   const [appType, setAppType] = useState(
     window.innerWidth <= 600 ? AppTypeEnum['h5'] : AppTypeEnum['pc'],
   );
@@ -24,6 +24,17 @@ export const LoginModalExample: React.FC = () => {
   }, []);
 
   if (!keys) {
+    let mainKeys: any = null;
+    const mainPrivateKey = localStorage.getItem(`MAIN_PRIVATE_KEY`);
+    const mainPublicKey = localStorage.getItem(`MAIN_PUBLIC_KEY`);
+    const address = localStorage.getItem('WALLET_ADDRESS');
+    if (mainPublicKey && mainPrivateKey && address) {
+      mainKeys = {
+        publicKey: mainPublicKey,
+        privateKey: mainPrivateKey,
+        walletAddress: address,
+      };
+    }
     return (
       <div 
         id='box' 
@@ -40,15 +51,14 @@ export const LoginModalExample: React.FC = () => {
         <LoginModal 
           appType={appType}
           containerId='box'
+          keys={mainKeys}
           isShow={true}
           modalClassName={ss.modalClassName}
-          register={register}
-          login={login}
-          getEthAccount={getAccount}
+          handleLoginEvent={handleLoginEvent}
           loginBtnNode={<Button size='large' type='ghost'>Login</Button>}
         />
       </div>
-    );
+    )
   }
 
   if (!fastestUrl) {
@@ -59,9 +69,9 @@ export const LoginModalExample: React.FC = () => {
 
   return (
     <Chat containerId='box' client={client} appType={appType} logout={logout}>
-      <div>
+      <div style={{display: 'flex', flexDirection: 'column'}}>
         <h4>
-          Login success
+          Login success!
         </h4>
         <Button onClick={logout}>logout</Button>
       </div>

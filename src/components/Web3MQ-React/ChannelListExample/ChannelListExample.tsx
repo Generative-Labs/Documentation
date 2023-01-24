@@ -28,7 +28,7 @@ const CustomList = (props: PropsWithChildren<ChannelListMessengerProps>) => {
 
   return (
     <>
-      <div style={{display: 'flex', justifyContent: 'space-evenly', padding: '10px 0px', borderBottom: '1px solid rgb(242, 242, 242)'}}>
+      <div style={{display: 'flex', justifyContent: 'space-evenly', padding: '5px 0px', borderBottom: '1px solid rgb(242, 242, 242)'}}>
         <Button type='ghost' onClick={() => {
           if (load) {
             setLoad(!load)
@@ -170,16 +170,16 @@ export const ChannelListExample: React.FC = (props: any) => {
     <div id='box' style={{position: 'relative', border: '1px solid #f2f2f2', width: '100%',height: '300px',overflow: 'auto'}}>
       <Chat client={client} appType={AppTypeEnum['h5']} logout={logout}>
         <div style={{height: '100%', display: 'flex', flexDirection: 'column'}}>
-          { type === 'DefaultEmptyStateIndicator' && (
-            <div style={{margin: '5px auto'}}>
+          { type === 'custom' && (
+            <div style={{display: 'flex', justifyContent: 'space-evenly', padding: '5px 0px'}}>
               <Button type='ghost' onClick={handleClear} style={{marginRight: '10px'}}>clear Channel</Button>
               <Button type='ghost' onClick={handleRestore}>query Channel</Button>
             </div>
           )}
           <ChannelList 
-            List={type === 'List' ? CustomList :  undefined}
-            DefaultEmptyStateIndicator={type === 'DefaultEmptyStateIndicator' ? CustomDefaultEmptyStateIndicator : undefined}
-            Preview={type === 'Preview' ? CustomPreview : undefined}
+            List={type === 'custom' ? CustomList :  undefined}
+            DefaultEmptyStateIndicator={type === 'custom' ? CustomDefaultEmptyStateIndicator : undefined}
+            Preview={type === 'custom' ? CustomPreview : undefined}
             Paginator={CustomPaginator}
           />
         </div>

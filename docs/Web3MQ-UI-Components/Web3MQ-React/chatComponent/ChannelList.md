@@ -22,34 +22,11 @@ code={<ChannelListMdx />}>
 <ChannelListExample />
 </Layout>
 
-## Custom List
-`List` renders loading failure, loading, and loading success views by `error` and `loading` properties.
-
-import CustomListMdx from '@site/src/components/Web3MQ-React/ChannelListExample/CustomList.mdx';
-
-<Layout
-title='Example'
-description='use custom List component'
-code={<CustomListMdx />}>
-<ChannelListExample type='List' />
-</Layout>
-
-`listRef` is a required attribute and must be bound to the Custom `List` root node. This is necessary for the `ChannelList` to implement paging
-
-## Custom DefaultEmptyStateIndicator
-`DefaultEmptyStateIndicator` is used to show the empty state view.
-
-import CustomDefaultEmptyStateIndicatorMdx from '@site/src/components/Web3MQ-React/ChannelListExample/CustomDefaultEmptyStateIndicator.mdx';
-
-<Layout
-title='Example'
-description='use custom DefaultEmptyStateIndicator component'
-code={<CustomDefaultEmptyStateIndicatorMdx />}>
-<ChannelListExample type='DefaultEmptyStateIndicator' />
-</Layout>
-
-## Custom Paginator
-`Paginator` is a `channelList` subcomponent for pagination, `Paginator` component accepts elment, loadNextPage, and showLoading properties from `ChannelList` component;
+## Custom Component
+> 1. `List` renders loading failure, loading, and loading success views by `error` and `loading` properties.
+> 2. `DefaultEmptyStateIndicator` is used to show the empty state view.
+> 3. `Paginator` is a `channelList` subcomponent for pagination, `Paginator` component accepts elment, loadNextPage, and showLoading properties from `ChannelList` component;
+> 4. `Preview` is used to render list item.
 
 :::tip
 
@@ -57,17 +34,16 @@ code={<CustomDefaultEmptyStateIndicatorMdx />}>
 
 :::
 
-## Custom Preview
-`Preview` is used to render list item.
-
-import CustomPreviewMdx from '@site/src/components/Web3MQ-React/ChannelListExample/CustomPreview.mdx';
+import CustomListMdx from '@site/src/components/Web3MQ-React/ChannelListExample/CustomList.mdx';
 
 <Layout
 title='Example'
-description='use custom Preview component'
-code={<CustomPreviewMdx />}>
-<ChannelListExample type='Preview' />
+description='use custom component as props'
+code={<CustomListMdx />}>
+<ChannelListExample type='custom' />
 </Layout>
+
+`listRef` is a required attribute and must be bound to the Custom `List` root node. This is necessary for the `ChannelList` to implement paging
 
 ## Api
 

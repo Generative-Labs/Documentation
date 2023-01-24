@@ -7,16 +7,18 @@ import {
   Channel, 
   ChannelList, 
   Chat, 
-  LoginModal,
+  MessageConsole,
   MessageHeader, 
-  Window
+  MessageInput, 
+  MessageList, 
+  Window,
 } from 'web3-mq-react';
 
 import useLogin from './hooks/useLogin';
 
-export const MessageHeadExample: React.FC = () => {
-  const { keys, fastestUrl, init, logout, handleLoginEvent } = useLogin();
-
+export const App: React.FC = () => {
+  const { keys, init, fastestUrl, logout } = useLogin();
+  
   useEffect(() => {
     init();
     document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
@@ -24,12 +26,12 @@ export const MessageHeadExample: React.FC = () => {
 
   if (!keys) {
     return (
-       <LoginModal 
-        appType={AppTypeEnum.pc}
+      <LoginModal 
+        appType={appType}
         handleLoginEvent={handleLoginEvent}
-        loginBtnNode={<Button size='large' type='ghost'>login</Button>}
+        loginBtnNode={<Button size='large' type='ghost'>Login</Button>}
       />
-    );
+    )
   }
   if (!fastestUrl) {
     return null;
@@ -38,12 +40,14 @@ export const MessageHeadExample: React.FC = () => {
   const client = Client.getInstance(keys);
 
   return (
-    <div id='box' style={{position: 'relative'}}>
+    <div id='box' style={{position: 'relative', width: '100%',overflow: 'auto'}}>
       <Chat containerId='box' client={client} appType={AppTypeEnum['h5']} logout={logout}>
         <ChannelList />
         <Channel>
           <Window hasContainer>
             <MessageHeader />
+            <MessageList />
+            <MessageConsole Input={<MessageInput />}/>
           </Window>
         </Channel>
       </Chat>

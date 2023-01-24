@@ -34,21 +34,25 @@ const CustomInput: React.FC = () => {
 
 const CustomMessage: React.FC = () => {
   const { message } = useMessageContext();
+  const { 
+    senderInfo = {}, 
+  } = message;
   const getShortAddress = (address: string = '') => {
     let strLength = address.length;
     return address.substring(0, 5) + '...' + address.substring(strLength - 4, strLength);
   };
+  const { defaultUserAvatar, defaultUserName } = senderInfo || {};
 
   return (
     <div style={{ display: 'flex', alignItems: 'flex-start', padding: '16px 24px', borderBottom: '1px solid #f2f2f2', position: 'relative'}}>
       <Avatar
         name="user"
-        image={message?.avatar || ''}
+        image={defaultUserAvatar || ''}
         size={30} 
       />
       <div style={{position: 'relative', width: '100%'}}>
         <div className={ss.dataInner}>
-          <span className={ss.name}>{getShortAddress(message.senderId)}</span>
+          <span className={ss.name}>{defaultUserName || getShortAddress(message.senderId)}</span>
           <span>{message.date}&nbsp;{message.timestamp}</span>
         </div>
         <div>{message.content}</div>

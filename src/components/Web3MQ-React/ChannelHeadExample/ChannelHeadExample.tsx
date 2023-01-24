@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Client } from 'web3-mq';
-import { AppTypeEnum, Button, Chat, ChannelHead } from 'web3-mq-react';
+import { AppTypeEnum, Button, Chat, ChannelHead, ContactList } from 'web3-mq-react';
 
 import useLogin from '../ChatExample/hooks/useLogin';
 
@@ -26,7 +26,10 @@ export const ChannelHeadExample: React.FC = () => {
   return (
     <div id='box' style={{position: 'relative', border: '1px solid #f2f2f2',  width: '100%',height: '600px',overflow: 'auto'}}>
       <Chat containerId='box' client={client} appType={AppTypeEnum['h5']} logout={logout}>
-        <div style={{height: '100%', textAlign: 'center', fontSize: '16px', fontWeight: '800', borderTop: '1px solid rgba(0,0,0,.06)'}}>Part of Content</div>
+        <div style={{height: '100%', textAlign: 'center', fontSize: '16px', fontWeight: '800', borderTop: '1px solid rgba(0,0,0,.06)'}}>
+          Part of Content
+          <div style={{display: 'none'}}><ContactList /></div> 
+        </div>
         <ChannelHead />
       </Chat>
     </div>

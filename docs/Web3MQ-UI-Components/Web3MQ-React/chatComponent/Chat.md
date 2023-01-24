@@ -55,7 +55,7 @@ const { client } = useChatContext();
 | Property    | Description                            | Type                                      | Default |
 | ----------- | -------------------------------------- | ----------------------------------------- | ------- |
 | appType     | set viewport type of web3-mq-react     | `pc` \| `h5`                              |  `pc`   |
-| classNmae   | set your custom className              | string                                    |   -     |
+| className   | set your custom className              | string                                    |   -     |
 | client      | Chat Client Object                     | [Client](/docs/Web3MQ-SDK/JS-SDK/client/) |   -     |
 | containerId | set container Id of your web3-mq-react | string                                    |   -     |
 | style       | set your custom style                  | React.CSSProperties                       |   -     |

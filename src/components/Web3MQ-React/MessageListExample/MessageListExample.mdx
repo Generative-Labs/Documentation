@@ -43,7 +43,7 @@ const CustomMessage = (props: PropsWithChildren<MessageProps>) => {
 }
 
 export const MessageListExample: React.FC = () => {
- const { keys, init, fastestUrl, getEthAccount, login, logout, register } = useLogin();
+ const { keys, fastestUrl, init, logout, handleLoginEvent } = useLogin();
 
   useEffect(() => {
     init();
@@ -54,9 +54,7 @@ export const MessageListExample: React.FC = () => {
     return (
        <LoginModal 
         appType={AppTypeEnum.pc}
-        register={register}
-        login={login}
-        getEthAccount={getEthAccount}
+        handleLoginEvent={handleLoginEvent}
         loginBtnNode={<Button size='large' type='ghost'>login</Button>}
       />
     );
