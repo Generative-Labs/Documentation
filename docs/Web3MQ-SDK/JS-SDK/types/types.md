@@ -11,9 +11,9 @@ position: 7
 | EVENT_MAP | [EVENT_MAP](/docs/Web3MQ-SDK/JS-SDK/eventCenter/) |
 
 ```ts
-import { EVENT_MAP } from './core/events';
+import { EVENT_MAP } from "./core/events";
 
-export type EventTypes = 'all' | keyof typeof EVENT_MAP;
+export type EventTypes = "all" | keyof typeof EVENT_MAP;
 ```
 
 ### ServiceResponse
@@ -81,11 +81,11 @@ export type EthAccountType = {
 
 ```ts
 export type initOptions = {
-    connectUrl?: string | null;
-    app_key?: string;
-    env?: EnvTypes;
-    tempPubkey?: string;
-    didKey?: string;
+  connectUrl?: string | null;
+  app_key?: string;
+  env?: EnvTypes;
+  tempPubkey?: string;
+  didKey?: string;
 };
 ```
 
@@ -104,7 +104,7 @@ export type SendTempConnectOptions = {
 
 ```ts
 export type SignClientCallBackType = {
-  type: 'connect' | 'messageStatus' | 'keys';
+  type: "connect" | "messageStatus" | "keys";
   data: any;
 };
 ```
@@ -113,16 +113,16 @@ export type SignClientCallBackType = {
 
 ```ts
 export type getUserInfoParams = {
-    did_type: string;
-    did_value: string;
-    timestamp: number;
+  did_type: string;
+  did_value: string;
+  timestamp: number;
 };
 ```
 
 ### EnvTypes
 
 ```ts
-export type EnvTypes = 'dev' | 'test';
+export type EnvTypes = "dev" | "test";
 ```
 
 ### ActiveChannelType
@@ -155,13 +155,13 @@ export type ContactListItemType = {
 ## ActionType
 
 ```ts
-export type ActionType = 'agree';
+export type ActionType = "agree";
 ```
 
 ## MessageStatus
 
 ```ts
-export type MessageStatus = 'delivered' | 'read';
+export type MessageStatus = "delivered" | "read";
 ```
 
 ## changeMessageStatusParams
@@ -315,6 +315,7 @@ export type WalletSignRes = {
   publicKey?: string;
 };
 ```
+
 ## RegisterMetaMaskParams
 
 ```ts
@@ -329,6 +330,7 @@ export type RegisterMetaMaskParams = {
   avatar_base64?: string;
 };
 ```
+
 ## SignMetaMaskParams
 
 ```ts
@@ -340,5 +342,49 @@ export type SignMetaMaskParams = {
   mainPrivateKey?: string;
   mainPublicKey?: string;
   pubkeyExpiredTimestamp?: number;
+};
+```
+
+## GetMainKeypairParams
+
+```ts
+type GetMainKeypairParams = {
+  password: string;
+  did_type: WalletType;
+  did_value: string;
+};
+```
+
+
+## QrCodeRegisterParams
+
+```ts
+type QrCodeRegisterParams = {
+    userid: string;
+    signature: string;
+    did_pubkey?: string;
+    nickname?: string;
+    avatar_url?: string;
+};
+```
+
+## QrCodeLoginParams
+
+```ts
+type QrCodeLoginParams = {
+    userid: string;
+    did_type: string;
+    did_value: string;
+    mainPrivateKey: string;
+    mainPublicKey: string;
+    password?: string;
+    pubkeyExpiredTimestamp?: number;
+};
+```
+## SignClientCallBackType
+```ts
+type SignClientCallBackType = {
+    type: 'createQrcode' | 'connect' | 'messageStatus' | 'keys';
+    data: any;
 };
 ```

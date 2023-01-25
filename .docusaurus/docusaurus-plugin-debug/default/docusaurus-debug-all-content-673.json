@@ -1582,6 +1582,30 @@
               }
             },
             {
+              "unversionedId": "Web3MQ-SDK/JS-SDK/dappConnect/dappConnect",
+              "id": "Web3MQ-SDK/JS-SDK/dappConnect/dappConnect",
+              "title": "DappConnect",
+              "description": "Methods",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK/dappConnect/dappConnect.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK/dappConnect",
+              "slug": "/Web3MQ-SDK/JS-SDK/dappConnect/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK/dappConnect/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Encryption",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/encryption/"
+              },
+              "next": {
+                "title": "Utils",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/utils/"
+              }
+            },
+            {
               "unversionedId": "Web3MQ-SDK/JS-SDK/encryption/encryption",
               "id": "Web3MQ-SDK/JS-SDK/encryption/encryption",
               "title": "Encryption",
@@ -1601,8 +1625,8 @@
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK/PubSub/"
               },
               "next": {
-                "title": "Utils",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/utils/"
+                "title": "DappConnect",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/dappConnect/"
               }
             },
             {
@@ -1837,8 +1861,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Encryption",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/encryption/"
+                "title": "DappConnect",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/dappConnect/"
               },
               "next": {
                 "title": "Type List",
@@ -2944,6 +2968,11 @@
                         "type": "doc",
                         "label": "Encryption",
                         "id": "Web3MQ-SDK/JS-SDK/encryption/encryption"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "dappConnect",
+                        "id": "Web3MQ-SDK/JS-SDK/dappConnect/dappConnect"
                       },
                       {
                         "type": "doc",

@@ -126,6 +126,12 @@
               },
               {
                 "type": "link",
+                "label": "dappConnect",
+                "href": "/docs/Web3MQ-SDK/JS-SDK/dappConnect/",
+                "docId": "Web3MQ-SDK/JS-SDK/dappConnect/dappConnect"
+              },
+              {
+                "type": "link",
                 "label": "Utils",
                 "href": "/docs/Web3MQ-SDK/JS-SDK/utils/",
                 "docId": "Web3MQ-SDK/JS-SDK/utils/utils"
@@ -1132,6 +1138,12 @@
       "id": "Web3MQ-SDK/JS-SDK/contact/contact",
       "title": "Contact",
       "description": "Properties",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/JS-SDK/dappConnect/dappConnect": {
+      "id": "Web3MQ-SDK/JS-SDK/dappConnect/dappConnect",
+      "title": "DappConnect",
+      "description": "Methods",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK/encryption/encryption": {
