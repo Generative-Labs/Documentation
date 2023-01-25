@@ -7775,12 +7775,12 @@ web-namespaces@^1.0.0, web-namespaces@^1.1.2:
 
 web3-mq-react@^1.1.23:
   version "1.1.23"
-  resolved "https://registry.npmmirror.com/web3-mq-react/-/web3-mq-react-1.1.23.tgz#86f92a76a499df91d8da7f15c1c525043558e4cf"
+  resolved "https://registry.yarnpkg.com/web3-mq-react/-/web3-mq-react-1.1.23.tgz#86f92a76a499df91d8da7f15c1c525043558e4cf"
   integrity sha512-5RyoJ5yy23K2Tw4LbVUUoMJ+43+ftY2Z+iBCyHLfoJa1Us1l/Q/yLraJdcuPV5IHhdp1KFSN8w67+jqksSWakQ==
 
 web3-mq@^1.2.60:
   version "1.2.60"
-  resolved "https://registry.npmmirror.com/web3-mq/-/web3-mq-1.2.60.tgz#1720db45db0fa529b797f880f616d2654d2242f3"
+  resolved "https://registry.yarnpkg.com/web3-mq/-/web3-mq-1.2.60.tgz#1720db45db0fa529b797f880f616d2654d2242f3"
   integrity sha512-FMJI3E3zIBupNLkGXFSuMqZOlY52x6sqU01Y+qyIKfyw0zBW7bdxOR9CrK8RZW98+QXKbUwDutxfr6/ziTxo5g==
   dependencies:
     "@noble/ed25519" "^1.6.1"

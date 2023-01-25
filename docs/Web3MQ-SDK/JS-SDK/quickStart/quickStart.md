@@ -113,69 +113,52 @@ description='Get your userid and key pair.'
  2. Temp secret key pairs
  A temporary public-private key pair with an expiry time that marks whether the user is online or not
  */
+
 const password = '123456';
 const didType = 'eth' | 'starknet';
-const {
-    TempPrivateKey,
-    TempPublicKey,
-    pubkeyExpiredTimestamp,
-    mainPrivateKey,
-    mainPublicKey,
-} = await Client.register.login({
-    password,
-    userid,
-    did_value: 'Your Address', //eg: 0x000000
+
+// 1. connect wallet and get address
+const { address } = await Client.register.getAccount(didType);
+const { userid, userExist } = await Client.register.getUserInfo({
+    did_value: didValue,
     did_type: didType,
 });
 
+let localMainPrivateKey = '' 
+let localMainPublicKey = ''
+
+if (!userExist) {
+    // 2.  register and get main keys
+    const registerRes = await Client.register.register({
+        password,
+        did_value: address,
+        userid,
+        did_type: didType,
+        avatar_url: `https://cdn.stamp.fyi/avatar/${address}?s=300`,
+    });
+    localMainPrivateKey = registerRes.mainPrivateKey
+    localMainPublicKey = registerRes.mainPublicKey
+}
+
+// 3. After register can login with main keys and password
+
+const { TempPrivateKey, TempPublicKey, pubkeyExpiredTimestamp, mainPrivateKey, mainPublicKey } =
+    await Client.register.login({
+        password,
+        userid,
+        did_value: address,
+        did_type: didType,
+        mainPublicKey: localMainPublicKey,
+        mainPrivateKey: localMainPrivateKey,
+});
 // Keep your private key in a safe place, this is for demo purposes only
 localStorage.setItem("PRIVATE_KEY", TempPrivateKey);
 localStorage.setItem("PUBLIC_KEY", TempPublicKey);
-localStorage.setItem(`${didType}_MAIN_PRIVATE_KEY`, mainPrivateKey);
-localStorage.setItem(`${didType}_MAIN_PUBLIC_KEY`, mainPublicKey);
+localStorage.setItem("userid", userid);
 localStorage.setItem(`DID_KEY`, `${didType}:${address}`);
-```
-
-### Use mobile authentication to log in
-
-Authorize dapp and other applications to log in directly through the mobile terminal device that has been logged in
-
-#### Code
-
-```ts
-let keys: KeyPairsType;
-
-const handleEvent = (options: SignClientCallBackType) => {
-  const { type, data } = options;
-  console.log(`${type} ====>`, data);
-  if (type === 'keys') {
-    const { private_key: PrivateKey, pubkey: PublicKey, userid } = data;
-    localStorage.setItem('PRIVATE_KEY', PrivateKey);
-    localStorage.setItem('PUBLICKEY', PublicKey);
-    localStorage.setItem('USERID', userid);
-    keys = { PrivateKey, PublicKey, userid };
-  }
-};
-
-// 1. Make sure that init is complete
-await Client.getSignClient(
-  {
-    dAppID: dapp_id,
-    topicID: topic_id,
-    signatureTimestamp: signature_timestamp,
-    dAppSignature: dapp_signature,
-  },
-  handleEvent
-);
-
-// 2. Make sure that getSignClient is complete
-await Client.signClient.sendDappBridge({
-  did_type: 'your did type', // eth
-  did_value: 'your did value', // eth wallet address
-});
-
-const tempCode = Client.signClient.tempCode;
-console.log(tempCode);
+localStorage.setItem(`MAIN_PRIVATE_KEY`, mainPublicKey);
+localStorage.setItem(`MAIN_PUBLIC_KEY`, mainPrivateKey);
+localStorage.setItem(`WALLET_ADDRESS`, address);
 ```
 
 ### Get Client Instance
@@ -192,7 +175,11 @@ description='Get the client instance.You can see the Client object in the consol
 </Layout>
 
 ```ts
-const keys = { PrivateKey, PublicKey, userid };
+const keys = { 
+    PrivateKey: localStorage.getItem('PRIVATE_KEY'),
+    PublicKey: localStorage.getItem('PUBLIC_KEY'),
+    userid: localStorage.getItem('userid')
+};
 
 const client = Client.getInstance(keys);
 ```
