@@ -257,28 +257,48 @@ code={<AppMdx />}>
 #### Root Components Code
 
 ```tsx
-import React, { useMemo, useState, useEffect } from 'react';
-import { Client, KeyPairsType } from 'web3-mq';
-import { LoginModal } from 'web3-mq-react';
+import React, {useMemo, useState, useEffect} from 'react';
+import {Client, KeyPairsType, WalletType, transformAddress} from 'web3-mq';
+import {deflateRaw} from "zlib";
 
 // Root components
-const App: React.FC = () => {
+const Main: React.FC = () => {
     const hasKeys = useMemo(() => {
         const PrivateKey = localStorage.getItem('PRIVATE_KEY') || '';
         const PublicKey = localStorage.getItem('PUBLIC_KEY') || '';
         const userid = localStorage.getItem('userid') || '';
         if (PrivateKey && PublicKey && userid) {
-            return { PrivateKey, PublicKey, userid };
+            return {PrivateKey, PublicKey, userid};
+        }
+        return null;
+    }, []);
+
+    const mainKeys = useMemo(() => {
+        const mainPrivateKey = localStorage.getItem(`MAIN_PRIVATE_KEY`);
+        const mainPublicKey = localStorage.getItem(`MAIN_PUBLIC_KEY`);
+        const address = localStorage.getItem('WALLET_ADDRESS');
+        if (mainPublicKey && mainPrivateKey && address) {
+            return {
+                publicKey: mainPublicKey,
+                privateKey: mainPrivateKey,
+                walletAddress: address,
+            };
         }
         return null;
     }, []);
     const [keys, setKeys] = useState<KeyPairsType | null>(hasKeys);
-    const [fastestUrl, setFastUrl] = useState<string | null>(null); const [userAccount, setUserAccount] = useState<{
+    const [fastestUrl, setFastUrl] = useState<string | null>(null);
+    const [password, setPassword] = useState('');
+    const [userAccount, setUserAccount] = useState<{
         userid: string;
         address: string;
+        walletType: WalletType,
+        userExist: boolean
     }>();
-    const [appType, setAppType] = useState(AppTypeEnum.pc);
-
+    const [groupMsg, setGroupMsg] = useState('');
+    const [groupChatMsgList, setGroupChatMsgList] = useState([]);
+    const [chatRoomName, setChatRoomName] = useState('');
+    const [channelList, setChannelList] = useState<any>();
     const init = async () => {
         const tempPubkey = localStorage.getItem('PUBLIC_KEY') || '';
         const didKey = localStorage.getItem('DID_KEY') || '';
@@ -291,118 +311,187 @@ const App: React.FC = () => {
         });
         localStorage.setItem('FAST_URL', fastUrl);
         setFastUrl(fastUrl);
-    };
+    }
 
-    const getAccount = async (didType: WalletType = 'eth') => {
-        let address = ''
-        let account = await Client.register.getAccount(didType);
-        address = account.address
-        const { userid, userExist } = await Client.register.getUserInfo({
-            did_value: address,
+    const getUserAccount = async (
+        didType: WalletType = 'eth',
+        address?: string,
+    ): Promise<{
+        address: string;
+        userExist: boolean;
+    }> => {
+        let didValue = address;
+        if (!didValue) {
+            const {address} = await Client.register.getAccount(didType);
+            didValue = address;
+        }
+        const {userid, userExist} = await Client.register.getUserInfo({
+            did_value: didValue,
             did_type: didType,
         });
-        localStorage.setItem('userid', userid);
         setUserAccount({
             userid,
-            address,
+            address: didValue,
+            walletType: didType,
+            userExist,
         });
         return {
-            address,
-            userid,
+            address: didValue,
             userExist,
         };
     };
-
-    const login = async (password: string, didType: WalletType = 'eth') => {
+    const loginByPassword = async (password: string) => {
         if (!userAccount) {
             return;
         }
-
-        const localMainPrivateKey = localStorage.getItem(`${didType}_MAIN_PRIVATE_KEY`) || '';
-        const localMainPublicKey = localStorage.getItem(`${didType}_MAIN_PUBLIC_KEY`) || '';
-
-        const { userid, address } = userAccount;
-        const { TempPrivateKey, TempPublicKey, pubkeyExpiredTimestamp, mainPrivateKey, mainPublicKey } =
+        let localMainPrivateKey = '';
+        let localMainPublicKey = '';
+        if (mainKeys && userAccount.address.toLowerCase() === mainKeys.walletAddress.toLowerCase()) {
+            localMainPrivateKey = mainKeys.privateKey;
+            localMainPublicKey = mainKeys.publicKey;
+        }
+        const {userid, address} = userAccount;
+        const {TempPrivateKey, TempPublicKey, pubkeyExpiredTimestamp, mainPrivateKey, mainPublicKey} =
             await Client.register.login({
                 password,
                 userid,
                 did_value: address,
-                did_type: didType,
+                did_type: userAccount.walletType,
                 mainPublicKey: localMainPublicKey,
                 mainPrivateKey: localMainPrivateKey,
             });
+        localStorage.setItem('userid', userid);
         localStorage.setItem('PRIVATE_KEY', TempPrivateKey);
         localStorage.setItem('PUBLIC_KEY', TempPublicKey);
-        localStorage.setItem(`${didType}_MAIN_PRIVATE_KEY`, mainPrivateKey);
-        localStorage.setItem(`${didType}_MAIN_PUBLIC_KEY`, mainPublicKey);
-        localStorage.setItem(`DID_KEY`, `${didType}:${address}`);
+        localStorage.setItem('WALLET_ADDRESS', address);
+        localStorage.setItem(`MAIN_PRIVATE_KEY`, mainPrivateKey);
+        localStorage.setItem(`MAIN_PUBLIC_KEY`, mainPublicKey);
+        localStorage.setItem(`DID_KEY`, `${userAccount.walletType}:${address}`);
         localStorage.setItem('PUBKEY_EXPIRED_TIMESTAMP', String(pubkeyExpiredTimestamp));
         setKeys({
             PrivateKey: TempPrivateKey,
             PublicKey: TempPublicKey,
             userid,
         });
-    };
 
-    const register = async (password: string, didType: WalletType = 'eth') => {
+
+    }
+    const register = async (password: string) => {
         if (!userAccount) {
-            return;
+            return null;
         }
-        const { address, userid } = userAccount;
-        const { mainPrivateKey, mainPublicKey } = await Client.register.register({
+        const {address, userid, walletType} = userAccount;
+        const {mainPrivateKey, mainPublicKey} = await Client.register.register({
             password,
             did_value: address,
             userid,
-            did_type: didType,
+            did_type: walletType,
             avatar_url: `https://cdn.stamp.fyi/avatar/${address}?s=300`,
         });
-        localStorage.setItem(`${didType}_MAIN_PRIVATE_KEY`, mainPrivateKey);
-        localStorage.setItem(`${didType}_MAIN_PUBLIC_KEY`, mainPublicKey);
-    };
+        localStorage.setItem('WALLET_ADDRESS', address);
+        localStorage.setItem(`MAIN_PRIVATE_KEY`, mainPrivateKey);
+        localStorage.setItem(`MAIN_PUBLIC_KEY`, mainPublicKey);
+    }
+
+    const login = async () => {
+        if (!password) {
+            alert('Password required！')
+            return
+        }
+        const account = await getUserAccount("eth")
+        if (!account.userExist) {
+            await register(password)
+        }
+        await loginByPassword(password);
+    }
+
     useEffect(() => {
-        init();
-        document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
-        window.addEventListener('resize', () => {
-            setAppType(window.innerWidth <= 600 ? AppTypeEnum['h5'] : AppTypeEnum['pc']);
-        });
+        init()
     }, []);
 
-  if (!keys) {
+    if (!keys) {
+        return <div>
+            <div>
+                password: <input type="text" value={password} onChange={(e) => setPassword(e.target.value)}/>
+            </div>
+            <div>
+                {userAccount && (
+                    <div>
+                        connect:
+                        <div>address: {userAccount.address}</div>
+                    </div>
+                )}
+            </div>
+            <button onClick={login}>
+                Login
+            </button>
+        </div>
+    }
+
+
+    if (!fastestUrl) {
+        return null;
+    }
+    const handleEvent = (event: any) => {
+        console.log(event, 'event')
+    }
+    const client = Client.getInstance(keys)
+    client.on('channel.activeChange', handleEvent)
+    client.on('channel.created', handleEvent)
+    client.on('message.delivered', handleEvent)
+    client.on('channel.getList', handleEvent)
+    client.on('channel.updated', handleEvent)
+
+    const createRoom = async () => {
+        await client.channel.createRoom({
+            group_name: chatRoomName || 'default room'
+        })
+        await client.channel.queryChannels({
+            page: 1, size: 20
+        })
+        if (client.channel.channelList) {
+            await client.channel.setActiveChannel(client.channel.channelList[0])
+        }
+    }
+
+    const sendMsg = async () => {
+        if (!groupMsg) {
+            alert('message required');
+        }
+        await client.message.sendMessage(groupMsg);
+    }
     return (
-      <div>
-          <LoginModal
-              appType={AppTypeEnum.pc}
-              register={register}
-              login={login}
-              getEthAccount={getAccount}
-              loginBtnNode={
-                  <button>  Login</button>
-              }
-          />
-      </div>
+        <div>
+            <div>
+                <h1>chat</h1>
+                <div>
+                    Chat room name :<input type="text" value={chatRoomName}
+                                           onChange={(e) => setChatRoomName(e.target.value)}/>
+                </div>
+                <button onClick={createRoom}>
+                    createRoom
+                </button>
+                <div>
+                    msg :<input type="text" value={groupMsg} onChange={(e) => setGroupMsg(e.target.value)}/>
+                </div>
+                <button onClick={sendMsg}>send</button>
+                <div>
+                    <ul>
+                        {
+                            groupChatMsgList.map((item: any, index) => {
+                                return <li>{item.content}</li>
+                            })
+                        }
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
     );
-  }
-
-  if (!fastestUrl) {
-    return null;
-  }
-
-  const client = Client.getInstance(keys);
-
-  return (
-    <div>
-      <button
-        onClick={() => {
-          client.channel.createRoom();
-        }}>
-        create Room
-      </button>
-      <Child client={client} />
-    </div>
-  );
 };
 
-export default App;
+export default Main;
 ```
 
 <!-- #### Child Components Code
