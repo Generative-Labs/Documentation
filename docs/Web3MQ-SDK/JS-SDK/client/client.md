@@ -28,12 +28,12 @@ position: 3
 
 ## Methods
 
-| name                                                               | type     | Parameters Description                                                                        | response                                 |
-| ------------------------------------------------------------------ | -------- | --------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| [init](/docs/Web3MQ-SDK/JS-SDK/client/#init)                       | function | [initOptions](/docs/Web3MQ-SDK/JS-SDK/types/#initoptions)                                     | fastUrl: string                          |
-| [getInstance](/docs/Web3MQ-SDK/JS-SDK/client/#getinstance)         | function | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK/types/#keypairstype)                                   | [Client](/docs/Web3MQ-SDK/JS-SDK/client) |
-| [getSignClient](/docs/Web3MQ-SDK/JS-SDK/client/#getsignclient)     | function | ([SendTempConnectOptions](/docs/Web3MQ-SDK/JS-SDK/types/#sendtempconnectoptions), callbackFn) | null                                     |
-| [getQrCodeClient](/docs/Web3MQ-SDK/JS-SDK/client/#getQrCodeClient) | function | ([SendTempConnectOptions](/docs/Web3MQ-SDK/JS-SDK/types/#sendtempconnectoptions), callbackFn) | null                                     |
+| name                                                                           | type     | Parameters Description                                                                        | response                                 |
+| ------------------------------------------------------------------------------ | -------- | --------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| [init](/docs/Web3MQ-SDK/JS-SDK/client/#init)                                   | function | [initOptions](/docs/Web3MQ-SDK/JS-SDK/types/#initoptions)                                     | fastUrl: string                          |
+| [getInstance](/docs/Web3MQ-SDK/JS-SDK/client/#getinstance)                     | function | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK/types/#keypairstype)                                   | [Client](/docs/Web3MQ-SDK/JS-SDK/client) |
+| [getSignClient](/docs/Web3MQ-SDK/JS-SDK/client/#getsignclient)                 | function | ([SendTempConnectOptions](/docs/Web3MQ-SDK/JS-SDK/types/#sendtempconnectoptions), callbackFn) | null                                     |
+| [initDappConnectClient](/docs/Web3MQ-SDK/JS-SDK/client/#initdappconnectclient) | function | ([Web3MQBridgeOptions](/docs/Web3MQ-SDK/JS-SDK/types/#web3mqbridgeoptions), callbackFn)       | null                                     |
 
 ## Methods
 
@@ -141,7 +141,7 @@ await Client.getSignClient(
 );
 ```
 
-### getQrCodeClient
+### initDappConnectClient
 
 ```ts
 import { Client } from "web3-mq";
@@ -154,8 +154,11 @@ await Client.init({
 const handleEvent = (options: SignClientCallBackType) => {
   console.log(options);
 };
-// 3. get QrCode Sign Client
-Client.getQrCodeClient({ dAppID: "SwapChat:im" }, handleEvent);
+// 3. get DappConnect Client
+Client.initDappConnectClient({ dAppID: "SwapChat:im" }, handleEvent);
+
+// 4. Here you can use the client to interact with the wallet
+Client.dappConnectClient.getConnectLink();
 ```
 
 ## Events

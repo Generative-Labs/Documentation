@@ -355,16 +355,15 @@ type GetMainKeypairParams = {
 };
 ```
 
-
 ## QrCodeRegisterParams
 
 ```ts
 type QrCodeRegisterParams = {
-    userid: string;
-    signature: string;
-    did_pubkey?: string;
-    nickname?: string;
-    avatar_url?: string;
+  userid: string;
+  signature: string;
+  did_pubkey?: string;
+  nickname?: string;
+  avatar_url?: string;
 };
 ```
 
@@ -372,19 +371,41 @@ type QrCodeRegisterParams = {
 
 ```ts
 type QrCodeLoginParams = {
-    userid: string;
-    did_type: string;
-    did_value: string;
-    mainPrivateKey: string;
-    mainPublicKey: string;
-    password?: string;
-    pubkeyExpiredTimestamp?: number;
+  userid: string;
+  did_type: string;
+  did_value: string;
+  mainPrivateKey: string;
+  mainPublicKey: string;
+  password?: string;
+  pubkeyExpiredTimestamp?: number;
 };
 ```
+
 ## SignClientCallBackType
+
 ```ts
 type SignClientCallBackType = {
-    type: 'createQrcode' | 'connect' | 'messageStatus' | 'keys';
-    data: any;
+  type: "createQrcode" | "connect" | "messageStatus" | "keys";
+  data: any;
 };
+```
+
+## DappConnectSignParams
+
+```ts
+type DappConnectSignParams = {
+  signContent: string;
+  didValue: string;
+  signType: string;
+};
+```
+
+## Web3MQBridgeOptions
+
+```ts
+type Web3MQBridgeOptions {
+  wsUrl: string;
+  dAppID: string;
+  nodeID?: string;
+}
 ```
