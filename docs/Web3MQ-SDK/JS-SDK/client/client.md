@@ -28,12 +28,12 @@ position: 3
 
 ## Methods
 
-| name                                                                           | type     | Parameters Description                                                                        | response                                 |
-| ------------------------------------------------------------------------------ | -------- | --------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| [init](/docs/Web3MQ-SDK/JS-SDK/client/#init)                                   | function | [initOptions](/docs/Web3MQ-SDK/JS-SDK/types/#initoptions)                                     | fastUrl: string                          |
-| [getInstance](/docs/Web3MQ-SDK/JS-SDK/client/#getinstance)                     | function | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK/types/#keypairstype)                                   | [Client](/docs/Web3MQ-SDK/JS-SDK/client) |
-| [getSignClient](/docs/Web3MQ-SDK/JS-SDK/client/#getsignclient)                 | function | ([SendTempConnectOptions](/docs/Web3MQ-SDK/JS-SDK/types/#sendtempconnectoptions), callbackFn) | null                                     |
-| [initDappConnectClient](/docs/Web3MQ-SDK/JS-SDK/client/#initdappconnectclient) | function | ([Web3MQBridgeOptions](/docs/Web3MQ-SDK/JS-SDK/types/#web3mqbridgeoptions), callbackFn)       | null                                     |
+| name                                                               | type     | Parameters Description                                                                        | response                                 |
+| ------------------------------------------------------------------ | -------- | --------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| [init](/docs/Web3MQ-SDK/JS-SDK/client/#init)                       | function | [InitOptions](/docs/Web3MQ-SDK/JS-SDK/types/#initoptions)                                     | fastUrl: string                          |
+| [getInstance](/docs/Web3MQ-SDK/JS-SDK/client/#getinstance)         | function | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK/types/#keypairstype)                                   | [Client](/docs/Web3MQ-SDK/JS-SDK/client) |
+| [getSignClient](/docs/Web3MQ-SDK/JS-SDK/client/#getsignclient)     | function | ([SendTempConnectOptions](/docs/Web3MQ-SDK/JS-SDK/types/#sendtempconnectoptions), callbackFn) | null                                     |
+| [getQrCodeClient](/docs/Web3MQ-SDK/JS-SDK/client/#getQrCodeClient) | function | ([SendTempConnectOptions](/docs/Web3MQ-SDK/JS-SDK/types/#sendtempconnectoptions), callbackFn) | null                                     |
 
 ## Methods
 
@@ -73,7 +73,7 @@ await Client.init({
 // 2.Login and get keys
 const { address } = await Client.register.getAccount(didType);
 const { userid, userExist } = await Client.register.getUserInfo({
-  did_value: didValue,
+  did_value: address,
   did_type: didType,
 });
 

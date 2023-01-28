@@ -35,7 +35,7 @@ export interface PageParams {
 }
 ```
 
-## BaseParams
+### BaseParams
 
 ```ts
 export type BaseParams = {
@@ -80,7 +80,7 @@ export type EthAccountType = {
 ### InitOptions
 
 ```ts
-export type initOptions = {
+export type InitOptions = {
   connectUrl?: string | null;
   app_key?: string;
   env?: EnvTypes;
@@ -143,28 +143,83 @@ export interface CreateRoomParams extends BaseParams {
   avatar_base64?: string;
 }
 ```
+### GroupPermissions
+```ts
+export type GroupPermissions = {
+  [key: string]: {
+    type: string;
+    value: 'ceator_invite_friends' | 'public' | 'nft_validation';
+  };
+};
+```
+### UpdateGroupPermissionsParams
+```ts
+export interface UpdateGroupPermissionsParams {
+  groupid: string;
+  permissions: GroupPermissions;
+  timestamp: number;
+  userid: string;
+  web3mq_user_signature: string;
+}
+```
+### UserPermissionsType
+
+```ts
+export type UserPermissionsType = Record<string, { type: string; value: boolean }>;
+```
 
 ### ContactListItemType
 
 ```ts
 export type ContactListItemType = {
+  avatar_url: string;
+  follow_status: FollowStatus;
+  nickname: string;
+  permissions: UserPermissionsType;
   userid: string;
+  wallet_address: string;
+  wallet_type: WalletType;
 };
 ```
+### FollowOperationParams
+```ts
+export interface FollowOperationParams {
+  address: string
+  action: 'follow' | 'cancel';
+  did_type: WalletType;
+  did_pubkey?: string
+  did_signature: string;
+  sign_content: string;
+  timestamp: number;
+  target_userid: string;
+  userid: string;
+}
+```
 
-## ActionType
+### PublishNotificationToFollowersParams
+```ts
+export interface PublishNotificationToFollowersParams {
+  content: string;
+  timestamp: number;
+  title: string;
+  userid: string;
+  web3mq_user_signature: string;
+}
+```
+
+### ActionType
 
 ```ts
 export type ActionType = "agree";
 ```
 
-## MessageStatus
+### MessageStatus
 
 ```ts
 export type MessageStatus = "delivered" | "read";
 ```
 
-## changeMessageStatusParams
+### changeMessageStatusParams
 
 ```ts
 export interface changeMessageStatusParams extends BaseParams {
@@ -174,7 +229,7 @@ export interface changeMessageStatusParams extends BaseParams {
 }
 ```
 
-## MessageListItem
+### MessageListItem
 
 ```ts
 export type MessageListItem = {
@@ -194,7 +249,7 @@ export type MessageListItem = {
 };
 ```
 
-## SearchUsersResponse
+### SearchUsersResponse
 
 ```ts
 export type SearchUsersResponse = {
@@ -204,7 +259,7 @@ export type SearchUsersResponse = {
 };
 ```
 
-## UpdateMyProfileResponse
+### UpdateMyProfileResponse
 
 ```ts
 export type UpdateMyProfileResponse = {
@@ -216,13 +271,13 @@ export type UpdateMyProfileResponse = {
 };
 ```
 
-## GetUserBindDidsParams
+### GetUserBindDidsParams
 
 ```ts
 export interface GetUserBindDidsParams extends BaseParams {}
 ```
 
-## UserBindDidParams
+### UserBindDidParams
 
 ```ts
 export interface UserBindDidParams extends BaseParams {
@@ -232,7 +287,24 @@ export interface UserBindDidParams extends BaseParams {
 }
 ```
 
-## ChangeNotificationStatusParams
+### UserBindDidIdsResponse
+```ts
+export type UserBindDidIdsResponse = Pick<UserBindDidParams, 'did_type' | 'did_value' | 'provider_id'> & {
+  metadata: any;
+}
+```
+
+### UpdateUserPermissionsParams
+```ts
+export interface UpdateUserPermissionsParams {
+  permissions: UserPermissionsType;
+  timestamp: number;
+  userid: string;
+  web3mq_user_signature: string;
+}
+```
+
+### ChangeNotificationStatusParams
 
 ```ts
 export interface ChangeNotificationStatusParams extends BaseParams {
@@ -241,7 +313,7 @@ export interface ChangeNotificationStatusParams extends BaseParams {
 }
 ```
 
-## NotifyResponse
+### NotifyResponse
 
 ```ts
 export type NotifyResponse = {
@@ -253,7 +325,7 @@ export type NotifyResponse = {
 };
 ```
 
-## CreateTopicParams
+### CreateTopicParams
 
 ```ts
 export interface CreateTopicParams extends BaseParams {
@@ -261,7 +333,7 @@ export interface CreateTopicParams extends BaseParams {
 }
 ```
 
-## SubscribeTopicParams
+### SubscribeTopicParams
 
 ```ts
 export interface SubscribeTopicParams extends BaseParams {
@@ -269,7 +341,7 @@ export interface SubscribeTopicParams extends BaseParams {
 }
 ```
 
-## PublishTopicMessageParams
+### PublishTopicMessageParams
 
 ```ts
 export interface PublishTopicMessageParams extends SubscribeTopicParams {
@@ -278,13 +350,13 @@ export interface PublishTopicMessageParams extends SubscribeTopicParams {
 }
 ```
 
-## GetTopicListParams
+### GetTopicListParams
 
 ```ts
 export interface GetTopicListParams extends PageParams, BaseParams {}
 ```
 
-## SubscribeListType
+### SubscribeListType
 
 ```ts
 export type SubscribeListType = {
@@ -293,7 +365,7 @@ export type SubscribeListType = {
 };
 ```
 
-## TopicListType
+### TopicListType
 
 ```ts
 export interface TopicListType extends SubscribeListType {
@@ -301,13 +373,13 @@ export interface TopicListType extends SubscribeListType {
 }
 ```
 
-## WalletType
+### WalletType
 
 ```ts
 export type WalletType = "eth" | "starknet";
 ```
 
-## WalletType
+### WalletSignRes
 
 ```ts
 export type WalletSignRes = {
@@ -316,7 +388,7 @@ export type WalletSignRes = {
 };
 ```
 
-## RegisterMetaMaskParams
+### RegisterMetaMaskParams
 
 ```ts
 export type RegisterMetaMaskParams = {
@@ -331,7 +403,7 @@ export type RegisterMetaMaskParams = {
 };
 ```
 
-## SignMetaMaskParams
+### SignMetaMaskParams
 
 ```ts
 export type SignMetaMaskParams = {
@@ -345,7 +417,7 @@ export type SignMetaMaskParams = {
 };
 ```
 
-## GetMainKeypairParams
+### GetMainKeypairParams
 
 ```ts
 type GetMainKeypairParams = {
@@ -355,7 +427,8 @@ type GetMainKeypairParams = {
 };
 ```
 
-## QrCodeRegisterParams
+
+### QrCodeRegisterParams
 
 ```ts
 type QrCodeRegisterParams = {
@@ -367,7 +440,7 @@ type QrCodeRegisterParams = {
 };
 ```
 
-## QrCodeLoginParams
+### QrCodeLoginParams
 
 ```ts
 type QrCodeLoginParams = {
@@ -380,13 +453,11 @@ type QrCodeLoginParams = {
   pubkeyExpiredTimestamp?: number;
 };
 ```
-
-## SignClientCallBackType
-
+### SignClientCallBackType
 ```ts
 type SignClientCallBackType = {
-  type: "createQrcode" | "connect" | "messageStatus" | "keys";
-  data: any;
+    type: 'createQrcode' | 'connect' | 'messageStatus' | 'keys' | 'dapp-connect';
+    data: any;
 };
 ```
 
@@ -403,7 +474,7 @@ type DappConnectSignParams = {
 ## Web3MQBridgeOptions
 
 ```ts
-type Web3MQBridgeOptions {
+type Web3MQBridgeOptions = {
   wsUrl: string;
   dAppID: string;
   nodeID?: string;
