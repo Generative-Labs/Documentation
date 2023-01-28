@@ -14,35 +14,75 @@ position: 8
 
 | name                     | type     | Parameters Description                                                                   | response                  |
 | ------------------------ | -------- | ---------------------------------------------------------------------------------------- | ------------------------- |
-| changeNotificationStatus | function | messages: string[], status:[MessageStatus](/docs/Web3MQ-SDK/JS-SDK/types/#messagestatus) | { "code": 0, "msg": "ok"} |
+| changeNotificationStatus | function | messages: string[], status:[MessageStatus](/docs/Web3MQ-SDK/JS-SDK/types/#messagestatus) | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse) |
 
 ## init Client
 
 ```tsx
-import { Client } from 'web3-mq';
-// 1. You must initialize the SDK, the init function is asynchronous
-await Client.init({
-  connectUrl: 'example url', // The fastURL you saved to local
-  app_key: 'app_key', // Appkey applied from our team
-});
-// 2. sign MetaMask get keys
-const { PrivateKey, PublicKey, userid } = await Client.register.signMetaMask({
-  signContentURI: 'https://www.web3mq.com', // your signContent URI
-  EthAddress: 'your eth address', // *Not required*  your eth address, if not use your MetaMask eth address
-});
-const keys = { PrivateKey, PublicKey, userid };
-// 3. You must ensure that the Client.init initialization is complete and that you have a key pair
-const client = Client.getInstance(keys);
+import { useEffect, useState } from 'react';
+import { Client, KeyPairsType } from "web3-mq";
 
-console.log(client);
+export const App = () => {
+  const [fastUrl, setFastUrl] = useState<string | null>(null);
+  const [keys, setKeys] = useState<KeyPairsType | null>(null);
+  const init = async () => {
+    // 1. You must initialize the SDK, the init function is asynchronous
+    const newFastUrl = await Client.init({
+      connectUrl: "example url", // The fastURL you saved to local
+      app_key: "app_key", // Appkey applied from our team
+    });
+    setFastUrl(newFastUrl);
+    // 2.Login and get keys
+    const { address } = await Client.register.getAccount(didType);
+    const { userid, userExist } = await Client.register.getUserInfo({
+      did_value: address,
+      did_type: didType,
+    });
+    let localMainPrivateKey = "";
+    let localMainPublicKey = "";
 
-export const Child = () => {
+    if (!userExist) {
+      const registerRes = await Client.register.register({
+        password,
+        did_value: address,
+        userid,
+        did_type: didType,
+        avatar_url: `https://cdn.stamp.fyi/avatar/${address}?s=300`,
+      });
+      localMainPrivateKey = registerRes.mainPrivateKey;
+      localMainPublicKey = registerRes.mainPublicKey;
+    }
+
+    const {
+      TempPrivateKey,
+      TempPublicKey,
+      pubkeyExpiredTimestamp,
+      mainPrivateKey,
+      mainPublicKey,
+    } = await Client.register.login({
+      password,
+      userid,
+      did_value: address,
+      did_type: didType,
+      mainPublicKey: localMainPublicKey,
+      mainPrivateKey: localMainPrivateKey,
+    });
+    setKeys({
+      PrivateKey: TempPrivateKey,
+      PublicKey: TempPublicKey,
+      userid: userid,
+    })
+  };
+  useEffect(()=> {
+    init();
+  }, []);
+  if (!fastUrl || !keys) return <div>Login...</div>;
+  // 3. You must ensure that the Client.init initialization is complete and that you have a key pair
+  const client = Client.getInstance(keys);
   return (
-    <div>
-      <Child client={client} />
-    </div>
-  );
-};
+    <Child client={client} />
+  )
+}
 ```
 
 ## ChangeNotificationStatus
@@ -61,7 +101,7 @@ export const Child = (props: IProps) => {
     <div>
       <button
         onClick={() => {
-          client.message.changeMessageStatus(['msgId'], 'delivered');
+          client.notify.changeNotificationStatus(['notifyId'], 'delivered');
         }}>
         Change Notification Status
       </button>

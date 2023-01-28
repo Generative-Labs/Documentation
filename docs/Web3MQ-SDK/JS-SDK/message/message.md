@@ -19,36 +19,76 @@ position: 5
 | sendMessage         | function | (msg: string, secondParams: (target_userid or target_user_wallet_address) )                 | none     |
 | receive             | function | receive message callback                                                                    | none     |
 
-## init Client
+### init Client
 
 ```tsx
-import { Client } from 'web3-mq';
-// 1. You must initialize the SDK, the init function is asynchronous
-await Client.init({
-  connectUrl: 'example url', // The fastURL you saved to local
-  app_key: 'app_key', // Appkey applied from our team
-});
-// 2. sign MetaMask get keys
-const { PrivateKey, PublicKey, userid } = await Client.register.signMetaMask({
-  signContentURI: 'https://www.web3mq.com', // your signContent URI
-  EthAddress: 'your eth address', // *Not required*  your eth address, if not use your MetaMask eth address
-});
-const keys = { PrivateKey, PublicKey, userid };
-// 3. You must ensure that the Client.init initialization is complete and that you have a key pair
-const client = Client.getInstance(keys);
+import { useEffect, useState } from 'react';
+import { Client, KeyPairsType } from "web3-mq";
 
-console.log(client);
+export const App = () => {
+  const [fastUrl, setFastUrl] = useState<string | null>(null);
+  const [keys, setKeys] = useState<KeyPairsType | null>(null);
+  const init = async () => {
+    // 1. You must initialize the SDK, the init function is asynchronous
+    const newFastUrl = await Client.init({
+      connectUrl: "example url", // The fastURL you saved to local
+      app_key: "app_key", // Appkey applied from our team
+    });
+    setFastUrl(newFastUrl);
+    // 2.Login and get keys
+    const { address } = await Client.register.getAccount(didType);
+    const { userid, userExist } = await Client.register.getUserInfo({
+      did_value: address,
+      did_type: didType,
+    });
+    let localMainPrivateKey = "";
+    let localMainPublicKey = "";
 
-export const Child = () => {
+    if (!userExist) {
+      const registerRes = await Client.register.register({
+        password,
+        did_value: address,
+        userid,
+        did_type: didType,
+        avatar_url: `https://cdn.stamp.fyi/avatar/${address}?s=300`,
+      });
+      localMainPrivateKey = registerRes.mainPrivateKey;
+      localMainPublicKey = registerRes.mainPublicKey;
+    }
+
+    const {
+      TempPrivateKey,
+      TempPublicKey,
+      pubkeyExpiredTimestamp,
+      mainPrivateKey,
+      mainPublicKey,
+    } = await Client.register.login({
+      password,
+      userid,
+      did_value: address,
+      did_type: didType,
+      mainPublicKey: localMainPublicKey,
+      mainPrivateKey: localMainPrivateKey,
+    });
+    setKeys({
+      PrivateKey: TempPrivateKey,
+      PublicKey: TempPublicKey,
+      userid: userid,
+    })
+  };
+  useEffect(()=> {
+    init();
+  }, []);
+  if (!fastUrl || !keys) return <div>Login...</div>;
+  // 3. You must ensure that the Client.init initialization is complete and that you have a key pair
+  const client = Client.getInstance(keys);
   return (
-    <div>
-      <Child client={client} />
-    </div>
-  );
-};
+    <Child client={client} />
+  )
+}
 ```
 
-## GetMessageList & SendMessage
+### getMessageList & sendMessage
 
 ```tsx
 import { useEffect } from 'react';
@@ -69,21 +109,31 @@ export const Child = (props: IProps) => {
       console.log('message delivered');
     }
   };
+  const getMessageList = async () => {
+    const { activeChannel } = client.channel;
+    if (activeChannel) {
+      // Basic use  When you set the `activeChannel`, it will get the messagesList of the `activeChannel` by default.
+      await client.message.getMessageList({
+        page: 1,
+        size: 20,
+      });
+    } else {
+      // Get the `messagesList` in the specified channel.(the second props can also be the `userid`)
+      await client.message.getMessageList({
+        page: 1,
+        size: 20,
+      }, 'groupid: xxxxx...'); 
+    };
+  }
 
   useEffect(() => {
+    getMessageList();
     client.on('message.getList', handleEvent);
     client.on('message.delivered', handleEvent);
     return () => {
       client.off('message.getList');
       client.off('message.delivered');
     };
-  }, []);
-
-  useEffect(() => {
-    client.message.getMessageList({
-      page: 1,
-      size: 20,
-    });
   }, []);
 
   return (
@@ -103,10 +153,10 @@ export const Child = (props: IProps) => {
 };
 ```
 
-## ChangeMessageStatus
+### changeMessageStatus
 
 ```tsx
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Client } from 'web3-mq';
 
 interface IProps {
@@ -115,14 +165,45 @@ interface IProps {
 
 export const Child = (props: IProps) => {
   const { client } = props;
+  const [msgIds, setMsgIds] = useState<Array<string>>([]);
+
+  const changeMessageStatus = async () => {
+    const { activeChannel } = client.channel;
+    if (activeChannel) {
+      const data = await client.message.changeMessageStatus(msgIds);
+      console.log(data);
+    } else {
+      console.log('Please set `activeChannel` first');
+    }
+  };
+
+  const handleEvent = (event: { type: any }) => {
+    if (!activeChannel && channelList.length !== 0) {
+      client.channel.setActiveChannel(channelList[0]);
+    }
+    if (event.type === 'channel.getList') {
+      // Get the latest channelList
+      console.log(client.channel.channelList);
+    }
+    if (event.type === 'message.getList') {
+      console.log(client.message.messageList);
+      setMsgIds(client.message.messageList.map(msg => msg.id))
+    }
+  };
+
+  useEffect(() => {
+    client.message.getMessageList({ page: 1, size: 100 });
+    client.channel.queryChannels({ page: 1, size: 100 });
+    client.on('channel.getList', handleEvent);
+    return () => {
+      client.off('channel.getList');
+    };
+  }, []);
 
   return (
     <div>
       <button
-        onClick={async () => {
-          const data = await client.message.changeMessageStatus(['msgId']);
-          console.log(data);
-        }}>
+        onClick={() => changeMessageStatus()}>
         Change Message Status
       </button>
     </div>
