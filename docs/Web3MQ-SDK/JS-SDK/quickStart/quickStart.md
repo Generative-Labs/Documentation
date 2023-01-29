@@ -257,9 +257,8 @@ code={<AppMdx />}>
 #### Root Components Code
 
 ```tsx
-import React, {useMemo, useState, useEffect} from 'react';
-import {Client, KeyPairsType, WalletType, transformAddress} from '@web3mq/client';
-import {deflateRaw} from "zlib";
+import React, { useMemo, useState, useEffect } from 'react';
+import { Client, KeyPairsType, WalletType } from '@web3mq/client';
 
 // Root components
 const Main: React.FC = () => {
@@ -268,7 +267,7 @@ const Main: React.FC = () => {
         const PublicKey = localStorage.getItem('PUBLIC_KEY') || '';
         const userid = localStorage.getItem('userid') || '';
         if (PrivateKey && PublicKey && userid) {
-            return {PrivateKey, PublicKey, userid};
+            return { PrivateKey, PublicKey, userid };
         }
         return null;
     }, []);
@@ -292,13 +291,12 @@ const Main: React.FC = () => {
     const [userAccount, setUserAccount] = useState<{
         userid: string;
         address: string;
-        walletType: WalletType,
-        userExist: boolean
+        walletType: WalletType;
+        userExist: boolean;
     }>();
     const [groupMsg, setGroupMsg] = useState('');
     const [groupChatMsgList, setGroupChatMsgList] = useState([]);
     const [chatRoomName, setChatRoomName] = useState('');
-    const [channelList, setChannelList] = useState<any>();
     const init = async () => {
         const tempPubkey = localStorage.getItem('PUBLIC_KEY') || '';
         const didKey = localStorage.getItem('DID_KEY') || '';
@@ -311,7 +309,7 @@ const Main: React.FC = () => {
         });
         localStorage.setItem('FAST_URL', fastUrl);
         setFastUrl(fastUrl);
-    }
+    };
 
     const getUserAccount = async (
         didType: WalletType = 'eth',
@@ -322,10 +320,10 @@ const Main: React.FC = () => {
     }> => {
         let didValue = address;
         if (!didValue) {
-            const {address} = await Client.register.getAccount(didType);
+            const { address } = await Client.register.getAccount(didType);
             didValue = address;
         }
-        const {userid, userExist} = await Client.register.getUserInfo({
+        const { userid, userExist } = await Client.register.getUserInfo({
             did_value: didValue,
             did_type: didType,
         });
@@ -346,152 +344,192 @@ const Main: React.FC = () => {
         }
         let localMainPrivateKey = '';
         let localMainPublicKey = '';
+        const { userid, address, walletType } = userAccount;
         if (mainKeys && userAccount.address.toLowerCase() === mainKeys.walletAddress.toLowerCase()) {
             localMainPrivateKey = mainKeys.privateKey;
             localMainPublicKey = mainKeys.publicKey;
         }
-        const {userid, address} = userAccount;
-        const {TempPrivateKey, TempPublicKey, pubkeyExpiredTimestamp, mainPrivateKey, mainPublicKey} =
+        if (!localMainPublicKey || !localMainPrivateKey) {
+            const { publicKey, secretKey } = await Client.register.getMainKeypair({
+                password,
+                did_value: address,
+                did_type: walletType,
+            });
+            localMainPrivateKey = secretKey;
+            localMainPublicKey = publicKey;
+        }
+
+        const { tempPrivateKey, tempPublicKey, pubkeyExpiredTimestamp, mainPrivateKey, mainPublicKey } =
             await Client.register.login({
                 password,
-                userid,
-                did_value: address,
-                did_type: userAccount.walletType,
                 mainPublicKey: localMainPublicKey,
                 mainPrivateKey: localMainPrivateKey,
+                userid,
+                didType: walletType,
+                didValue: address,
             });
         localStorage.setItem('userid', userid);
-        localStorage.setItem('PRIVATE_KEY', TempPrivateKey);
-        localStorage.setItem('PUBLIC_KEY', TempPublicKey);
+        localStorage.setItem('PRIVATE_KEY', tempPrivateKey);
+        localStorage.setItem('PUBLIC_KEY', tempPublicKey);
         localStorage.setItem('WALLET_ADDRESS', address);
         localStorage.setItem(`MAIN_PRIVATE_KEY`, mainPrivateKey);
         localStorage.setItem(`MAIN_PUBLIC_KEY`, mainPublicKey);
         localStorage.setItem(`DID_KEY`, `${userAccount.walletType}:${address}`);
         localStorage.setItem('PUBKEY_EXPIRED_TIMESTAMP', String(pubkeyExpiredTimestamp));
         setKeys({
-            PrivateKey: TempPrivateKey,
-            PublicKey: TempPublicKey,
+            PrivateKey: tempPrivateKey,
+            PublicKey: tempPublicKey,
             userid,
         });
-
-
-    }
-    const register = async (password: string) => {
+    };
+    const register = async (password: string, isResetPassword = false) => {
         if (!userAccount) {
             return null;
         }
-        const {address, userid, walletType} = userAccount;
-        const {mainPrivateKey, mainPublicKey} = await Client.register.register({
+        const { address, userid, walletType } = userAccount;
+        const { publicKey, secretKey } = await Client.register.getMainKeypair({
             password,
             did_value: address,
-            userid,
             did_type: walletType,
-            avatar_url: `https://cdn.stamp.fyi/avatar/${address}?s=300`,
         });
+        const { signContent } = await Client.register.getRegisterSignContent({
+            userid,
+            mainPublicKey: publicKey,
+            didType: walletType,
+            didValue: address,
+        });
+        const { sign: signature, publicKey: did_pubkey = '' } = await Client.register.sign(
+            signContent,
+            address,
+            walletType
+        );
+
+        const params = {
+            userid,
+            didValue: address,
+            mainPublicKey: publicKey,
+            did_pubkey,
+            didType: walletType,
+            nickname: '',
+            avatar_url: `https://cdn.stamp.fyi/avatar/${address}?s=300`,
+            signature,
+        }
+        await Client.register.register(params);
+        // if (isResetPassword) {
+        //   await Client.register.resetPassword(params);
+        // } else {
+        //   await Client.register.register(params);
+        // }
         localStorage.setItem('WALLET_ADDRESS', address);
-        localStorage.setItem(`MAIN_PRIVATE_KEY`, mainPrivateKey);
-        localStorage.setItem(`MAIN_PUBLIC_KEY`, mainPublicKey);
-    }
+        localStorage.setItem(`MAIN_PRIVATE_KEY`, secretKey);
+        localStorage.setItem(`MAIN_PUBLIC_KEY`, publicKey);
+    };
 
     const login = async () => {
         if (!password) {
-            alert('Password required！')
-            return
+            alert('Password required！');
+            return;
         }
-        const account = await getUserAccount("eth")
+        const account = await getUserAccount('eth');
         if (!account.userExist) {
-            await register(password)
+            await register(password);
         }
         await loginByPassword(password);
+    };
+
+    const resetPassword = async () => {
+        await getUserAccount('eth');
+        await register(password, true);
     }
 
     useEffect(() => {
-        init()
+        init();
     }, []);
 
     if (!keys) {
-        return <div>
+        return (
             <div>
-                password: <input type="text" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                <div>
+                    password:{' '}
+                    <input type="text" value={password} onChange={(e) => setPassword(e.target.value)} />
+                </div>
+                <div>
+                    {userAccount && (
+                        <div>
+                            connect:
+                            <div>address: {userAccount.address}</div>
+                        </div>
+                    )}
+                </div>
+                <button onClick={login}>Login</button>
             </div>
-            <div>
-                {userAccount && (
-                    <div>
-                        connect:
-                        <div>address: {userAccount.address}</div>
-                    </div>
-                )}
-            </div>
-            <button onClick={login}>
-                Login
-            </button>
-        </div>
+        );
     }
-
 
     if (!fastestUrl) {
         return null;
     }
     const handleEvent = (event: any) => {
-        console.log(event, 'event')
-    }
-    const client = Client.getInstance(keys)
-    client.on('channel.activeChange', handleEvent)
-    client.on('channel.created', handleEvent)
-    client.on('message.delivered', handleEvent)
-    client.on('channel.getList', handleEvent)
-    client.on('channel.updated', handleEvent)
+        console.log(event, 'event');
+    };
+    const client = Client.getInstance(keys);
+    client.on('channel.activeChange', handleEvent);
+    client.on('channel.created', handleEvent);
+    client.on('message.delivered', handleEvent);
+    client.on('channel.getList', handleEvent);
+    client.on('channel.updated', handleEvent);
 
     const createRoom = async () => {
         await client.channel.createRoom({
-            group_name: chatRoomName || 'default room'
-        })
+            group_name: chatRoomName || 'default room',
+        });
         await client.channel.queryChannels({
-            page: 1, size: 20
-        })
+            page: 1,
+            size: 20,
+        });
         if (client.channel.channelList) {
-            await client.channel.setActiveChannel(client.channel.channelList[0])
+            await client.channel.setActiveChannel(client.channel.channelList[0]);
         }
-    }
+    };
 
     const sendMsg = async () => {
         if (!groupMsg) {
             alert('message required');
         }
         await client.message.sendMessage(groupMsg);
-    }
+    };
+
     return (
         <div>
             <div>
                 <h1>chat</h1>
                 <div>
-                    Chat room name :<input type="text" value={chatRoomName}
-                                           onChange={(e) => setChatRoomName(e.target.value)}/>
+                    Chat room name :
+                    <input
+                        type="text"
+                        value={chatRoomName}
+                        onChange={(e) => setChatRoomName(e.target.value)}
+                    />
                 </div>
-                <button onClick={createRoom}>
-                    createRoom
-                </button>
+                <button onClick={createRoom}>createRoom</button>
                 <div>
-                    msg :<input type="text" value={groupMsg} onChange={(e) => setGroupMsg(e.target.value)}/>
+                    msg :<input type="text" value={groupMsg} onChange={(e) => setGroupMsg(e.target.value)} />
                 </div>
                 <button onClick={sendMsg}>send</button>
                 <div>
                     <ul>
-                        {
-                            groupChatMsgList.map((item: any, index) => {
-                                return <li>{item.content}</li>
-                            })
-                        }
+                        {groupChatMsgList.map((item: any, index) => {
+                            return <li>{item.content}</li>;
+                        })}
                     </ul>
                 </div>
-
             </div>
-
         </div>
     );
 };
 
 export default Main;
+
 ```
 
 <!-- #### Child Components Code
