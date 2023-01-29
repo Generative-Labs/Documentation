@@ -123,33 +123,30 @@ const { userid, userExist } = await Client.register.getUserInfo({
     did_value: didValue,
     did_type: didType,
 });
-
-let localMainPrivateKey = '' 
-let localMainPublicKey = ''
-
-if (!userExist) {
-    // 2.  register and get main keys
-    const registerRes = await Client.register.register({
+let localMainPrivateKey = '';
+let localMainPublicKey = '';
+if (mainKeys && userAccount.address.toLowerCase() === mainKeys.walletAddress.toLowerCase()) {
+    localMainPrivateKey = mainKeys.privateKey;
+    localMainPublicKey = mainKeys.publicKey;
+}
+if (!localMainPublicKey || !localMainPrivateKey) {
+    const { publicKey, secretKey } = await Client.register.getMainKeypair({
         password,
         did_value: address,
-        userid,
-        did_type: didType,
-        avatar_url: `https://cdn.stamp.fyi/avatar/${address}?s=300`,
+        did_type: walletType,
     });
-    localMainPrivateKey = registerRes.mainPrivateKey
-    localMainPublicKey = registerRes.mainPublicKey
+    localMainPrivateKey = secretKey;
+    localMainPublicKey = publicKey;
 }
 
-// 3. After register can login with main keys and password
-
-const { TempPrivateKey, TempPublicKey, pubkeyExpiredTimestamp, mainPrivateKey, mainPublicKey } =
+const { tempPrivateKey, tempPublicKey, pubkeyExpiredTimestamp, mainPrivateKey, mainPublicKey } =
     await Client.register.login({
         password,
-        userid,
-        did_value: address,
-        did_type: didType,
         mainPublicKey: localMainPublicKey,
         mainPrivateKey: localMainPrivateKey,
+        userid,
+        didType: walletType,
+        didValue: address,
 });
 // Keep your private key in a safe place, this is for demo purposes only
 localStorage.setItem("PRIVATE_KEY", TempPrivateKey);
