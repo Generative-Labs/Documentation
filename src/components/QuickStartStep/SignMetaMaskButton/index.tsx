@@ -1,9 +1,9 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Client, KeyPairsType } from "web3-mq";
-import { AppTypeEnum, LoginModal } from "web3-mq-react";
+import { Client, KeyPairsType } from "@web3mq/client";
+import { AppTypeEnum, LoginModal } from "@web3mq/react-components";
 import { CommonButton } from "../CommonButton";
 import ss from './index.module.css';
-import "web3-mq-react/dist/css/index.css";
+import "@web3mq/react-components/dist/css/index.css";
 import useLogin from "../hooks/useLogin";
 
 export const SignMetaMaskButton = () => {

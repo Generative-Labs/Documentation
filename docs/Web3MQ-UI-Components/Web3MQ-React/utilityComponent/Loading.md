@@ -6,7 +6,7 @@
 import { Layout } from '@site/src/components/Layout'
 import { LoadingExample } from '@site/src/components/Web3MQ-React/LoadingExample';
 import LoadingMdx from '@site/src/components/Web3MQ-React/LoadingExample/LoadingExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'

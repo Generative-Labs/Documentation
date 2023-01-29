@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { RadioGroup } from 'web3-mq-react';
+import { RadioGroup } from '@web3mq/react-components';
 
 const values = [
   {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Skeleton } from 'web3-mq-react';
+import { Skeleton } from '@web3mq/react-components';
 
 export const SkeletonExample: React.FC = () => {
 

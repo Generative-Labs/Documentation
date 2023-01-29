@@ -9,13 +9,13 @@ Web3MQ React Component Libraries
 ### Install with NPM
 
 ```bash
-npm install web3-mq-react
+npm install @web3mq/react-components
 ```
 
 ### Install with Yarn
 
 ```bash
-yarn add web3-mq-react
+yarn add @web3mq/react-components
 ```
 
 # Usage
@@ -25,7 +25,7 @@ Here is a simple hook function that provides dependencies for you to create web3
 
 ```tsx
 import { useMemo, useState } from 'react';
-import { Client, KeyPairsType } from 'web3-mq';
+import { Client, KeyPairsType } from '@web3mq/client';
 
 const useLogin = () => {
   const hasKeys = useMemo(() => {
@@ -106,7 +106,7 @@ export default useLogin;
 ## Creating a Web3MQ Client
 
 ```tsx
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 const client = Client.getInstance('YOUR_ACCESS_TOKEN');
 ```
@@ -125,9 +125,9 @@ import {
   MessageList,
   MessageInput,
   Window,
-} from 'web3-mq-react';
+} from '@web3mq/react-components';
 import useLogin from './hooks/useLogin';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 const App = () => {
   const { keys, fastestUrl, init, logout, handleLoginEvent } = useLogin();

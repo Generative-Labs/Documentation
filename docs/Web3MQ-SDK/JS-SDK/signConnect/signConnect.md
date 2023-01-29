@@ -19,7 +19,7 @@ position: 5.1
 ## SendDappBridge
 
 ```tsx
-import { Client, SignClientCallBackType } from 'web3-mq';
+import { Client, SignClientCallBackType } from '@web3mq/client';
 // 1. You must initialize the SDK, the init function is asynchronous
 await Client.init({
   connectUrl: 'example url', // The fastURL you saved to local

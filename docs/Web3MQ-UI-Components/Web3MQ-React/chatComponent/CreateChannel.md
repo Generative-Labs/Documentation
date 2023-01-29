@@ -12,7 +12,7 @@ sidebar_position: 1
 import { Layout } from '@site/src/components/Layout'
 import { CreateChannelExample } from '@site/src/components/Web3MQ-React/CreateChannelExample';
 import CreateChannelMdx from '@site/src/components/Web3MQ-React/CreateChannelExample/CreateChannelExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar } from 'web3-mq-react';
+import { Avatar } from '@web3mq/react-components';
 
 import ss from './index.module.css';
 

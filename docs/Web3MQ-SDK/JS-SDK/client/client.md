@@ -40,7 +40,7 @@ position: 3
 ### init()
 
 ```ts
-import { Client } from "web3-mq";
+import { Client } from "@web3mq/client";
 // 1. You must initialize the SDK, the init function is asynchronous
 
 const tempPubkey = localStorage.getItem("PUBLIC_KEY") || "";
@@ -64,7 +64,7 @@ await Client.init({
 ### getInstance()
 
 ```typescript
-import { Client } from "web3-mq";
+import { Client } from "@web3mq/client";
 // 1. You must initialize the SDK, the init function is asynchronous
 await Client.init({
   connectUrl: "example url", // The fastURL you saved to local
@@ -119,7 +119,7 @@ console.log(client);
 ### getSignClient
 
 ```ts
-import { Client, SignClientCallBackType } from "web3-mq";
+import { Client, SignClientCallBackType } from "@web3mq/client";
 // 1. You must initialize the SDK, the init function is asynchronous
 await Client.init({
   connectUrl: "example url", // The fastURL you saved to local
@@ -144,7 +144,7 @@ await Client.getSignClient(
 ### initDappConnectClient
 
 ```ts
-import { Client } from "web3-mq";
+import { Client } from "@web3mq/client";
 // 1. You must initialize the SDK, the init function is asynchronous
 await Client.init({
   connectUrl: "example url", // The fastURL you saved to local

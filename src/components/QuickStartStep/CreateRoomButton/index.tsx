@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { Client, EventTypes } from 'web3-mq'
+import { Client, EventTypes } from '@web3mq/client'
 import { CommonButton } from '../CommonButton';
 import ss from './index.module.css';
 

@@ -9,7 +9,7 @@ import { Layout } from '@site/src/components/Layout'
 import { ChannelHeadExample } from '@site/src/components/Web3MQ-React/ChannelHeadExample';
 import ChannelHeadMdx from '@site/src/components/Web3MQ-React/ChannelHeadExample/ChannelHeadExample.mdx';
 
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'

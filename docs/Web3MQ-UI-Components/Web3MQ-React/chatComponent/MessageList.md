@@ -20,7 +20,7 @@ As a context consumer, the `MessageList` component must be rendered as a child o
 import { Layout } from '@site/src/components/Layout'
 import { MessageListExample } from '@site/src/components/Web3MQ-React/MessageListExample';
 import MessageListExampleMdx from '@site/src/components/Web3MQ-React/MessageListExample/MessageListExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'

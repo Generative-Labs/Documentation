@@ -8,7 +8,7 @@ By default, `Profile` gets userinfo through `useChatcontext` and displays it. Yo
 import { Layout } from '@site/src/components/Layout'
 import { ProfileExample } from '@site/src/components/Web3MQ-React/ProfileExample';
 import ProfileMdx from '@site/src/components/Web3MQ-React/ProfileExample/ProfileExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'

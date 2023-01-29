@@ -6,7 +6,7 @@
 import { Layout } from '@site/src/components/Layout'
 import { ChannelListMessengerExample } from '@site/src/components/Web3MQ-React/ChannelListMessengerExample';
 import ChannelListMessengerMdx from '@site/src/components/Web3MQ-React/ChannelListMessengerExample/ChannelListMessengerExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'

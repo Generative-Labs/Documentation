@@ -27,7 +27,7 @@ position: 4
 
 ```tsx
 import { useEffect, useState } from 'react';
-import { Client, KeyPairsType } from "web3-mq";
+import { Client, KeyPairsType } from "@web3mq/client";
 
 export const App = () => {
   const [fastUrl, setFastUrl] = useState<string | null>(null);
@@ -96,7 +96,7 @@ export const App = () => {
 
 ```tsx
 import { useEffect } from 'react';
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -153,7 +153,7 @@ export const Child = (props: IProps) => {
 
 ```tsx
 import { useEffect, useState } from 'react';
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -187,7 +187,7 @@ export const Child = (props: IProps) => {
 
 ```tsx
 import { useEffect } from 'react';
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -235,7 +235,7 @@ export const Child = (props: IProps) => {
 
 ```tsx
 import { useEffect } from 'react';
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -274,7 +274,7 @@ Group permission currently only `Group:join` rule that has `ceator_invite_friend
 
 ```tsx
 import { useEffect } from 'react';
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -319,7 +319,7 @@ export const Child = (props: IProps) => {
 ### updateGroupPermissions
 ```tsx
 import { useEffect } from 'react';
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;

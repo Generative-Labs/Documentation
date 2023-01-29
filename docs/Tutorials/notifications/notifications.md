@@ -11,9 +11,9 @@ position: 3
 Install Web3MQ's JS SDK using a package manager of your choice
 
 ```bash
-npm install web3-mq
+npm install @web3mq/client
 or
-yarn add web3-mq
+yarn add @web3mq/client
 ```
 
 ## Initialize Client and Connect to Web3MQ Network
@@ -33,7 +33,7 @@ As Web3MQ is a federated network, our default JS SDK client has a method to help
 Simply calling Client.init without connectUrl or an empty string returns a url of the best node determined for you, and this url can be stored locally.
 
 ```ts
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 // You can save the bestEndpointUrl locally to skip endpoint search next time, which will save time, and
 const bestEndpointUrl = await Client.init({
@@ -45,7 +45,7 @@ const bestEndpointUrl = await Client.init({
 Calling Client.init with a specific connectUrl forces the client to connect to that specific node. When bestEndpointUrl is stored, it might be time-saving to connect directly instead of running the search again.
 
 ```ts
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 const fastUrl = await Client.init({
   connectUrl: bestEndpointUrl, // takes in a valid endpoint url as input, when this paramter is given, client will always connect to that specific node.

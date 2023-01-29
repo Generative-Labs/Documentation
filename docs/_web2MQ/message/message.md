@@ -30,7 +30,7 @@ position: 4
 #### Get
 
 ```typescript
-import { Web3MQ } from "web3-mq";
+import { Web3MQ } from "@web3mq/client";
 
 const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
 
@@ -48,7 +48,7 @@ client.messages.activeMessage;
 #### Get
 
 ```typescript
-import { Web3MQ } from "web3-mq";
+import { Web3MQ } from "@web3mq/client";
 
 const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
 
@@ -70,7 +70,7 @@ client.messages.messageList;
 ```
 
 ```typescript
-import { Web3MQ } from "web3-mq";
+import { Web3MQ } from "@web3mq/client";
 
 const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
 
@@ -94,7 +94,7 @@ console.log(client.messages.messageList);
 ```
 
 ```typescript
-import { Web3MQ } from "web3-mq";
+import { Web3MQ } from "@web3mq/client";
 
 const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
 
@@ -115,7 +115,7 @@ console.log(client.messages.messageList);
 ```
 
 ```typescript
-import { Web3MQ } from "web3-mq";
+import { Web3MQ } from "@web3mq/client";
 
 const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
 
@@ -135,7 +135,7 @@ loadMoreThreadList: () => Promise<unknown>;
 ```
 
 ```typescript
-import { Web3MQ } from "web3-mq";
+import { Web3MQ } from "@web3mq/client";
 
 const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
 

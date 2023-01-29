@@ -11,7 +11,7 @@ The `Chat` component does not inject any UI, so its implementation is fairly sim
 ```vue
 <script setup>
 import { Chat, Channel, MessageList, MessageInput } from 'web3-mq-vue';
-import { Web3MQ } from 'web3-mq';
+import { Web3MQ } from '@web3mq/client';
 
 </script>
 <template>
@@ -56,10 +56,10 @@ Any child of the `Chat` component has access to the `ChatProvide`. Each Vue Prov
 
 | Property    | Description                            | Type                                      | Default |
 | ----------- | -------------------------------------- | ----------------------------------------- | ------- |
-| appType     | set viewport type of web3-mq-react     | `pc` \| `h5`                              |  `pc`   |
+| appType     | set viewport type of @web3mq/react-components     | `pc` \| `h5`                              |  `pc`   |
 | classNmae   | set your custom className              | string                                    |   -     |
 | client      | Chat Client Object                     | [Client](/docs/Web3MQ-SDK/JS-SDK/client/) |   -     |
-| containerId | set container Id of your web3-mq-react | string                                    |   -     |
+| containerId | set container Id of your @web3mq/react-components | string                                    |   -     |
 | style       | set your custom style                  | CSSProperties                       |   -     |
 | logout      | Set your exit method                   | Function                                  |   -     |
 

@@ -11,7 +11,7 @@ The `Chat` component does not inject any UI, so its implementation is fairly sim
 import { Layout } from '@site/src/components/Layout'
 import { ChatExample } from '@site/src/components/Web3MQ-React/ChatExample';
 import ChatMdx from '@site/src/components/Web3MQ-React/ChatExample/ChatExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'
@@ -54,10 +54,10 @@ const { client } = useChatContext();
 
 | Property    | Description                            | Type                                      | Default |
 | ----------- | -------------------------------------- | ----------------------------------------- | ------- |
-| appType     | set viewport type of web3-mq-react     | `pc` \| `h5`                              |  `pc`   |
+| appType     | set viewport type of @web3mq/react-components     | `pc` \| `h5`                              |  `pc`   |
 | className   | set your custom className              | string                                    |   -     |
 | client      | Chat Client Object                     | [Client](/docs/Web3MQ-SDK/JS-SDK/client/) |   -     |
-| containerId | set container Id of your web3-mq-react | string                                    |   -     |
+| containerId | set container Id of your @web3mq/react-components | string                                    |   -     |
 | style       | set your custom style                  | React.CSSProperties                       |   -     |
 | logout      | Set your exit method                   | Function                                  |   -     |
 

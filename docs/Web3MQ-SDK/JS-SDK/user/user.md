@@ -21,7 +21,7 @@ position: 7
 
 ```tsx
 import { useEffect, useState } from 'react';
-import { Client, KeyPairsType } from "web3-mq";
+import { Client, KeyPairsType } from "@web3mq/client";
 
 export const App = () => {
   const [fastUrl, setFastUrl] = useState<string | null>(null);
@@ -89,7 +89,7 @@ export const App = () => {
 ### searchUsers
 
 ```tsx
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -115,7 +115,7 @@ export const Child = (props: IProps) => {
 ### getMyProfile
 
 ```tsx
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -141,7 +141,7 @@ export const Child = (props: IProps) => {
 ### updateMyProfile
 
 ```tsx
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -170,7 +170,7 @@ export const Child = (props: IProps) => {
 ### getUserBindDids
 
 ```tsx
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -196,7 +196,7 @@ export const Child = (props: IProps) => {
 ### userBindDid
 
 ```tsx
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -226,7 +226,7 @@ export const Child = (props: IProps) => {
 ### getUserPermissions
 
 ```tsx
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -252,7 +252,7 @@ export const Child = (props: IProps) => {
 ### getTargetUserPermissions
 
 ```tsx
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -278,7 +278,7 @@ export const Child = (props: IProps) => {
 ### updateUserPermissions
 
 ```tsx
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
