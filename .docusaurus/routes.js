@@ -55,7 +55,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','9fc'),
+    component: ComponentCreator('/docs','09c'),
     routes: [
       {
         path: '/docs/Intro',
@@ -84,6 +84,12 @@ export default [
       {
         path: '/docs/Tutorials/PubSub/',
         component: ComponentCreator('/docs/Tutorials/PubSub/','eba'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Tutorials/web3mq/',
+        component: ComponentCreator('/docs/Tutorials/web3mq/','d50'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },

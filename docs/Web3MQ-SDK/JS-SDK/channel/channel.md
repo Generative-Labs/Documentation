@@ -257,7 +257,7 @@ export const Child = (props: IProps) => {
 
   const setActiveChannel = async () => {
     const { channelList } = client.channel;
-    // If your `chanelList` is empty please create one first
+    // If your `channelList` is empty please create one first
     if (channelList.length === 0) {
       await client.channel.createRoom({
         groupName: 'your favourite group name',
@@ -332,7 +332,7 @@ export const Child = (props: IProps) => {
   }, []);
   const getGroupMembers = async() => {
     const { channelList } = client.channel;
-    // If your `chanelList` is empty please create one first
+    // If your `channelList` is empty please create one first
     if (channelList.length === 0) {
       await client.channel.createRoom({
         groupName: 'your favourite group name',

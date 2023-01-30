@@ -32,7 +32,7 @@
   "/search-79a": {
     "component": "component---theme-search-page-1-a-4-d6f"
   },
-  "/docs-9fc": {
+  "/docs-09c": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
   },
@@ -55,6 +55,10 @@
   "/docs/Tutorials/PubSub/-eba": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-tutorials-pub-sub-dbb-419"
+  },
+  "/docs/Tutorials/web3mq/-d50": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-tutorials-web-3-mq-7-a-3-017"
   },
   "/docs/Web3MQ-API/chat-b21": {
     "component": "component---theme-doc-item-178-a40",
