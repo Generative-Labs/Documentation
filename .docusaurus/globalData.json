@@ -331,11 +331,6 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-SDK/JS-SDK/registerByQrCode/dappConnect",
-              "path": "/docs/Web3MQ-SDK/JS-SDK/registerByQrCode/dappConnect",
-              "sidebar": "tutorialSidebar"
-            },
-            {
               "id": "Web3MQ-SDK/JS-SDK/signConnect/signConnect",
               "path": "/docs/Web3MQ-SDK/JS-SDK/signConnect/",
               "sidebar": "tutorialSidebar"

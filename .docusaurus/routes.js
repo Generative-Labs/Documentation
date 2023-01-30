@@ -55,7 +55,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','8ab'),
+    component: ComponentCreator('/docs','9fc'),
     routes: [
       {
         path: '/docs/Intro',
@@ -438,12 +438,6 @@ export default [
       {
         path: '/docs/Web3MQ-SDK/JS-SDK/register/',
         component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/register/','978'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-SDK/JS-SDK/registerByQrCode/dappConnect',
-        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/registerByQrCode/dappConnect','0ee'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },

@@ -131,20 +131,6 @@
                 "docId": "Web3MQ-SDK/JS-SDK/dappConnect/dappConnect"
               },
               {
-                "type": "category",
-                "label": "dappConnect",
-                "collapsible": true,
-                "collapsed": true,
-                "items": [
-                  {
-                    "type": "link",
-                    "label": "DappConnect",
-                    "href": "/docs/Web3MQ-SDK/JS-SDK/registerByQrCode/dappConnect",
-                    "docId": "Web3MQ-SDK/JS-SDK/registerByQrCode/dappConnect"
-                  }
-                ]
-              },
-              {
                 "type": "link",
                 "label": "Utils",
                 "href": "/docs/Web3MQ-SDK/JS-SDK/utils/",
@@ -1199,12 +1185,6 @@
     "Web3MQ-SDK/JS-SDK/register/register": {
       "id": "Web3MQ-SDK/JS-SDK/register/register",
       "title": "Register",
-      "description": "Methods",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/JS-SDK/registerByQrCode/dappConnect": {
-      "id": "Web3MQ-SDK/JS-SDK/registerByQrCode/dappConnect",
-      "title": "DappConnect",
       "description": "Methods",
       "sidebar": "tutorialSidebar"
     },

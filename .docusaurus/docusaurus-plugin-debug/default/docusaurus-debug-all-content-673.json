@@ -1601,8 +1601,8 @@
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK/encryption/"
               },
               "next": {
-                "title": "DappConnect",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/registerByQrCode/dappConnect"
+                "title": "Utils",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/utils/"
               }
             },
             {
@@ -1774,30 +1774,6 @@
               }
             },
             {
-              "unversionedId": "Web3MQ-SDK/JS-SDK/registerByQrCode/dappConnect",
-              "id": "Web3MQ-SDK/JS-SDK/registerByQrCode/dappConnect",
-              "title": "DappConnect",
-              "description": "Methods",
-              "source": "@site/docs/Web3MQ-SDK/JS-SDK/registerByQrCode/dappConnect.md",
-              "sourceDirName": "Web3MQ-SDK/JS-SDK/registerByQrCode",
-              "slug": "/Web3MQ-SDK/JS-SDK/registerByQrCode/dappConnect",
-              "permalink": "/docs/Web3MQ-SDK/JS-SDK/registerByQrCode/dappConnect",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "position": 2
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "DappConnect",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/dappConnect/"
-              },
-              "next": {
-                "title": "Utils",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/utils/"
-              }
-            },
-            {
               "unversionedId": "Web3MQ-SDK/JS-SDK/signConnect/signConnect",
               "id": "Web3MQ-SDK/JS-SDK/signConnect/signConnect",
               "title": "SignConnect",
@@ -1886,7 +1862,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "DappConnect",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/registerByQrCode/dappConnect"
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/dappConnect/"
               },
               "next": {
                 "title": "Type List",
@@ -2997,18 +2973,6 @@
                         "type": "doc",
                         "label": "dappConnect",
                         "id": "Web3MQ-SDK/JS-SDK/dappConnect/dappConnect"
-                      },
-                      {
-                        "type": "category",
-                        "label": "dappConnect",
-                        "collapsible": true,
-                        "collapsed": true,
-                        "items": [
-                          {
-                            "type": "doc",
-                            "id": "Web3MQ-SDK/JS-SDK/registerByQrCode/dappConnect"
-                          }
-                        ]
                       },
                       {
                         "type": "doc",

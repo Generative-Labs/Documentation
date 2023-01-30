@@ -2112,10 +2112,10 @@
   dependencies:
     "@types/node" "*"
 
-"@web3mq/client@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@web3mq/client/-/client-1.0.1.tgz#12e72dc380be22ff6e50b35bb0d29ed71fbcad0d"
-  integrity sha512-vUGjddfSQoySd/ebRLAXEfZkb8k/pj9BrD/5bv1k1vczpLGlmUf8WLIvDRC7Q/dU9QGziZgSqgmLAlHvciIiqQ==
+"@web3mq/client@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@web3mq/client/-/client-1.0.4.tgz#aa2f6b58b888f833f240ab7c51ebf640497c55b4"
+  integrity sha512-czyGmCqBvihcoR330pTUOlw8b5J9qKQ9Z+g81phSMH5grYY0Nm5S+5++JOqxSQ7XffUU/fsIjqXa7eGClP549Q==
   dependencies:
     "@noble/ed25519" "^1.6.1"
     "@protobuf-ts/plugin" "^2.7.0"
@@ -2126,10 +2126,10 @@
     js-sha3 "^0.8.0"
     starknet "^4.17.1"
 
-"@web3mq/react-components@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@web3mq/react-components/-/react-components-1.0.1.tgz#29a25624a2f113eaef6fd841d6dda6c0ef14cc18"
-  integrity sha512-bfkW//7Jc/oYukF/+gxnt3HydihaePh74EH2IDUbKvK21A5KnZ9zL6F6V6i8Uy8KADtnvAK6yNljTRQ6Fff/vg==
+"@web3mq/react-components@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@web3mq/react-components/-/react-components-1.0.2.tgz#86dea1d48a68681c174270957f1de77cea8f8224"
+  integrity sha512-q3EBfD64pJ5DHM7XWEoJWd3Cmb1CWAagarEha8Mfosez4V+5xJKsMJx3Lfz++tC0DxXPErWD1HHJVdNljbiPsA==
 
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
