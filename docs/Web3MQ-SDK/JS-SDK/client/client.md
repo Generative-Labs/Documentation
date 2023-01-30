@@ -28,43 +28,90 @@ position: 3
 
 ## Methods
 
-| name                                                           | type     | Parameters Description                                                                        | response                                 |
-| -------------------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| [init](/docs/Web3MQ-SDK/JS-SDK/client/#init)                   | function | [initOptions](/docs/Web3MQ-SDK/JS-SDK/types/#initoptions)                                     | fastUrl: string                          |
-| [getInstance](/docs/Web3MQ-SDK/JS-SDK/client/#getinstance)     | function | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK/types/#keypairstype)                                   | [Client](/docs/Web3MQ-SDK/JS-SDK/client) |
-| [getSignClient](/docs/Web3MQ-SDK/JS-SDK/client/#getsignclient) | function | ([SendTempConnectOptions](/docs/Web3MQ-SDK/JS-SDK/types/#sendtempconnectoptions), callbackFn) | null                                     |
+| name                                                               | type     | Parameters Description                                                                        | response                                 |
+| ------------------------------------------------------------------ | -------- | --------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| [init](/docs/Web3MQ-SDK/JS-SDK/client/#init)                       | function | [InitOptions](/docs/Web3MQ-SDK/JS-SDK/types/#initoptions)                                     | fastUrl: string                          |
+| [getInstance](/docs/Web3MQ-SDK/JS-SDK/client/#getinstance)         | function | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK/types/#keypairstype)                                   | [Client](/docs/Web3MQ-SDK/JS-SDK/client) |
+| [getSignClient](/docs/Web3MQ-SDK/JS-SDK/client/#getsignclient)     | function | ([SendTempConnectOptions](/docs/Web3MQ-SDK/JS-SDK/types/#sendtempconnectoptions), callbackFn) | null                                     |
+| [getQrCodeClient](/docs/Web3MQ-SDK/JS-SDK/client/#getQrCodeClient) | function | ([SendTempConnectOptions](/docs/Web3MQ-SDK/JS-SDK/types/#sendtempconnectoptions), callbackFn) | null                                     |
 
 ## Methods
 
 ### init()
 
 ```ts
-import { Client } from 'web3-mq';
+import { Client } from "@web3mq/client";
 // 1. You must initialize the SDK, the init function is asynchronous
+
+const tempPubkey = localStorage.getItem("PUBLIC_KEY") || "";
+// 1. tempPubkey
+// We will give you the exclusive tempPubkey when you log in successfully;
+// Usually this key is kept by you eg: save in localStorage
+const didKey = localStorage.getItem("DID_KEY") || "";
+//  2. didKey
+//  A concatenated string of the account and account type to be logged into
+// eg: eth:0x0000000000000
+
 await Client.init({
-  connectUrl: 'example url', // The fastURL you saved to local
-  app_key: 'app_key', // Appkey applied from our team
-  env: 'test', // The default is the test environment
+  connectUrl: "example url", // The fastURL you saved to local
+  app_key: "app_key", // Appkey applied from our team
+  env: "test", // The default is the test environment
+  tempPubkey, // After login get temp public key
+  didKey, // did_key:did_value  eg: eth:0x00000000123123;
 });
 ```
 
 ### getInstance()
 
 ```typescript
-import { Client } from 'web3-mq';
+import { Client } from "@web3mq/client";
 // 1. You must initialize the SDK, the init function is asynchronous
 await Client.init({
-  connectUrl: 'example url', // The fastURL you saved to local
-  app_key: 'app_key', // Appkey applied from our team
+  connectUrl: "example url", // The fastURL you saved to local
+  app_key: "app_key", // Appkey applied from our team
 });
-// 2. sign MetaMask get keys
-const { PrivateKey, PublicKey, userid } = await Client.register.signMetaMask({
-  signContentURI: 'https://www.web3mq.com', // your signContent URI
-  EthAddress: 'your eth address', // *Not required*  your eth address, if not use your MetaMask eth address
+// 2.Login and get keys
+const { address } = await Client.register.getAccount(didType);
+const { userid, userExist } = await Client.register.getUserInfo({
+  did_value: address,
+  did_type: didType,
 });
-const keys = { PrivateKey, PublicKey, userid };
+
+let localMainPrivateKey = "";
+let localMainPublicKey = "";
+
+if (!userExist) {
+  const registerRes = await Client.register.register({
+    password,
+    did_value: address,
+    userid,
+    did_type: didType,
+    avatar_url: `https://cdn.stamp.fyi/avatar/${address}?s=300`,
+  });
+  localMainPrivateKey = registerRes.mainPrivateKey;
+  localMainPublicKey = registerRes.mainPublicKey;
+}
+
+const {
+  TempPrivateKey,
+  TempPublicKey,
+  pubkeyExpiredTimestamp,
+  mainPrivateKey,
+  mainPublicKey,
+} = await Client.register.login({
+  password,
+  userid,
+  did_value: address,
+  did_type: didType,
+  mainPublicKey: localMainPublicKey,
+  mainPrivateKey: localMainPrivateKey,
+});
 // 3. You must ensure that the Client.init initialization is complete and that you have a key pair
-const client = Client.getInstance(keys);
+const client = Client.getInstance({
+  PrivateKey: TempPrivateKey,
+  PublicKey: TempPublicKey,
+  userid: userid,
+});
 
 console.log(client);
 ```
@@ -72,11 +119,11 @@ console.log(client);
 ### getSignClient
 
 ```ts
-import { Client, SignClientCallBackType } from 'web3-mq';
+import { Client, SignClientCallBackType } from "@web3mq/client";
 // 1. You must initialize the SDK, the init function is asynchronous
 await Client.init({
-  connectUrl: 'example url', // The fastURL you saved to local
-  app_key: 'app_key', // Appkey applied from our team
+  connectUrl: "example url", // The fastURL you saved to local
+  app_key: "app_key", // Appkey applied from our team
 });
 // 2. Create the handleEvent function to receive events
 const handleEvent = (options: SignClientCallBackType) => {
@@ -92,6 +139,26 @@ await Client.getSignClient(
   },
   handleEvent
 );
+```
+
+### initDappConnectClient
+
+```ts
+import { Client } from "@web3mq/client";
+// 1. You must initialize the SDK, the init function is asynchronous
+await Client.init({
+  connectUrl: "example url", // The fastURL you saved to local
+  app_key: "app_key", // Appkey applied from our team
+});
+// 2. Create the handleEvent function to receive events
+const handleEvent = (options: SignClientCallBackType) => {
+  console.log(options);
+};
+// 3. get DappConnect Client
+Client.initDappConnectClient({ dAppID: "SwapChat:im" }, handleEvent);
+
+// 4. Here you can use the client to interact with the wallet
+Client.dappConnectClient.getConnectLink();
 ```
 
 ## Events
@@ -139,7 +206,7 @@ client.once('channel.activeChange', (event) {
 ```
 
 ```typescript
-client.emit('channel.activeChange', {
-  data: '',
+client.emit("channel.activeChange", {
+  data: "",
 });
 ```

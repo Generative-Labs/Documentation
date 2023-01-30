@@ -1,18 +1,18 @@
 ---
-sidebar_position: 6
+sidebar_position: 8
 ---
 
 # Notify
 
-`Notify`是给用户发送通知的功能组件，组件内功能需要基于client的api进行实现，只能在`Chat`中使用。
+The `Notify` is a function component that sends notifications to users, the functions in the `Notify` are implemented based on the `client` api and can only be used in `Chat`.
 
 ## Basic Usage
-当用户成功在`Notify`组件中发送通知，可以在`ChannelHead`组件中小铃铛中提示。
+When the user successfully sends a notification in the `Notify`, `NotificationList` in the `DashBoard` component will receive a prompt.
 
 import { Layout } from '@site/src/components/Layout'
 import { NotifyExample } from '@site/src/components/Web3MQ-React/NotifyExample';
 import NotifyMdx from '@site/src/components/Web3MQ-React/NotifyExample/NotifyExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'

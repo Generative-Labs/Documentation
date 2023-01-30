@@ -1,10 +1,13 @@
 ```tsx
-import React, { useState } from 'react';
-import { Modal } from 'web3-mq-react';
+import React, { useState, useEffect } from 'react';
+import { Modal } from '@web3mq/react-components';
 
 
 export const ModalExample: React.FC = () => {
   const [ visible, setVisible ] = useState(false);
+  useEffect(() => {
+    document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
+  }, [])
   return (
     <>
       <button style={{

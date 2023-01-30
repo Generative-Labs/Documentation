@@ -1,6 +1,6 @@
 ```tsx 
 import React, { useEffect, useRef, useState } from 'react';
-import { ChannelListMessenger } from 'web3-mq-react';
+import { ChannelListMessenger } from '@web3mq/react-components';
 
 export const ChannelListMessengerExample: React.FC = () => {
   const [ loading, setLoading ] = useState(false);
@@ -28,7 +28,7 @@ export const ChannelListMessengerExample: React.FC = () => {
   }, []);
 
   return (
-    <div ref={listref} style={{position: 'relative', width: '100%', overflow: 'auto'}}>
+    <div ref={listref} style={{position: 'relative'}}>
       <ChannelListMessenger error={error} loading={loading} listRef={listref}>
         {list.map((item, index) => {
           return <div key={index} style={{padding: '5px 0px' ,borderBottom: '1px solid rgba(0,0,0,.06)', color: 'rgba(0,0,0,.45)', fontSize: '14px'}}>{item}</div>

@@ -1,13 +1,12 @@
 # DashBoard
-
-`DashBoard`是一个Tabs组件。当不传入任何props时，tabs内容默认渲染组件库中`ChannelList`、`ContactList`、`Profile`三个组件。`DashBoar`组件通过useChatContext获取setShowListTypeView方法，并修改showListTypeView，即无法在`Chat`组件之外使用。
+AS The Tabs component, `DashBoard` renders `ChannelList`、`ContactList`、`NotificationList` and `Profile` by default when no props are passed, it gets `showListTypeView` property that the current type of tab panel  through the `useChatContext`, and cannot be used outside the `Chat` component.
 
 ## Basic Usage
 
 import { Layout } from '@site/src/components/Layout'
 import { DashBoardExample } from '@site/src/components/Web3MQ-React/DashBoardExample';
 import DashBoardExampleMdx from '@site/src/components/Web3MQ-React/DashBoardExample/DashBoardExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'
@@ -17,7 +16,7 @@ code={<DashBoardExampleMdx />}>
 </Layout>
 
 ## Use Custom Props
-在`DashBoard`中，用户可以自定义标签及内容部分，在使用自定义MoblieTabMaps或PcTabMaps时必须配合defaultType来使用，来确认默认的第一项。在组件库中可以通过`useChatContext`获取showListTypeView来获取当前项。可以在`DashBoard`传入ChannelHeader参数，来渲染内容的自定义头部部分。
+You can customize the Tab content and use it with `defaultType` to activate the type of Tab content. And you can also pass the `ChannelHead` as props to define the fixed header of `DashBord`.
 
 import UseCustomPropsMdx from '@site/src/components/Web3MQ-React/DashBoardExample/UseCustomProps.mdx';
 
@@ -41,7 +40,7 @@ type TabType = {
 
 | Property       | Description                            | Type               | Default |
 | -------------- | -------------------------------------- | ------------------ | ------- |
-| ChannelHead    | 设置自定义`ChannelHead`组件              | React.ComponentType |   -     |
-| defaultType    | 初始化选中面板的 type                     | String             | 'room'  |
-| MobileTabMaps  | 配置AppType为'Mobile'的选项卡内容         | TabType            |   -     |
-| PCTabMaps      | 配置AppType为'PC'的选项卡内容             | TabType            |   -     |
+| ChannelHead    | custom `ChannelHead` component         | React.ComponentType |   -     |
+| defaultType    | initializes the type of the selected panel | String             | 'room'  |
+| MobileTabMaps  | tab contents when appType is h5        | TabType            |   -     |
+| PCTabMaps      | tab contents when appType is pc        | TabType            |   -     |

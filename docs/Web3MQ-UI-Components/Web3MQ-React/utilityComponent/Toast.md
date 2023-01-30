@@ -1,12 +1,12 @@
 # Toast
-`toast`是在全局用于展示操作反馈信息。
+`toast` display global messages as feedback in response to user operations.
 
 ## Basic Usage
 
 import { Layout } from '@site/src/components/Layout'
 import { ToastExample } from '@site/src/components/Web3MQ-React/ToastExample';
 import ToastMdx from '@site/src/components/Web3MQ-React/ToastExample/ToastExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'
@@ -17,7 +17,7 @@ code={<ToastMdx />}>
 
 ## API
 
-**组件提供了一些静态方法，使用方式和参数如下：**
+**Supports passing parameters wrapped in an object：**
 
 > 1. message.success(content, {duration})
 > 2. message.error(content, {duration})

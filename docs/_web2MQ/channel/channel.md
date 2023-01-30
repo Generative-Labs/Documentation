@@ -44,7 +44,7 @@ client.channel.channelList;
 #### get
 
 ```typescript
-import { Web3MQ } from "web3-mq";
+import { Web3MQ } from "@web3mq/client";
 
 const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
 
@@ -66,7 +66,7 @@ client.channel.activeChannel;
 ```
 
 ```typescript
-import { Web3MQ } from "web3-mq";
+import { Web3MQ } from "@web3mq/client";
 
 const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
 
@@ -85,7 +85,7 @@ console.log(client.channel.activeChannel);
 ```
 
 ```typescript
-import { Web3MQ } from "web3-mq";
+import { Web3MQ } from "@web3mq/client";
 
 const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
 
@@ -107,7 +107,7 @@ console.log(client.channel.channelList);
 ```
 
 ```typescript
-import { Web3MQ } from "web3-mq";
+import { Web3MQ } from "@web3mq/client";
 
 const client = Web3MQ.getInstance("YOUR_ACCESS_TOKEN");
 

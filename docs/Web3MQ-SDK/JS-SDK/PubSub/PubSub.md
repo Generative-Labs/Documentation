@@ -16,11 +16,79 @@ position: 8.1
 | name                    | type     | Parameters Description                                      | response                                                              |
 | ----------------------- | -------- | ----------------------------------------------------------- | --------------------------------------------------------------------- |
 | createTopic             | function | topic_name: string                                          | { "topicid": string }                                                 |
-| subscribeTopic          | function | topicid: string                                             | { "code": 0, "msg": "ok"}                                             |
-| publishTopicMessage     | function | params: { topicid: string; title: string; content: string } | { "code": 0, "msg": "ok"}                                             |
+| subscribeTopic          | function | topicid: string                                             | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)                                             |
+| publishTopicMessage     | function | params: { topicid: string; title: string; content: string } | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)                                             |
 | getMyCreateTopicList    | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)     | [TopicListType](/docs/Web3MQ-SDK/JS-SDK/types/#topiclisttype)         |
 | getMySubscribeTopicList | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)     | [SubscribeListType](/docs/Web3MQ-SDK/JS-SDK/types/#subscribelisttype) |
 
+## init Client
+
+```tsx
+import { useEffect, useState } from 'react';
+import { Client, KeyPairsType } from "@web3mq/client";
+
+export const App = () => {
+  const [fastUrl, setFastUrl] = useState<string | null>(null);
+  const [keys, setKeys] = useState<KeyPairsType | null>(null);
+  const init = async () => {
+    // 1. You must initialize the SDK, the init function is asynchronous
+    const newFastUrl = await Client.init({
+      connectUrl: "example url", // The fastURL you saved to local
+      app_key: "app_key", // Appkey applied from our team
+    });
+    setFastUrl(newFastUrl);
+    // 2.Login and get keys
+    const { address } = await Client.register.getAccount(didType);
+    const { userid, userExist } = await Client.register.getUserInfo({
+      did_value: address,
+      did_type: didType,
+    });
+    let localMainPrivateKey = "";
+    let localMainPublicKey = "";
+
+    if (!userExist) {
+      const registerRes = await Client.register.register({
+        password,
+        did_value: address,
+        userid,
+        did_type: didType,
+        avatar_url: `https://cdn.stamp.fyi/avatar/${address}?s=300`,
+      });
+      localMainPrivateKey = registerRes.mainPrivateKey;
+      localMainPublicKey = registerRes.mainPublicKey;
+    }
+
+    const {
+      TempPrivateKey,
+      TempPublicKey,
+      pubkeyExpiredTimestamp,
+      mainPrivateKey,
+      mainPublicKey,
+    } = await Client.register.login({
+      password,
+      userid,
+      did_value: address,
+      did_type: didType,
+      mainPublicKey: localMainPublicKey,
+      mainPrivateKey: localMainPrivateKey,
+    });
+    setKeys({
+      PrivateKey: TempPrivateKey,
+      PublicKey: TempPublicKey,
+      userid: userid,
+    })
+  };
+  useEffect(()=> {
+    init();
+  }, []);
+  if (!fastUrl || !keys) return <div>Login...</div>;
+  // 3. You must ensure that the Client.init initialization is complete and that you have a key pair
+  const client = Client.getInstance(keys);
+  return (
+    <Child client={client} />
+  )
+}
+```
 ## Pub/Sub Example
 
 > 1. Copy the [Root Components](/docs/Web3MQ-SDK/JS-SDK/quickStart/#root-components-code) Code to App.tsx
@@ -28,7 +96,7 @@ position: 8.1
 
 ```tsx
 import React, { useEffect, useState } from 'react';
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -182,39 +250,11 @@ const Child: React.FC<IProps> = (props) => {
 export default Child;
 ```
 
-## init Client
-
-```tsx
-import { Client } from 'web3-mq';
-// 1. You must initialize the SDK, the init function is asynchronous
-await Client.init({
-  connectUrl: 'example url', // The fastURL you saved to local
-  app_key: 'app_key', // Appkey applied from our team
-});
-// 2. sign MetaMask get keys
-const { PrivateKey, PublicKey, userid } = await Client.register.signMetaMask({
-  signContentURI: 'https://www.web3mq.com', // your signContent URI
-  EthAddress: 'your eth address', // *Not required*  your eth address, if not use your MetaMask eth address
-});
-const keys = { PrivateKey, PublicKey, userid };
-// 3. You must ensure that the Client.init initialization is complete and that you have a key pair
-const client = Client.getInstance(keys);
-
-console.log(client);
-
-export const Child = () => {
-  return (
-    <div>
-      <Child client={client} />
-    </div>
-  );
-};
-```
 
 ## createTopic
 
 ```tsx
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -240,7 +280,7 @@ export const Child = (props: IProps) => {
 ## subscribeTopic
 
 ```tsx
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -265,7 +305,7 @@ export const Child = (props: IProps) => {
 ## publishTopicMessage
 
 ```tsx
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -295,7 +335,7 @@ export const Child = (props: IProps) => {
 
 ```tsx
 import { useEffect } from 'react';
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -337,7 +377,7 @@ export const Child = (props: IProps) => {
 
 ```tsx
 import { useEffect } from 'react';
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -375,11 +415,11 @@ export const Child = (props: IProps) => {
 };
 ```
 
-## Get NotificationList
+## get NotificationList
 
 ```tsx
 import { useEffect } from 'react';
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;

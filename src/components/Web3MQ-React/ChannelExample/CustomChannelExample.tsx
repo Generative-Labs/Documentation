@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 import { 
   AppTypeEnum, 
   Avatar,
@@ -7,21 +7,26 @@ import {
   Channel, 
   ChatAutoComplete,
   ChannelList, 
+  Button,
   MessageList,
   MessageInput,
   Window,
-  useMessageContext
-} from 'web3-mq-react';
+  useMessageContext,
+  useChatContext
+} from '@web3mq/react-components';
 
 import useLogin from '../ChatExample/hooks/useLogin';
 
 import ss from './index.module.css';
 
 const CustomInput: React.FC = () => {
-
+  const { client } = useChatContext();
+  const handleClose = () => {
+    client.channel.setActiveChannel(null);
+  };
   return (
-    <div style={{display: 'flex', alignItems: 'center'}}>
-      this is CutomInput:
+    <div style={{display: 'flex',padding: '13px', alignItems: 'center', boxShadow: '0 -12px 10px rgb(30 83 133 / 3%)'}}>
+      <Button onClick={handleClose} style={{height: '100%', marginRight: '8px'}}>Back</Button>
       <ChatAutoComplete />
     </div>
   )
@@ -29,21 +34,25 @@ const CustomInput: React.FC = () => {
 
 const CustomMessage: React.FC = () => {
   const { message } = useMessageContext();
+  const { 
+    senderInfo = {}, 
+  } = message;
   const getShortAddress = (address: string = '') => {
     let strLength = address.length;
     return address.substring(0, 5) + '...' + address.substring(strLength - 4, strLength);
   };
+  const { defaultUserAvatar, defaultUserName } = senderInfo || {};
 
   return (
     <div style={{ display: 'flex', alignItems: 'flex-start', padding: '16px 24px', borderBottom: '1px solid #f2f2f2', position: 'relative'}}>
       <Avatar
         name="user"
-        image={message?.avatar || ''}
+        image={defaultUserAvatar || ''}
         size={30} 
       />
       <div style={{position: 'relative', width: '100%'}}>
         <div className={ss.dataInner}>
-          <span className={ss.name}>{getShortAddress(message.senderId)}</span>
+          <span className={ss.name}>{defaultUserName || getShortAddress(message.senderId)}</span>
           <span>{message.date}&nbsp;{message.timestamp}</span>
         </div>
         <div>{message.content}</div>
@@ -57,13 +66,12 @@ export const CustomChannelExample: React.FC = () => {
   
   useEffect(() => {
     init();
+    document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
   }, [])
 
   if (!keys) {
     return (
-      <div>
-        <button className={ss.link_btn}><a href="/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#basic-usage">请先在Chat部分进行登录操作</a></button>
-      </div>
+      <Button size='large' type='ghost'><a href="/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal#basic-usage" style={{textDecoration: 'none'}}>Please login first</a></Button>
     );
   }
   if (!fastestUrl) {
@@ -71,10 +79,6 @@ export const CustomChannelExample: React.FC = () => {
   }
 
   const client = Client.getInstance(keys);
-  
-  const handleClose = () => {
-    client.channel.setActiveChannel(null);
-  };
 
   return (
     <div id='box' style={{position: 'relative', border: '1px solid #f2f2f2',  width: '100%',height: '300px',overflow: 'auto'}}>
@@ -83,12 +87,9 @@ export const CustomChannelExample: React.FC = () => {
           <ChannelList />
         </div>
         <Channel Input={CustomInput} Message={CustomMessage}>
-          <Window>
+          <Window hasContainer>
             <MessageList />
-            <div style={{display: 'flex', width: '100%'}}>
-              <button className={ss.back_btn} onClick={handleClose} >Back</button>
-              <MessageInput />
-            </div>
+            <MessageInput />
           </Window>
         </Channel>
       </Chat>

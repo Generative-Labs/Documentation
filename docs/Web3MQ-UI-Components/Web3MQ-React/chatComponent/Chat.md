@@ -1,5 +1,5 @@
 ---
-sidebar_position: 0
+sidebar_position: 1
 ---
 
 # Chat
@@ -11,7 +11,7 @@ The `Chat` component does not inject any UI, so its implementation is fairly sim
 import { Layout } from '@site/src/components/Layout'
 import { ChatExample } from '@site/src/components/Web3MQ-React/ChatExample';
 import ChatMdx from '@site/src/components/Web3MQ-React/ChatExample/ChatExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'
@@ -22,10 +22,10 @@ code={<ChatMdx />}>
 
 ## containerId
 
-用于给组件库包裹一个容器，需要将该容器Id作为containerId属性在`Chat`组件传入，组件库中的组件将会适配在该容器之中。
+Used to wrap a container around a `Chat` component.You need to pass the id selector for the container as the property to the `Chat` component,components from the `Web3-mq-react` will fit into the container.
 
 :::tip
-  容器样式必须设置position为static以外的属性
+  The container style must set position is a property other than static
 :::
 
 ```tsx
@@ -54,10 +54,10 @@ const { client } = useChatContext();
 
 | Property    | Description                            | Type                                      | Default |
 | ----------- | -------------------------------------- | ----------------------------------------- | ------- |
-| appType     | set viewport type of web3-mq-react     | `pc` \| `h5`                              |  `pc`   |
-| classNmae   | set your custom className              | string                                    |   -     |
+| appType     | set viewport type of @web3mq/react-components     | `pc` \| `h5`                              |  `pc`   |
+| className   | set your custom className              | string                                    |   -     |
 | client      | Chat Client Object                     | [Client](/docs/Web3MQ-SDK/JS-SDK/client/) |   -     |
-| containerId | set container Id of your web3-mq-react | string                                    |   -     |
+| containerId | set container Id of your @web3mq/react-components | string                                    |   -     |
 | style       | set your custom style                  | React.CSSProperties                       |   -     |
 | logout      | Set your exit method                   | Function                                  |   -     |
 
@@ -67,5 +67,5 @@ const { client } = useChatContext();
 | -------------------- | ------------------------------------------------ | ----------------------------------------- | ------- |
 | showListTypeView     | Tabs type in `DashBoard` component               | string                                    | 'room'  |
 | userInfo             | user Info   | Ref<[SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)> |  -      |
-| setShowListTypeView  | Update showListTypeView                          | setState Function                         |  -      |
+| setShowListTypeView  | Update showListTypeView                          | React.Dispatch                            |  -      |
 

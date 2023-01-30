@@ -1,14 +1,13 @@
 # Skeleton
 
-`Skeleton`是一个在需要等待加载内容的位置提供一个占位图形组合的UI组件。
+`Skeleton` provide a placeholder while you wait for content to load, or to visualize content that doesn't exist yet.
 
 ## Basic Usage
-`Skeleton`目前只针对`Web3MQ-react`内部list加载作简单的占位效果。
 
 import { Layout } from '@site/src/components/Layout'
 import { SkeletonExample } from '@site/src/components/Web3MQ-React/SkeletonExample';
 import SkeletonMdx from '@site/src/components/Web3MQ-React/SkeletonExample/SkeletonExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'

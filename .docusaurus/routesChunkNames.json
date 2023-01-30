@@ -32,7 +32,7 @@
   "/search-79a": {
     "component": "component---theme-search-page-1-a-4-d6f"
   },
-  "/docs-d0a": {
+  "/docs-9fc": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
   },
@@ -119,6 +119,10 @@
   "/docs/Web3MQ-API/group/group_members-b98": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-api-group-group-membersa-8-d-a3c"
+  },
+  "/docs/Web3MQ-API/heartbeat-440": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-api-heartbeat-885-3e4"
   },
   "/docs/Web3MQ-API/Intro-b15": {
     "component": "component---theme-doc-item-178-a40",
@@ -256,6 +260,10 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-sdk-js-sdk-contact-ece-988"
   },
+  "/docs/Web3MQ-SDK/JS-SDK/dappConnect/-d38": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-js-sdk-dapp-connect-389-6df"
+  },
   "/docs/Web3MQ-SDK/JS-SDK/encryption/-7b4": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-sdk-js-sdk-encryption-b-78-da2"
@@ -352,6 +360,10 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-chatcac-484"
   },
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ConnectMessage-3cc": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-connect-message-650-96c"
+  },
   "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel-a9a": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-create-channelc-7-a-338"
@@ -359,6 +371,14 @@
   "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard-09b": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-dash-board-9-a-5-44c"
+  },
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal-efa": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-login-modal-40-e-8c4"
+  },
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole-b2f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-message-console-790-ba5"
   },
   "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead-27c": {
     "component": "component---theme-doc-item-178-a40",
@@ -387,6 +407,10 @@
   "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Avatar-557": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-utility-component-avatar-16-b-f71"
+  },
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Button-52c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-utility-component-button-174-847"
   },
   "/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/ChannelListMessenger-812": {
     "component": "component---theme-doc-item-178-a40",

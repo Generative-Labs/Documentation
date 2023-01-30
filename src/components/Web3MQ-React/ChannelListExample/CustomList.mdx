@@ -1,9 +1,9 @@
 ```tsx 
 import React, { useEffect, PropsWithChildren } from 'react';
-import { Client } from 'web3-mq';
-import { Chat, ChannelList, AppTypeEnum, ChannelListMessengerProps } from 'web3-mq-react';
+import { Client } from '@web3mq/client';
+import { AppTypeEnum, Chat, ChannelList, ChannelListMessengerProps, Button, LoginModal } from '@web3mq/react-components';
 
-import useLogin from '../ChatExample/hooks/useLogin';
+import useLogin from './hooks/useLogin';
 
 const CustomList = (props: PropsWithChildren<ChannelListMessengerProps>) => {
   const {
@@ -13,29 +13,63 @@ const CustomList = (props: PropsWithChildren<ChannelListMessengerProps>) => {
     loading,
   } = props;
   if (error) {
-    return <div style={{display: 'flex', height: '100%', justifyContent: 'center', alignItems:'center', fontWeight: '800'}}>Load Error</div>
+    return <div>Load Error</div>
   };
   if (loading) {
-    return <div style={{display: 'flex', height: '100%', justifyContent: 'center', alignItems:'center', fontWeight: '800'}}>Loading...</div>;
+    return <div>Loading...</div>;
   }
   return (
     <div ref={listRef} style={{height: '100%', overflowY: 'auto'}}>{children}</div>
   )
 }
+const CustomDefaultEmptyStateIndicator = () => {
+  return <div style={{textAlign: 'center'}}>No Reasult...</div>
+}
+const CustomPreview = (props: ChannelPreviewUIComponentProps) => {
+  const {
+    active,
+    avatarUrl,
+    channel,
+    lastMessage,
+    displayTitle,
+    setActiveChannel,
+    unread,
+    updatedAt,
+  } = props;
 
-export const ChannelListExample: React.FC = (props: any) => {
-  const { type } = props;
-  const { keys, init, fastestUrl, logout, signMetaMask } = useLogin();
+  const onSetActiveChannel = () => {
+    setActiveChannel && setActiveChannel(channel);
+  };
+
+  return (
+    <div
+      onClick={onSetActiveChannel}
+    >
+      <Avatar
+        name="user"
+        image={avatarUrl}
+        size={30} 
+      />
+      <div>{displayTitle}</div>
+    </div>
+  )
+};
+
+export const ChannelListExample: React.FC = () => {
+  const { keys, fastestUrl, init, logout, handleLoginEvent } = useLogin();
   
   useEffect(() => {
     init();
+    document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
   }, [])
 
   if (!keys) {
     return (
-      <div>
-        <button onClick={signMetaMask}>signMetaMask</button>
-      </div>
+      <LoginModal 
+        appType={AppTypeEnum.pc}
+        handleLoginEvent={handleLoginEvent}
+        loginBtnNode={<Button size='large' type='ghost'>login</Button>}
+      />
     );
   }
   if (!fastestUrl) {
@@ -45,11 +79,13 @@ export const ChannelListExample: React.FC = (props: any) => {
   const client = Client.getInstance(keys);
 
   return (
-    <div id='box' style={{position: 'relative', border: '1px solid #f2f2f2',  width: '100%',height: '300px',overflow: 'auto'}}>
+    <div id='box' style={{position: 'relative'}}>
       <Chat client={client} appType={AppTypeEnum['h5']} logout={logout}>
-        <div style={{height: '100%', display: 'flex', flexDirection: 'column'}}>
-          <ChannelList List={CustomList}/>
-        </div>
+        <ChannelList 
+          List={CustomList}
+          DefaultEmptyStateIndicator={CustomDefaultEmptyStateIndicator}
+          Preview={CustomPreview}
+        />
       </Chat>
     </div>
   );

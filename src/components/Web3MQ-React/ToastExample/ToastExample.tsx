@@ -1,5 +1,5 @@
 import React from 'react';
-import { toast } from 'web3-mq-react';
+import { toast } from '@web3mq/react-components';
 
 export const ToastExample: React.FC = () => {
 

@@ -1,7 +1,7 @@
 ```tsx
 import React, { useEffect, useState } from 'react';
-import { Client } from 'web3-mq';
-import { Chat, AppTypeEnum, useChatContext } from 'web3-mq-react';
+import { Client } from '@web3mq/client';
+import { Chat, AppTypeEnum, Button, LoginModal, useChatContext } from '@web3mq/react-components';
 
 import useLogin from './hooks/useLogin';
 
@@ -10,18 +10,18 @@ const CustomComponent: React.FC = () => {
   console.log(client, 'Client Instance')
   return (
     <div className={ss.custom_box} style={{wordBreak: 'break-all'}}>
-      <div><span>appType:</span> {appType}</div>
-      <div><span>containerId:</span> {containerId}</div>
-      <div><span>showListTypeView:</span> {showListTypeView}</div>
-      <div><span>userId:</span> {userInfo?.userid}</div>
-      <div><span>wallet_address:</span> {userInfo?.wallet_address}</div>
-      <div><span>wallet_address:</span> {userInfo?.wallet_type}</div>
+      <div>appType: {appType}</div>
+      <div>containerId: {containerId}</div>
+      <div>showListTypeView: {showListTypeView}</div>
+      <div>userId: {userInfo?.userid}</div>
+      <div>wallet_address: {userInfo?.wallet_address}</div>
+      <div>wallet_type: {userInfo?.wallet_type}</div>
     </div>
   )
 }
 
 export const ChatExample: React.FC = () => {
-  const { keys, fastestUrl, init, signMetaMask, logout } = useLogin();
+  const { keys, fastestUrl, init, logout, handleLoginEvent } = useLogin();
   const [appType, setAppType] = useState(
     window.innerWidth <= 600 ? AppTypeEnum['h5'] : AppTypeEnum['pc'],
   );
@@ -30,6 +30,7 @@ export const ChatExample: React.FC = () => {
   };
   useEffect(() => {
     init();
+    document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
     window.addEventListener('resize', handleAppType);
     () => {
       window.removeEventListener('resize', handleAppType)
@@ -38,9 +39,12 @@ export const ChatExample: React.FC = () => {
 
   if (!keys) {
     return (
-      <div>
-        <button className={ss.login_btn} onClick={signMetaMask}>MetaMask</button>
-      </div>
+      <LoginModal 
+        appType={appType}
+        containerId=''
+        handleLoginEvent={handleLoginEvent}
+        loginBtnNode={<Button size='large' type='ghost'>Login</Button>}
+      />
     );
   }
 
@@ -52,7 +56,7 @@ export const ChatExample: React.FC = () => {
 
   return (
     <div id='box' style={{position: 'relative', width: '100%', overflow: 'auto'}}>
-      <Chat containerId='box' client={client} appType={AppTypeEnum['h5']} logout={logout}>
+      <Chat containerId='box' client={client} appType={appType} logout={logout}>
         <CustomComponent />
       </Chat>
     </div>

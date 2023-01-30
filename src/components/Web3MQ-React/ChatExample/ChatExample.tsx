@@ -1,28 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import { Client } from 'web3-mq';
-import { Chat, AppTypeEnum, useChatContext } from 'web3-mq-react';
+import { Client } from '@web3mq/client';
+import { Chat, AppTypeEnum, Button, useChatContext } from '@web3mq/react-components';
 
 import useLogin from './hooks/useLogin';
 
 import ss from './index.module.css';
 
 const CustomComponent: React.FC = () => {
-  const { client, appType, userInfo, containerId, showListTypeView } = useChatContext();
+  const { client, appType, loginUserInfo, containerId, showListTypeView } = useChatContext();
   console.log(client, 'Client Instance')
   return (
     <div className={ss.custom_box} style={{wordBreak: 'break-all'}}>
       <div><span>appType:</span> {appType}</div>
       <div><span>containerId:</span> {containerId}</div>
       <div><span>showListTypeView:</span> {showListTypeView}</div>
-      <div><span>userId:</span> {userInfo?.userid}</div>
-      <div><span>wallet_address:</span> {userInfo?.wallet_address}</div>
-      <div><span>wallet_type:</span> {userInfo?.wallet_type}</div>
+      <div><span>userId:</span> {loginUserInfo?.userid}</div>
+      <div><span>wallet_address:</span> {loginUserInfo?.wallet_address}</div>
+      <div><span>wallet_type:</span> {loginUserInfo?.wallet_type}</div>
     </div>
   )
 }
 
 export const ChatExample: React.FC = () => {
-  const { keys, fastestUrl, init, signMetaMask, logout } = useLogin();
+  const { keys, fastestUrl, init, logout, } = useLogin();
   const [appType, setAppType] = useState(
     window.innerWidth <= 600 ? AppTypeEnum['h5'] : AppTypeEnum['pc'],
   );
@@ -31,6 +31,7 @@ export const ChatExample: React.FC = () => {
   };
   useEffect(() => {
     init();
+    document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
     window.addEventListener('resize', handleAppType);
     () => {
       window.removeEventListener('resize', handleAppType)
@@ -39,9 +40,7 @@ export const ChatExample: React.FC = () => {
 
   if (!keys) {
     return (
-      <div>
-        <button className={ss.login_btn} onClick={signMetaMask}>MetaMask</button>
-      </div>
+      <Button size='large' type='ghost'><a href="/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal#basic-usage" style={{textDecoration: 'none'}}>Please login first</a></Button>
     );
   }
 

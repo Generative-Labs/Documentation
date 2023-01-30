@@ -55,7 +55,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','d0a'),
+    component: ComponentCreator('/docs','9fc'),
     routes: [
       {
         path: '/docs/Intro',
@@ -180,6 +180,12 @@ export default [
       {
         path: '/docs/Web3MQ-API/group/group_members',
         component: ComponentCreator('/docs/Web3MQ-API/group/group_members','b98'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-API/heartbeat',
+        component: ComponentCreator('/docs/Web3MQ-API/heartbeat','440'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
@@ -388,6 +394,12 @@ export default [
         'sidebar': "tutorialSidebar"
       },
       {
+        path: '/docs/Web3MQ-SDK/JS-SDK/dappConnect/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/dappConnect/','d38'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
         path: '/docs/Web3MQ-SDK/JS-SDK/encryption/',
         component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/encryption/','7b4'),
         exact: true,
@@ -532,6 +544,12 @@ export default [
         'sidebar': "tutorialSidebar"
       },
       {
+        path: '/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ConnectMessage',
+        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ConnectMessage','3cc'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
         path: '/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel',
         component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel','a9a'),
         exact: true,
@@ -540,6 +558,18 @@ export default [
       {
         path: '/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard',
         component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/DashBoard','09b'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal',
+        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal','efa'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole',
+        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole','b2f'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
@@ -582,6 +612,12 @@ export default [
       {
         path: '/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Avatar',
         component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Avatar','557'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Button',
+        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Button','52c'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },

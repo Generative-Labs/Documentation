@@ -4,16 +4,17 @@ position: 1
 
 # QuickStart
 
-**This Quickstart tutorial walks you through the key concepts of Web3MQ using a sample react project and successfully send your first "hello world" to your friend!**
+**This Quickstart tutorial walks you through the key concepts of Web3MQ using a sample react project and successfully
+send your first "hello world" to your friend!**
 
 ## Installation
 
-Install Web3MQ's JS SDK using a package manager of your choice
+> Install Web3MQ's JS SDK using a package manager of your choice
 
 ```bash
-npm install web3-mq
+npm install @web3mq/client
 or
-yarn add web3-mq
+yarn add @web3mq/client
 ```
 
 <!-- ## Note
@@ -39,46 +40,55 @@ If you are building your project using a recent version of create-react-app that
 >
 > 2. **Select the latest 4.x version (4.0.3) in terminal** -->
 
-## Initialize Client and Connect to Web3MQ Network
+## Initialize Client
 
-In order to connect to the Web3MQ Network, both users and developers authenticate through wallet signatures, we demonstrate below with an Ethereum wallet via Metamask, but Web3MQ is built to be compatible with wallets across different chains.
+> Initialize Client and Connect to Web3MQ Network
 
-### Initialize Client
+In order to connect to the Web3MQ Network, both users and developers authenticate through wallet signatures, we
+demonstrate below with an Ethereum wallet via Metamask, but Web3MQ is built to be compatible with wallets across
+different chains.
+
+#### Initialize Client and Connect to Web3MQ Network
 
 :::note
 
-While we are committed to building an open and collectively owned public good, our early stage testnet requires an API key in order to connect. This is to control capacity to make sure that each early partner and developer is able to build a great experience on top of Web3MQ. [Apply here](https://web3mq.com/apply).
+While we are committed to building an open and collectively owned public good, our early stage testnet requires an API
+key in order to connect. This is to control capacity to make sure that each early partner and developer is able to build
+a great experience on top of Web3MQ. [Apply here](https://web3mq.com/apply).
 
 :::
 
 As Web3MQ is a federated network, our default JS SDK client has a method to help you connect to the best node for you.
 
-Simply calling Client.init without connectUrl or an empty string returns a url of the best node determined for you, and this url can be stored locally.
+Simply calling Client.init without connectUrl or an empty string returns a url of the best node determined for you, and
+this url can be stored locally.
 
 ```ts
-import { Client } from 'web3-mq';
+import {Client} from '@web3mq/client';
 
 // You can save the bestEndpointUrl locally to skip endpoint search next time, which will save time, and
 const bestEndpointUrl = await Client.init({
-  connectUrl: '', //
-  app_key: 'app_key', // temporary authorization key obtained by applying, will be removed in future testnets and mainnet
+    connectUrl: '', //
+    app_key: 'app_key', // temporary authorization key obtained by applying, will be removed in future testnets and mainnet
 });
 ```
 
-Calling Client.init with a specific connectUrl forces the client to connect to that specific node. When bestEndpointUrl is stored, it might be time-saving to connect directly instead of running the search again.
+Calling Client.init with a specific connectUrl forces the client to connect to that specific node. When bestEndpointUrl
+is stored, it might be time-saving to connect directly instead of running the search again.
 
 ```ts
-import { Client } from 'web3-mq';
+import {Client} from '@web3mq/client';
 
 const fastUrl = await Client.init({
-  connectUrl: bestEndpointUrl, // takes in a valid endpoint url as input, when this paramter is given, client will always connect to that specific node.
-  app_key: 'app_key', // Appkey applied from our team
+    connectUrl: bestEndpointUrl, // takes in a valid endpoint url as input, when this paramter is given, client will always connect to that specific node.
+    app_key: 'app_key', // Appkey applied from our team
 });
 ```
 
 #### API endpoints
 
-During this initial testing phase, we've hosted complete networks of Web3MQ nodes in different regions around the globe. Connect to these endpoints below, to access the Web3MQ Testnet.
+During this initial testing phase, we've hosted complete networks of Web3MQ nodes in different regions around the globe.
+Connect to these endpoints below, to access the Web3MQ Testnet.
 
 - https://testnet-us-west-1-1.web3mq.com
 - https://testnet-us-west-1-2.web3mq.com
@@ -87,81 +97,179 @@ During this initial testing phase, we've hosted complete networks of Web3MQ node
 - https://testnet-ap-singapore-1.web3mq.com
 - https://testnet-ap-singapore-2.web3mq.com
 
-### Sign with wallet to register user and obtain message encryption keys
+## Register User
 
-For any first-time user of Web3MQ's network, you'll need to register on Web3MQ's network. Web3MQ's JS SDK takes care of the key generation process and subsequent wallet signing process. Client.register.signMetaMask is a utility method that does this automatically.
+> Sign with wallet to register user and obtain message encryption keys
 
-#### Code
+For any first-time user of Web3MQ's network, you'll need to register on Web3MQ's network. Web3MQ's JS SDK takes care of
+the key generation process and subsequent wallet signing process. Client.register.register is a utility method that does
+this automatically.
+
+#### Login demo
 
 import { SignMetaMaskButton } from '@site/src/components/QuickStartStep/SignMetaMaskButton';
 
 <Layout
-title='signMetaMask'
+title='register'
 description='Get your userid and key pair.'
 >
 <SignMetaMaskButton />
 </Layout>
 
-```ts
-// You must ensure that the Client.init initialization is complete before running this
-const { PrivateKey, PublicKey, userid } = await Client.register.signMetaMask({
-  signContentURI: 'https://www.web3mq.com', // your signContent URI
-  EthAddress: 'your eth address', // *Not required*  your eth address, if not use your MetaMask eth address
-});
-
-console.log(PrivateKey, PublicKey, userid);
-
-// Keep your private key in a safe place, this is for demo purposes only
-localStorage.setItem('PRIVATE_KEY', PrivateKey);
-localStorage.setItem('PUBLICKEY', PublicKey);
-localStorage.setItem('USERID', userid);
-```
-
-### Use mobile authentication to log in
-
-Authorize dapp and other applications to log in directly through the mobile terminal device that has been logged in
-
 #### Code
 
-```ts
-let keys: KeyPairsType;
+#### login registration using JavaScript SDK
 
-const handleEvent = (options: SignClientCallBackType) => {
-  const { type, data } = options;
-  console.log(`${type} ====>`, data);
-  if (type === 'keys') {
-    const { private_key: PrivateKey, pubkey: PublicKey, userid } = data;
-    localStorage.setItem('PRIVATE_KEY', PrivateKey);
-    localStorage.setItem('PUBLICKEY', PublicKey);
-    localStorage.setItem('USERID', userid);
-    keys = { PrivateKey, PublicKey, userid };
-  }
+```ts
+import React, {useMemo, useState, useEffect} from "react";
+import {Client, KeyPairsType, WalletType} from "@web3mq/client";
+
+const password = '123456';
+const didType = 'eth' | 'starknet';
+
+// 1. connect wallet and get user 
+const {address} = await Client.register.getAccount(didType);
+const {userid, userExist} = await Client.register.getUserInfo({
+    did_value: didValue,
+    did_type: didType,
+});
+// 2. create main key pairs
+const {publicKey: localMainPublicKey, secretKey: localMainPrivateKey} = await Client.register.getMainKeypair({
+    password,
+    did_value: address,
+    did_type: walletType,
+});
+
+if (!userExist) {
+//    register func
+    const {signContent} = await Client.register.getRegisterSignContent({
+        userid,
+        mainPublicKey: publicKey,
+        didType: walletType,
+        didValue: address,
+    });
+    const {sign: signature, publicKey: did_pubkey = ""} =
+        await Client.register.sign(signContent, address, walletType);
+    const params = {
+        userid,
+        didValue: address,
+        mainPublicKey: publicKey,
+        did_pubkey,
+        didType: walletType,
+        nickname: "",
+        avatar_url: `https://cdn.stamp.fyi/avatar/${address}?s=300`,
+        signature,
+    };
+    const registerRes = await Client.register.register(params);
+    console.log(registerRes)
+}
+// login func
+const {
+    tempPrivateKey,
+    tempPublicKey,
+    pubkeyExpiredTimestamp,
+    mainPrivateKey,
+    mainPublicKey,
+} = await Client.register.login({
+    password,
+    mainPublicKey: localMainPublicKey,
+    mainPrivateKey: localMainPrivateKey,
+    userid,
+    didType,
+    didValue: address,
+});
+```
+
+#### login registration using react components
+
+#### Installation
+
+Install Web3MQ's react components using a package manager of your choice
+
+```bash
+npm install @web3mq/react-components
+or
+yarn add @web3mq/react-components
+```
+
+```tsx
+import React, {useEffect, useState} from "react";
+import {AppTypeEnum, LoginModal} from "@web3mq/react-components";
+import "@web3mq/react-components/dist/css/index.css";
+import {Client} from "@web3mq/client";
+
+const App: React.FC = () => {
+    const [fastestUrl, setFastUrl] = useState<string | null>(null);
+    const [isLogin, setIsLogin] = useState(false);
+    const handleLoginEvent = (event: any) => {
+        console.log(event, "event");
+        if (event.data && event.type === "login") {
+            setIsLogin(true);
+        }
+    };
+
+    const init = async () => {
+        const tempPubkey = localStorage.getItem("PUBLIC_KEY") || "";
+        const didKey = localStorage.getItem("DID_KEY") || "";
+        const fastUrl = await Client.init({
+            connectUrl: localStorage.getItem("FAST_URL"),
+            app_key: "vAUJTFXbBZRkEDRE",
+            env: "dev",
+            didKey,
+            tempPubkey,
+        });
+        localStorage.setItem("FAST_URL", fastUrl);
+        setFastUrl(fastUrl);
+    };
+
+    useEffect(() => {
+        init();
+        document
+            .getElementsByTagName("body")[0]
+            .setAttribute("data-theme", "light");
+    }, []);
+    if (!fastestUrl) {
+        return null;
+    }
+
+    let mainKeys = null;
+    const mainPrivateKey = localStorage.getItem(`MAIN_PRIVATE_KEY`);
+    const mainPublicKey = localStorage.getItem(`MAIN_PUBLIC_KEY`);
+    const address = localStorage.getItem("WALLET_ADDRESS");
+    if (mainPublicKey && mainPrivateKey && address) {
+        mainKeys = {
+            publicKey: mainPublicKey,
+            privateKey: mainPrivateKey,
+            walletAddress: address,
+        };
+    }
+
+    return (
+        <div>
+            {isLogin ? (
+                <div>login success</div>
+            ) : (
+                <LoginModal
+                    keys={mainKeys || undefined}
+                    handleLoginEvent={handleLoginEvent}
+                    appType={AppTypeEnum.pc}
+                    containerId={""}
+                    loginBtnNode={<button className="sign_btn">MetaMask</button>}
+                />
+            )}
+        </div>
+    );
 };
 
-// 1. Make sure that init is complete
-await Client.getSignClient(
-  {
-    dAppID: dapp_id,
-    topicID: topic_id,
-    signatureTimestamp: signature_timestamp,
-    dAppSignature: dapp_signature,
-  },
-  handleEvent
-);
+export default App;
 
-// 2. Make sure that getSignClient is complete
-await Client.signClient.sendDappBridge({
-  did_type: 'your did type', // eth
-  did_value: 'your did value', // eth wallet address
-});
 
-const tempCode = Client.signClient.tempCode;
-console.log(tempCode);
 ```
 
-### Get Client Instance
+## Get Client Instance
+> Get Client Instance
 
-#### Code
+#### Use Demo
 
 import { InitClientButton } from '@site/src/components/QuickStartStep/InitClientButton';
 
@@ -172,17 +280,37 @@ description='Get the client instance.You can see the Client object in the consol
 <InitClientButton />
 </Layout>
 
+#### Code
+
+:::tip
+After successful login, you can get the secret key pair from the returned result
+:::
+
 ```ts
-const keys = { PrivateKey, PublicKey, userid };
+
+const {
+    tempPrivateKey,
+    tempPublicKey,
+    pubkeyExpiredTimestamp,
+    mainPrivateKey,
+    mainPublicKey,
+} = loginRes
+
+const keys = {
+    PrivateKey: tempPrivateKey,
+    PublicKey: tempPublicKey,
+    userid: localStorage.getItem('userid')
+};
 
 const client = Client.getInstance(keys);
 ```
 
 ## Create room
 
-After initializing the client and registering your user, the next step is to connect to a room
+> After initializing the client and registering your user, the next step is to connect to a room
 
-#### Code
+#### Use Demo Code
+
 import { PreButton } from '@site/src/components/QuickStartStep/PreButton'
 import { CreateRoomButton } from '@site/src/components/QuickStartStep/CreateRoomButton'
 
@@ -193,16 +321,17 @@ description='create your Chat Room.'
 <PreButton><CreateRoomButton /></PreButton>
 </Layout>
 
+#### Code
+
 ```ts
 client.channel.createRoom();
 ```
-
 ```tsx
 <button
-  onClick={() => {
-    client.channel.createRoom();
-  }}>
-  createGroup
+    onClick={() => {
+        client.channel.createRoom();
+    }}>
+    createGroup
 </button>
 ```
 
@@ -225,10 +354,10 @@ client.channel.sendMessage('Hello World');
 
 ```tsx
 <button
-  onClick={() => {
-    client.message.sendMessage('Hello World');
-  }}>
-  sendMessage
+    onClick={() => {
+        client.message.sendMessage('Hello World');
+    }}>
+    sendMessage
 </button>
 ```
 
@@ -251,82 +380,179 @@ code={<AppMdx />}>
 #### Root Components Code
 
 ```tsx
-import React, { useMemo, useState, useEffect } from 'react';
-import { Client, KeyPairsType } from 'web3-mq';
+import React, {useEffect, useMemo, useState} from 'react';
+import {Client, KeyPairsType, WalletType} from '@web3mq/client';
+import {AppTypeEnum, LoginModal} from "@web3mq/react-components";
+import '@web3mq/react-components/dist/css/index.css';
 
 // Root components
 const App: React.FC = () => {
-  const hasKeys = useMemo(() => {
-    const PrivateKey = localStorage.getItem('PRIVATE_KEY') || '';
-    const PublicKey = localStorage.getItem('PUBLICKEY') || '';
-    const userid = localStorage.getItem('USERID') || '';
-    if (PrivateKey && PublicKey && userid) {
-      return { PrivateKey, PublicKey, userid };
+    const hasKeys = useMemo(() => {
+        const PrivateKey = localStorage.getItem('PRIVATE_KEY') || '';
+        const PublicKey = localStorage.getItem('PUBLIC_KEY') || '';
+        const userid = localStorage.getItem('userid') || '';
+        if (PrivateKey && PublicKey && userid) {
+            return { PrivateKey, PublicKey, userid };
+        }
+        return null;
+    }, []);
+    const [keys, setKeys] = useState<KeyPairsType | null>(hasKeys);
+    const [fastestUrl, setFastUrl] = useState<string | null>(null);
+    const [groupMsg, setGroupMsg] = useState('');
+    const [groupChatMsgList, setGroupChatMsgList] = useState([]);
+    const [chatRoomName, setChatRoomName] = useState('');
+
+    const init = async () => {
+        const tempPubkey = localStorage.getItem('PUBLIC_KEY') || '';
+        const didKey = localStorage.getItem('DID_KEY') || '';
+        const fastUrl = await Client.init({
+            connectUrl: localStorage.getItem('FAST_URL'),
+            app_key: 'vAUJTFXbBZRkEDRE',
+            env: 'dev',
+            didKey,
+            tempPubkey,
+        });
+        localStorage.setItem('FAST_URL', fastUrl);
+        setFastUrl(fastUrl);
+    };
+    const handleLoginEvent = (eventData: any) => {
+        if (eventData.data) {
+            if (eventData.type === 'login') {
+                const {
+                    privateKey,
+                    publicKey,
+                    tempPrivateKey,
+                    tempPublicKey,
+                    didKey,
+                    userid,
+                    address,
+                    pubkeyExpiredTimestamp,
+                } = eventData.data;
+                localStorage.setItem('userid', userid);
+                localStorage.setItem('PRIVATE_KEY', tempPrivateKey);
+                localStorage.setItem('PUBLIC_KEY', tempPublicKey);
+                localStorage.setItem('WALLET_ADDRESS', address);
+                localStorage.setItem(`MAIN_PRIVATE_KEY`, privateKey);
+                localStorage.setItem(`MAIN_PUBLIC_KEY`, publicKey);
+                localStorage.setItem(`DID_KEY`, didKey);
+                localStorage.setItem('PUBKEY_EXPIRED_TIMESTAMP', String(pubkeyExpiredTimestamp));
+                setKeys({
+                    PrivateKey: tempPrivateKey,
+                    PublicKey: tempPublicKey,
+                    userid,
+                });
+            }
+            if (eventData.type === 'register') {
+                const { privateKey, publicKey, address } = eventData.data;
+                localStorage.setItem('WALLET_ADDRESS', address);
+                localStorage.setItem(`MAIN_PRIVATE_KEY`, privateKey);
+                localStorage.setItem(`MAIN_PUBLIC_KEY`, publicKey);
+            }
+        }
+    };
+
+    useEffect(() => {
+        init();
+        document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
+    }, []);
+
+    if (!keys) {
+        let mainKeys = null;
+        const mainPrivateKey = localStorage.getItem(`MAIN_PRIVATE_KEY`);
+        const mainPublicKey = localStorage.getItem(`MAIN_PUBLIC_KEY`);
+        const address = localStorage.getItem('WALLET_ADDRESS');
+        if (mainPublicKey && mainPrivateKey && address) {
+            mainKeys = {
+                publicKey: mainPublicKey,
+                privateKey: mainPrivateKey,
+                walletAddress: address,
+            };
+        }
+        return <LoginModal
+            keys={mainKeys || undefined}
+            handleLoginEvent={handleLoginEvent}
+            appType={AppTypeEnum.pc}
+            containerId={''}
+            loginBtnNode={
+                <button className="sign_btn">
+                    MetaMask
+                </button>
+            }
+        />;
     }
-    return null;
-  }, []);
 
-  const [keys, setKeys] = useState<KeyPairsType | null>(hasKeys);
-  const [fastestUrl, setFastUrl] = useState<string | null>(null);
 
-  useEffect(() => {
-    init();
-  }, []);
+    if (!fastestUrl) {
+        return null;
+    }
+    const handleEvent = (event: any) => {
+        console.log(event, 'event');
+    };
+    const client = Client.getInstance(keys);
+    client.on('channel.activeChange', handleEvent);
+    client.on('channel.created', handleEvent);
+    client.on('message.delivered', handleEvent);
+    client.on('channel.getList', handleEvent);
+    client.on('channel.updated', handleEvent);
 
-  const init = async () => {
-    const fastUrl = await Client.init({
-      connectUrl: localStorage.getItem('FAST_URL'),
-      app_key: 'vAUJTFXbBZRkEDRE',
-      env: 'dev',
-    });
-    localStorage.setItem('FAST_URL', fastUrl);
-    setFastUrl(fastUrl);
-  };
+    const createRoom = async () => {
+        await client.channel.createRoom({
+            group_name: chatRoomName || 'default room',
+        });
+        await client.channel.queryChannels({
+            page: 1,
+            size: 20,
+        });
+        if (client.channel.channelList) {
+            await client.channel.setActiveChannel(client.channel.channelList[0]);
+        }
+    };
 
-  const signMetaMask = async () => {
-    const { PrivateKey, PublicKey, userid } =
-      await Client.register.signMetaMask('https://www.web3mq.com');
-    localStorage.setItem('PRIVATE_KEY', PrivateKey);
-    localStorage.setItem('PUBLICKEY', PublicKey);
-    localStorage.setItem('USERID', userid);
-    setKeys({ PrivateKey, PublicKey, userid });
-  };
+    const sendMsg = async () => {
+        if (!groupMsg) {
+            alert('message required');
+        }
+        await client.message.sendMessage(groupMsg);
+    };
 
-  if (!keys) {
     return (
-      <div>
-        <button onClick={signMetaMask}>signMetaMask</button>
-      </div>
+        <div>
+            <div>
+                <h1>chat</h1>
+                <div>
+                    Chat room name :
+                    <input
+                        type="text"
+                        value={chatRoomName}
+                        onChange={(e) => setChatRoomName(e.target.value)}
+                    />
+                </div>
+                <button onClick={createRoom}>createRoom</button>
+                <div>
+                    msg :<input type="text" value={groupMsg} onChange={(e) => setGroupMsg(e.target.value)} />
+                </div>
+                <button onClick={sendMsg}>send</button>
+                <div>
+                    <ul>
+                        {groupChatMsgList.map((item: any, index) => {
+                            return <li>{item.content}</li>;
+                        })}
+                    </ul>
+                </div>
+            </div>
+        </div>
     );
-  }
-
-  if (!fastestUrl) {
-    return null;
-  }
-
-  const client = Client.getInstance(keys);
-
-  return (
-    <div>
-      <button
-        onClick={() => {
-          client.channel.createRoom();
-        }}>
-        create Room
-      </button>
-      <Child client={client} />
-    </div>
-  );
 };
 
 export default App;
+
 ```
 
 <!-- #### Child Components Code
 
 ```tsx
 import React, { useState, useEffect } from 'react';
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 // Child components
 interface IProps {

@@ -20,7 +20,7 @@ As a context consumer, the `MessageList` component must be rendered as a child o
 import { Layout } from '@site/src/components/Layout'
 import { MessageListExample } from '@site/src/components/Web3MQ-React/MessageListExample';
 import MessageListExampleMdx from '@site/src/components/Web3MQ-React/MessageListExample/MessageListExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'
@@ -30,9 +30,9 @@ code={<MessageListExampleMdx />}>
 </Layout>
 
 :::tip
-
-若使用自定义`Message`组件，方法一:作为Channel的 Message props 传入，但想获取message信息需要通过`useMessageContext`来实现。方法二也是最优是作为MessageList的 Message props 传递，会直接取代内部`Message`组件，并将message信息作为props传递给自定义`Message`，就不用useMessageContext获取message信息。完整事例可以参考上面例子或Channel例子
-
+To use a custom Message component:
+> 1. Passed as the props to `Channel`, in the custom `Message`, you need to get the `message` property through `useMessageContext`.
+> 2. Passed as the props to `MessageList`, you can get the `message` property from props.
 :::
 
 ## Api

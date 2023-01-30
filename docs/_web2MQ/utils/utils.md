@@ -7,7 +7,7 @@
 #### Code
 
 ```typescript
-import { register } from "web3-mq";
+import { register } from "@web3mq/client";
 
 const data = await register({
   platform: "opensea",
@@ -91,7 +91,7 @@ const data = await getLoginRandomSecret({
 #### Code
 
 ```typescript
-import { login } from "web3-mq";
+import { login } from "@web3mq/client";
 const data = await login();
 ```
 

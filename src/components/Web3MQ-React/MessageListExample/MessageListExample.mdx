@@ -1,20 +1,22 @@
 ```tsx 
 import React, { useEffect, PropsWithChildren } from 'react';
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 import { 
-  AppTypeEnum,
-  Avatar, 
+  AppTypeEnum, 
+  Avatar,
   Chat, 
   ChannelList, 
   Channel, 
+  Button,
+  LoginModal,
   MessageList, 
   MessageHeader, 
   MessageInput,
   MessageProps, 
   Window
-} from 'web3-mq-react';
+} from '@web3mq/react-components';
 
-import useLogin from '../ChatExample/hooks/useLogin';
+import useLogin from './hooks/useLogin';
 
 const CustomMessage = (props: PropsWithChildren<MessageProps>) => {
   const { message } = props;
@@ -30,8 +32,8 @@ const CustomMessage = (props: PropsWithChildren<MessageProps>) => {
         size={30} 
       />
       <div style={{position: 'relative', width: '100%'}}>
-        <div className={ss.dataInner}>
-          <span className={ss.name}>{getShortAddress(message.senderId)}</span>
+        <div>
+          <span>{getShortAddress(message.senderId)}</span>
           <span>{message.date}&nbsp;{message.timestamp}</span>
         </div>
         <div>{message.content}</div>
@@ -41,17 +43,20 @@ const CustomMessage = (props: PropsWithChildren<MessageProps>) => {
 }
 
 export const MessageListExample: React.FC = () => {
-  const { keys, init, fastestUrl, logout } = useLogin();
+ const { keys, fastestUrl, init, logout, handleLoginEvent } = useLogin();
 
   useEffect(() => {
     init();
+    document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
   }, [])
 
   if (!keys) {
     return (
-      <div>
-        <button className={ss.link_btn}><a href="/docs/Web3MQ-React/coreComponent/Chat#basic-usage">请先在Chat部分进行登录操作</a></button>
-      </div>
+       <LoginModal 
+        appType={AppTypeEnum.pc}
+        handleLoginEvent={handleLoginEvent}
+        loginBtnNode={<Button size='large' type='ghost'>login</Button>}
+      />
     );
   }
   if (!fastestUrl) {
@@ -61,13 +66,11 @@ export const MessageListExample: React.FC = () => {
   const client = Client.getInstance(keys);
 
   return (
-    <div id='box' style={{position: 'relative', border: '1px solid #f2f2f2', width: '100%',height: '500px',overflow: 'auto'}}>
+    <div id='box' style={{position: 'relative'}}>
       <Chat containerId='box' client={client} appType={AppTypeEnum['h5']} logout={logout}>
-        <div style={{height: '100%', display: 'flex', flexDirection: 'column'}}>
-          <ChannelList />
-        </div>
+        <ChannelList />
         <Channel>
-          <Window>
+          <Window hasContainer>
             <MessageHeader />
             <MessageList Message={CustomMessage} />
             <MessageInput />

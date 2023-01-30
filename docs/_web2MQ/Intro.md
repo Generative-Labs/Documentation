@@ -4,7 +4,7 @@ sidebar_position: 0
 
 # Intro
 
-web3-mq-js is the official JavaScript client for Web3MQ, a service for building chat applications.
+@web3mq/client-js is the official JavaScript client for Web3MQ, a service for building chat applications.
 
 # Design
 
@@ -24,7 +24,7 @@ web3-mq-js is the official JavaScript client for Web3MQ, a service for building 
 
 ```ts
 import React, { useState } from "react";
-import { Web2MQ } from "web3-mq";
+import { Web2MQ } from "@web3mq/client";
 
 const App = () => {
   const [channels, setChannels] = useState<ChannelResponse[]>([]);
@@ -78,11 +78,11 @@ const App = () => {
 ### Install with NPM
 
 ```bash
-npm install web3-mq
+npm install @web3mq/client
 ```
 
 ### Install with Yarn
 
 ```bash
-yarn add web3-mq
+yarn add @web3mq/client
 ```

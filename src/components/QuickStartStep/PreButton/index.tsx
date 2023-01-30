@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Client } from 'web3-mq'
+import { Client } from '@web3mq/client'
 import useLogin from '../hooks/useLogin';
 
 

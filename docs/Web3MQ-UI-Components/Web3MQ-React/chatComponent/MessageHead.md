@@ -2,15 +2,15 @@
 sidebar_position: 6
 ---
 # MessageHead 
-`MessageHead`是作为消息头部组件，需要作为Chat和Channel的子组件使用，从context获取activeChannel和client来渲染当前频道内容，和一些功能实现。
+As the fixed header in chat room, `MessageHead` is used to render the chat room information and provide functions, such as inviting people into a group. It must exist as the `Chat` and `Channel` subcomponent, because `MessageHead` needs to get the `activeChannel` and `client` properties from the context.
 
 ## Basic Usage
-`MessageHead`不注入任何props，在`MessageHead`组件中，用户可以邀请好友进入自己当前的群聊。
+`MessageHead` does not inject any props.
 
 import { Layout } from '@site/src/components/Layout'
 import { MessageHeadExample } from '@site/src/components/Web3MQ-React/MessageHeadExample';
 import MessageHeadMdx from '@site/src/components/Web3MQ-React/MessageHeadExample/MessageHeadExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'

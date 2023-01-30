@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 import { 
   AppTypeEnum, 
+  Button,
   Channel, 
   ChannelList, 
   Chat, 
   MessageHeader, 
   MessageInput, 
   MessageList, 
+  Window,
   useMessageInputContext 
-} from 'web3-mq-react';
+} from '@web3mq/react-components';
 
 import useLogin from '../ChatExample/hooks/useLogin';
-
-import ss from './index.module.css';
 
 const CustomInput = () => {
   const { sendMessage } = useMessageInputContext();
@@ -24,7 +24,7 @@ const CustomInput = () => {
     setValue('');
   }
   return (
-    <div style={{ display: 'flex',  width: '100%', height: '40px' }}>
+    <div style={{ display: 'flex',  width: '100%', height: '60px', padding: '10px', boxShadow: '0 -12px 10px rgb(30 83 133 / 3%)' }}>
       <input style={{ flex: '2' }} type="text" value={value} onChange={(e) => setValue(e.target.value)} />
       <button style={{ flex: '1' }} onClick={() => handleEvent()}>send</button>
     </div>
@@ -38,13 +38,12 @@ export const MessageInputExample: React.FC = (props: any) => {
   
   useEffect(() => {
     init();
+    document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
   }, [])
 
   if (!keys) {
     return (
-      <div>
-        <button className={ss.link_btn}><a href="/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#basic-usage">请先在Chat部分进行登录操作</a></button>
-      </div>
+      <Button size='large' type='ghost'><a href="/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal#basic-usage" style={{textDecoration: 'none'}}>Please login first</a></Button>
     );
   }
   if (!fastestUrl) {
@@ -60,11 +59,11 @@ export const MessageInputExample: React.FC = (props: any) => {
           <ChannelList />
         </div>
         <Channel>
-          <div style={{ position: 'relative', width: '100%', height: '100%', display: 'flex', flexDirection: 'column' }}>
+          <Window hasContainer>
             <MessageHeader />
             <MessageList />
             <MessageInput Input={type === 'custom' ? CustomInput : undefined} />
-          </div>
+          </Window>
         </Channel>
       </Chat>
     </div>

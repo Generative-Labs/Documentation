@@ -1,10 +1,18 @@
 ```tsx
 import React, { useEffect } from 'react';
-import { Client } from 'web3-mq';
-import { Chat, Channel, ChannelList, AppTypeEnum, useChannelStateContext, useChatContext } from 'web3-mq-react';
+import { Client } from '@web3mq/client';
+import {
+  AppTypeEnum,
+  Button, 
+  Chat, 
+  Channel, 
+  ChannelList, 
+  LoginModal,
+  useChannelStateContext, 
+  useChatContext 
+} from '@web3mq/react-components';
 
-import useLogin from '../ChatExample/hooks/useLogin';
-
+import useLogin from './hooks/useLogin';
 
 const CustomComponent: React.FC = () => {
   const { client } = useChatContext();
@@ -15,29 +23,30 @@ const CustomComponent: React.FC = () => {
   };
 
   return (
-    <div className={ss.custom_box} style={{border: '1px solid #f2f2f2', wordBreak: 'break-all'}}>
-      <div><span>current Chat avatar_base64 is</span> {activeChannel.avatar_base64}</div>
-      <div><span>current Chat avatar_url is</span> {activeChannel.avatar_url}</div>
-      <div><span>current Chat name is</span> {activeChannel.chat_name}</div>
-      <div><span>current Chat type is</span> {activeChannel.chat_type}</div>
-      <div><span>current Chat ID is</span> {activeChannel.chatid}</div>
-      <button className={ss.back_btn} onClick={handleClose}>back</button>
+    <div style={{wordBreak: 'break-all'}}>
+      <div>current Chat name is {activeChannel.chat_name}</div>
+      <div>current Chat type is {activeChannel.chat_type}</div>
+      <div>current Chat ID is {activeChannel.chatid}</div>
+      <Button type='ghost' onClick={handleClose} style={{margin: '10px 12px'}}>back</Button>
     </div>
   )
 }
 
 export const ChannelExample: React.FC = () => {
-  const { keys, init, fastestUrl, logout, signMetaMask } = useLogin();
-  
+  const { keys, fastestUrl, init, logout, handleLoginEvent } = useLogin();
+
   useEffect(() => {
     init();
+    document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
   }, [])
 
   if (!keys) {
     return (
-      <div>
-        <button onClick={signMetaMask}>signMetaMask</button>
-      </div>
+       <LoginModal 
+        appType={AppTypeEnum.pc}
+        handleLoginEvent={handleLoginEvent}
+        loginBtnNode={<Button size='large' type='ghost'>login</Button>}
+      />
     );
   }
   if (!fastestUrl) {
@@ -47,16 +56,12 @@ export const ChannelExample: React.FC = () => {
   const client = Client.getInstance(keys);
 
   return (
-    <div id='box' style={{position: 'relative', width: '100%',height: '300px',overflow: 'auto'}}>
-      <Chat client={client} appType={AppTypeEnum['h5']} logout={logout}>
-        <div style={{height: '100%', display: 'flex', flexDirection: 'column'}}>
-          <ChannelList />
-        </div>
-        <Channel>
-          <CustomComponent />
-        </Channel>
-      </Chat>
-    </div>
+    <Chat client={client} appType={AppTypeEnum['h5']} logout={logout}>
+      <ChannelList />
+      <Channel>
+        <CustomComponent />
+      </Channel>
+    </Chat>
   );
 };
 ```

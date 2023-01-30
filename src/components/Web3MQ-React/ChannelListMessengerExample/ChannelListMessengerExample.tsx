@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ChannelListMessenger } from 'web3-mq-react';
+import { ChannelListMessenger } from '@web3mq/react-components';
 
 export const ChannelListMessengerExample: React.FC = () => {
   const [ loading, setLoading ] = useState(false);

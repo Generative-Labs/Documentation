@@ -1,0 +1,57 @@
+```tsx
+import React, { useEffect } from 'react';
+import { Client } from '@web3mq/client';
+import { 
+  AppTypeEnum, 
+  Button,
+  Channel, 
+  ChannelList, 
+  Chat, 
+  MessageConsole,
+  MessageHeader, 
+  MessageInput, 
+  MessageList, 
+  Window,
+} from '@web3mq/react-components';
+
+import useLogin from './hooks/useLogin';
+
+export const App: React.FC = () => {
+  const { keys, init, fastestUrl, logout } = useLogin();
+  
+  useEffect(() => {
+    init();
+    document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
+  }, [])
+
+  if (!keys) {
+    return (
+      <LoginModal 
+        appType={appType}
+        handleLoginEvent={handleLoginEvent}
+        loginBtnNode={<Button size='large' type='ghost'>Login</Button>}
+      />
+    )
+  }
+  if (!fastestUrl) {
+    return null;
+  }
+
+  const client = Client.getInstance(keys);
+
+  return (
+    <div id='box' style={{position: 'relative', width: '100%',overflow: 'auto'}}>
+      <Chat containerId='box' client={client} appType={AppTypeEnum['h5']} logout={logout}>
+        <ChannelList />
+        <Channel>
+          <Window hasContainer>
+            <MessageHeader />
+            <MessageList />
+            <MessageConsole Input={<MessageInput />}/>
+          </Window>
+        </Channel>
+      </Chat>
+    </div>
+  );
+};
+```

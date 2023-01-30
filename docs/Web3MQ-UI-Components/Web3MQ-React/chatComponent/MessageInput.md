@@ -2,16 +2,16 @@
 sidebar_position: 6
 ---
 # MessageInput
-`MessageInput`本质是一个React Context Provider，没有注入任何UI；若在`MessageInput`中没有传入Input参数，则默认渲染我们自己Input组件样式；通过context传递给默认或自定义Input组件sendMessage的方法。
+The `MessageInput` component is a React Context provider that does not inject any UI. The `MessageInput` renders `ChatAutoComplete` component by default when it does not inject the Input as the props.
 
 ## Basic Usage
 
-`MessageInput`必须在`Chat`和`Channel`组件中使用。在`MessageInput`使用sendMessage方法时, 必须在SDK中设置client.Channel.ActiveChannel，才能成功发送消息。
+`MessageInput`must be used in the `Chat` and `Channel` components.
 
 import { Layout } from '@site/src/components/Layout'
 import { MessageInputExample } from '@site/src/components/Web3MQ-React/MessageInputExample';
 import MessageInputExampleMdx from '@site/src/components/Web3MQ-React/MessageInputExample/MessageInputExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'
@@ -21,10 +21,11 @@ code={<MessageInputExampleMdx />}>
 </Layout>
 
 ## ChatAutoComplete component
-在组件库中，`MessageInput`若没有传入Input, 其默认渲染Input组件为`ChatAutoComplete`组件，其内部通过useMessageInputContext以集成sendMessage方法，只能用于`MessageInput`使用
+As the default render Input component of `MessageInpt`, `ChatAutoComplete` gets the `sendMessage` method through `useMessageInputContext`, and cannot be used without the `MessageInput` component.
+只能用于`MessageInput`使用
 
 ## Use Custom Input
-如果用户想渲染自定义`Input`组件，可以通过`MessageInput`的`Input`props传入，其优先级大于通过`Channel`组件传入的`Input`。
+You can render the custom `Input` component by passing Input as props to the `MessageInput`.
 
 import CustomInputExampleMdx from '@site/src/components/Web3MQ-React/MessageInputExample/CustomInputExample.mdx';
 
@@ -47,14 +48,14 @@ code={<CustomInputExampleMdx />}>
 
 | Property    | Description        | Type     | Default          |
 | ----------- | ------------------ | -------- | ---------------- |
-| placeholder | 设置占位符           | String   | 'Send a Message’ |
-| row         | 自适应内容高度        | Number   |      1           |
-| value       | 输入框内容           | String   |     ‘’           |
-| onChange    | 输入框内容变化时的回调 | Function |      -           |
+| placeholder | set the placeholder| String   | 'Send a Message’ |
+| row         | adaptive content height | Number   |      1           |
+| value       | input content      | String   |     ‘’           |
+| onChange    | callback when the contents of the input change | Function |      -           |
 
 
 **useMessageInputContext data**
 
 | Property      | Description                            | Type              | Default |
 | ------------- | -------------------------------------- | ----------------- | ------- |
-| sendMessage   |    发送消息方法                          | Function          |   -     |
+| sendMessage   |    Sending message method              | Function          |   -     |
