@@ -8,8 +8,8 @@ position: 2
 
 | name           | type     | Parameters Description                                                        | response          |
 | -------------- | -------- | ----------------------------------------------------------------------------- | ----------------- |
-| getConnectLink | function |                                                                               | string            |
-| sendSign       | function | [DappConnectSignParams](/docs/Web3MQ-SDK/JS-SDK/types/#dappconnectsignparams) | Promise: { void } |
+| getConnectLink | function | none                                                                          | string            |
+| sendSign       | function | [DappConnectSignParams](/docs/Web3MQ-SDK/JS-SDK/types/#dappconnectsignparams) | Promise: void     |
 
 ## Prerequisites
 

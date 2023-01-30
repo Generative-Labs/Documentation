@@ -40,7 +40,7 @@ export interface PageParams {
 ```ts
 export type BaseParams = {
   userid: string;
-  signature: string;
+  web3mq_signature: string;
   timestamp: number;
 };
 ```
@@ -125,22 +125,42 @@ export type getUserInfoParams = {
 export type EnvTypes = "dev" | "test";
 ```
 
-### ActiveChannelType
+### ChannelItemType
 
 ```ts
-export type ActiveChannelType = {
+export type ChannelItemType = {
+  avatar_url: string;
+  chat_name: string;
+  chat_type: string;
+  chatid: string;
   topic: string;
   topic_type: string;
+  lastMessage?: string;
+  updatedAt?: string;
+  unread?: number;
 };
 ```
 
 ### CreateRoomParams
 
 ```ts
-export interface CreateRoomParams extends BaseParams {
-  group_name?: string;
-  avatar_url?: string;
-  avatar_base64?: string;
+export interface CreateRoomParams {
+  groupName?: string;
+  groupid?: string;
+  avatarUrl?: string;
+  avatarBase64?: string;
+  permissions?: GroupPermissions;
+}
+```
+
+### UpdateRoomListParams 
+
+```tsx
+export interface UpdateRoomListParams {
+  chatid: string,
+  chat_type: string
+  topic: string,
+  topic_type: string,
 }
 ```
 
@@ -161,9 +181,6 @@ export type GroupPermissions = {
 export interface UpdateGroupPermissionsParams {
   groupid: string;
   permissions: GroupPermissions;
-  timestamp: number;
-  userid: string;
-  web3mq_user_signature: string;
 }
 ```
 
@@ -196,13 +213,8 @@ export type ContactListItemType = {
 export interface FollowOperationParams {
   address: string;
   action: "follow" | "cancel";
-  did_type: WalletType;
-  did_pubkey?: string;
-  did_signature: string;
-  sign_content: string;
-  timestamp: number;
-  target_userid: string;
-  userid: string;
+  didType: WalletType;
+  targetUserid: string;
 }
 ```
 
@@ -211,10 +223,7 @@ export interface FollowOperationParams {
 ```ts
 export interface PublishNotificationToFollowersParams {
   content: string;
-  timestamp: number;
   title: string;
-  userid: string;
-  web3mq_user_signature: string;
 }
 ```
 
@@ -291,10 +300,12 @@ export interface GetUserBindDidsParams extends BaseParams {}
 ### UserBindDidParams
 
 ```ts
-export interface UserBindDidParams extends BaseParams {
-  provider_id: string;
+export interface UserBindDidParams {
   did_type: string;
   did_value: string;
+  did_action?: string;
+  did_content?: string;
+  provider_id: string;
 }
 ```
 
@@ -314,9 +325,6 @@ export type UserBindDidIdsResponse = Pick<
 ```ts
 export interface UpdateUserPermissionsParams {
   permissions: UserPermissionsType;
-  timestamp: number;
-  userid: string;
-  web3mq_user_signature: string;
 }
 ```
 
@@ -389,6 +397,23 @@ export interface TopicListType extends SubscribeListType {
 }
 ```
 
+### TopicMessageType
+
+```ts
+export type TopicMessageType = {
+  content: string
+  topicid: string;
+  title: string;
+};
+```
+
+### CreateTopicResponse
+
+```ts
+export type CreateTopicResponsee = {
+  topicid: string;
+};
+```
 ### WalletType
 
 ```ts

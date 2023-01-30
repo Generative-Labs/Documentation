@@ -14,78 +14,128 @@ position: 8
 
 | name                     | type     | Parameters Description                                                                   | response                  |
 | ------------------------ | -------- | ---------------------------------------------------------------------------------------- | ------------------------- |
-| changeNotificationStatus | function | messages: string[], status:[MessageStatus](/docs/Web3MQ-SDK/JS-SDK/types/#messagestatus) | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse) |
+| changeNotificationStatus | function | 1.messages: string[] 2.status:[MessageStatus](/docs/Web3MQ-SDK/JS-SDK/types/#messagestatus) | Promise:[SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse) |
 
-## init Client
+## Prerequisites
+
+> init() see: [init](/docs/Web3MQ-SDK/JS-SDK/client/#init)
+
+> register() see: [register](/docs/Web3MQ-SDK/JS-SDK/register/#register-or-resetpassword)
+
+> login() see: [login](/docs/Web3MQ-SDK/JS-SDK/register/#login)
+
+> event see: [event](/docs/Web3MQ-SDK/JS-SDK/client/#events-1)
+
+### init Client
+> A combined web3mq-react example, and create web3mq client before chat.
 
 ```tsx
-import { useEffect, useState } from 'react';
-import { Client, KeyPairsType } from "@web3mq/client";
+import { useMemo, useState } from 'react';
+import {Client, KeyPairsType, SignClientCallBackType, WalletType} from '@web3mq/client';
+import {LoginModal} from '@web3mq/react-components';
+
+const useLogin = () => {
+  const hasKeys = useMemo(() => {
+    const PrivateKey = localStorage.getItem('PRIVATE_KEY') || '';
+    const PublicKey = localStorage.getItem('PUBLIC_KEY') || '';
+    const userid = localStorage.getItem('userid') || '';
+    if (PrivateKey && PublicKey && userid) {
+      return { PrivateKey, PublicKey, userid };
+    }
+    return null;
+  }, []);
+
+  const [keys, setKeys] = useState<KeyPairsType | null>(hasKeys);
+  const [fastestUrl, setFastUrl] = useState<string | null>(null);
+  const [userAccount, setUserAccount] = useState<{
+    userid: string;
+    address: string;
+  }>();
+
+  const init = async () => {
+    const tempPubkey = localStorage.getItem('PUBLIC_KEY') || '';
+    const didKey = localStorage.getItem('DID_KEY') || '';
+    const fastUrl = await Client.init({
+      connectUrl: localStorage.getItem('FAST_URL'),
+      app_key: 'vAUJTFXbBZRkEDRE',
+      env: 'dev',
+      didKey,
+      tempPubkey,
+    });
+    localStorage.setItem('FAST_URL', fastUrl);
+    setFastUrl(fastUrl);
+  };
+
+  const logout = () => {
+    localStorage.setItem('PRIVATE_KEY', '')
+    localStorage.setItem('PUBLIC_KEY', '')
+    localStorage.setItem('DID_KEY', '')
+    localStorage.setItem('userid', '')
+    setKeys(null);
+  };
+
+  const handleLoginEvent = (eventData: any) => {
+    if (eventData.data) {
+      if (eventData.type === 'login') {
+        const {
+          privateKey,
+          publicKey,
+          tempPrivateKey,
+          tempPublicKey,
+          didKey,
+          userid,
+          address,
+          pubkeyExpiredTimestamp,
+        } = eventData.data;
+        localStorage.setItem('userid', userid);
+        localStorage.setItem('PRIVATE_KEY', tempPrivateKey);
+        localStorage.setItem('PUBLIC_KEY', tempPublicKey);
+        localStorage.setItem('WALLET_ADDRESS', address);
+        localStorage.setItem(`MAIN_PRIVATE_KEY`, privateKey);
+        localStorage.setItem(`MAIN_PUBLIC_KEY`, publicKey);
+        localStorage.setItem(`DID_KEY`, didKey);
+        localStorage.setItem('PUBKEY_EXPIRED_TIMESTAMP', String(pubkeyExpiredTimestamp));
+        setKeys({
+          PrivateKey: tempPrivateKey,
+          PublicKey: tempPublicKey,
+          userid,
+        });
+      }
+      if (eventData.type === 'register') {
+        const { privateKey, publicKey, address } = eventData.data;
+        localStorage.setItem('WALLET_ADDRESS', address);
+        localStorage.setItem(`MAIN_PRIVATE_KEY`, privateKey);
+        localStorage.setItem(`MAIN_PUBLIC_KEY`, publicKey);
+      }
+    }
+  };
+
+  return { keys, fastestUrl, init, handleLoginEvent, logout };
+};
 
 export const App = () => {
-  const [fastUrl, setFastUrl] = useState<string | null>(null);
-  const [keys, setKeys] = useState<KeyPairsType | null>(null);
-  const init = async () => {
-    // 1. You must initialize the SDK, the init function is asynchronous
-    const newFastUrl = await Client.init({
-      connectUrl: "example url", // The fastURL you saved to local
-      app_key: "app_key", // Appkey applied from our team
-    });
-    setFastUrl(newFastUrl);
-    // 2.Login and get keys
-    const { address } = await Client.register.getAccount(didType);
-    const { userid, userExist } = await Client.register.getUserInfo({
-      did_value: address,
-      did_type: didType,
-    });
-    let localMainPrivateKey = "";
-    let localMainPublicKey = "";
-
-    if (!userExist) {
-      const registerRes = await Client.register.register({
-        password,
-        did_value: address,
-        userid,
-        did_type: didType,
-        avatar_url: `https://cdn.stamp.fyi/avatar/${address}?s=300`,
-      });
-      localMainPrivateKey = registerRes.mainPrivateKey;
-      localMainPublicKey = registerRes.mainPublicKey;
-    }
-
-    const {
-      TempPrivateKey,
-      TempPublicKey,
-      pubkeyExpiredTimestamp,
-      mainPrivateKey,
-      mainPublicKey,
-    } = await Client.register.login({
-      password,
-      userid,
-      did_value: address,
-      did_type: didType,
-      mainPublicKey: localMainPublicKey,
-      mainPrivateKey: localMainPrivateKey,
-    });
-    setKeys({
-      PrivateKey: TempPrivateKey,
-      PublicKey: TempPublicKey,
-      userid: userid,
-    })
-  };
+  const { keys, fastestUrl, init, logout, handleLoginEvent } = useLogin();
   useEffect(()=> {
     init();
   }, []);
-  if (!fastUrl || !keys) return <div>Login...</div>;
+  if (!fastestUrl) return null;
+  if (!keys) return (
+    <LoginModal 
+      handleLoginEvent={handleLoginEvent}
+      appType={AppTypeEnum.pc}
+    />
+  );
   // 3. You must ensure that the Client.init initialization is complete and that you have a key pair
   const client = Client.getInstance(keys);
   return (
     <Child client={client} />
   )
 }
+
 ```
 
-## ChangeNotificationStatus
+### ChangeNotificationStatus
+> Change notification status.
 
 ```tsx
 import { Client } from '@web3mq/client';
@@ -110,7 +160,8 @@ export const Child = (props: IProps) => {
 };
 ```
 
-## Get NotificationList
+### Get NotificationList
+> Get the list of notifications in the `notification.getList` event.
 
 ```tsx
 import { useEffect } from 'react';
