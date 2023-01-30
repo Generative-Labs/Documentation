@@ -1729,7 +1729,7 @@
               "unversionedId": "Web3MQ-SDK/JS-SDK/quickStart/quickStart",
               "id": "Web3MQ-SDK/JS-SDK/quickStart/quickStart",
               "title": "QuickStart",
-              "description": "This Quickstart tutorial walks you through the key concepts of Web3MQ using a sample react project and successfully send your first \"hello world\" to your friend!",
+              "description": "This Quickstart tutorial walks you through the key concepts of Web3MQ using a sample react project and successfully",
               "source": "@site/docs/Web3MQ-SDK/JS-SDK/quickStart/quickStart.md",
               "sourceDirName": "Web3MQ-SDK/JS-SDK/quickStart",
               "slug": "/Web3MQ-SDK/JS-SDK/quickStart/",
