@@ -6,7 +6,7 @@
 import { Layout } from '@site/src/components/Layout'
 import { ChatDownExample } from '@site/src/components/Web3MQ-React/ChatDownExample';
 import ChatDownMdx from '@site/src/components/Web3MQ-React/ChatDownExample/ChatDownExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'

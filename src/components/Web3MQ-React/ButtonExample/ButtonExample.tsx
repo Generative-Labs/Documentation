@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Button } from 'web3-mq-react';
+import { Button } from '@web3mq/react-components';
 
 import ss from './index.module.css';
 

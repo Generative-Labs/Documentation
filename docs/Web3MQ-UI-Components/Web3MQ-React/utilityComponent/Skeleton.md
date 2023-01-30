@@ -7,7 +7,7 @@
 import { Layout } from '@site/src/components/Layout'
 import { SkeletonExample } from '@site/src/components/Web3MQ-React/SkeletonExample';
 import SkeletonMdx from '@site/src/components/Web3MQ-React/SkeletonExample/SkeletonExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'

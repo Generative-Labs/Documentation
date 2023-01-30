@@ -10,7 +10,7 @@ In the `MessageConsole` component, the user can customize the application of the
 import { Layout } from '@site/src/components/Layout'
 import { MessageConsoleExample } from '@site/src/components/Web3MQ-React/MessageConsoleExample';
 import MessageConsoleMdx from '@site/src/components/Web3MQ-React/MessageConsoleExample/MessageConsoleExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'

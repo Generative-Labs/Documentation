@@ -12,7 +12,7 @@
 ## Usage
 
 ```ts
-import { Web3MQ, Slope } from "web3-mq";
+import { Web3MQ, Slope } from "@web3mq/client";
 
 const token = await Slope.signSlope();
 

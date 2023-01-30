@@ -11,7 +11,7 @@
 ## Usage
 
 ```ts
-import { Web3MQ, Walletconnect } from "web3-mq";
+import { Web3MQ, Walletconnect } from "@web3mq/client";
 
 const token = await Walletconnect.signWalletconnect();
 

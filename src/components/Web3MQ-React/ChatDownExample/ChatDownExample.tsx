@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChatDown } from 'web3-mq-react';
+import { ChatDown } from '@web3mq/react-components';
 
 
 export const ChatDownExample: React.FC = (props: any) => {

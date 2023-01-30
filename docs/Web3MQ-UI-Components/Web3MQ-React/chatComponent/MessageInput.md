@@ -11,7 +11,7 @@ The `MessageInput` component is a React Context provider that does not inject an
 import { Layout } from '@site/src/components/Layout'
 import { MessageInputExample } from '@site/src/components/Web3MQ-React/MessageInputExample';
 import MessageInputExampleMdx from '@site/src/components/Web3MQ-React/MessageInputExample/MessageInputExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'

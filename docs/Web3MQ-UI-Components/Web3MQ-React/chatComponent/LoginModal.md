@@ -11,7 +11,7 @@ User can pass the `handleLoginEvent` as props to customize the callback when log
 import { Layout } from '@site/src/components/Layout'
 import { LoginModalExample } from '@site/src/components/Web3MQ-React/LoginModalExample';
 import LoginModalMdx from '@site/src/components/Web3MQ-React/LoginModalExample/LoginModalExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'
@@ -48,7 +48,7 @@ export type RegisterResType = {
 | Property      | Description                            | Type                                      | Default |
 | ------------- | -------------------------------------- | ----------------------------------------- | ------- |
 | account       | Set account info                       | {address: string,userid: string,walletType: [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype),userExist: boolean}      |   -     |
-| appType       | set viewport type of web3-mq-react     | `pc` \| `h5`                              |  `pc`   |
+| appType       | set viewport type of @web3mq/react-components     | `pc` \| `h5`                              |  `pc`   |
 | containerId   | set container Id of `LoginModal`       | String                                    |    -    |
 | isShow        | Whether the modal dialog is visible or not | Boolean                               |   -     |
 | loginBtnNode  | Set the custom `Button`                | React.ReactNode                           |   -     |

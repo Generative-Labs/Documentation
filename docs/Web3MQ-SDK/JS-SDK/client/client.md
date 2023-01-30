@@ -40,7 +40,7 @@ position: 3
 ### init()
 
 ```ts
-import { Client } from "web3-mq";
+import { Client } from "@web3mq/client";
 // 1. You must initialize the SDK, the init function is asynchronous
 
 const tempPubkey = localStorage.getItem("PUBLIC_KEY") || "";
@@ -64,7 +64,7 @@ await Client.init({
 ### getInstance()
 
 ```typescript
-import { Client } from "web3-mq";
+import { Client } from "@web3mq/client";
 // 1. You must initialize the SDK, the init function is asynchronous
 await Client.init({
   connectUrl: "example url", // The fastURL you saved to local
@@ -119,7 +119,7 @@ console.log(client);
 ### getSignClient
 
 ```ts
-import { Client, SignClientCallBackType } from "web3-mq";
+import { Client, SignClientCallBackType } from "@web3mq/client";
 // 1. You must initialize the SDK, the init function is asynchronous
 await Client.init({
   connectUrl: "example url", // The fastURL you saved to local
@@ -141,10 +141,10 @@ await Client.getSignClient(
 );
 ```
 
-### getQrCodeClient
+### initDappConnectClient
 
 ```ts
-import { Client } from "web3-mq";
+import { Client } from "@web3mq/client";
 // 1. You must initialize the SDK, the init function is asynchronous
 await Client.init({
   connectUrl: "example url", // The fastURL you saved to local
@@ -154,8 +154,11 @@ await Client.init({
 const handleEvent = (options: SignClientCallBackType) => {
   console.log(options);
 };
-// 3. get QrCode Sign Client
-Client.getQrCodeClient({ dAppID: "SwapChat:im" }, handleEvent);
+// 3. get DappConnect Client
+Client.initDappConnectClient({ dAppID: "SwapChat:im" }, handleEvent);
+
+// 4. Here you can use the client to interact with the wallet
+Client.dappConnectClient.getConnectLink();
 ```
 
 ## Events

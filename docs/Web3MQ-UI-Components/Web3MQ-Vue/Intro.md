@@ -21,7 +21,7 @@ yarn add web3-mq-vue
 ## Creating a Web3MQ Client
 
 ```tsx
-import { Web3MQ } from 'web3-mq';
+import { Web3MQ } from '@web3mq/client';
 
 const client = Web3MQ.getInstance('YOUR_ACCESS_TOKEN');
 ```
@@ -45,7 +45,7 @@ code={<VueMdx />}>
 
 ```vue
 <script lang="ts" setup>
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 import { ref } from 'vue';
 
 // Use your own logic to decide which pattern to use

@@ -6,7 +6,7 @@ AS The Tabs component, `DashBoard` renders `ChannelList`、`ContactList`、`Noti
 import { Layout } from '@site/src/components/Layout'
 import { DashBoardExample } from '@site/src/components/Web3MQ-React/DashBoardExample';
 import DashBoardExampleMdx from '@site/src/components/Web3MQ-React/DashBoardExample/DashBoardExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'

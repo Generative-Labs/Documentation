@@ -1,5 +1,5 @@
 import React from 'react';
-import { Loading } from 'web3-mq-react';
+import { Loading } from '@web3mq/react-components';
 
 export const LoadingExample: React.FC = () => {
  

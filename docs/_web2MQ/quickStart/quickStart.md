@@ -18,9 +18,9 @@ position: 1
 ## Install
 
 ```bash
-npm install web3-mq
+npm install @web3mq/client
 or
-yarn add web3-mq
+yarn add @web3mq/client
 ```
 
 ## Connect MetaMask
@@ -67,7 +67,7 @@ getEthAccount();
 #### Code
 
 ```typescript
-import { Web2MQ } from 'web3-mq';
+import { Web2MQ } from '@web3mq/client';
 
 const { register } = Web2MQ;
 
@@ -91,7 +91,7 @@ registerUser();
 #### Code
 
 ```typescript
-import { Web2MQ } from 'web3-mq';
+import { Web2MQ } from '@web3mq/client';
 
 const { login, getLoginRandomSecret } = Web2MQ;
 
@@ -132,7 +132,7 @@ getParams();
 ### Initialize the client with parameters
 
 ```typescript
-import { Web2MQ } from 'web3-mq';
+import { Web2MQ } from '@web3mq/client';
 
 const client = Web2MQ.Client.getInstance({
   login_random_secret: randomSecret,
@@ -146,7 +146,7 @@ const client = Web2MQ.Client.getInstance({
 ### Initialize the client with login token
 
 ```typescript
-import { Web2MQ } from "web3-mq";
+import { Web2MQ } from "@web3mq/client";
 
 const {login} = Web2MQ;
 
@@ -163,7 +163,7 @@ const client = Web2MQ.Client.getInstance(token: data.access_token);
 #### Code
 
 ```typescript
-import { Web2MQ } from 'web3-mq';
+import { Web2MQ } from '@web3mq/client';
 
 const { login } = Web2MQ;
 

@@ -1413,7 +1413,7 @@
     "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Window": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Window",
       "title": "Window",
-      "description": "In web3-mq-react, Window is used to wrap the MessageList, MessageHeader, and MessageInput components to compatibility with views.",
+      "description": "In @web3mq/react-components, Window is used to wrap the MessageList, MessageHeader, and MessageInput components to compatibility with views.",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/Web3MQ-Swift/ChannelList": {

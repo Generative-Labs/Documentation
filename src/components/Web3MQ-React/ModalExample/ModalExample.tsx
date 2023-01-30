@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Modal } from 'web3-mq-react';
+import { Button, Modal } from '@web3mq/react-components';
 
 import ss from './index.module.css';
 

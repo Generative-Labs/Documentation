@@ -1,5 +1,5 @@
 import React from "react";
-import { Client } from 'web3-mq'
+import { Client } from '@web3mq/client'
 import { CommonButton } from '../CommonButton';
 
 export const InitClientButton = () => {

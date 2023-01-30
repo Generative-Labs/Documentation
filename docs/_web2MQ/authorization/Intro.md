@@ -11,7 +11,7 @@
 ## Usage
 
 ```ts
-import { Web3MQ, MetaMask, Slope, Walletconnect } from "web3-mq";
+import { Web3MQ, MetaMask, Slope, Walletconnect } from "@web3mq/client";
 
 const token = await MetaMask.signMetaMask();
 // or

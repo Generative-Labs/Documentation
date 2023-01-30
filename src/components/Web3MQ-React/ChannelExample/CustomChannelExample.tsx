@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 import { 
   AppTypeEnum, 
   Avatar,
@@ -13,7 +13,7 @@ import {
   Window,
   useMessageContext,
   useChatContext
-} from 'web3-mq-react';
+} from '@web3mq/react-components';
 
 import useLogin from '../ChatExample/hooks/useLogin';
 

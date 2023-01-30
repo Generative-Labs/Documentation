@@ -6,7 +6,7 @@ The floating card popped by clicking or hovering.
 import { Layout } from '@site/src/components/Layout'
 import { PopoverExample } from '@site/src/components/Web3MQ-React/PopoverExample';
 import PopoverMdx from '@site/src/components/Web3MQ-React/PopoverExample/PopoverExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'

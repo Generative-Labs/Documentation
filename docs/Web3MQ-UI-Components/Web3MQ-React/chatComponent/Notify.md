@@ -12,7 +12,7 @@ When the user successfully sends a notification in the `Notify`, `NotificationLi
 import { Layout } from '@site/src/components/Layout'
 import { NotifyExample } from '@site/src/components/Web3MQ-React/NotifyExample';
 import NotifyMdx from '@site/src/components/Web3MQ-React/NotifyExample/NotifyExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'

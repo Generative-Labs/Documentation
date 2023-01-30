@@ -8,7 +8,7 @@ sidebar_position: 0
 import { Layout } from '@site/src/components/Layout'
 import { AvatarExample } from '@site/src/components/Web3MQ-React/AvatarExample';
 import AvatarExampleMdx from '@site/src/components/Web3MQ-React/AvatarExample/AvatarExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'

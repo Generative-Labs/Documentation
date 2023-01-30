@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { Client } from 'web3-mq';
-import { AppTypeEnum, Button, Chat, Notify, DashBoard } from 'web3-mq-react';
+import { Client } from '@web3mq/client';
+import { AppTypeEnum, Button, Chat, Notify, DashBoard } from '@web3mq/react-components';
 
 import useLogin from '../ChatExample/hooks/useLogin';
 

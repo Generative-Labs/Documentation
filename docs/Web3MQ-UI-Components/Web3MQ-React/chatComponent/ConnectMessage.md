@@ -7,7 +7,7 @@ User can customize text descriptions, icons and buttons for different states of 
 import { Layout } from '@site/src/components/Layout'
 import { ConnectMessageExample } from '@site/src/components/Web3MQ-React/ConnectMessageExample';
 import ConnectMessageMdx from '@site/src/components/Web3MQ-React/ConnectMessageExample/ConnectMessageExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'

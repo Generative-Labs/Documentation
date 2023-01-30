@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Client, EventTypes } from 'web3-mq'
+import { Client, EventTypes } from '@web3mq/client'
 import { CommonButton } from '../CommonButton';
 
 type IProps = {

@@ -10,7 +10,7 @@ As the fixed header in chat room, `MessageHead` is used to render the chat room 
 import { Layout } from '@site/src/components/Layout'
 import { MessageHeadExample } from '@site/src/components/Web3MQ-React/MessageHeadExample';
 import MessageHeadMdx from '@site/src/components/Web3MQ-React/MessageHeadExample/MessageHeadExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'

@@ -6,7 +6,7 @@
 import { Layout } from '@site/src/components/Layout'
 import { RadioGroupExample } from '@site/src/components/Web3MQ-React/RadioGroupExample';
 import RadioGroupMdx from '@site/src/components/Web3MQ-React/RadioGroupExample/RadioGroupExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'

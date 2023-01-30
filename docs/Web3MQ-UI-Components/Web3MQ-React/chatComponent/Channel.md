@@ -16,7 +16,7 @@ The `Channel` component does not inject any UI, so its implementation is fairly 
 import { Layout } from '@site/src/components/Layout'
 import { ChannelExample } from '@site/src/components/Web3MQ-React/ChannelExample';
 import ChannelMdx from '@site/src/components/Web3MQ-React/ChannelExample/ChannelExample.mdx';
-import 'web3-mq-react/dist/css/index.css';
+import '@web3mq/react-components/dist/css/index.css';
 
 <Layout
 title='Example'

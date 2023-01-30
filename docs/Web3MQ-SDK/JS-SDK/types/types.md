@@ -143,16 +143,20 @@ export interface CreateRoomParams extends BaseParams {
   avatar_base64?: string;
 }
 ```
+
 ### GroupPermissions
+
 ```ts
 export type GroupPermissions = {
   [key: string]: {
     type: string;
-    value: 'ceator_invite_friends' | 'public' | 'nft_validation';
+    value: "ceator_invite_friends" | "public" | "nft_validation";
   };
 };
 ```
+
 ### UpdateGroupPermissionsParams
+
 ```ts
 export interface UpdateGroupPermissionsParams {
   groupid: string;
@@ -162,10 +166,14 @@ export interface UpdateGroupPermissionsParams {
   web3mq_user_signature: string;
 }
 ```
+
 ### UserPermissionsType
 
 ```ts
-export type UserPermissionsType = Record<string, { type: string; value: boolean }>;
+export type UserPermissionsType = Record<
+  string,
+  { type: string; value: boolean }
+>;
 ```
 
 ### ContactListItemType
@@ -181,13 +189,15 @@ export type ContactListItemType = {
   wallet_type: WalletType;
 };
 ```
+
 ### FollowOperationParams
+
 ```ts
 export interface FollowOperationParams {
-  address: string
-  action: 'follow' | 'cancel';
+  address: string;
+  action: "follow" | "cancel";
   did_type: WalletType;
-  did_pubkey?: string
+  did_pubkey?: string;
   did_signature: string;
   sign_content: string;
   timestamp: number;
@@ -197,6 +207,7 @@ export interface FollowOperationParams {
 ```
 
 ### PublishNotificationToFollowersParams
+
 ```ts
 export interface PublishNotificationToFollowersParams {
   content: string;
@@ -288,13 +299,18 @@ export interface UserBindDidParams extends BaseParams {
 ```
 
 ### UserBindDidIdsResponse
+
 ```ts
-export type UserBindDidIdsResponse = Pick<UserBindDidParams, 'did_type' | 'did_value' | 'provider_id'> & {
+export type UserBindDidIdsResponse = Pick<
+  UserBindDidParams,
+  "did_type" | "did_value" | "provider_id"
+> & {
   metadata: any;
-}
+};
 ```
 
 ### UpdateUserPermissionsParams
+
 ```ts
 export interface UpdateUserPermissionsParams {
   permissions: UserPermissionsType;
@@ -427,16 +443,23 @@ type GetMainKeypairParams = {
 };
 ```
 
+### GetSignContentResponse
+
+```ts
+export type GetSignContentResponse = {
+  signContent: string;
+};
+```
 
 ### QrCodeRegisterParams
 
 ```ts
 type QrCodeRegisterParams = {
-    userid: string;
-    signature: string;
-    did_pubkey?: string;
-    nickname?: string;
-    avatar_url?: string;
+  userid: string;
+  signature: string;
+  did_pubkey?: string;
+  nickname?: string;
+  avatar_url?: string;
 };
 ```
 
@@ -444,19 +467,133 @@ type QrCodeRegisterParams = {
 
 ```ts
 type QrCodeLoginParams = {
-    userid: string;
-    did_type: string;
-    did_value: string;
-    mainPrivateKey: string;
-    mainPublicKey: string;
-    password?: string;
-    pubkeyExpiredTimestamp?: number;
+  userid: string;
+  did_type: string;
+  did_value: string;
+  mainPrivateKey: string;
+  mainPublicKey: string;
+  password?: string;
+  pubkeyExpiredTimestamp?: number;
 };
 ```
+
 ### SignClientCallBackType
+
 ```ts
 type SignClientCallBackType = {
-    type: 'createQrcode' | 'connect' | 'messageStatus' | 'keys';
-    data: any;
+  type: "createQrcode" | "connect" | "messageStatus" | "keys" | "dapp-connect";
+  data: any;
+};
+```
+
+### DappConnectSignParams
+
+```ts
+type DappConnectSignParams = {
+  signContent: string;
+  didValue: string;
+  signType: string;
+};
+```
+
+### Web3MQBridgeOptions
+
+```ts
+type Web3MQBridgeOptions = {
+  wsUrl: string;
+  dAppID: string;
+  nodeID?: string;
+};
+```
+
+### LoginByKeysParams
+
+```ts
+type LoginByKeysParams = {
+  mainPrivateKey: string;
+  mainPublicKey: string;
+  didType: WalletType;
+  didValue: string;
+  userid: string;
+  password: string;
+  pubkeyExpiredTimestamp?: number;
+};
+```
+
+### RegisterBySignParams
+
+```ts
+type RegisterBySignParams = {
+  userid: string;
+  didValue: string;
+  mainPublicKey: string;
+  signature: string;
+  did_pubkey?: string;
+  didType?: WalletType;
+  signContentURI?: string;
+  nickname?: string;
+  avatar_url?: string;
+  avatar_base64?: string;
+};
+```
+
+### RegisterApiResponse
+
+```ts
+type RegisterApiResponse = {
+  did_type: string;
+  did_value: string;
+  userid: string;
+};
+```
+
+### LoginResponse
+
+```ts
+type LoginResponse = {
+  tempPrivateKey: string;
+  tempPublicKey: string;
+  mainPrivateKey: string;
+  mainPublicKey: string;
+  pubkeyExpiredTimestamp: number;
+};
+```
+
+### GetUserInfoResponse
+
+```ts
+type GetUserInfoResponse = { userid: string; userExist: boolean };
+```
+
+### MainKeypairType
+
+```ts
+type MainKeypairType = {
+  publicKey: string;
+  secretKey: string;
+};
+```
+
+### ResetPasswordParams
+
+```ts
+type ResetPasswordParams = {
+  password: string;
+  userid: string;
+  did_value: string;
+  did_type?: WalletType;
+  signContentURI?: string;
+  nickname?: string;
+  avatar_url?: string;
+  avatar_base64?: string;
+};
+```
+
+### ResetPasswordResponse
+
+```ts
+type ResetPasswordResponse = {
+  mainPrivateKey: string;
+  mainPublicKey: string;
 };
 ```

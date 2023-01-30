@@ -25,7 +25,7 @@ position: 8.1
 
 ```tsx
 import { useEffect, useState } from 'react';
-import { Client, KeyPairsType } from "web3-mq";
+import { Client, KeyPairsType } from "@web3mq/client";
 
 export const App = () => {
   const [fastUrl, setFastUrl] = useState<string | null>(null);
@@ -96,7 +96,7 @@ export const App = () => {
 
 ```tsx
 import React, { useEffect, useState } from 'react';
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -254,7 +254,7 @@ export default Child;
 ## createTopic
 
 ```tsx
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -280,7 +280,7 @@ export const Child = (props: IProps) => {
 ## subscribeTopic
 
 ```tsx
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -305,7 +305,7 @@ export const Child = (props: IProps) => {
 ## publishTopicMessage
 
 ```tsx
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -335,7 +335,7 @@ export const Child = (props: IProps) => {
 
 ```tsx
 import { useEffect } from 'react';
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -377,7 +377,7 @@ export const Child = (props: IProps) => {
 
 ```tsx
 import { useEffect } from 'react';
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;
@@ -419,7 +419,7 @@ export const Child = (props: IProps) => {
 
 ```tsx
 import { useEffect } from 'react';
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 
 interface IProps {
   client: Client;

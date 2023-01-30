@@ -1,5 +1,5 @@
 import React, { useEffect, PropsWithChildren, useState, useRef } from 'react';
-import { Client } from 'web3-mq';
+import { Client } from '@web3mq/client';
 import { 
   AppTypeEnum, 
   Avatar,
@@ -9,7 +9,7 @@ import {
   ChannelListMessengerProps, 
   ChannelPreviewUIComponentProps, 
   Loading
-} from 'web3-mq-react';
+} from '@web3mq/react-components';
 import cx from 'classnames';
 
 import useLogin from '../ChatExample/hooks/useLogin';
