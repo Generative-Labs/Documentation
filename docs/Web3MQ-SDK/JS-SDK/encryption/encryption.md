@@ -6,11 +6,11 @@ position: 9
 
 ## Methods
 
-| name                   | type     | Parameters Description                                                         | response |
-| ---------------------- | -------- | ------------------------------------------------------------------------------ | -------- |
-| getMessageSharedSecret | function | (myEd25519PrivateKey: string, targetUserPubkey: string, msg_timestamp: string) | aesKey   |
-| aesGCMEncrypt          | function | (keyStr: string, iv: string, inputByteData: Uint8Array )                       | encrypt  |
-| aesGCMDecrypt          | function | (keyStr: string, iv: string, encoded: Uint8Array )                             | decrypt  |
+| name                   | type     | Parameters Description                                                           | response         |
+| ---------------------- | -------- | -------------------------------------------------------------------------------- | ---------------- |
+| getMessageSharedSecret | function | 1.myEd25519PrivateKey: string 2.targetUserPubkey: string 3.msg_timestamp: string | Promise:aesKey   |
+| aesGCMEncrypt          | function | 1.keyStr: string 2.iv: string 3.inputByteData: Uint8Array                        | Promise:encrypt  |
+| aesGCMDecrypt          | function | 1.keyStr: string 2.iv: string 3.encoded: Uint8Array                              | Promise:decrypt  |
 
 ## GetMessageSharedSecret
 

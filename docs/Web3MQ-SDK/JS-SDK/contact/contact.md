@@ -16,74 +16,122 @@ position: 6
 
 | name                        | type     | Parameters Description                                                                    | response                                                                      |
 | --------------------------- | -------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| sendFriend                  | function | (target_userid: string)                                                                   | [ServiceResponse](/docs/Web3MQ-SDK/JS-SDK/types/#serviceresponse)                                                             |                                                      
-| getContactList              | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                   | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)                                                         |
-| getFollowerList             | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                   | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)                                                         |
-| getFollowingList            | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                   | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)                                                         |
-| followOperation             | function | Pick<[FollowOperationParams](/docs/Web3MQ-SDK/JS-SDK/types/#followoperationparams), 'address' \| 'target_userid' \| 'action' \| 'did_type'>                  | [ServiceResponse](/docs/Web3MQ-SDK/JS-SDK/types/#serviceresponse)                                                             |
-|publishNotificationToFollowers | function | Pick<[PublishNotificationToFollowersParams](/docs/Web3MQ-SDK/JS-SDK/types/#publishnotificationtofollowersparams), 'title' \| 'content'>                                 | [ServiceResponse](/docs/Web3MQ-SDK/JS-SDK/types/#serviceresponse)                                                             |
+| sendFriend                  | function | firstParams: (target_userid or target_user_wallet_address)                    | Promise:[ServiceResponse](/docs/Web3MQ-SDK/JS-SDK/types/#serviceresponse)     |                                                      
+| getContactList              | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                   | Promise:[ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype) |
+| getFollowerList             | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                   | Promise:[ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype) |
+| getFollowingList            | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                   | Promise:[ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype) |
+| followOperation             | function | [FollowOperationParams](/docs/Web3MQ-SDK/JS-SDK/types/#followoperationparams)             | Promise:[ServiceResponse](/docs/Web3MQ-SDK/JS-SDK/types/#serviceresponse)         |
+|publishNotificationToFollowers | function | [PublishNotificationToFollowersParams](/docs/Web3MQ-SDK/JS-SDK/types/#publishnotificationtofollowersparams) | Promise:[ServiceResponse](/docs/Web3MQ-SDK/JS-SDK/types/#serviceresponse) |
+
+## Prerequisites
+
+> init() see: [init](/docs/Web3MQ-SDK/JS-SDK/client/#init)
+
+> register() see: [register](/docs/Web3MQ-SDK/JS-SDK/register/#register-or-resetpassword)
+
+> login() see: [login](/docs/Web3MQ-SDK/JS-SDK/register/#login)
+
+> event see: [event](/docs/Web3MQ-SDK/JS-SDK/client/#events-1)
 
 ### init Client
+> A combined web3mq-react example, and create web3mq client before chat.
 
 ```tsx
-import { useEffect, useState } from 'react';
-import { Client, KeyPairsType } from "@web3mq/client";
+import { useMemo, useState } from 'react';
+import {Client, KeyPairsType, SignClientCallBackType, WalletType} from '@web3mq/client';
+import {LoginModal} from '@web3mq/react-components';
+
+const useLogin = () => {
+  const hasKeys = useMemo(() => {
+    const PrivateKey = localStorage.getItem('PRIVATE_KEY') || '';
+    const PublicKey = localStorage.getItem('PUBLIC_KEY') || '';
+    const userid = localStorage.getItem('userid') || '';
+    if (PrivateKey && PublicKey && userid) {
+      return { PrivateKey, PublicKey, userid };
+    }
+    return null;
+  }, []);
+
+  const [keys, setKeys] = useState<KeyPairsType | null>(hasKeys);
+  const [fastestUrl, setFastUrl] = useState<string | null>(null);
+  const [userAccount, setUserAccount] = useState<{
+    userid: string;
+    address: string;
+  }>();
+
+  const init = async () => {
+    const tempPubkey = localStorage.getItem('PUBLIC_KEY') || '';
+    const didKey = localStorage.getItem('DID_KEY') || '';
+    const fastUrl = await Client.init({
+      connectUrl: localStorage.getItem('FAST_URL'),
+      app_key: 'vAUJTFXbBZRkEDRE',
+      env: 'dev',
+      didKey,
+      tempPubkey,
+    });
+    localStorage.setItem('FAST_URL', fastUrl);
+    setFastUrl(fastUrl);
+  };
+
+  const logout = () => {
+    localStorage.setItem('PRIVATE_KEY', '')
+    localStorage.setItem('PUBLIC_KEY', '')
+    localStorage.setItem('DID_KEY', '')
+    localStorage.setItem('userid', '')
+    setKeys(null);
+  };
+
+  const handleLoginEvent = (eventData: any) => {
+    if (eventData.data) {
+      if (eventData.type === 'login') {
+        const {
+          privateKey,
+          publicKey,
+          tempPrivateKey,
+          tempPublicKey,
+          didKey,
+          userid,
+          address,
+          pubkeyExpiredTimestamp,
+        } = eventData.data;
+        localStorage.setItem('userid', userid);
+        localStorage.setItem('PRIVATE_KEY', tempPrivateKey);
+        localStorage.setItem('PUBLIC_KEY', tempPublicKey);
+        localStorage.setItem('WALLET_ADDRESS', address);
+        localStorage.setItem(`MAIN_PRIVATE_KEY`, privateKey);
+        localStorage.setItem(`MAIN_PUBLIC_KEY`, publicKey);
+        localStorage.setItem(`DID_KEY`, didKey);
+        localStorage.setItem('PUBKEY_EXPIRED_TIMESTAMP', String(pubkeyExpiredTimestamp));
+        setKeys({
+          PrivateKey: tempPrivateKey,
+          PublicKey: tempPublicKey,
+          userid,
+        });
+      }
+      if (eventData.type === 'register') {
+        const { privateKey, publicKey, address } = eventData.data;
+        localStorage.setItem('WALLET_ADDRESS', address);
+        localStorage.setItem(`MAIN_PRIVATE_KEY`, privateKey);
+        localStorage.setItem(`MAIN_PUBLIC_KEY`, publicKey);
+      }
+    }
+  };
+
+  return { keys, fastestUrl, init, handleLoginEvent, logout };
+};
 
 export const App = () => {
-  const [fastUrl, setFastUrl] = useState<string | null>(null);
-  const [keys, setKeys] = useState<KeyPairsType | null>(null);
-  const init = async () => {
-    // 1. You must initialize the SDK, the init function is asynchronous
-    const newFastUrl = await Client.init({
-      connectUrl: "example url", // The fastURL you saved to local
-      app_key: "app_key", // Appkey applied from our team
-    });
-    setFastUrl(newFastUrl);
-    // 2.Login and get keys
-    const { address } = await Client.register.getAccount(didType);
-    const { userid, userExist } = await Client.register.getUserInfo({
-      did_value: address,
-      did_type: didType,
-    });
-    let localMainPrivateKey = "";
-    let localMainPublicKey = "";
-
-    if (!userExist) {
-      const registerRes = await Client.register.register({
-        password,
-        did_value: address,
-        userid,
-        did_type: didType,
-        avatar_url: `https://cdn.stamp.fyi/avatar/${address}?s=300`,
-      });
-      localMainPrivateKey = registerRes.mainPrivateKey;
-      localMainPublicKey = registerRes.mainPublicKey;
-    }
-
-    const {
-      TempPrivateKey,
-      TempPublicKey,
-      pubkeyExpiredTimestamp,
-      mainPrivateKey,
-      mainPublicKey,
-    } = await Client.register.login({
-      password,
-      userid,
-      did_value: address,
-      did_type: didType,
-      mainPublicKey: localMainPublicKey,
-      mainPrivateKey: localMainPrivateKey,
-    });
-    setKeys({
-      PrivateKey: TempPrivateKey,
-      PublicKey: TempPublicKey,
-      userid: userid,
-    })
-  };
+  const { keys, fastestUrl, init, logout, handleLoginEvent } = useLogin();
   useEffect(()=> {
     init();
   }, []);
-  if (!fastUrl || !keys) return <div>Login...</div>;
+  if (!fastestUrl) return null;
+  if (!keys) return (
+    <LoginModal 
+      handleLoginEvent={handleLoginEvent}
+      appType={AppTypeEnum.pc}
+    />
+  );
   // 3. You must ensure that the Client.init initialization is complete and that you have a key pair
   const client = Client.getInstance(keys);
   return (
@@ -92,7 +140,83 @@ export const App = () => {
 }
 ```
 
-### getContactList & getFollowerList & getFollowingList
+### getFollowerList
+> Get your list of follower, and could pass in `pageParams` type parameters to achieve paging.
+
+```tsx
+import { useEffect } from 'react';
+import { Client } from '@web3mq/client';
+
+interface IProps {
+  client: Client;
+}
+
+export const Child = (props: IProps) => {
+  const { client } = props;
+
+  const handleEvent = (event: { type: any }) => {
+    if (event.type === 'contact.getFollowerList') {
+      console.log(client.contact.followerList);
+    }
+  };
+
+  useEffect(() => {
+    client.on('contact.getFollowerList', handleEvent);
+    return () => {
+      client.off('contact.getFollowerList');
+    };
+  }, []);
+
+  return (
+    <>
+      <button
+        onClick={() => {client.contact.getFollowerList({ page: 1, size: 100 })}}
+      >
+        get follower list
+      </button>
+    </>
+  )
+};
+```
+### getFollowingList
+> Get your list of following, and could pass in `pageParams` type parameters to achieve paging.
+
+```tsx
+import { useEffect } from 'react';
+import { Client } from '@web3mq/client';
+
+interface IProps {
+  client: Client;
+}
+
+export const Child = (props: IProps) => {
+  const { client } = props;
+
+  const handleEvent = (event: { type: any }) => {
+    if (event.type === 'contact.getFollowingList') {
+      console.log(client.contact.followingList);
+    }
+  };
+
+  useEffect(() => {
+    client.on('contact.getFollowingList', handleEvent);
+    return () => {
+      client.off('contact.getFollowingList');
+    };
+  }, []);
+
+  return (
+    <button
+      onClick={() => {client.contact.getFollowingList({ page: 1, size: 100 })}}
+    >
+      get following list
+    </button>
+  )
+};
+```
+
+### getContactList
+> Get your list of contact, and could pass in `pageParams` type parameters to achieve paging.
 
 ```tsx
 import { useEffect } from 'react';
@@ -107,50 +231,28 @@ export const Child = (props: IProps) => {
 
   const handleEvent = (event: { type: any }) => {
     if (event.type === 'contact.getContactList') {
-      console.log(client.contact.contactList);
-    }
-    if (event.type === 'contact.getFollowerList') {
-      console.log(client.contact.followerList);
-    }
-    if (event.type === 'contact.getFollowingList') {
       console.log(client.contact.followingList);
     }
   };
 
   useEffect(() => {
     client.on('contact.getContactList', handleEvent);
-    client.on('contact.getFollowerList', handleEvent);
-    client.on('contact.getFollowingList', handleEvent);
     return () => {
-      client.off('contact.getList');
-      client.off('contact.getFollowerList');
-      client.off('contact.getFollowingList');
+      client.off('contact.getContactList');
     };
   }, []);
 
   return (
-    <>
-      <button
-        onClick={() => {client.contact.getContactList({ page: 1, size: 100 })}}
-      >
-        get contact List
-      </button>
-      <button
-        onClick={() => {client.contact.getFollowerList({ page: 1, size: 100 })}}
-      >
-        get follower List
-      </button>
-      <button
-        onClick={() => {client.contact.getFollowingList({ page: 1, size: 100 })}}
-      >
-        get following List
-      </button>
-    </>
+    <button
+      onClick={() => {client.contact.getContactList({ page: 1, size: 100 })}}
+    >
+      get contact list
+    </button>
   )
 };
 ```
-
 ### sendFriend
+> Select userid or wallet address to send a friend request.
 
 ```tsx
 import { Client } from '@web3mq/client';
@@ -164,7 +266,7 @@ export const Child = (props: IProps) => {
   return (
     <button
       onClick={async () => {
-        const data = await client.contact.sendFriend('target_userid', 'Can you follow me?');
+        const data = await client.contact.sendFriend('target_userid or target_walletAddress', 'Can you follow me?');
         console.log(data);
       }}
     >
@@ -175,6 +277,7 @@ export const Child = (props: IProps) => {
 ```
 
 ### followOperation
+> Following or unfollowing others.
 
 ```tsx
 import { Client } from '@web3mq/client';
@@ -192,8 +295,8 @@ export const Child = (props: IProps) => {
         const data = await client.contact.followOperation({
           action: 'follow',
           address: 'wallet_address',
-          did_type: 'wallet_type'
-          target_userid: 'userid',
+          didType: 'wallet_type'
+          targetUserid: 'userid',
         });
         console.log(data);
       }}
@@ -205,6 +308,7 @@ export const Child = (props: IProps) => {
 ```
 
 ### publishNotificationToFollowers
+> Customize your content and send notifications to your followers.
 
 ```tsx
 import { Client } from '@web3mq/client';

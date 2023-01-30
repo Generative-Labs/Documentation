@@ -66,15 +66,21 @@
               },
               {
                 "type": "link",
-                "label": "Register",
-                "href": "/docs/Web3MQ-SDK/JS-SDK/register/",
-                "docId": "Web3MQ-SDK/JS-SDK/register/register"
-              },
-              {
-                "type": "link",
                 "label": "Client",
                 "href": "/docs/Web3MQ-SDK/JS-SDK/client/",
                 "docId": "Web3MQ-SDK/JS-SDK/client/client"
+              },
+              {
+                "type": "link",
+                "label": "dappConnect",
+                "href": "/docs/Web3MQ-SDK/JS-SDK/dappConnect/",
+                "docId": "Web3MQ-SDK/JS-SDK/dappConnect/dappConnect"
+              },
+              {
+                "type": "link",
+                "label": "Register",
+                "href": "/docs/Web3MQ-SDK/JS-SDK/register/",
+                "docId": "Web3MQ-SDK/JS-SDK/register/register"
               },
               {
                 "type": "link",
@@ -87,12 +93,6 @@
                 "label": "Message",
                 "href": "/docs/Web3MQ-SDK/JS-SDK/message/",
                 "docId": "Web3MQ-SDK/JS-SDK/message/message"
-              },
-              {
-                "type": "link",
-                "label": "SignConnect",
-                "href": "/docs/Web3MQ-SDK/JS-SDK/signConnect/",
-                "docId": "Web3MQ-SDK/JS-SDK/signConnect/signConnect"
               },
               {
                 "type": "link",
@@ -126,9 +126,9 @@
               },
               {
                 "type": "link",
-                "label": "dappConnect",
-                "href": "/docs/Web3MQ-SDK/JS-SDK/dappConnect/",
-                "docId": "Web3MQ-SDK/JS-SDK/dappConnect/dappConnect"
+                "label": "SignConnect",
+                "href": "/docs/Web3MQ-SDK/JS-SDK/signConnect/",
+                "docId": "Web3MQ-SDK/JS-SDK/signConnect/signConnect"
               },
               {
                 "type": "link",
