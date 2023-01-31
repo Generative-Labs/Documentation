@@ -80,7 +80,7 @@ Connect to these endpoints below, to access the Web3MQ Testnet.
 
 For any first-time user of Web3MQ's network, you'll need to register on Web3MQ's network. 
 
-1. 调用Client.init()方法来初始化您的网络环境 
+1. Call the Client.init() to initialize your network
 ```tsx
 import React, { useEffect, useState } from "react";
 import { Client } from "@web3mq/client";
@@ -91,7 +91,7 @@ const fastUrl = await Client.init({
 ```
 
 :::tip
-为了方便您的后续开发， 可以自定义方法去获取用户信息
+For your convenience, custom methods can be used to get user information
 :::
 ```tsx
 const getAccount = async (didType: WalletType = "eth") => {
@@ -109,7 +109,7 @@ const getAccount = async (didType: WalletType = "eth") => {
 
 ```
 
-2. 需要首先生成一个基于您自定义密码加密的主密钥对，该秘钥对对您的web3mq账户有最高的权限，所以您需要非常安全的保管他
+2. You need to first generate a main key pair based on your custom password encryption, this secret key pair has the highest authority over your web3mq account, so you need to keep it very safe
 ```tsx
 const walletType = 'eth' | 'starknet'
 const password = '123456'
@@ -125,7 +125,7 @@ const {publicKey, secretKey} = await Client.register.getMainKeypairBySignature(
     password
 );
 ```
-3. 生成秘钥对之后需要使用公钥和钱包进行签名，这样才可以完成注册
+3. After generating the secret key pair, you need to sign with the public key and the wallet to complete the registration
 ```tsx
 const {signContent} = await Client.register.getRegisterSignContent({
         userid,
@@ -151,7 +151,7 @@ const params = {
 const registerRes = await Client.register.register(params);
 // register success
 ```
-3. 注册成功后，利用您刚刚生成的秘钥对以及密码可以获取一对临时的keys,这对keys是为了让您能更加安全快捷的登录到Web3MQ网络
+3. After successful registration, you can get a pair of temporary keys with the secret key pair you just generated and the password, this pair of keys is to allow you to login to the Web3MQ network more securely and quickly
 ```ts
 // login func
 const {
@@ -172,11 +172,11 @@ const {
 ### Get client instance
 
 :::tip
-在此之前，我们再来看一下Client.init()的参数，[InitOptions](/docs/Web3MQ-SDK/JS-SDK/types/#initoptions)，两个需要特别注意的参数，
-1. didKey  (格式：walletType:walletAddress  eg:   eth:0x00000000000)
-2. tempPubkey  ( 登录成功之后返回给您的临时公钥 )
+Before that, let's take a look at the parameters of Client.init(), [InitOptions](/docs/Web3MQ-SDK/JS-SDK/types/#initoptions), two parameters that need special attention, 
+1. didKey  (Format：walletType:walletAddress  eg:   eth:0x00000000000)
+2. tempPubkey  ( The temporary public key returned to you after a successful login )
 
-这两个参数可以保证您的web3mq client 处于在线状态，所以当您成功登录之后，每次调用init方法都需要传递该参数
+These two parameters ensure that your web3mq client is online, so after you have successfully logged in, you will need to pass this parameter every time you call the init method
 :::
 
 ```tsx
@@ -197,22 +197,148 @@ const client = Client.getInstance({
 ### Events
 
 :::tip
-web3mq sdk 的数据是事件发布和监听来进行交互的，这样能使您更加优雅的更新数据 see: [Event center](/docs/Web3MQ-SDK/JS-SDK/eventCenter)
+The web3mq sdk data interaction is done through event posting and listening, which allows you to update data more elegantly 
+
+see: [Event center](/docs/Web3MQ-SDK/JS-SDK/eventCenter)
 :::
 
 ### Send message
 > send a message to a user
+
 ```tsx
+const handleEvent = (event: any) => {
+    console.log(event)
+}
 const client = Client.getInstance(keys);
+//  After the message has been sent, the latest message sent can be retrieved in this event callback
+client.on('message.send', handleEvent)
+// After the message has been sent successfully, the latest message sent can be retrieved in this event callback
+client.on('message.delivered', handleEvent)
 const address =  '0x1111111'
 await client.message.sendMessage('hello world', address)
+
+```
+### Channels
+> Usually a conversation in web3mq is between two or more wallets
+
+#### Create  a channel and send message to channel 
+```ts
+const handleEvent = (event: any) => {
+    console.log(event)
+    const { channelList, activeChannel } = client.channel;
+    // set active channel
+    client.channel.setActiveChannel(channelList[0])
+    // send message to channel
+    client.message.sendMessage('hello channel');
+}
+const client = Client.getInstance(keys);
+// Once the channel has been created, the latest channel created can be retrieved in the event callback
+client.on('channel.created', handleEvent)
+const chatRoomName = ''
+await client.channel.createRoom({
+    group_name: chatRoomName || 'default room',
+})
 ```
 
-### Channels 
-> Channels created or joined by you, which can also be understood as chat rooms
+#### Invite friend join your channel 
+```ts
+const handleEvent = (event: any) => {
+    console.log(event)
+    const { channelList, activeChannel } = client.channel;
+    // set active channel
+    client.channel.setActiveChannel(channelList[0])
+    // send message to channel
+    client.message.sendMessage('hello channel');
+}
+const client = Client.getInstance(keys);
+const channel = {} // your create channel obj  
+await client.channel.setActiveChannel(channel);
+const ids = [
+    'web3mq userid1',
+    'web3mq userid2',
+]
+await client.channel.inviteGroupMember(ids);
+```
+
+
+#### Query channels
+> Query the channels you have created or joined, including the addresses you have chatted with
+
+```ts
+const handleEvent = (props: { type: EventTypes }) => {
+    console.log(event)
+    if (props.type === 'channel.getList') {
+        const { channelList, activeChannel } = client.channel;
+        console.log('your channel list:', channelList)
+    }
+}
+const client = Client.getInstance(keys);
+// Call queryChannels func ，You can get the latest channel list in the event callback
+client.on('channel.getList', handleEvent)
+await client.channel.queryChannels({
+    page: 1,
+    size: 20
+})
+```
+
+### Messages 
+> Messages usually come from group chats or 1v1
+
+#### Receive new messages
+> We use the `message.delivered` event to get a listener to see if someone sends you a new message
 
 ```tsx
+const handleEvent = (event: any) => {
+    console.log(event)
+    if (event.type === 'message.delivered') {
+        const { messageList } = client.message;
+        console.log(messageList)
+    }
+}
 const client = Client.getInstance(keys);
-const address =  '0x1111111'
+// After the message has been sent successfully, the latest message sent can be retrieved in this event callback
+client.on('message.delivered', handleEvent)
+```
+
+
+#### Query the history of messages in a channel
+> The source of the message is usually a chat or an address
+
+
+```tsx
+
+const handleEvent = (props: { type: EventTypes }) => {
+    console.log(event)
+    if (props.type === 'message.getList') {
+        const { messageList } = client.message;
+        console.log('message list:', messageList)
+    }
+}
+const client = Client.getInstance(keys);
+// Call getMessageList func ，You can get the latest message list in the event callback
+client.on('channel.getList', handleEvent)
+const channelId = 'web3mquserid' | 'chat id'
+await await client.message.getMessageList({
+    page: 1, size: 20
+}, channelId);
+```
+
+### Notification
+> Generally notifications are received passively, we can also actively send some notifications to the address, such as requesting a follow, or pushing some notifications to your followers
+
+#### Receive new notification
+> The `notification.getList` event is fired when a new notification is available
+
+```tsx
+const handleEvent = (event: any) => {
+    console.log(event)
+    if (event.type === 'notification.getList') {
+        const { notificationList } = client.notify;
+        console.log(notificationList)
+    }
+}
+const client = Client.getInstance(keys);
+// After the message has been sent successfully, the latest message sent can be retrieved in this event callback
+client.on('notification.getList', handleEvent)
 ```
 

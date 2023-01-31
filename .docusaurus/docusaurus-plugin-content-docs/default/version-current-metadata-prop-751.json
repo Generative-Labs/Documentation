@@ -639,7 +639,7 @@
                   },
                   {
                     "type": "link",
-                    "label": "ChanelHead",
+                    "label": "ChannelHead",
                     "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead",
                     "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead"
                   },
@@ -1286,7 +1286,7 @@
     },
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead",
-      "title": "ChanelHead",
+      "title": "ChannelHead",
       "description": "ChannelHead as a fixed header in DashBoard, and it integrates CreateChannel inside which needs to be used in the Chat component.",
       "sidebar": "tutorialSidebar"
     },
