@@ -14,70 +14,53 @@ position: 8
 
 | name                     | type     | Parameters Description                                                                   | response                  |
 | ------------------------ | -------- | ---------------------------------------------------------------------------------------- | ------------------------- |
-| changeNotificationStatus | function | messages: string[], status:[MessageStatus](/docs/Web3MQ-SDK/JS-SDK/types/#messagestatus) | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse) |
+| changeNotificationStatus | function | 1.messages: string[] 2.status:[MessageStatus](/docs/Web3MQ-SDK/JS-SDK/types/#messagestatus) | Promise:[SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse) |
 
-## init Client
+## Prerequisites
 
-```tsx
+> init() see: [init](/docs/Web3MQ-SDK/JS-SDK/client/#init)
+
+> register() see: [register](/docs/Web3MQ-SDK/JS-SDK/register/#register-or-resetpassword)
+
+> login() see: [login](/docs/Web3MQ-SDK/JS-SDK/register/#login)
+
+> event see: [event](/docs/Web3MQ-SDK/JS-SDK/client/#events-1)
+
+### Init and get Client
+> To use the functions of the current module, please complete the following steps first.
+:::tip
+After successful login, you can get the secret key pair from the returned result
+:::
+
+```ts
 import { useEffect, useState } from 'react';
-import { Client, KeyPairsType } from "@web3mq/client";
+import { Client } from '@web3mq/client'; 
 
 export const App = () => {
-  const [fastUrl, setFastUrl] = useState<string | null>(null);
-  const [keys, setKeys] = useState<KeyPairsType | null>(null);
-  const init = async () => {
-    // 1. You must initialize the SDK, the init function is asynchronous
-    const newFastUrl = await Client.init({
-      connectUrl: "example url", // The fastURL you saved to local
-      app_key: "app_key", // Appkey applied from our team
+  const [fastestUrl, setFastUrl] = useState<string | null>(null);
+  useEffect(() => {
+    Client.init({
+        connectUrl: '', //
+        app_key: 'app_key', // temporary authorization key obtained by applying, will be removed in future testnets and mainnet
+    }).then(data => {
+      setFastUrl(data);
     });
-    setFastUrl(newFastUrl);
-    // 2.Login and get keys
-    const { address } = await Client.register.getAccount(didType);
-    const { userid, userExist } = await Client.register.getUserInfo({
-      did_value: address,
-      did_type: didType,
-    });
-    let localMainPrivateKey = "";
-    let localMainPublicKey = "";
-
-    if (!userExist) {
-      const registerRes = await Client.register.register({
-        password,
-        did_value: address,
-        userid,
-        did_type: didType,
-        avatar_url: `https://cdn.stamp.fyi/avatar/${address}?s=300`,
-      });
-      localMainPrivateKey = registerRes.mainPrivateKey;
-      localMainPublicKey = registerRes.mainPublicKey;
-    }
-
-    const {
-      TempPrivateKey,
-      TempPublicKey,
+  }, [])
+  if (!fastestUrl) return;
+  const {
+      tempPrivateKey,
+      tempPublicKey,
       pubkeyExpiredTimestamp,
       mainPrivateKey,
       mainPublicKey,
-    } = await Client.register.login({
-      password,
-      userid,
-      did_value: address,
-      did_type: didType,
-      mainPublicKey: localMainPublicKey,
-      mainPrivateKey: localMainPrivateKey,
-    });
-    setKeys({
-      PrivateKey: TempPrivateKey,
-      PublicKey: TempPublicKey,
-      userid: userid,
-    })
+  } = loginRes
+
+  const keys = {
+      PrivateKey: tempPrivateKey,
+      PublicKey: tempPublicKey,
+      userid: localStorage.getItem('userid')
   };
-  useEffect(()=> {
-    init();
-  }, []);
-  if (!fastUrl || !keys) return <div>Login...</div>;
-  // 3. You must ensure that the Client.init initialization is complete and that you have a key pair
+
   const client = Client.getInstance(keys);
   return (
     <Child client={client} />
@@ -85,7 +68,10 @@ export const App = () => {
 }
 ```
 
-## ChangeNotificationStatus
+## Methods
+
+### ChangeNotificationStatus
+> Change notification status.
 
 ```tsx
 import { Client } from '@web3mq/client';
@@ -110,7 +96,8 @@ export const Child = (props: IProps) => {
 };
 ```
 
-## Get NotificationList
+### Get NotificationList
+> Get the list of notifications in the `notification.getList` event.
 
 ```tsx
 import { useEffect } from 'react';

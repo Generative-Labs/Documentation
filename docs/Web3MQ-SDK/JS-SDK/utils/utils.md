@@ -6,10 +6,10 @@ position: 19
 
 ## Methods
 
-| name                   | type     | Parameters Description            | response                                                       |
-| ---------------------- | -------- | --------------------------------- | -------------------------------------------------------------- |
-| GenerateEd25519KeyPair | function | none                              | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK/types/#keypairstype) |
-| DownloadKeyPair        | function | (text: string, filename: string ) | none                                                           |
+| name                   | type     | Parameters Description            | response                                                             |
+| ---------------------- | -------- | --------------------------------- | -------------------------------------------------------------------- |
+| GenerateEd25519KeyPair | function | none                              | Promise: [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK/types/#keypairstype) |
+| DownloadKeyPair        | function | 1.text: string 2.filename: string | none                                                                 |
 
 ## GenerateEd25519KeyPair
 

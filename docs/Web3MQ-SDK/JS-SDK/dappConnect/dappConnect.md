@@ -8,8 +8,8 @@ position: 2
 
 | name           | type     | Parameters Description                                                        | response          |
 | -------------- | -------- | ----------------------------------------------------------------------------- | ----------------- |
-| getConnectLink | function |                                                                               | string            |
-| sendSign       | function | [DappConnectSignParams](/docs/Web3MQ-SDK/JS-SDK/types/#dappconnectsignparams) | Promise: { void } |
+| getConnectLink | function | none                                                                          | string            |
+| sendSign       | function | [DappConnectSignParams](/docs/Web3MQ-SDK/JS-SDK/types/#dappconnectsignparams) | Promise: void     |
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ position: 2
 > Create wallet connect deep link
 
 ```tsx
-import { Client } from "web3-mq";
+import { Client } from "@web3mq/client";
 await Client.init({
   connectUrl: "example url", // The fastURL you saved to local
   app_key: "app_key", // Appkey applied from our team
@@ -43,7 +43,7 @@ console.log(deepLink);
 > Evoke the wallet to send a signature request
 
 ```tsx
-import { Client } from "web3-mq";
+import { Client } from "@web3mq/client";
 await Client.init({
   connectUrl: "example url", // The fastURL you saved to local
   app_key: "app_key", // Appkey applied from our team
@@ -70,7 +70,7 @@ await Client.dappConnectClient.sendSign({
 
 ```tsx
 import React, { useState } from "react";
-import { Client } from "web3-mq";
+import { Client } from "@web3mq/client";
 import QRCode from "qrcode";
 
 const Main: React.FC = () => {

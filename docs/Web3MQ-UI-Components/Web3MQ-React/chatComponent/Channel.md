@@ -43,7 +43,7 @@ In the `channel` component, you can pass in an Input component with custom style
 </Chat>
 ```
 ## Custom Message 
-如果想要自定义展示信息列表，可以在`channel`中将自定义MessageSimple组件作为参数传入，在`MessageList`中会遍历该Message组件，并且在该组件中可以通过useMessageContext方法获取对应message信息。
+If you want to display a custom list of messages, you can pass the custom Message component as a parameter in the `channel`, and the `MessageList` will iterate through the Message component, and you can get the corresponding message in the component via the `useMessageContext` method.
 
 ```tsx
 <Chat client={client} >

@@ -6,19 +6,19 @@ position: 3
 
 ## Events
 
-| name                                         | type     | Parameters Description |
-| -------------------------------------------- | -------- | ---------------------- |
-| [on](/docs/Web3MQ-SDK/JS-SDK/client/#on)     | function | create pubsub          |
-| [off](/docs/Web3MQ-SDK/JS-SDK/client/#off)   | function | cancel pubsub          |
-| [once](/docs/Web3MQ-SDK/JS-SDK/client/#once) | function | once pubsub            |
-| [emit](/docs/Web3MQ-SDK/JS-SDK/client/#emit) | function | emit pubsub            |
+| name                                         | type     | Parameters Description  |
+| -------------------------------------------- | -------- | ----------------------- |
+| [on](/docs/Web3MQ-SDK/JS-SDK/client/#on)     | function | Mount an event listener |
+| [off](/docs/Web3MQ-SDK/JS-SDK/client/#off)   | function | Cancel an event listener|
+| [once](/docs/Web3MQ-SDK/JS-SDK/client/#once) | function | Trigger an event once   |
+| [emit](/docs/Web3MQ-SDK/JS-SDK/client/#emit) | function | Trigger an event        |
 
 ## Properties
 
 | name                                       | type                                                        | Parameters Description        |
 | ------------------------------------------ | ----------------------------------------------------------- | ----------------------------- |
 | keys                                       | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK/types/#keypairstype) | your PrivateKey and PublicKey |
-| listeners                                  | {}                                                          | pubsub list                   |
+| listeners                                  | {}                                                          | Event Center                  |
 | [channel](/docs/Web3MQ-SDK/JS-SDK/channel) | Channel Class                                               | The channel correlation       |
 | [message](/docs/Web3MQ-SDK/JS-SDK/message) | Message Class                                               | The messages correlation      |
 | [user](/docs/Web3MQ-SDK/JS-SDK/user)       | User Class                                                  | The user correlation          |
@@ -30,14 +30,15 @@ position: 3
 
 | name                                                               | type     | Parameters Description                                                                        | response                                 |
 | ------------------------------------------------------------------ | -------- | --------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| [init](/docs/Web3MQ-SDK/JS-SDK/client/#init)                       | function | [InitOptions](/docs/Web3MQ-SDK/JS-SDK/types/#initoptions)                                     | fastUrl: string                          |
+| [init](/docs/Web3MQ-SDK/JS-SDK/client/#init)                       | function | [InitOptions](/docs/Web3MQ-SDK/JS-SDK/types/#initoptions)                                     | Promise: string                          |
 | [getInstance](/docs/Web3MQ-SDK/JS-SDK/client/#getinstance)         | function | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK/types/#keypairstype)                                   | [Client](/docs/Web3MQ-SDK/JS-SDK/client) |
-| [getSignClient](/docs/Web3MQ-SDK/JS-SDK/client/#getsignclient)     | function | ([SendTempConnectOptions](/docs/Web3MQ-SDK/JS-SDK/types/#sendtempconnectoptions), callbackFn) | null                                     |
-| [getQrCodeClient](/docs/Web3MQ-SDK/JS-SDK/client/#getQrCodeClient) | function | ([SendTempConnectOptions](/docs/Web3MQ-SDK/JS-SDK/types/#sendtempconnectoptions), callbackFn) | null                                     |
+| [getSignClient](/docs/Web3MQ-SDK/JS-SDK/client/#getsignclient)     | function | ([SendTempConnectOptions](/docs/Web3MQ-SDK/JS-SDK/types/#sendtempconnectoptions), callbackFn) | void                                     |
+| [getQrCodeClient](/docs/Web3MQ-SDK/JS-SDK/client/#getQrCodeClient) | function | ([SendTempConnectOptions](/docs/Web3MQ-SDK/JS-SDK/types/#sendtempconnectoptions), callbackFn) | void                                     |
 
 ## Methods
 
 ### init()
+> Connect the best Web3MQ's network node.
 
 ```ts
 import { Client } from "@web3mq/client";
@@ -62,6 +63,7 @@ await Client.init({
 ```
 
 ### getInstance()
+> Create and get the Client Instance.
 
 ```typescript
 import { Client } from "@web3mq/client";
@@ -117,6 +119,7 @@ console.log(client);
 ```
 
 ### getSignClient
+> Get sign client.
 
 ```ts
 import { Client, SignClientCallBackType } from "@web3mq/client";
@@ -142,6 +145,7 @@ await Client.getSignClient(
 ```
 
 ### initDappConnectClient
+> Create the client that connects to the DApp.
 
 ```ts
 import { Client } from "@web3mq/client";

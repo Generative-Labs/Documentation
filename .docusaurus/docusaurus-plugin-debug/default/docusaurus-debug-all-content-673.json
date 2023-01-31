@@ -33,8 +33,8 @@
               },
               "sidebar": "tutorialSidebar",
               "next": {
-                "title": "dotbit",
-                "permalink": "/docs/Tutorials/dotbit/"
+                "title": "Web3MQ Tutorial",
+                "permalink": "/docs/Tutorials/web3mq/"
               }
             },
             {
@@ -51,8 +51,8 @@
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Intro",
-                "permalink": "/docs/Intro"
+                "title": "Web3MQ Tutorial",
+                "permalink": "/docs/Tutorials/web3mq/"
               },
               "next": {
                 "title": "ens",
@@ -127,6 +127,28 @@
               "next": {
                 "title": "QuickStart",
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK/quickStart/"
+              }
+            },
+            {
+              "unversionedId": "Tutorials/web3mq/web3mq",
+              "id": "Tutorials/web3mq/web3mq",
+              "title": "Web3MQ Tutorial",
+              "description": "This tutorial walks you through the key concepts of Web3MQ using a sample react project and successfully",
+              "source": "@site/docs/Tutorials/web3mq/web3mq.md",
+              "sourceDirName": "Tutorials/web3mq",
+              "slug": "/Tutorials/web3mq/",
+              "permalink": "/docs/Tutorials/web3mq/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Intro",
+                "permalink": "/docs/Intro"
+              },
+              "next": {
+                "title": "dotbit",
+                "permalink": "/docs/Tutorials/dotbit/"
               }
             },
             {
@@ -1525,8 +1547,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Client",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/client/"
+                "title": "Register",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/register/"
               },
               "next": {
                 "title": "Message",
@@ -1549,12 +1571,12 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Register",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/register/"
+                "title": "QuickStart",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/quickStart/"
               },
               "next": {
-                "title": "Channel",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/channel/"
+                "title": "DappConnect",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/dappConnect/"
               }
             },
             {
@@ -1573,8 +1595,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "SignConnect",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/signConnect/"
+                "title": "Message",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/message/"
               },
               "next": {
                 "title": "User",
@@ -1597,12 +1619,12 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Encryption",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/encryption/"
+                "title": "Client",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/client/"
               },
               "next": {
-                "title": "Utils",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/utils/"
+                "title": "Register",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/register/"
               }
             },
             {
@@ -1625,15 +1647,15 @@
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK/PubSub/"
               },
               "next": {
-                "title": "DappConnect",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/dappConnect/"
+                "title": "SignConnect",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/signConnect/"
               }
             },
             {
               "unversionedId": "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter",
               "id": "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter",
               "title": "eventCenter",
-              "description": "Usage",
+              "description": "event list",
               "source": "@site/docs/Web3MQ-SDK/JS-SDK/eventCenter/eventCenter.md",
               "sourceDirName": "Web3MQ-SDK/JS-SDK/eventCenter",
               "slug": "/Web3MQ-SDK/JS-SDK/eventCenter/",
@@ -1673,8 +1695,8 @@
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK/channel/"
               },
               "next": {
-                "title": "SignConnect",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/signConnect/"
+                "title": "Contact",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/contact/"
               }
             },
             {
@@ -1745,8 +1767,8 @@
                 "permalink": "/docs/Tutorials/PubSub/"
               },
               "next": {
-                "title": "Register",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/register/"
+                "title": "Client",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/client/"
               }
             },
             {
@@ -1765,12 +1787,12 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "QuickStart",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/quickStart/"
+                "title": "DappConnect",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/dappConnect/"
               },
               "next": {
-                "title": "Client",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/client/"
+                "title": "Channel",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/channel/"
               }
             },
             {
@@ -1789,12 +1811,12 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Message",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/message/"
+                "title": "Encryption",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/encryption/"
               },
               "next": {
-                "title": "Contact",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/contact/"
+                "title": "Utils",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/utils/"
               }
             },
             {
@@ -1861,8 +1883,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "DappConnect",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/dappConnect/"
+                "title": "SignConnect",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/signConnect/"
               },
               "next": {
                 "title": "Type List",
@@ -2113,7 +2135,7 @@
             {
               "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead",
               "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead",
-              "title": "ChanelHead",
+              "title": "ChannelHead",
               "description": "ChannelHead as a fixed header in DashBoard, and it integrates CreateChannel inside which needs to be used in the Chat component.",
               "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead.md",
               "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React/chatComponent",
@@ -2196,7 +2218,7 @@
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "ChanelHead",
+                "title": "ChannelHead",
                 "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead"
               },
               "next": {
@@ -2397,7 +2419,7 @@
                 "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole"
               },
               "next": {
-                "title": "ChanelHead",
+                "title": "ChannelHead",
                 "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead"
               }
             },
@@ -2882,6 +2904,11 @@
                 "items": [
                   {
                     "type": "doc",
+                    "label": "Web3MQ",
+                    "id": "Tutorials/web3mq/web3mq"
+                  },
+                  {
+                    "type": "doc",
                     "label": "Dotbit",
                     "id": "Tutorials/dotbit/dotbit"
                   },
@@ -2921,13 +2948,18 @@
                       },
                       {
                         "type": "doc",
-                        "label": "Register",
-                        "id": "Web3MQ-SDK/JS-SDK/register/register"
+                        "label": "Client",
+                        "id": "Web3MQ-SDK/JS-SDK/client/client"
                       },
                       {
                         "type": "doc",
-                        "label": "Client",
-                        "id": "Web3MQ-SDK/JS-SDK/client/client"
+                        "label": "dappConnect",
+                        "id": "Web3MQ-SDK/JS-SDK/dappConnect/dappConnect"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Register",
+                        "id": "Web3MQ-SDK/JS-SDK/register/register"
                       },
                       {
                         "type": "doc",
@@ -2938,11 +2970,6 @@
                         "type": "doc",
                         "label": "Message",
                         "id": "Web3MQ-SDK/JS-SDK/message/message"
-                      },
-                      {
-                        "type": "doc",
-                        "label": "SignConnect",
-                        "id": "Web3MQ-SDK/JS-SDK/signConnect/signConnect"
                       },
                       {
                         "type": "doc",
@@ -2971,8 +2998,8 @@
                       },
                       {
                         "type": "doc",
-                        "label": "dappConnect",
-                        "id": "Web3MQ-SDK/JS-SDK/dappConnect/dappConnect"
+                        "label": "SignConnect",
+                        "id": "Web3MQ-SDK/JS-SDK/signConnect/signConnect"
                       },
                       {
                         "type": "doc",

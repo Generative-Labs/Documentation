@@ -15,81 +15,63 @@ position: 8.1
 
 | name                    | type     | Parameters Description                                      | response                                                              |
 | ----------------------- | -------- | ----------------------------------------------------------- | --------------------------------------------------------------------- |
-| createTopic             | function | topic_name: string                                          | { "topicid": string }                                                 |
-| subscribeTopic          | function | topicid: string                                             | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)                                             |
-| publishTopicMessage     | function | params: { topicid: string; title: string; content: string } | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)                                             |
-| getMyCreateTopicList    | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)     | [TopicListType](/docs/Web3MQ-SDK/JS-SDK/types/#topiclisttype)         |
-| getMySubscribeTopicList | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)     | [SubscribeListType](/docs/Web3MQ-SDK/JS-SDK/types/#subscribelisttype) |
+| createTopic             | function | topic_name: string                                          | Promise:[CreateTopicResponse](/docs/Web3MQ-SDK/JS-SDK/types/#createtopicresponse)                              |
+| subscribeTopic          | function | topicid: string                                             | Promise:[SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)                                             |
+| publishTopicMessage     | function | [TopicMessageType](/docs/Web3MQ-SDK/JS-SDK/types/#topicmessagetype)| Promise:[SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)                                             |
+| getMyCreateTopicList    | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)     | Promise:[TopicListType](/docs/Web3MQ-SDK/JS-SDK/types/#topiclisttype)         |
+| getMySubscribeTopicList | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)     | Promise:[SubscribeListType](/docs/Web3MQ-SDK/JS-SDK/types/#subscribelisttype) |
 
-## init Client
+## Prerequisites
 
-```tsx
+> init() see: [init](/docs/Web3MQ-SDK/JS-SDK/client/#init)
+
+> register() see: [register](/docs/Web3MQ-SDK/JS-SDK/register/#register-or-resetpassword)
+
+> login() see: [login](/docs/Web3MQ-SDK/JS-SDK/register/#login)
+
+### Init and get Client
+> To use the functions of the current module, please complete the following steps first.
+:::tip
+After successful login, you can get the secret key pair from the returned result
+:::
+
+```ts
 import { useEffect, useState } from 'react';
-import { Client, KeyPairsType } from "@web3mq/client";
+import { Client } from '@web3mq/client'; 
 
 export const App = () => {
-  const [fastUrl, setFastUrl] = useState<string | null>(null);
-  const [keys, setKeys] = useState<KeyPairsType | null>(null);
-  const init = async () => {
-    // 1. You must initialize the SDK, the init function is asynchronous
-    const newFastUrl = await Client.init({
-      connectUrl: "example url", // The fastURL you saved to local
-      app_key: "app_key", // Appkey applied from our team
+  const [fastestUrl, setFastUrl] = useState<string | null>(null);
+  useEffect(() => {
+    Client.init({
+        connectUrl: '', //
+        app_key: 'app_key', // temporary authorization key obtained by applying, will be removed in future testnets and mainnet
+    }).then(data => {
+      setFastUrl(data);
     });
-    setFastUrl(newFastUrl);
-    // 2.Login and get keys
-    const { address } = await Client.register.getAccount(didType);
-    const { userid, userExist } = await Client.register.getUserInfo({
-      did_value: address,
-      did_type: didType,
-    });
-    let localMainPrivateKey = "";
-    let localMainPublicKey = "";
-
-    if (!userExist) {
-      const registerRes = await Client.register.register({
-        password,
-        did_value: address,
-        userid,
-        did_type: didType,
-        avatar_url: `https://cdn.stamp.fyi/avatar/${address}?s=300`,
-      });
-      localMainPrivateKey = registerRes.mainPrivateKey;
-      localMainPublicKey = registerRes.mainPublicKey;
-    }
-
-    const {
-      TempPrivateKey,
-      TempPublicKey,
+  }, [])
+  if (!fastestUrl) return;
+  const {
+      tempPrivateKey,
+      tempPublicKey,
       pubkeyExpiredTimestamp,
       mainPrivateKey,
       mainPublicKey,
-    } = await Client.register.login({
-      password,
-      userid,
-      did_value: address,
-      did_type: didType,
-      mainPublicKey: localMainPublicKey,
-      mainPrivateKey: localMainPrivateKey,
-    });
-    setKeys({
-      PrivateKey: TempPrivateKey,
-      PublicKey: TempPublicKey,
-      userid: userid,
-    })
+  } = loginRes
+
+  const keys = {
+      PrivateKey: tempPrivateKey,
+      PublicKey: tempPublicKey,
+      userid: localStorage.getItem('userid')
   };
-  useEffect(()=> {
-    init();
-  }, []);
-  if (!fastUrl || !keys) return <div>Login...</div>;
-  // 3. You must ensure that the Client.init initialization is complete and that you have a key pair
+
   const client = Client.getInstance(keys);
   return (
     <Child client={client} />
   )
 }
 ```
-## Pub/Sub Example
+## Methods
+### Pub/Sub Example
 
 > 1. Copy the [Root Components](/docs/Web3MQ-SDK/JS-SDK/quickStart/#root-components-code) Code to App.tsx
 > 2. Create a Child.tsx file and copy the Child Components Code to Child.tsx
@@ -251,7 +233,8 @@ export default Child;
 ```
 
 
-## createTopic
+### createTopic
+> Create your topic, customize the name of the topic
 
 ```tsx
 import { Client } from '@web3mq/client';
@@ -277,7 +260,8 @@ export const Child = (props: IProps) => {
 };
 ```
 
-## subscribeTopic
+### subscribeTopic
+> Subscribe to other topics by topicid.
 
 ```tsx
 import { Client } from '@web3mq/client';
@@ -302,7 +286,8 @@ export const Child = (props: IProps) => {
 };
 ```
 
-## publishTopicMessage
+### publishTopicMessage
+> Choose your topic and post content.
 
 ```tsx
 import { Client } from '@web3mq/client';
@@ -331,7 +316,8 @@ export const Child = (props: IProps) => {
 };
 ```
 
-## getMyCreateTopicList
+### getMyCreateTopicList
+> Get the list of topics I created.
 
 ```tsx
 import { useEffect } from 'react';
@@ -373,7 +359,8 @@ export const Child = (props: IProps) => {
 };
 ```
 
-## getMySubscribeTopicList
+### getMySubscribeTopicList
+> Get the list of my subscribed topics.
 
 ```tsx
 import { useEffect } from 'react';
@@ -415,7 +402,8 @@ export const Child = (props: IProps) => {
 };
 ```
 
-## get NotificationList
+### get NotificationList
+> Get the list of notifications in the `notification.getList` event.
 
 ```tsx
 import { useEffect } from 'react';

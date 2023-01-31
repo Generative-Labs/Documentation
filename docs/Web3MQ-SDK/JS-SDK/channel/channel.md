@@ -8,83 +8,68 @@ position: 4
 
 | name          | type                                                                              | Description            |
 | ------------- | --------------------------------------------------------------------------------- | ---------------------- |
-| channelList   | [activechannelType](/docs/Web3MQ-SDK/JS-SDK/types/#activechanneltype) [ ] \| null | channel list           |
-| activeChannel | [activechannelType](/docs/Web3MQ-SDK/JS-SDK/types/#activechanneltype) \| null     | current active channel |
+| channelList   | [ChannelItemType](/docs/Web3MQ-SDK/JS-SDK/types/#channelitemtype) [ ] \| null     | channel list           |
+| activeChannel | [ChannelItemType](/docs/Web3MQ-SDK/JS-SDK/types/#channelitemtype) \| null         | current active channel |
 
 ## Methods
 
-| name               | type     | Parameters Description                                                | response                                                                     |
-| ------------------ | -------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| createRoom         | function | [CreateRoomParams](/docs/Web3MQ-SDK/JS-SDK/types/#createroomparams)   | none                                                                         |
-| queryChannels      | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)               | none                                                                         |
-| setActiveChannel   | function | [activechannelType](/docs/Web3MQ-SDK/JS-SDK/types/#activechanneltype) | none                                                                         |
-| getGroupMemberList | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)               | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)[ ] |
-| inviteGroupMember  | function | (members: string[])                                                   | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)[ ] |
-| joinGroup          | function | (groupid: string)                                                     | none                                                                         |
-| getGroupPermissions| function | (groupid: string)                                                     | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)    |
-| updateGroupPermissions| function | Pick<[UpdateGroupPermissionsParams](/docs/Web3MQ-SDK/JS-SDK/types/#updategrouppermissionsparams)), 'groupid' \|'permissions'>    | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)    |
-### init Client
+| name               | type     | Parameters Description                                                | response                                                                              |
+| ------------------ | -------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| createRoom         | function | [CreateRoomParams](/docs/Web3MQ-SDK/JS-SDK/types/#createroomparams)   | Promise: void                                                                         |
+| queryChannels      | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)               | Promise: void                                                                         |
+| setActiveChannel   | function | [ChannelItemType](/docs/Web3MQ-SDK/JS-SDK/types/#channelitemtype) \| null | Promise: void                                                                     |
+| updateChannels     | function | [UpdateRoomListParams](/docs/Web3MQ-SDK/JS-SDK/types/#updateroomlistparams) | Promise: [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse) |
+| getGroupMemberList | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)               | Promise: [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)[ ] |
+| inviteGroupMember  | function | members: string[]                                                     | Promise: [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)[ ] |
+| joinGroup          | function | groupid: string                                                       | Promise: void                                                                         |
+| getGroupPermissions| function | groupid: string                                                       | Promise: [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)    |
+| updateGroupPermissions| function | [UpdateGroupPermissionsParams](/docs/Web3MQ-SDK/JS-SDK/types/#updategrouppermissionsparams)    | Promise: [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)    |
 
-```tsx
+## Prerequisites
+
+> init() see: [init](/docs/Web3MQ-SDK/JS-SDK/client/#init)
+
+> register() see: [register](/docs/Web3MQ-SDK/JS-SDK/register/#register-or-resetpassword)
+
+> login() see: [login](/docs/Web3MQ-SDK/JS-SDK/register/#login)
+
+> event see: [event](/docs/Web3MQ-SDK/JS-SDK/client/#events-1)
+
+### Init and get Client
+> To use the functions of the current module, please complete the following steps first.
+:::tip
+After successful login, you can get the secret key pair from the returned result
+:::
+
+```ts
 import { useEffect, useState } from 'react';
-import { Client, KeyPairsType } from "@web3mq/client";
+import { Client } from '@web3mq/client'; 
 
 export const App = () => {
-  const [fastUrl, setFastUrl] = useState<string | null>(null);
-  const [keys, setKeys] = useState<KeyPairsType | null>(null);
-  const init = async () => {
-    // 1. You must initialize the SDK, the init function is asynchronous
-    const newFastUrl = await Client.init({
-      connectUrl: "example url", // The fastURL you saved to local
-      app_key: "app_key", // Appkey applied from our team
+  const [fastestUrl, setFastUrl] = useState<string | null>(null);
+  useEffect(() => {
+    Client.init({
+        connectUrl: '', //
+        app_key: 'app_key', // temporary authorization key obtained by applying, will be removed in future testnets and mainnet
+    }).then(data => {
+      setFastUrl(data);
     });
-    setFastUrl(newFastUrl);
-    // 2.Login and get keys
-    const { address } = await Client.register.getAccount(didType);
-    const { userid, userExist } = await Client.register.getUserInfo({
-      did_value: address,
-      did_type: didType,
-    });
-    let localMainPrivateKey = "";
-    let localMainPublicKey = "";
-
-    if (!userExist) {
-      const registerRes = await Client.register.register({
-        password,
-        did_value: address,
-        userid,
-        did_type: didType,
-        avatar_url: `https://cdn.stamp.fyi/avatar/${address}?s=300`,
-      });
-      localMainPrivateKey = registerRes.mainPrivateKey;
-      localMainPublicKey = registerRes.mainPublicKey;
-    }
-
-    const {
-      TempPrivateKey,
-      TempPublicKey,
+  }, [])
+  if (!fastestUrl) return;
+  const {
+      tempPrivateKey,
+      tempPublicKey,
       pubkeyExpiredTimestamp,
       mainPrivateKey,
       mainPublicKey,
-    } = await Client.register.login({
-      password,
-      userid,
-      did_value: address,
-      did_type: didType,
-      mainPublicKey: localMainPublicKey,
-      mainPrivateKey: localMainPrivateKey,
-    });
-    setKeys({
-      PrivateKey: TempPrivateKey,
-      PublicKey: TempPublicKey,
-      userid: userid,
-    })
+  } = loginRes
+
+  const keys = {
+      PrivateKey: tempPrivateKey,
+      PublicKey: tempPublicKey,
+      userid: localStorage.getItem('userid')
   };
-  useEffect(()=> {
-    init();
-  }, []);
-  if (!fastUrl || !keys) return <div>Login...</div>;
-  // 3. You must ensure that the Client.init initialization is complete and that you have a key pair
+
   const client = Client.getInstance(keys);
   return (
     <Child client={client} />
@@ -92,7 +77,50 @@ export const App = () => {
 }
 ```
 
-### createRoom & queryChannels & setActiveChannel
+## Methods
+
+### createRoom
+> Pass in optional parameters such as `groupName` to create a group chat.
+
+```tsx
+import { useEffect } from 'react';
+import { Client } from '@web3mq/client';
+interface IProps {
+  client: Client;
+}
+export const Child = (props: IProps) => {
+  const { client } = props;
+  const handleEvent = (event: { type: any }) => {
+    if (event.type === 'channel.getList') {
+      // The channel you create will appear in the latest channelList
+      console.log(client.channel.channelList);
+    }
+  };
+
+  useEffect(() => {
+    client.on('channel.getList', handleEvent);
+    return () => {
+      client.off('channel.getList');
+    };
+  }, []);
+
+  return (
+    <button
+      onClick={() => {
+        client.channel.createRoom({
+          groupName: 'your favourite group name',
+          avatarUrl: 'your favourite image url'
+        });
+      }}
+    >
+      create group
+    </button>
+  );
+};
+```
+
+### queryChannels
+> Get the list of chat rooms, and could pass in `pageParams` type parameters to achieve paging.
 
 ```tsx
 import { useEffect } from 'react';
@@ -101,7 +129,6 @@ import { Client } from '@web3mq/client';
 interface IProps {
   client: Client;
 }
-
 export const Child = (props: IProps) => {
   const { client } = props;
 
@@ -113,7 +140,51 @@ export const Child = (props: IProps) => {
   };
 
   useEffect(() => {
-    client.channel.queryChannels({ page: 1, size: 100 });
+    client.on('channel.getList', handleEvent);
+    return () => {
+      client.off('channel.getList');
+    };
+  }, []);
+
+  return (
+    <button
+      onClick={() => {
+        client.channel.queryChannels({
+          page: 1,
+          size: 20
+        });
+      }}
+    >
+      query Channels
+    </button>
+  );
+};
+```
+### setActiveChannel
+> Set `activeChannel` to eliminate the need for `groupid`/`userid` in some methods, such as `client.message.sendMessage`.
+
+```tsx
+import { useEffect } from 'react';
+import { Client } from '@web3mq/client';
+interface IProps {
+  client: Client;
+}
+export const Child = (props: IProps) => {
+  const { client } = props;
+
+  const handleEvent = (event: { type: any }) => {
+    if (event.type === 'channel.activeChange') {
+      // Get the latest activeChannel
+      console.log(client.channel.activeChannel);
+    }
+    if (event.type === 'channel.activeChannel') {
+      // Get the latest channelList
+      console.log(client.channel.channelList);
+    }
+  };
+
+  useEffect(() => {
+    client.channel.queryChannels({page: 1,size: 20});
     client.on('channel.getList', handleEvent);
     return () => {
       client.off('channel.getList');
@@ -122,37 +193,65 @@ export const Child = (props: IProps) => {
 
   const setActiveChannel = async () => {
     const { channelList } = client.channel;
+    // If your `channelList` is empty please create one first
+    if (channelList.length === 0) {
+      await client.channel.createRoom({
+        groupName: 'your favourite group name',
+        avatarUrl: 'your favourite image url'
+      });
+      await client.channel.setActiveChannel(channelList[0]);
+    }
     if(channelList && channelList.length > 0) {
       await client.channel.setActiveChannel(channelList[0]);
     }
   };
 
   return (
-    <div>
-      <button
-        onClick={() => {
-          client.channel.createRoom({
-            group_name: 'your favourite group name'
-            avatar_url: 'your favourite image url'
-          });
-        }}
-      >
-        create group
-      </button>
-      <button
-        onClick={() => setActiveChannel()}
-      >
-        set active channel
-      </button>
-    </div>
+    <button
+      onClick={setActiveChannel}
+    >
+      set Active Channel
+    </button>
+  );
+};
+```
+### updateChannels
+> Update your channels.
+
+```tsx
+import { Client } from '@web3mq/client';
+interface IProps {
+  client: Client;
+}
+export const Child = (props: IProps) => {
+  const { client } = props;
+
+  const updateChannel = async () => {
+    const date = await client.channel.updateChannels({
+      chatid: 'groupid or userid',
+      chat_type: 'chat type —— group or user',
+      topic: 'groupid or userid',
+      topic_type: 'chat type —— group or user',
+    });
+    console.log(data);
+  };
+
+  return (
+    <button
+      onClick={updateChannel};
+      }}
+    >
+      update Channel
+    </button>
   );
 };
 ```
 
 ### getGroupMemberList
+> Get the list of group chat members after setting `activeChannel`.
 
 ```tsx
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Client } from '@web3mq/client';
 
 interface IProps {
@@ -161,29 +260,42 @@ interface IProps {
 
 export const Child = (props: IProps) => {
   const { client } = props;
-  const [members, setMembers] = useState([]);
   useEffect(() => {
-    client.channel.getGroupMemberList({
+    client.channel.queryChannels({
       page: 1,
       size: 100,
-    }).then(res => {
-      console.lof(res);
-      setMembers(res.data.result);
-    });
+    })
   }, []);
+  const getGroupMembers = async() => {
+    const { channelList } = client.channel;
+    // If your `channelList` is empty please create one first
+    if (channelList.length === 0) {
+      await client.channel.createRoom({
+        groupName: 'your favourite group name',
+        avatarUrl: 'your favourite image url'
+      });
+      await client.channel.setActiveChannel(channelList[0]);
+    } else {
+      await client.channel.setActiveChannel(channelList[0]);
+    }
+    const dat = await client.channel.getGroupMemberList({
+      page: 1,
+      size: 100,
+    });
+    console.log(data);
+  }
   return (
-    <div>
-      {members.map(member => (
-        <div>
-          {member.userid}
-        </div>
-      ))}
-    </div>
+    <button
+      onClick={getGroupMembers}
+    >
+      get group members
+    </button>
   )
 };
 ```
 
 ### inviteGroupMember
+> Invite users to the current `activeChannel`.
 
 ```tsx
 import { useEffect } from 'react';
@@ -208,7 +320,7 @@ export const Child = (props: IProps) => {
   const inviteGroupMember = async () => {
     const { activeChannel } = client;
     if (activeChannel) {
-      // 2. You will invite users to the first Channel in your ChannelList
+      // 2. You will invite users to the `activeChannel`
       const data = await client.channel.inviteGroupMember([`member's userid`]);
       console.log(data);
     }
@@ -232,6 +344,7 @@ export const Child = (props: IProps) => {
 ```
 
 ### joinGroup
+> Join a group chat by `groupid`.
 
 ```tsx
 import { useEffect } from 'react';
@@ -270,7 +383,7 @@ export const Child = (props: IProps) => {
 ```
 
 ### getGroupPermissions
-Group permission currently only `Group:join` rule that has `ceator_invite_friends`, `public` and `nft_validation ` type.
+> View group chat permissions by `groupid`. Group permission currently only `Group:join` rule that has `ceator_invite_friends`, `public` and `nft_validation ` type.
 
 ```tsx
 import { useEffect } from 'react';
@@ -317,6 +430,8 @@ export const Child = (props: IProps) => {
 ```
 
 ### updateGroupPermissions
+> Changing group chat permissions.
+
 ```tsx
 import { useEffect } from 'react';
 import { Client } from '@web3mq/client';

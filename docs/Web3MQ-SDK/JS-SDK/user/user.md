@@ -8,77 +8,60 @@ position: 7
 
 | name             | type     | Parameters Description                                       | response                                                                          |
 | ---------------- | -------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------- |
-| searchUsers      | function | (walletAddress: string)                                      | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)         |
-| getMyProfile     | function | none                                                         | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)         |
-| updateMyProfile  | function | (nickname: string, avatar_url: string)                       | [UpdateMyProfileResponse](/docs/Web3MQ-SDK/JS-SDK/types/#updatemyprofileresponse) |
-| getUserBindDids  | function | none                                                         | [UserBindDidIdsResponse](/docs/Web3MQ-SDK/JS-SDK/types/#userbinddididsresponse)[ ]  |
-| userBindDid      | function | Omit<[UserBindDidParams](/docs/Web3MQ-SDK/JS-SDK/types/#userbinddidparams), 'userid' \| 'web3mq_signature' \| 'timestamp'> | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)         |
-| getUserPermissions | function | none                                                       | [UserPermissionsType](/docs/Web3MQ-SDK/JS-SDK/types/#userpermissionstype)      |
-| getTargetUserPermissions| function | (userid: string)                                      | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)         |
-| updateUserPermissions| function | Pick<[UpdateUserPermissionsParams](/docs/Web3MQ-SDK/JS-SDK/types/#updateuserpermissionsparams), 'permissions'> | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)         |
+| searchUsers      | function | walletAddress: string                                        | Promise:[SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse) |
+| getMyProfile     | function | none                                                         | Promise:[SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse) |
+| updateMyProfile  | function | 1.nickname: string 2.avatar_url: string                      | Promise:[UpdateMyProfileResponse](/docs/Web3MQ-SDK/JS-SDK/types/#updatemyprofileresponse) |
+| getUserBindDids  | function | none                                                         | Promise:[UserBindDidIdsResponse](/docs/Web3MQ-SDK/JS-SDK/types/#userbinddididsresponse)[ ]  |
+| userBindDid      | function | [UserBindDidParams](/docs/Web3MQ-SDK/JS-SDK/types/#userbinddidparams) | Promise:[SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)         |
+| getUserPermissions | function | none                                                       | Promise:[UserPermissionsType](/docs/Web3MQ-SDK/JS-SDK/types/#userpermissionstype) |
+| getTargetUserPermissions| function | userid: string                                       | Promise:[SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse) |
+| updateUserPermissions| function  | [UpdateUserPermissionsParams](/docs/Web3MQ-SDK/JS-SDK/types/#updateuserpermissionsparams) |Promise: [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)  |
 
-### init Client
+## Prerequisites
 
-```tsx
+> init() see: [init](/docs/Web3MQ-SDK/JS-SDK/client/#init)
+
+> register() see: [register](/docs/Web3MQ-SDK/JS-SDK/register/#register-or-resetpassword)
+
+> login() see: [login](/docs/Web3MQ-SDK/JS-SDK/register/#login)
+
+> event see: [event](/docs/Web3MQ-SDK/JS-SDK/client/#events-1)
+
+### Init and get Client
+> To use the functions of the current module, please complete the following steps first.
+:::tip
+After successful login, you can get the secret key pair from the returned result
+:::
+
+```ts
 import { useEffect, useState } from 'react';
-import { Client, KeyPairsType } from "@web3mq/client";
+import { Client } from '@web3mq/client'; 
 
 export const App = () => {
-  const [fastUrl, setFastUrl] = useState<string | null>(null);
-  const [keys, setKeys] = useState<KeyPairsType | null>(null);
-  const init = async () => {
-    // 1. You must initialize the SDK, the init function is asynchronous
-    const newFastUrl = await Client.init({
-      connectUrl: "example url", // The fastURL you saved to local
-      app_key: "app_key", // Appkey applied from our team
+  const [fastestUrl, setFastUrl] = useState<string | null>(null);
+  useEffect(() => {
+    Client.init({
+        connectUrl: '', //
+        app_key: 'app_key', // temporary authorization key obtained by applying, will be removed in future testnets and mainnet
+    }).then(data => {
+      setFastUrl(data);
     });
-    setFastUrl(newFastUrl);
-    // 2.Login and get keys
-    const { address } = await Client.register.getAccount(didType);
-    const { userid, userExist } = await Client.register.getUserInfo({
-      did_value: address,
-      did_type: didType,
-    });
-    let localMainPrivateKey = "";
-    let localMainPublicKey = "";
-
-    if (!userExist) {
-      const registerRes = await Client.register.register({
-        password,
-        did_value: address,
-        userid,
-        did_type: didType,
-        avatar_url: `https://cdn.stamp.fyi/avatar/${address}?s=300`,
-      });
-      localMainPrivateKey = registerRes.mainPrivateKey;
-      localMainPublicKey = registerRes.mainPublicKey;
-    }
-
-    const {
-      TempPrivateKey,
-      TempPublicKey,
+  }, [])
+  if (!fastestUrl) return;
+  const {
+      tempPrivateKey,
+      tempPublicKey,
       pubkeyExpiredTimestamp,
       mainPrivateKey,
       mainPublicKey,
-    } = await Client.register.login({
-      password,
-      userid,
-      did_value: address,
-      did_type: didType,
-      mainPublicKey: localMainPublicKey,
-      mainPrivateKey: localMainPrivateKey,
-    });
-    setKeys({
-      PrivateKey: TempPrivateKey,
-      PublicKey: TempPublicKey,
-      userid: userid,
-    })
+  } = loginRes
+
+  const keys = {
+      PrivateKey: tempPrivateKey,
+      PublicKey: tempPublicKey,
+      userid: localStorage.getItem('userid')
   };
-  useEffect(()=> {
-    init();
-  }, []);
-  if (!fastUrl || !keys) return <div>Login...</div>;
-  // 3. You must ensure that the Client.init initialization is complete and that you have a key pair
+
   const client = Client.getInstance(keys);
   return (
     <Child client={client} />
@@ -86,7 +69,10 @@ export const App = () => {
 }
 ```
 
+## Methods
+
 ### searchUsers
+> Search for users by wallet address, support eth and starknet.
 
 ```tsx
 import { Client } from '@web3mq/client';
@@ -99,20 +85,19 @@ export const Child = (props: IProps) => {
   const { client } = props;
 
   return (
-    <div>
-      <button
-        onClick={async () => {
-          const data = await client.user.searchUsers('walletAddress');
-          console.log(data);
-        }}>
-        Search Users
-      </button>
-    </div>
+    <button
+      onClick={async () => {
+        const data = await client.user.searchUsers('walletAddress');
+        console.log(data);
+      }}>
+      Search Users
+    </button>
   );
 };
 ```
 
 ### getMyProfile
+> Get my profile.
 
 ```tsx
 import { Client } from '@web3mq/client';
@@ -139,6 +124,7 @@ export const Child = (props: IProps) => {
 ```
 
 ### updateMyProfile
+> update my profile, such as nickname and avatar.
 
 ```tsx
 import { Client } from '@web3mq/client';
@@ -168,6 +154,7 @@ export const Child = (props: IProps) => {
 ```
 
 ### getUserBindDids
+> Get my bound dids.
 
 ```tsx
 import { Client } from '@web3mq/client';
@@ -194,6 +181,7 @@ export const Child = (props: IProps) => {
 ```
 
 ### userBindDid
+> Bound dids.
 
 ```tsx
 import { Client } from '@web3mq/client';
@@ -224,6 +212,7 @@ export const Child = (props: IProps) => {
 ```
 
 ### getUserPermissions
+> Get my user permissions.
 
 ```tsx
 import { Client } from '@web3mq/client';
@@ -250,6 +239,7 @@ export const Child = (props: IProps) => {
 ```
 
 ### getTargetUserPermissions
+> Get the user permissions of target users.
 
 ```tsx
 import { Client } from '@web3mq/client';
@@ -276,6 +266,7 @@ export const Child = (props: IProps) => {
 ```
 
 ### updateUserPermissions
+> Change my user permissions.
 
 ```tsx
 import { Client } from '@web3mq/client';
