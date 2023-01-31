@@ -30,7 +30,7 @@ _Request Payload_
 | dapp_pubkey             | string | No       | dapp ed25519 pubkey                                                                                  |
 | domain                  | string | No       | dapp deploy domain                                                                                   |
 | timestamp               | int    | Yes      | timestamp milliseconds                                                                               |
-| web3mq_user_signature   | string | Yes      | use creator ed25519 private key signing ( `base64 encode` ) [see signing detail](/apidocs/signature) |
+| web3mq_user_signature   | string | Yes      | use creator ed25519 private key signing ( `base64 encode` ) [see signing detail](/docs/Web3MQ-API/signature) |
 
 _web3mq_signature signing rule_
 

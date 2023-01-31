@@ -23,7 +23,7 @@ _Request Payload_
 | --------------------- | ------ | -------- | ---------------------------------------------------- |
 | userid                | string | Yes      |                                                      |
 | timestamp             | int    | Yes      | timestamp milliseconds                               |
-| web3mq_user_signature | string | Yes      | use ed25519 [see signing detail](/apidocs/signature) |
+| web3mq_user_signature | string | Yes      | use ed25519 `base64 encode` web3mq_signature [see signing detail](/docs/Web3MQ-API/signature) |
 | page                  | int    | No       |                                                      |
 | size                  | int    | No       |                                                      |
 
