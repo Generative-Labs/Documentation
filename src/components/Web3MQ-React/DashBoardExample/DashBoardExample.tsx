@@ -52,7 +52,7 @@ export const DashBoardExample: React.FC = (props: any) => {
   const client = Client.getInstance(keys);
 
   return (
-    <div id='box' style={{position: 'relative', border: '1px solid #f2f2f2',minWidth: '350px', width: '100%',height: '600px',overflow: 'auto'}}>
+    <div id='box' style={{position: 'relative', border: '1px solid #f2f2f2',maxWidth: '350px', width: '100%',height: '600px',overflow: 'hidden'}}>
       <Chat containerId='box' client={client} appType={AppTypeEnum['h5']} logout={logout}>
         <DashBoard 
           defaultType = {type === 'custom' ? 'Tab1' : 'room'}

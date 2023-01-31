@@ -33,7 +33,7 @@ position: 3
 | [init](/docs/Web3MQ-SDK/JS-SDK/client/#init)                       | function | [InitOptions](/docs/Web3MQ-SDK/JS-SDK/types/#initoptions)                                     | Promise: [Web3MQAPiEndpoints](/docs/Web3MQ-SDK/JS-SDK/standards/#web3mq-api-endpoints)|
 | [getInstance](/docs/Web3MQ-SDK/JS-SDK/client/#getinstance)         | function | [KeyPairsType](/docs/Web3MQ-SDK/JS-SDK/types/#keypairstype)                                   | [Client](/docs/Web3MQ-SDK/JS-SDK/client) |
 | [getSignClient](/docs/Web3MQ-SDK/JS-SDK/client/#getsignclient)     | function | ([SendTempConnectOptions](/docs/Web3MQ-SDK/JS-SDK/types/#sendtempconnectoptions), callbackFn) | void                                     |
-| [getQrCodeClient](/docs/Web3MQ-SDK/JS-SDK/client/#getQrCodeClient) | function | ([SendTempConnectOptions](/docs/Web3MQ-SDK/JS-SDK/types/#sendtempconnectoptions), callbackFn) | void                                     |
+| [initDappConnectClient](/docs/Web3MQ-SDK/JS-SDK/client/#getQrCodeClient) | function | ([SendTempConnectOptions](/docs/Web3MQ-SDK/JS-SDK/types/#sendtempconnectoptions), callbackFn) | void                                     |
 
 ## Methods
 
