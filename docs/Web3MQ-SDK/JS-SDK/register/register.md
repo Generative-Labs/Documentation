@@ -81,7 +81,7 @@ console.log(userid, userExist);
 
 ```tsx
 
-import {Client} from "web3-mq";
+import {Client} from "@web3mq/client";
 
 await Client.init({
     connectUrl: "example url", // The fastURL you saved to local
@@ -101,7 +101,7 @@ const {sign: signature} = await this.sign(signContent, did_value, did_type);
 > Get the signature content to generate the master key pair
 
 ```tsx
-import {Client} from "web3-mq";
+import {Client} from "@web3mq/client";
 
 await Client.init({
     connectUrl: "example url", // The fastURL you saved to local
@@ -129,7 +129,7 @@ console.log(signature)
 > Get the master key pair after signing
 
 ```tsx
-import {Client} from "web3-mq";
+import {Client} from "@web3mq/client";
 
 const didKey = localStorage.getItem("DID_KEY") || "";
 const tempPubkey = localStorage.getItem("PUBLIC_KEY") || "";

@@ -1,4 +1,4 @@
-# ChanelHead
+# ChannelHead
 `ChannelHead` as a fixed header in `DashBoard`, and it integrates `CreateChannel` inside which needs to be used in the `Chat` component.
 
 ## Basic Usage

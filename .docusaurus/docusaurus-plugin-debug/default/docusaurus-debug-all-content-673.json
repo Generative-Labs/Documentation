@@ -12,9 +12,9 @@
           "versionClassName": "docs-version-current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/edy/Desktop/web3-mq documentation/Documentation/sidebars.js",
-          "contentPath": "/Users/edy/Desktop/web3-mq documentation/Documentation/docs",
-          "contentPathLocalized": "/Users/edy/Desktop/web3-mq documentation/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/zhaowei/Desktop/trunk/ty/Documentation/sidebars.js",
+          "contentPath": "/Users/zhaowei/Desktop/trunk/ty/Documentation/docs",
+          "contentPathLocalized": "/Users/zhaowei/Desktop/trunk/ty/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "Intro",
@@ -33,8 +33,8 @@
               },
               "sidebar": "tutorialSidebar",
               "next": {
-                "title": "dotbit",
-                "permalink": "/docs/Tutorials/dotbit/"
+                "title": "Web3MQ Tutorial",
+                "permalink": "/docs/Tutorials/web3mq/"
               }
             },
             {
@@ -51,8 +51,8 @@
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Intro",
-                "permalink": "/docs/Intro"
+                "title": "Web3MQ Tutorial",
+                "permalink": "/docs/Tutorials/web3mq/"
               },
               "next": {
                 "title": "ens",
@@ -127,6 +127,28 @@
               "next": {
                 "title": "QuickStart",
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK/quickStart/"
+              }
+            },
+            {
+              "unversionedId": "Tutorials/web3mq/web3mq",
+              "id": "Tutorials/web3mq/web3mq",
+              "title": "Web3MQ Tutorial",
+              "description": "This tutorial walks you through the key concepts of Web3MQ using a sample react project and successfully",
+              "source": "@site/docs/Tutorials/web3mq/web3mq.md",
+              "sourceDirName": "Tutorials/web3mq",
+              "slug": "/Tutorials/web3mq/",
+              "permalink": "/docs/Tutorials/web3mq/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Intro",
+                "permalink": "/docs/Intro"
+              },
+              "next": {
+                "title": "dotbit",
+                "permalink": "/docs/Tutorials/dotbit/"
               }
             },
             {
@@ -1633,7 +1655,7 @@
               "unversionedId": "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter",
               "id": "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter",
               "title": "eventCenter",
-              "description": "Usage",
+              "description": "event list",
               "source": "@site/docs/Web3MQ-SDK/JS-SDK/eventCenter/eventCenter.md",
               "sourceDirName": "Web3MQ-SDK/JS-SDK/eventCenter",
               "slug": "/Web3MQ-SDK/JS-SDK/eventCenter/",
@@ -2113,7 +2135,7 @@
             {
               "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead",
               "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead",
-              "title": "ChanelHead",
+              "title": "ChannelHead",
               "description": "ChannelHead as a fixed header in DashBoard, and it integrates CreateChannel inside which needs to be used in the Chat component.",
               "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead.md",
               "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React/chatComponent",
@@ -2196,7 +2218,7 @@
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "ChanelHead",
+                "title": "ChannelHead",
                 "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead"
               },
               "next": {
@@ -2397,7 +2419,7 @@
                 "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole"
               },
               "next": {
-                "title": "ChanelHead",
+                "title": "ChannelHead",
                 "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead"
               }
             },
@@ -2880,6 +2902,11 @@
                 "collapsible": true,
                 "collapsed": true,
                 "items": [
+                  {
+                    "type": "doc",
+                    "label": "Web3MQ",
+                    "id": "Tutorials/web3mq/web3mq"
+                  },
                   {
                     "type": "doc",
                     "label": "Dotbit",
