@@ -1,9 +1,9 @@
 ---
-title: 3. Create group
-order: 3
-sidebar_position: 3
+title: 4. Create group
+order: 6
 group:
   title: Quickstart
+  order: 6
 ---
 
 # Create a group (chat room)
@@ -11,15 +11,6 @@ group:
 ---
 
 > **POST** `/api/groups/`
-
-_Request Headers_
-
-| field                 | Required | headers Description             | example                                     |
-| --------------------- | -------- | ------------------------------- | ------------------------------------------- |
-| web3mq-request-pubkey | Yes      | your login keyapir's public key | 59daabd77706ba02a97c523513a2ceaed10e4275bd6 |
-| didkey                | Yes      | your did_type + ":" + did_value | eth:0xa1b1233fdfde                          |
-
-_Request Payload_
 
 | Parameters in body | Type   | Required | Parameters Description                                                |
 | ------------------ | ------ | -------- | --------------------------------------------------------------------- |

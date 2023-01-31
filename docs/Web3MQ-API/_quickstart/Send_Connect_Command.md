@@ -1,6 +1,6 @@
 ---
-title: 4. Send Connect Command
-order: 4
+title: 5. Send Connect Command
+order: 6
 group:
   title: Quickstart
 ---

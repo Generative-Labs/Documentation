@@ -1,9 +1,10 @@
 ---
 sidebar_position: 2
-title: 2. User Login
-order: 2
+title: User Login
+order: 1
 group:
-  title: Quickstart
+  title: User
+  order: 2
 ---
 
 

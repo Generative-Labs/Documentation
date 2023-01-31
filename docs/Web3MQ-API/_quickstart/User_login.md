@@ -1,9 +1,9 @@
 ---
-title: User Login
-order: 1
+sidebar_position: 1
+title: 3. User Login
+order: 3
 group:
-  title: User
-  order: 5
+  title: Quickstart
 ---
 
 ## User Login

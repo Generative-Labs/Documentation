@@ -19,6 +19,15 @@ sidebar_position: 10
 
 > **GET** `/api/chats/`
 
+_Request Headers_
+
+| field                 | Required | headers Description             | example                                     |
+| --------------------- | -------- | ------------------------------- | ------------------------------------------- |
+| web3mq-request-pubkey | Yes      | your login keyapir's public key | 59daabd77706ba02a97c523513a2ceaed10e4275bd6 |
+| didkey                | Yes      | your did_type + ":" + did_value | eth:0xa1b1233fdfde                          |
+
+_Request Payload_
+
 | Parameters in URL | Type   | Required | Parameters Description                               |
 | ----------------- | ------ | -------- | ---------------------------------------------------- |
 | page              | int    | Yes      | page number                                          |
@@ -92,6 +101,15 @@ _url query params_
 ```
 
 ## Update my chat
+
+_Request Headers_
+
+| field                 | Required | headers Description             | example                                     |
+| --------------------- | -------- | ------------------------------- | ------------------------------------------- |
+| web3mq-request-pubkey | Yes      | your login keyapir's public key | 59daabd77706ba02a97c523513a2ceaed10e4275bd6 |
+| didkey                | Yes      | your did_type + ":" + did_value | eth:0xa1b1233fdfde                          |
+
+_Request Payload_
 
 > **POST** `/api/chats/`
 

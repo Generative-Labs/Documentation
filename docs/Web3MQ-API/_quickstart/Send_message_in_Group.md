@@ -1,5 +1,5 @@
 ---
-title: 5. Send a message
+title: 6. Send a message
 order: 7
 group:
   title: Quickstart

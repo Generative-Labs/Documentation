@@ -1,9 +1,9 @@
 ---
-title: Overview
+title: Contact
 order: 1
+sidebar_position: 2
 group:
   title: Contact
-  order: 4
 ---
 
 # Contact
@@ -12,9 +12,7 @@ group:
 
 ## Contact API list
 
-- Search contacts
-- Get my contact list
 - Send friend request
-- Get list of friend requests I have sent
-- Get list of friend requests send to me
-- Agree or Reject friend request
+- User Follow someone
+- Get my follower list
+- Get my following list
