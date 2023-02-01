@@ -12,9 +12,9 @@
           "versionClassName": "docs-version-current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/zhaowei/Desktop/trunk/ty/Documentation/sidebars.js",
-          "contentPath": "/Users/zhaowei/Desktop/trunk/ty/Documentation/docs",
-          "contentPathLocalized": "/Users/zhaowei/Desktop/trunk/ty/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/edy/Desktop/type/Documentation/sidebars.js",
+          "contentPath": "/Users/edy/Desktop/type/Documentation/docs",
+          "contentPathLocalized": "/Users/edy/Desktop/type/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "Intro",

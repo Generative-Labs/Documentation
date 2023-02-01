@@ -17,47 +17,33 @@ export type EventTypes = "all" | keyof typeof EVENT_MAP;
 ```
 
 ### ServiceResponse
-
-```ts
-export interface ServiceResponse {
-  data: any;
-  msg: string;
-  code: number;
-}
-```
+| name       | type           | format     | desc                        | eg           |
+| ---------- | -------------- | ---------- | --------------------------- | ------------ |
+| code       |  object        |     -      | response status code        |  0           |
+| data       |  string        |     -      | response body               | {user: xx}   |
+| msg        |  number        |     -      | response status description |  "ok"        |
 
 ### PageParams
-
-```ts
-export interface PageParams {
-  page: number;
-  size: number;
-}
-```
+| name       | type           | format     | desc                          | eg           |
+| ---------- | -------------- | ---------- | ----------------------------- | ------------ |
+| page       |  number        |    -       | current page number           |  1           |
+| size       |  number        |    -       | number of data items per page |  20          |
 
 ### BaseParams
-
-```ts
-export type BaseParams = {
-  userid: string;
-  web3mq_signature: string;
-  timestamp: number;
-};
-```
+| name             | type           | format     | desc                        | eg           |
+| ---------------- | -------------- | ---------- | --------------------------- | ------------ |
+| timestamp        |  number        |     -      | time stamp                  |  Date.now()  |
+| userid           |  string        |     -      | id of the current user      |  'user: xxx' |
+| web3mq_signature |  string        | ed25519 private key signing(userid + timestamp) | web3mq signature content    |              |
 
 ### KeyPairsType
+| name         | type           | format     | desc                                      | eg           |
+| ------------ | -------------- | ---------- | ----------------------------------------- | ------------ |
+| PrivateKey   |  string        |    -       | temporary private key of the current user |              |
+| PublicKey    |  string        |    -       | temporary public key of the current user  |              |
+| userid       |  string        |    -       | id of the current user                    |  'user: xxx' |
 
-```ts
-export type KeyPairsType = {
-  PrivateKey: string;
-  PublicKey: string;
-  userid: string;
-};
-```
-
-### signMetaMaskParams
-
-```ts
+<!-- ```ts
 export type signMetaMaskParams = {
   signContentURI: string;
   EthAddress?: string;
@@ -65,32 +51,31 @@ export type signMetaMaskParams = {
   avatar_url?: string;
   avatar_base64?: string;
 };
-```
+``` -->
 
-### EthAccountType
-
-```ts
-export type EthAccountType = {
-  address: string;
-  balance: number;
-  shortAddress: string;
-};
-```
+### AccountType
+| name          | type           | format     | desc                                       | eg           |
+| ------------- | -------------- | ---------- | ------------------------------------------ | ------------ |
+| address       |  string        |     -      | wallet address of the current user         | '0x000000'   |
+| balance       |  number        |     -      | current user's wallet balance              |  0           |
+| shortAddress  |  string        |     -      | the current user wallet address is omitted |  '0x00...00' |
 
 ### InitOptions
-
-```ts
-export type InitOptions = {
-  connectUrl?: string | null;
-  app_key?: string;
-  env?: EnvTypes;
-  tempPubkey?: string;
-  didKey?: string;
-};
-```
+| name          | type           | format           | desc                                                                                                                  | eg                                      |
+| ------------- | -------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------   | --------------------------------------- |
+| app_key       |  string        |       -          | temporary authorization key obtained by applying                                                                      |                                         |
+| connectUrl    |  string \| null |       -          | takes in a valid endpoint url as input, when this paramter is given, client will always connect to that specific node | `https://testnet-ap-jp-2.web3mq.com`   |
+| didKey        |  string        | didType:didvalue | wallet type and wallet address collection                                                                             |  'eth:0x000000'                         |
+| env           |  string        |       -          | network environment                                                                                                   |  'dev' or 'test'                        |
+| tempPubkey    |  string        |       -          | temporary public key of the current user                                                                              |                                         |
 
 ### SendTempConnectOptions
-
+<!-- | name               | type           | format     | desc                                       | eg           |
+| ------------------ | -------------- | ---------- | ------------------------------------------ | ------------ |
+| dAppID             |  string        |     -      | wallet address of the current user         | '0x000000'   |
+| dAppSignature      |  string        |     -      | current user's wallet balance              |  0           |
+| signatureTimestamp |  number        |     -      | the current user wallet address is omitted |  '0x00...00' |
+| topicID            |  string        |     -      | the current user wallet address is omitted |  '0x00...00' | -->
 ```ts
 export type SendTempConnectOptions = {
   dAppID: string;
