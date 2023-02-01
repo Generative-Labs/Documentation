@@ -66,7 +66,7 @@ export type signMetaMaskParams = {
 | app_key       |  string        |       -          | temporary authorization key obtained by applying                                                                      |                                         |
 | connectUrl    |  string \| null |       -          | takes in a valid endpoint url as input, when this paramter is given, client will always connect to that specific node | `https://testnet-ap-jp-2.web3mq.com`   |
 | didKey        |  string        | didType:didvalue | wallet type and wallet address collection                                                                             |  'eth:0x000000'                         |
-| env           |  string        |       -          | network environment                                                                                                   |  'dev' or 'test'                        |
+| env           |  [EnvTypes](/docs/Web3MQ-SDK/JS-SDK/types/#envtypes) |       -          | network environment                                                                                                   |  'test'                           |
 | tempPubkey    |  string        |       -          | temporary public key of the current user                                                                              |                                         |
 
 ### SendTempConnectOptions
@@ -86,195 +86,141 @@ export type SendTempConnectOptions = {
 ```
 
 ### SignClientCallBackType
+| name     | type                                   | format     | desc                        | eg           |
+| -------- | -------------------------------------- | ---------- | --------------------------- | ------------ |
+| data     |  any                                   |     -      | Callback return data        |  "success"   |
+| type     | "createQrcode" \| "connect" \| "messageStatus" \| "keys" \| "dapp-connect" |     -      | Callback return type        | "connect"    |
 
-```ts
-export type SignClientCallBackType = {
-  type: "connect" | "messageStatus" | "keys";
-  data: any;
-};
-```
-
-### getUserInfoParams
-
-```ts
-export type getUserInfoParams = {
-  did_type: string;
-  did_value: string;
-  timestamp: number;
-};
-```
+### GetUserInfoParams
+| name       | type                                   | format     | desc                        | eg                        |
+| ---------- | -------------------------------------- | ---------- | --------------------------- | ------------------------  |
+| didType    |  string                                |     -      | wallet type                 | "eth" or "starknet"       |
+| didValue   |  string                                |     -      | wallet address              | "0x000000"                |
+| timestamp  |  number                                |     -      | time stamp                  | Date.now()                |
 
 ### EnvTypes
-
-```ts
-export type EnvTypes = "dev" | "test";
-```
+| name       | type                                   | format     | desc                        | eg                        |
+| ---------- | -------------------------------------- | ---------- | --------------------------- | ------------------------  |
+| EnvTypes   |  "dev" | "test"                        |     -      | network environment         | "test"                    |
 
 ### ChannelItemType
-
-```ts
-export type ChannelItemType = {
-  avatar_url: string;
-  chat_name: string;
-  chat_type: string;
-  chatid: string;
-  topic: string;
-  topic_type: string;
-  lastMessage?: string;
-  updatedAt?: string;
-  unread?: number;
-};
-```
+| name         | type                      | format     | desc                                              | eg                        |
+| ------------ | ------------------------- | ---------- | ------------------------------------------------- | ------------------------  |
+| avatar_url   |  string                   |     -      | current channel avatar resources                  | `https://www.xxx.com`     |
+| chat_name    |  string                   |     -      | current channel name                              | "channel name"            |
+| chat_type    |  string                   |     -      | current channel type                              | "user" or "group"         |
+| chatid       |  string                   |     -      | current channel id                                | "user: xxx" or "group:xxx"|
+| topic        |  string                   |     -      | current channel id                                | "user: xxx" or "group:xxx"|
+| topic_type   |  string                   |     -      | current channel type                              | "user" or "group"         |
+| lastMessage  |  string                   |     -      | last message in the current channel               | "content of last message" |
+| updatedAt    |  string                   |     -      | time of the last message in the current chat room | "2023-02-01 00:00:00"     |
+| unread       |  number                   |     -      | number of unread messages in the current chat room|  0                        |
 
 ### CreateRoomParams
-
-```ts
-export interface CreateRoomParams {
-  groupName?: string;
-  groupid?: string;
-  avatarUrl?: string;
-  avatarBase64?: string;
-  permissions?: GroupPermissions;
-}
-```
-
+| name         | type                      | format     | desc                                              | eg                        |
+| ------------ | ------------------------- | ---------- | ------------------------------------------------- | ------------------------  |
+| avatarUrl    |  string                   |     -      | select the avatar resource for the group channel  | `https://www.xxx.com`     |
+| groupid      |  string                   |     -      | customize a group channel id                      | "group: xxx"              |
+| groupName    |  string                   |     -      | enter the group channel name                      | "channel name"            |
+| permissions  | [GroupPermissions](/docs/Web3MQ-SDK/JS-SDK/types/#grouppermissions)|     -      |  group channel permissions      | {"group:join": {type: "enum",value: "public"}}| 
 ### UpdateRoomListParams 
-
-```tsx
-export interface UpdateRoomListParams {
-  chatid: string,
-  chat_type: string
-  topic: string,
-  topic_type: string,
-}
-```
-
-### GroupPermissions
-
-```ts
-export type GroupPermissions = {
-  [key: string]: {
-    type: string;
-    value: "ceator_invite_friends" | "public" | "nft_validation";
-  };
-};
-```
+| name         | type             | format     | desc                                              | eg                        |
+| ------------ | ---------------- | ---------- | ------------------------------------------------- | ------------------------  |
+| chatid       |  string          |     -      | the id of the chat room to be updated             | "group:xx" or "user:xx"   |
+| chat_type    |  string          |     -      | the type of the chat room to be updated           | "group" or "user"         |
+| topic        |  string          |     -      | the id of the chat room to be updated             | "group:xx" or "user:xx"   |
+| topic_type   |  string          |     -      | the type of the chat room to be updated           | "group" or "user"         |
 
 ### UpdateGroupPermissionsParams
 
-```ts
-export interface UpdateGroupPermissionsParams {
-  groupid: string;
-  permissions: GroupPermissions;
-}
-```
+| name         | type             | format     | desc                                              | eg                        |
+| ------------ | ---------------- | ---------- | ------------------------------------------------- | ------------------------  |
+| groupid      |  string          |     -      | group channel id                                  | "group:xx"                |
+| permissions  | GroupPermissions |     -      | group channel permissions                         | {"group:join": {type: "enum",value: "public"}}  |
+
+### GroupPermissions
+| name              | type             | format     | desc                                              | eg                        |
+| ----------------- | ---------------- | ---------- | ------------------------------------------------- | ------------------------  |
+| GroupPermissions  | Record<string, { type: string; value: "ceator_invite_friends" \| "public" \| "nft_validation" }>  |     -      | Group channel permission type      | {"group:join": {type: "enum",value: "public"}} |
+
 
 ### UserPermissionsType
+| name                 | type             | format     | desc                                              | eg                        |
+| -------------------- | ---------------- | ---------- | ------------------------------------------------- | ------------------------  |
+| UserPermissionsType  | Record<string, { type: string; value: boolean}>  |     -      | user channel permission type      | {'user: chat': {type: "enum",value: "public"}} |
 
-```ts
-export type UserPermissionsType = Record<
-  string,
-  { type: string; value: boolean }
->;
-```
 
 ### ContactListItemType
+| name          | type                      | format     | desc                                              | eg                        |
+| ------------- | ------------------------- | ---------- | ------------------------------------------------- | ------------------------  |
+| avatar_url    |  string                   |     -      | contactL avatar resources                         | `https://www.xxx.com`     |
+| follow_status |  [FollowStatus](/docs/Web3MQ-SDK/JS-SDK/types/#followstatus)|     -      | follow status with contact       | "channel name"            |
+| nickname      |  string                   |     -      | nickname of contact                               |                            |
+| permissions   |  [UserPermissionsType](/docs/Web3MQ-SDK/JS-SDK/types/#userpermissionstype)  |     -      | permissions of contact    | {'user: chat': {type: "enum",value: "public"}}|
+| userid        |  string                   |     -      | userid of contact                                 | "user: xxx"               |
+| wallet_address|  string                   |     -      | wallet address of contact                         | "0x000000"                |
+| wallet_type   |  [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype) |     -      | wallet type of contact                | "eth" or "starknet" |
 
-```ts
-export type ContactListItemType = {
-  avatar_url: string;
-  follow_status: FollowStatus;
-  nickname: string;
-  permissions: UserPermissionsType;
-  userid: string;
-  wallet_address: string;
-  wallet_type: WalletType;
-};
-```
+### FollowStatus
+| name          | type                                       | format     | desc                                              | eg                        |
+| ------------- | ------------------------------------------ | ---------- | ------------------------------------------------- | ------------------------  |
+| FollowStatus  | 'following' \| 'follower' \| 'follow_each' |     -      |  follow status type                               | "follow_each"             |
 
 ### FollowOperationParams
-
-```ts
-export interface FollowOperationParams {
-  address: string;
-  action: "follow" | "cancel";
-  didType: WalletType;
-  targetUserid: string;
-}
-```
+| name          | type                                                    | format     | desc                                              | eg                        |
+| ------------- | ------------------------------------------------------- | ---------- | ------------------------------------------------- | ------------------------  |
+| address       | string                                                  |     -      |  wallet address                                   | "0x000000"                |
+| action        | "follow" \| "cancel"                                    |     -      |  follow or unfollow                               | "follow"                  |
+| didType       | [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype) |     -      |  wallet type                                      | "eth" or "starknet"       |
+| targetUserid  | string                                                  |     -      |  userid of the target user                        | "user:xxx"                |
 
 ### PublishNotificationToFollowersParams
+| name         | type             | format     | desc              | eg                        |
+| ------------ | ---------------- | ---------- | ----------------- | ------------------------  |
+| content      |  string          |     -      | published content |        -                  |
+| title        |  string          |     -      | published title   |        -                  |
 
-```ts
-export interface PublishNotificationToFollowersParams {
-  content: string;
-  title: string;
-}
-```
-
-### ActionType
+<!-- ### ActionType
 
 ```ts
 export type ActionType = "agree";
-```
+``` -->
 
 ### MessageStatus
-
-```ts
-export type MessageStatus = "delivered" | "read";
-```
-
-### changeMessageStatusParams
-
-```ts
-export interface changeMessageStatusParams extends BaseParams {
-  topic: string;
-  messages: string[];
-  status: MessageStatus;
-}
-```
+| name         | type                  | format     | desc              | eg              |
+| ------------ | --------------------- | ---------- | ----------------- | --------------  |
+| MessageStatus| "delivered" \| "read" |     -      | message status    |   "delivered"   |
 
 ### MessageListItem
-
-```ts
-export type MessageListItem = {
-  cipher_suite: string;
-  from: string;
-  topic: string;
-  from_sign: string;
-  messageid: string;
-  payload_type: string;
-  timestamp: number;
-  message_status: {
-    status: MessageStatus;
-    timestamp: number;
-  };
-  payload: string;
-  version: number;
-};
-```
+| name           | type                  | format     | desc                   | eg  |
+| -------------- | --------------------- | ---------- | ---------------------- | --- |
+| cipher_suite   | string                |     -      | cipher                 |  -  |
+| from           | string                |     -      | message sender user id |  -  |
+| topic          | string                |     -      | current channel type   |  -  |
+| from_sign      | string                |     -      | from signature         |  -  |
+| messageid      | string                |     -      | message id             |  -  |
+| payload_type   | string                |     -      | payload type           |  -  |
+| timestamp      | number                |     -      | time stamp             |  -  |
+| message_status | [MessageStatus](docs/Web3MQ-SDK/JS-SDK/types/#messagestatus) |     -      | message status    |  -  |
+| payload        | string                |     -      | payload base64 encode content|  -  |
+| versions       | number                |     -      | versions               |  -  |
 
 ### SearchUsersResponse
+| name           | type      | format     | desc                        | eg                        |
+| -------------- | --------- | ---------- | --------------------------- | ------------------------  |
+| userid         |  string   |     -      | userid of user              | "user: xxx"               |
+| wallet_address |  string   |     -      | wallet address              | "0x000000"                |
+| wallet_type    | [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype)  |     -      | wallet type              | "eth" or "starknet"           |
 
-```ts
-export type SearchUsersResponse = {
-  userid: string;
-  wallet_address: string;
-  wallet_type: string;
-};
-```
 
 ### UpdateMyProfileResponse
-
-```ts
-export type UpdateMyProfileResponse = {
-  userid: string;
-  wallet_address: string;
-  wallet_type: string;
-  nickname: string;
-  avatar_url: string;
-};
-```
+| name           | type      | format     | desc                        | eg                        |
+| -------------- | --------- | ---------- | --------------------------- | ------------------------  |
+| avatar_url     |  string   |     -      | avatar resource             | `https://www.xxx.com`     |
+| nickname       |  string   |     -      | nickname                    |      -                    |
+| userid         |  string   |     -      | userid of user              | "user:xxx"                |
+| wallet_address |  string   |     -      | wallet address              | "0x000000"                |
+| wallet_type    | [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype)   |     -      | userid of user              | "eth" or "starknet"       |
 
 ### GetUserBindDidsParams
 
@@ -283,228 +229,91 @@ export interface GetUserBindDidsParams extends BaseParams {}
 ```
 
 ### UserBindDidParams
-
-```ts
-export interface UserBindDidParams {
-  did_type: string;
-  did_value: string;
-  did_action?: string;
-  did_content?: string;
-  provider_id: string;
-}
-```
+| name           | type      | format     | desc                        | eg                        |
+| -------------- | --------- | ---------- | --------------------------- | ------------------------  |
+| did_type       | [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype)   |     -      | wallet type                 | "eth" or "starknet"     |
+| did_value      |  string   |     -      | wallet address              |   "0x000000"              |
+| did_action     |  string   |     -      | action of did               |       -                   |
+| did_content    |  string   |     -      | content of did              |       -                   |
+| provider_id    |  string   |     -      | provider id                 |       -                   |
 
 ### UserBindDidIdsResponse
-
-```ts
-export type UserBindDidIdsResponse = Pick<
-  UserBindDidParams,
-  "did_type" | "did_value" | "provider_id"
-> & {
-  metadata: any;
-};
-```
+| name           | type      | format     | desc                        | eg                        |
+| -------------- | --------- | ---------- | --------------------------- | ------------------------  |
+| did_type       | [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype)   |     -      | wallet type                 | "eth" or "starknet"     |
+| did_value      |  string   |     -      | wallet address              |   "0x000000"              |
+| provider_id    |  string   |     -      | provider id                 |       -                   |
+| metadata       |  any      |     -      |  metadata                   |       -                   |
 
 ### UpdateUserPermissionsParams
-
-```ts
-export interface UpdateUserPermissionsParams {
-  permissions: UserPermissionsType;
-}
-```
-
-### ChangeNotificationStatusParams
-
-```ts
-export interface ChangeNotificationStatusParams extends BaseParams {
-  messages: string[];
-  status: MessageStatus;
-}
-```
+| name           | type      | format     | desc                        | eg                        |
+| -------------- | --------- | ---------- | --------------------------- | ------------------------  |
+| permissions    | [UserPermissionsType](/docs/Web3MQ-SDK/JS-SDK/types/#userpermissionstype)   |     -      | user permissions      |{'user: chat': {type: "enum",value: "public"}}|
 
 ### NotifyResponse
+| name      | type      | format     | desc                        | eg                        |
+| --------- | --------- | ---------- | --------------------------- | ------------------------  |
+| title     |  string   |     -      | title of notification       |       -                   |
+| content   |  string   |     -      | content of notification     |       -                   |
+| type      |  string   |     -      | type of notification        |       -                   |
+| timestamp |  number   |     -      | time stamp of notification  |       -                   |
+| version   |  number   |     -      | version of notification     |       -                   |
 
-```ts
-export type NotifyResponse = {
-  title: string;
-  content: string;
-  type: string;
-  version: number;
-  timestamp: number;
-};
-```
-
-### CreateTopicParams
-
-```ts
-export interface CreateTopicParams extends BaseParams {
-  topic_name: string;
-}
-```
-
-### SubscribeTopicParams
-
-```ts
-export interface SubscribeTopicParams extends BaseParams {
-  topicid: string;
-}
-```
-
-### PublishTopicMessageParams
-
-```ts
-export interface PublishTopicMessageParams extends SubscribeTopicParams {
-  title: string;
-  content: string;
-}
-```
-
-### GetTopicListParams
-
-```ts
-export interface GetTopicListParams extends PageParams, BaseParams {}
-```
 
 ### SubscribeListType
-
-```ts
-export type SubscribeListType = {
-  topicid: string;
-  create_at: number;
-};
-```
+| name      | type      | format     | desc                        | eg                        |
+| --------- | --------- | ---------- | --------------------------- | ------------------------  |
+| topicid   |  string   |     -      | id of the subscribed topic  |       -                   |
+| create_at |  number   |     -      | the create time of the subscribed topic|       -                   |
 
 ### TopicListType
-
-```ts
-export interface TopicListType extends SubscribeListType {
-  topic_name: string;
-}
-```
+| name      | type      | format     | desc                        | eg                        |
+| --------- | --------- | ---------- | --------------------------- | ------------------------  |
+| create_at |  number   |     -      | the create time of the topic|       -                   |
+| topicid   |  string   |     -      | id of topic                 |       -                   |
+| topic_name|  string   |     -      | the name of the topic       |       -                   |
 
 ### TopicMessageType
-
-```ts
-export type TopicMessageType = {
-  content: string
-  topicid: string;
-  title: string;
-};
-```
+| name      | type      | format     | desc                        | eg                        |
+| --------- | --------- | ---------- | --------------------------- | ------------------------  |
+| content   |  string   |     -      | content of the pushed topic |       -                   |
+| topicid   |  string   |     -      | id of the pushed topic      |       -                   |
+| title     |  string   |     -      | title of the pushed topic   |       -                   |
 
 ### CreateTopicResponse
-
-```ts
-export type CreateTopicResponsee = {
-  topicid: string;
-};
-```
+| name      | type      | format     | desc                        | eg                        |
+| --------- | --------- | ---------- | --------------------------- | ------------------------  |
+| topicid   |  string   |     -      | id of the  topic            |       -                   |
 ### WalletType
-
-```ts
-export type WalletType = "eth" | "starknet";
-```
+| name        | type                 | format     | desc                        | eg                        |
+| ----------- | -------------------- | ---------- | --------------------------- | ------------------------  |
+| WalletType  | "eth" \| "starknet"   |     -      | wallet address              |  "eth" \| "starknet"       |
 
 ### WalletSignRes
-
-```ts
-export type WalletSignRes = {
-  sign: string;
-  publicKey?: string;
-};
-```
-
-### RegisterMetaMaskParams
-
-```ts
-export type RegisterMetaMaskParams = {
-  password: string;
-  userid: string;
-  did_value: string;
-  did_type?: WalletType;
-  signContentURI?: string;
-  nickname?: string;
-  avatar_url?: string;
-  avatar_base64?: string;
-};
-```
-
-### SignMetaMaskParams
-
-```ts
-export type SignMetaMaskParams = {
-  password: string;
-  userid: string;
-  did_value: string;
-  did_type?: WalletType;
-  mainPrivateKey?: string;
-  mainPublicKey?: string;
-  pubkeyExpiredTimestamp?: number;
-};
-```
+| name      | type      | format     | desc                        | eg                        |
+| --------- | --------- | ---------- | --------------------------- | ------------------------  |
+| publicKey |  string   |     -      | temporary public key        |       -                   |
+| sign      |  string   |     -      | sign content                |       -                   |
 
 ### GetMainKeypairParams
-
-```ts
-type GetMainKeypairParams = {
-  password: string;
-  did_type: WalletType;
-  did_value: string;
-};
-```
+| name      | type      | format     | desc                        | eg                        |
+| --------- | --------- | ---------- | --------------------------- | ------------------------  |
+| did_type  |  [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype)   |     -      | wallet type      |    "eth" \| "starknet"         |
+| did_value |  string   |     -      | wallet address              |    "0x000000"             |
+| password  |  string   |     -      | password of user            |       -                   |
 
 ### GetSignContentResponse
-
-```ts
-export type GetSignContentResponse = {
-  signContent: string;
-};
-```
-
-### QrCodeRegisterParams
-
-```ts
-type QrCodeRegisterParams = {
-  userid: string;
-  signature: string;
-  did_pubkey?: string;
-  nickname?: string;
-  avatar_url?: string;
-};
-```
-
-### QrCodeLoginParams
-
-```ts
-type QrCodeLoginParams = {
-  userid: string;
-  did_type: string;
-  did_value: string;
-  mainPrivateKey: string;
-  mainPublicKey: string;
-  password?: string;
-  pubkeyExpiredTimestamp?: number;
-};
-```
-
-### SignClientCallBackType
-
-```ts
-type SignClientCallBackType = {
-  type: "createQrcode" | "connect" | "messageStatus" | "keys" | "dapp-connect";
-  data: any;
-};
-```
+| name        | type      | format     | desc                        | eg                        |
+| ----------- | --------- | ---------- | --------------------------- | ------------------------  |
+| signContent |  string   |     -      | conent of sign              |        -                  |
 
 ### DappConnectSignParams
 
-```ts
-type DappConnectSignParams = {
-  signContent: string;
-  didValue: string;
-  signType: string;
-};
-```
+| name        | type      | format     | desc                        | eg                        |
+| ----------- | --------- | ---------- | --------------------------- | ------------------------  |
+| didValue    |  string   |     -      | wallet address              |      "0x000000"           |
+| signContent |  string   |     -      | conent of sign              |        -                  |
+| signType    |  string   |     -      | type of sign                |        -                  |
 
 ### Web3MQBridgeOptions
 
@@ -517,93 +326,73 @@ type Web3MQBridgeOptions = {
 ```
 
 ### LoginByKeysParams
-
-```ts
-type LoginByKeysParams = {
-  mainPrivateKey: string;
-  mainPublicKey: string;
-  didType: WalletType;
-  didValue: string;
-  userid: string;
-  password: string;
-  pubkeyExpiredTimestamp?: number;
-};
-```
+| name                  | type      | format     | desc                        | eg                        |
+| --------------------- | --------- | ---------- | --------------------------- | ------------------------  |
+| didType               | [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype)   |     -      | wallet type                 |    "eth" \| "starknet"        |
+| didValue              |  string   |     -      | wallet address              |      "0x000000"           |
+| mainPrivateKey        |  string   |     -      | master private key          |        -                  |
+| mainPublicKey         |  string   |     -      | master public key           |        -                  |
+| password              |  string   |     -      | Login password              |        -                  |
+| pubkeyExpiredTimestamp|  number   |     -      | the expiration time of the temporary key pair |        -                  |
+| userid                |  string   |     -      | useid of user               |       "user:xxx"          |
 
 ### RegisterBySignParams
-
-```ts
-type RegisterBySignParams = {
-  userid: string;
-  didValue: string;
-  mainPublicKey: string;
-  signature: string;
-  did_pubkey?: string;
-  didType?: WalletType;
-  signContentURI?: string;
-  nickname?: string;
-  avatar_url?: string;
-  avatar_base64?: string;
-};
-```
+| name                  | type      | format     | desc                        | eg                        |
+| --------------------- | --------- | ---------- | --------------------------- | ------------------------  |
+| avatar_base64         |  string   |     -      | avatar resource is in base64 format |        -                  |
+| avatar_url            |  string   |     -      | avatar resource             |        -                  |
+| did_pubkey            |  string   |     -      | temporary public key        |        -                  |
+| didType               | [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype)   |     -      | wallet type                 |    "eth" \| "starknet"        |
+| didValue              |  string   |     -      | wallet address              |      "0x000000"           |
+| mainPublicKey         |  string   |     -      | master public key           |        -                  |
+| nickname              |  string   |     -      | nickname                    |        -                  |
+| signature             |  string   |     -      | content of sign             |        -                  |
+| signContentURI        |  string   |     -      | content url of sign         |        -                  |
+| userid                |  string   |     -      | useid of user               |     "user:xxx"            |
 
 ### RegisterApiResponse
-
-```ts
-type RegisterApiResponse = {
-  did_type: string;
-  did_value: string;
-  userid: string;
-};
-```
+| name                  | type      | format     | desc                        | eg                        |
+| --------------------- | --------- | ---------- | --------------------------- | ------------------------  |
+| did_type              | [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype)   |     -      | wallet type                 |    "eth" \| "starknet"        |
+| did_value             |  string   |     -      | wallet address              |     "user:xxx"            |
+| userid                |  string   |     -      | useid of user               |        -                  |
 
 ### LoginResponse
-
-```ts
-type LoginResponse = {
-  tempPrivateKey: string;
-  tempPublicKey: string;
-  mainPrivateKey: string;
-  mainPublicKey: string;
-  pubkeyExpiredTimestamp: number;
-};
-```
+| name                  | type      | format     | desc                        | eg                        |
+| --------------------- | --------- | ---------- | --------------------------- | ------------------------  |
+| mainPrivateKey        |  string   |     -      | master private key          |        -                  |
+| mainPublicKey         |  string   |     -      | master public key           |        -                  |
+| tempPrivateKey        |  string   |     -      | temporary private key       |        -                  |
+| tempPublicKey         |  string   |     -      | temporary public key        |        -                  |
+| pubkeyExpiredTimestamp|  number   |     -      | the expiration time of the temporary key pair |        -                  |
 
 ### GetUserInfoResponse
-
-```ts
-type GetUserInfoResponse = { userid: string; userExist: boolean };
-```
+### LoginResponse
+| name        | type      | format     | desc                        | eg                        |
+| ----------- | --------- | ---------- | --------------------------- | ------------------------  |
+| userid      |  string   |     -      | useid of user               |      "user:xxx"           |
+| userExist   |  boolean  |     -      | whether the user exists     |       true                |
 
 ### MainKeypairType
-
-```ts
-type MainKeypairType = {
-  publicKey: string;
-  secretKey: string;
-};
-```
+| name            | type      | format     | desc                        | eg                        |
+| --------------- | --------- | ---------- | --------------------------- | ------------------------  |
+| secretKey       |  string   |     -      | master private key          |        -                  |
+| publicKey       |  string   |     -      | master public key           |        -                  |
 
 ### ResetPasswordParams
-
-```ts
-type ResetPasswordParams = {
-  password: string;
-  userid: string;
-  did_value: string;
-  did_type?: WalletType;
-  signContentURI?: string;
-  nickname?: string;
-  avatar_url?: string;
-  avatar_base64?: string;
-};
-```
+| name                  | type      | format     | desc                        | eg                        |
+| --------------------- | --------- | ---------- | --------------------------- | ------------------------  |
+| avatar_base64         |  string   |     -      | avatar resource is in base64 format |        -                  |
+| avatar_url            |  string   |     -      | avatar resource             |        -                  |
+| did_type              | [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype)   |     -      | wallet type                 |    "eth" \| "starknet"        |
+| did_value             |  string   |     -      | wallet address              |      "0x000000"           |
+| nickname              |  string   |     -      | nickname                    |        -                  |
+| password              |  string   |     -      | Login password              |        -                  |
+| signature             |  string   |     -      | content of sign             |        -                  |
+| userid                |  string   |     -      | useid of user               |     "user:xxx"            |
 
 ### ResetPasswordResponse
-
-```ts
-type ResetPasswordResponse = {
-  mainPrivateKey: string;
-  mainPublicKey: string;
-};
-```
+| name                  | type      | format     | desc                        | eg                        |
+| --------------------- | --------- | ---------- | --------------------------- | ------------------------  |
+| mainPrivateKey        |  string   |     -      | master private key          |        -                  |
+| mainPublicKey         |  string   |     -      | master public key           |        -                  |
