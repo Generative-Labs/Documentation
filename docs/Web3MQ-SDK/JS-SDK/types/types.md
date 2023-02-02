@@ -302,6 +302,15 @@ export interface GetUserBindDidsParams extends BaseParams {}
 | did_value |  string   |     -      | wallet address              |    "0x000000"             |
 | password  |  string   |     -      | password of user            |       -                   |
 
+### GetRegisterSignContentParams
+| name                  | type      | format     | desc                        | eg                        |
+| --------------------- | --------- | ---------- | --------------------------- | ------------------------  |
+| didType               | [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype)   |     -      | wallet type                 |    "eth" \| "starknet"        |
+| didValue              |  string   |     -      | wallet address              |      "0x000000"           |
+| mainPublicKey         |  string   |     -      | master public key           |        -                  |
+| signContentURI        |  string   |     -      | content url of sign         |        -                  |
+| userid                |  string   |     -      | useid of user               |     "user:xxx"            |
+
 ### GetSignContentResponse
 | name        | type      | format     | desc                        | eg                        |
 | ----------- | --------- | ---------- | --------------------------- | ------------------------  |
@@ -367,7 +376,7 @@ type Web3MQBridgeOptions = {
 | pubkeyExpiredTimestamp|  number   |     -      | the expiration time of the temporary key pair |        -                  |
 
 ### GetUserInfoResponse
-### LoginResponse
+
 | name        | type      | format     | desc                        | eg                        |
 | ----------- | --------- | ---------- | --------------------------- | ------------------------  |
 | userid      |  string   |     -      | useid of user               |      "user:xxx"           |
