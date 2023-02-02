@@ -23,6 +23,7 @@ _Request Payload_
 | --------------------- | ------ | -------- | ---------------------------------------------------- |
 | userid                | string | Yes      |                                                      |
 | timestamp             | int    | Yes      | timestamp milliseconds                               |
+| follow_status                | string | No      |        follow status                                              |
 | web3mq_user_signature | string | Yes      | use ed25519 `base64 encode` web3mq_signature [see signing detail](/docs/Web3MQ-API/signature) |
 | page                  | int    | No       |                                                      |
 | size                  | int    | No       |                                                      |
@@ -34,7 +35,7 @@ _web3mq_user_signature signing rule_
 _url query params_
 
 ```bash
-/api/user_follow_contacts/?userid=userid&web3mq_user_signature=web3mq_user_signature&timestamp=timestamp&page=1&size=20
+/api/user_follow_contacts/?userid=userid&follow_status=follow_each&web3mq_user_signature=web3mq_user_signature&timestamp=timestamp&page=1&size=20
 ```
 
 **response**
