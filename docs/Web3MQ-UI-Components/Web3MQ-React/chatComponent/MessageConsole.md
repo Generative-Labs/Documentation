@@ -20,10 +20,10 @@ code={<MessageConsoleMdx />}>
 </Layout>
 
 ## API
-
+### MessageConsole
 **The properties of the MessageConsole are described as follows:**
 
-| Property     | Description                      | Type                                      | Default       |
-| ------------ | -------------------------------- | ----------------------------------------- | ------------- |
-| Input        | set the custom Input Node        | React.ReactNode                           |   -           |
-| OperateContainer | set the custom Operate component | React.ComponentType                   |   -           |
+| Property     | Description                      | Type                                      | Default       | required |
+| ------------ | -------------------------------- | ----------------------------------------- | ------------- | -------- |
+| Input        | set the custom Input Node        | React.ReactNode                           |   -           |  false   |
+| OperateContainer | set the custom Operate component | React.ComponentType                   |   -           |  false   |

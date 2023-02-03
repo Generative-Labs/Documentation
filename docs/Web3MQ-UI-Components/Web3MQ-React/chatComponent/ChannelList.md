@@ -46,40 +46,43 @@ code={<CustomListMdx />}>
 `listRef` is a required attribute and must be bound to the Custom `List` root node. This is necessary for the `ChannelList` to implement paging
 
 ## Api
-
+### ChannelList
 **The properties of the ChannelList are described as follows:**
 
-| Property | Description                               | Type                                      | Default |
-| -------- | ----------------------------------------- | ----------------------------------------- | ------- |
-| List     | as `ChannelList`‘s root component, used to display a component that the list load and failed to load | React.ComponentType |   -     |
-| Preview                    | set your custom `ChannelItem` component | React.ComponentType       |   -     |
-| DefaultEmptyStateIndicator | displays an empty list of components    | React.ComponentType       |   -     |
-| Paginator                  | set your custom `paging` component      | React.ComponentType       |   -     |
+| Property                   | Description                               | Type                      | Default | required |
+| -------------------------- | ----------------------------------------- | ------------------------- | ------- | -------- |
+| List                       | as `ChannelList`‘s root component, used to display a component that the list load and failed to load | React.ComponentType |   -     |   false   |
+| Preview                    | set your custom `ChannelItem` component   | React.ComponentType       |   -     |   false  |
+| DefaultEmptyStateIndicator | displays an empty list of components      | React.ComponentType       |   -     |   false  |
+| Paginator                  | set your custom `paging` component        | React.ComponentType       |   -     |   false  |
 
+### List
 **The properties of the List are described as follows:**
 
-| Property | Description            | Type           | Default |
-| -------- | ---------------------- | -------------- | ------- |
-| error    | set the error state    | Boolean        |   -     |
-| loading  | set the load state     | Boolean        |   -     |
-| listRef  | bind `List` root node  | HTMLDivElement |   -     |
+| Property | Description            | Type           | Default | required |
+| -------- | ---------------------- | -------------- | ------- | -------- |
+| error    | set the error state    | Boolean        |   -     |  false   |
+| loading  | set the load state     | Boolean        |   -     |  false   |
+| listRef  | bind `List` root node  | HTMLDivElement |   -     |  true    |
 
+### Paginator
 **The properties of the Paginator are described as follows:**
 
-| Property     | Description           | Type           | Default |
-| ------------ | --------------------- | -------------- | ------- |
-| element      | `List` root node      | HTMLDivElement |   -     |
-| showLoading  | set the load state    | Boolean        | false   |
-| loadNextPage | Load more             | Function       |   -     |
+| Property     | Description           | Type           | Default | required |
+| ------------ | --------------------- | -------------- | ------- | -------- |
+| element      | `List` root node      | HTMLDivElement |   -     |  false   |
+| showLoading  | set the load state    | Boolean        | false   |  false   |
+| loadNextPage | Load more             | Function       |   -     |  true    |
 
+### Preview
 **The properties of the Preview are described as follows:**
 
-| Property         | Description           | Type     | Default |
-| ---------------- | --------------------- | -------- | ------- |
-| active           | Whether it is the current Channel    | Boolean  |   -     |
-| avatarUrl        | resource address of the image avatar | String   |   -     |
-| channel          | Chat room information | [activechannelType](/docs/Web3MQ-SDK/JS-SDK/types/#activechanneltype) |   -     |
-| displayTitle     | the user name or ID   | String   |   -     |
-| lastMessage      | the latest news       | String   |   -     |
-| updatedAt        | the Latest time       | String   |   -     |
-| setActiveChannel | the callback when clicked | Function |   -     |
+| Property         | Description                          | Type     | Default | required |
+| ---------------- | ------------------------------------ | -------- | ------- | -------- |
+| active           | Whether it is the current Channel    | Boolean  |   -     |   true   |
+| avatarUrl        | resource address of the image avatar | String   |   -     |   true   |
+| channel          | Chat room information                | [ChannelItemType](/docs/Web3MQ-SDK/JS-SDK/types/#channelitemtype) |   -     |   true   |
+| displayTitle     | the user name or ID                  | String   |   -     |   true   |
+| lastMessage      | the latest news                      | String   |   -     |   true   |
+| updatedAt        | the Latest time                      | String   |   -     |   true   |
+| setActiveChannel | the callback when clicked            | Function |   -     |   true   |

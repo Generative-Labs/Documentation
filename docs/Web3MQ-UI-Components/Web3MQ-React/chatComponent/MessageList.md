@@ -5,11 +5,7 @@ sidebar_position: 4
 
 The `MessageList` component renders a scrollable list of messages. The UI for each individual message is rendered conditionally based on its `message.type` value. The list renders date separators, new message notifications, system messages, deleted messages, and standard messages containing text and/or attachments.
 
-By default, the `MessageList` loads the most recent 20 messages held in the `channel.state`. More messages are fetched from the Chat API and loaded into the DOM on scrolling up the list. The currently loaded messages are held in the `ChannelStateContext` and can be referenced with our custom hook.
-
-```tsx
-const { messages } = useChannelStateContext();
-```
+By default, the `MessageList` loads the most recent 20 messages. More messages are fetched from the Chat API and loaded into the DOM on scrolling up the list. The currently loaded messages are held in the component state and can be referenced with our custom hook. 
 
 The `MessageList` has no required props and by default pulls overridable data from the various contexts established in the `Channel` component. Customization of the messages rendered within the list is handled by the `Message UI` component.
 
@@ -39,7 +35,7 @@ To use a custom Message component:
 
 **The properties of the Channel are described as follows:**
 
-| Property | Description                               | Type                                      | Default |
-| -------- | ----------------------------------------- | ----------------------------------------- | ------- |
-| Message  | set your custom `Message` component       | React.ComponentType                       |   -     |
+| Property | Description                               | Type                                      | Default | required |
+| -------- | ----------------------------------------- | ----------------------------------------- | ------- | -------- |
+| Message  | set your custom `Message` component       | React.ComponentType                       |   -     |    -     |
 

@@ -49,23 +49,67 @@ const { client } = useChatContext();
 ```
 
 ## Api
-
+### Chat
 **The properties of the Chat are described as follows:**
 
-| Property    | Description                            | Type                                      | Default |
-| ----------- | -------------------------------------- | ----------------------------------------- | ------- |
-| appType     | set viewport type of @web3mq/react-components     | `pc` \| `h5`                              |  `pc`   |
-| className   | set your custom className              | string                                    |   -     |
-| client      | Chat Client Object                     | [Client](/docs/Web3MQ-SDK/JS-SDK/client/) |   -     |
-| containerId | set container Id of your @web3mq/react-components | string                                    |   -     |
-| style       | set your custom style                  | React.CSSProperties                       |   -     |
-| logout      | Set your exit method                   | Function                                  |   -     |
+| Property    | Description                                       | Type                                                                                 | Default           | required |
+| ----------- | ------------------------------------------------- | ------------------------------------------------------------------------------------ | ----------------- | -------- |
+| appType     | set viewport type of @web3mq/react-components     | [AppTypeEnum](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#apptypeenum)| AppTypeEnum["pc"] |   false  |
+| className   | set your custom className                         | string                                                                               |   ""              |   false  |
+| client      | chat Client Instance                              | [Client](/docs/Web3MQ-SDK/JS-SDK/client/)                                            |   -               |   true   |
+| containerId | set container Id of your @web3mq/react-components | string                                                                               |   ""              |   false  |
+| style       | set your custom style                             | React.CSSProperties                                                                  |   null            |   false  |
+| logout      | set your exit method                              | Function                                                                             |   -               |   true   |
 
-**useChatContext data**
+### useChatContext data
 
-| Property             | Description                                      | Type                                      | Default |
-| -------------------- | ------------------------------------------------ | ----------------------------------------- | ------- |
-| showListTypeView     | Tabs type in `DashBoard` component               | string                                    | 'room'  |
-| userInfo             | user Info   | Ref<[SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)> |  -      |
-| setShowListTypeView  | Update showListTypeView                          | React.Dispatch                            |  -      |
+| Property             | Description                                   | Type                                                                                              | Default | required |
+| -------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------- | -------- |
+| appType              | set viewport type of @web3mq/react-components | [AppTypeEnum](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#apptypeenum)             | AppTypeEnum["pc"] |   -    |
+| client               | Client Instance                               | [Client](/docs/Web3MQ-SDK/JS-SDK/client/)                                                         |   -     |    -     |
+| containerId          | container Id of your @web3mq/react-components | string                                                                                            |   ""    |    -     |
+| showListTypeView     | Tabs type in `DashBoard` component            | string                                                                                            | "room"  |    -     |
+| loginUserInfo        | current user Info   | [CommonUserInfoType](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#commonuserinfotype)                         |  null   |    -     |
+| getUserInfo          | get target user information                   |1.didValue: string 2.didType: [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype) 3.bindDid: boolean |  -      |    -     |
+| logout               | set your exit method                          | Function                                                                                          |   -     |    -     |
+| setShowListTypeView  | Update showListTypeView                       | React.Dispatch                                                                                    |  -      |    -     |
 
+### AppTypeEnum
+```ts
+enum AppTypeEnum {
+  'pc' = 'pc',
+  'h5' = 'h5',
+  'mobile' = 'mobile',
+}
+```
+
+### CommonUserInfoType
+| Property          | Description        | Type                                                                     | Default   | required |
+| ----------------- | ------------------ | ------------------------------------------------------------------------ | --------- | -------- |
+| address           | wallet address     | string                                                                   |  -        |  true    |
+| defaultUserName   | default username   | string                                                                   |  -        |  true    |
+| defaultUserAvatar | default avatar url | string                                                                   |  -        |  true    |
+| didValues         | did value          | DidValueType[]                                                           |  -        |  true    |
+| didValueMap       | did value of map   | Record<[WEB3_MQ_DID_TYPE](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#web3_mq_did_type), string>                                         |  -        |  true    |
+| permissions       | user permissions   | [UserPermissionsType](/docs/Web3MQ-SDK/JS-SDK/types/#userpermissionstype)|  -        |  true    |
+| stats             | follow stats info  | {total_followers:number,total_following:number}                          |  -        |  true    |
+| userid            | userid of user     | string                                                                   |  -        |  true    |
+| wallet_address    | wallet address     | string                                                                   |  -        |  true    |
+| wallet_type       | wallet type        | string                                                                   |  -        |  true    |
+
+### DidValueType
+| Property  | Description        | Type                                                                     | Default   | required |
+| --------- | ------------------ | ------------------------------------------------------------------------ | --------- | -------- |
+| did_type  | did type           | [WEB3_MQ_DID_TYPE](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#web3_mq_did_type) |  -        |  true    |
+| did_value | address corresponding to `didType` | string                                                  |  -        |  true    |
+| detail    | detail             | any                                                                     |  -        |  true    |
+|provider_id| provider id        | stringg                                                                 |  -        |  true    |
+### WEB3_MQ_DID_TYPE
+```ts
+enum WEB3_MQ_DID_TYPE {
+  PHONE = 'phone',
+  EMAIL = 'email',
+  LENS = 'lens.xyz',
+  DOTBIT = 'dotbit',
+  ENS = 'ens',
+}

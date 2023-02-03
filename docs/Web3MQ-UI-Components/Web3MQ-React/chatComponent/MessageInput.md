@@ -37,25 +37,26 @@ code={<CustomInputExampleMdx />}>
 </Layout>
 
 ## API
-
+### MessageInput
 **The properties of the MessageInput are described as follows:**
 
-| Property | Description                               | Type                                      | Default |
-| -------- | ----------------------------------------- | ----------------------------------------- | ------- |
-|  Input   | set your custom `Input` component         | React.ComponentType                       |   -     |
+| Property | Description                               | Type                                      | Default | required |
+| -------- | ----------------------------------------- | ----------------------------------------- | ------- | -------- |
+|  Input   | set your custom `Input` component         | React.ComponentType                       |   -     |  false   |
 
+### ChatAutoComplete
 **The properties of the ChatAutoComplete are described as follows:**
 
-| Property    | Description        | Type     | Default          |
-| ----------- | ------------------ | -------- | ---------------- |
-| placeholder | set the placeholder| String   | 'Send a Message’ |
-| row         | adaptive content height | Number   |      1           |
-| value       | input content      | String   |     ‘’           |
-| onChange    | callback when the contents of the input change | Function |      -           |
+| Property    | Description        | Type     | Default          | required |
+| ----------- | ------------------ | -------- | ---------------- | -------- |
+| placeholder | set the placeholder| String   | 'Send a Message’ |   false  |
+| row         | adaptive content height | Number   |      1           |   false  |
+| value       | input content      | String   |     ‘’           |   false  |
+| onChange    | callback when the contents of the input change | Function |      -           |   false  |
 
 
-**useMessageInputContext data**
+### useMessageInputContext data
 
-| Property      | Description                            | Type              | Default |
-| ------------- | -------------------------------------- | ----------------- | ------- |
-| sendMessage   |    Sending message method              | Function          |   -     |
+| Property      | Description                            | Type              | Default | required |
+| ------------- | -------------------------------------- | ----------------- | ------- | -------- |
+| sendMessage   |    Sending message method              | Function          |   -     |     -    |

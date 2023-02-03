@@ -16,13 +16,12 @@ code={<RadioGroupMdx />}>
 </Layout>
 
 ## API
-
+### RadioGroup
 **The properties of the RadioGroup are Popover as follows:**
 
-| Property     | Description           | Type                | Default    |
-| ------------ | --------------------- | ------------------- | ---------- |
-|  className   | set class selector    | string              |    -       |
-|  style       | set the style         | React.CSSProperties |    -       |
-|  value       | set children optional | Array<{id: string;name: string}> |    -       |
-|  onChange    | the callback function that is triggered when the state changes	function(e:Event)	-	
-  | Function            |    -       |
+| Property     | Description           | Type                | Default    | required |
+| ------------ | --------------------- | ------------------- | ---------- | -------- |
+|  className   | set class selector    | string              |    -       |   false  |
+|  style       | set the style         | React.CSSProperties |    -       |   true   |
+|  value       | set children optional | Array<{id: string;name: string}> |    -       |   true  |
+|  onChange    | the callback function that is triggered when the state changes	function |(e:Event)	=> void|    -       |   false  |

@@ -28,7 +28,7 @@ code={<UseCustomPropsMdx />}>
 </Layout>
 
 ## Api
-
+### DashBoard
 ```tsx
 type TabType = {
   title: string;
@@ -38,9 +38,9 @@ type TabType = {
 }
 ```
 
-| Property       | Description                            | Type               | Default |
-| -------------- | -------------------------------------- | ------------------ | ------- |
-| ChannelHead    | custom `ChannelHead` component         | React.ComponentType |   -     |
-| defaultType    | initializes the type of the selected panel | String             | 'room'  |
-| MobileTabMaps  | tab contents when appType is h5        | TabType            |   -     |
-| PCTabMaps      | tab contents when appType is pc        | TabType            |   -     |
+| Property       | Description                            | Type               | Default | required |
+| -------------- | -------------------------------------- | ------------------ | ------- | -------- |
+| ChannelHead    | custom `ChannelHead` component         | React.ComponentType |   -     |  false  |
+| defaultType    | initializes the type of the selected panel | String             | 'room'  |  false  |
+| MobileTabMaps  | tab contents when appType is h5        | TabType            |   -     |  false  |
+| PCTabMaps      | tab contents when appType is pc        | TabType            |   -     |  false  |

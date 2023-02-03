@@ -17,16 +17,16 @@ code={<ConnectMessageMdx />}>
 </Layout>
 
 ## Api
-
+### ConnectMessage
 **The properties of the ConnectMessage are described as follows:**
 
-| Property    | Description                            | Type                                      | Default |
-| ----------- | -------------------------------------- | ----------------------------------------- | ------- |
-| btnNode     | Set the custom `Button` when websocket is closed | React.ReactNode                 |    -    |
-| connectDescription | Set the description when the websocket is connected | string\|React.ReactNode |   -     |
-| connectIcon      | Set Icon when the websocket is connected  | React.ReactNode                   |   -     |
-| closedDescription | Set the description when the websocket is closed | string\|React.ReactNode   |   -     |
-| closedIcon       | Set Icon when the websocket is closed | React.ReactNode                       |   -     |
-| openDescription  | Set the description when the websocket is opened  | string\|React.ReactNode   |   -     |
-| openIcon         | Set Icon when the websocket is opened  | React.ReactNode                      |   -     |
-| isShow           | Whether the component is visible or not | boolean                             |   -     |
+| Property    | Description                            | Type                                      | Default | required |
+| ----------- | -------------------------------------- | ----------------------------------------- | ------- | -------- |
+| btnNode     | Set the custom `Button` when websocket is closed | React.ReactNode                 |    -    |   false  |
+| connectDescription | Set the description when the websocket is connected | string\|React.ReactNode |   -     |   false  |
+| connectIcon      | Set Icon when the websocket is connected  | React.ReactNode                   |   -     |   false  |
+| closedDescription | Set the description when the websocket is closed | string\|React.ReactNode   |   -     |   false  |
+| closedIcon       | Set Icon when the websocket is closed | React.ReactNode                       |   -     |   false  |
+| openDescription  | Set the description when the websocket is opened  | string\|React.ReactNode   |   -     |   false  |
+| openIcon         | Set Icon when the websocket is opened  | React.ReactNode                      |   -     |   false  |
+| isShow           | Whether the component is visible or not | boolean                             |   -     |   false  |

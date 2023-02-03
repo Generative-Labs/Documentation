@@ -14,16 +14,16 @@ code={<ButtonExampleMdx />}>
 </Layout>
 
 ## API
-
+### Button
 **The properties of the Button are described as follows:**
 
-| Property     | Description                      | Type                                      | Default       |
-| ------------ | -------------------------------- | ----------------------------------------- | ------------- |
-|  block       | Option to fit button width to its parent width  | boolean                    |   -           |
-|  className   | set class selector               | stirng                                    |   -           |
-|  disabled    | Disabled state of button         | boolean                                   |   -           |
-|  icon        | Set the icon component of button | React.ReactNode                           |   -           |
-|  size        | Set the size of button           | 'large' \| 'default' \| 'small'           |   'default'   |
-|  style       | set the style                    | React.CSSProperties                       |    -          |
-|  type        | Can be set to primary ghost danger default |  string                         |   'default'   |
-|  onClick     | Set the handler to handle click event | (event: MouseEvent) => void          | () => undefined |
+| Property     | Description                      | Type                                      | Default       | required |
+| ------------ | -------------------------------- | ----------------------------------------- | ------------- | -------- |
+|  block       | Option to fit button width to its parent width  | boolean                    |   -           |  false   |
+|  className   | set class selector               | stirng                                    |   -           |  false   |
+|  disabled    | Disabled state of button         | boolean                                   |   -           |  false   |
+|  icon        | Set the icon component of button | React.ReactNode                           |   -           |  false   |
+|  size        | Set the size of button           | 'large' \| 'default' \| 'small'           |   'default'   |  false   |
+|  style       | set the style                    | React.CSSProperties                       |    -          |  false   |
+|  type        | Can be set to primary ghost danger default |  string                         |   'default'   |  false   |
+|  onClick     | Set the handler to handle click event | (event: MouseEvent) => void          | () => undefined |  false   |
