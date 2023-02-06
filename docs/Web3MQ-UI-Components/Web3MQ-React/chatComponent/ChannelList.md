@@ -6,7 +6,9 @@ sidebar_position: 2
 The `ChannelList` component queries an array of channel objects from the Chat API
 
 ## Basic Usage
-
+:::tip
+If your channelList list is empty, you can create a chat room in [createChannel](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel).
+:::
 The ChannelList does not have any required props
 
 import { Layout } from '@site/src/components/Layout'
@@ -23,16 +25,14 @@ code={<ChannelListMdx />}>
 </Layout>
 
 ## Custom Component
+ChannelList UI is determined by two of its props, List and Preview,if no props are injected, the default rendering `ChannelListMessenger` and `ChannelPreview`.
+
+`listRef` is a required attribute and must be bound to the Custom `ChannelListMessenger` root node. This is necessary for the `ChannelList` to implement paging.
+
 > 1. `List` renders loading failure, loading, and loading success views by `error` and `loading` properties.
 > 2. `DefaultEmptyStateIndicator` is used to show the empty state view.
 > 3. `Paginator` is a `channelList` subcomponent for pagination, `Paginator` component accepts elment, loadNextPage, and showLoading properties from `ChannelList` component;
-> 4. `Preview` is used to render list item.
-
-:::tip
-
-`List` and `Paginator` components do not inject any UI.
-
-:::
+> 4. `Preview` is used to render style and click functionality of channel in the list.
 
 import CustomListMdx from '@site/src/components/Web3MQ-React/ChannelListExample/CustomList.mdx';
 
@@ -43,39 +43,37 @@ code={<CustomListMdx />}>
 <ChannelListExample type='custom' />
 </Layout>
 
-`listRef` is a required attribute and must be bound to the Custom `List` root node. This is necessary for the `ChannelList` to implement paging
-
 ## Api
 ### ChannelList
 **The properties of the ChannelList are described as follows:**
 
 | Property                   | Description                               | Type                      | Default | required |
 | -------------------------- | ----------------------------------------- | ------------------------- | ------- | -------- |
-| List                       | as `ChannelList`‘s root component, used to display a component that the list load and failed to load | React.ComponentType |   -     |   false   |
-| Preview                    | set your custom `ChannelItem` component   | React.ComponentType       |   -     |   false  |
-| DefaultEmptyStateIndicator | displays an empty list of components      | React.ComponentType       |   -     |   false  |
-| Paginator                  | set your custom `paging` component        | React.ComponentType       |   -     |   false  |
+| List                       | as `ChannelList`‘s root component, used to display a component that the list load and failed to load | React.ComponentType |`ChannelListMessenger`|   false   |
+| Preview                    | set your custom `ChannelItem` component   | React.ComponentType       |`ChannelPreview`|   false  |
+| DefaultEmptyStateIndicator | displays an empty list of components      | React.ComponentType       |`EmptyStateIndicator`|   false  |
+| Paginator                  | set your custom `paging` component        | React.ComponentType       |`Paginator`|   false  |
 
-### List
-**The properties of the List are described as follows:**
+### `ChannelListMessenger`
+**The properties of the ChannelListMessenger are described as follows:**
 
 | Property | Description            | Type           | Default | required |
 | -------- | ---------------------- | -------------- | ------- | -------- |
 | error    | set the error state    | Boolean        |   -     |  false   |
 | loading  | set the load state     | Boolean        |   -     |  false   |
-| listRef  | bind `List` root node  | HTMLDivElement |   -     |  true    |
+| listRef  | bind `ChannelListMessenger` root node  | HTMLDivElement |   -     |  true    |
 
 ### Paginator
 **The properties of the Paginator are described as follows:**
 
 | Property     | Description           | Type           | Default | required |
 | ------------ | --------------------- | -------------- | ------- | -------- |
-| element      | `List` root node      | HTMLDivElement |   -     |  false   |
+| element      | `ChannelListMessenger` root node      | HTMLDivElement |   -     |  false   |
 | showLoading  | set the load state    | Boolean        | false   |  false   |
 | loadNextPage | Load more             | Function       |   -     |  true    |
 
-### Preview
-**The properties of the Preview are described as follows:**
+### ChannelPreview
+**The properties of the ChannelPreview are described as follows:**
 
 | Property         | Description                          | Type     | Default | required |
 | ---------------- | ------------------------------------ | -------- | ------- | -------- |

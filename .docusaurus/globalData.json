@@ -461,6 +461,16 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notification",
+              "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notification",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/NotificationList",
+              "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/NotificationList",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify",
               "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify",
               "sidebar": "tutorialSidebar"

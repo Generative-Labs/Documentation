@@ -4,6 +4,9 @@ sidebar_position: 1
 
 # Chat
 
+The Chat component is a React Context provider that wraps the entire Web3Mq Chat application. All chat Components within the `@web3mq/react-components` library must be nested as children of Chat to maintain proper functionality.
+ 
+
 ## Basic Usage
 
 The `Chat` component does not inject any UI, so its implementation is fairly simple. Once an instance of the `Chat` client has been created, you pass the client object as a prop to add it to the `ChatContext`.
@@ -67,13 +70,14 @@ const { client } = useChatContext();
 | -------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------- | -------- |
 | appType              | set viewport type of @web3mq/react-components | [AppTypeEnum](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#apptypeenum)             | AppTypeEnum["pc"] |   -    |
 | client               | Client Instance                               | [Client](/docs/Web3MQ-SDK/JS-SDK/client/)                                                         |   -     |    -     |
-| containerId          | container Id of your @web3mq/react-components | string                                                                                            |   ""    |    -     |
+| containerId          | container Id of your @web3mq/react-components | string                                                                                            |  ""     |    -     |
+| activeNotification   | current Active Notifications in notification list | [NotifyResponse](/docs/Web3MQ-SDK/JS-SDK/types/#notifyresponse)                               |  null   |    -     |
 | showListTypeView     | Tabs type in `DashBoard` component            | string                                                                                            | "room"  |    -     |
 | loginUserInfo        | current user Info   | [CommonUserInfoType](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#commonuserinfotype)                         |  null   |    -     |
 | getUserInfo          | get target user information                   |1.didValue: string 2.didType: [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype) 3.bindDid: boolean |  -      |    -     |
 | logout               | set your exit method                          | Function                                                                                          |   -     |    -     |
 | setShowListTypeView  | Update showListTypeView                       | React.Dispatch                                                                                    |  -      |    -     |
-
+| setActiveNotification | Update current notification as active in notification list | React.Dispatch                                                                                    |  -      |    -     |
 ### AppTypeEnum
 ```ts
 enum AppTypeEnum {

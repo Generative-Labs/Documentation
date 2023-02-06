@@ -55,7 +55,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','09c'),
+    component: ComponentCreator('/docs','60b'),
     routes: [
       {
         path: '/docs/Intro',
@@ -594,6 +594,18 @@ export default [
       {
         path: '/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList',
         component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList','a56'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notification',
+        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notification','63e'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/NotificationList',
+        component: ComponentCreator('/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/NotificationList','bf1'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
