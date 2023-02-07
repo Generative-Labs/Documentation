@@ -70,7 +70,7 @@ const { client } = useChatContext();
 | -------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------- | -------- |
 | appType              | set viewport type of @web3mq/react-components | [AppTypeEnum](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#apptypeenum)             | AppTypeEnum["pc"] |   -    |
 | client               | Client Instance                               | [Client](/docs/Web3MQ-SDK/JS-SDK/client/)                                                         |   -     |    -     |
-| containerId          | container Id of your @web3mq/react-components | string                                                                                            |  ""     |    -     |
+| containerId          | id selector for the node that wraps the `Chat` component | string                                                                                            |  ""     |    -     |
 | activeNotification   | current Active Notifications in notification list | [NotifyResponse](/docs/Web3MQ-SDK/JS-SDK/types/#notifyresponse)                               |  null   |    -     |
 | showListTypeView     | Tabs type in `DashBoard` component            | string                                                                                            | "room"  |    -     |
 | loginUserInfo        | current user Info   | [CommonUserInfoType](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#commonuserinfotype)                         |  null   |    -     |

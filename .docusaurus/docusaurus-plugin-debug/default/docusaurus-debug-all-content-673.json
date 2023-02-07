@@ -2277,7 +2277,7 @@
               "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal",
               "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal",
               "title": "LoginModal",
-              "description": "LoginModal component implements login and registration operations,",
+              "description": "LoginModal component implements login and registration operations.",
               "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal.md",
               "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React/chatComponent",
               "slug": "/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal",

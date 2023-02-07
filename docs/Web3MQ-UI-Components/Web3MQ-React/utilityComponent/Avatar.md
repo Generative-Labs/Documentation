@@ -24,7 +24,7 @@ code={<AvatarExampleMdx />}>
 
 | Property     | Description                      | Type                                      | Default       | required |
 | ------------ | -------------------------------- | ----------------------------------------- | ------------- | -------- |
-|  className   | set class selector               | stirng                                    |   -           |  false   |
+|  className   | set class selector               | string                                    |   -           |  false   |
 |  image       | resource address of the image avatar  | string ｜ null                             |   -           |  false   |
 |  name        | the name of the image, used to set the title | string                                     |   -           |  false   |
 |  shape       | set the shape                    | ‘circle’ \| 'rounded' \| 'square’         | ‘circle’       |  false   |

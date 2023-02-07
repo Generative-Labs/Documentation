@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Client, WalletType } from '@web3mq/client';
 import { Chat, AppTypeEnum, Button, LoginModal } from '@web3mq/react-components';
 
@@ -12,13 +12,50 @@ type UserAccountType = {
   walletType: WalletType;
   userExist: boolean;
 };
-export const LoginModalExample: React.FC = (props: any) => {
+export const LoginModalWithAccount: React.FC = (props: any) => {
   const { keys, fastestUrl, init, logout, handleLoginEvent } = useLogin();
+  const hasAccount = useMemo(() => {
+    const address = localStorage.getItem('doc_test_address') || '';
+    const walletType = localStorage.getItem('doc_test_walletType') || '';
+    const userid = localStorage.getItem('doc_test_userid') || '';
+    const userExist = localStorage.getItem('doc_test_userExist') === 'true' ? true : false;
+    if (address && walletType && userid && userExist) {
+      return { address, walletType, userid, userExist };
+    }
+    return undefined;
+  }, [])
+  const [account, setAccount] = useState<UserAccountType | undefined>(hasAccount as any);
   const [appType, setAppType] = useState(
     window.innerWidth <= 600 ? AppTypeEnum['h5'] : AppTypeEnum['pc'],
   );
   const handleAppType = () => {
     setAppType(window.innerWidth <= 600 ? AppTypeEnum['h5'] : AppTypeEnum['pc']);
+  };
+  const getAccount = async (
+    didType: WalletType = 'eth',
+    address?: string,
+  ): Promise<void> => {
+    let didValue = address;
+    if (!didValue) {
+      const { address } = await Client.register.getAccount(didType);
+      didValue = address;
+    }
+    if (didValue) {
+      const { userid, userExist } = await Client.register.getUserInfo({
+        did_value: didValue,
+        did_type: didType,
+      });
+      localStorage.setItem('doc_test_address', didValue)
+      localStorage.setItem('doc_test_walletType', didType);
+      localStorage.setItem('doc_test_userid', userid);
+      localStorage.setItem('doc_test_userExist', String(userExist))
+      setAccount({
+        userid,
+        address: didValue as string,
+        walletType: didType,
+        userExist,
+      });
+    }
   };
 
   useEffect(() => {
@@ -29,6 +66,10 @@ export const LoginModalExample: React.FC = (props: any) => {
       window.removeEventListener('resize', handleAppType)
     }
   }, []);
+
+  if (!fastestUrl) {
+    return null;
+  }
 
   if (!keys) {
     let mainKeys: any = null;
@@ -44,7 +85,7 @@ export const LoginModalExample: React.FC = (props: any) => {
     }
     return (
       <div 
-        id='loginModalBox'
+        id='loginModalWithAccountBox'
         style={{
           position: 'relative', 
           display: 'flex',
@@ -55,21 +96,19 @@ export const LoginModalExample: React.FC = (props: any) => {
           overflow: 'auto'
         }}
       >
-        <LoginModal 
+        {!account && <Button size='large' onClick={() => getAccount()} style={{marginRight: '10px'}}>connect wallet</Button>}
+        {account && <LoginModal 
+          account={account}
           appType={appType}
-          containerId='loginModalBox'
+          containerId='loginModalWithAccountBox'
           keys={mainKeys}
-          isShow={true}
+          // isShow={true}
           modalClassName={ss.modalClassName}
           handleLoginEvent={handleLoginEvent}
           loginBtnNode={<Button size='large' type='ghost'>Login</Button>}
-        />
+        />}
       </div>
     )
-  }
-
-  if (!fastestUrl) {
-    return null;
   }
 
   const client = Client.getInstance(keys);

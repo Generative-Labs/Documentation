@@ -6,7 +6,7 @@ import { Modal } from '@web3mq/react-components';
 export const ModalExample: React.FC = () => {
   const [ visible, setVisible ] = useState(false);
   useEffect(() => {
-    document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
+    document.body.setAttribute('data-theme', 'light');
   }, [])
   return (
     <>

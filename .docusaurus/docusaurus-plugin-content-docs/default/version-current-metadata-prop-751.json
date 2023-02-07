@@ -1335,7 +1335,7 @@
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal",
       "title": "LoginModal",
-      "description": "LoginModal component implements login and registration operations,",
+      "description": "LoginModal component implements login and registration operations.",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole": {
