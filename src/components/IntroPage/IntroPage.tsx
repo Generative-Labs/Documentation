@@ -10,19 +10,19 @@ const cardList = [
     title: 'DAppMQ',
     icon: <NekworkIcon style={{height: '40px'}} />,
     description: 'Sovereign reach between decentralized applications (including Wallets, DIDs, GameFi, and other dapps) enabled by a fully open and trustless network',
-    href: '/',
+    href: '/docs/Web3MQ-SDK/JS-SDK/dappConnect/',
   },
   {
     title: 'SocialMQ',
     icon: <UploadIcon />,
     description: 'Actionable social connections among users of decentralized applications to de-fragmentize the current Web3 social ecosystem',
-    href: '/',
+    href: '/docs/Tutorials/web3mq/',
   },
   {
     title: 'PushMQ',
     icon: <UserGroupIcon />,
     description: 'Boost and monetize engagement and retention via personalized notifications',
-    href: '/',
+    href: '/docs/Tutorials/PubSub/',
   }
 ];
 
@@ -67,7 +67,7 @@ export const IntroPage = () => {
                 {card.description}
               </div>
               <div style={{display: 'flex', height: '100%', flexDirection: 'column', justifyContent: 'end', marginTop: '16px'}}>
-                <Link className={ss.cardLink}>Get Started with {card.title} -&gt;</Link>
+                <Link className={ss.cardLink} to={card.href}>Get Started with {card.title} -&gt;</Link>
               </div>
             </div>
           ))}
