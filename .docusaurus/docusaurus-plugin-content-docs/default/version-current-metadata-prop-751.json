@@ -150,6 +150,12 @@
               },
               {
                 "type": "link",
+                "label": "StandardList",
+                "href": "/docs/Web3MQ-SDK/JS-SDK/standards/",
+                "docId": "Web3MQ-SDK/JS-SDK/standards/standards"
+              },
+              {
+                "type": "link",
                 "label": "Event Center",
                 "href": "/docs/Web3MQ-SDK/JS-SDK/eventCenter/",
                 "docId": "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter"
@@ -633,9 +639,21 @@
                   },
                   {
                     "type": "link",
+                    "label": "NotificationList",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/NotificationList",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/NotificationList"
+                  },
+                  {
+                    "type": "link",
                     "label": "Notify",
                     "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify",
                     "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Notification",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notification",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notification"
                   },
                   {
                     "type": "link",
@@ -1206,6 +1224,12 @@
       "description": "Properties",
       "sidebar": "tutorialSidebar"
     },
+    "Web3MQ-SDK/JS-SDK/standards/standards": {
+      "id": "Web3MQ-SDK/JS-SDK/standards/standards",
+      "title": "Standard List",
+      "description": "DidType",
+      "sidebar": "tutorialSidebar"
+    },
     "Web3MQ-SDK/JS-SDK/types/types": {
       "id": "Web3MQ-SDK/JS-SDK/types/types",
       "title": "Type List",
@@ -1299,7 +1323,7 @@
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat",
       "title": "Chat",
-      "description": "Basic Usage",
+      "description": "The Chat component is a React Context provider that wraps the entire Web3Mq Chat application. All chat Components within the @web3mq/react-components library must be nested as children of Chat to maintain proper functionality.",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ConnectMessage": {
@@ -1323,7 +1347,7 @@
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal",
       "title": "LoginModal",
-      "description": "LoginModal component implements login and registration operations,",
+      "description": "LoginModal component implements login and registration operations.",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole": {
@@ -1347,7 +1371,19 @@
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList",
       "title": "MessageList",
-      "description": "The MessageList component renders a scrollable list of messages. The UI for each individual message is rendered conditionally based on its message.type value. The list renders date separators, new message notifications, system messages, deleted messages, and standard messages containing text and/or attachments.",
+      "description": "The MessageList component renders a scrollable list of messages. The UI for each individual message is rendered conditionally based on its message.type value. The list renders date separators, new message notifications, system messages, and standard messages containing text.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notification": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notification",
+      "title": "Notification",
+      "description": "The Notification is a component for detailed display of notification content, show content when activeNotification is set.Currently only when the notification type is system.friend_request will show the corresponding style, the future will be more extended. And must be nested as children of Chat to maintain proper functionality.This component does not need to pass any props.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-React/chatComponent/NotificationList": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/NotificationList",
+      "title": "NotificationList",
+      "description": "NotificationList, which renders the current list when other users send you friend requests, follow you, invite you to groups, subscribe to topics and post content. And must be nested as children of Chat to maintain proper functionality.",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify": {

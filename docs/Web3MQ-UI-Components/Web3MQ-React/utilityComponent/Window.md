@@ -14,3 +14,11 @@ description='This is the Window example'
 code={<WindowMdx />}>
 <WindowExample />
 </Layout>
+
+## Api
+### Window 
+**The properties of the RadioGroup are Window as follows:**
+
+| Property     | Description           | Type                | Default    | required |
+| ------------ | --------------------- | ------------------- | ---------- | -------- |
+| hasContainer | Whether the `chat` component passes in the containerid | boolean             |   false    |   false  |

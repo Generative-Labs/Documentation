@@ -79,23 +79,23 @@ const { Message, Input } = useComponentContext();
 ```
 
 ## Api
-
+### Channel
 **The properties of the Channel are described as follows:**
 
-| Property | Description                               | Type                                      | Default |
-| -------- | ----------------------------------------- | ----------------------------------------- | ------- |
-| Input    | set your custom `Input` component         | React.ComponentType                       |   -     |
-| Message  | set your custom `Message` component       | React.ComponentType                       |   -     |
+| Property | Description                               | Type                                      | Default | required |
+| -------- | ----------------------------------------- | ----------------------------------------- | ------- | -------- |
+| Input    | set your custom `Input` component         | React.ComponentType                       |   -     |  false   |
+| Message  | set your custom `Message` component       | React.ComponentType                       |   -     |  false   |
 
-**useChannelStateContext data**
+### useChannelStateContext data
 
-| Property      | Description               | Type                                                                  | Default |
-| ------------- | ------------------------- | --------------------------------------------------------------------- | ------- |
-| activeChannel | current active channel    | [activechannelType](/docs/Web3MQ-SDK/JS-SDK/types/#activechanneltype) |   -     |
+| Property      | Description               | Type                                                                  | Default | required |
+| ------------- | ------------------------- | --------------------------------------------------------------------- | ------- | -------- |
+| activeChannel | current active channel    | [ChannelItemType](/docs/Web3MQ-SDK/JS-SDK/types/#channelitemtype)     |   -     |    -     |
 
-**useComponentContext data**
+### useComponentContext data
 
-| Property      | Description                            | Type              | Default |
-| ------------- | -------------------------------------- | ----------------- | ------- |
-| Input         | set custom `MessageInput` component    | React.Component   |   -     |
-| Message       | set custom `Message` component         | React.Component   |   -     |
+| Property      | Description                            | Type              | Default | required |
+| ------------- | -------------------------------------- | ----------------- | ------- | -------- |
+| Input         | set custom `MessageInput` component    | React.Component   |   -     |    -     |
+| Message       | set custom `Message` component         | React.Component   |   -     |    -     |

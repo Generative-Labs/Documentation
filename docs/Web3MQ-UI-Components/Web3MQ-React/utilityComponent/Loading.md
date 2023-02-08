@@ -16,11 +16,11 @@ code={<LoadingMdx />}>
 </Layout>
 
 ## API
-
+### Loading
 **The properties of the Loading are described as follows:**
 
-| Property     | Description                      | Type                | Default    |
-| ------------ | -------------------------------- | ------------------- | ---------- |
-|  className   | set class selector               | string              |    -       |
-|  style       | set the style                    | React.CSSProperties |    -       |
-|  type        | set the loading type             | 'spin’ ｜ null      |    -       |
+| Property     | Description                      | Type                | Default    | required |
+| ------------ | -------------------------------- | ------------------- | ---------- | -------- |
+|  className   | set class selector               | string              |    -       |   false  |
+|  style       | set the style                    | React.CSSProperties |    -       |   false  |
+|  type        | set the loading type             | 'spin’ ｜ null      |    -       |   false  |

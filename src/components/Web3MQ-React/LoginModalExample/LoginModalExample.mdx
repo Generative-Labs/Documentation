@@ -15,7 +15,7 @@ export const LoginModalExample: React.FC = () => {
   };
   useEffect(() => {
     init();
-    document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
+    document.body.setAttribute('data-theme', 'light');
     window.addEventListener('resize', handleAppType);
     () => {
       window.removeEventListener('resize', handleAppType)
@@ -39,7 +39,6 @@ export const LoginModalExample: React.FC = () => {
         appType={appType}
         keys={mainKeys}
         isShow={true}
-        modalClassName={ss.modalClassName}
         handleLoginEvent={handleLoginEvent}
         loginBtnNode={<Button size='large' type='ghost'>Login</Button>}
       />
@@ -61,7 +60,4 @@ export const LoginModalExample: React.FC = () => {
     </Chat>
   );
 };
-
-
-
 ```

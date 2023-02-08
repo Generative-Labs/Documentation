@@ -62,7 +62,7 @@ export const CustomChannelExample: React.FC = () => {
 
   useEffect(() => {
     init();
-    document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
+    document.body.setAttribute('data-theme', 'light')
   }, [])
 
   if (!keys) {

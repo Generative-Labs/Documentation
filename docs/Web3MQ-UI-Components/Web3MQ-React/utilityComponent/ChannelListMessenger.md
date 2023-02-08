@@ -17,13 +17,14 @@ code={<ChannelListMessengerMdx />}>
 
 ## API
 
+### ChannelListMessenger
 **The properties of the ChannelListMessenger are described as follows:**
 
-| Property               | Description                      | Type                                      | Default       |
-| ---------------------- | -------------------------------- | ----------------------------------------- | ------------- |
-|  children              | set the node                     | React.ReactNode                           |    -          |
-|  error                 | Set the failed state             | Boolean                                  |    -          |
-|  listRef               | bind the current root node       | HTMLDivElement | nul                      |    -          |
-|  loading               | Set the load state               | Boolean                                   |    -          |
-|  LoadingErrorIndicator | set the component with custom failure state | React.ComponentType                       | `ChatDown`   |
-|  LoadingIndicator      | set the component with custom load state | React.ComponentType                       | `Skeleton`   |
+| Property               | Description                      | Type                                      | Default       | required |
+| ---------------------- | -------------------------------- | ----------------------------------------- | ------------- | -------- |
+|  children              | set the node                     | React.ReactNode                           |    -          |   true   |
+|  error                 | Set the failed state             | Boolean                                   |    -          |  false   |
+|  listRef               | bind the current root node       | HTMLDivElement | nul                      |    -          |   true   |
+|  loading               | Set the load state               | Boolean                                   |    -          |  false   |
+|  LoadingErrorIndicator | set the component with custom failure state | React.ComponentType            |    -          |  false   |
+|  LoadingIndicator      | set the component with custom load state | React.ComponentType               |    -          |  false   |

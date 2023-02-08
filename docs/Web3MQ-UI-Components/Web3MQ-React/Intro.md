@@ -112,7 +112,11 @@ const client = Client.getInstance('YOUR_ACCESS_TOKEN');
 ```
 
 ## Your First App with Web3MQ React
-
+:::tip
+When using the `@web3mq/react-components` 
+>1. need to introduce css file of `@web3mq/react-components` firstly.
+>2. set the theme used, you need to set the `data-theme` attribute in the body, currently only `light` is a theme.
+:::
 ```tsx
 import React, { useState } from 'react';
 import {

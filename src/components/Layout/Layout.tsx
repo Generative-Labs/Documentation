@@ -11,7 +11,7 @@ interface LayoutProps {
 
 export const Layout: FC<PropsWithChildren<LayoutProps>> = (props) => {
   const { title, description, code, children } = props;
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   return (
     <BrowserOnly>

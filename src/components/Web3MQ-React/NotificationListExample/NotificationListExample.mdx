@@ -1,23 +1,16 @@
-```tsx 
-import React, { useEffect, useState } from 'react';
+```tsx
+import React, { useEffect } from 'react';
 import { Client } from '@web3mq/client';
 import { 
   AppTypeEnum, 
   Button,
-  Channel, 
-  ChannelList, 
   Chat, 
-  LoginModal,
-  MessageHeader, 
-  MessageInput, 
-  MessageList, 
-  Window,
-  useMessageInputContext 
+  NotificationList
 } from '@web3mq/react-components';
 
 import useLogin from './hooks/useLogin';
 
-export const App: React.FC = () => {
+export const NotificationListExample: React.FC = () => {
   const { keys, fastestUrl, init, logout, handleLoginEvent } = useLogin();
 
   useEffect(() => {
@@ -42,15 +35,8 @@ export const App: React.FC = () => {
 
   return (
     <div id='box' style={{position: 'relative'}}>
-      <Chat containerId='box' client={client} appType={AppTypeEnum['h5']} logout={logout}>
-        <ChannelList />
-        <Channel>
-          <Window hasContainer>
-            <MessageHeader />
-            <MessageList />
-            <MessageInput />
-          </Window>
-        </Channel>
+      <Chat client={client} appType={AppTypeEnum['h5']} logout={logout}>
+        <NotificationList />
       </Chat>
     </div>
   );

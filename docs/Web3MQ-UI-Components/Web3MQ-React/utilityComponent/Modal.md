@@ -16,17 +16,17 @@ code={<ModalMdx />}>
 </Layout>
 
 ## API
-
+### Modal
 **The properties of the Modal are described as follows:**
 
-| Property         | Description                      | Type                                      | Default       |
-| ---------------- | -------------------------------- | ----------------------------------------- | ------------- |
-|  appType         | set the appType                  | `pc` \| `h5`                              |   ‘pc’        |
-|  className       | set the mask class selector      | String                                    |    -          |
-|  dialogClassName | set the dialog class selector    | String                                     |    -          |
-|  modalHeader     | set the header                   | React.ReactNode                           |    -          |
-|  rightBtn        | custom close button              | React.ReactNode                           |    -           |
-|  style           | set the mask style               | React.CSSProperties                       |    -          |
-|  title           | set the title                    | String                                    |    -          |
-|  visible         | set display                      | Boolean                                   |    -           |
-|  closeModal      | specify a function that will be called when a user clicks mask, close button on top right or close button | Function                                  | () => void     |
+| Property         | Description                      | Type                                      | Default       | required |
+| ---------------- | -------------------------------- | ----------------------------------------- | ------------- | -------- |
+|  appType         | set the appType                  |[AppTypeEnum](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#apptypeenum) |  AppTypeEnum["pc"]       |  false   |
+|  className       | set the mask class selector      | String                                    |    -          |  false   |
+|  dialogClassName | set the dialog class selector    | String                                    |    -          |  false   |
+|  modalHeader     | set the header                   | React.ReactNode                           |    -          |  false   |
+|  rightBtn        | custom close button              | React.ReactNode                           |    -          |  false   |
+|  style           | set the mask style               | React.CSSProperties                       |    -          |  false   |
+|  title           | set the title                    | String                                    |    -          |  false   |
+|  visible         | set display                      | Boolean                                   |    -          |  true    |
+|  closeModal      | specify a function that will be called when a user clicks mask, close button on top right or close button | Function                                  | () => void     |  false   |

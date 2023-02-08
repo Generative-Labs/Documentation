@@ -32,7 +32,7 @@
   "/search-79a": {
     "component": "component---theme-search-page-1-a-4-d6f"
   },
-  "/docs-09c": {
+  "/docs-6c6": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
   },
@@ -300,6 +300,10 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-sdk-js-sdk-sign-connect-d-14-790"
   },
+  "/docs/Web3MQ-SDK/JS-SDK/standards/-f8d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-js-sdk-standards-0-be-6ca"
+  },
   "/docs/Web3MQ-SDK/JS-SDK/types/-e1d": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-sdk-js-sdk-types-5-f-7-c37"
@@ -395,6 +399,14 @@
   "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList-a56": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-message-list-0-ef-60c"
+  },
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notification-63e": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-notification-061-217"
+  },
+  "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/NotificationList-bf1": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-ui-components-web-3-mq-react-chat-component-notification-list-964-b2c"
   },
   "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify-5cd": {
     "component": "component---theme-doc-item-178-a40",

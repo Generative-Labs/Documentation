@@ -8,8 +8,8 @@ position: 2
 
 | name                      | type     | Parameters Description                                                                                          | response                                                                          |
 | ------------------------- | -------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| getAccount                | function | [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#WalletType)                                                         | Promise: [AccountType](/docs/Web3MQ-SDK/JS-SDK/types/#ethaccounttype)             |
-| getUserInfo               | function | [getUserInfoParams](/docs/Web3MQ-SDK/JS-SDK/types/#getUserInfoParams)                                           | Promise: [GetUserInfoResponse](/docs/Web3MQ-SDK/JS-SDK/types/#getuserinforesponse) |
+| getAccount                | function | [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype)                                                         | Promise: [AccountType](/docs/Web3MQ-SDK/JS-SDK/types/#accounttype)             |
+| getUserInfo               | function | [getUserInfoParams](/docs/Web3MQ-SDK/JS-SDK/types/#getuserinfoparams)                                           | Promise: [GetUserInfoResponse](/docs/Web3MQ-SDK/JS-SDK/types/#getuserinforesponse) |
 | register                  | function | [RegisterBySignParams](/docs/Web3MQ-SDK/JS-SDK/types/#registerbysignparams)                                     | Promise: [RegisterApiResponse](/docs/Web3MQ-SDK/JS-SDK/types/#registerapiresponse) |
 | login                     | function | [LoginByKeysParams](/docs/Web3MQ-SDK/JS-SDK/types/#loginbykeysparams)                                           | Promise: [LoginResponse](/docs/Web3MQ-SDK/JS-SDK/types/#loginresponse)            |
 | resetPassword             | function | [RegisterBySignParams](/docs/Web3MQ-SDK/JS-SDK/types/#registerbysignparams)                                       | Promise: [RegisterApiResponse](/docs/Web3MQ-SDK/JS-SDK/types/#registerapiresponse) |
