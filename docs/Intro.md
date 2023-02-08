@@ -1,8 +1,13 @@
 ---
 sidebar_position: 0
+hide_table_of_contents: true
 ---
 
-# Intro
+import { IntroPage } from '@site/src/components/IntroPage';
+
+<IntroPage />
+
+<!-- # Intro
 
 Web3MQ is a **decentralized secure communication protocol** dedicated to becoming crypto-native communication infrastructure. We reconnect isolated social platforms with a unified inbox, enabling information to be freely generated, flowed and communicated across terminals. We support end-to-end encrypted communication with distributed storage, ensuring that no third party can access users' chat messages and that users have full ownership of their data.
 
@@ -33,4 +38,4 @@ The foundation of Web3mq's long-term growth is the community. Web3mq will be dev
 ## **User Case: SwapChat**
 
 SwapChat is a Web3 native cross-platform dapp with messaging and social trading services.
-Based on the Web3MQ communication protocol we developed, we provide users with cross-platform, decentralized and end-to-end encrypted communication services. To learn more about SwapChat: [https://swapchat.super.site/](https://swapchat.super.site/) & [https://swapchat.me/](https://swapchat.me/)
+Based on the Web3MQ communication protocol we developed, we provide users with cross-platform, decentralized and end-to-end encrypted communication services. To learn more about SwapChat: [https://swapchat.super.site/](https://swapchat.super.site/) & [https://swapchat.me/](https://swapchat.me/) -->

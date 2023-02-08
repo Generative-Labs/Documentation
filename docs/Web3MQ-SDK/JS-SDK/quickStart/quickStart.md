@@ -17,6 +17,10 @@ or
 yarn add @web3mq/client
 ```
 
+:::tip
+The webpack version in your React application needs to be above `5.0.0`, webpack `4.0.0` is not supported at the moment.
+:::
+
 <!-- ## Note
 
 :::caution
