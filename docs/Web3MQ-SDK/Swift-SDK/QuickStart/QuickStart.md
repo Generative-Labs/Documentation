@@ -33,77 +33,83 @@ dependencies: [
 ]
 ```
 
-#### CocoaPods
+## Setup the SDK
 
-[CocoaPods](https://cocoapods.org/) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate Alamofire into your Xcode project using CocoaPods, specify it in your `Podfile`:
-
-```swift
-pod 'Web3MQSDK'
-```
-
-## Initialize the SDK
-
-Let's get started by initializing the client:
+Call this method before you access any other methods or properties in the Web3MQ SDK.
 
 ```swift
-import Web3MQSDK
+import Web3MQ
 
-// the SDK will find the endpoint with lowest latency for you 
-Client.shared.setup(with: Configuration(appKey: "{AppKey}"))
+Client.shared.setup(appKey: "your app key")
 
-// or you prefer to set a specific endpoint     
-Client.shared.setup(with: Configuration(appKey: "{AppKey}", endpoint: Endpoint.Dev.jp1))
 ```
 
-## Connecting
+Some methods that SDK provides require wallet signature, so you should setup the `WalletConnector` before calling that methods.
 
-### Signup
+```swift
+import Web3MQ
 
-For any first-time user of Web3MQ's network, you'll need to register on Web3MQ's network. SDK takes care of the key generation process and subsequent wallet signing process. `Client.shared.connectWithMateMask` is a utility method that does this automatically.
+Client.shared.setup(walletConnector: WalletConnector)
+
+```
+
+## Register
+
+For any first-time user of Web3MQ's network, you'll need to register on Web3MQ's network.
+
+This method needs wallet signature, make sure you have setup `WalletConnector` already. `RegisterResponse` contains your `PrivateKey` and `UserId`.
 
 ```swift
 // Keep your private key in a safe place!
-let (keyPair, userId) = await Client.shared.connectWithMateMask()
+let registerResponse = await Client.shared.register(did: DID, password: String)
 ```
 
-SDK will save the keypair in Keychain defaultly, you could disable it by setting keychainStore false 
+### Retrieve Private Key 
+
+Whenever you want, you can always retrieve your own PrivateKey through this method.
 
 ```swift
-let (keyPair, userId) = await Client.shared.connectWithMateMask(keychainStore: false)
+// Keep your private key in a safe place!
+let privateKey = try await Client.shared.fetchPrivateKey(did: DID, password: String)
 ```
 
-### Connecting Automatically
+## Connect
 
-If there is a key-pair in keychain, it will automatically connect to that user.
+### Get a `User`
+
+Get a user with its DID and password, also with an duration for expired.
+
+```swift 
+// *
+let user = try await Client.shared.user(did: DID, password: String, expiredDuration: TimeInterval)
+```
+
+Or you has the `PrivateKey`
+
+
+```swift 
+// *
+let user = try await Client.shared.user(did: DID, privateKey: Curve25519.Signing.PrivateKey, expiredDuration: TimeInterval)
+```
+### Connect with a `User`
+
+```swift 
+    try await Client.shared.connect(user: User)
+```
+
+### Connect Automatically
+
+This method will get the previously connected User from the cache. If there’s no user cached, it will throw `Web3MQClientError.autoConnectFailWithNoUserInCache`
+
 ```swift
-Client.shared.autoConnect()
+    try await Client.shared.autoConnect()
 ```
-
-### Connecting Manually
-
-You could also connect manually.
-
-```swift
-Client.shared.connect(with: KeyPair(privateKey: "{PrivteKey}", publicKey: "{PublicKey}"), userId: "{UserId}")
-```
-
 ### Connecting Status
 
 If you want to react instantly with the connecting status updating, just subscribe this publisher:  `Client.shared.connectingStatusPublisher` 
 
 ```swift
 let status: Web3MQConnectingStatus = Client.shared.connectingStatus
-
-public enum Web3MQConnectingStatus {
-		case idle 
-		// the SDK will always try to reconnect the Web3MQ network, so you don't need 
-		// to care about that part.
-		case connecting
-		case connected(nodeId: String)
-		// only when you disconnect manually 
-		case disconnected 
-		case error(_ error: Error?)
-}
 ```
 
 ## Channels
@@ -141,28 +147,3 @@ The notification is also a specific message. Just subscribe the `notificationPub
 ```swift
 Client.shared.notificationManager.notificationPublisher
 ```
-
-<!-- ### Notification Content
-
-```swift
-public struct Web3MQNotificationContent: Codable {
-    
-    public let title: String?
-    public let content: String?
-    public let type: String?
-}
-
-public struct Web3MQNotification: Codable {
-
-    public let cipherSuite: String?
-    public let from: String?
-    public let topic: String?
-    public let fromSign: String?
-    public let messageId: String?
-    public let payloadType: String?
-    public let timestamp: UInt64?
-    public let payload: Web3MQNotificationContent?
-    public let version: Int?
-    
-}
-``` -->
