@@ -341,6 +341,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Web3MQ-SDK/JS-SDK/standards/standards",
+              "path": "/docs/Web3MQ-SDK/JS-SDK/standards/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-SDK/JS-SDK/types/types",
               "path": "/docs/Web3MQ-SDK/JS-SDK/types/",
               "sidebar": "tutorialSidebar"

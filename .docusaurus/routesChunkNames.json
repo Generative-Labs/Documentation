@@ -32,7 +32,7 @@
   "/search-79a": {
     "component": "component---theme-search-page-1-a-4-d6f"
   },
-  "/docs-60b": {
+  "/docs-6c6": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
   },
@@ -299,6 +299,10 @@
   "/docs/Web3MQ-SDK/JS-SDK/signConnect/-c3e": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-sdk-js-sdk-sign-connect-d-14-790"
+  },
+  "/docs/Web3MQ-SDK/JS-SDK/standards/-f8d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-js-sdk-standards-0-be-6ca"
   },
   "/docs/Web3MQ-SDK/JS-SDK/types/-e1d": {
     "component": "component---theme-doc-item-178-a40",

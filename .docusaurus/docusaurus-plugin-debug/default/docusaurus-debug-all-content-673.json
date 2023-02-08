@@ -1663,12 +1663,12 @@
               "tags": [],
               "version": "current",
               "frontMatter": {
-                "position": 7
+                "position": 9
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Type List",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/types/"
+                "title": "Standard List",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/standards/"
               },
               "next": {
                 "title": "Quick Start",
@@ -1820,6 +1820,30 @@
               }
             },
             {
+              "unversionedId": "Web3MQ-SDK/JS-SDK/standards/standards",
+              "id": "Web3MQ-SDK/JS-SDK/standards/standards",
+              "title": "Standard List",
+              "description": "DidType",
+              "source": "@site/docs/Web3MQ-SDK/JS-SDK/standards/standards.md",
+              "sourceDirName": "Web3MQ-SDK/JS-SDK/standards",
+              "slug": "/Web3MQ-SDK/JS-SDK/standards/",
+              "permalink": "/docs/Web3MQ-SDK/JS-SDK/standards/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 8
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Type List",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/types/"
+              },
+              "next": {
+                "title": "eventCenter",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/eventCenter/"
+              }
+            },
+            {
               "unversionedId": "Web3MQ-SDK/JS-SDK/types/types",
               "id": "Web3MQ-SDK/JS-SDK/types/types",
               "title": "Type List",
@@ -1839,8 +1863,8 @@
                 "permalink": "/docs/Web3MQ-SDK/JS-SDK/utils/"
               },
               "next": {
-                "title": "eventCenter",
-                "permalink": "/docs/Web3MQ-SDK/JS-SDK/eventCenter/"
+                "title": "Standard List",
+                "permalink": "/docs/Web3MQ-SDK/JS-SDK/standards/"
               }
             },
             {
@@ -3060,6 +3084,11 @@
                         "type": "doc",
                         "label": "TypeList",
                         "id": "Web3MQ-SDK/JS-SDK/types/types"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "StandardList",
+                        "id": "Web3MQ-SDK/JS-SDK/standards/standards"
                       },
                       {
                         "type": "doc",

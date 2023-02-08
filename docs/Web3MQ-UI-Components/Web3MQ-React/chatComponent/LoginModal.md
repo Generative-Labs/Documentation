@@ -139,8 +139,14 @@ code={<UseAccountMdx />}>
 | keys             | Set the user master key pair for skipping the login signature operation | [MainKeysType](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal#mainkeystype)       | undefined         |  false   |
 | modalClassName   | set the dialog class selector                                           | String                                                                                              |   ""              |  false   |
 | style            | set your custom style                                                   | React.CSSProperties                                                                                 |   null            |  false   |
-| handleLoginEvent | Callback when login or register                                         | (eventData: {type: [LoginEventType](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal#logineventtype),msg: string,data: [LoginResType](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal#logineventdatatype) \| [RegisterResType](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal#registerrestype) \| null}) => void   |   -     |  true   |
+| handleLoginEvent | Callback when login or register                                         | (eventData: [LoginEventDataType](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal#logineventdatatype)) => void   |   -     |  true   |
 
+### LoginEventDataType
+| Property | Description          | Type      | Default | required |
+| -------- | -------------------- | --------- | ------- | -------- |
+| type     | Callback return type |[LoginEventType](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal#logineventtype)|   -     |   true   |
+| msg      | Callback return msg  | string    |   ''    |   true   |
+| data     | Callback return data |[LoginResType](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal#logineventdatatype) \| [RegisterResType](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal#registerrestype) \| null|   -     |   true   |
 ### LoginResType
 | Property             | Description                               | Type      | Default | required |
 | -------------------- | ----------------------------------------- | --------- | ------- | -------- |

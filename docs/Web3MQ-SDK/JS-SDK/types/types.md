@@ -23,42 +23,40 @@ position: 7
 | size       |  number        |    -       | number of data items per page |  20          |
 
 ### KeyPairsType
-| name         | type           | format     | desc                                      | eg           |
-| ------------ | -------------- | ---------- | ----------------------------------------- | ------------ |
-| PrivateKey   |  string        |    -       | temporary private key of the current user |              |
-| PublicKey    |  string        |    -       | temporary public key of the current user  |              |
-| userid       |  string        |    -       | id of the current user                    |  'user: xxx' |
+| name         | type           | format                                                                        | desc                                      | eg           |
+| ------------ | -------------- | ----------------------------------------------------------------------------- | ----------------------------------------- | ------------ |
+| PrivateKey   |  string        | [temporaryPrivateKey](/docs/Web3MQ-SDK/JS-SDK/standards/#temporaryprivatekey) | temporary private key of the current user |              |
+| PublicKey    |  string        | [temporaryPublicKey](/docs/Web3MQ-SDK/JS-SDK/standards/#temporarypublickey)   | temporary public key of the current user  |              |
+| userid       |  string        | [userid](/docs/Web3MQ-SDK/JS-SDK/standards/#userid)                           | id of the current user                    |  'user: xxx' |
 
 ### DidType
-| name        | type                 | format     | desc                        | eg                        |
-| ----------- | -------------------- | ---------- | --------------------------- | ------------------------  |
-| didType     | "eth" \| "starknet"  |     -      | did type                    |  "eth" or "starknet"      |
+| name        | type                 | format                                                | desc                        | eg                        |
+| ----------- | -------------------- | ----------------------------------------------------- | --------------------------- | ------------------------  |
+| didType     | "eth" \| "starknet"  | [didType](/docs/Web3MQ-SDK/JS-SDK/standards/#didtype) | did type                    |  "eth" or "starknet"      |
 
 ### DidValue
-| name        | type                 | format     | desc                                | eg                        |
-| ----------- | -------------------- | ---------- | ----------------------------------- | ------------------------  |
-| didValue    | string               |     -      | address corresponding to `didType`  |  "0x000000"               |
+| name        | type      | format                                                  | desc                                         | eg                        |
+| ----------- | --------- | ------------------------------------------------------- | -------------------------------------------- | ------------------------  |
+| didValue    | string    | [didValue](/docs/Web3MQ-SDK/JS-SDK/standards/#didvalue) | The account address corresponding to didType |  "0x000000"               |
 
 ### WalletType
-| name        | type                 | format     | desc                        | eg                        |
-| ----------- | -------------------- | ---------- | --------------------------- | ------------------------  |
-| WalletType  | "eth" \| "starknet"  |     -      | wallet address              |  "eth" or "starknet"      |
+| name        | type                 | format                                                      | desc                        | eg                        |
+| ----------- | -------------------- | ----------------------------------------------------------- | --------------------------- | ------------------------  |
+| WalletType  | "eth" \| "starknet"  |[walletType](/docs/Web3MQ-SDK/JS-SDK/standards/#wallet-type) | wallet address              |  "eth" or "starknet"      |
 
 ### AccountType
-| name          | type           | format     | desc                                       | eg           |
-| ------------- | -------------- | ---------- | ------------------------------------------ | ------------ |
-| address       |  string        |     -      | wallet address of the current user         | '0x000000'   |
-| balance       |  number        |     -      | current user's wallet balance              |  0           |
-| shortAddress  |  string        |     -      | the current user wallet address is omitted |  '0x00...00' |
+| name          | type           | format                                                       | desc                                       | eg           |
+| ------------- | -------------- | ------------------------------------------------------------ | ------------------------------------------ | ------------ |
+| address       |  string        | [walletAddress](/docs/Web3MQ-SDK/JS-SDK/standards/#wallet-address) | wallet address of the current user         | '0x000000'   |
 
 ### InitOptions
 | name          | type           | format           | desc                                                                                                                  | eg                                      |
 | ------------- | -------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------   | --------------------------------------- |
 | app_key       |  string        |       -          | temporary authorization key obtained by applying                                                                      |                                         |
-| connectUrl    |  string \| null |       -          | takes in a valid endpoint url as input, when this paramter is given, client will always connect to that specific node | `https://testnet-ap-jp-2.web3mq.com`   |
+| connectUrl    | string \| null | [Web3MQAPiEndpoints](/docs/Web3MQ-SDK/JS-SDK/standards/#web3mq-api-endpoints) | takes in a valid endpoint url as input, when this paramter is given, client will always connect to that specific node| `https://testnet-ap-jp-2.web3mq.com`    |
 | didKey        |  string        | [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype):[didvalue](/docs/Web3MQ-SDK/JS-SDK/types/#didvalue) | didType and didValue collection                                                                             |  'eth:0x000000'                         |
-| env           |  [EnvTypes](/docs/Web3MQ-SDK/JS-SDK/types/#envtypes) |       -          | network environment                                                                                                   |  'test'                           |
-| tempPubkey    |  string        |       -          | temporary public key of the current user                                                                              |                                         |
+| env           |  [EnvTypes](/docs/Web3MQ-SDK/JS-SDK/types/#envtypes) |       -          | network environment                                                             |  'test'                                 |
+| tempPubkey    |  string        | [temporaryPublicKey](/docs/Web3MQ-SDK/JS-SDK/standards/#temporary-publickey) | temporary public key of the current user                                    |                                         |
 
 ### SendTempConnectOptions
 | name               | type           | format     | desc                                       | eg           |
@@ -73,11 +71,11 @@ position: 7
 | type     | "createQrcode" \| "connect" \| "messageStatus" \| "keys" \| "dapp-connect" |     -      | Callback return type        | "connect"    |
 
 ### GetUserInfoParams
-| name       | type                                               | format     | desc                                  | eg                        |
-| ---------- | -------------------------------------------------- | ---------- | ------------------------------------- | ------------------------  |
-| didType    | [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype)  |     -      | did type                              | "eth"                     |
-| didValue   | [didvalue](/docs/Web3MQ-SDK/JS-SDK/types/#didvalue)|     -      | did value,for example, wallet address | "0x000000"                |
-| timestamp  |  number                                            |     -      | time stamp                            | Date.now()                |
+| name      | type                                               | format                                                | desc                                  | eg                        |
+| --------- | -------------------------------------------------- | ----------------------------------------------------- | ------------------------------------- | ------------------------  |
+| didType   | [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype)  |[didType](/docs/Web3MQ-SDK/JS-SDK/standards/#didtype)  | did type                              | "eth"                     |
+| didValue  | [didValue](/docs/Web3MQ-SDK/JS-SDK/types/#didvalue)|[didValue](/docs/Web3MQ-SDK/JS-SDK/standards/#didvalue)| did value,for example, wallet address | "0x000000"                |
+| timestamp |  number                                            |                     -                                 | time stamp                            | Date.now()                |
 
 ### EnvTypes
 | name       | type                                   | format     | desc                        | eg                        |
@@ -138,9 +136,9 @@ position: 7
 | follow_status |  [FollowStatus](/docs/Web3MQ-SDK/JS-SDK/types/#followstatus)|     -      | follow status with contact       | "channel name"            |
 | nickname      |  string                   |     -      | nickname of contact                               |                            |
 | permissions   |  [UserPermissionsType](/docs/Web3MQ-SDK/JS-SDK/types/#userpermissionstype)  |     -      | permissions of contact    | {'user: chat': {type: "enum",value: "public"}}|
-| userid        |  string                   |     -      | userid of contact                                 | "user: xxx"               |
-| wallet_address|  string                   |     -      | wallet address of contact                         | "0x000000"                |
-| wallet_type   |  [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype) |     -      | wallet type of contact                | "eth" or "starknet" |
+| userid        |  string                   |[userid](/docs/Web3MQ-SDK/JS-SDK/standards/#userid)| userid of contact                                 | "user: xxx"               |
+| wallet_address|  string                   |[walletAddress](/docs/Web3MQ-SDK/JS-SDK/standards/#wallet-address)| wallet address of contact                         | "0x000000"                |
+| wallet_type   |  [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype) |[walletType](/docs/Web3MQ-SDK/JS-SDK/standards/#wallet-type)| wallet type of contact                | "eth" or "starknet" |
 
 ### FollowStatus
 | name          | type                                       | format     | desc                                              | eg                        |
@@ -148,24 +146,18 @@ position: 7
 | FollowStatus  | 'following' \| 'follower' \| 'follow_each' |     -      |  follow status type                               | "follow_each"             |
 
 ### FollowOperationParams
-| name          | type                                                    | format     | desc                                              | eg                        |
-| ------------- | ------------------------------------------------------- | ---------- | ------------------------------------------------- | ------------------------  |
-| address       | string                                                  |     -      |  wallet address                                   | "0x000000"                |
-| action        | "follow" \| "cancel"                                    |     -      |  follow or unfollow                               | "follow"                  |
-| didType       | [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype)       |     -      |  did type                                         | "eth"                     |
-| targetUserid  | string                                                  |     -      |  userid of the target user                        | "user:xxx"                |
+| name          | type                                                    | format                                                     | desc                                              | eg                        |
+| ------------- | ------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------- | ------------------------  |
+| address       | string                                                  |[walletAddress](/docs/Web3MQ-SDK/JS-SDK/standards/#wallet-address)|  wallet address                                   | "0x000000"                |
+| action        | "follow" \| "cancel"                                    |                        -                                   |  follow or unfollow                               | "follow"                  |
+| didType       | [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype)       |[didType](/docs/Web3MQ-SDK/JS-SDK/standards/#didtype)       |  did type                                         | "eth"                     |
+| targetUserid  | string                                                  |[userid](/docs/Web3MQ-SDK/JS-SDK/standards/#userid)         |  userid of the target user                        | "user:xxx"                |
 
 ### PublishNotificationToFollowersParams
 | name         | type             | format     | desc              | eg                        |
 | ------------ | ---------------- | ---------- | ----------------- | ------------------------  |
 | content      |  string          |     -      | published content |        -                  |
 | title        |  string          |     -      | published title   |        -                  |
-
-<!-- ### ActionType
-
-```ts
-export type ActionType = "agree";
-``` -->
 
 ### MessageStatus
 | name         | type                  | format     | desc              | eg              |
@@ -175,9 +167,9 @@ export type ActionType = "agree";
 ### MessageListItem
 | name           | type                  | format     | desc                   | eg  |
 | -------------- | --------------------- | ---------- | ---------------------- | --- |
-| cipher_suite   | string                |     -      | cipher                 |  -  |
-| from           | string                |     -      | message sender user id |  -  |
-| topic          | string                |     -      | current channel type   |  -  |
+| cipher_suite   | string                |     -      | Encryption Type        |"NONE"|
+| from           |[userid](/docs/Web3MQ-SDK/JS-SDK/standards/#userid)|     -      | message sender user id | "user: xxx" |
+| topic          | string                |     -      | current channel if   | "group: xxx"\| "user: xxx" |
 | from_sign      | string                |     -      | from signature         |  -  |
 | messageid      | string                |     -      | message id             |  -  |
 | payload_type   | string                |     -      | payload type           |  -  |
@@ -187,38 +179,37 @@ export type ActionType = "agree";
 | versions       | number                |     -      | versions               |  -  |
 
 ### SearchUsersResponse
-| name           | type      | format     | desc                        | eg                        |
-| -------------- | --------- | ---------- | --------------------------- | ------------------------  |
-| userid         |  string   |     -      | userid of user              | "user: xxx"               |
-| wallet_address |  string   |     -      | wallet address              | "0x000000"                |
-| wallet_type    | [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype)  |     -      | wallet type              | "eth" or "starknet"           |
+| name           | type                                                    | format                                                           | desc                          | eg                        |
+| -------------- | ------------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------ | ------------------------  |
+| userid         |  string                                                 |[userid](/docs/Web3MQ-SDK/JS-SDK/standards/#userid)               | userid of user              | "user: xxx"               |
+| wallet_address |  string                                                 |[walletAddress](/docs/Web3MQ-SDK/JS-SDK/standards/#wallet-address)| wallet address              | "0x000000"                |
+| wallet_type    | [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype) |[walletType](/docs/Web3MQ-SDK/JS-SDK/standards/#wallet-type)      | wallet type              | "eth" or "starknet"           |
 
 
 ### UpdateMyProfileResponse
-| name           | type      | format     | desc                        | eg                        |
-| -------------- | --------- | ---------- | --------------------------- | ------------------------  |
-| avatar_url     |  string   |     -      | avatar resource             | `https://www.xxx.com`     |
-| nickname       |  string   |     -      | nickname                    |      -                    |
-| userid         |  string   |     -      | userid of user              | "user:xxx"                |
-| wallet_address |  string   |     -      | wallet address              | "0x000000"                |
-| wallet_type    | [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype)   |     -      | userid of user              | "eth" or "starknet"       |
+| name           | type                                                   | format                                                     | desc                        | eg                        |
+| -------------- | ------------------------------------------------------ | ---------------------------------------------------------- | --------------------------- | ------------------------  |
+| avatar_url     |  string                                                |     -                                                      | avatar resource             | `https://www.xxx.com`     |
+| nickname       |  string                                                |     -                                                      | nickname                    |      -                    |
+| userid         |  string                                                |[userid](/docs/Web3MQ-SDK/JS-SDK/standards/#userid)         | userid of user              | "user:xxx"                |
+| wallet_address |  string                                                |[walletAddress](/docs/Web3MQ-SDK/JS-SDK/standards/#wallet-address)| wallet address              | "0x000000"                |
+| wallet_type    | [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype)|[walletType](/docs/Web3MQ-SDK/JS-SDK/standards/#wallet-type)| userid of user              | "eth" or "starknet"       |
 
 ### UserBindDidParams
-| name           | type                                                | format     | desc                                  | eg                        |
-| -------------- | --------------------------------------------------- | ---------- | ---------------------------------- -- | ------------------------  |
-| did_type       | [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype)   |     -      | did type                              |    "eth"                  |
-| did_value      | [didvalue](/docs/Web3MQ-SDK/JS-SDK/types/#didvalue) |     -      | did value,for example, wallet address |   "0x000000"              |
-| did_action     |  string                                             |     -      | action of did                         |       -                   |
-| did_content    |  string                                             |     -      | content of did                        |       -                   |
-| provider_id    |  string                                             |     -      | provider id                           |       -                   |
+| name           | type                                                | format                                                | desc                                  | eg                        |
+| -------------- | --------------------------------------------------- | ----------------------------------------------------- | ---------------------------------- -- | ------------------------  |
+| did_type       | [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype)   |[didType](/docs/Web3MQ-SDK/JS-SDK/standards/#didtype)  | did type                              |    "eth"                  |
+| did_value      | [didValue](/docs/Web3MQ-SDK/JS-SDK/types/#didvalue) |[didValue](/docs/Web3MQ-SDK/JS-SDK/standards/#didvalue)| did value,for example, wallet address |   "0x000000"              |
+| did_action     |  string                                             |                        -                              | action of did                         |       -                   |
+| did_content    |  string                                             |                        -                              | content of did                        |       -                   |
+| provider_id    | 'web3mq:lens.xyz'\| 'web3mq: email:SwapChat'\|'web3mq:sms:SwapChat'\|'web3mq:ens:SwapChat'\|'web3mq:dotbit:SwapChat' |                        -                              | provider id                           |     'web3mq:lens.xyz'    |
 
 ### UserBindDidIdsResponse
-| name           | type                                                | format     | desc                                  | eg                        |
-| -------------- | --------------------------------------------------- | ---------- | ------------------------------------- | ------------------------  |
-| did_type       | [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype)   |     -      | did type                              |    "eth"                  |
-| did_value      | [didvalue](/docs/Web3MQ-SDK/JS-SDK/types/#didvalue) |     -      | did value,for example, wallet address |   "0x000000"              |
-| provider_id    |  string                                             |     -      | provider id                           |       -                   |
-| metadata       |  any                                                |     -      |  metadata                             |       -                   |
+| name           | type                                                | format                                                | desc                                  | eg                        |
+| -------------- | --------------------------------------------------- | ----------------------------------------------------- | ------------------------------------- | ------------------------  |
+| did_type       | [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype)   |[didType](/docs/Web3MQ-SDK/JS-SDK/standards/#didtype)  | did type                              |    "eth"                  |
+| did_value      | [didValue](/docs/Web3MQ-SDK/JS-SDK/types/#didvalue) |[didValue](/docs/Web3MQ-SDK/JS-SDK/standards/#didvalue)| did value,for example, wallet address |   "0x000000"              |
+| provider_id    |'web3mq:lens.xyz' \| 'web3mq: email:SwapChat' \|'web3mq:sms:SwapChat'\|'web3mq:ens:SwapChat'\|'web3mq:dotbit:SwapChat'|                           -                           | provider id                           |     'web3mq:lens.xyz'     |
 
 ### UpdateUserPermissionsParams
 | name           | type      | format     | desc                        | eg                        |
@@ -230,7 +221,7 @@ export type ActionType = "agree";
 | --------- | --------- | ---------- | --------------------------- | ------------------------  |
 | title     |  string   |     -      | title of notification       |       -                   |
 | content   |  string   |     -      | content of notification     |       -                   |
-| type      |  string   |     -      | type of notification        |       -                   |
+| type      | "system.friend_request"\|"system.agree_friend_request"\|"system.group_invitation"\|"subscription"   |     -      | type of notification        |       -                   |
 | timestamp |  number   |     -      | time stamp of notification  |       -                   |
 | version   |  number   |     -      | version of notification     |       -                   |
 
@@ -263,113 +254,111 @@ export type ActionType = "agree";
 ### WalletSignRes
 | name      | type      | format     | desc                        | eg                        |
 | --------- | --------- | ---------- | --------------------------- | ------------------------  |
-| publicKey |  string   |     -      | temporary public key        |       -                   |
-| sign      |  string   |     -      | sign content                |       -                   |
+| publicKey |  string   |[temporaryPublicKey](/docs/Web3MQ-SDK/JS-SDK/standards/#temporarypublickey)| temporary public key        |       -                   |
+| sign      |  string   |[walletSign](/docs/Web3MQ-SDK/JS-SDK/standards/#wallet-sign)| wallet sign                 |       -                   |
 
 ### GetMainKeypairParams
-| name      | type      | format     | desc                        | eg                        |
-| --------- | --------- | ---------- | --------------------------- | ------------------------  |
-| did_type  | [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype)    |     -      | did type      |    "eth"        |
-| did_value |  string   |     -      | wallet address              |    "0x000000"             |
-| password  |  string   |     -      | password of user            |       -                   |
+| name      | type                                              | format                                                | desc                        | eg                        |
+| --------- | ------------------------------------------------- | ----------------------------------------------------- | --------------------------- | ------------------------  |
+| did_type  | [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype) |[didType](/docs/Web3MQ-SDK/JS-SDK/standards/#didtype)  | did type                    |    "eth"                  |
+| did_value |[didValue](/docs/Web3MQ-SDK/JS-SDK/types/#didvalue)|[didValue](/docs/Web3MQ-SDK/JS-SDK/standards/#didvalue)| wallet address              |    "0x000000"             |
+| password  |  string                                           |                          -                            | password of user            |       -                   |
 
 ### GetRegisterSignContentParams
-| name                  | type                                                 | format     | desc                                 | eg                        |
-| --------------------- | ---------------------------------------------------- | ---------- | ------------------------------------ | ------------------------  |
-| didType               | [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype)    |     -      | did type                             |    "eth"                  |
-| didValue              | [didvalue](/docs/Web3MQ-SDK/JS-SDK/types/#didvalue)  |     -      | did value,for example, wallet address|      "0x000000"           |
-| mainPublicKey         |  string                                              |     -      | master public key                    |        -                  |
-| signContentURI        |  string                                              |     -      | content url of sign                  |        -                  |
-| userid                |  string                                              |     -      | useid of user                        |     "user:xxx"            |
+| name                  | type                                                 | format                                                | desc                                 | eg                        |
+| --------------------- | ---------------------------------------------------- | ----------------------------------------------------- | ------------------------------------ | ------------------------  |
+| didType               | [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype)    |[didType](/docs/Web3MQ-SDK/JS-SDK/standards/#didtype)  | did type                             |    "eth"                  |
+| didValue              | [didValue](/docs/Web3MQ-SDK/JS-SDK/types/#didvalue)  |[didValue](/docs/Web3MQ-SDK/JS-SDK/standards/#didvalue)| did value,for example, wallet address|      "0x000000"           |
+| mainPublicKey         |  string                                              |[PublicKey](/docs/Web3MQ-SDK/JS-SDK/standards/#master-publickey)| master public key                    |        -                  |
+| signContentURI        |  string                                              |                          -                            | url of the current page              |  window.location.origin   |
+| userid                |  string                                              |[userid](/docs/Web3MQ-SDK/JS-SDK/standards/#userid)    | useid of user                        |     "user:xxx"            |
 
 ### GetSignContentResponse
 | name        | type      | format     | desc                        | eg                        |
 | ----------- | --------- | ---------- | --------------------------- | ------------------------  |
-| signContent |  string   |     -      | conent of sign              |        -                  |
+| signContent |  string   |[signContent](/docs/Web3MQ-SDK/JS-SDK/standards/#sign-content)|    content of sign          |        -                  |
 
 ### DappConnectSignParams
 
-| name        | type                                               | format     | desc                                  | eg                        |
-| ----------- | -------------------------------------------------- | ---------- | ------------------------------------- | ------------------------  |
-| didValue    | [didvalue](/docs/Web3MQ-SDK/JS-SDK/types/#didvalue)|     -      | did value,for example, wallet address |      "0x000000"           |
-| signContent |  string                                            |     -      | conent of sign                        |        -                  |
-| signType    |  string                                            |     -      | type of sign                          |        -                  |
+| name        | type                                               | format                                                | desc                                  | eg                        |
+| ----------- | -------------------------------------------------- | ----------------------------------------------------- | ------------------------------------- | ------------------------  |
+| didValue    | [didValue](/docs/Web3MQ-SDK/JS-SDK/types/#didvalue)|[didValue](/docs/Web3MQ-SDK/JS-SDK/standards/#didvalue)| did value,for example, wallet address |      "0x000000"           |
+| signContent |  string                                            |[signContent](/docs/Web3MQ-SDK/JS-SDK/standards/#sign-content) | conent of sign                        |        -                  |
+| signType    |'get_Keys_For_Login' \| 'get_keys_For_Register' \| 'register'  |                             -                         | type of sign                          |    'register'          |
 
 ### Web3MQBridgeOptions
 | name               | type           | format     | desc                                       | eg           |
 | ------------------ | -------------- | ---------- | ------------------------------------------ | ------------ |
 | dAppID             |  string        |     -      | dApp id of user                            |      -       |
-| nodeID             |  string        |     -      | node id                                    |      -       |
-| wsUrl              |  string        |     -      | ws url of Web3MQ nodes                     | `wss://testnet-ap-aj-2.web3mq.com/` |
+| wsUrl              |  string        |[Web3mqApiEndpoints](/docs/Web3MQ-SDK/JS-SDK/standards/#web3mq-api-endpoints)| ws url of Web3MQ nodes                     | `wss://testnet-ap-aj-2.web3mq.com/` |
 
 ### LoginByKeysParams
-| name                  | type                                                | format     | desc                        | eg                        |
-| --------------------- | --------------------------------------------------- | ---------- | --------------------------- | ------------------------  |
-| didType               | [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype)   |     -      | did type                    |    "eth"                  |
-| didValue              | [didvalue](/docs/Web3MQ-SDK/JS-SDK/types/#didvalue) |     -      |did value,for example, wallet address|      "0x000000"           |
-| mainPrivateKey        |  string                                             |     -      | master private key          |        -                  |
-| mainPublicKey         |  string                                             |     -      | master public key           |        -                  |
-| password              |  string                                             |     -      | Login password              |        -                  |
-| pubkeyExpiredTimestamp|  number                                             |     -      | the expiration time of the temporary key pair |        -                  |
-| userid                |  string                                             |     -      | useid of user               |       "user:xxx"          |
+| name                  | type                                                | format                                                | desc                                          | eg                        |
+| --------------------- | --------------------------------------------------- | ----------------------------------------------------- | --------------------------------------------- | ------------------------  |
+| didType               | [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype)   |[didType](/docs/Web3MQ-SDK/JS-SDK/standards/#didtype)  | did type                                      |    "eth"                  |
+| didValue              | [didValue](/docs/Web3MQ-SDK/JS-SDK/types/#didvalue) |[didValue](/docs/Web3MQ-SDK/JS-SDK/standards/#didvalue)|did value,for example, wallet address          |      "0x000000"           |
+| mainPrivateKey        |  string                                             |[PrivateKey](/docs/Web3MQ-SDK/JS-SDK/standards/#master-privatekey)| master private key                            |        -                  |
+| mainPublicKey         |  string                                             |[PublicKey](/docs/Web3MQ-SDK/JS-SDK/standards/#master-publickey)| master public key                             |        -                  |
+| password              |  string                                             |                   -                                   | Login password                                |        -                  |
+| pubkeyExpiredTimestamp|  number                                             |                   -                                   | the expiration time of the temporary key pair |        -                  |
+| userid                |  string                                             |[userid](/docs/Web3MQ-SDK/JS-SDK/standards/#userid)    | useid of user                                 |       "user:xxx"          |
 
 ### RegisterBySignParams
-| name                  | type      | format     | desc                        | eg                        |
-| --------------------- | --------- | ---------- | --------------------------- | ------------------------  |
-| avatar_base64         |  string   |     -      | avatar resource is in base64 format |        -                  |
-| avatar_url            |  string   |     -      | avatar resource             |        -                  |
-| did_pubkey            |  string   |     -      | temporary public key        |        -                  |
-| didType               | [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype)   |     -      | did type                             |    "eth"                 |
-| didValue              | [didvalue](/docs/Web3MQ-SDK/JS-SDK/types/#didvalue) |     -      | did value,for example, wallet address|     "0x000000"           |
-| mainPublicKey         |  string   |     -      | master public key           |        -                  |
-| nickname              |  string   |     -      | nickname                    |        -                  |
-| signature             |  string   |     -      | content of sign             |        -                  |
-| signContentURI        |  string   |     -      | content url of sign         |        -                  |
-| userid                |  string   |     -      | useid of user               |     "user:xxx"            |
+| name             | type                                                | format                                                | desc                                 | eg                        |
+| ---------------- | --------------------------------------------------- | ----------------------------------------------------- | ------------------------------------ | ------------------------  |
+| avatar_base64    |  string                                             |     -                                                 | avatar resource is in base64 format  |        -                  |
+| avatar_url       |  string                                             |     -                                                 | avatar resource                      |        -                  |
+| did_pubkey       |  string                                             |[temporaryPublicKey](/docs/Web3MQ-SDK/JS-SDK/standards/#temporarypublickey)| temporary public key                 |        -                  |
+| didType          | [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype)   |[didType](/docs/Web3MQ-SDK/JS-SDK/standards/#didtype)  | did type                             |    "eth"                  |
+| didValue         | [didValue](/docs/Web3MQ-SDK/JS-SDK/types/#didvalue) |[didValue](/docs/Web3MQ-SDK/JS-SDK/standards/#didvalue)| did value,for example, wallet address|     "0x000000"            |
+| mainPublicKey    |  string                                             |[PublicKey](/docs/Web3MQ-SDK/JS-SDK/standards/#master-publickey)| master public key                    |        -                  |
+| nickname         |  string                                             |     -                                                 | nickname                             |        -                  |
+| signature        |  string                                             |[signature](/docs/Web3MQ-SDK/JS-SDK/standards/#wallet-sign)| content of sign                      |        -                  |
+| userid           |  string                                             |[userid](/docs/Web3MQ-SDK/JS-SDK/standards/#userid)    | useid of user                        |     "user:xxx"            |
 
 ### RegisterApiResponse
-| name           | type                                                | format     | desc                                  | eg                        |
-| ----------- -- | --------------------------------------------------- | ---------- | ------------------------------------- | ------------------------  |
-| did_type       | [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype)   |     -      | did type                              |    "eth"                  |
-| did_value      | [didvalue](/docs/Web3MQ-SDK/JS-SDK/types/#didvalue) |     -      | did value,for example, wallet address |   "0x000000"              |
-| userid         |  string                                             |     -      | useid of user                         |    "user:xxx"             |
+| name           | type                                                | format                                                | desc                                  | eg                        |
+| ----------- -- | --------------------------------------------------- | ----------------------------------------------------- | ------------------------------------- | ------------------------  |
+| did_type       | [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype)   |[didType](/docs/Web3MQ-SDK/JS-SDK/standards/#didtype)  | did type                              |    "eth"                  |
+| did_value      | [didValue](/docs/Web3MQ-SDK/JS-SDK/types/#didvalue) |[didValue](/docs/Web3MQ-SDK/JS-SDK/standards/#didvalue)| did value,for example, wallet address |   "0x000000"              |
+| userid         |  string                                             | [userid](/docs/Web3MQ-SDK/JS-SDK/standards/#userid)   | useid of user                         |    "user:xxx"             |
 
 ### LoginResponse
 | name                  | type      | format     | desc                        | eg                        |
 | --------------------- | --------- | ---------- | --------------------------- | ------------------------  |
-| mainPrivateKey        |  string   |     -      | master private key          |        -                  |
-| mainPublicKey         |  string   |     -      | master public key           |        -                  |
-| tempPrivateKey        |  string   |     -      | temporary private key       |        -                  |
-| tempPublicKey         |  string   |     -      | temporary public key        |        -                  |
+| mainPrivateKey        |  string   |[PrivateKey](/docs/Web3MQ-SDK/JS-SDK/standards/#master-privatekey)| master private key          |        -                  |
+| mainPublicKey         |  string   |[PublicKey](/docs/Web3MQ-SDK/JS-SDK/standards/#master-publickey)| master public key           |        -                  |
+| tempPrivateKey        |  string   |[temporaryPrivateKey](/docs/Web3MQ-SDK/JS-SDK/standards/#temporaryprivatekey)| temporary private key       |        -                  |
+| tempPublicKey         |  string   |[temporaryPublicKey](/docs/Web3MQ-SDK/JS-SDK/standards/#temporarypublickey)| temporary public key        |        -                  |
 | pubkeyExpiredTimestamp|  number   |     -      | the expiration time of the temporary key pair |        -                  |
 
 ### GetUserInfoResponse
 
-| name        | type      | format     | desc                        | eg                        |
-| ----------- | --------- | ---------- | --------------------------- | ------------------------  |
-| userid      |  string   |     -      | useid of user               |      "user:xxx"           |
-| userExist   |  boolean  |     -      | whether the user exists     |       true                |
+| name        | type      | format                                            | desc                        | eg                        |
+| ----------- | --------- | ------------------------------------------------- | --------------------------- | ------------------------  |
+| userid      |  string   |[userid](/docs/Web3MQ-SDK/JS-SDK/standards/#userid)| useid of user               |      "user:xxx"           |
+| userExist   |  boolean  |     -                                             | whether the user exists     |       true                |
 
 ### MainKeypairType
-| name            | type      | format     | desc                        | eg                        |
-| --------------- | --------- | ---------- | --------------------------- | ------------------------  |
-| secretKey       |  string   |     -      | master private key          |        -                  |
-| publicKey       |  string   |     -      | master public key           |        -                  |
+| name            | type      | format                                                           | desc                        | eg                        |
+| --------------- | --------- | ---------------------------------------------------------------- | --------------------------- | ------------------------  |
+| secretKey       |  string   |[PrivateKey](/docs/Web3MQ-SDK/JS-SDK/standards/#master-privatekey)| master private key          |        -                  |
+| publicKey       |  string   |[PublicKey](/docs/Web3MQ-SDK/JS-SDK/standards/#master-publickey)  | master public key           |        -                  |
 
 ### ResetPasswordParams
-| name           | type                                                | format     | desc                                  | eg                        |
-| -------------- | --------------------------------------------------- | ---------- | ------------------------------------- | ------------------------  |
-| avatar_base64  |  string                                             |     -      | avatar resource is in base64 format   |        -                  |
-| avatar_url     |  string                                             |     -      | avatar resource                       |        -                  |
-| did_type       | [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype)   |     -      | did type                              |    "eth"                  |
-| did_value      | [didvalue](/docs/Web3MQ-SDK/JS-SDK/types/#didvalue) |     -      | did value,for example, wallet address |   "0x000000"              |
-| nickname       |  string                                             |     -      | nickname                              |        -                  |
-| password       |  string                                             |     -      | Login password                        |        -                  |
-| signature      |  string                                             |     -      | content of sign                       |        -                  |
-| userid         |  string                                             |     -      | useid of user                         |     "user:xxx"            |
+| name           | type                                                | format                                                | desc                                  | eg                        |
+| -------------- | --------------------------------------------------- | ----------------------------------------------------- | ------------------------------------- | ------------------------  |
+| avatar_base64  |  string                                             |     -                                                 | avatar resource is in base64 format   |        -                  |
+| avatar_url     |  string                                             |     -                                                 | avatar resource                       |        -                  |
+| did_type       | [didType](/docs/Web3MQ-SDK/JS-SDK/types/#didtype)   |[didType](/docs/Web3MQ-SDK/JS-SDK/standards/#didtype)  | did type                              |    "eth"                  |
+| did_value      | [didValue](/docs/Web3MQ-SDK/JS-SDK/types/#didvalue) |[didValue](/docs/Web3MQ-SDK/JS-SDK/standards/#didvalue)| did value,for example, wallet address |   "0x000000"              |
+| nickname       |  string                                             |     -                                                 | nickname                              |        -                  |
+| password       |  string                                             |     -                                                 | Login password                        |        -                  |
+| signature      |  string                                             |[signature](/docs/Web3MQ-SDK/JS-SDK/standards/#wallet-sign) | content of sign                       |        -                  |
+| userid         |  string                                             |[userid](/docs/Web3MQ-SDK/JS-SDK/standards/#userid)    | useid of user                         |     "user:xxx"            |
 
 ### ResetPasswordResponse
-| name                  | type      | format     | desc                        | eg                        |
-| --------------------- | --------- | ---------- | --------------------------- | ------------------------  |
-| mainPrivateKey        |  string   |     -      | master private key          |        -                  |
-| mainPublicKey         |  string   |     -      | master public key           |        -                  |
+| name                  | type      | format                                                           | desc                        | eg                        |
+| --------------------- | --------- | ---------------------------------------------------------------- | --------------------------- | ------------------------  |
+| mainPrivateKey        |  string   |[PrivateKey](/docs/Web3MQ-SDK/JS-SDK/standards/#master-privatekey)| master private key          |        -                  |
+| mainPublicKey         |  string   |[PublicKey](/docs/Web3MQ-SDK/JS-SDK/standards/#master-publickey)  | master public key           |        -                  |

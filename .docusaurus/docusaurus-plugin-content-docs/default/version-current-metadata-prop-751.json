@@ -150,6 +150,12 @@
               },
               {
                 "type": "link",
+                "label": "StandardList",
+                "href": "/docs/Web3MQ-SDK/JS-SDK/standards/",
+                "docId": "Web3MQ-SDK/JS-SDK/standards/standards"
+              },
+              {
+                "type": "link",
                 "label": "Event Center",
                 "href": "/docs/Web3MQ-SDK/JS-SDK/eventCenter/",
                 "docId": "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter"
@@ -1216,6 +1222,12 @@
       "id": "Web3MQ-SDK/JS-SDK/signConnect/signConnect",
       "title": "SignConnect",
       "description": "Properties",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/JS-SDK/standards/standards": {
+      "id": "Web3MQ-SDK/JS-SDK/standards/standards",
+      "title": "Standard List",
+      "description": "DidType",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/JS-SDK/types/types": {

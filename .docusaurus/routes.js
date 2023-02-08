@@ -55,7 +55,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','60b'),
+    component: ComponentCreator('/docs','6c6'),
     routes: [
       {
         path: '/docs/Intro',
@@ -450,6 +450,12 @@ export default [
       {
         path: '/docs/Web3MQ-SDK/JS-SDK/signConnect/',
         component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/signConnect/','c3e'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/JS-SDK/standards/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/standards/','f8d'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
