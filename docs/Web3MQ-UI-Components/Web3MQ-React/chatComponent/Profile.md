@@ -18,10 +18,10 @@ code={<ProfileMdx />}>
 </Layout>
 
 ## API
-
-| Property     | Description                            | Type                | Default    |
-| ------------ | -------------------------------------- | ------------------- | ---------- |
-|  AvatarNode  | set the custom avatar part when appType is 'pc' | ReactNode           |    -       |
-|  isTab       | sets the display of the back button   | Boolean             |    -       |
-|  hasLogout   | set the display of exit button        | Boolean             |    -       |
-|  userInfo    | set userinfo                          | [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)      |    -       |
+### Profile
+| Property     | Description                            | Type                | Default    | required |
+| ------------ | -------------------------------------- | ------------------- | ---------- | -------- |
+|  AvatarNode  | set the custom avatar part when appType is 'pc' | ReactNode           |    -       |  false  |
+|  isTab       | sets the display of the back button   | Boolean             |    -       |  false  |
+|  hasLogout   | set the display of exit button        | Boolean             |    -       |  false  |
+|  userInfo    | set userinfo                          | [CommonUserInfoType](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#commonuserinfotype)  |    -       |  false  |

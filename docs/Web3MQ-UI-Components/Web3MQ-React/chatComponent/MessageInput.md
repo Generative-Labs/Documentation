@@ -2,11 +2,12 @@
 sidebar_position: 6
 ---
 # MessageInput
-The `MessageInput` component is a React Context provider that does not inject any UI. The `MessageInput` renders `ChatAutoComplete` component by default when it does not inject the Input as the props.
+The `MessageInput` component is a React Context provider that does not inject any UI. The `MessageInput` renders `ChatAutoComplete` component by default when it does not inject the Input as the props.`MessageInput`must be used in the `Chat` and `Channel` components.
 
 ## Basic Usage
-
-`MessageInput`must be used in the `Chat` and `Channel` components.
+:::tip
+If your channelList list is empty, you can create a chat room in [createChannel](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel) and select it to send messages.
+:::
 
 import { Layout } from '@site/src/components/Layout'
 import { MessageInputExample } from '@site/src/components/Web3MQ-React/MessageInputExample';
@@ -22,7 +23,6 @@ code={<MessageInputExampleMdx />}>
 
 ## ChatAutoComplete component
 As the default render Input component of `MessageInpt`, `ChatAutoComplete` gets the `sendMessage` method through `useMessageInputContext`, and cannot be used without the `MessageInput` component.
-只能用于`MessageInput`使用
 
 ## Use Custom Input
 You can render the custom `Input` component by passing Input as props to the `MessageInput`.
@@ -37,25 +37,26 @@ code={<CustomInputExampleMdx />}>
 </Layout>
 
 ## API
-
+### MessageInput
 **The properties of the MessageInput are described as follows:**
 
-| Property | Description                               | Type                                      | Default |
-| -------- | ----------------------------------------- | ----------------------------------------- | ------- |
-|  Input   | set your custom `Input` component         | React.ComponentType                       |   -     |
+| Property | Description                               | Type                                      | Default | required |
+| -------- | ----------------------------------------- | ----------------------------------------- | ------- | -------- |
+|  Input   | set your custom `Input` component         | React.ComponentType                       |   -     |  false   |
 
+### ChatAutoComplete
 **The properties of the ChatAutoComplete are described as follows:**
 
-| Property    | Description        | Type     | Default          |
-| ----------- | ------------------ | -------- | ---------------- |
-| placeholder | set the placeholder| String   | 'Send a Message’ |
-| row         | adaptive content height | Number   |      1           |
-| value       | input content      | String   |     ‘’           |
-| onChange    | callback when the contents of the input change | Function |      -           |
+| Property    | Description        | Type     | Default          | required |
+| ----------- | ------------------ | -------- | ---------------- | -------- |
+| placeholder | set the placeholder| String   | 'Send a Message’ |   false  |
+| row         | adaptive content height | Number   |      1           |   false  |
+| value       | input content      | String   |     ‘’           |   false  |
+| onChange    | callback when the contents of the input change | Function |      -           |   false  |
 
 
-**useMessageInputContext data**
+### useMessageInputContext data
 
-| Property      | Description                            | Type              | Default |
-| ------------- | -------------------------------------- | ----------------- | ------- |
-| sendMessage   |    Sending message method              | Function          |   -     |
+| Property      | Description                            | Type              | Default | required |
+| ------------- | -------------------------------------- | ----------------- | ------- | -------- |
+| sendMessage   |    Sending message method              | Function          |   -     |     -    |

@@ -1,0 +1,44 @@
+```tsx
+import React, { useEffect } from 'react';
+import { Client } from '@web3mq/client';
+import { 
+  AppTypeEnum, 
+  Button,
+  Chat, 
+  NotificationList
+} from '@web3mq/react-components';
+
+import useLogin from './hooks/useLogin';
+
+export const NotificationListExample: React.FC = () => {
+  const { keys, fastestUrl, init, logout, handleLoginEvent } = useLogin();
+
+  useEffect(() => {
+    init();
+    document.body.setAttribute('data-theme', 'light');
+  }, [])
+
+  if (!keys) {
+    return (
+       <LoginModal 
+        appType={AppTypeEnum.pc}
+        handleLoginEvent={handleLoginEvent}
+        loginBtnNode={<Button size='large' type='ghost'>login</Button>}
+      />
+    );
+  }
+  if (!fastestUrl) {
+    return null;
+  }
+
+  const client = Client.getInstance(keys);
+
+  return (
+    <div id='box' style={{position: 'relative'}}>
+      <Chat client={client} appType={AppTypeEnum['h5']} logout={logout}>
+        <NotificationList />
+      </Chat>
+    </div>
+  );
+};
+```

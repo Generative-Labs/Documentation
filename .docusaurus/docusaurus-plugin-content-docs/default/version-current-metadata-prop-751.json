@@ -150,6 +150,12 @@
               },
               {
                 "type": "link",
+                "label": "StandardList",
+                "href": "/docs/Web3MQ-SDK/JS-SDK/standards/",
+                "docId": "Web3MQ-SDK/JS-SDK/standards/standards"
+              },
+              {
+                "type": "link",
                 "label": "Event Center",
                 "href": "/docs/Web3MQ-SDK/JS-SDK/eventCenter/",
                 "docId": "Web3MQ-SDK/JS-SDK/eventCenter/eventCenter"
@@ -633,9 +639,21 @@
                   },
                   {
                     "type": "link",
+                    "label": "NotificationList",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/NotificationList",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/NotificationList"
+                  },
+                  {
+                    "type": "link",
                     "label": "Notify",
                     "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify",
                     "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Notification",
+                    "href": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notification",
+                    "docId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notification"
                   },
                   {
                     "type": "link",
@@ -813,7 +831,7 @@
     "Intro": {
       "id": "Intro",
       "title": "Intro",
-      "description": "Web3MQ is a decentralized secure communication protocol dedicated to becoming crypto-native communication infrastructure. We reconnect isolated social platforms with a unified inbox, enabling information to be freely generated, flowed and communicated across terminals. We support end-to-end encrypted communication with distributed storage, ensuring that no third party can access users' chat messages and that users have full ownership of their data.",
+      "description": "<!-- # Intro",
       "sidebar": "tutorialSidebar"
     },
     "Tutorials/dotbit/dotbit": {
@@ -1206,6 +1224,12 @@
       "description": "Properties",
       "sidebar": "tutorialSidebar"
     },
+    "Web3MQ-SDK/JS-SDK/standards/standards": {
+      "id": "Web3MQ-SDK/JS-SDK/standards/standards",
+      "title": "Standard List",
+      "description": "DidType",
+      "sidebar": "tutorialSidebar"
+    },
     "Web3MQ-SDK/JS-SDK/types/types": {
       "id": "Web3MQ-SDK/JS-SDK/types/types",
       "title": "Type List",
@@ -1281,7 +1305,7 @@
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel",
       "title": "Channel",
-      "description": "The Channel component is a React Context provider that wraps all of the logic, functionality, and UI for an individual chat channel. It provides five separate contexts to its children:",
+      "description": "The Channel component is a React Context provider that wraps all of the logic, functionality, and UI for an individual chat channel. It provides three separate contexts to its children:",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead": {
@@ -1299,7 +1323,7 @@
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat",
       "title": "Chat",
-      "description": "Basic Usage",
+      "description": "The Chat component is a React Context provider that wraps the entire Web3Mq Chat application. All chat Components within the @web3mq/react-components library must be nested as children of Chat to maintain proper functionality.",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ConnectMessage": {
@@ -1323,13 +1347,13 @@
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal",
       "title": "LoginModal",
-      "description": "LoginModal component implements login and registration operations,",
+      "description": "LoginModal component implements login and registration operations.",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole",
       "title": "MessageConsole",
-      "description": "MessageConsole is essentially a functional component that works with user permissions. It renders the input or button group based on the permissions of both users in the current chat.And can only be used in the chat component.",
+      "description": "MessageConsole is essentially a functional component that works with user permissions. It renders the content of input or operation based on the permissions of both users in the current chat, if both permissions are passed, render the input content; if permissions are not passed show the operation content for sending friend request and follow operation.And can only be used in the chat component.",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead": {
@@ -1341,13 +1365,25 @@
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageInput": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageInput",
       "title": "MessageInput",
-      "description": "The MessageInput component is a React Context provider that does not inject any UI. The MessageInput renders ChatAutoComplete component by default when it does not inject the Input as the props.",
+      "description": "The MessageInput component is a React Context provider that does not inject any UI. The MessageInput renders ChatAutoComplete component by default when it does not inject the Input as the props.MessageInputmust be used in the Chat and Channel components.",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList",
       "title": "MessageList",
-      "description": "The MessageList component renders a scrollable list of messages. The UI for each individual message is rendered conditionally based on its message.type value. The list renders date separators, new message notifications, system messages, deleted messages, and standard messages containing text and/or attachments.",
+      "description": "The MessageList component renders a scrollable list of messages. The UI for each individual message is rendered conditionally based on its message.type value. The list renders date separators, new message notifications, system messages, and standard messages containing text.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notification": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notification",
+      "title": "Notification",
+      "description": "The Notification is a component for detailed display of notification content, show content when activeNotification is set.Currently only when the notification type is system.friend_request will show the corresponding style, the future will be more extended. And must be nested as children of Chat to maintain proper functionality.This component does not need to pass any props.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/Web3MQ-React/chatComponent/NotificationList": {
+      "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/NotificationList",
+      "title": "NotificationList",
+      "description": "NotificationList, which renders the current list when other users send you friend requests, follow you, invite you to groups, subscribe to topics and post content. And must be nested as children of Chat to maintain proper functionality.",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Notify": {

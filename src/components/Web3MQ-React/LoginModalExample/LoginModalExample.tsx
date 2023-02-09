@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { Client } from '@web3mq/client';
+import { Client, WalletType } from '@web3mq/client';
 import { Chat, AppTypeEnum, Button, LoginModal } from '@web3mq/react-components';
 
 import useLogin from '../ChatExample/hooks/useLogin';
 
 import ss from './index.module.css';
 
-export const LoginModalExample: React.FC = () => {
+type UserAccountType = {
+  userid: string;
+  address: string;
+  walletType: WalletType;
+  userExist: boolean;
+};
+export const LoginModalExample: React.FC = (props: any) => {
   const { keys, fastestUrl, init, logout, handleLoginEvent } = useLogin();
   const [appType, setAppType] = useState(
     window.innerWidth <= 600 ? AppTypeEnum['h5'] : AppTypeEnum['pc'],
@@ -14,8 +20,9 @@ export const LoginModalExample: React.FC = () => {
   const handleAppType = () => {
     setAppType(window.innerWidth <= 600 ? AppTypeEnum['h5'] : AppTypeEnum['pc']);
   };
+
   useEffect(() => {
-    init();
+    init()
     document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
     window.addEventListener('resize', handleAppType);
     () => {
@@ -37,7 +44,7 @@ export const LoginModalExample: React.FC = () => {
     }
     return (
       <div 
-        id='box' 
+        id='loginModalBox'
         style={{
           position: 'relative', 
           display: 'flex',
@@ -50,7 +57,7 @@ export const LoginModalExample: React.FC = () => {
       >
         <LoginModal 
           appType={appType}
-          containerId='box'
+          containerId='loginModalBox'
           keys={mainKeys}
           isShow={true}
           modalClassName={ss.modalClassName}

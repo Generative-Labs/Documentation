@@ -19,15 +19,16 @@ code={<AvatarExampleMdx />}>
 
 ## API
 
+### Avatar
 **The properties of the Avatar are described as follows:**
 
-| Property     | Description                      | Type                                      | Default       |
-| ------------ | -------------------------------- | ----------------------------------------- | ------------- |
-|  className   | set class selector               | stirng                                    |   -           |
-|  image       | resource address of the image avatar  | string ｜ null                             |   -           |
-|  name        | the name of the image, used to set the title | string                                     |   -           |
-|  shape       | set the shape                    | ‘circle’ | 'rounded' | 'square’           | ‘circle’       |
-|  size        | set the size                     | number                                    |   32           |
-|  style       | set the style                    | React.CSSProperties                       |    -           |
-|  Onclick     | the callback when the avatar is clicked | (event: React.BaseSyntheticEvent) => void | () => undefined |
-|  OnMouseOver | the callback when the mouse hovers the avatar| (event: React.BaseSyntheticEvent) => void | () => undefined |
+| Property     | Description                      | Type                                      | Default       | required |
+| ------------ | -------------------------------- | ----------------------------------------- | ------------- | -------- |
+|  className   | set class selector               | string                                    |   -           |  false   |
+|  image       | resource address of the image avatar  | string ｜ null                             |   -           |  false   |
+|  name        | the name of the image, used to set the title | string                                     |   -           |  false   |
+|  shape       | set the shape                    | ‘circle’ \| 'rounded' \| 'square’         | ‘circle’       |  false   |
+|  size        | set the size                     | number                                    |   32           |  false   |
+|  style       | set the style                    | React.CSSProperties                       |    -           |  false   |
+|  Onclick     | the callback when the avatar is clicked | (event: React.BaseSyntheticEvent) => void | () => undefined |  false   |
+|  OnMouseOver | the callback when the mouse hovers the avatar| (event: React.BaseSyntheticEvent) => void | () => undefined |  false   |

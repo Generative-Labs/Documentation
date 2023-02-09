@@ -16,11 +16,11 @@ code={<PopoverMdx />}>
 </Layout>
 
 ## API
-
+### Popover
 **The properties of the Modal are Popover as follows:**
 
-| Property     | Description                      | Type                | Default    |
-| ------------ | -------------------------------- | ------------------- | ---------- |
-|  content     | content of the card              | ReactNode           |    -       |
-|  className   | set class selector               | string              |    -       |
-|  style       | set the style                    | React.CSSProperties |    -       |
+| Property     | Description                      | Type                | Default    | required |
+| ------------ | -------------------------------- | ------------------- | ---------- | -------- |
+|  content     | content of the card              | ReactNode           |    -       |  true    |
+|  className   | set class selector               | string              |    -       |  false   |
+|  style       | set the style                    | React.CSSProperties |    -       |  false   |

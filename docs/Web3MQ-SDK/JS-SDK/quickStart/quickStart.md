@@ -17,6 +17,10 @@ or
 yarn add @web3mq/client
 ```
 
+:::tip
+The webpack version in your React application needs to be above `5.0.0`, webpack `4.0.0` is not supported at the moment.
+:::
+
 <!-- ## Note
 
 :::caution
@@ -124,60 +128,64 @@ description='Get your userid and key pair.'
 import React, {useMemo, useState, useEffect} from "react";
 import {Client, KeyPairsType, WalletType} from "@web3mq/client";
 
-const password = '123456';
-const didType = 'eth' | 'starknet';
+const loginDemo = async () => {
+    const password = '123456';
+    const didType: WalletType = 'eth' // or 'starknet';
 
-// 1. connect wallet and get user 
-const {address} = await Client.register.getAccount(didType);
-const {userid, userExist} = await Client.register.getUserInfo({
-    did_value: didValue,
-    did_type: didType,
-});
-// 2. create main key pairs
-const {publicKey: localMainPublicKey, secretKey: localMainPrivateKey} = await Client.register.getMainKeypair({
-    password,
-    did_value: address,
-    did_type: walletType,
-});
-
-if (!userExist) {
-//    register func
-    const {signContent} = await Client.register.getRegisterSignContent({
-        userid,
-        mainPublicKey: publicKey,
-        didType: walletType,
-        didValue: address,
+// 1. connect wallet and get user
+    const {address: didValue} = await Client.register.getAccount(didType);
+    const {userid, userExist} = await Client.register.getUserInfo({
+        did_value: didValue,
+        did_type: didType,
     });
-    const {sign: signature, publicKey: did_pubkey = ""} =
-        await Client.register.sign(signContent, address, walletType);
-    const params = {
-        userid,
-        didValue: address,
-        mainPublicKey: publicKey,
-        did_pubkey,
-        didType: walletType,
-        nickname: "",
-        avatar_url: `https://cdn.stamp.fyi/avatar/${address}?s=300`,
-        signature,
-    };
-    const registerRes = await Client.register.register(params);
-    console.log(registerRes)
-}
+// 2. create main key pairs
+    const {publicKey: localMainPublicKey, secretKey: localMainPrivateKey} = await Client.register.getMainKeypair({
+        password,
+        did_value: didValue,
+        did_type: didType,
+    });
+
+    if (!userExist) {
+//    register func
+        const {signContent} = await Client.register.getRegisterSignContent({
+            userid,
+            mainPublicKey: localMainPublicKey,
+            didType,
+            didValue,
+        });
+        const {sign: signature, publicKey: did_pubkey = ""} =
+            await Client.register.sign(signContent, didValue, didType);
+        const params = {
+            userid,
+            didValue,
+            mainPublicKey: localMainPublicKey,
+            did_pubkey,
+            didType,
+            nickname: "",
+            avatar_url: `https://cdn.stamp.fyi/avatar/${didValue}?s=300`,
+            signature,
+        };
+        const registerRes = await Client.register.register(params);
+        console.log(registerRes)
+    }
 // login func
-const {
-    tempPrivateKey,
-    tempPublicKey,
-    pubkeyExpiredTimestamp,
-    mainPrivateKey,
-    mainPublicKey,
-} = await Client.register.login({
-    password,
-    mainPublicKey: localMainPublicKey,
-    mainPrivateKey: localMainPrivateKey,
-    userid,
-    didType,
-    didValue: address,
-});
+    const {
+        tempPrivateKey,
+        tempPublicKey,
+        pubkeyExpiredTimestamp,
+        mainPrivateKey,
+        mainPublicKey,
+    } = await Client.register.login({
+        password,
+        mainPublicKey: localMainPublicKey,
+        mainPrivateKey: localMainPrivateKey,
+        userid,
+        didType,
+        didValue,
+    });
+}
+
+loginDemo()
 ```
 
 #### login registration using react components
@@ -224,9 +232,7 @@ const App: React.FC = () => {
 
     useEffect(() => {
         init();
-        document
-            .getElementsByTagName("body")[0]
-            .setAttribute("data-theme", "light");
+        document.body.setAttribute("data-theme", "light");
     }, []);
     if (!fastestUrl) {
         return null;

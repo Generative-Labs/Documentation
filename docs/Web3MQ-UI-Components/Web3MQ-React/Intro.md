@@ -60,9 +60,10 @@ const useLogin = () => {
     localStorage.setItem('userid', '');
     setKeys(null);
   };
-
+  // Callback on login or registration
   const handleLoginEvent = (eventData: any) => {
     if (eventData.data) {
+      // when login
       if (eventData.type === 'login') {
         const {
           privateKey,
@@ -88,6 +89,7 @@ const useLogin = () => {
           userid,
         });
       }
+      // when register
       if (eventData.type === 'register') {
         const { privateKey, publicKey, address } = eventData.data;
         localStorage.setItem('WALLET_ADDRESS', address);
@@ -112,7 +114,11 @@ const client = Client.getInstance('YOUR_ACCESS_TOKEN');
 ```
 
 ## Your First App with Web3MQ React
-
+:::tip
+When using the `@web3mq/react-components` 
+>1. need to introduce css file of `@web3mq/react-components` firstly.
+>2. set the theme used, you need to set the `data-theme` attribute in the body, currently only `light` is a theme.
+:::
 ```tsx
 import React, { useState } from 'react';
 import {

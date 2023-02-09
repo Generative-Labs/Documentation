@@ -5,17 +5,19 @@ sidebar_position: 0
 # Intro
 
 Web3MQ Vue Component Libraries
-
+:::warning
+Due to `@web3mq/client` update iteration, `@web3mq/vue-components` is not synchronized to support the latest version, please go to [@web3mq/React-components](/docs/Web3MQ-UI-Components/Web3MQ-React/Intro) first
+:::
 ### Install with NPM
 
 ```bash
-npm install web3-mq-vue
+npm install @web3mq/vue-components
 ```
 
 ### Install with Yarn
 
 ```bash
-yarn add web3-mq-vue
+yarn add @web3mq/vue-components
 ```
 
 ## Creating a Web3MQ Client
@@ -46,6 +48,15 @@ code={<VueMdx />}>
 ```vue
 <script lang="ts" setup>
 import { Client } from '@web3mq/client';
+import {
+  Chat,
+  DashBoard,
+  Channel,
+  Window,
+  MessageHeader,
+  MessageList,
+  MessageInput,
+} from "@web3mq/vue-components";
 import { ref } from 'vue';
 
 // Use your own logic to decide which pattern to use

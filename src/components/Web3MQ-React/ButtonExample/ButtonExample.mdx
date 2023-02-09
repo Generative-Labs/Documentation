@@ -4,7 +4,7 @@ import { Button } from '@web3mq/react-components';
 
 export const App: React.FC = () => {
   useEffect(() => {
-    document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
+    document.body.setAttribute('data-theme', 'light')
   }, [])
   return (
     <div>

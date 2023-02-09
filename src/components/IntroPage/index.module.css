@@ -1,0 +1,187 @@
+.introHead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 214px;
+  background-image: url('../../../static/img/img_bg.jpg');
+  background-size: cover;
+  text-align: center;
+  /* background: linear-gradient(180deg, rgba(102, 60, 238, 0) 0%, #663CEE 100%), url(image.png), #663CEE; */
+}
+
+.introHead .title, .introHead .caption {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  color: #FFFFFF;
+}
+.introHead .title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 120%;
+  margin-bottom: 16px;
+}
+
+.introHead .caption {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.introMain {
+  width: 100%;
+  padding: 48px;
+  background: #FFFFFF;
+}
+
+.introMain > .titleOfWeb3MQ, .introMain > .titleOfGetStart {
+  width: 100%;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #18181B;
+  margin-bottom: 12px;
+}
+
+.introMain > .descriptOfWeb3MQ {
+  width: 100%;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #52525B;
+}
+.introMain > .titleOfGetStart {
+  margin-bottom: 24px;
+  margin-top: 48px;
+}
+.introMain > .quickStartTip {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background: url('../../../static/img/img.jpg');
+  background-size: cover;
+  border-left: 4px solid #663CEE ;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.quickStartTip > .tipBody {
+  display: flex;
+  flex-direction: column;
+}
+.tipBody > .title {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #18181B;
+  margin-bottom: 6px;
+}
+.tipBody > .description {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #52525B;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.cardContainer > div {
+  width: 32%;
+}
+
+.cardBox {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 24px;
+  border: 1px solid #F4F4F5;
+  box-shadow: 0px 4px 12px -3px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+}
+.cardhead {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.cardhead .cardTitle {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #18181B;
+  margin-left: 12px;
+}
+
+.cardDescription {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #52525B;
+}
+
+.cardLink {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: #663CEE;
+  cursor: pointer;
+}
+.cardLink:hover {
+  text-decoration: none;
+  color: #411CBA;
+}
+
+@media screen and (max-width: 768px) {
+  .introHead {
+    height: 100%;
+    min-height: 228px;
+    background-image: url('../../../static/img/img_mobile.jpg');
+  }
+  .introHead .title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .introHead .caption {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .introMain {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .introMain > .quickStartTip {
+    flex-direction: column;
+    padding: 20px;
+    align-items: flex-start;
+  }
+  .quickStartTip .tipBody {
+    margin-bottom: 12px;
+  }
+  .cardContainer {
+    flex-wrap: wrap;
+  }
+  .cardContainer > div {
+    width: 100%;
+  }
+}

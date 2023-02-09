@@ -22,7 +22,7 @@ const values = [
 ]
 export const RadioGroupExample: React.FC = () => {
    useEffect(() => {
-    document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
+    document.body.setAttribute('data-theme', 'light');
   }, [])
   const handleChange = (value) => {
     console.log(value, 'value')
