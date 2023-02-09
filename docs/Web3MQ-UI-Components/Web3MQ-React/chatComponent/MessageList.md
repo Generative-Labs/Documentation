@@ -6,15 +6,11 @@ The `MessageList` component renders a scrollable list of messages. The UI for ea
 
 By default, the `MessageList` loads the most recent 20 messages. More messages are fetched from the Chat API and loaded into the DOM on scrolling up the list. The currently loaded messages are held in the component state and can be referenced with our custom hook. 
 
-The `MessageList` has no required props and by default extracted overridable component from the various contexts established in the `Channel` component. Customization of the messages rendered within the list is handled by the `Message UI` component.
-
 ## Basic Usage
-
+The `MessageList` has no required props,  and as a context consumer, the `MessageList` component must be rendered as a child of the `Channel` component.You can customize the message content with `props` or `ComponentContext` and override the default style
 :::tip
 If your channelList list is empty, you can create a chat room in [createChannel](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel) and select it to send messages.
 :::
-
-As a context consumer, the `MessageList` component must be rendered as a child of the `Channel` component. It can be rendered with or without a provided `Message` prop. Providing your own `Message` will override the default value drawn from the `ComponentContext`.
 
 import { Layout } from '@site/src/components/Layout'
 import { MessageListExample } from '@site/src/components/Web3MQ-React/MessageListExample';

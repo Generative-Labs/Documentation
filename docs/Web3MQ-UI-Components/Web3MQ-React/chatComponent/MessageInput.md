@@ -23,7 +23,6 @@ code={<MessageInputExampleMdx />}>
 
 ## ChatAutoComplete component
 As the default render Input component of `MessageInpt`, `ChatAutoComplete` gets the `sendMessage` method through `useMessageInputContext`, and cannot be used without the `MessageInput` component.
-只能用于`MessageInput`使用
 
 ## Use Custom Input
 You can render the custom `Input` component by passing Input as props to the `MessageInput`.

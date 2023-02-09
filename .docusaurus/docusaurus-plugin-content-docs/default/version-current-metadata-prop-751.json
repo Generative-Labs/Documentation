@@ -1305,7 +1305,7 @@
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel",
       "title": "Channel",
-      "description": "The Channel component is a React Context provider that wraps all of the logic, functionality, and UI for an individual chat channel. It provides five separate contexts to its children:",
+      "description": "The Channel component is a React Context provider that wraps all of the logic, functionality, and UI for an individual chat channel. It provides three separate contexts to its children:",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead": {

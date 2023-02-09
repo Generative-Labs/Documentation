@@ -1,5 +1,5 @@
 ```tsx 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Client } from '@web3mq/client';
 import { 
   AppTypeEnum, 
@@ -20,14 +20,20 @@ import {
 import useLogin from './hooks/useLogin';
 
 const CustomInput: React.FC = () => {
+  const [value, setValue] = useState('');
   const { client } = useChatContext();
+  const { sendMessage } = useMessageInputContext();
   const handleClose = () => {
     client.channel.setActiveChannel(null);
   };
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
+  }
   return (
     <div style={{display: 'flex',padding: '13px', alignItems: 'center', boxShadow: '0 -12px 10px rgb(30 83 133 / 3%)'}}>
       <Button onClick={handleClose} style={{height: '100%', marginRight: '8px'}}>Back</Button>
-      <ChatAutoComplete />
+      <input value={value} onChange={onChange} />
+      <Button onClick={() => sendMessage(value)}>send</Button>
     </div>
   )
 };
