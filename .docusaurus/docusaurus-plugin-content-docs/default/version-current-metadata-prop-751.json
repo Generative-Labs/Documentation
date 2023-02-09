@@ -1353,7 +1353,7 @@
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageConsole",
       "title": "MessageConsole",
-      "description": "MessageConsole is essentially a functional component that works with user permissions. It renders the input or button group based on the permissions of both users in the current chat.And can only be used in the chat component.",
+      "description": "MessageConsole is essentially a functional component that works with user permissions. It renders the content of input or operation based on the permissions of both users in the current chat, if both permissions are passed, render the input content; if permissions are not passed show the operation content for sending friend request and follow operation.And can only be used in the chat component.",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageHead": {
@@ -1365,7 +1365,7 @@
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageInput": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageInput",
       "title": "MessageInput",
-      "description": "The MessageInput component is a React Context provider that does not inject any UI. The MessageInput renders ChatAutoComplete component by default when it does not inject the Input as the props.",
+      "description": "The MessageInput component is a React Context provider that does not inject any UI. The MessageInput renders ChatAutoComplete component by default when it does not inject the Input as the props.MessageInputmust be used in the Chat and Channel components.",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/MessageList": {

@@ -25,7 +25,7 @@ code={<ChatMdx />}>
 
 ## containerId
 
-Used to wrap a container around a `Chat` component.You need to pass the id selector for the container as the property to the `Chat` component,components from the `Web3-mq-react` will fit into the container.
+Used to wrap a container around a `Chat` component.You need to pass the container's unique id selector as a prop to the Chat component, and all child components in `chat` will adapt to that container
 
 :::tip
   The container style must set position is a property other than static
@@ -60,7 +60,7 @@ const { client } = useChatContext();
 | appType     | set viewport type of @web3mq/react-components     | [AppTypeEnum](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#apptypeenum)| AppTypeEnum["pc"] |   false  |
 | className   | set your custom className                         | string                                                                               |   ""              |   false  |
 | client      | chat Client Instance                              | [Client](/docs/Web3MQ-SDK/JS-SDK/client/)                                            |   -               |   true   |
-| containerId | set container Id of your @web3mq/react-components | string                                                                               |   ""              |   false  |
+| containerId | Set a unique id selector for the container wrapping `chat`| string                                                                               |   ""              |   false  |
 | style       | set your custom style                             | React.CSSProperties                                                                  |   null            |   false  |
 | logout      | set your exit method                              | Function                                                                             |   -               |   true   |
 
