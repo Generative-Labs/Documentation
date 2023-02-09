@@ -12,6 +12,9 @@ The `Channel` component is a React Context provider that wraps all of the logic,
 ## Basic Usage
 
 The `Channel` component does not inject any UI, so its implementation is fairly simple and can be handled in one of two ways, both with and without a `ChannelList` component. If you are using a `ChannelList`, do not add a `channel` object as a prop on `Channel`. However in the absence of a `ChannelList`, the `channel` prop is required. By default, the `ChannelList` sets the active `channel` object, which is then injected it into the `ChannelStateContext`, so manual prop passing is not required.
+:::tip
+If your channelList list is empty, you can create a chat room in [createChannel](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel).
+:::
 
 import { Layout } from '@site/src/components/Layout'
 import { ChannelExample } from '@site/src/components/Web3MQ-React/ChannelExample';

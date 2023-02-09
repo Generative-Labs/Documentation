@@ -14,7 +14,7 @@ The `MessageList` has no required props and by default extracted overridable com
 If your channelList list is empty, you can create a chat room in [createChannel](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel) and select it to send messages.
 :::
 
-As a context consumer, the `MessageList` component must be rendered as a child of the `Channel` component. It can be rendered with or without a provided `messages` prop. Providing your own `messages` value will override the default value drawn from the `ChannelStateContext`.
+As a context consumer, the `MessageList` component must be rendered as a child of the `Channel` component. It can be rendered with or without a provided `Message` prop. Providing your own `Message` will override the default value drawn from the `ComponentContext`.
 
 import { Layout } from '@site/src/components/Layout'
 import { MessageListExample } from '@site/src/components/Web3MQ-React/MessageListExample';

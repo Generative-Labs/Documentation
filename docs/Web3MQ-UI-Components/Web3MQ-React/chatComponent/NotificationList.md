@@ -9,7 +9,7 @@ sidebar_position: 8
 :::tip
 You can try to get other users to follow you or send you friend requests to get the notification list to show content.
 :::
-`NotificationList` UI is determined by two of its props, `Notification` and `EmptyContaniner` . The Notification prop dictates the design and click functionality of an individual notification in the list.The EmptyContainer prop allows you to customize the container when NotificationList is empty. If not provided via props, these UI components default to NotificationPreview and Empty. Each item will trigger `setActiveNotification` when clicked
+`NotificationList` UI is determined by two of its props, `Notification` and `EmptyContaniner` . The Notification prop dictates the design and click functionality of an individual notification in the list.The EmptyContainer prop allows you to customize the container when NotificationList is empty. If not provided via props, these UI components will render the default style. Each item will trigger `setActiveNotification` when clicked
 
 ```ts
 const { setActiveNotification } = useChat('NotificationList');
@@ -34,7 +34,7 @@ code={<NotificationListMdx />}>
 
 | Property        | Description                            | Type                  | Default             | required |
 | --------------- | -------------------------------------- | --------------------- | ------------------- | -------- |
-| Notification    | set your custom Notification in list   | React.ComponentType   |`NotificationPreview`|   false  |
+| Notification    | set your custom Notification in list   | React.ComponentType   |  -                  |   false  |
 | EmptyContaniner | displays an empty list of components   | React.ReactNode       |  -                  |   false  |
 
 ### NotificationPreview

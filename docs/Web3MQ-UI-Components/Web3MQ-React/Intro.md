@@ -60,9 +60,10 @@ const useLogin = () => {
     localStorage.setItem('userid', '');
     setKeys(null);
   };
-
+  // Callback on login or registration
   const handleLoginEvent = (eventData: any) => {
     if (eventData.data) {
+      // when login
       if (eventData.type === 'login') {
         const {
           privateKey,
@@ -88,6 +89,7 @@ const useLogin = () => {
           userid,
         });
       }
+      // when register
       if (eventData.type === 'register') {
         const { privateKey, publicKey, address } = eventData.data;
         localStorage.setItem('WALLET_ADDRESS', address);
