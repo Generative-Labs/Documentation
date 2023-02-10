@@ -106,9 +106,9 @@ position: 7
 | name         | type             | format     | desc                                              | eg                        |
 | ------------ | ---------------- | ---------- | ------------------------------------------------- | ------------------------  |
 | chatid       |  string          |     -      | the id of the chat room to be updated             | "group:xx" or "user:xx"   |
-| chat_type    |  string          |     -      | the type of the chat room to be updated           | "group" or "user"         |
+| chatType    |  string          |     -      | the type of the chat room to be updated           | "group" or "user"         |
 | topic        |  string          |     -      | the id of the chat room to be updated             | "group:xx" or "user:xx"   |
-| topic_type   |  string          |     -      | the type of the chat room to be updated           | "group" or "user"         |
+| topicType   |  string          |     -      | the type of the chat room to be updated           | "group" or "user"         |
 
 ### UpdateGroupPermissionsParams
 
