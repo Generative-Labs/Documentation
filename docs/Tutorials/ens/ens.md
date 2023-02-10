@@ -139,7 +139,7 @@ client.channel.createRoom();
 #### Code
 
 ```ts
-client.channel.sendMessage('Hello World');
+client.message.sendMessage('Hello World');
 ```
 
 ```tsx

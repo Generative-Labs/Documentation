@@ -355,7 +355,7 @@ description='send your first message.'
 </Layout>
 
 ```ts
-client.channel.sendMessage('Hello World');
+client.message.sendMessage('Hello World');
 ```
 
 ```tsx
