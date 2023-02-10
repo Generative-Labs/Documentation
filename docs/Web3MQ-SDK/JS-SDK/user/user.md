@@ -17,6 +17,22 @@ position: 7
 | getTargetUserPermissions| function | userid: string                                       | Promise:[SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse) |
 | updateUserPermissions| function  | [UpdateUserPermissionsParams](/docs/Web3MQ-SDK/JS-SDK/types/#updateuserpermissionsparams) |Promise: [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)  |
 
+## Permission
+> User permission currently only has `user: chat` rule, which Indicates the setting of user chat permission. `user: chat` rule has `public`, `follower`, `following`, `friends` values, and its value type is 'enum'
+- 1.`public`: Everyone can send me messages.
+- 2.`follower`: Only those who follow me can send messages to me.
+- 3.`following`: Only those I follow can send me messages.
+- 4.`friends`: Only those who follow each other can send me messages.
+
+```
+const userPermission = {
+  // my chat permission settings
+  "user: chat": {
+    "type": "enum",
+    "value": "public", // "follower" | "following" | "friends"
+  }
+}
+```
 ## Prerequisites
 
 > init() see: [init](/docs/Web3MQ-SDK/JS-SDK/client/#init)

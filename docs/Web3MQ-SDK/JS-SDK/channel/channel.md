@@ -25,6 +25,21 @@ position: 4
 | getGroupPermissions| function | groupid: string                                                       | Promise: [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)    |
 | updateGroupPermissions| function | [UpdateGroupPermissionsParams](/docs/Web3MQ-SDK/JS-SDK/types/#updategrouppermissionsparams)    | Promise: [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)    |
 
+## Permission
+> Group chat permission currently only has `group:join` rule, which indicates the permission to join a group. `group:join` rule has `public` and `ceator_invite_friends` values, and its value type is 'enum'
+- 1.`ceator_invite_friends`: Only the group owner can invite friends to join.
+- 2.`public`: Everyone can join without restrictions.
+
+```
+const groupPermission = {
+  // join group permission settings
+  "group:join": {
+    "type": "enum",
+    "value": "public", // "value": "ceator_invite_friends"
+  }
+}
+```
+
 ## Prerequisites
 
 > init() see: [init](/docs/Web3MQ-SDK/JS-SDK/client/#init)
@@ -229,9 +244,9 @@ export const Child = (props: IProps) => {
   const updateChannel = async () => {
     const date = await client.channel.updateChannels({
       chatid: 'groupid or userid',
-      chat_type: 'chat type —— group or user',
+      chatType: 'chat type —— group or user',
       topic: 'groupid or userid',
-      topic_type: 'chat type —— group or user',
+      topicType: 'chat type —— group or user',
     });
     console.log(data);
   };
@@ -383,7 +398,7 @@ export const Child = (props: IProps) => {
 ```
 
 ### getGroupPermissions
-> View group chat permissions by `groupid`. Group permission currently only `Group:join` rule that has `ceator_invite_friends`, `public` and `nft_validation ` type.
+> View group chat permissions by `groupid`.
 
 ```tsx
 import { useEffect } from 'react';
