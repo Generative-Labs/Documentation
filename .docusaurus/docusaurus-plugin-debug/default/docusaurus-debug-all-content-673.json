@@ -2524,7 +2524,7 @@
               "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/Intro",
               "id": "Web3MQ-UI-Components/Web3MQ-React/Intro",
               "title": "Intro",
-              "description": "Web3MQ React Component Libraries",
+              "description": "This tutorial walks you through how to use @web3mq/react-components using a sample React projects, and successfully build a chat app interface",
               "source": "@site/docs/Web3MQ-UI-Components/Web3MQ-React/Intro.md",
               "sourceDirName": "Web3MQ-UI-Components/Web3MQ-React",
               "slug": "/Web3MQ-UI-Components/Web3MQ-React/Intro",

@@ -39,7 +39,7 @@ const useLogin = () => {
     const didKey = localStorage.getItem('DID_KEY') || '';
     const fastUrl = await Client.init({
       connectUrl: localStorage.getItem('FAST_URL'),
-      app_key: 'vAUJTFXbBZRkEDRE',
+      app_key: 'app_key',
       env: 'dev',
       didKey,
       tempPubkey,
