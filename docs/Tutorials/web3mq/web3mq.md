@@ -85,9 +85,9 @@ For any first-time user of Web3MQ's network, you'll need to register on Web3MQ's
 import React, { useEffect, useState } from "react";
 import { Client } from "@web3mq/client";
 const fastUrl = await Client.init({
-      connectUrl: '',
-      app_key: "APP_KEY",
-    });
+    connectUrl: '',
+    app_key: "APP_KEY",
+});
 ```
 
 :::tip
@@ -95,16 +95,16 @@ For your convenience, custom methods can be used to get user information
 :::
 ```tsx
 const getAccount = async (didType: WalletType = "eth") => {
-    const {address} = await Client.register.getAccount(didType);
-    const {userid, userExist} = await Client.register.getUserInfo({
-        did_value: address,
-        did_type: didType,
-    });
-    return {
-        address,
-        userid,
-        userExist,
-    };
+const {address} = await Client.register.getAccount(didType);
+const {userid, userExist} = await Client.register.getUserInfo({
+    did_value: address,
+    did_type: didType,
+});
+return {
+    address,
+    userid,
+    userExist,
+};
 };
 
 ```
@@ -128,22 +128,22 @@ const {publicKey, secretKey} = await Client.register.getMainKeypairBySignature(
 3. After generating the secret key pair, you need to sign with the public key and the wallet to complete the registration
 ```tsx
 const {signContent} = await Client.register.getRegisterSignContent({
-        userid,
-        mainPublicKey: publicKey,
-        didType: walletType,
-        didValue: address,
-    });
-    const {sign: signature, publicKey: did_pubkey = ''} = await Client.register.sign(
-        signContent,
-        address,
-        walletType
-    );
+    userid,
+    mainPublicKey: publicKey,
+    didType: walletType,
+    didValue: address,
+});
+const {sign: signature, publicKey: did_pubkey = ''} = await Client.register.sign(
+    signContent,
+    address,
+    walletType
+);
 const params = {
     userid,
     didValue: address,
     mainPublicKey: publicKey,
     did_pubkey,
-    didType,
+    didType: walletType,
     nickname: '',
     avatar_url: '',
     signature,
@@ -226,6 +226,9 @@ await client.message.sendMessage('hello world', address)
 const handleEvent = (event: any) => {
     console.log(event)
     const { channelList, activeChannel } = client.channel;
+    if (!channelList) {
+      return;
+    }
     // set active channel
     client.channel.setActiveChannel(channelList[0])
     // send message to channel
@@ -233,7 +236,7 @@ const handleEvent = (event: any) => {
 }
 const client = Client.getInstance(keys);
 // Once the channel has been created, the latest channel created can be retrieved in the event callback
-client.on('channel.created', handleEvent)
+client.on('channel.getList', handleEvent)
 const chatRoomName = ''
 await client.channel.createRoom({
     group_name: chatRoomName || 'default room',
@@ -245,6 +248,9 @@ await client.channel.createRoom({
 const handleEvent = (event: any) => {
     console.log(event)
     const { channelList, activeChannel } = client.channel;
+    if (!channelList) {
+      return;
+    }
     // set active channel
     client.channel.setActiveChannel(channelList[0])
     // send message to channel

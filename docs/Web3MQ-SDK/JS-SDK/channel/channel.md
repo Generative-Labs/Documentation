@@ -229,9 +229,9 @@ export const Child = (props: IProps) => {
   const updateChannel = async () => {
     const date = await client.channel.updateChannels({
       chatid: 'groupid or userid',
-      chat_type: 'chat type —— group or user',
+      chatType: 'chat type —— group or user',
       topic: 'groupid or userid',
-      topic_type: 'chat type —— group or user',
+      topicType: 'chat type —— group or user',
     });
     console.log(data);
   };
