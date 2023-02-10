@@ -54,7 +54,7 @@ code={<CustomListMdx />}>
 | DefaultEmptyStateIndicator | displays an empty list of components      | React.ComponentType       |`EmptyStateIndicator`|   false  |
 | Paginator                  | set your custom `paging` component        | React.ComponentType       |`Paginator`|   false  |
 
-### `ChannelListMessenger`
+### ChannelListMessenger
 **The properties of the ChannelListMessenger are described as follows:**
 
 | Property | Description            | Type           | Default | required |

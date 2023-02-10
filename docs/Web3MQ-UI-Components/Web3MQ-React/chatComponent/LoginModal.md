@@ -39,7 +39,7 @@ const useLogin = () => {
     const didKey = localStorage.getItem('DID_KEY') || '';
     const fastUrl = await Client.init({
       connectUrl: localStorage.getItem('FAST_URL'),
-      app_key: 'vAUJTFXbBZRkEDRE',
+      app_key: 'app_key',
       env: 'dev',
       didKey,
       tempPubkey,
@@ -68,6 +68,7 @@ const useLogin = () => {
           address,
           pubkeyExpiredTimestamp,
         } = eventData.data;
+        // Store to browser cache
         localStorage.setItem('userid', userid);
         localStorage.setItem('PRIVATE_KEY', tempPrivateKey);
         localStorage.setItem('PUBLIC_KEY', tempPublicKey);
@@ -76,6 +77,7 @@ const useLogin = () => {
         localStorage.setItem(`MAIN_PUBLIC_KEY`, publicKey);
         localStorage.setItem(`DID_KEY`, didKey);
         localStorage.setItem('PUBKEY_EXPIRED_TIMESTAMP', String(pubkeyExpiredTimestamp));
+        // update state
         setKeys({
           PrivateKey: tempPrivateKey,
           PublicKey: tempPublicKey,
@@ -84,6 +86,7 @@ const useLogin = () => {
       }
       if (eventData.type === 'register') {
         const { privateKey, publicKey, address } = eventData.data;
+        // Store to browser cache
         localStorage.setItem('WALLET_ADDRESS', address);
         localStorage.setItem(`MAIN_PRIVATE_KEY`, privateKey);
         localStorage.setItem(`MAIN_PUBLIC_KEY`, publicKey);

@@ -3,15 +3,15 @@ sidebar_position: 3
 ---
 # Channel
 
-The `Channel` component is a React Context provider that wraps all of the logic, functionality, and UI for an individual chat channel. It provides five separate contexts to its children:
+The `Channel` component is a React Context provider that wraps all of the logic, functionality, and UI for an individual chat channel. It provides three separate contexts to its children:
 
-- ChannelStateContext - stateful data (ex: messages or members)
+- ChannelStateContext - stateful data (ex: activeChannel)
 - ChannelActionContext - action handlers (ex: sendMessage or openThread)
-- ComponentContext - custom component UI overrides (ex: Avatar or Message)
+- ComponentContext - custom component UI overrides (ex: Input or Message)
 
 ## Basic Usage
 
-The `Channel` component does not inject any UI, so its implementation is fairly simple and can be handled in one of two ways, both with and without a `ChannelList` component. If you are using a `ChannelList`, do not add a `channel` object as a prop on `Channel`. However in the absence of a `ChannelList`, the `channel` prop is required. By default, the `ChannelList` sets the active `channel` object, which is then injected it into the `ChannelStateContext`, so manual prop passing is not required.
+The `Channel` component does not inject any UI, so its implementation is fairly simple.The `Channel` component listens for the `channel.activeChange` event and captures the latest `activeChannel` for its child components to fetch via `ChannelStateContext`.
 :::tip
 If your channelList list is empty, you can create a chat room in [createChannel](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/CreateChannel).
 :::
@@ -37,25 +37,13 @@ In the `channel` component, you can pass in an Input component with custom style
 :::
 
 ```tsx
-<Chat client={client} >
-  <ChannelList />
-  <Channel Input={customInput}>
-    <MessageList />
-    <MessageInput />
-  </Channel>
-</Chat>
+ const { sendMessage } = useMessageInputContext();
 ```
 ## Custom Message 
 If you want to display a custom list of messages, you can pass the custom Message component as a parameter in the `channel`, and the `MessageList` will iterate through the Message component, and you can get the corresponding message in the component via the `useMessageContext` method.
 
 ```tsx
-<Chat client={client} >
-  <ChannelList />
-  <Channel Message={customMessage}>
-    <MessageList />
-    <MessageInput />
-  </Channel>
-</Chat>
+const { message } = useMessageContext();
 ```
 
 **How to use custom Component Example**

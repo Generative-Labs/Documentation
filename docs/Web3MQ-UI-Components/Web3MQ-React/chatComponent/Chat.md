@@ -93,7 +93,7 @@ enum AppTypeEnum {
 | address           | wallet address     | string                                                                   |  -        |  true    |
 | defaultUserName   | default username   | string                                                                   |  -        |  true    |
 | defaultUserAvatar | default avatar url | string                                                                   |  -        |  true    |
-| didValues         | did value          | DidValueType[]                                                           |  -        |  true    |
+| didValues         | did value          | [DidValueType](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#didvaluetype)[]|  -        |  true    |
 | didValueMap       | did value of map   | Record<[WEB3_MQ_DID_TYPE](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#web3_mq_did_type), string>                                         |  -        |  true    |
 | permissions       | user permissions   | [UserPermissionsType](/docs/Web3MQ-SDK/JS-SDK/types/#userpermissionstype)|  -        |  true    |
 | stats             | follow stats info  | {total_followers:number,total_following:number}                          |  -        |  true    |
@@ -107,7 +107,7 @@ enum AppTypeEnum {
 | did_type  | did type           | [WEB3_MQ_DID_TYPE](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#web3_mq_did_type) |  -        |  true    |
 | did_value | address corresponding to `didType` | string                                                  |  -        |  true    |
 | detail    | detail             | any                                                                     |  -        |  true    |
-|provider_id| provider id        | stringg                                                                 |  -        |  true    |
+|provider_id| provider id        | string                                                                  |  -        |  true    |
 ### WEB3_MQ_DID_TYPE
 ```ts
 enum WEB3_MQ_DID_TYPE {

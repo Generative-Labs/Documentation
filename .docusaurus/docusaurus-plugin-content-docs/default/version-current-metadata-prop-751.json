@@ -1305,7 +1305,7 @@
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel",
       "title": "Channel",
-      "description": "The Channel component is a React Context provider that wraps all of the logic, functionality, and UI for an individual chat channel. It provides five separate contexts to its children:",
+      "description": "The Channel component is a React Context provider that wraps all of the logic, functionality, and UI for an individual chat channel. It provides three separate contexts to its children:",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/ChannelHead": {
@@ -1401,7 +1401,7 @@
     "Web3MQ-UI-Components/Web3MQ-React/Intro": {
       "id": "Web3MQ-UI-Components/Web3MQ-React/Intro",
       "title": "Intro",
-      "description": "Web3MQ React Component Libraries",
+      "description": "This tutorial walks you through how to use @web3mq/react-components using a sample React projects, and successfully build a chat app interface",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/Web3MQ-React/utilityComponent/Avatar": {
