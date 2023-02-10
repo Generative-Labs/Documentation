@@ -120,13 +120,13 @@ position: 7
 ### GroupPermissions
 | name              | type             | format     | desc                                              | eg                        |
 | ----------------- | ---------------- | ---------- | ------------------------------------------------- | ------------------------  |
-| GroupPermissions  | Record<string, { type: string; value: "ceator_invite_friends" \| "public" \| "nft_validation" }>  |     -      | Group channel permission type      | {"group:join": {type: "enum",value: "public"}} |
+| GroupPermissions  | Record<"group:join", { type: "enum"; value: "ceator_invite_friends" \| "public" }>  |     -      | Group channel permission type      | {"group:join": {type: "enum",value: "public"}} |
 
 
 ### UserPermissionsType
 | name                 | type             | format     | desc                                              | eg                        |
 | -------------------- | ---------------- | ---------- | ------------------------------------------------- | ------------------------  |
-| UserPermissionsType  | Record<string, { type: string; value: boolean}>  |     -      | user channel permission type      | {'user: chat': {type: "enum",value: "public"}} |
+| UserPermissionsType  | Record<"user: chat", { type: "enum"; value: "public"\|"follower"\|"following"\|"friends"}>  |     -      | user permission type      | {'user: chat': {type: "enum",value: "public"}} |
 
 
 ### ContactListItemType
