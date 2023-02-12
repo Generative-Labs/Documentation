@@ -117,16 +117,28 @@ position: 7
 | groupid      |  string          |     -      | group channel id                                  | "group:xx"                |
 | permissions  | GroupPermissions |     -      | group channel permissions                         | {"group:join": {type: "enum",value: "public"}}  |
 
+### JoinGroupPermissionsType
+| name   | type                                        | format     | desc                                              | eg              |
+| ------ | ------------------------------------------- | ---------- | ------------------------------------------------- | --------------  |
+| type   | "enum"                                      |     -      | The type of group to join in group permissions    | "enum"          |
+| value  | "ceator_invite_friends" \| "public"         |     -      | The value of group to join in group permissions   | "public"        |
+
 ### GroupPermissions
-| name              | type             | format     | desc                                              | eg                        |
-| ----------------- | ---------------- | ---------- | ------------------------------------------------- | ------------------------  |
-| GroupPermissions  | Record<"group:join", { type: "enum"; value: "ceator_invite_friends" \| "public" }>  |     -      | Group channel permission type      | {"group:join": {type: "enum",value: "public"}} |
+| name         | type                                                                                 | format     | desc                               | eg                        |
+| ------------ | ------------------------------------------------------------------------------------ | ---------- | ---------------------------------- | ------------------------  |
+|  group:join  | [JoinGroupPermissionsType](/docs/Web3MQ-SDK/JS-SDK/types/#joingrouppermissionstype)  |     -      | Group channel permission type      | {"group:join": {type: "enum",value: "public"}} |
+
+### UserChatPermissionsType
+| name   | type                                        | format     | desc                                              | eg              |
+| ------ | ------------------------------------------- | ---------- | ------------------------------------------------- | --------------  |
+| type   | "enum"                                      |     -      | Chat permission type in user permissions          | "enum"          |
+| value  | "public"\|"follower"\|"following"\|"friends"|     -      | Chat permission value in user permissions         | "public"        |
 
 
 ### UserPermissionsType
-| name                 | type             | format     | desc                                              | eg                        |
-| -------------------- | ---------------- | ---------- | ------------------------------------------------- | ------------------------  |
-| UserPermissionsType  | Record<"user: chat", { type: "enum"; value: "public"\|"follower"\|"following"\|"friends"}>  |     -      | user permission type      | {'user: chat': {type: "enum",value: "public"}} |
+| name                 | type                                                                              | format     | desc                               | eg                        |
+| -------------------- | --------------------------------------------------------------------------------- | ---------- | ---------------------------------- | ------------------------  |
+| user: chat           | [UserChatPermissionsType](/docs/Web3MQ-SDK/JS-SDK/types/#userchatpermissionstype) |     -      | chat permission in user permisson  | {'user: chat': {type: "enum",value: "public"}} |
 
 
 ### ContactListItemType
