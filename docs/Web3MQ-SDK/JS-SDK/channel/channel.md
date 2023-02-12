@@ -30,15 +30,17 @@ position: 4
 - 1.`ceator_invite_friends`: Only the group owner can invite friends to join.
 - 2.`public`: Everyone can join without restrictions.
 
-```
-const groupPermission = {
-  // join group permission settings
-  "group:join": {
-    "type": "enum",
-    "value": "public", // "value": "ceator_invite_friends"
-  }
-}
-```
+### JoinGroupPermissionsType
+| name   | type                                        | format     | desc                                              | eg              |
+| ------ | ------------------------------------------- | ---------- | ------------------------------------------------- | --------------  |
+| type   | "enum"                                      |     -      | The type of group to join in group permissions    | "enum"          |
+| value  | "ceator_invite_friends" \| "public"         |     -      | The value of group to join in group permissions   | "public"        |
+
+### GroupPermissions
+| name         | type                                                                                 | format     | desc                               | eg                        |
+| ------------ | ------------------------------------------------------------------------------------ | ---------- | ---------------------------------- | ------------------------  |
+| "group:join" | [JoinGroupPermissionsType](/docs/Web3MQ-SDK/JS-SDK/channel/#joingrouppermissionstype)|     -      | Group channel permission type      | {"group:join": {type: "enum",value: "public"}} |
+
 
 ## Prerequisites
 

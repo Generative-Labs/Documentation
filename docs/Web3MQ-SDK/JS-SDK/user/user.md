@@ -24,15 +24,17 @@ position: 7
 - 3.`following`: Only those I follow can send me messages.
 - 4.`friends`: Only those who follow each other can send me messages.
 
-```
-const userPermission = {
-  // my chat permission settings
-  "user: chat": {
-    "type": "enum",
-    "value": "public", // "follower" | "following" | "friends"
-  }
-}
-```
+### UserChatPermissionsType
+| name   | type                                        | format     | desc                                              | eg              |
+| ------ | ------------------------------------------- | ---------- | ------------------------------------------------- | --------------  |
+| type   | "enum"                                      |     -      | Chat permission type in user permissions          | "enum"          |
+| value  | "public"\|"follower"\|"following"\|"friends"|     -      | Chat permission value in user permissions         | "public"        |
+
+### UserPermissionsType
+| name                 | type                                                                              | format     | desc                               | eg                        |
+| -------------------- | --------------------------------------------------------------------------------- | ---------- | ---------------------------------- | ------------------------  |
+| user: chat           | [UserChatPermissionsType](/docs/Web3MQ-SDK/JS-SDK/user/#userchatpermissionstype)  |     -      | chat permission in user permisson  | {'user: chat': {type: "enum",value: "public"}} |
+
 ## Prerequisites
 
 > init() see: [init](/docs/Web3MQ-SDK/JS-SDK/client/#init)
