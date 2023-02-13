@@ -170,7 +170,7 @@ setTimeout(() => {
 | notification.getMySubscribeList| When list of topics I subscribed is acquired   | client.topic.getMySubscribeTopicList   | client.topic.mySubscribeList is updated to the latest state   |
 
 ### usage
-> A simple example of how to subscribe to message events and get list of topics I created.
+> A simple example of how to subscribe to notification events and get list of topics I created.
 
 ```ts
 import type { Client, EventTypes } from '@web3mq/client';
