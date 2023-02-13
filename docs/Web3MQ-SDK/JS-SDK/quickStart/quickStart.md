@@ -313,7 +313,9 @@ const client = Client.getInstance(keys);
 
 ## Create room
 
-> After initializing the client and registering your user, the next step is to connect to a room
+> After initializing the client and registering your user, the next step is to connect to a room.
+
+> You need to get channels from `client.channel.queryChannels` to initialize `client.channel.channelList`, you can get the latest channels from `client.channel.channelList` in the `channel.getlist` event when you have successfully created channel.
 
 #### Use Demo Code
 
@@ -333,15 +335,43 @@ description='create your Chat Room.'
 client.channel.createRoom();
 ```
 ```tsx
-<button
-    onClick={() => {
-        client.channel.createRoom();
-    }}>
-    createGroup
-</button>
+import React, {useEffect} from "react";
+import { Client, EventTypes } from '@web3mq/client';
+export const App = () => {
+    const client = Client.getInstance(keys);
+    const getChannelList = async() => {
+        await client.channel.queryChannels({page: 1, size: 20});
+    };
+    const handleEvent = (props: { type: EventTypes }) => {
+        const { type } = props;
+        const { channelList } = client.channel;
+        if (!channelList) return;
+        if (type === 'channel.getList') {
+            // `channel.getList` will be triggered when you fetch channels or create new channels, in this event you can get the latest status from client.channel.channelList
+            console.log('query channels': channelList);
+        }
+    } 
+    useEffect(() => {
+        client.on('channel.getList', handleEvent);
+        getChannelList();
+        return () => {
+            client.off('channel.getList', handleEvent);
+        }
+    }, [])
+
+    return (
+        <button
+            onClick={() => {
+                client.channel.createRoom();
+            }}>
+            createGroup
+        </button>
+    )
+}
 ```
 
 ## Send message
+> Similarly you need to initialize `client.message.messageList` by `client.message.getMessageList` to get the latest messages in the message event afterwards.
 
 #### Code
 
@@ -359,12 +389,62 @@ client.message.sendMessage('Hello World');
 ```
 
 ```tsx
-<button
-    onClick={() => {
-        client.message.sendMessage('Hello World');
-    }}>
-    sendMessage
-</button>
+import React, {useEffect} from "react";
+import { Client, EventTypes } from '@web3mq/client';
+
+export const App = () => {
+    const client = Client.getInstance(keys);
+    const sendMessage = async () => {
+        await client.message.sendMessage('Hello World');
+    };
+    const handleEvent = async (props: { type: EventTypes }) => {
+        const { type } = props;
+        const { msg_text, messageList } = client.message;
+        const { channelList, activeChannel } = client.channel;
+        if (!channelList) return;
+        if (type === 'channel.getList') {
+            await client.channel.setActiveChannel(client.channel.channelList[0]);
+            console.log('the current channelList is: ', channelList);
+        }
+        if (type === 'channel.activeChange') {
+            await client.message.getMessageList({page: 1, size: 20});
+            console.log('the current activeChange is: ', activeChannel);
+        }
+        if (type === 'message.getList') {
+            console.log('the current messageList is: ', messageList)
+        }
+        if (type === 'message.send') {
+            console.log('you are sending a message, the message content is: ', msg_text);
+            console.log('the latest MessageList when you send a message: ', messageList);
+        }
+        if (type === 'message.delivered') {
+            console.log('the message you sent was successfully delivered');
+            console.log('the latest MessageList when you send a message: ', messageList);
+        }
+    }
+    useEffect(() => {
+        client.channel.queryChannels({page: 1, size: 20});
+        client.on('channel.getList', handleEvent);
+        client.on('channel.activeChange', handleEvent);
+        client.on('message.getList', handleEvent);
+        client.on('message.send', handleEvent);
+        client.on('message.delivered', handleEvent);
+        () => {
+            client.on('channel.getList', handleEvent);
+            client.off('channel.activeChange', handleEvent);
+            client.on('message.getList', handleEvent);
+            client.on('message.send', handleEvent);
+            client.off('message.delivered', handleEvent);
+        }
+    }, []);
+
+    return (
+        <button
+            onClick={sendMessage}>
+            sendMessage
+        </button>
+    )
+};
 ```
 
 ## Full Example
