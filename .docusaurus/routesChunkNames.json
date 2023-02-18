@@ -32,7 +32,7 @@
   "/search-79a": {
     "component": "component---theme-search-page-1-a-4-d6f"
   },
-  "/docs-6c6": {
+  "/docs-304": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
   },
@@ -68,29 +68,33 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-api-contact-5-bc-33a"
   },
-  "/docs/Web3MQ-API/contact/addfriend_list-16d": {
+  "/docs/Web3MQ-API/contact/follow_someone-55b": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-api-contact-addfriend-liste-2-a-d00"
+    "content": "content---docs-web-3-mq-api-contact-follow-someone-6-fd-3bd"
   },
-  "/docs/Web3MQ-API/contact/change_friend_requests-6e6": {
+  "/docs/Web3MQ-API/contact/get_my_follower_list-d32": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-api-contact-change-friend-requests-07-c-af2"
+    "content": "content---docs-web-3-mq-api-contact-get-my-follower-list-574-cbd"
   },
-  "/docs/Web3MQ-API/contact/friend_requests-9c0": {
+  "/docs/Web3MQ-API/contact/get_my_followers_and_following-d28": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-api-contact-friend-requestsf-80-de9"
+    "content": "content---docs-web-3-mq-api-contact-get-my-followers-and-followingb-4-a-338"
   },
-  "/docs/Web3MQ-API/contact/Get_my_contact_list-04e": {
+  "/docs/Web3MQ-API/contact/get_my_following_list-10a": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-api-contact-get-my-contact-listc-76-735"
-  },
-  "/docs/Web3MQ-API/contact/Search_contacts-e7c": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-api-contact-search-contactsb-34-95e"
+    "content": "content---docs-web-3-mq-api-contact-get-my-following-listdf-3-500"
   },
   "/docs/Web3MQ-API/contact/Send_friend_request-096": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-api-contact-send-friend-requestbf-1-7f3"
+  },
+  "/docs/Web3MQ-API/dapp/create_dapp-28c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-api-dapp-create-dapp-2-e-6-16c"
+  },
+  "/docs/Web3MQ-API/dapp/update_dapp-345": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-api-dapp-update-dappbb-4-fb3"
   },
   "/docs/Web3MQ-API/did/get_user_bindlist-fed": {
     "component": "component---theme-doc-item-178-a40",
@@ -204,10 +208,6 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-api-quickstart-create-group-09-d-bfc"
   },
-  "/docs/Web3MQ-API/quickstart/Generate_Key_pairs-c08": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-api-quickstart-generate-key-pairs-8-c-9-4aa"
-  },
   "/docs/Web3MQ-API/quickstart/Send_Connect_Command-d41": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-api-quickstart-send-connect-commandf-8-b-1a3"
@@ -216,13 +216,13 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-api-quickstart-send-message-in-group-186-fbc"
   },
-  "/docs/Web3MQ-API/quickstart/Signing_data_with_MetaMask-3f9": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-api-quickstart-signing-data-with-meta-mask-98-d-e7e"
-  },
   "/docs/Web3MQ-API/quickstart/User_login-a97": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-api-quickstart-user-login-401-a5c"
+  },
+  "/docs/Web3MQ-API/quickstart/user_register-485": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-api-quickstart-user-registerbcf-3b6"
   },
   "/docs/Web3MQ-API/signature-798": {
     "component": "component---theme-doc-item-178-a40",
@@ -248,9 +248,29 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-api-user-update-my-profile-86-a-de4"
   },
-  "/docs/Web3MQ-API/user/user_login-e52": {
+  "/docs/Web3MQ-API/user/user_login_v2-405": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-api-user-user-login-153-304"
+    "content": "content---docs-web-3-mq-api-user-user-login-v-29-c-5-c91"
+  },
+  "/docs/Web3MQ-API/user/user_register_v2-e5c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-api-user-user-register-v-262-f-9c8"
+  },
+  "/docs/Web3MQ-SDK/DappConnect-SDK/client-2ca": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-dapp-connect-sdk-client-97-f-cdd"
+  },
+  "/docs/Web3MQ-SDK/DappConnect-SDK/intro-111": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-dapp-connect-sdk-intro-4-d-8-6e5"
+  },
+  "/docs/Web3MQ-SDK/DappConnect-SDK/quickstart-152": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-dapp-connect-sdk-quickstart-194-06f"
+  },
+  "/docs/Web3MQ-SDK/DappConnect-SDK/typeList-305": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-dapp-connect-sdk-type-liste-62-958"
   },
   "/docs/Web3MQ-SDK/JS-SDK/channel/-873": {
     "component": "component---theme-doc-item-178-a40",

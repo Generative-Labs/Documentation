@@ -46,23 +46,23 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-API/contact/addfriend_list",
-              "path": "/docs/Web3MQ-API/contact/addfriend_list",
+              "id": "Web3MQ-API/contact/follow_someone",
+              "path": "/docs/Web3MQ-API/contact/follow_someone",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-API/contact/change_friend_requests",
-              "path": "/docs/Web3MQ-API/contact/change_friend_requests",
+              "id": "Web3MQ-API/contact/get_my_follower_list",
+              "path": "/docs/Web3MQ-API/contact/get_my_follower_list",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-API/contact/friend_requests",
-              "path": "/docs/Web3MQ-API/contact/friend_requests",
+              "id": "Web3MQ-API/contact/get_my_followers_and_following",
+              "path": "/docs/Web3MQ-API/contact/get_my_followers_and_following",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-API/contact/Get_my_contact_list",
-              "path": "/docs/Web3MQ-API/contact/Get_my_contact_list",
+              "id": "Web3MQ-API/contact/get_my_following_list",
+              "path": "/docs/Web3MQ-API/contact/get_my_following_list",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -71,13 +71,18 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-API/contact/Search_contacts",
-              "path": "/docs/Web3MQ-API/contact/Search_contacts",
+              "id": "Web3MQ-API/contact/Send_friend_request",
+              "path": "/docs/Web3MQ-API/contact/Send_friend_request",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-API/contact/Send_friend_request",
-              "path": "/docs/Web3MQ-API/contact/Send_friend_request",
+              "id": "Web3MQ-API/dapp/create_dapp",
+              "path": "/docs/Web3MQ-API/dapp/create_dapp",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-API/dapp/update_dapp",
+              "path": "/docs/Web3MQ-API/dapp/update_dapp",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -216,11 +221,6 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-API/quickstart/Generate_Key_pairs",
-              "path": "/docs/Web3MQ-API/quickstart/Generate_Key_pairs",
-              "sidebar": "tutorialSidebar"
-            },
-            {
               "id": "Web3MQ-API/quickstart/index",
               "path": "/docs/Web3MQ-API/quickstart/",
               "sidebar": "tutorialSidebar"
@@ -236,13 +236,13 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-API/quickstart/Signing_data_with_MetaMask",
-              "path": "/docs/Web3MQ-API/quickstart/Signing_data_with_MetaMask",
+              "id": "Web3MQ-API/quickstart/User_login",
+              "path": "/docs/Web3MQ-API/quickstart/User_login",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-API/quickstart/User_login",
-              "path": "/docs/Web3MQ-API/quickstart/User_login",
+              "id": "Web3MQ-API/quickstart/user_register",
+              "path": "/docs/Web3MQ-API/quickstart/user_register",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -276,8 +276,33 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-API/user/user_login",
-              "path": "/docs/Web3MQ-API/user/user_login",
+              "id": "Web3MQ-API/user/user_login_v2",
+              "path": "/docs/Web3MQ-API/user/user_login_v2",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-API/user/user_register_v2",
+              "path": "/docs/Web3MQ-API/user/user_register_v2",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/DappConnect-SDK/client",
+              "path": "/docs/Web3MQ-SDK/DappConnect-SDK/client",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/DappConnect-SDK/intro",
+              "path": "/docs/Web3MQ-SDK/DappConnect-SDK/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/DappConnect-SDK/quickstart",
+              "path": "/docs/Web3MQ-SDK/DappConnect-SDK/quickstart",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/DappConnect-SDK/typeList",
+              "path": "/docs/Web3MQ-SDK/DappConnect-SDK/typeList",
               "sidebar": "tutorialSidebar"
             },
             {
