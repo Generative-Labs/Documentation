@@ -9,7 +9,7 @@ sidebar_position: 1
 ## Usage
 
 1. Install DappConnect sdk
-2. Init DappConnect client
+2. Init DappConnect client to connect ws network
 3. Call `getConnectLink` function to get deeplink
 4. open `deeplink` in web3mq wallet
 5. Connect Wallet
@@ -76,8 +76,8 @@ import { DappConnect, DappConnectCallbackParams } from "@web3mq/dapp-connect";
 
 const handleDappConnectCallback = (event: DappConnectCallbackParams) => {};
 const dappConnectClient = new DappConnect(
-    { dAppID: "SwapChat:im" },
-    handleDappConnectCallback
+  { dAppID: "SwapChat:im" },
+  handleDappConnectCallback
 );
 const deepLink = dappConnectClient.getConnectLink();
 const qrCode = await generateQrCode(deepLink);
@@ -102,8 +102,8 @@ import { DappConnect, DappConnectCallbackParams } from "@web3mq/dapp-connect";
 
 const handleDappConnectCallback = (event: DappConnectCallbackParams) => {};
 const dappConnectClient = new DappConnect(
-    { dAppID: "SwapChat:im" },
-    handleDappConnectCallback
+  { dAppID: "SwapChat:im" },
+  handleDappConnectCallback
 );
 await dappConnectClient.sendSign({
   signContent: "test sign out",
@@ -121,7 +121,11 @@ When the return value of the callback function is [SuccessData](/docs/Web3MQ-SDK
 
 ```tsx
 import React, { useState } from "react";
-import { DappConnect, DappConnectCallbackParams } from "@web3mq/dapp-connect";
+import {
+  DappConnect,
+  DappConnectCallbackParams,
+  WalletMethodMap,
+} from "@web3mq/dapp-connect";
 import QRCode from "qrcode";
 
 const generateQrCode = async (text: string) => {
@@ -149,23 +153,17 @@ const App: React.FC = () => {
         return;
       }
       if (type === "dapp-connect") {
-        if (data.metadata) {
-          const metadata = data.metadata;
-          if (metadata.action === "connectResponse") {
-            console.log(
-              "connect success, wallet address is : ",
-              metadata.result.address
-            );
-            setWalletAddress(metadata.result.address || "");
-            console.log(
-              "connect success, wallet type is : ",
-              metadata.result.walletType
-            );
-          }
-          if (metadata.action === "signResponse") {
-            console.log("sign success: ", metadata.result.signature);
-            setSignRes(metadata.result.signature || "");
-          }
+        const metadata = data.metadata;
+        if (data.method === WalletMethodMap.providerAuthorization) {
+          console.log(
+            "connect success, wallet address is : ",
+            metadata?.address
+          );
+          setWalletAddress(metadata?.address || "");
+        }
+        if (data.method === WalletMethodMap.personalSign) {
+          console.log("sign success: ", metadata?.signature);
+          setSignRes(metadata?.signature || "");
         }
       }
     } else {
@@ -173,24 +171,28 @@ const App: React.FC = () => {
        code is: ${data.code}, 
        message is :${data.message}
        `);
+      setWalletAddress("");
+      setSignRes("");
+      setQrCodeImg("");
     }
   };
   const init = async () => {
-    const dappConnect = new DappConnect(
-      { dAppID: "SwapChat:im" },
+    const dappConnectClient = new DappConnect(
+      { dAppID: "SwapChat:im", keepAlive: false, requestTimeout: 60000 },
       handleDappConnectCallback
     );
-    setClient(dappConnect);
+    console.log("the dapp-connect client: ", dappConnectClient);
+    setClient(dappConnectClient);
   };
   const sign = async () => {
     await client?.sendSign({
       signContent: "test sign out",
-      didValue: walletAddress || "",
-      signType: "test sign without react",
+      address: walletAddress || "",
     });
   };
   const createLink = async () => {
     const link = client?.getConnectLink();
+    console.log(link, "link");
     if (link) {
       const qrCode = await generateQrCode(link);
       setQrCodeImg(qrCode);
@@ -210,7 +212,7 @@ const App: React.FC = () => {
       </div>
 
       <div>
-        {qrCodeImg && !walletAddress && (
+        {qrCodeImg && (
           <img
             src={qrCodeImg}
             style={{

@@ -18,7 +18,8 @@ position: 2
 ## Methods
 
 ### constructor
->  Init DappConnect client
+
+> Init DappConnect client
 
 ```tsx
 import { DappConnect, DappConnectCallbackParams } from "@web3mq/dapp-connect";
@@ -34,22 +35,21 @@ console.log("the dapp-connect client: ", dappConnectClient);
 ### getConnectLink()
 
 > Create wallet connect deep link
+
 ```tsx
 const deepLink = dappConnectClient.getConnectLink();
 console.log(deepLink);
 ```
 
-
 ### sendSign()
 
 :::tip
-After calling the sendsign method, the signature result will not be received directly, but will be returned via a callback function
+After calling the sendsign method, the signature result will not be received directly, but will be returned via a [callback](/docs/Web3MQ-SDK/DappConnect-SDK/typeList/#initcallback) function
 :::
 
 ```tsx
 await dappConnectClient.sendSign({
   signContent: "test sign out",
-  didValue: walletAddress || "",
+  address: walletAddress || "",
 });
 ```
-
