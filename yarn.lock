@@ -2126,6 +2126,28 @@
     js-sha3 "^0.8.0"
     starknet "^4.17.1"
 
+"@web3mq/dapp-connect-react@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmmirror.com/@web3mq/dapp-connect-react/-/dapp-connect-react-1.0.0.tgz#1f8a33de40166f88996d42cd14bfab22515f788a"
+  integrity sha512-yS2UibRyUxPdaUKsPugv/JEZcr49uUTnjer+SsClgGDQu3R14C16rzwwgrEPkj5DuG1WnUJLFRXzIgbwVTq13Q==
+  dependencies:
+    "@web3mq/dapp-connect" "^1.0.0"
+
+"@web3mq/dapp-connect@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmmirror.com/@web3mq/dapp-connect/-/dapp-connect-1.0.0.tgz#ba7e1587b49cd624706c0904b8368be552d66fe7"
+  integrity sha512-d1cd/RGs0BXGzNf7Rft0gCJ79QyyavEs4tBqy3YaOlOb7MG3thBMN2DAJEOjfHY/F+Fev43UMd7lM5wqTpzzfw==
+  dependencies:
+    "@noble/ed25519" "^1.6.1"
+    "@protobuf-ts/plugin" "^2.7.0"
+    axios "^0.27.2"
+    get-starknet "^2.0.0"
+    idb "^7.1.1"
+    js-sha256 "^0.9.0"
+    js-sha3 "^0.8.0"
+    sha1 "^1.1.1"
+    starknet "^4.17.1"
+
 "@web3mq/react-components@^1.0.11":
   version "1.0.11"
   resolved "https://registry.npmmirror.com/@web3mq/react-components/-/react-components-1.0.11.tgz#a1b5aa5f922d53052fd7c11099d12cfb8ace708c"
@@ -2825,6 +2847,11 @@ character-reference-invalid@^1.0.0:
   resolved "https://registry.npmmirror.com/character-reference-invalid/-/character-reference-invalid-1.1.4.tgz"
   integrity sha512-mKKUkUbhPpQlCOfIuZkvSEgktjPFIsZKRRbC6KWVEMvlzblj3i3asQv5ODsrwt0N3pHAEvjP8KTQPHkp0+6jOg==
 
+"charenc@>= 0.0.1":
+  version "0.0.2"
+  resolved "https://registry.npmmirror.com/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
+  integrity sha512-yrLQ/yVUFXkzg7EDQsPieE/53+0RlaWTs+wBrvW36cyilJ2SaDWfl4Yj7MtLTXleV9uEKefbAGUPv2/iWSooRA==
+
 cheerio-select@^1.5.0:
   version "1.5.0"
   resolved "https://registry.npmmirror.com/cheerio-select/-/cheerio-select-1.5.0.tgz"
@@ -3197,6 +3224,11 @@ cross-spawn@^7.0.3:
     path-key "^3.1.0"
     shebang-command "^2.0.0"
     which "^2.0.1"
+
+"crypt@>= 0.0.1":
+  version "0.0.2"
+  resolved "https://registry.npmmirror.com/crypt/-/crypt-0.0.2.tgz#88d7ff7ec0dfb86f713dc87bbb42d044d3e6c41b"
+  integrity sha512-mCxBlsHFYh9C+HVpiEacem8FEBnMXgU9gy4zmNC+SXAZNB/1idgp/aulFJ4FgCi7GPEVbfyng092GqL2k2rmow==
 
 crypto-random-string@^2.0.0:
   version "2.0.0"
@@ -6985,6 +7017,14 @@ setprototypeof@1.2.0:
   version "1.2.0"
   resolved "https://registry.npmmirror.com/setprototypeof/-/setprototypeof-1.2.0.tgz"
   integrity sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==
+
+sha1@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.npmmirror.com/sha1/-/sha1-1.1.1.tgz#addaa7a93168f393f19eb2b15091618e2700f848"
+  integrity sha512-dZBS6OrMjtgVkopB1Gmo4RQCDKiZsqcpAQpkV/aaj+FCrCg8r4I4qMkDPQjBgLIxlmu9k4nUbWq6ohXahOneYA==
+  dependencies:
+    charenc ">= 0.0.1"
+    crypt ">= 0.0.1"
 
 shallow-clone@^3.0.0:
   version "3.0.1"

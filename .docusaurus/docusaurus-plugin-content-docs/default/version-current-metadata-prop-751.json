@@ -567,6 +567,26 @@
         "items": [
           {
             "type": "category",
+            "label": "DappConnect React",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Intro",
+                "href": "/docs/Web3MQ-UI-Components/DappConnect-React/Intro",
+                "docId": "Web3MQ-UI-Components/DappConnect-React/Intro"
+              },
+              {
+                "type": "link",
+                "label": "DappConnectModal",
+                "href": "/docs/Web3MQ-UI-Components/DappConnect-React/DappConnectModal",
+                "docId": "Web3MQ-UI-Components/DappConnect-React/DappConnectModal"
+              }
+            ]
+          },
+          {
+            "type": "category",
             "label": "Web3MQ React",
             "collapsible": true,
             "collapsed": true,
@@ -1300,6 +1320,18 @@
       "id": "Web3MQ-SDK/Swift-SDK/Users/Users",
       "title": "User",
       "description": "Methods",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/DappConnect-React/DappConnectModal": {
+      "id": "Web3MQ-UI-Components/DappConnect-React/DappConnectModal",
+      "title": "DappConnectModal",
+      "description": "A customizable wallet-connected/signatures component consisting of buttons and Modal.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-UI-Components/DappConnect-React/Intro": {
+      "id": "Web3MQ-UI-Components/DappConnect-React/Intro",
+      "title": "Intro",
+      "description": "A library of react components for dapp and wallet communication",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel": {

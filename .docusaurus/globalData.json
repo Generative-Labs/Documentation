@@ -406,6 +406,16 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Web3MQ-UI-Components/DappConnect-React/DappConnectModal",
+              "path": "/docs/Web3MQ-UI-Components/DappConnect-React/DappConnectModal",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-UI-Components/DappConnect-React/Intro",
+              "path": "/docs/Web3MQ-UI-Components/DappConnect-React/Intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel",
               "path": "/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel",
               "sidebar": "tutorialSidebar"

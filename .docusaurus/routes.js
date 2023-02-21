@@ -55,7 +55,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','6c6'),
+    component: ComponentCreator('/docs','fc0'),
     routes: [
       {
         path: '/docs/Intro',
@@ -528,6 +528,18 @@ export default [
       {
         path: '/docs/Web3MQ-SDK/Swift-SDK/Users/',
         component: ComponentCreator('/docs/Web3MQ-SDK/Swift-SDK/Users/','be8'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-UI-Components/DappConnect-React/DappConnectModal',
+        component: ComponentCreator('/docs/Web3MQ-UI-Components/DappConnect-React/DappConnectModal','453'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-UI-Components/DappConnect-React/Intro',
+        component: ComponentCreator('/docs/Web3MQ-UI-Components/DappConnect-React/Intro','b7d'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },

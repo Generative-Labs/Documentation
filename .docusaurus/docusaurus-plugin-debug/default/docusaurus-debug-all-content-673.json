@@ -460,7 +460,7 @@
               },
               "next": {
                 "title": "Intro",
-                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/Intro"
+                "permalink": "/docs/Web3MQ-UI-Components/DappConnect-React/Intro"
               }
             },
             {
@@ -2133,6 +2133,56 @@
               }
             },
             {
+              "unversionedId": "Web3MQ-UI-Components/DappConnect-React/DappConnectModal",
+              "id": "Web3MQ-UI-Components/DappConnect-React/DappConnectModal",
+              "title": "DappConnectModal",
+              "description": "A customizable wallet-connected/signatures component consisting of buttons and Modal.",
+              "source": "@site/docs/Web3MQ-UI-Components/DappConnect-React/DappConnectModal.md",
+              "sourceDirName": "Web3MQ-UI-Components/DappConnect-React",
+              "slug": "/Web3MQ-UI-Components/DappConnect-React/DappConnectModal",
+              "permalink": "/docs/Web3MQ-UI-Components/DappConnect-React/DappConnectModal",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Intro",
+                "permalink": "/docs/Web3MQ-UI-Components/DappConnect-React/Intro"
+              },
+              "next": {
+                "title": "Intro",
+                "permalink": "/docs/Web3MQ-UI-Components/Web3MQ-React/Intro"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-UI-Components/DappConnect-React/Intro",
+              "id": "Web3MQ-UI-Components/DappConnect-React/Intro",
+              "title": "Intro",
+              "description": "A library of react components for dapp and wallet communication",
+              "source": "@site/docs/Web3MQ-UI-Components/DappConnect-React/Intro.md",
+              "sourceDirName": "Web3MQ-UI-Components/DappConnect-React",
+              "slug": "/Web3MQ-UI-Components/DappConnect-React/Intro",
+              "permalink": "/docs/Web3MQ-UI-Components/DappConnect-React/Intro",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 0,
+              "frontMatter": {
+                "sidebar_position": 0
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "ed25519key",
+                "permalink": "/docs/Web3MQ-API/ed25519key"
+              },
+              "next": {
+                "title": "DappConnectModal",
+                "permalink": "/docs/Web3MQ-UI-Components/DappConnect-React/DappConnectModal"
+              }
+            },
+            {
               "unversionedId": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel",
               "id": "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel",
               "title": "Channel",
@@ -2537,8 +2587,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "ed25519key",
-                "permalink": "/docs/Web3MQ-API/ed25519key"
+                "title": "DappConnectModal",
+                "permalink": "/docs/Web3MQ-UI-Components/DappConnect-React/DappConnectModal"
               },
               "next": {
                 "title": "LoginModal",
@@ -3431,6 +3481,22 @@
                 "collapsible": true,
                 "collapsed": true,
                 "items": [
+                  {
+                    "type": "category",
+                    "label": "DappConnect React",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "Web3MQ-UI-Components/DappConnect-React/Intro"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "Web3MQ-UI-Components/DappConnect-React/DappConnectModal"
+                      }
+                    ]
+                  },
                   {
                     "type": "category",
                     "label": "Web3MQ React",
