@@ -18,7 +18,7 @@
     "@docusaurus/preset-classic": "^2.0.0-beta.17",
     "@mdx-js/react": "^1.6.21",
     "@web3mq/client": "^1.0.7",
-    "@web3mq/react-components": "^1.0.11",
+    "@web3mq/react-components": "^1.0.15",
     "clsx": "^1.1.1",
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.1",

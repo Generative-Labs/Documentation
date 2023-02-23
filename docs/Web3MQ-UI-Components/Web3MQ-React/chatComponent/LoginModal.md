@@ -98,6 +98,10 @@ const useLogin = () => {
 };
 ```
 
+:::tip
+`LoginModal` integrates with `DappConnect`, the user can select the `DappConnect` environment via the env parameter, `LoginModal` defaults to the test environment.
+:::
+
 import { Layout } from '@site/src/components/Layout'
 import { LoginModalExample } from '@site/src/components/Web3MQ-React/LoginModalExample';
 import LoginModalMdx from '@site/src/components/Web3MQ-React/LoginModalExample/LoginModalExample.mdx';
@@ -138,6 +142,7 @@ code={<UseAccountMdx />}>
 | client           | client class                                                            | [Client](/docs/Web3MQ-SDK/JS-SDK/client)                                                            | Client            |  false   |
 | containerId      | id selector for the node that wraps the `LoginModal` component          | String                                                                                              |   ""              |  false   |
 | isShow           | Whether the modal dialog is visible or not                              | Boolean                                                                                             |  false            |  false   |
+| env              | network environment of dappConnect                                      | "test" \| "dev"                                                                                     |  "test"           |  false   |
 | loginBtnNode     | Set the custom `Button`                                                 | React.ReactNode                                                                                     |   null            |  false   |
 | keys             | Set the user master key pair for skipping the login signature operation | [MainKeysType](/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal#mainkeystype)       | undefined         |  false   |
 | modalClassName   | set the dialog class selector                                           | String                                                                                              |   ""              |  false   |

@@ -17,12 +17,14 @@ export const LoginModalExample: React.FC = (props: any) => {
   const [appType, setAppType] = useState(
     window.innerWidth <= 600 ? AppTypeEnum['h5'] : AppTypeEnum['pc'],
   );
+  const [visible, setVisible] = useState<boolean>(false);
   const handleAppType = () => {
     setAppType(window.innerWidth <= 600 ? AppTypeEnum['h5'] : AppTypeEnum['pc']);
   };
 
   useEffect(() => {
-    init()
+    init();
+    setVisible(true);
     document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
     window.addEventListener('resize', handleAppType);
     () => {
@@ -55,15 +57,17 @@ export const LoginModalExample: React.FC = (props: any) => {
           overflow: 'auto'
         }}
       >
-        <LoginModal 
-          appType={appType}
-          containerId='loginModalBox'
-          keys={mainKeys}
-          isShow={true}
-          modalClassName={ss.modalClassName}
-          handleLoginEvent={handleLoginEvent}
-          loginBtnNode={<Button size='large' type='ghost'>Login</Button>}
-        />
+        {visible && (
+          <LoginModal 
+            appType={appType}
+            containerId='loginModalBox'
+            keys={mainKeys}
+            isShow={true}
+            modalClassName={ss.modalClassName}
+            handleLoginEvent={handleLoginEvent}
+            loginBtnNode={<Button size='large' type='ghost'>Login</Button>}
+          />
+        )}
       </div>
     )
   }
