@@ -4,10 +4,11 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 214px;
+  height: 262px;
   background-image: url('../../../static/img/img_bg.jpg');
   background-size: cover;
   text-align: center;
+  border-radius: 18px;
   /* background: linear-gradient(180deg, rgba(102, 60, 238, 0) 0%, #663CEE 100%), url(image.png), #663CEE; */
 }
 
@@ -51,7 +52,7 @@
   font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 24px;
   color: #52525B;
 }
@@ -88,7 +89,7 @@
   font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 24px;
   color: #52525B;
 }

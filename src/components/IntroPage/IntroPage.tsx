@@ -58,7 +58,7 @@ export const IntroPage = () => {
 
         <div className={ss.cardContainer}>
           {cardList.map(card => (
-            <div className={ss.cardBox}>
+            <div key={card.title} className={ss.cardBox}>
               <div className={ss.cardhead}>
                 {card.icon}
                 <div className={ss.cardTitle}>{card.title}</div>
