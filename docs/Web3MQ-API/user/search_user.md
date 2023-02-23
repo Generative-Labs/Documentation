@@ -10,6 +10,15 @@ group:
 
 > **GET** `/api/users/search/`
 
+_Request Headers_
+
+| field                 | Required | headers Description             | example                                     |
+| --------------------- | -------- | ------------------------------- | ------------------------------------------- |
+| web3mq-request-pubkey | Yes      | your login keyapir's public key | 59daabd77706ba02a97c523513a2ceaed10e4275bd6 |
+| didkey                | Yes      | your did_type + ":" + did_value | eth:0xa1b1233fdfde                          |
+
+_Request Payload_
+
 | Parameters in URL | Type   | Required | Parameters Description                               |
 | ----------------- | ------ | -------- | ---------------------------------------------------- |
 | userid            | string | Yes      | your userid                                          |

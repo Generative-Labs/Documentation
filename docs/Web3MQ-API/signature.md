@@ -10,20 +10,6 @@ sidebar_position: 20
 
 - Web3MQ use ed25519 key pair for signing of requests
 
-<!-- _For js example_ -->
-
-<!-- 引入全量的 Markdown 文件内容 -->
-<!-- 
-<embed src="./ed25519key.md"></embed>
- -->
-<!--
-```tsx
-import React from 'react';
-import { MetaMaskSignatureRecoverApp } from 'Web3MQ-Docs';
-
-export default () => <MetaMaskSignatureRecoverApp />;
-
-``` -->
 
 ## Signing requests data
 

@@ -1,15 +1,24 @@
 ---
-title: Get i send friend requests
-order: 6
+title: Get receive friend requests list
+order: 7
 group:
   title: Contact
 ---
 
-## Get i send friend requests
+## Get receive friend requests list
 
 ---
 
-> **GET** `/api/contacts/add_friends_list/`
+> **GET** `/api/contacts/friend_requests_list/`
+
+_Request Headers_
+
+| field                 | Required | headers Description             | example                                     |
+| --------------------- | -------- | ------------------------------- | ------------------------------------------- |
+| web3mq-request-pubkey | Yes      | your login keyapir's public key | 59daabd77706ba02a97c523513a2ceaed10e4275bd6 |
+| didkey                | Yes      | your did_type + ":" + did_value | eth:0xa1b1233fdfde                          |
+
+_Request Payload_
 
 | Parameters in URL | Type   | Required | Parameters Description                                                |
 | ----------------- | ------ | -------- | --------------------------------------------------------------------- |
@@ -17,11 +26,13 @@ group:
 | size              | int    | Yes      | page size                                                             |
 | userid            | string | Yes      | userid |
 | timestamp         | int    | Yes      | timestamp milliseconds                                                |
-| web3mq_signature  | string | Yes      | use ed25519 [see signing detail](/docs/Web3MQ-API/signature)                  |
+| web3mq_signature  | string | Yes      | use ed25519 `base64 encode` [see signing detail](/docs/Web3MQ-API/signature)                  |
 
 _url query params_
 
 _web3mq_signature signing rule_
+
+`base64 encode` signature
 
 > web3mq_signature = ed25519 private key signing(userid + timestamp)
 

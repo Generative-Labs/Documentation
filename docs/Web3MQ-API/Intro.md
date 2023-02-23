@@ -15,18 +15,14 @@ sidebar_position: 0
 - https://testnet-ap-singapore-2.web3mq.com
 
 ## HTTP API list
-<!-- 
-- Public Key
 
-  - Save PublicKey [see detail](/docs/Web3MQ-API/pubkey)
-    - Create your public key and save to Web3MQ;
-    - Web3MQ use the public key `verify` your all subsequent requests
- -->
+
 - Contact
-  - Get my contact list
   - Send friend request
-  - Get friend request list
-  - Agree or Reject friend request
+  - User Follow someone
+  - Get my follower list
+  - Get my following list
+
 - Group
 
   - List of groups i have joined
@@ -38,7 +34,6 @@ sidebar_position: 0
 - Chat
   - Get my chat list
 - Message
-
   - Get history messages
 
 ## Websocket API list
