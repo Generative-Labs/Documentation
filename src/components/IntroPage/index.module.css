@@ -1,3 +1,6 @@
+.introContainer {
+  padding: 0 32px;
+}
 .introHead {
   display: flex;
   flex-direction: column;
@@ -32,7 +35,7 @@
 
 .introMain {
   width: 100%;
-  padding: 48px;
+  padding: 48px 0px;
   background: #FFFFFF;
 }
 
@@ -152,9 +155,13 @@
 }
 
 @media screen and (max-width: 768px) {
+  .introContainer {
+    padding: 0px 4px;
+  }
   .introHead {
     height: 100%;
     min-height: 228px;
+    padding: 0 24px;
     background-image: url('../../../static/img/img_mobile.jpg');
   }
   .introHead .title {
@@ -166,10 +173,6 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-  }
-  .introMain {
-    padding-left: 16px;
-    padding-right: 16px;
   }
   .introMain > .quickStartTip {
     flex-direction: column;
