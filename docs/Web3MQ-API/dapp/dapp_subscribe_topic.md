@@ -25,7 +25,7 @@ _web3mq_signature signing rule_
 
 `base64 encode` signature
 
-> web3mq_dapp_signature = ed25519 private key signing(dapp_id + topicid + timestamp)
+> web3mq_dapp_signature = `dapp ed25519 private key` signing(dapp_id + topicid + timestamp)
 
 _Body json params_
 
