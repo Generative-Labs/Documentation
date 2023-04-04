@@ -11,7 +11,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/web3mq.logo.ico',
+  favicon: 'img/favicon.ico',
   organizationName: 'Web3MQ', // Usually your GitHub org/user name.
   projectName: 'Web3MQ', // Usually your repo name.
 
