@@ -55,7 +55,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','6c6'),
+    component: ComponentCreator('/docs','aad'),
     routes: [
       {
         path: '/docs/Intro',
@@ -106,38 +106,62 @@ export default [
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-API/contact/addfriend_list',
-        component: ComponentCreator('/docs/Web3MQ-API/contact/addfriend_list','16d'),
+        path: '/docs/Web3MQ-API/contact/follow_someone',
+        component: ComponentCreator('/docs/Web3MQ-API/contact/follow_someone','55b'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-API/contact/change_friend_requests',
-        component: ComponentCreator('/docs/Web3MQ-API/contact/change_friend_requests','6e6'),
+        path: '/docs/Web3MQ-API/contact/get_my_follower_list',
+        component: ComponentCreator('/docs/Web3MQ-API/contact/get_my_follower_list','d32'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-API/contact/friend_requests',
-        component: ComponentCreator('/docs/Web3MQ-API/contact/friend_requests','9c0'),
+        path: '/docs/Web3MQ-API/contact/get_my_followers_and_following',
+        component: ComponentCreator('/docs/Web3MQ-API/contact/get_my_followers_and_following','d28'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-API/contact/Get_my_contact_list',
-        component: ComponentCreator('/docs/Web3MQ-API/contact/Get_my_contact_list','04e'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-API/contact/Search_contacts',
-        component: ComponentCreator('/docs/Web3MQ-API/contact/Search_contacts','e7c'),
+        path: '/docs/Web3MQ-API/contact/get_my_following_list',
+        component: ComponentCreator('/docs/Web3MQ-API/contact/get_my_following_list','10a'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
         path: '/docs/Web3MQ-API/contact/Send_friend_request',
         component: ComponentCreator('/docs/Web3MQ-API/contact/Send_friend_request','096'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-API/dapp/create_dapp',
+        component: ComponentCreator('/docs/Web3MQ-API/dapp/create_dapp','28c'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-API/dapp/dapp_create_topic',
+        component: ComponentCreator('/docs/Web3MQ-API/dapp/dapp_create_topic','82a'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-API/dapp/dapp_subscribe_topic',
+        component: ComponentCreator('/docs/Web3MQ-API/dapp/dapp_subscribe_topic','eca'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-API/dapp/get_my_dapps',
+        component: ComponentCreator('/docs/Web3MQ-API/dapp/get_my_dapps','a30'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-API/dapp/update_dapp',
+        component: ComponentCreator('/docs/Web3MQ-API/dapp/update_dapp','345'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
@@ -256,12 +280,6 @@ export default [
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-API/provider/create_provider',
-        component: ComponentCreator('/docs/Web3MQ-API/provider/create_provider','c3f'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
         path: '/docs/Web3MQ-API/PubSub/',
         component: ComponentCreator('/docs/Web3MQ-API/PubSub/','b13'),
         exact: true,
@@ -310,12 +328,6 @@ export default [
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-API/quickstart/Generate_Key_pairs',
-        component: ComponentCreator('/docs/Web3MQ-API/quickstart/Generate_Key_pairs','c08'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
         path: '/docs/Web3MQ-API/quickstart/Send_Connect_Command',
         component: ComponentCreator('/docs/Web3MQ-API/quickstart/Send_Connect_Command','d41'),
         exact: true,
@@ -328,14 +340,14 @@ export default [
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-API/quickstart/Signing_data_with_MetaMask',
-        component: ComponentCreator('/docs/Web3MQ-API/quickstart/Signing_data_with_MetaMask','3f9'),
+        path: '/docs/Web3MQ-API/quickstart/User_login',
+        component: ComponentCreator('/docs/Web3MQ-API/quickstart/User_login','a97'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-API/quickstart/User_login',
-        component: ComponentCreator('/docs/Web3MQ-API/quickstart/User_login','a97'),
+        path: '/docs/Web3MQ-API/quickstart/user_register',
+        component: ComponentCreator('/docs/Web3MQ-API/quickstart/user_register','485'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
@@ -376,8 +388,14 @@ export default [
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-API/user/user_login',
-        component: ComponentCreator('/docs/Web3MQ-API/user/user_login','e52'),
+        path: '/docs/Web3MQ-API/user/user_login_v2',
+        component: ComponentCreator('/docs/Web3MQ-API/user/user_login_v2','405'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-API/user/user_register_v2',
+        component: ComponentCreator('/docs/Web3MQ-API/user/user_register_v2','e5c'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },

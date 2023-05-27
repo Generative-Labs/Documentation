@@ -10,7 +10,7 @@ export default {
   "baseUrl": "/",
   "onBrokenLinks": "throw",
   "onBrokenMarkdownLinks": "warn",
-  "favicon": "img/web3mq.logo.ico",
+  "favicon": "img/favicon.ico",
   "organizationName": "Web3MQ",
   "projectName": "Web3MQ",
   "presets": [
@@ -18,10 +18,10 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "/Users/edy/Desktop/web3-mq documentation/Documentation/sidebars.js"
+          "sidebarPath": "/Users/coder/WorkSpace/Documentation/sidebars.js"
         },
         "theme": {
-          "customCss": "/Users/edy/Desktop/web3-mq documentation/Documentation/src/css/custom.css"
+          "customCss": "/Users/coder/WorkSpace/Documentation/src/css/custom.css"
         }
       }
     ]
