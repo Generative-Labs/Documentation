@@ -67,7 +67,7 @@ export const IntroPage = () => {
                 {card.description}
               </div>
               <div style={{display: 'flex', height: '100%', flexDirection: 'column', justifyContent: 'end', marginTop: '16px'}}>
-                <Link className={ss.cardLink} to={card.href}>Get Started with {card.title} -&gt;</Link>
+                <Link className={ss.cardLink} to={card.href}>Get Started with {card.title}  &#8594;</Link>
               </div>
             </div>
           ))}
