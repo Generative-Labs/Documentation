@@ -75,14 +75,14 @@ const config = {
               //   label: 'Stack Overflow',
               //   href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               // },
-              // {
-              //   label: 'Discord',
-              //   href: 'https://discordapp.com/invite/docusaurus',
-              // },
-              // {
-              //   label: 'Twitter',
-              //   href: 'https://twitter.com/docusaurus',
-              // },
+              {
+                label: 'Discord',
+                href: 'https://discord.gg/UymwsCAb',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/Web3MQ',
+              },
             ],
           },
           {
@@ -93,7 +93,7 @@ const config = {
               //   to: '/blog',
               // },
               {
-                label: 'This Website is build with Docusaurus and love❤️',
+                label: 'Built with Docusaurus and ❤️',
                 href: 'https://github.com/facebook/docusaurus',
               },
             ],
