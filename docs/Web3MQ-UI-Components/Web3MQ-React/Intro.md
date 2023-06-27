@@ -240,7 +240,7 @@ const client = Client.getInstance('YOUR_ACCESS_TOKEN');
 :::tip
 When using the `@web3mq/react-components` 
 >1. need to introduce css file of `@web3mq/react-components` firstly.
->2. set the theme used, you need to set the `data-theme` attribute in the body, currently only `light` is a theme.
+>2. set the theme used, you need to set the `data-theme` attribute in the body, Two modes supported:  `light` and `dark`;
 :::
 
 In most components of the @web3mq/react-components library, it is possible to both render without injecting props, and also render custom component by passing in props. In custom components, the corresponding state can be obtained by props or the corresponding context.
@@ -270,6 +270,8 @@ const App = () => {
     init();
     // set your component theme
     document.getElementsByTagName('body')[0].setAttribute('data-theme', 'light');
+      // or dark mode
+    // document.getElementsByTagName('body')[0].setAttribute('data-theme', 'dark');
   }, []);
 
   if (!fastestUrl) {

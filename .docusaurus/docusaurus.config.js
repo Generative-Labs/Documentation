@@ -18,10 +18,10 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "/Users/coder/WorkSpace/Documentation/sidebars.js"
+          "sidebarPath": "/Users/zhaowei/Desktop/trunk/ty/Documentation/sidebars.js"
         },
         "theme": {
-          "customCss": "/Users/coder/WorkSpace/Documentation/src/css/custom.css"
+          "customCss": "/Users/zhaowei/Desktop/trunk/ty/Documentation/src/css/custom.css"
         }
       }
     ]
@@ -57,13 +57,22 @@ export default {
         },
         {
           "title": "Community",
-          "items": []
+          "items": [
+            {
+              "label": "Discord",
+              "href": "https://discord.gg/UymwsCAb"
+            },
+            {
+              "label": "Twitter",
+              "href": "https://twitter.com/Web3MQ"
+            }
+          ]
         },
         {
           "title": "More",
           "items": [
             {
-              "label": "This Website is build with Docusaurus and love❤️",
+              "label": "Built with Docusaurus and ❤️",
               "href": "https://github.com/facebook/docusaurus"
             }
           ]
