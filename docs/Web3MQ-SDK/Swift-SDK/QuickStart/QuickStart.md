@@ -29,30 +29,26 @@ Once you have your Swift package set up, adding Web3MQSDK as a dependency is as 
 
 ```swift
 dependencies: [
-    .package(url: "git@github.com:Generative-Labs/Web3MQ-SDK-Swift.git", .upToNextMajor(from: "0.1.0"))
+    .package(url: "git@github.com:Generative-Labs/Web3MQ-iOS.git", .upToNextMajor(from: "0.1.0"))
 ]
-```
-
-#### CocoaPods
-
-[CocoaPods](https://cocoapods.org/) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate Alamofire into your Xcode project using CocoaPods, specify it in your `Podfile`:
-
-```swift
-pod 'Web3MQSDK'
 ```
 
 ## Initialize the SDK
 
-Let's get started by initializing the client:
+Let's get started by initializing the client.
+
+:::note
+ `ChatClient.default` uses the default `Service` and `WebSocketClient`. If you want to use a custom `Service` or `WebSocketClient`, please refer to the relevant API documentation. In most cases, you only need to use the default one.
+:::
 
 ```swift
-import Web3MQSDK
+import Web3MQ
 
 // the SDK will find the endpoint with lowest latency for you 
-Client.shared.setup(with: Configuration(appKey: "{AppKey}"))
+ChatClient.default.setup(with: Configuration(appKey: "{AppKey}"))
 
 // or you prefer to set a specific endpoint     
-Client.shared.setup(with: Configuration(appKey: "{AppKey}", endpoint: Endpoint.Dev.jp1))
+ChatClient.default.setup(with: Configuration(appKey: "{AppKey}", endpoint: Endpoint.Dev.jp1))
 ```
 
 ## Connecting
@@ -66,7 +62,7 @@ For any first-time user of Web3MQ's network, you'll need to register on Web3MQ's
 let (keyPair, userId) = await Client.shared.connectWithMateMask()
 ```
 
-SDK will save the keypair in Keychain defaultly, you could disable it by setting keychainStore false 
+SDK will save the keypair in Keychain defaultly, you could disable it by setting keychainStore false
 
 ```swift
 let (keyPair, userId) = await Client.shared.connectWithMateMask(keychainStore: false)
@@ -75,6 +71,7 @@ let (keyPair, userId) = await Client.shared.connectWithMateMask(keychainStore: f
 ### Connecting Automatically
 
 If there is a key-pair in keychain, it will automatically connect to that user.
+
 ```swift
 Client.shared.autoConnect()
 ```
@@ -89,20 +86,20 @@ Client.shared.connect(with: KeyPair(privateKey: "{PrivteKey}", publicKey: "{Publ
 
 ### Connecting Status
 
-If you want to react instantly with the connecting status updating, just subscribe this publisher:  `Client.shared.connectingStatusPublisher` 
+If you want to react instantly with the connecting status updating, just subscribe this publisher:  `Client.shared.connectingStatusPublisher`
 
 ```swift
 let status: Web3MQConnectingStatus = Client.shared.connectingStatus
 
 public enum Web3MQConnectingStatus {
-		case idle 
-		// the SDK will always try to reconnect the Web3MQ network, so you don't need 
-		// to care about that part.
-		case connecting
-		case connected(nodeId: String)
-		// only when you disconnect manually 
-		case disconnected 
-		case error(_ error: Error?)
+  case idle 
+  // the SDK will always try to reconnect the Web3MQ network, so you don't need 
+  // to care about that part.
+  case connecting
+  case connected(nodeId: String)
+  // only when you disconnect manually 
+  case disconnected 
+  case error(_ error: Error?)
 }
 ```
 
@@ -115,11 +112,12 @@ let channelId: String = await Client.shared.channelManager.createChannel(name: "
 ```
 
 ## Messages
+
 Now that we have the channel set up, let's send our first chat message:
 
 ### Sending Message
 
-send a message to a user or a channel 
+send a message to a user or a channel
 
 ```swift
 // sessionId: userId or channelId
@@ -127,7 +125,9 @@ Client.shared.messageManager.sendMessage("{Text}", topicId: "{TopicId}") async t
 ```
 
 ### Receiving Message
+
 subscribe the messagePublisher to receive messages.
+
 ```swift
 Client.shared.messageManager.messagePublisher
 ```
