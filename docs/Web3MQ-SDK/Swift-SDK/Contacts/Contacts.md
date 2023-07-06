@@ -1,51 +1,37 @@
 ---
-position: 5
+position: 1
 ---
 
-# Contact
+# Contacts
 
-## Methods
-| Name | Parameters  | Response |
-| --- | --- | --- |
-| getContacts | page: Int, size: Int  | [User](/docs/Web3MQ-SDK/Swift-SDK/Structs/###UserInfo) |
-| search | keyword: String  | [String] |
-| makeFriendRequest | (toUserId: string) | Bool |
-| answerRequest | userId: String, action: FriendRequestAction | Bool |
-| getFriendRequestsFromCurrentUser | page: Int, size: Int  | [User](/docs/Web3MQ-SDK/Swift-SDK/Structs/###UserInfo) |
-| getFriendRequestsFromCurrentUser | page: Int, size: Int  | [User](/docs/Web3MQ-SDK/Swift-SDK/Structs/###UserInfo) |
+## Get User Followings
 
-## Getting Contacts
+Use the `followingList` method to get a list of users that the current user is following.
 
 ```swift
-let contacts: [User] = await Client.shared.contactManager.contacts(page: 1, size: 20)
+let page = try await ChatClient.default.followingList(pageCount: 1, pageSize: 30)
 ```
 
-## Searching Contacts
+## Get User Followers
+
+Use the `followersList` method to get a list of users who are following the current user.
 
 ```swift
-let contacts: [User] = await Client.shared.contactManager.search(keyword: "{keyword}")
+let page = try await ChatClient.default.followersList(pageCount: 1, pageSize: 30)
 ```
 
-## Sending Friend Request
+## Follow User
+
+Use the `follow` method to follow a user.
 
 ```swift
-let result: Result = await Client.shared.contactManager.makeFriendRequest(to: "{userId}")
+try await ChatClient.default.follow(targetUserId: "userId", message: "");
 ```
 
-## Getting Friend Requests From Current User
+## Unfollow User
+
+Use the `unfollow` method to unfollow a user.
 
 ```swift
-let users: [String]= await Client.shared.contactManager.getFriendRequestsFromCurrentUser(page: 0, size: 20)
-```
-
-## Getting Received Friend Requests
-
-```swift
-let users: [String]= await Client.shared.contactManager.getReceivedFriendRequests(page: 0, size: 20)
-```
-
-## Answering Request
-
-```swift
-let result: Bool = await Client.shared.contactManager.answerRequest(topicId: "{topicId}", action: .agree)
+try await ChatClient.default.unfollow(targetUserId: "userId")
 ```

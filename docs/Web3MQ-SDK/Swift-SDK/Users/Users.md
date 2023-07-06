@@ -1,39 +1,58 @@
 ---
-position: 6
+position: 1
 ---
 
 # User
 
-## Methods
-| Name | Parameters  | Response |
-| --- | --- | --- |
-| searchUsers | walletAddress: [string] | [UserInfo](/docs/Web3MQ-SDK/Swift-SDK/Structs/###UserInfo) |
-| getMyProfile | none | [UserProfile](/docs/Web3MQ-SDK/Swift-SDK/Structs/#UserProfile) |
-| changeProfile | nickname: String, avatarUrl: String | [UserProfile](/docs/Web3MQ-SDK/Swift-SDK/Structs/###UserProfile) |
+## User info
 
-
-## Searching Users
-
-search users by wallet addresses 
+Get information about a user specified by their DID.
 
 ```swift
-let users: [User] = await Client.shared.userManager.searchUsers(keyword: String)
+let userInfo = try await ChatClient.default.userInfo(did: DID())
 ```
 
-## Getting Current User Profile
+## Register
+
+Register user by did and password.
 
 ```swift
-let userProfile: [UserProfile] = await Client.shared.userManager.myProfile()
+let res: RegisterResult = await ChatClient.default.register(did: DID(type: "", value: ""), password: "")
 ```
 
-## Getting Profile by Did
+## Private Key
+
+Retrieve PrivateKey by did and password.
 
 ```swift
-let users: [User] = await Client.shared.userManager.userInfo(didId: "didID", didType: "{didType}"])
+let privateKey = try await ChatClient.default.fetchPrivateKey(did: DID(type: "", value: ""), password: "");
 ```
 
-## Updating Profile
+## Get `ConnectionInfo` by DID and password
 
 ```swift
-let users: User = await Client.shared.userManager.changeProfile(nickname: "{Nickname}", avatarUrl: "{AvatarUrl}")
+let user = try await ChatClient.default.connectionInfo(did: DID(type: "", value: ""), password: "")
+```
+
+## Get `ConnectionInfo` by DID and privateKey
+
+```swift
+let privateKey: Curve25519.Signing.PrivateKey
+let user = try await ChatClient.default.connectionInfo(did: DID(type: "", value: ""), privateKey: privateKey)
+```
+
+## Permissions
+
+Retrieves the user permissions for the user with the given `userId`.
+
+```swift
+let user = try await ChatClient.default.userPermissions(userId: "")
+```
+
+## Updating profile
+
+Changes the current user's profile information.
+
+```swift
+try await ChatClient.default.changeProfile(nickname: "", avatarUrl: "")
 ```

@@ -1,48 +1,37 @@
 ---
-position: 8
+position: 1
 ---
 
-# Topics
+# Topic
 
-## Methods
-| Name | Parameters  | Response |
-| --- | --- | --- |
-| create | topicName: String | topicId: String |
-| subscribe | topicId: String | isSuccess: Bool  |
-| publishMessage | topicid: String; title: String; content: String | isSuccess: Bool  |
-| getCreatedTopicList | page: Int, size: Int | [Topic](/docs/Web3MQ-SDK/Swift-SDK/Structs/###Topic) |
-| getSubscribedTopicList | page: Int, size: Int  | [Topic](/docs/Web3MQ-SDK/Swift-SDK/Structs/###Topic) |
+## Subscribe
 
-## Creating Topic
+Use the `subscribeTopic` method to subscribe to a topic by providing the `topicId`, and start receiving notifications from that topic.
 
 ```swift
-// topicName is optional 
-let topic: Topic = await Client.shared.topicManager.create(topicName: "{topic_name}")
+try await ChatClient.default.subscribeTopic("topicId");
 ```
 
-## Getting Topic List
+## Create a Topic
 
-### Getting Created Topics
+Use the `createTopic` method to create a new topic with the given `topicName`.
 
 ```swift
-// get the topic ids 
-let topics: [String] = await Client.shared.topicManager.myCreateTopics(page: Int, size: Int)
+let topicId = try await ChatClient.default.createTopic(topicName);
 ```
 
-### Getting **Subscribed Topics**
+## Publish a Message
+
+Use the `publish` method to publish a new message to the topic identified by `topicId`. The topic must be created by the user themselves.
 
 ```swift
-let topics: [String] = await Client.shared.topicManager.mySubscribeTopics(page: Int, size: Int)
+try await ChatClient.default.publish(toTopic: "topic", title: "title", content: "content");
 ```
 
-## Publishing Messages to a Topic
+## Get Subscribed Topics
+
+Use the `mySubscribeTopics` method to get a list of topics that the current user is subscribed to, with pagination support.
 
 ```swift
-await Client.shared.topicManager.publishMessage(topicId: "{TopicId}", title: "{title}", content: "{content}")
-```
-
-## **Subscribing Topic**
-
-```swift
-let isSuccess: Bool = await Client.shared.topicManager.subscribeTopic("{TopicId}")
+let page = await ChatClient.default.mySubscribeTopics(pageCount: 1, pageSize: 30);
 ```

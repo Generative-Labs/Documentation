@@ -1,57 +1,53 @@
 ---
-position: 7
+position: 1
 ---
 
-# Notifications
+# Notification
 
-## Methods
-| name | Parameters Description | response |
-| --- | --- | --- |
-| updateNotificationStatus | messages: string[], status: [NotificationStatus](/docs/Web3MQ-SDK/Swift-SDK/Structs/###NotificationStatus) | success: Bool |
-| searchNotifications | topicId: String, page: Int, size: Int | notifications: [Notification](/docs/Web3MQ-SDK/Swift-SDK/Structs/###Notification) |
-| receiving notifications |  |  |
+***Notification*** is a special type of message that can be marked as read and queried. Currently, there are the following types of notifications:
 
-## Updating Notification Status
+- `NotificationType.subscription`：Subscription message
+- `NotificationType.receivedFriendRequest`：Received friend request
+- `NotificationType.sendFriendRequest`：Sent friend request
+- `NotificationType.groupInvitation`：Group invitation message
+- `NotificationType.provider`：Provider information
+
+## Subscribe
+
+Subscribe a topic with `topicId`, then you can receive notifications from that `topic`.
 
 ```swift
-let isSuccess = await Client.shared.notificationManager.updateNotificationStatus(notifications: ["{notificationId}"], status: .read)
+try await ChatClient.default.subscribeTopic("topicId")
 ```
 
-## Search Notifications by TopicId
+## Receive
+
+You can use the following method to subscribe notifications from the web3mq server.
 
 ```swift
-let notifications: [Notifications] = await Client.shared.notificationManager.getNotifications(by: "{NotificationType}", page: 0, size: 20)
-```
-
-## Receiving Notification
-
-The notification is also a specific message. Just subscribe the `notificationPublisher` to receive notifications.
-
-```swift
-Client.shared.notificationManager.notificationPublisher
-```
-
-## Notification Content
-
-```swift
-public struct Web3MQNotificationContent: Codable {
-    
-    public let title: String?
-    public let content: String?
-    public let type: String?
+ChatClient.default.notificationPublisher.sink { notifications in 
+  // handle the notifications.
 }
+```
 
-public struct Web3MQNotification: Codable {
+## Read Status
 
-    public let cipherSuite: String?
-    public let from: String?
-    public let topic: String?
-    public let fromSign: String?
-    public let messageId: String?
-    public let payloadType: String?
-    public let timestamp: UInt64?
-    public let payload: Web3MQNotificationContent?
-    public let version: Int?
-    
+Mark the notification as read.
+
+```swift
+ChatClient.default.updateNotificationStatus(notificationsIds, status: notificationStatus);
+
+public enum NotificationStatus: String {
+    case received
+    case delivered
+    case read
 }
+```
+
+## Query
+
+You can query all historical notifications by types and pagination.
+
+```dart
+Page<Notification> res = await client.queryNotifications(type, pagination);
 ```

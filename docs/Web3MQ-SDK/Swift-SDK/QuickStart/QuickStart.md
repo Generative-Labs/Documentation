@@ -44,125 +44,166 @@ Let's get started by initializing the client.
 ```swift
 import Web3MQ
 
-// the SDK will find the endpoint with lowest latency for you 
-ChatClient.default.setup(with: Configuration(appKey: "{AppKey}"))
+ChatClient.default.setup(appKey: "{AppKey}")
+```
 
-// or you prefer to set a specific endpoint     
-ChatClient.default.setup(with: Configuration(appKey: "{AppKey}", endpoint: Endpoint.Dev.jp1))
+## Wallet Connector
+
+Some methods that SDK provides require wallet signature,  you should setup the `WalletConnector` before calling those methods.
+
+```swift
+ChatClient.default.walletConnector = walletConnector;
+```
+
+```swift
+///
+public protocol Wallet {
+
+    /// Account IDs that follow the CAIP-10 standard.
+    var accounts: [String] { get }
+}
+
+/// This protocol provides methods to connect a wallet and `personal_sign`
+public protocol WalletConnector {
+    func connectWallet() async throws -> Wallet
+
+    func personalSign(
+        message: String,
+        address: String,
+        password: String?
+    ) async throws -> String
+}
+
 ```
 
 ## Connecting
 
-### Signup
+### Register
 
-For any first-time user of Web3MQ's network, you'll need to register on Web3MQ's network. SDK takes care of the key generation process and subsequent wallet signing process. `Client.shared.connectWithMateMask` is a utility method that does this automatically.
+For any first-time user of Web3MQ's network, you'll need to register on Web3MQ's network. SDK takes care of the key generation process and subsequent wallet signing process.
 
 ```swift
 // Keep your private key in a safe place!
-let (keyPair, userId) = await Client.shared.connectWithMateMask()
+let registerResult: RegisterResult = await ChatClient.default.register(did: DID("did_type", "did_value"))
 ```
 
-SDK will save the keypair in Keychain defaultly, you could disable it by setting keychainStore false
+### Connection Info
 
 ```swift
-let (keyPair, userId) = await Client.shared.connectWithMateMask(keychainStore: false)
+let connectionInfo = try await ChatClient.default.connectionInfo(did: registerResult.did, privateKey: registerResult.privateKey)
+```
+
+### Connect with a `ConnectionInfo`
+
+:::note
+The SDK will store the connected `ConnectionInfo` in the local database.
+:::
+
+```swift
+try await ChatClient.default.connect(connectionInfo)
 ```
 
 ### Connecting Automatically
 
-If there is a key-pair in keychain, it will automatically connect to that user.
+If the connectionInfo exists in the local database, you can simply call `autoConnect` to connect.
 
 ```swift
-Client.shared.autoConnect()
+try await ChatClient.default.autoConnect()
 ```
 
-### Connecting Manually
-
-You could also connect manually.
-
-```swift
-Client.shared.connect(with: KeyPair(privateKey: "{PrivteKey}", publicKey: "{PublicKey}"), userId: "{UserId}")
-```
+It will throws error if there's no connectionInfo exists in the local database.
 
 ### Connecting Status
 
-If you want to react instantly with the connecting status updating, just subscribe this publisher:  `Client.shared.connectingStatusPublisher`
+Sink the `ChatClient.default.connectionStatusPublisher` to track connection status.
+
+## Chat
+
+### Channel List
+
+To keep track of the list of channels, sink to the **`channelsSubject`** subject:
+
+```dart
+ChatClient.default.channelsSubject.sink { channels in
+  // handle the channel list 
+};
+```
+
+### Sending message
+
+To send a text message, call the **`sendMessage`** method with the message text and the ID of the topic:
 
 ```swift
-let status: Web3MQConnectingStatus = Client.shared.connectingStatus
+try await ChatClient.default.sendMessage('text', to: "topicId")
+```
 
-public enum Web3MQConnectingStatus {
-  case idle 
-  // the SDK will always try to reconnect the Web3MQ network, so you don't need 
-  // to care about that part.
-  case connecting
-  case connected(nodeId: String)
-  // only when you disconnect manually 
-  case disconnected 
-  case error(_ error: Error?)
+### Message sending status
+
+To receive updates on the message sending status, sink to the **`messageStatusPublisher`** publisher:
+
+```swift
+ChatClient.default.messagePublisher.sink { message in 
+    // handle the message status update 
 }
 ```
 
-## Channels
+### Receiving new messages
 
-Let’s continue by initializing your first channel. A channel contains messages, a list of members that are watching the channel. The example below shows how to set up a channel to support chat for a group conversation:
+To receive new messages, listen to the **`messagePublisher`** publisher:
 
 ```swift
-let channelId: String = await Client.shared.channelManager.createChannel(name: "{channel_name}") 
+ChatClient.default.messagePublisher.sink { message in 
+  // handle the message.   
+}
 ```
 
-## Messages
+### Query the message list
 
-Now that we have the channel set up, let's send our first chat message:
-
-### Sending Message
-
-send a message to a user or a channel
+To query the message list, call the **`messageHistory`** method with the ID of the topic and a pagination info:
 
 ```swift
-// sessionId: userId or channelId
-Client.shared.messageManager.sendMessage("{Text}", topicId: "{TopicId}") async throws
-```
-
-### Receiving Message
-
-subscribe the messagePublisher to receive messages.
-
-```swift
-Client.shared.messageManager.messagePublisher
+let messages = try await ChatClient.default.messageHistory(topicId: "topicId", pageCount: 1, pageSize: 100)
 ```
 
 ## Notifications
 
-### Receiving Notification
+### Subscribe
 
-The notification is also a specific message. Just subscribe the `notificationPublisher` to receive notifications.
+Subscribe a topic with `topicId`, then you can receive notifications from that `topic`.
 
 ```swift
-Client.shared.notificationManager.notificationPublisher
+try await ChatClient.default.subscribeTopic("topicId")
 ```
 
-<!-- ### Notification Content
+### Receive
+
+You can use the following method to subscribe notifications from the web3mq server.
+
+```dart
+ChatClient.default.notificationPublisher.sink { notifications in 
+  // handle the notifications.
+}
+```
+
+### Read Status
+
+Mark the notification as read.
 
 ```swift
-public struct Web3MQNotificationContent: Codable {
-    
-    public let title: String?
-    public let content: String?
-    public let type: String?
+ChatClient.default.updateNotificationStatus(notificationsIds, status: notificationStatus);
+
+public enum NotificationStatus: String {
+    case received
+    case delivered
+    case read
 }
 
-public struct Web3MQNotification: Codable {
+```
 
-    public let cipherSuite: String?
-    public let from: String?
-    public let topic: String?
-    public let fromSign: String?
-    public let messageId: String?
-    public let payloadType: String?
-    public let timestamp: UInt64?
-    public let payload: Web3MQNotificationContent?
-    public let version: Int?
-    
-}
-``` -->
+### Query
+
+You can query all historical notifications by types and pagination.
+
+```swift
+let notifications = await ChatClient.default.queryNotifications(types: [types], pageCount: 1, pageSize: 30);
+```
