@@ -104,7 +104,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['swift'],
+        additionalLanguages: ['swift', 'dart'],
       },
       algolia: {
         // The application ID provided by Algolia
