@@ -32,9 +32,17 @@
   "/search-79a": {
     "component": "component---theme-search-page-1-a-4-d6f"
   },
-  "/docs-aad": {
+  "/docs-cfd": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
+  },
+  "/docs/category/chat-4fc": {
+    "component": "component---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---docs-category-chatfb-3-ac9"
+  },
+  "/docs/category/dappconnect-b98": {
+    "component": "component---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---docs-category-dappconnect-6-b-3-6c4"
   },
   "/docs/Intro-1f0": {
     "component": "component---theme-doc-item-178-a40",
@@ -264,6 +272,38 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-api-user-user-register-v-262-f-9c8"
   },
+  "/docs/Web3MQ-SDK/Dart-SDK/Chat/-809": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-dart-sdk-chat-e-19-032"
+  },
+  "/docs/Web3MQ-SDK/Dart-SDK/Chat/contacts-63e": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-dart-sdk-chat-contacts-571-67b"
+  },
+  "/docs/Web3MQ-SDK/Dart-SDK/Chat/group-685": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-dart-sdk-chat-group-4-bb-f50"
+  },
+  "/docs/Web3MQ-SDK/Dart-SDK/Chat/notification-f2d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-dart-sdk-chat-notificationfa-0-a66"
+  },
+  "/docs/Web3MQ-SDK/Dart-SDK/Chat/quick_start-f84": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-dart-sdk-chat-quick-start-25-a-2fa"
+  },
+  "/docs/Web3MQ-SDK/Dart-SDK/Chat/topic-f54": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-dart-sdk-chat-topic-8-fc-e3e"
+  },
+  "/docs/Web3MQ-SDK/Dart-SDK/Chat/user-d6a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-dart-sdk-chat-user-278-a15"
+  },
+  "/docs/Web3MQ-SDK/Dart-SDK/DappConnect/quick_start-b6c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-dart-sdk-dapp-connect-quick-start-5-ed-209"
+  },
   "/docs/Web3MQ-SDK/JS-SDK/channel/-873": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-sdk-js-sdk-channel-8-ee-129"
@@ -328,17 +368,21 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-sdk-js-sdk-utils-1-e-7-9f5"
   },
-  "/docs/Web3MQ-SDK/Swift-SDK/Channels/-e39": {
+  "/docs/Web3MQ-SDK/Swift-SDK/Chat/-64f": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-swift-sdk-channels-797-c45"
+    "content": "content---docs-web-3-mq-sdk-swift-sdk-chat-ff-9-1e4"
   },
   "/docs/Web3MQ-SDK/Swift-SDK/Contacts/-840": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-sdk-swift-sdk-contacts-14-b-768"
   },
-  "/docs/Web3MQ-SDK/Swift-SDK/Messages/-87b": {
+  "/docs/Web3MQ-SDK/Swift-SDK/DappConnect/-2c6": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-swift-sdk-messages-128-de7"
+    "content": "content---docs-web-3-mq-sdk-swift-sdk-dapp-connect-598-a1a"
+  },
+  "/docs/Web3MQ-SDK/Swift-SDK/Group/-763": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-web-3-mq-sdk-swift-sdk-group-932-8cb"
   },
   "/docs/Web3MQ-SDK/Swift-SDK/Notifications/-160": {
     "component": "component---theme-doc-item-178-a40",
@@ -347,14 +391,6 @@
   "/docs/Web3MQ-SDK/Swift-SDK/QuickStart/-916": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-web-3-mq-sdk-swift-sdk-quick-start-aed-061"
-  },
-  "/docs/Web3MQ-SDK/Swift-SDK/Register/-ea9": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-swift-sdk-register-f-25-dc1"
-  },
-  "/docs/Web3MQ-SDK/Swift-SDK/Structs/-e55": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-web-3-mq-sdk-swift-sdk-structs-950-136"
   },
   "/docs/Web3MQ-SDK/Swift-SDK/Topics/-6dd": {
     "component": "component---theme-doc-item-178-a40",

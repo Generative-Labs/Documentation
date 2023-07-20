@@ -296,6 +296,46 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Web3MQ-SDK/Dart-SDK/Chat/chat",
+              "path": "/docs/Web3MQ-SDK/Dart-SDK/Chat/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Dart-SDK/Chat/contacts",
+              "path": "/docs/Web3MQ-SDK/Dart-SDK/Chat/contacts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Dart-SDK/Chat/group",
+              "path": "/docs/Web3MQ-SDK/Dart-SDK/Chat/group",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Dart-SDK/Chat/notification",
+              "path": "/docs/Web3MQ-SDK/Dart-SDK/Chat/notification",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Dart-SDK/Chat/quick_start",
+              "path": "/docs/Web3MQ-SDK/Dart-SDK/Chat/quick_start",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Dart-SDK/Chat/topic",
+              "path": "/docs/Web3MQ-SDK/Dart-SDK/Chat/topic",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Dart-SDK/Chat/user",
+              "path": "/docs/Web3MQ-SDK/Dart-SDK/Chat/user",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Dart-SDK/DappConnect/quick_start",
+              "path": "/docs/Web3MQ-SDK/Dart-SDK/DappConnect/quick_start",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-SDK/JS-SDK/channel/channel",
               "path": "/docs/Web3MQ-SDK/JS-SDK/channel/",
               "sidebar": "tutorialSidebar"
@@ -376,8 +416,8 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-SDK/Swift-SDK/Channels/Channels",
-              "path": "/docs/Web3MQ-SDK/Swift-SDK/Channels/",
+              "id": "Web3MQ-SDK/Swift-SDK/Chat/Chat",
+              "path": "/docs/Web3MQ-SDK/Swift-SDK/Chat/",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -386,8 +426,13 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Web3MQ-SDK/Swift-SDK/Messages/Messages",
-              "path": "/docs/Web3MQ-SDK/Swift-SDK/Messages/",
+              "id": "Web3MQ-SDK/Swift-SDK/DappConnect/DappConnect",
+              "path": "/docs/Web3MQ-SDK/Swift-SDK/DappConnect/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/Swift-SDK/Group/Group",
+              "path": "/docs/Web3MQ-SDK/Swift-SDK/Group/",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -398,16 +443,6 @@
             {
               "id": "Web3MQ-SDK/Swift-SDK/QuickStart/QuickStart",
               "path": "/docs/Web3MQ-SDK/Swift-SDK/QuickStart/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-SDK/Swift-SDK/Register/Register",
-              "path": "/docs/Web3MQ-SDK/Swift-SDK/Register/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Web3MQ-SDK/Swift-SDK/Structs/Structs",
-              "path": "/docs/Web3MQ-SDK/Swift-SDK/Structs/",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -593,6 +628,16 @@
             {
               "id": "Web3MQ-UI-Components/Web3MQ-Vue/Intro",
               "path": "/docs/Web3MQ-UI-Components/Web3MQ-Vue/Intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/chat",
+              "path": "/docs/category/chat",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/dappconnect",
+              "path": "/docs/category/dappconnect",
               "sidebar": "tutorialSidebar"
             }
           ],
