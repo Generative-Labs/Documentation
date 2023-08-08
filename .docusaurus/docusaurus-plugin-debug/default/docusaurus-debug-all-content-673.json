@@ -20,7 +20,7 @@
               "unversionedId": "Intro",
               "id": "Intro",
               "title": "Intro",
-              "description": "<!-- # Intro",
+              "description": "Web3-native decentralized communication protocol. Encrypted, efficient and borderless",
               "source": "@site/docs/Intro.md",
               "sourceDirName": ".",
               "slug": "/Intro",
@@ -30,7 +30,9 @@
               "sidebarPosition": 0,
               "frontMatter": {
                 "sidebar_position": 0,
-                "hide_table_of_contents": true
+                "hide_table_of_contents": true,
+                "description": "Web3-native decentralized communication protocol. Encrypted, efficient and borderless",
+                "title": "Intro"
               },
               "sidebar": "tutorialSidebar",
               "next": {
