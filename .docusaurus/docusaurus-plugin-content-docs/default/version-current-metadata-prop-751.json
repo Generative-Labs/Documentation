@@ -60,7 +60,7 @@
         "items": [
           {
             "type": "category",
-            "label": "JS-SDK",
+            "label": "JS SDK",
             "collapsible": true,
             "collapsed": true,
             "items": [
@@ -164,7 +164,81 @@
           },
           {
             "type": "category",
-            "label": "Swift-SDK",
+            "label": "Dart SDK",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "category",
+                "label": "Chat",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Quick Start",
+                    "href": "/docs/Web3MQ-SDK/Dart-SDK/Chat/quick_start",
+                    "docId": "Web3MQ-SDK/Dart-SDK/Chat/quick_start"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Chat",
+                    "href": "/docs/Web3MQ-SDK/Dart-SDK/Chat/",
+                    "docId": "Web3MQ-SDK/Dart-SDK/Chat/chat"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Notification",
+                    "href": "/docs/Web3MQ-SDK/Dart-SDK/Chat/notification",
+                    "docId": "Web3MQ-SDK/Dart-SDK/Chat/notification"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Group",
+                    "href": "/docs/Web3MQ-SDK/Dart-SDK/Chat/group",
+                    "docId": "Web3MQ-SDK/Dart-SDK/Chat/group"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Contacts",
+                    "href": "/docs/Web3MQ-SDK/Dart-SDK/Chat/contacts",
+                    "docId": "Web3MQ-SDK/Dart-SDK/Chat/contacts"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Topic",
+                    "href": "/docs/Web3MQ-SDK/Dart-SDK/Chat/topic",
+                    "docId": "Web3MQ-SDK/Dart-SDK/Chat/topic"
+                  },
+                  {
+                    "type": "link",
+                    "label": "User",
+                    "href": "/docs/Web3MQ-SDK/Dart-SDK/Chat/user",
+                    "docId": "Web3MQ-SDK/Dart-SDK/Chat/user"
+                  }
+                ],
+                "href": "/docs/category/chat"
+              },
+              {
+                "type": "category",
+                "label": "DappConnect",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "QuickStart",
+                    "href": "/docs/Web3MQ-SDK/Dart-SDK/DappConnect/quick_start",
+                    "docId": "Web3MQ-SDK/Dart-SDK/DappConnect/quick_start"
+                  }
+                ],
+                "href": "/docs/category/dappconnect"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "label": "Swift SDK",
             "collapsible": true,
             "collapsed": true,
             "items": [
@@ -176,33 +250,9 @@
               },
               {
                 "type": "link",
-                "label": "Register",
-                "href": "/docs/Web3MQ-SDK/Swift-SDK/Register/",
-                "docId": "Web3MQ-SDK/Swift-SDK/Register/Register"
-              },
-              {
-                "type": "link",
-                "label": "Channels",
-                "href": "/docs/Web3MQ-SDK/Swift-SDK/Channels/",
-                "docId": "Web3MQ-SDK/Swift-SDK/Channels/Channels"
-              },
-              {
-                "type": "link",
-                "label": "Messages",
-                "href": "/docs/Web3MQ-SDK/Swift-SDK/Messages/",
-                "docId": "Web3MQ-SDK/Swift-SDK/Messages/Messages"
-              },
-              {
-                "type": "link",
-                "label": "Contacts",
-                "href": "/docs/Web3MQ-SDK/Swift-SDK/Contacts/",
-                "docId": "Web3MQ-SDK/Swift-SDK/Contacts/Contacts"
-              },
-              {
-                "type": "link",
-                "label": "Users",
-                "href": "/docs/Web3MQ-SDK/Swift-SDK/Users/",
-                "docId": "Web3MQ-SDK/Swift-SDK/Users/Users"
+                "label": "Chat",
+                "href": "/docs/Web3MQ-SDK/Swift-SDK/Chat/",
+                "docId": "Web3MQ-SDK/Swift-SDK/Chat/Chat"
               },
               {
                 "type": "link",
@@ -212,15 +262,33 @@
               },
               {
                 "type": "link",
+                "label": "Users",
+                "href": "/docs/Web3MQ-SDK/Swift-SDK/Users/",
+                "docId": "Web3MQ-SDK/Swift-SDK/Users/Users"
+              },
+              {
+                "type": "link",
+                "label": "Contacts",
+                "href": "/docs/Web3MQ-SDK/Swift-SDK/Contacts/",
+                "docId": "Web3MQ-SDK/Swift-SDK/Contacts/Contacts"
+              },
+              {
+                "type": "link",
+                "label": "Group",
+                "href": "/docs/Web3MQ-SDK/Swift-SDK/Group/",
+                "docId": "Web3MQ-SDK/Swift-SDK/Group/Group"
+              },
+              {
+                "type": "link",
                 "label": "Topics",
                 "href": "/docs/Web3MQ-SDK/Swift-SDK/Topics/",
                 "docId": "Web3MQ-SDK/Swift-SDK/Topics/Topics"
               },
               {
                 "type": "link",
-                "label": "Structs",
-                "href": "/docs/Web3MQ-SDK/Swift-SDK/Structs/",
-                "docId": "Web3MQ-SDK/Swift-SDK/Structs/Structs"
+                "label": "DappConnect",
+                "href": "/docs/Web3MQ-SDK/Swift-SDK/DappConnect/",
+                "docId": "Web3MQ-SDK/Swift-SDK/DappConnect/DappConnect"
               }
             ]
           }
@@ -1188,6 +1256,54 @@
       "description": "- Generate Wallet signature",
       "sidebar": "tutorialSidebar"
     },
+    "Web3MQ-SDK/Dart-SDK/Chat/chat": {
+      "id": "Web3MQ-SDK/Dart-SDK/Chat/chat",
+      "title": "Chat",
+      "description": "Channel List",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/Dart-SDK/Chat/contacts": {
+      "id": "Web3MQ-SDK/Dart-SDK/Chat/contacts",
+      "title": "Contacts",
+      "description": "Get User Followings",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/Dart-SDK/Chat/group": {
+      "id": "Web3MQ-SDK/Dart-SDK/Chat/group",
+      "title": "Group",
+      "description": "Get Group List",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/Dart-SDK/Chat/notification": {
+      "id": "Web3MQ-SDK/Dart-SDK/Chat/notification",
+      "title": "Notification",
+      "description": "Notification is a special type of message that can be marked as read and queried. Currently, there are the following types of notifications:",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/Dart-SDK/Chat/quick_start": {
+      "id": "Web3MQ-SDK/Dart-SDK/Chat/quick_start",
+      "title": "Quick Start",
+      "description": "REQUIREMENTS",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/Dart-SDK/Chat/topic": {
+      "id": "Web3MQ-SDK/Dart-SDK/Chat/topic",
+      "title": "Topic",
+      "description": "Subscribe",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/Dart-SDK/Chat/user": {
+      "id": "Web3MQ-SDK/Dart-SDK/Chat/user",
+      "title": "User",
+      "description": "User info",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/Dart-SDK/DappConnect/quick_start": {
+      "id": "Web3MQ-SDK/Dart-SDK/DappConnect/quick_start",
+      "title": "QuickStart",
+      "description": "REQUIREMENTS",
+      "sidebar": "tutorialSidebar"
+    },
     "Web3MQ-SDK/JS-SDK/channel/channel": {
       "id": "Web3MQ-SDK/JS-SDK/channel/channel",
       "title": "Channel",
@@ -1284,28 +1400,34 @@
       "description": "Methods",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-SDK/Swift-SDK/Channels/Channels": {
-      "id": "Web3MQ-SDK/Swift-SDK/Channels/Channels",
-      "title": "Channels",
-      "description": "Methods",
+    "Web3MQ-SDK/Swift-SDK/Chat/Chat": {
+      "id": "Web3MQ-SDK/Swift-SDK/Chat/Chat",
+      "title": "Chat",
+      "description": "Channel List",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/Swift-SDK/Contacts/Contacts": {
       "id": "Web3MQ-SDK/Swift-SDK/Contacts/Contacts",
-      "title": "Contact",
-      "description": "Methods",
+      "title": "Contacts",
+      "description": "Get User Followings",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-SDK/Swift-SDK/Messages/Messages": {
-      "id": "Web3MQ-SDK/Swift-SDK/Messages/Messages",
-      "title": "Messages",
-      "description": "Methods",
+    "Web3MQ-SDK/Swift-SDK/DappConnect/DappConnect": {
+      "id": "Web3MQ-SDK/Swift-SDK/DappConnect/DappConnect",
+      "title": "DappConnect",
+      "description": "Integrating the SDK",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/Swift-SDK/Group/Group": {
+      "id": "Web3MQ-SDK/Swift-SDK/Group/Group",
+      "title": "Group",
+      "description": "Get Group List",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/Swift-SDK/Notifications/Notifications": {
       "id": "Web3MQ-SDK/Swift-SDK/Notifications/Notifications",
-      "title": "Notifications",
-      "description": "Methods",
+      "title": "Notification",
+      "description": "Notification is a special type of message that can be marked as read and queried. Currently, there are the following types of notifications:",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/Swift-SDK/QuickStart/QuickStart": {
@@ -1314,28 +1436,16 @@
       "description": "iOS Main Features",
       "sidebar": "tutorialSidebar"
     },
-    "Web3MQ-SDK/Swift-SDK/Register/Register": {
-      "id": "Web3MQ-SDK/Swift-SDK/Register/Register",
-      "title": "Register",
-      "description": "Methods",
-      "sidebar": "tutorialSidebar"
-    },
-    "Web3MQ-SDK/Swift-SDK/Structs/Structs": {
-      "id": "Web3MQ-SDK/Swift-SDK/Structs/Structs",
-      "title": "Structs",
-      "description": "EthAccount",
-      "sidebar": "tutorialSidebar"
-    },
     "Web3MQ-SDK/Swift-SDK/Topics/Topics": {
       "id": "Web3MQ-SDK/Swift-SDK/Topics/Topics",
-      "title": "Topics",
-      "description": "Methods",
+      "title": "Topic",
+      "description": "Subscribe",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/Swift-SDK/Users/Users": {
       "id": "Web3MQ-SDK/Swift-SDK/Users/Users",
       "title": "User",
-      "description": "Methods",
+      "description": "User info",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-UI-Components/Web3MQ-React/chatComponent/Channel": {
