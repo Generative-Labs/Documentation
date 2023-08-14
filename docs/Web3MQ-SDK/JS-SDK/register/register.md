@@ -6,17 +6,17 @@ position: 2
 
 ## Methods
 
-| name                      | type     | Parameters Description                                                                                          | response                                                                          |
-| ------------------------- | -------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| getAccount                | function | [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype)                                                         | Promise: [AccountType](/docs/Web3MQ-SDK/JS-SDK/types/#accounttype)             |
-| getUserInfo               | function | [getUserInfoParams](/docs/Web3MQ-SDK/JS-SDK/types/#getuserinfoparams)                                           | Promise: [GetUserInfoResponse](/docs/Web3MQ-SDK/JS-SDK/types/#getuserinforesponse) |
-| register                  | function | [RegisterBySignParams](/docs/Web3MQ-SDK/JS-SDK/types/#registerbysignparams)                                     | Promise: [RegisterApiResponse](/docs/Web3MQ-SDK/JS-SDK/types/#registerapiresponse) |
-| login                     | function | [LoginByKeysParams](/docs/Web3MQ-SDK/JS-SDK/types/#loginbykeysparams)                                           | Promise: [LoginResponse](/docs/Web3MQ-SDK/JS-SDK/types/#loginresponse)            |
-| resetPassword             | function | [RegisterBySignParams](/docs/Web3MQ-SDK/JS-SDK/types/#registerbysignparams)                                       | Promise: [RegisterApiResponse](/docs/Web3MQ-SDK/JS-SDK/types/#registerapiresponse) |
-| sign                      | function | 1, signContent: string 2. address: string 3. walletType:[WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype) | Promise: [WalletSignResponse](/docs/Web3MQ-SDK/JS-SDK/types/#walletsignres)       |
-| getMainKeypairSignContent | function | [GetMainKeypairParams](/docs/Web3MQ-SDK/JS-SDK/types/#getmainkeypairparams)                                     | Promise: [GetSignContentResponse](/docs/Web3MQ-SDK/JS-SDK/types/#getsigncontentresponse) |
-| getMainKeypairBySignature | function | 1. signature: string, 2. password: string                                                                       | Promise: [MainKeypairType](/docs/Web3MQ-SDK/JS-SDK/types/#mainkeypairtype)        |
-| getRegisterSignContent    | function | [GetRegisterSignContentParams](/docs/Web3MQ-SDK/JS-SDK/types/#getregistersigncontentparams)                     | Promise: [GetSignContentResponse](/docs/Web3MQ-SDK/JS-SDK/types/#getsigncontentresponse) |
+| name                      | type     | Parameters Description                                                                                                                                                             | response                                                                                 |
+| ------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| getAccount                | function | [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype)                                                                                                                            | Promise: [AccountType](/docs/Web3MQ-SDK/JS-SDK/types/#accounttype)                       |
+| getUserInfo               | function | [getUserInfoParams](/docs/Web3MQ-SDK/JS-SDK/types/#getuserinfoparams)                                                                                                              | Promise: [GetUserInfoResponse](/docs/Web3MQ-SDK/JS-SDK/types/#getuserinforesponse)       |
+| register                  | function | [RegisterBySignParams](/docs/Web3MQ-SDK/JS-SDK/types/#registerbysignparams)                                                                                                        | Promise: [RegisterApiResponse](/docs/Web3MQ-SDK/JS-SDK/types/#registerapiresponse)       |
+| login                     | function | [LoginByKeysParams](/docs/Web3MQ-SDK/JS-SDK/types/#loginbykeysparams)                                                                                                              | Promise: [LoginResponse](/docs/Web3MQ-SDK/JS-SDK/types/#loginresponse)                   |
+| resetPassword             | function | [RegisterBySignParams](/docs/Web3MQ-SDK/JS-SDK/types/#registerbysignparams)                                                                                                        | Promise: [RegisterApiResponse](/docs/Web3MQ-SDK/JS-SDK/types/#registerapiresponse)       |
+| sign                      | function | 1, signContent: string 2. address: string 3. walletType:[WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype) \| [BlockChainType](/docs/Web3MQ-SDK/JS-SDK/types/#blockchaintype) | Promise: [WalletSignResponse](/docs/Web3MQ-SDK/JS-SDK/types/#walletsignres)              |
+| getMainKeypairSignContent | function | [GetMainKeypairParams](/docs/Web3MQ-SDK/JS-SDK/types/#getmainkeypairparams)                                                                                                        | Promise: [GetSignContentResponse](/docs/Web3MQ-SDK/JS-SDK/types/#getsigncontentresponse) |
+| getMainKeypairBySignature | function | 1. signature: string, 2. password: string                                                                                                                                          | Promise: [MainKeypairType](/docs/Web3MQ-SDK/JS-SDK/types/#mainkeypairtype)               |
+| getRegisterSignContent    | function | [GetRegisterSignContentParams](/docs/Web3MQ-SDK/JS-SDK/types/#getregistersigncontentparams)                                                                                        | Promise: [GetSignContentResponse](/docs/Web3MQ-SDK/JS-SDK/types/#getsigncontentresponse) |
 
 ## Prerequisites
 
@@ -41,8 +41,8 @@ await Client.init({
     tempPubkey,
 });
 
-const didType = "eth" | "starknet";
-let {address} = await Client.register.getAccount(didType);
+const walletType = "metamask" | "argentX" | "braavos";
+let { address } = await Client.register.getAccount(walletType);
 
 console.log(address);
 ```
@@ -54,6 +54,7 @@ console.log(address);
 ```tsx
 import {Client} from "@web3mq/client";
 
+const didType: BlockChainType = "eth" | "starknet";
 const didKey = localStorage.getItem("DID_KEY") || "";
 const tempPubkey = localStorage.getItem("PUBLIC_KEY") || "";
 
@@ -90,10 +91,11 @@ await Client.init({
     tempPubkey, // After login get temp public key
     didKey, // did_key:did_value  eg: eth:0x00000000123123;
 });
-const walletType = "eth" | "starknet";
-const {address} = await Client.register.getAccount(walletType);
-const signContent = 'hello web3mq'
-const {sign: signature} = await this.sign(signContent, did_value, did_type);
+const walletType = "argentX" | "braavos";
+const { address } = await Client.register.getAccount(walletType);
+const signContent = "hello web3mq";
+const did_type = "eth" | "starknet" | "argentX" | "braavos";
+const { sign: signature } = await this.sign(signContent, did_value, did_type);
 ```
 
 ### getMainKeypairSignContent()
@@ -110,8 +112,8 @@ await Client.init({
     tempPubkey, // After login get temp public key
     didKey, // did_key:did_value  eg: eth:0x00000000123123;
 });
-const walletType = "eth" | "starknet";
-const {address} = await Client.register.getAccount(walletType);
+const walletType = "metamask" | "braavos" | "argentX";
+const { address } = await Client.register.getAccount(walletType);
 // 1. get signContent
 const {signContent} = await Client.register.getMainKeypairSignContent({
     password: confirmPassword.current,
@@ -169,18 +171,18 @@ await Client.init({
     didKey,
     tempPubkey,
 });
-const didType = 'eth' | 'starknet'
-const getAccount = async (didType: WalletType = "eth") => {
-    const {address} = await Client.register.getAccount(didType);
-    const {userid, userExist} = await Client.register.getUserInfo({
-        did_value: address,
-        did_type: didType,
-    });
-    return {
-        address,
-        userid,
-        userExist,
-    };
+const didType = "metamask" | "braavos";
+const getAccount = async (didType: WalletType = "metamask") => {
+  const { address } = await Client.register.getAccount(didType);
+  const { userid, userExist } = await Client.register.getUserInfo({
+    did_value: address,
+    did_type: didType,
+  });
+  return {
+    address,
+    userid,
+    userExist,
+  };
 };
 
 const {address, userid} = await getAccount(didType);
@@ -221,59 +223,61 @@ await Client.init({
     tempPubkey,
 });
 
-const getAccount = async (didType: WalletType = "eth") => {
-    const {address} = await Client.register.getAccount(didType);
-    const {userid, userExist} = await Client.register.getUserInfo({
-        did_value: address,
+const getAccount = async (didType: WalletType = "metamask") => {
+  const { address } = await Client.register.getAccount(didType);
+  const { userid, userExist } = await Client.register.getUserInfo({
+    did_value: address,
+    did_type: didType,
+  });
+  return {
+    address,
+    userid,
+    userExist,
+  };
+};
+
+const register = async (password: string, didType: WalletType = "metamask") => {
+    const options = {
         did_type: didType,
-    });
-    return {
-        address,
-        userid,
-        userExist,
-    };
-};
-
-const register = async (password: string, didType: WalletType = "eth") => {
-    const {address, userid} = await getAccount(didType);
-    const {password, did_value, did_type} = options;
-    const {signContent: keysSignContent} = await Client.register.getMainKeypairSignContent(options);
-    const {sign: keysSignature} = await Client.register.sign(keysSignContent, did_value, did_type);
-    const {publicKey, secretKey} = await Client.register.getMainKeypairBySignature(
-        keysSignature,
+        did_value: address,
         password
-    );
+    }
+  const { address, userid } = await getAccount(didType);
+  const { signContent: keysSignContent } =
+    await Client.register.getMainKeypairSignContent(options);
+  const { sign: keysSignature } = await Client.register.sign(
+    keysSignContent,
+    did_value: address,
+    did_type: didType
+  );
+  const { publicKey, secretKey } =
+    await Client.register.getMainKeypairBySignature(keysSignature, password);
 
-    // const registerSignContent = aw Client.register.
-    const {signContent} = await Client.register.getRegisterSignContent({
-        userid,
-        mainPublicKey: publicKey,
-        didType,
-        didValue: address,
-    });
-    const {sign: signature, publicKey: did_pubkey = ''} = await Client.register.sign(
-        signContent,
-        address,
-        didType,
-    );
-   
-   const params = {
-      userid,
-      didValue: address,
-      mainPublicKey: publicKey,
-      did_pubkey,
-      didType,
-      nickname: '',
-      avatar_url: '',
-      signature,
-   }
-    const registerRes = await Client.register.register(params);
-   // reset password
-   // const resetRes = await Client.register.resetPassword(params);
-    console.log(registerRes)
+  const { signContent } = await Client.register.getRegisterSignContent({
+    userid,
+    mainPublicKey: publicKey,
+    didType,
+    didValue: address,
+  });
+  const { sign: signature, publicKey: did_pubkey = "" } =
+    await Client.register.sign(signContent, address, didType);
+
+  const params = {
+    userid,
+    didValue: address,
+    mainPublicKey: publicKey,
+    did_pubkey,
+    didType,
+    nickname: "",
+    avatar_url: "",
+    signature,
+  };
+  const registerRes = await Client.register.register(params);
+  // reset password
+  // const resetRes = await Client.register.resetPassword(params);
+  console.log(registerRes);
 };
-register()
-
+register();
 ```
 
 ### login()
@@ -306,37 +310,43 @@ await Client.init({
     tempPubkey,
 });
 
-const getAccount = async (didType: WalletType = "eth") => {
-    const {address} = await Client.register.getAccount(didType);
-    const {userid, userExist} = await Client.register.getUserInfo({
-        did_value: address,
-        did_type: didType,
-    });
-    return {
-        address,
-        userid,
-        userExist,
-    };
+const getAccount = async (didType: WalletType = "metamask") => {
+  const { address } = await Client.register.getAccount(didType);
+  const BlockChainMap: Record<WalletType, BlockChainType> = {
+    metamask: "eth",
+    braavos: "starknet",
+    argentX: "starknet",
+    dappConnect: "eth",
+  };
+  const { userid, userExist } = await Client.register.getUserInfo({
+    did_value: address,
+    did_type: BlockChainMap[didType],
+  });
+  return {
+    address,
+    userid,
+    userExist,
+  };
 };
 
-const login = async (password: string, didType: WalletType = "eth") => {
-    const {address, userid} = await getAccount(didType);
+const login = async (password: string, didType: WalletType = "metamask") => {
+  const { address, userid } = await getAccount(didType);
 
-    // The public-private key pair returned after registration
-    const localMainPrivateKey = localStorage.getItem('MAIN_PRIVATE_KEY') || "";
-    const localMainPublicKey = localStorage.getItem('MAIN_PUBLIC_KEY') || "";
-    const tempTime = localStorage.getItem('PUBKEY_EXPIRED_TIMESTAMP') || 0;
-    if (!localMainPublicKey || localMainPrivateKeyak) {
-        const {signContent} = await Client.register.getMainKeypairSignContent(options);
-        const {sign: signature, publicKey: did_pubkey} = await Client.register.sign(signContent, did_value, did_type);
-        const {
-            publicKey: localMainPublicKey,
-            secretKey: localMainPrivateKeyak
-        } = await Client.register.getMainKeypairBySignature(
-            signature,
-            password
-        );
-    }
+  // The public-private key pair returned after registration
+  const localMainPrivateKey = localStorage.getItem("MAIN_PRIVATE_KEY") || "";
+  const localMainPublicKey = localStorage.getItem("MAIN_PUBLIC_KEY") || "";
+  const tempTime = localStorage.getItem("PUBKEY_EXPIRED_TIMESTAMP") || 0;
+  if (!localMainPublicKey || localMainPrivateKeyak) {
+    const { signContent } = await Client.register.getMainKeypairSignContent({
+      password,
+      did_value: address,
+      did_type: didType,
+    });
+    const { sign: signature, publicKey: did_pubkey } =
+      await Client.register.sign(signContent, did_value, did_type);
+    const { publicKey: localMainPublicKey, secretKey: localMainPrivateKeyak } =
+      await Client.register.getMainKeypairBySignature(signature, password);
+  }
 
     const {
         tempPrivateKey,
