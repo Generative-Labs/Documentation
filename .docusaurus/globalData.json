@@ -416,6 +416,21 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Web3MQ-SDK/ReactHooks/auth/auth",
+              "path": "/docs/Web3MQ-SDK/ReactHooks/auth/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/ReactHooks/context/context",
+              "path": "/docs/Web3MQ-SDK/ReactHooks/context/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Web3MQ-SDK/ReactHooks/quickStart/quickStart",
+              "path": "/docs/Web3MQ-SDK/ReactHooks/quickStart/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Web3MQ-SDK/Swift-SDK/Chat/Chat",
               "path": "/docs/Web3MQ-SDK/Swift-SDK/Chat/",
               "sidebar": "tutorialSidebar"

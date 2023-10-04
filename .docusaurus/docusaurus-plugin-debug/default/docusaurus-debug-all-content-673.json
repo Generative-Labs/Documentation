@@ -12,9 +12,9 @@
           "versionClassName": "docs-version-current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/home/coder_wei/workspace/web3-mq/Documentation/sidebars.js",
-          "contentPath": "/home/coder_wei/workspace/web3-mq/Documentation/docs",
-          "contentPathLocalized": "/home/coder_wei/workspace/web3-mq/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/zhaowei/workspace/ty/web3-mq/Documentation/sidebars.js",
+          "contentPath": "/Users/zhaowei/workspace/ty/web3-mq/Documentation/docs",
+          "contentPathLocalized": "/Users/zhaowei/workspace/ty/web3-mq/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "Intro",
@@ -1826,8 +1826,8 @@
                 "permalink": "/docs/category/dappconnect"
               },
               "next": {
-                "title": "Quick Start",
-                "permalink": "/docs/Web3MQ-SDK/Swift-SDK/QuickStart/"
+                "title": "QuickStart",
+                "permalink": "/docs/Web3MQ-SDK/ReactHooks/quickStart/"
               }
             },
             {
@@ -2215,6 +2215,78 @@
               }
             },
             {
+              "unversionedId": "Web3MQ-SDK/ReactHooks/auth/auth",
+              "id": "Web3MQ-SDK/ReactHooks/auth/auth",
+              "title": "UseAuth",
+              "description": "UseAuth is a handle auth and secret key related hook, also includes a common wallet connection and signature , can create web3mq encrypted secret key pairs , provides a secret key storage management , can also support the user to export the secret key . Easier connection to web3mq.",
+              "source": "@site/docs/Web3MQ-SDK/ReactHooks/auth/auth.md",
+              "sourceDirName": "Web3MQ-SDK/ReactHooks/auth",
+              "slug": "/Web3MQ-SDK/ReactHooks/auth/",
+              "permalink": "/docs/Web3MQ-SDK/ReactHooks/auth/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 3
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "ChatProvider",
+                "permalink": "/docs/Web3MQ-SDK/ReactHooks/context/"
+              },
+              "next": {
+                "title": "Quick Start",
+                "permalink": "/docs/Web3MQ-SDK/Swift-SDK/QuickStart/"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/ReactHooks/context/context",
+              "id": "Web3MQ-SDK/ReactHooks/context/context",
+              "title": "ChatProvider",
+              "description": "ChatProvider is a react context provider, hooks that use web3mq must be within a subcomponent of the chatProvider for it to work properly",
+              "source": "@site/docs/Web3MQ-SDK/ReactHooks/context/context.md",
+              "sourceDirName": "Web3MQ-SDK/ReactHooks/context",
+              "slug": "/Web3MQ-SDK/ReactHooks/context/",
+              "permalink": "/docs/Web3MQ-SDK/ReactHooks/context/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "QuickStart",
+                "permalink": "/docs/Web3MQ-SDK/ReactHooks/quickStart/"
+              },
+              "next": {
+                "title": "UseAuth",
+                "permalink": "/docs/Web3MQ-SDK/ReactHooks/auth/"
+              }
+            },
+            {
+              "unversionedId": "Web3MQ-SDK/ReactHooks/quickStart/quickStart",
+              "id": "Web3MQ-SDK/ReactHooks/quickStart/quickStart",
+              "title": "QuickStart",
+              "description": "This quick start tutorial uses examples to teach you the easiest way to register and connect to web3mq using reacthooks.",
+              "source": "@site/docs/Web3MQ-SDK/ReactHooks/quickStart/quickStart.md",
+              "sourceDirName": "Web3MQ-SDK/ReactHooks/quickStart",
+              "slug": "/Web3MQ-SDK/ReactHooks/quickStart/",
+              "permalink": "/docs/Web3MQ-SDK/ReactHooks/quickStart/",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "QuickStart",
+                "permalink": "/docs/Web3MQ-SDK/Dart-SDK/DappConnect/quick_start"
+              },
+              "next": {
+                "title": "ChatProvider",
+                "permalink": "/docs/Web3MQ-SDK/ReactHooks/context/"
+              }
+            },
+            {
               "unversionedId": "Web3MQ-SDK/Swift-SDK/Chat/Chat",
               "id": "Web3MQ-SDK/Swift-SDK/Chat/Chat",
               "title": "Chat",
@@ -2350,8 +2422,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "QuickStart",
-                "permalink": "/docs/Web3MQ-SDK/Dart-SDK/DappConnect/quick_start"
+                "title": "UseAuth",
+                "permalink": "/docs/Web3MQ-SDK/ReactHooks/auth/"
               },
               "next": {
                 "title": "Chat",
@@ -3437,6 +3509,29 @@
                           "slug": "/category/dappconnect",
                           "permalink": "/docs/category/dappconnect"
                         }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
+                    "label": "React Hooks",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "label": "QuickStart",
+                        "id": "Web3MQ-SDK/ReactHooks/quickStart/quickStart"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Chat Context",
+                        "id": "Web3MQ-SDK/ReactHooks/context/context"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Auth",
+                        "id": "Web3MQ-SDK/ReactHooks/auth/auth"
                       }
                     ]
                   },

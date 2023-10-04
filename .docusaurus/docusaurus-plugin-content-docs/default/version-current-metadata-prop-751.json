@@ -238,6 +238,32 @@
           },
           {
             "type": "category",
+            "label": "React Hooks",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "QuickStart",
+                "href": "/docs/Web3MQ-SDK/ReactHooks/quickStart/",
+                "docId": "Web3MQ-SDK/ReactHooks/quickStart/quickStart"
+              },
+              {
+                "type": "link",
+                "label": "Chat Context",
+                "href": "/docs/Web3MQ-SDK/ReactHooks/context/",
+                "docId": "Web3MQ-SDK/ReactHooks/context/context"
+              },
+              {
+                "type": "link",
+                "label": "Auth",
+                "href": "/docs/Web3MQ-SDK/ReactHooks/auth/",
+                "docId": "Web3MQ-SDK/ReactHooks/auth/auth"
+              }
+            ]
+          },
+          {
+            "type": "category",
             "label": "Swift SDK",
             "collapsible": true,
             "collapsed": true,
@@ -1398,6 +1424,24 @@
       "id": "Web3MQ-SDK/JS-SDK/utils/utils",
       "title": "Utils",
       "description": "Methods",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/ReactHooks/auth/auth": {
+      "id": "Web3MQ-SDK/ReactHooks/auth/auth",
+      "title": "UseAuth",
+      "description": "UseAuth is a handle auth and secret key related hook, also includes a common wallet connection and signature , can create web3mq encrypted secret key pairs , provides a secret key storage management , can also support the user to export the secret key . Easier connection to web3mq.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/ReactHooks/context/context": {
+      "id": "Web3MQ-SDK/ReactHooks/context/context",
+      "title": "ChatProvider",
+      "description": "ChatProvider is a react context provider, hooks that use web3mq must be within a subcomponent of the chatProvider for it to work properly",
+      "sidebar": "tutorialSidebar"
+    },
+    "Web3MQ-SDK/ReactHooks/quickStart/quickStart": {
+      "id": "Web3MQ-SDK/ReactHooks/quickStart/quickStart",
+      "title": "QuickStart",
+      "description": "This quick start tutorial uses examples to teach you the easiest way to register and connect to web3mq using reacthooks.",
       "sidebar": "tutorialSidebar"
     },
     "Web3MQ-SDK/Swift-SDK/Chat/Chat": {

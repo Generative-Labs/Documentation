@@ -55,7 +55,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','cfd'),
+    component: ComponentCreator('/docs','e69'),
     routes: [
       {
         path: '/docs/category/chat',
@@ -552,6 +552,24 @@ export default [
       {
         path: '/docs/Web3MQ-SDK/JS-SDK/utils/',
         component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/utils/','65d'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/ReactHooks/auth/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/ReactHooks/auth/','ff0'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/ReactHooks/context/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/ReactHooks/context/','623'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/ReactHooks/quickStart/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/ReactHooks/quickStart/','0d4'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
