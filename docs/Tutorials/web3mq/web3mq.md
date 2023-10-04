@@ -225,14 +225,12 @@ await client.message.sendMessage('hello world', address)
 ```ts
 const handleEvent = (event: any) => {
     console.log(event)
-    const { channelList, activeChannel } = client.channel;
+    const { channelList } = client.channel;
     if (!channelList) {
       return;
     }
-    // set active channel
-    client.channel.setActiveChannel(channelList[0])
     // send message to channel
-    client.message.sendMessage('hello channel');
+    client.message.sendMessage('hello channel', channelList[0].chatid);
 }
 const client = Client.getInstance(keys);
 // Once the channel has been created, the latest channel created can be retrieved in the event callback
@@ -247,23 +245,20 @@ await client.channel.createRoom({
 ```ts
 const handleEvent = (event: any) => {
     console.log(event)
-    const { channelList, activeChannel } = client.channel;
+    const { channelList } = client.channel;
     if (!channelList) {
       return;
     }
-    // set active channel
-    client.channel.setActiveChannel(channelList[0])
     // send message to channel
-    client.message.sendMessage('hello channel');
+    client.message.sendMessage('hello channel', channelList[0].chatid);
 }
 const client = Client.getInstance(keys);
-const channel = {} // your create channel obj  
-await client.channel.setActiveChannel(channel);
+const chatId = '' // your create channel chatid  
 const ids = [
     'web3mq userid1',
     'web3mq userid2',
 ]
-await client.channel.inviteGroupMember(ids);
+await client.channel.inviteGroupMember(ids, chatId);
 ```
 
 
@@ -274,7 +269,7 @@ await client.channel.inviteGroupMember(ids);
 const handleEvent = (props: { type: EventTypes }) => {
     console.log(event)
     if (props.type === 'channel.getList') {
-        const { channelList, activeChannel } = client.channel;
+        const { channelList } = client.channel;
         console.log('your channel list:', channelList)
     }
 }

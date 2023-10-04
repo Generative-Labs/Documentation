@@ -18,10 +18,10 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "/home/coder_wei/workspace/web3-mq/Documentation/sidebars.js"
+          "sidebarPath": "/Users/zhaowei/workspace/ty/web3-mq/Documentation/sidebars.js"
         },
         "theme": {
-          "customCss": "/home/coder_wei/workspace/web3-mq/Documentation/src/css/custom.css"
+          "customCss": "/Users/zhaowei/workspace/ty/web3-mq/Documentation/src/css/custom.css"
         }
       }
     ]

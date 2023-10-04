@@ -387,7 +387,7 @@ code={<AppMdx />}>
 
 #### Root Components Code
 
-```tsx
+```ts
 import React, {useEffect, useMemo, useState} from 'react';
 import {Client, KeyPairsType, WalletType} from '@web3mq/client';
 import {AppTypeEnum, LoginModal} from "@web3mq/react-components";
@@ -480,7 +480,7 @@ const App: React.FC = () => {
             keys={mainKeys || undefined}
             handleLoginEvent={handleLoginEvent}
             appType={AppTypeEnum.pc}
-            containerId={''}
+            containerId={}
             loginBtnNode={
                 <button className="sign_btn">
                     MetaMask
@@ -511,16 +511,18 @@ const App: React.FC = () => {
             page: 1,
             size: 20,
         });
-        if (client.channel.channelList) {
-            await client.channel.setActiveChannel(client.channel.channelList[0]);
-        }
     };
 
     const sendMsg = async () => {
         if (!groupMsg) {
             alert('message required');
         }
-        await client.message.sendMessage(groupMsg);
+
+        const channelList = await client.channel.queryChannels({
+            page: 1,
+            size: 20,
+        });
+        await client.message.sendMessage(groupMsg, channelList[0].chatid);
     };
 
     return (
@@ -555,133 +557,3 @@ const App: React.FC = () => {
 export default App;
 
 ```
-
-<!-- #### Child Components Code
-
-```tsx
-import React, { useState, useEffect } from 'react';
-import { Client } from '@web3mq/client';
-
-// Child components
-interface IProps {
-  client: Client;
-}
-
-const Child: React.FC<IProps> = (props) => {
-  const { client } = props;
-
-  const [list, setList] = useState<any>(null);
-  const [activeChannel, setActiveChannel] = useState<any>(null);
-  const [text, setText] = useState<string>('');
-  const [messageList, setMessageList] = useState<any>([]);
-
-  const handleEvent = (event: { type: any }) => {
-    if (event.type === 'channel.getList') {
-      setList(client.channel.channelList);
-    }
-    if (event.type === 'channel.activeChange') {
-      setActiveChannel(client.channel.activeChannel);
-      client.message.getMessageList({
-        page: 1,
-        size: 20,
-      });
-    }
-    if (event.type === 'message.getList') {
-      setMessageList(client.message.messageList);
-    }
-    if (event.type === 'message.delivered') {
-      setText('');
-      const list = messageList || [];
-      setMessageList([...list, { content: text, id: list.length + 1 }]);
-    }
-  };
-
-  useEffect(() => {
-    client.on('channel.getList', handleEvent);
-    client.on('channel.activeChange', handleEvent);
-    client.on('message.getList', handleEvent);
-    client.on('message.delivered', handleEvent);
-    return () => {
-      client.off('channel.getList');
-      client.off('channel.activeChange');
-      client.off('message.getList');
-      client.off('message.delivered');
-    };
-  }, [text]);
-
-  useEffect(() => {
-    client.channel.queryChannels({ page: 1, size: 100 });
-  }, []);
-
-  const handleChangeActive = (channel: any) => {
-    client.channel.setActiveChannel(channel);
-  };
-
-  const handleSendMessage = () => {
-    client.message.sendMessage(text);
-  };
-
-  const changeMsgStatus = async () => {
-    const ids = messageList.map((item: any) => item.messageid);
-    const data = await client.message.changeMessageStatus(ids, 'read');
-    console.log(data);
-  };
-
-  const List = () => {
-    if (!list) {
-      return null;
-    }
-    return (
-      <ul>
-        {list.map((item: any, idx: number) => {
-          return (
-            <li
-              style={{ cursor: 'pointer' }}
-              key={item.topic}
-              onClick={() => handleChangeActive(item)}>
-              {idx}-{item.topic}
-            </li>
-          );
-        })}
-      </ul>
-    );
-  };
-
-  return (
-    <div>
-      <h1>room list</h1>
-      <List />
-      <h1>message list</h1>
-      {activeChannel && (
-        <div>
-          <div>
-            <b>activeChannel:</b>
-            <span style={{ color: 'blue' }}>{activeChannel.topic}</span>
-          </div>
-          <div style={{ minHeight: 300, border: '1px solid #000' }}>
-            {messageList.map((item: any) => {
-              return (
-                <div key={item.id} onClick={changeMsgStatus}>
-                  message: {item.content}
-                </div>
-              );
-            })}
-          </div>
-          <div>
-            <input
-              value={text}
-              type='text'
-              onChange={(e) => {
-                setText(e.target.value);
-              }}
-            />
-            <button onClick={handleSendMessage}>send Message</button>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-};
-
-export default Child;
-``` -->

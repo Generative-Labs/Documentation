@@ -12,9 +12,9 @@
           "versionClassName": "docs-version-current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/home/coder_wei/workspace/web3-mq/Documentation/sidebars.js",
-          "contentPath": "/home/coder_wei/workspace/web3-mq/Documentation/docs",
-          "contentPathLocalized": "/home/coder_wei/workspace/web3-mq/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/zhaowei/workspace/ty/web3-mq/Documentation/sidebars.js",
+          "contentPath": "/Users/zhaowei/workspace/ty/web3-mq/Documentation/docs",
+          "contentPathLocalized": "/Users/zhaowei/workspace/ty/web3-mq/Documentation/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "Intro",
