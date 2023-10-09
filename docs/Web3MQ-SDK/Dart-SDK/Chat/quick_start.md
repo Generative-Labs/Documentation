@@ -16,14 +16,15 @@ Add this to your package's `pubspec.yaml` file, use the `latestversion`
 
 ```yaml
 dependencies:
-  web3mq: 0.1.0
+  web3mq: 0.1.3-dev.2
 ```
 
 You should then run `flutter packages get`
 
 ## Example Project
 
-There is a detailed Flutter example project in the `example` folder. You can directly run and play on it.
+You can find a complete example project here:
+<https://github.com/Generative-Labs/web3mq_sdk_flutter/tree/main/packages/web3mq_sdk_flutter_demo>
 
 ## Setup API Client
 
