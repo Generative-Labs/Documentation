@@ -6,7 +6,7 @@ sidebar_position: 3
 
 ## Get Group List
 
-Use the `groups` method to get a list of groups.
+Use the `groups` method to get a list of groups which you are joined.
 
 ```dart
 final page = await client.groups(pagination: pagination);
@@ -52,17 +52,17 @@ Joins a group with the specified group ID.
 await cleint.joinGroup('groupId');
 ```
 
-## Quit Group
+## Leaving Group
 
-Quits a group with the specified group ID.
+Leave a group with the specified group ID.
 
 ```dart
-await client.quitGroup('groupId');
+await client.leaveGroup('groupId');
 ```
 
 ## Updating group permissions
 
-Updates the group permissions for the specified group.
+Updates the group permissions for the specified group. This method can only be called by the group owner.
 
 ```dart
 await client.updateGroupPermissions('groupId', GroupPermission.public)
