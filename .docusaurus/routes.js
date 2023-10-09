@@ -55,8 +55,20 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','aad'),
+    component: ComponentCreator('/docs','cfd'),
     routes: [
+      {
+        path: '/docs/category/chat',
+        component: ComponentCreator('/docs/category/chat','4fc'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/category/dappconnect',
+        component: ComponentCreator('/docs/category/dappconnect','b98'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
       {
         path: '/docs/Intro',
         component: ComponentCreator('/docs/Intro','1f0'),
@@ -400,6 +412,54 @@ export default [
         'sidebar': "tutorialSidebar"
       },
       {
+        path: '/docs/Web3MQ-SDK/Dart-SDK/Chat/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/Dart-SDK/Chat/','809'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/Dart-SDK/Chat/contacts',
+        component: ComponentCreator('/docs/Web3MQ-SDK/Dart-SDK/Chat/contacts','63e'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/Dart-SDK/Chat/group',
+        component: ComponentCreator('/docs/Web3MQ-SDK/Dart-SDK/Chat/group','685'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/Dart-SDK/Chat/notification',
+        component: ComponentCreator('/docs/Web3MQ-SDK/Dart-SDK/Chat/notification','f2d'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/Dart-SDK/Chat/quick_start',
+        component: ComponentCreator('/docs/Web3MQ-SDK/Dart-SDK/Chat/quick_start','f84'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/Dart-SDK/Chat/topic',
+        component: ComponentCreator('/docs/Web3MQ-SDK/Dart-SDK/Chat/topic','f54'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/Dart-SDK/Chat/user',
+        component: ComponentCreator('/docs/Web3MQ-SDK/Dart-SDK/Chat/user','d6a'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/Dart-SDK/DappConnect/quick_start',
+        component: ComponentCreator('/docs/Web3MQ-SDK/Dart-SDK/DappConnect/quick_start','b6c'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
         path: '/docs/Web3MQ-SDK/JS-SDK/channel/',
         component: ComponentCreator('/docs/Web3MQ-SDK/JS-SDK/channel/','873'),
         exact: true,
@@ -496,8 +556,8 @@ export default [
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-SDK/Swift-SDK/Channels/',
-        component: ComponentCreator('/docs/Web3MQ-SDK/Swift-SDK/Channels/','e39'),
+        path: '/docs/Web3MQ-SDK/Swift-SDK/Chat/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/Swift-SDK/Chat/','64f'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
@@ -508,8 +568,14 @@ export default [
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/docs/Web3MQ-SDK/Swift-SDK/Messages/',
-        component: ComponentCreator('/docs/Web3MQ-SDK/Swift-SDK/Messages/','87b'),
+        path: '/docs/Web3MQ-SDK/Swift-SDK/DappConnect/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/Swift-SDK/DappConnect/','2c6'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/docs/Web3MQ-SDK/Swift-SDK/Group/',
+        component: ComponentCreator('/docs/Web3MQ-SDK/Swift-SDK/Group/','763'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
@@ -522,18 +588,6 @@ export default [
       {
         path: '/docs/Web3MQ-SDK/Swift-SDK/QuickStart/',
         component: ComponentCreator('/docs/Web3MQ-SDK/Swift-SDK/QuickStart/','916'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-SDK/Swift-SDK/Register/',
-        component: ComponentCreator('/docs/Web3MQ-SDK/Swift-SDK/Register/','ea9'),
-        exact: true,
-        'sidebar': "tutorialSidebar"
-      },
-      {
-        path: '/docs/Web3MQ-SDK/Swift-SDK/Structs/',
-        component: ComponentCreator('/docs/Web3MQ-SDK/Swift-SDK/Structs/','e55'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },

@@ -6,22 +6,22 @@ position: 6
 
 ## Properties
 
-| name                     | type                                                                                  | Description                  |
-| ------------------------ | ------------------------------------------------------------------------------------- | ---------------------------- |
-| contactList              | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype) [ ] \| null | contact list                 |
-| followerList             | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype) [ ] \| null | follower list                |
-| followingList            | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype) [ ] \| null | following list               |
+| name          | type                                                                                  | Description    |
+| ------------- | ------------------------------------------------------------------------------------- | -------------- |
+| contactList   | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype) [ ] \| null | contact list   |
+| followerList  | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype) [ ] \| null | follower list  |
+| followingList | [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype) [ ] \| null | following list |
 
 ## Methods
 
-| name                        | type     | Parameters Description                                                                    | response                                                                      |
-| --------------------------- | -------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| sendFriend                  | function | firstParams: (target_userid or target_user_wallet_address)                    | Promise:[ServiceResponse](/docs/Web3MQ-SDK/JS-SDK/types/#serviceresponse)     |                                                      
-| getContactList              | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                   | Promise:[ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype) |
-| getFollowerList             | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                   | Promise:[ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype) |
-| getFollowingList            | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                   | Promise:[ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype) |
-| followOperation             | function | [FollowOperationParams](/docs/Web3MQ-SDK/JS-SDK/types/#followoperationparams)             | Promise:[ServiceResponse](/docs/Web3MQ-SDK/JS-SDK/types/#serviceresponse)         |
-|publishNotificationToFollowers | function | [PublishNotificationToFollowersParams](/docs/Web3MQ-SDK/JS-SDK/types/#publishnotificationtofollowersparams) | Promise:[ServiceResponse](/docs/Web3MQ-SDK/JS-SDK/types/#serviceresponse) |
+| name                           | type     | Parameters Description                                                                                                           | response                                                                          |
+| ------------------------------ | -------- | -------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| sendFriend                     | function | 1. target_id: (userid \| address) 2. content: string 3. didType: [BlockChainType](/docs/Web3MQ-SDK/JS-SDK/types/#blockchaintype) | Promise:[ServiceResponse](/docs/Web3MQ-SDK/JS-SDK/types/#serviceresponse)         |
+| getContactList                 | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                                                          | Promise:[ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype) |
+| getFollowerList                | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                                                          | Promise:[ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype) |
+| getFollowingList               | function | [PageParams](/docs/Web3MQ-SDK/JS-SDK/types/#pageparams)                                                                          | Promise:[ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype) |
+| followOperation                | function | [FollowOperationParams](/docs/Web3MQ-SDK/JS-SDK/types/#followoperationparams)                                                    | Promise:[ServiceResponse](/docs/Web3MQ-SDK/JS-SDK/types/#serviceresponse)         |
+| publishNotificationToFollowers | function | [PublishNotificationToFollowersParams](/docs/Web3MQ-SDK/JS-SDK/types/#publishnotificationtofollowersparams)                      | Promise:[ServiceResponse](/docs/Web3MQ-SDK/JS-SDK/types/#serviceresponse)         |
 
 ## Prerequisites
 
@@ -202,7 +202,11 @@ export const Child = (props: IProps) => {
   return (
     <button
       onClick={async () => {
-        const data = await client.contact.sendFriend('target_userid or target_walletAddress', 'Can you follow me?');
+        const data = await client.contact.sendFriend(
+          "target_userid or target_walletAddress",
+          "Can you follow me?",
+            'eth'
+        );
         console.log(data);
       }}
     >
@@ -231,7 +235,7 @@ export const Child = (props: IProps) => {
         const data = await client.contact.followOperation({
           action: 'follow',
           address: 'wallet_address',
-          didType: 'wallet_type'
+          didType: 'wallet_type',
           targetUserid: 'userid',
         });
         console.log(data);
