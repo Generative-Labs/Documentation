@@ -18,6 +18,7 @@ group:
 | did_type           | string | Yes      | eth                       |
 | did_value          | string | Yes      | wallet address            |
 | timestamp          | int    | Yes      | timestamp milliseconds    |
+| pubkey_expired_timestamp          | int    | Yes      | timestamp milliseconds    |
 | login_signature    | string | Yes      | login signature           |
 | signature_content  | string | Yes      | signature_content         |
 | main_pubkey        | string | Yes      | register api `public key` |
@@ -28,8 +29,8 @@ group:
 | testnet_access_key | string | Yes      | testnet_access_key        |
 
 ```js
-// your_MainPrivateKey is Register generate key pair
-let signature_content = (userid + pubkey_value + pubkey_expired_timestamp + timestamp) // string join
+// your_MainPrivateKey is Register api generate KeyPair' private key
+let signature_content = sha3_224 hash(userid + pubkey_value + pubkey_expired_timestamp + timestamp) // string join
 let login_signature = your_MainPrivateKey signing(signature_content); // base64 format
 ```
 
@@ -46,6 +47,7 @@ let login_signature = your_MainPrivateKey signing(signature_content); // base64 
   "pubkey_value": "pubkey",
   "pubkey_type": "ed25519",
   "timestamp": 160000000,
+  "pubkey_expired_timestamp": 160500000,
 
   "nickename": "nickename",
   "avatar_url": "avatar_url"

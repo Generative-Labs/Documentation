@@ -48,7 +48,7 @@ _Body json params_
   "domain": "www.yourdomain.com", //
   "dapp_name": "Web3mqIM",
   "dapp_description": "Web3mq is a chat service dapp",
-  "dapp_pubkey": "ed25519 pubkey",
+  "dapp_pubkey": "<ed25519 pubkey>",
   "timestamp": 1632432434,
   "web3mq_user_signature": "web3mq_user_signature"
 }

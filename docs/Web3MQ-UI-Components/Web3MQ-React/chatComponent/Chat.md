@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Chat
 
-The Chat component is a React Context provider that wraps the entire Web3Mq Chat application. All chat Components within the `@web3mq/react-components` library must be nested as children of Chat to maintain proper functionality.
+The Chat component is a React Context provider that wraps the entire Web3MQ Chat application. All chat Components within the `@web3mq/react-components` library must be nested as children of Chat to maintain proper functionality.
  
 
 ## Basic Usage

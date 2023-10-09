@@ -10,7 +10,7 @@ export default {
   "baseUrl": "/",
   "onBrokenLinks": "throw",
   "onBrokenMarkdownLinks": "warn",
-  "favicon": "img/web3mq.logo.ico",
+  "favicon": "img/favicon.ico",
   "organizationName": "Web3MQ",
   "projectName": "Web3MQ",
   "presets": [
@@ -18,10 +18,10 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "/Users/edy/Desktop/web3-mq documentation/Documentation/sidebars.js"
+          "sidebarPath": "/home/coder_wei/workspace/web3-mq/Documentation/sidebars.js"
         },
         "theme": {
-          "customCss": "/Users/edy/Desktop/web3-mq documentation/Documentation/src/css/custom.css"
+          "customCss": "/home/coder_wei/workspace/web3-mq/Documentation/src/css/custom.css"
         }
       }
     ]
@@ -57,13 +57,22 @@ export default {
         },
         {
           "title": "Community",
-          "items": []
+          "items": [
+            {
+              "label": "Discord",
+              "href": "https://discord.gg/UymwsCAb"
+            },
+            {
+              "label": "Twitter",
+              "href": "https://twitter.com/Web3MQ"
+            }
+          ]
         },
         {
           "title": "More",
           "items": [
             {
-              "label": "This Website is build with Docusaurus and love❤️",
+              "label": "Built with Docusaurus and ❤️",
               "href": "https://github.com/facebook/docusaurus"
             }
           ]
@@ -264,7 +273,8 @@ export default {
         ]
       },
       "additionalLanguages": [
-        "swift"
+        "swift",
+        "dart"
       ]
     },
     "algolia": {
