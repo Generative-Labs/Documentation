@@ -186,7 +186,7 @@ client.wsConnectionStatusStream.listen((event) {
 
 ## Chat
 
-Let’s continue by joining a chat group and sending your first message. A group contains messages and a list of members who are permanently associated with the group. More docs about group see [Group](/docs/Web3MQ-SDK/Dart-SDK/Chat/group.md).
+Let’s continue by joining a chat group and sending your first message. A group contains messages and a list of members who are permanently associated with the group. More docs about group see [Group](/docs/Web3MQ-SDK/Dart-SDK/Chat/group).
 
 ### Create a chat group
 
