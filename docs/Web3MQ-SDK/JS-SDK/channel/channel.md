@@ -23,7 +23,7 @@ position: 4
 | inviteGroupMember  | function | members: string[]                                                     | Promise: [ContactListItemType](/docs/Web3MQ-SDK/JS-SDK/types/#contactlistitemtype)[ ] |
 | joinGroup          | function | groupid: string                                                       | Promise: void                                                                         |
 | getGroupPermissions| function | groupid: string                                                       | Promise: [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)    |
-| updateGroupPermissions| function | [UpdateGroupPermissionsParams](/docs/Web3MQ-SDK/JS-SDK/types/#updategrouppermissionsparams)    | Promise: [SearchUsersResponse](/docs/Web3MQ-SDK/JS-SDK/types/#searchusersresponse)    |
+| updateGroupPermissions| function | [UpdateGroupPermissionsParams](/docs/Web3MQ-SDK/JS-SDK/types/#updategrouppermissionsparams)    | Promise: void     |
 
 ## Permission
 > Group chat permission currently only has `group:join` rule, which indicates the permission to join a group. `group:join` rule has `public` and `ceator_invite_friends` values, and its value type is 'enum'
