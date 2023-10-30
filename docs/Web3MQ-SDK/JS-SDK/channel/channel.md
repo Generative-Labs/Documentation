@@ -481,6 +481,7 @@ export const Child = (props: IProps) => {
       onClick={async() => {
         await client.channel.createRoom({ group_name: 'hello world'});
         const { channelList } = client.channel;
+          // permission:  public
         const data = await client.channel.updateGroupPermissions({
           groupid: channelList[0].chatid,
           permissions: {
@@ -490,7 +491,34 @@ export const Child = (props: IProps) => {
             }
           }
         });
-        console.log(data);
+        // Permission: Only creator invite
+        const data1 = await client.channel.updateGroupPermissions({
+          groupid: channelList[0].chatid,
+          permissions: {
+            "group:join": {
+                type: "enum",
+                value: "creator_invite_friends"
+            }
+          }
+        });
+          // Permission: join by some nft
+          const data2 = await client.channel.updateGroupPermissions({
+              groupid: channelList[0].chatid,
+              permissions: {
+                  "group:join": {
+                      type: "enum",
+                      value: "nft_validation"
+                  }
+              },
+              nfts: [
+                  {
+                      chain_id: 'SN_GOERLI',
+                      chain_type: 'starknet',
+                      contract: '0x00000000000000001',
+                  },
+              ],
+          });
+          console.log(data);
       }}
     >
       update group permissions
