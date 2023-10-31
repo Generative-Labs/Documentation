@@ -188,6 +188,17 @@ position: 7
 | wallet_address | string                                                                    | [walletAddress](/docs/Web3MQ-SDK/JS-SDK/standards/#wallet-address) | wallet address of contact  | "0x000000"                                     |
 | wallet_type    | [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype)                   | [walletType](/docs/Web3MQ-SDK/JS-SDK/standards/#blockchain-type)   | wallet type of contact     | "eth" or "starknet"                            |
 
+### GroupMemberListItemType
+
+| name           | type                                                    | format                                                             | desc                      | eg                    |
+| -------------- | ------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------- | --------------------- |
+| avatar_url     | string                                                  | -                                                                  | contactL avatar resources | `https://www.xxx.com` |
+| create_at      | number                                                  | -                                                                  | user create at            | `1695803377572`       |
+| nickname       | string                                                  | -                                                                  | nickname of contact       |                       |
+| userid         | string                                                  | [userid](/docs/Web3MQ-SDK/JS-SDK/standards/#userid)                | userid of contact         | "user: xxx"           |
+| wallet_address | string                                                  | [walletAddress](/docs/Web3MQ-SDK/JS-SDK/standards/#wallet-address) | wallet address of contact | "0x000000"            |
+| wallet_type    | [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype) | [walletType](/docs/Web3MQ-SDK/JS-SDK/standards/#blockchain-type)   | wallet type of contact    | "eth" or "starknet"   |
+
 ### FollowStatus
 
 | name         | type                                       | format | desc               | eg            |
