@@ -155,7 +155,7 @@ position: 7
 | name  | type                                | format | desc                                            | eg       |
 | ----- | ----------------------------------- | ------ | ----------------------------------------------- | -------- |
 | type  | "enum"                              | -      | The type of group to join in group permissions  | "enum"   |
-| value | "ceator_invite_friends" \| "public" | -      | The value of group to join in group permissions | "public" |
+| value | "creator_invite_friends" \| "public" | -      | The value of group to join in group permissions | "public" |
 
 ### GroupPermissions
 

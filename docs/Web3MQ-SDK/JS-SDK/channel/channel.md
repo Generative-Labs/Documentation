@@ -73,9 +73,9 @@ Group chat permission currently only has `group:join` rule, which indicates the 
 
 :::
 
-This rule has three values: `ceator_invite_friends`,`public`,`nft_validation`.
+This rule has three values: `creator_invite_friends`,`public`,`nft_validation`.
 
-#### `ceator_invite_friends`
+#### `creator_invite_friends`
 
 > Only the group owner can invite friends to join.
 
