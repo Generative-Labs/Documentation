@@ -115,14 +115,23 @@ position: 7
 | updatedAt   | string | -      | time of the last message in the current chat room  | "2023-02-01 00:00:00"      |
 | unread      | number | -      | number of unread messages in the current chat room | 0                          |
 
+### NftPermissionType
+
+| name       | type               | format   | desc                            | eg        |
+| ---------- | ------------------ | -------- | ------------------------------- | --------- |
+| chain_type | string: 'starknet' | starknet | chain type                      | starknet  |
+| chain_id   | string             | -        | chain id                        | SN_GOERLI |
+| contract   | string             | -        | nft collection contract address | "0x00000" |
+
 ### CreateRoomParams
 
-| name        | type                                                                | format | desc                                             | eg                                             |
-| ----------- | ------------------------------------------------------------------- | ------ | ------------------------------------------------ | ---------------------------------------------- |
-| avatarUrl   | string                                                              | -      | select the avatar resource for the group channel | `https://www.xxx.com`                          |
-| groupid     | string                                                              | -      | customize a group channel id                     | "group: xxx"                                   |
-| groupName   | string                                                              | -      | enter the group channel name                     | "channel name"                                 |
-| permissions | [GroupPermissions](/docs/Web3MQ-SDK/JS-SDK/types/#grouppermissions) | -      | group channel permissions                        | {"group:join": {type: "enum",value: "public"}} |
+| name        | type                                                                    | format | desc                                             | eg                                                                                                         |
+| ----------- | ----------------------------------------------------------------------- | ------ | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| avatarUrl   | string                                                                  | -      | select the avatar resource for the group channel | `https://www.xxx.com`                                                                                      |
+| groupid     | string                                                                  | -      | customize a group channel id                     | "group: xxx"                                                                                               |
+| groupName   | string                                                                  | -      | enter the group channel name                     | "channel name"                                                                                             |
+| permissions | [GroupPermissions](/docs/Web3MQ-SDK/JS-SDK/types/#grouppermissions)     | -      | group channel permissions                        | {"group:join": {type: "enum",value: "public"}}                                                             |
+| nfts        | [NftPermissionType](/docs/Web3MQ-SDK/JS-SDK/types/#nftpermissiontype)[] | -      | Required to hold nfts                            | [{"chain_id":"SN_GOERLI","chain_type":"starknet","contract":"0xd29f5f02f5ffcd102faf467f2f236c601830780d"}] |
 
 ### UpdateRoomListParams
 
@@ -135,17 +144,18 @@ position: 7
 
 ### UpdateGroupPermissionsParams
 
-| name        | type             | format | desc                      | eg                                             |
-| ----------- | ---------------- | ------ | ------------------------- | ---------------------------------------------- |
-| groupid     | string           | -      | group channel id          | "group:xx"                                     |
-| permissions | GroupPermissions | -      | group channel permissions | {"group:join": {type: "enum",value: "public"}} |
+| name        | type                                                                    | format | desc                      | eg                                                                                                         |
+| ----------- | ----------------------------------------------------------------------- | ------ | ------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| groupid     | string                                                                  | -      | group channel id          | "group:xx"                                                                                                 |
+| permissions | [GroupPermissions](/docs/Web3MQ-SDK/JS-SDK/types/#grouppermissions)     | -      | group channel permissions | {"group:join": {type: "enum",value: "public"}}                                                             |
+| nfts        | [NftPermissionType](/docs/Web3MQ-SDK/JS-SDK/types/#nftpermissiontype)[] | -      | Required to hold nfts     | [{"chain_id":"SN_GOERLI","chain_type":"starknet","contract":"0xd29f5f02f5ffcd102faf467f2f236c601830780d"}] |
 
 ### JoinGroupPermissionsType
 
 | name  | type                                | format | desc                                            | eg       |
 | ----- | ----------------------------------- | ------ | ----------------------------------------------- | -------- |
 | type  | "enum"                              | -      | The type of group to join in group permissions  | "enum"   |
-| value | "ceator_invite_friends" \| "public" | -      | The value of group to join in group permissions | "public" |
+| value | "creator_invite_friends" \| "public" | -      | The value of group to join in group permissions | "public" |
 
 ### GroupPermissions
 
@@ -177,6 +187,17 @@ position: 7
 | userid         | string                                                                    | [userid](/docs/Web3MQ-SDK/JS-SDK/standards/#userid)                | userid of contact          | "user: xxx"                                    |
 | wallet_address | string                                                                    | [walletAddress](/docs/Web3MQ-SDK/JS-SDK/standards/#wallet-address) | wallet address of contact  | "0x000000"                                     |
 | wallet_type    | [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype)                   | [walletType](/docs/Web3MQ-SDK/JS-SDK/standards/#blockchain-type)   | wallet type of contact     | "eth" or "starknet"                            |
+
+### GroupMemberListItemType
+
+| name           | type                                                    | format                                                             | desc                      | eg                    |
+| -------------- | ------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------- | --------------------- |
+| avatar_url     | string                                                  | -                                                                  | contactL avatar resources | `https://www.xxx.com` |
+| create_at      | number                                                  | -                                                                  | user create at            | `1695803377572`       |
+| nickname       | string                                                  | -                                                                  | nickname of contact       |                       |
+| userid         | string                                                  | [userid](/docs/Web3MQ-SDK/JS-SDK/standards/#userid)                | userid of contact         | "user: xxx"           |
+| wallet_address | string                                                  | [walletAddress](/docs/Web3MQ-SDK/JS-SDK/standards/#wallet-address) | wallet address of contact | "0x000000"            |
+| wallet_type    | [WalletType](/docs/Web3MQ-SDK/JS-SDK/types/#wallettype) | [walletType](/docs/Web3MQ-SDK/JS-SDK/standards/#blockchain-type)   | wallet type of contact    | "eth" or "starknet"   |
 
 ### FollowStatus
 
