@@ -172,7 +172,7 @@ const {
 ### Get client instance
 
 :::tip
-Before that, let's take a look at the parameters of Client.init(), [InitOptions](/docs/Web3MQ-SDK/JS-SDK/types/#initoptions), two parameters that need special attention, 
+Before that, let's take a look at the parameters of Client.init(), [InitOptions](/docs/Ethos-SDK/JS-SDK/types/#initoptions), two parameters that need special attention, 
 1. didKey  (Format：walletType:walletAddress  eg:   eth:0x00000000000)
 2. tempPubkey  ( The temporary public key returned to you after a successful login )
 
@@ -199,7 +199,7 @@ const client = Client.getInstance({
 :::tip
 The web3mq sdk data interaction is done through event posting and listening, which allows you to update data more elegantly 
 
-see: [Event center](/docs/Web3MQ-SDK/JS-SDK/eventCenter)
+see: [Event center](/docs/Ethos-SDK/JS-SDK/eventCenter)
 :::
 
 ### Send message

@@ -25,7 +25,7 @@ export const WindowExample: React.FC = () => {
   if (!keys) {
     return (
       <div>
-        <button className={ss.link_btn}><a href="/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/Chat#basic-usage">请先在Chat部分进行登录操作</a></button>
+        <button className={ss.link_btn}><a href="/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/Chat#basic-usage">请先在Chat部分进行登录操作</a></button>
       </div>
     );
   }

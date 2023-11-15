@@ -34,7 +34,7 @@ export const ChannelExample: React.FC = () => {
 
   if (!keys) {
     return (
-      <Button size='large' type='ghost'><a href="/docs/Web3MQ-UI-Components/Web3MQ-React/chatComponent/LoginModal#basic-usage" style={{textDecoration: 'none'}}>Please login first</a></Button>
+      <Button size='large' type='ghost'><a href="/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/LoginModal#basic-usage" style={{textDecoration: 'none'}}>Please login first</a></Button>
     );
   }
   if (!fastestUrl) {
