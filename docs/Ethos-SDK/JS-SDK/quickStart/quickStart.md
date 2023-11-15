@@ -4,12 +4,12 @@ position: 1
 
 # QuickStart
 
-**This Quickstart tutorial walks you through the key concepts of Web3MQ using a sample react project and successfully
+**This Quickstart tutorial walks you through the key concepts of Ethos using a sample react project and successfully
 send your first "hello world" to your friend!**
 
 ## Installation
 
-> Install Web3MQ's JS SDK using a package manager of your choice
+> Install Ethos's JS SDK using a package manager of your choice
 
 ```bash
 npm install @web3mq/client
@@ -27,14 +27,14 @@ Vite `^4.0.0` is also supported;
 
 :::caution
 
-Web3MQ's JS SDK only supports Webpack 4 for now, we are working hard to upgrade dependencies to be compatible with Webpack 5 and above.
+Ethos's JS SDK only supports Webpack 4 for now, we are working hard to upgrade dependencies to be compatible with Webpack 5 and above.
 
 :::
 
 
 ### Using create-react-app
 
-If you are building your project using a recent version of create-react-app that's running Webpack 5 or above, you might need to downgrade in order to integrate Web3MQ into your project.
+If you are building your project using a recent version of create-react-app that's running Webpack 5 or above, you might need to downgrade in order to integrate Ethos into your project.
 
 > 1.  **Copy the following command to the terminal to install the lower version of react-scripts**
 >
@@ -48,23 +48,23 @@ If you are building your project using a recent version of create-react-app that
 
 ## Initialize Client
 
-> Initialize Client and Connect to Web3MQ Network
+> Initialize Client and Connect to Ethos Network
 
-In order to connect to the Web3MQ Network, both users and developers authenticate through wallet signatures, we
-demonstrate below with an Ethereum wallet via Metamask, but Web3MQ is built to be compatible with wallets across
+In order to connect to the Ethos Network, both users and developers authenticate through wallet signatures, we
+demonstrate below with an Ethereum wallet via Metamask, but Ethos is built to be compatible with wallets across
 different chains.
 
-#### Initialize Client and Connect to Web3MQ Network
+#### Initialize Client and Connect to Ethos Network
 
 :::note
 
 While we are committed to building an open and collectively owned public good, our early stage testnet requires an API
 key in order to connect. This is to control capacity to make sure that each early partner and developer is able to build
-a great experience on top of Web3MQ. [Apply here](https://web3mq.com/apply).
+a great experience on top of Ethos. [Apply here](https://web3mq.com/apply).
 
 :::
 
-As Web3MQ is a federated network, our default JS SDK client has a method to help you connect to the best node for you.
+As Ethos is a federated network, our default JS SDK client has a method to help you connect to the best node for you.
 
 Simply calling Client.init without connectUrl or an empty string returns a url of the best node determined for you, and
 this url can be stored locally.
@@ -93,8 +93,8 @@ const fastUrl = await Client.init({
 
 #### API endpoints
 
-During this initial testing phase, we've hosted complete networks of Web3MQ nodes in different regions around the globe.
-Connect to these endpoints below, to access the Web3MQ Testnet.
+During this initial testing phase, we've hosted complete networks of Ethos nodes in different regions around the globe.
+Connect to these endpoints below, to access the Ethos Testnet.
 
 - https://testnet-us-west-1-1.web3mq.com
 - https://testnet-us-west-1-2.web3mq.com

@@ -39,7 +39,7 @@ const config = {
         title: 'Home',
         logo: {
           alt: 'Document Logo',
-          src: 'img/Web3MQLogo.png',
+          src: 'img/Nomos_Nerwork.svg',
         },
         items: [
           {

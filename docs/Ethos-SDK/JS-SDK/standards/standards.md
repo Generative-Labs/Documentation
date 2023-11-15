@@ -127,9 +127,9 @@ const did_value = window.ethereum.selectedAddress;
 const userid = `user:${sha3_224(did_type + did_value + timestamp)}`;
 ```
 
-### Web3MQ API Endpoints
+### Ethos API Endpoints
 
-> During this initial testing phase, we've hosted complete networks of Web3MQ nodes in different regions around the globe. Connect to these endpoints below, to access the Web3MQ Testnet.
+> During this initial testing phase, we've hosted complete networks of Ethos nodes in different regions around the globe. Connect to these endpoints below, to access the Ethos Testnet.
 
 **https**
 
