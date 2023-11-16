@@ -68,7 +68,7 @@ position: 7
 | name       | type                                                | format                                                                                          | desc                                                                                                                  | eg                                   |
 | ---------- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
 | app_key    | string                                              | -                                                                                               | temporary authorization key obtained by applying                                                                      |                                      |
-| connectUrl | string \| null                                      | [EthosAPiEndpoints](/docs/Ethos-SDK/JS-SDK/standards/#web3mq-api-endpoints)                         | takes in a valid endpoint url as input, when this paramter is given, client will always connect to that specific node | `https://testnet-ap-jp-2.web3mq.com` |
+| connectUrl | string \| null                                      | [EthosAPiEndpoints](/docs/Ethos-SDK/JS-SDK/standards/#ethos-api-endpoints)                         | takes in a valid endpoint url as input, when this paramter is given, client will always connect to that specific node | `https://testnet-ap-jp-2.web3mq.com` |
 | didKey     | string                                              | [didType](/docs/Ethos-SDK/JS-SDK/types/#didtype):[didvalue](/docs/Ethos-SDK/JS-SDK/types/#didvalue) | didType and didValue collection                                                                                       | 'eth:0x000000'                       |
 | env        | [EnvTypes](/docs/Ethos-SDK/JS-SDK/types/#envtypes) | -                                                                                               | network environment                                                                                                   | 'test'                               |
 | tempPubkey | string                                              | [temporaryPublicKey](/docs/Ethos-SDK/JS-SDK/standards/#temporary-publickey)                    | temporary public key of the current user                                                                              |                                      |
@@ -238,7 +238,7 @@ position: 7
 | messageid      | string                                                       | -      | message id                    | -                          |
 | payload_type   | string                                                       | -      | payload type                  | -                          |
 | timestamp      | number                                                       | -      | time stamp                    | -                          |
-| message_status | [MessageStatus](docs/Web3MQ-SDK/JS-SDK/types/#messagestatus) | -      | message status                | -                          |
+| message_status | [MessageStatus](docs/Ethos-SDK/JS-SDK/types/#messagestatus) | -      | message status                | -                          |
 | payload        | string                                                       | -      | payload base64 encode content | -                          |
 | versions       | number                                                       | -      | versions                      | -                          |
 
@@ -362,12 +362,12 @@ position: 7
 | signContent | string                                                        | [signContent](/docs/Ethos-SDK/JS-SDK/standards/#sign-content) | conent of sign                        | -          |
 | signType    | 'get_Keys_For_Login' \| 'get_keys_For_Register' \| 'register' | -                                                              | type of sign                          | 'register' |
 
-### Web3MQBridgeOptions
+### EthosBridgeOptions
 
-| name   | type   | format                                                                        | desc                   | eg                                  |
-| ------ | ------ | ----------------------------------------------------------------------------- | ---------------------- | ----------------------------------- |
-| dAppID | string | -                                                                             | dApp id of user        | -                                   |
-| wsUrl  | string | [Web3mqApiEndpoints](/docs/Ethos-SDK/JS-SDK/standards/#web3mq-api-endpoints) | ws url of Web3MQ nodes | `wss://testnet-ap-aj-2.web3mq.com/` |
+| name   | type   | format                                                                     | desc                   | eg                                  |
+| ------ | ------ |----------------------------------------------------------------------------| ---------------------- | ----------------------------------- |
+| dAppID | string | -                                                                          | dApp id of user        | -                                   |
+| wsUrl  | string | [EthosApiEndpoints](/docs/Ethos-SDK/JS-SDK/standards/#ethos-api-endpoints) | ws url of Ethos nodes | `wss://testnet-ap-aj-2.web3mq.com/` |
 
 ### LoginByKeysParams
 
