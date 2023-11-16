@@ -7,7 +7,7 @@ The `ChannelList` component queries an array of channel objects from the Chat AP
 
 ## Basic Usage
 :::tip
-If your channelList list is empty, you can create a chat room in [createChannel](/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/CreateChannel).
+If your channelList list is empty, you can create a chat room in [createChannel](/docs/Ethos-UI-Components/Ethos-React/chatComponent/CreateChannel).
 :::
 The ChannelList does not have any required props
 
@@ -25,7 +25,7 @@ code={<ChannelListMdx />}>
 </Layout>
 
 ## Custom Component
-ChannelList UI is determined by two of its props, List and Preview,if no props are injected, the default rendering [ChannelListMessenger](/docs/Ethos-UI-Components/Web3MQ-React/utilityComponent/ChannelListMessenger) and Channel item Style.
+ChannelList UI is determined by two of its props, List and Preview,if no props are injected, the default rendering [ChannelListMessenger](/docs/Ethos-UI-Components/Ethos-React/utilityComponent/ChannelListMessenger) and Channel item Style.
 
 `listRef` is a required attribute and must be bound to the Custom `ChannelListMessenger` root node. This is necessary for the `ChannelList` to implement paging.
 
@@ -49,7 +49,7 @@ code={<CustomListMdx />}>
 
 | Property                   | Description                               | Type                      | Default | required |
 | -------------------------- | ----------------------------------------- | ------------------------- | ------- | -------- |
-| List                       | as `ChannelList`‘s root component, used to display a component that the list load and failed to load | React.ComponentType |[ChannelListMessenger](/docs/Ethos-UI-Components/Web3MQ-React/utilityComponent/ChannelListMessenger)|   false   |
+| List                       | as `ChannelList`‘s root component, used to display a component that the list load and failed to load | React.ComponentType |[ChannelListMessenger](/docs/Ethos-UI-Components/Ethos-React/utilityComponent/ChannelListMessenger)|   false   |
 | Preview                    | set your custom `ChannelItem` component   | React.ComponentType       |`ChannelPreview`|   false  |
 | DefaultEmptyStateIndicator | displays an empty list of components      | React.ComponentType       |`EmptyStateIndicator`|   false  |
 | Paginator                  | set your custom `paging` component        | React.ComponentType       |`Paginator`|   false  |

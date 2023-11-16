@@ -44,5 +44,5 @@ code={<NotificationListMdx />}>
 | --------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ------- | -------- |
 | client                | Client Instance                                       | [Client](/docs/Ethos-SDK/JS-SDK/client/)                                                                        |   -     |   true   |
 | notification          | notification content in list                          | [NotifyResponse](/docs/Ethos-SDK/JS-SDK/types/#notifyresponse)                                                  |   -     |   true   |
-| userInfo              | info about the user who pushed the notification to me | [CommonUserInfoType](/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/Chat#commonuserinfotype) \| undefined |   -     |  false   |
+| userInfo              | info about the user who pushed the notification to me | [CommonUserInfoType](/docs/Ethos-UI-Components/Ethos-React/chatComponent/Chat#commonuserinfotype) \| undefined |   -     |  false   |
 | setActiveNotification | set the current notification as active                | React.Dispatch                                                                                                   |   -     |   true   |

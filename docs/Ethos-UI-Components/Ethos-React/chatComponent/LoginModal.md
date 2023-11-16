@@ -133,23 +133,23 @@ code={<UseAccountMdx />}>
 
 | Property         | Description                                                             | Type                                                                                                | Default           | required |
 | ---------------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------- | -------- |
-| account          | Set account info                                                        | [UserAccountType](/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/LoginModal#useraccounttype) | undefined         |  false   |
-| appType          | set viewport type of @web3mq/react-components                           | [AppTypeEnum](/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/Chat#apptypeenum)               | AppTypeEnum["pc"] |  false   |
+| account          | Set account info                                                        | [UserAccountType](/docs/Ethos-UI-Components/Ethos-React/chatComponent/LoginModal#useraccounttype) | undefined         |  false   |
+| appType          | set viewport type of @web3mq/react-components                           | [AppTypeEnum](/docs/Ethos-UI-Components/Ethos-React/chatComponent/Chat#apptypeenum)               | AppTypeEnum["pc"] |  false   |
 | client           | client class                                                            | [Client](/docs/Ethos-SDK/JS-SDK/client)                                                            | Client            |  false   |
 | containerId      | id selector for the node that wraps the `LoginModal` component          | String                                                                                              |   ""              |  false   |
 | isShow           | Whether the modal dialog is visible or not                              | Boolean                                                                                             |  false            |  false   |
 | loginBtnNode     | Set the custom `Button`                                                 | React.ReactNode                                                                                     |   null            |  false   |
-| keys             | Set the user master key pair for skipping the login signature operation | [MainKeysType](/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/LoginModal#mainkeystype)       | undefined         |  false   |
+| keys             | Set the user master key pair for skipping the login signature operation | [MainKeysType](/docs/Ethos-UI-Components/Ethos-React/chatComponent/LoginModal#mainkeystype)       | undefined         |  false   |
 | modalClassName   | set the dialog class selector                                           | String                                                                                              |   ""              |  false   |
 | style            | set your custom style                                                   | React.CSSProperties                                                                                 |   null            |  false   |
-| handleLoginEvent | Callback when login or register                                         | (eventData: [LoginEventDataType](/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/LoginModal#logineventdatatype)) => void   |   -     |  true   |
+| handleLoginEvent | Callback when login or register                                         | (eventData: [LoginEventDataType](/docs/Ethos-UI-Components/Ethos-React/chatComponent/LoginModal#logineventdatatype)) => void   |   -     |  true   |
 
 ### LoginEventDataType
 | Property | Description          | Type      | Default | required |
 | -------- | -------------------- | --------- | ------- | -------- |
-| type     | Callback return type |[LoginEventType](/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/LoginModal#logineventtype)|   -     |   true   |
+| type     | Callback return type |[LoginEventType](/docs/Ethos-UI-Components/Ethos-React/chatComponent/LoginModal#logineventtype)|   -     |   true   |
 | msg      | Callback return msg  | string    |   ''    |   true   |
-| data     | Callback return data |[LoginResType](/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/LoginModal#logineventdatatype) \| [RegisterResType](/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/LoginModal#registerrestype) \| null|   -     |   true   |
+| data     | Callback return data |[LoginResType](/docs/Ethos-UI-Components/Ethos-React/chatComponent/LoginModal#logineventdatatype) \| [RegisterResType](/docs/Ethos-UI-Components/Ethos-React/chatComponent/LoginModal#registerrestype) \| null|   -     |   true   |
 ### LoginResType
 | Property             | Description                               | Type      | Default | required |
 | -------------------- | ----------------------------------------- | --------- | ------- | -------- |

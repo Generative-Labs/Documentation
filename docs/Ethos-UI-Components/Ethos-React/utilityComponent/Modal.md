@@ -21,7 +21,7 @@ code={<ModalMdx />}>
 
 | Property         | Description                      | Type                                      | Default       | required |
 | ---------------- | -------------------------------- | ----------------------------------------- | ------------- | -------- |
-|  appType         | set the appType                  |[AppTypeEnum](/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/Chat#apptypeenum) |  AppTypeEnum["pc"]       |  false   |
+|  appType         | set the appType                  |[AppTypeEnum](/docs/Ethos-UI-Components/Ethos-React/chatComponent/Chat#apptypeenum) |  AppTypeEnum["pc"]       |  false   |
 |  className       | set the mask class selector      | String                                    |    -          |  false   |
 |  dialogClassName | set the dialog class selector    | String                                    |    -          |  false   |
 |  modalHeader     | set the header                   | React.ReactNode                           |    -          |  false   |
