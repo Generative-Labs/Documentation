@@ -12,7 +12,7 @@ group:
 
 ## Usage Steps
 
-1. **Register Web3MQ Account**
+1. **Register Ethos Account**
 
    - Type your password
    - Generate Wallet signature
@@ -30,7 +30,7 @@ group:
 
    - Create a group for next step
 
-4. **Send Connect Command**, Web3MQ Command use protobuf v3
+4. **Send Connect Command**, Ethos Command use protobuf v3
 
    - Send connect command to server
 

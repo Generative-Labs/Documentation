@@ -56,7 +56,7 @@ const GetContactBytes = (command: any, bytes: Uint8Array) => {
 const GetWSConn = () => {
   const wsurl = WS_PROTOCOL + '://' + HostURL + '/messages';
   const wsconn = new WebSocket(wsurl);
-  wsconn.binaryType = 'arraybuffer'; // !important Web3MQ send message use protobuf
+  wsconn.binaryType = 'arraybuffer'; // !important Ethos send message use protobuf
   return wsconn;
 };
 
