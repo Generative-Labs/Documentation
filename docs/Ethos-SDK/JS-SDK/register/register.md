@@ -93,7 +93,7 @@ await Client.init({
 });
 const walletType = "argentX" | "braavos";
 const { address } = await Client.register.getAccount(walletType);
-const signContent = "hello web3mq";
+const signContent = "hello ethos";
 const did_type = "eth" | "starknet" | "argentX" | "braavos";
 const { sign: signature } = await this.sign(signContent, did_value, did_type);
 ```

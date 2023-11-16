@@ -6,7 +6,7 @@ The `MessageInput` component is a React Context provider that does not inject an
 
 ## Basic Usage
 :::tip
-If your channelList list is empty, you can create a chat room in [createChannel](/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/CreateChannel) and select it to send messages.
+If your channelList list is empty, you can create a chat room in [createChannel](/docs/Ethos-UI-Components/Ethos-React/chatComponent/CreateChannel) and select it to send messages.
 :::
 
 import { Layout } from '@site/src/components/Layout'

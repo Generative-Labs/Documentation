@@ -57,7 +57,7 @@ const { client } = useChatContext();
 
 | Property    | Description                                       | Type                                                                                 | Default           | required |
 | ----------- | ------------------------------------------------- | ------------------------------------------------------------------------------------ | ----------------- | -------- |
-| appType     | set viewport type of @web3mq/react-components     | [AppTypeEnum](/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/Chat#apptypeenum)| AppTypeEnum["pc"] |   false  |
+| appType     | set viewport type of @web3mq/react-components     | [AppTypeEnum](/docs/Ethos-UI-Components/Ethos-React/chatComponent/Chat#apptypeenum)| AppTypeEnum["pc"] |   false  |
 | className   | set your custom className                         | string                                                                               |   ""              |   false  |
 | client      | chat Client Instance                              | [Client](/docs/Ethos-SDK/JS-SDK/client/)                                            |   -               |   true   |
 | containerId | Set a unique id selector for the container wrapping `chat`| string                                                                               |   ""              |   false  |
@@ -68,12 +68,12 @@ const { client } = useChatContext();
 
 | Property             | Description                                   | Type                                                                                              | Default | required |
 | -------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------- | -------- |
-| appType              | set viewport type of @web3mq/react-components | [AppTypeEnum](/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/Chat#apptypeenum)             | AppTypeEnum["pc"] |   -    |
+| appType              | set viewport type of @web3mq/react-components | [AppTypeEnum](/docs/Ethos-UI-Components/Ethos-React/chatComponent/Chat#apptypeenum)             | AppTypeEnum["pc"] |   -    |
 | client               | Client Instance                               | [Client](/docs/Ethos-SDK/JS-SDK/client/)                                                         |   -     |    -     |
 | containerId          | id selector for the node that wraps the `Chat` component | string                                                                                            |  ""     |    -     |
 | activeNotification   | current Active Notifications in notification list | [NotifyResponse](/docs/Ethos-SDK/JS-SDK/types/#notifyresponse)                               |  null   |    -     |
 | showListTypeView     | Tabs type in `DashBoard` component            | string                                                                                            | "room"  |    -     |
-| loginUserInfo        | current user Info   | [CommonUserInfoType](/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/Chat#commonuserinfotype)                         |  null   |    -     |
+| loginUserInfo        | current user Info   | [CommonUserInfoType](/docs/Ethos-UI-Components/Ethos-React/chatComponent/Chat#commonuserinfotype)                         |  null   |    -     |
 | getUserInfo          | get target user information                   |1.didValue: string 2.didType: [didType](/docs/Ethos-SDK/JS-SDK/types/#didtype) 3.bindDid: boolean |  -      |    -     |
 | logout               | set your exit method                          | Function                                                                                          |   -     |    -     |
 | setShowListTypeView  | Update showListTypeView                       | React.Dispatch                                                                                    |  -      |    -     |
@@ -93,8 +93,8 @@ enum AppTypeEnum {
 | address           | wallet address     | string                                                                   |  -        |  true    |
 | defaultUserName   | default username   | string                                                                   |  -        |  true    |
 | defaultUserAvatar | default avatar url | string                                                                   |  -        |  true    |
-| didValues         | did value          | [DidValueType](/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/Chat#didvaluetype)[]|  -        |  true    |
-| didValueMap       | did value of map   | Record<[WEB3_MQ_DID_TYPE](/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/Chat#web3_mq_did_type), string>                                         |  -        |  true    |
+| didValues         | did value          | [DidValueType](/docs/Ethos-UI-Components/Ethos-React/chatComponent/Chat#didvaluetype)[]|  -        |  true    |
+| didValueMap       | did value of map   | Record<[WEB3_MQ_DID_TYPE](/docs/Ethos-UI-Components/Ethos-React/chatComponent/Chat#web3_mq_did_type), string>                                         |  -        |  true    |
 | permissions       | user permissions   | [UserPermissionsType](/docs/Ethos-SDK/JS-SDK/types/#userpermissionstype)|  -        |  true    |
 | stats             | follow stats info  | {total_followers:number,total_following:number}                          |  -        |  true    |
 | userid            | userid of user     | string                                                                   |  -        |  true    |
@@ -104,7 +104,7 @@ enum AppTypeEnum {
 ### DidValueType
 | Property  | Description        | Type                                                                     | Default   | required |
 | --------- | ------------------ | ------------------------------------------------------------------------ | --------- | -------- |
-| did_type  | did type           | [WEB3_MQ_DID_TYPE](/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/Chat#web3_mq_did_type) |  -        |  true    |
+| did_type  | did type           | [WEB3_MQ_DID_TYPE](/docs/Ethos-UI-Components/Ethos-React/chatComponent/Chat#web3_mq_did_type) |  -        |  true    |
 | did_value | address corresponding to `didType` | string                                                  |  -        |  true    |
 | detail    | detail             | any                                                                     |  -        |  true    |
 |provider_id| provider id        | string                                                                  |  -        |  true    |

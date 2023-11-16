@@ -24,4 +24,4 @@ code={<ProfileMdx />}>
 |  AvatarNode  | set the custom avatar part when appType is 'pc' | ReactNode           |    -       |  false  |
 |  isTab       | sets the display of the back button   | Boolean             |    -       |  false  |
 |  hasLogout   | set the display of exit button        | Boolean             |    -       |  false  |
-|  userInfo    | set userinfo                          | [CommonUserInfoType](/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/Chat#commonuserinfotype)  |    -       |  false  |
+|  userInfo    | set userinfo                          | [CommonUserInfoType](/docs/Ethos-UI-Components/Ethos-React/chatComponent/Chat#commonuserinfotype)  |    -       |  false  |

@@ -9,7 +9,7 @@ By default, the `MessageList` loads the most recent 20 messages. More messages a
 ## Basic Usage
 The `MessageList` has no required props,  and as a context consumer, the `MessageList` component must be rendered as a child of the `Channel` component.You can customize the message content with `props` or `ComponentContext` and override the default style
 :::tip
-If your channelList list is empty, you can create a chat room in [createChannel](/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/CreateChannel) and select it to send messages.
+If your channelList list is empty, you can create a chat room in [createChannel](/docs/Ethos-UI-Components/Ethos-React/chatComponent/CreateChannel) and select it to send messages.
 :::
 
 import { Layout } from '@site/src/components/Layout'
