@@ -15,9 +15,9 @@ yarn add das-sdk
 Install Ethos's JS SDK using a package manager of your choice
 
 ```bash
-npm install @web3mq/client
+npm install @ethos/client
 or
-yarn add @web3mq/client
+yarn add @ethos/client
 ```
 
 ### Initialize Client
@@ -44,7 +44,7 @@ Simply calling Client.init without connectUrl or an empty string returns a url o
 this url can be stored locally.
 
 ```ts
-import {Client} from '@web3mq/client';
+import {Client} from '@ethos/client';
 
 // You can save the bestEndpointUrl locally to skip endpoint search next time, which will save time, and
 const bestEndpointUrl = await Client.init({
@@ -57,7 +57,7 @@ Calling Client.init with a specific connectUrl forces the client to connect to t
 is stored, it might be time-saving to connect directly instead of running the search again.
 
 ```ts
-import {Client} from '@web3mq/client';
+import {Client} from '@ethos/client';
 
 const fastUrl = await Client.init({
     connectUrl: bestEndpointUrl, // takes in a valid endpoint url as input, when this paramter is given, client will always connect to that specific node.
@@ -103,7 +103,7 @@ const getAddressByDid = async () => {
 1. Call the Client.init() to initialize your network
 ```tsx
 import React, { useEffect, useState } from "react";
-import { Client } from "@web3mq/client";
+import { Client } from "@ethos/client";
 const fastUrl = await Client.init({
     connectUrl: '',
     app_key: "APP_KEY",
@@ -200,7 +200,7 @@ These two parameters ensure that your Ethos client is online, so after you have 
 :::
 
 ```tsx
-import {Client} from "@web3mq/client";
+import {Client} from "@ethos/client";
 
 await Client.init({
     connectUrl: '',

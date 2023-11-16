@@ -61,9 +61,9 @@ _Body json params_
   "data": [
     {
       "did_type": "email",
-      "did_value": "email@web3mq.com",
+      "did_value": "email@ethos.com",
       "metadata": {},
-      "provider_id": "web3mq:email"
+      "provider_id": "ethos:email"
     },
     {
       "did_type": ".bit",

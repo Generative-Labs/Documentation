@@ -42,7 +42,7 @@ _Body json params_
 ```json
 {
   "creator_id": "userid",
-  "provider_id": "web3mq:email",
+  "provider_id": "ethos:email",
   "provider_type": "email",
   "provider_name": "Web3mqEmail",
   "provider_description": "Web3mqEmail is an email service provider",

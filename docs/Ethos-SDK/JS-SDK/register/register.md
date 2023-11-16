@@ -29,7 +29,7 @@ position: 2
 > Get the wallet address after connecting to the wallet
 
 ```tsx
-import {Client} from "@web3mq/client";
+import {Client} from "@ethos/client";
 
 const didKey = localStorage.getItem("DID_KEY") || "";
 const tempPubkey = localStorage.getItem("PUBLIC_KEY") || "";
@@ -52,7 +52,7 @@ console.log(address);
 > Checking the existence of a user by wallet address
 
 ```tsx
-import {Client} from "@web3mq/client";
+import {Client} from "@ethos/client";
 
 const didType: BlockChainType = "eth" | "starknet";
 const didKey = localStorage.getItem("DID_KEY") || "";
@@ -82,7 +82,7 @@ console.log(userid, userExist);
 
 ```tsx
 
-import {Client} from "@web3mq/client";
+import {Client} from "@ethos/client";
 
 await Client.init({
     connectUrl: "example url", // The fastURL you saved to local
@@ -103,7 +103,7 @@ const { sign: signature } = await this.sign(signContent, did_value, did_type);
 > Get the signature content to generate the master key pair
 
 ```tsx
-import {Client} from "@web3mq/client";
+import {Client} from "@ethos/client";
 
 await Client.init({
     connectUrl: "example url", // The fastURL you saved to local
@@ -131,7 +131,7 @@ console.log(signature)
 > Get the master key pair after signing
 
 ```tsx
-import {Client} from "@web3mq/client";
+import {Client} from "@ethos/client";
 
 const didKey = localStorage.getItem("DID_KEY") || "";
 const tempPubkey = localStorage.getItem("PUBLIC_KEY") || "";
@@ -160,7 +160,7 @@ const {publicKey, secretKey} = await Client.register.getMainKeypairBySignature(
 
 ```tsx
 
-import {Client} from "@web3mq/client";
+import {Client} from "@ethos/client";
 
 const didKey = localStorage.getItem("DID_KEY") || "";
 const tempPubkey = localStorage.getItem("PUBLIC_KEY") || "";
@@ -211,7 +211,7 @@ Using a mobile wallet? see: [dapp connect](/docs/Ethos-SDK/JS-SDK/dappConnect/)
 :::
 
 ```tsx
-import {Client} from "@web3mq/client";
+import {Client} from "@ethos/client";
 
 const didKey = localStorage.getItem("DID_KEY") || "";
 const tempPubkey = localStorage.getItem("PUBLIC_KEY") || "";
@@ -298,7 +298,7 @@ Two pairs of secret key pairs are returned after login
 :::
 
 ```tsx
-import {Client} from "@web3mq/client";
+import {Client} from "@ethos/client";
 
 const didKey = localStorage.getItem("DID_KEY") || "";
 const tempPubkey = localStorage.getItem("PUBLIC_KEY") || "";

@@ -12,9 +12,9 @@ send your first "hello world" to your friend!**
 > Install Ethos's JS SDK using a package manager of your choice
 
 ```bash
-npm install @web3mq/client
+npm install @ethos/client
 or
-yarn add @web3mq/client
+yarn add @ethos/client
 ```
 
 :::tip
@@ -70,7 +70,7 @@ Simply calling Client.init without connectUrl or an empty string returns a url o
 this url can be stored locally.
 
 ```ts
-import {Client} from '@web3mq/client';
+import {Client} from '@ethos/client';
 
 // You can save the bestEndpointUrl locally to skip endpoint search next time, which will save time, and
 const bestEndpointUrl = await Client.init({
@@ -83,7 +83,7 @@ Calling Client.init with a specific connectUrl forces the client to connect to t
 is stored, it might be time-saving to connect directly instead of running the search again.
 
 ```ts
-import {Client} from '@web3mq/client';
+import {Client} from '@ethos/client';
 
 const fastUrl = await Client.init({
     connectUrl: bestEndpointUrl, // takes in a valid endpoint url as input, when this paramter is given, client will always connect to that specific node.
@@ -128,7 +128,7 @@ description='Get your userid and key pair.'
 
 ```ts
 import React, {useMemo, useState, useEffect} from "react";
-import {Client, KeyPairsType, WalletType} from "@web3mq/client";
+import {Client, KeyPairsType, WalletType} from "@ethos/client";
 
 const loginDemo = async () => {
     const password = '123456';
@@ -197,16 +197,16 @@ loginDemo()
 Install Ethos's react components using a package manager of your choice
 
 ```bash
-npm install @web3mq/react-components
+npm install @ethos/react-components
 or
-yarn add @web3mq/react-components
+yarn add @ethos/react-components
 ```
 
 ```tsx
 import React, {useEffect, useState} from "react";
-import {AppTypeEnum, LoginModal} from "@web3mq/react-components";
-import "@web3mq/react-components/dist/css/index.css";
-import {Client} from "@web3mq/client";
+import {AppTypeEnum, LoginModal} from "@ethos/react-components";
+import "@ethos/react-components/dist/css/index.css";
+import {Client} from "@ethos/client";
 
 const App: React.FC = () => {
     const [fastestUrl, setFastUrl] = useState<string | null>(null);
@@ -389,9 +389,9 @@ code={<AppMdx />}>
 
 ```tsx
 import React, {useEffect, useMemo, useState} from 'react';
-import {Client, KeyPairsType, WalletType} from '@web3mq/client';
-import {AppTypeEnum, LoginModal} from "@web3mq/react-components";
-import '@web3mq/react-components/dist/css/index.css';
+import {Client, KeyPairsType, WalletType} from '@ethos/client';
+import {AppTypeEnum, LoginModal} from "@ethos/react-components";
+import '@ethos/react-components/dist/css/index.css';
 
 // Root components
 const App: React.FC = () => {
@@ -560,7 +560,7 @@ export default App;
 
 ```tsx
 import React, { useState, useEffect } from 'react';
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 // Child components
 interface IProps {

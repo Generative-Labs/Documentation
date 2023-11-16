@@ -19,7 +19,7 @@ The key pair, temporary key pair, will be returned for you after a successful lo
 
 ```tsx
 import { useMemo, useState } from 'react';
-import { Client, KeyPairsType } from '@web3mq/client';
+import { Client, KeyPairsType } from '@ethos/client';
 
 const useLogin = () => {
   const hasKeys = useMemo(() => {
