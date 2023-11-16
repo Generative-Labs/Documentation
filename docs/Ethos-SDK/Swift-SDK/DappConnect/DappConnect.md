@@ -29,7 +29,7 @@ dependencies: [
 
 ## Initial the SDK
 
-For an AppId, see detail:  [https://docs.web3mq.com/docs/Web3MQ-API/dapp/create_dapp/](https://docs.web3mq.com/docs/Web3MQ-API/dapp/create_dapp/)  
+For an AppId, see detail:  [https://docs.web3mq.com/docs/Ethos-API/dapp/create_dapp/](https://docs.web3mq.com/docs/Ethos-API/dapp/create_dapp/)  
 
 ```swift
 import DappConnect

@@ -6,8 +6,8 @@ sidebar_position: 0
 
 ## What we can learn from this tutorial
 
-- how to integrate the Web3MQ Flutter SDK into your own projects
-- how to initialize the Web3MQ client and configure it
+- how to integrate the Ethos Flutter SDK into your own projects
+- how to initialize the Ethos client and configure it
 - how to create & join a group
 - how to send & receive messages specifically in a group
 
@@ -15,13 +15,13 @@ sidebar_position: 0
 
 - Dart SDK: “>=2.19.4 <4.0.0”
 - Flutter SDK: “>=3.7.0”
-- A Web3MQ API Key
+- A Ethos API Key
 
 Before all, you should have Flutter development environment, see more details on: [https://docs.flutter.dev/get-started/install](https://docs.flutter.dev/get-started/install)
 
 :::note
 
-While we are committed to building an open and collectively owned public good, our early stage testnet requires an API key in order to connect. This is to control capacity to make sure that each early partner and developer is able to build a great experience on top of Web3MQ. [Apply here](https://web3mq.com/apply).
+While we are committed to building an open and collectively owned public good, our early stage testnet requires an API key in order to connect. This is to control capacity to make sure that each early partner and developer is able to build a great experience on top of Ethos. [Apply here](https://web3mq.com/apply).
 
 :::
 
@@ -57,7 +57,7 @@ final endpoint = await UtilsApi().findTheLowestLatencyDevEndpoint();
 final client = Web3MQClient("api-key", baseURL: endpoint);
 ```
 
-During this initial testing phase, we’ve hosted complete networks of Web3MQ nodes in different regions around the globe. Connect to these endpoints below, to access the Web3MQ Testnet.
+During this initial testing phase, we’ve hosted complete networks of Ethos nodes in different regions around the globe. Connect to these endpoints below, to access the Ethos Testnet.
 
 - [https://testnet-us-west-1-1.web3mq.com](https://testnet-us-west-1-1.web3mq.com/)
 - [https://testnet-us-west-1-2.web3mq.com](https://testnet-us-west-1-2.web3mq.com/)
@@ -152,7 +152,7 @@ you could persist `SessionKey` for the connection next time.
 
 ### Connect with a `SessionKey`
 
-Now you can connect to Web3MQ with the `SessionKey`.
+Now you can connect to Ethos with the `SessionKey`.
 
 ```dart
 await client.connectUser(sessionKey)
@@ -175,7 +175,7 @@ Let’s continue by sending your first message to another user and joining a cha
 It's very easy to send a message to another user, you just need to know their UserId.
 
 ```dart
-// To get the Web3MQ UserId corresponding to a wallet address,
+// To get the Ethos UserId corresponding to a wallet address,
 // you can call `client.userInfo(didType, didValue)`.
 final userInfo = await client.userInfo('eth', address);
 if (userInfo == null) {
