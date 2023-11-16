@@ -11,19 +11,19 @@ Due to `@web3mq/client` update iteration, `@web3mq/vue-components` is not synchr
 ### Install with NPM
 
 ```bash
-npm install @web3mq/vue-components
+npm install @ethos/vue-components
 ```
 
 ### Install with Yarn
 
 ```bash
-yarn add @web3mq/vue-components
+yarn add @ethos/vue-components
 ```
 
 ## Creating a Web3MQ Client
 
 ```tsx
-import { Web3MQ } from '@web3mq/client';
+import { Web3MQ } from '@ethos/client';
 
 const client = Web3MQ.getInstance('YOUR_ACCESS_TOKEN');
 ```
@@ -47,7 +47,7 @@ code={<VueMdx />}>
 
 ```vue
 <script lang="ts" setup>
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 import {
   Chat,
   DashBoard,
@@ -56,7 +56,7 @@ import {
   MessageHeader,
   MessageList,
   MessageInput,
-} from "@web3mq/vue-components";
+} from "@ethos/vue-components";
 import { ref } from 'vue';
 
 // Use your own logic to decide which pattern to use

@@ -17,7 +17,7 @@ group:
 ```js
 const WS_PROTOCOL = 'wss'; // ws or wss
 
-const HostURL = 'us-west-2.web3mq.com'; // choose one domain
+const HostURL = 'us-west-2.ethos.com'; // choose one domain
 
 const GetWSConn = () => {
   const wsurl = WS_PROTOCOL + '://' + HostURL + '/messages';
@@ -144,7 +144,7 @@ let wsconn = GetWSConn();
 
 let timestamp = Date.now();
 
-var payload = new TextEncoder().encode('hello web3mq');
+var payload = new TextEncoder().encode('hello ethos');
 
 const msgid = await GenerateMessageID(userId, topic, timestamp, payload);
 
@@ -227,7 +227,7 @@ import { Web3MQRequestMessage } from 'pb/message';
 
 const WS_PROTOCOL = 'wss'; // ws or wss
 
-const HostURL = 'us-west-2.web3mq.com'; // choose one domain
+const HostURL = 'us-west-2.ethos.com'; // choose one domain
 
 const GetWSConn = () => {
   const wsurl = WS_PROTOCOL + '://' + HostURL + '/messages';

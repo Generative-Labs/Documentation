@@ -14,7 +14,7 @@ position: 19
 ## GenerateEd25519KeyPair
 
 ```tsx
-import { GenerateEd25519KeyPair } from '@web3mq/client';
+import { GenerateEd25519KeyPair } from '@ethos/client';
 
 const keys = await GenerateEd25519KeyPair();
 ```

@@ -16,8 +16,8 @@ The `MessageList` could pass custom Message component as props, it will override
 ```vue
 <script setup lang='ts'>
 import { ref, shallowRef } from 'vue';
-import { Chat, ChannelList, Channel, MessageList, MessageInput } from '@web3mq/vue-components';
-import { Web3MQ } from '@web3mq/client';
+import { Chat, ChannelList, Channel, MessageList, MessageInput } from '@ethos/vue-components';
+import { Web3MQ } from '@ethos/client';
 
 const PrivateKey = localStorage.getItem("PRIVATE_KEY") || "";
 const PublicKey = localStorage.getItem("PUBLICKEY") || "";

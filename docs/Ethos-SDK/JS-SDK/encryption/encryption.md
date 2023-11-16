@@ -37,7 +37,7 @@ const decrypt = await aesGCMDecrypt(keyStr, iv, encoded);
 ## Example
 
 ```tsx
-import { getMessageSharedSecret, aesGCMEncrypt, aesGCMDecrypt } from '@web3mq/client';
+import { getMessageSharedSecret, aesGCMEncrypt, aesGCMDecrypt } from '@ethos/client';
 
 export const App = () => {
   const getEncrypt = async () => {

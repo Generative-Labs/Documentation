@@ -16,7 +16,7 @@ const cardList = [
     title: 'SocialMQ',
     icon: <UploadIcon />,
     description: 'Actionable social connections among users of decentralized applications to de-fragmentize the current Web3 social ecosystem',
-    href: '/docs/Tutorials/web3mq/',
+    href: '/docs/Tutorials/ethos/',
   },
   {
     title: 'PushMQ',
@@ -53,7 +53,7 @@ export const IntroPage = () => {
             <div className={ss.title}>Quick Start</div>
             <div className={ss.description}>A technical introduction to the features and ecosystem of Web3MQ to get you up and running in minutes</div>
           </div>
-          <Link to='/docs/Web3MQ-SDK/JS-SDK/quickStart/'><Button type='primary'>Quick Start</Button></Link>
+          <Link to='/docs/Ethos-SDK/JS-SDK/quickStart/'><Button type='primary'>Quick Start</Button></Link>
         </div>
 
         <div className={ss.cardContainer}>

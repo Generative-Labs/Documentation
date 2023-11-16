@@ -53,7 +53,7 @@ After successful login, you can get the secret key pair from the returned result
 
 ```ts
 import { useEffect, useState } from 'react';
-import { Client } from '@web3mq/client'; 
+import { Client } from '@ethos/client'; 
 
 export const App = () => {
   const [fastestUrl, setFastUrl] = useState<string | null>(null);
@@ -93,7 +93,7 @@ export const App = () => {
 > Search for users by wallet address, support eth and starknet.
 
 ```tsx
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 interface IProps {
   client: Client;
@@ -118,7 +118,7 @@ export const Child = (props: IProps) => {
 > Get my profile.
 
 ```tsx
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 interface IProps {
   client: Client;
@@ -145,7 +145,7 @@ export const Child = (props: IProps) => {
 > update my profile, such as nickname and avatar.
 
 ```tsx
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 interface IProps {
   client: Client;
@@ -175,7 +175,7 @@ export const Child = (props: IProps) => {
 > Get my bound dids.
 
 ```tsx
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 interface IProps {
   client: Client;
@@ -202,7 +202,7 @@ export const Child = (props: IProps) => {
 > Bound dids.
 
 ```tsx
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 interface IProps {
   client: Client;
@@ -233,7 +233,7 @@ export const Child = (props: IProps) => {
 > Get my user permissions.
 
 ```tsx
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 interface IProps {
   client: Client;
@@ -260,7 +260,7 @@ export const Child = (props: IProps) => {
 > Get the user permissions of target users.
 
 ```tsx
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 interface IProps {
   client: Client;
@@ -287,7 +287,7 @@ export const Child = (props: IProps) => {
 > Change my user permissions.
 
 ```tsx
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 interface IProps {
   client: Client;

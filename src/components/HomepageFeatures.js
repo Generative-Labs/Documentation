@@ -49,7 +49,7 @@ const cardList = [
     icon: <UploadIcon />,
     description:
       "Actionable social connections among users of decentralized applications to de-fragmentize the current Web3 social ecosystem",
-    href: "/docs/Tutorials/web3mq/",
+    href: "/docs/Tutorials/ethos/",
   },
   {
     title: "PushMQ",

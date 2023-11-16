@@ -40,7 +40,7 @@ import { WebsocketPingCommand } from "@/pb/heartbeat";
 
 const WS_PROTOCOL = 'wss'; // ws or wss
 
-const HostURL = 'us-west-2.web3mq.com'; // choose one domain
+const HostURL = 'us-west-2.ethos.com'; // choose one domain
 
 
 const PbTypePingCommand = 0b10000000;

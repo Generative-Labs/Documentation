@@ -41,7 +41,7 @@ After successful login, you can get the secret key pair from the returned result
 
 ```ts
 import { useEffect, useState } from 'react';
-import { Client } from '@web3mq/client'; 
+import { Client } from '@ethos/client'; 
 
 export const App = () => {
   const [fastestUrl, setFastUrl] = useState<string | null>(null);
@@ -81,7 +81,7 @@ export const App = () => {
 
 ```tsx
 import { useEffect } from 'react';
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 interface IProps {
   client: Client;
@@ -119,7 +119,7 @@ export const Child = (props: IProps) => {
 
 ```tsx
 import { useEffect } from 'react';
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 interface IProps {
   client: Client;
@@ -156,7 +156,7 @@ export const Child = (props: IProps) => {
 
 ```tsx
 import { useEffect } from 'react';
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 interface IProps {
   client: Client;
@@ -191,7 +191,7 @@ export const Child = (props: IProps) => {
 > Select userid or wallet address to send a friend request.
 
 ```tsx
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 interface IProps {
   client: Client;
@@ -220,7 +220,7 @@ export const Child = (props: IProps) => {
 > Following or unfollowing others.
 
 ```tsx
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 interface IProps {
   client: Client;
@@ -251,7 +251,7 @@ export const Child = (props: IProps) => {
 > Customize your content and send notifications to your followers.
 
 ```tsx
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 interface IProps {
   client: Client;

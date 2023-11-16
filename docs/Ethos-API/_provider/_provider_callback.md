@@ -32,12 +32,12 @@ _Body json params_
 
 ```json
 {
-  "provider_id": "web3mq:email:Google",
+  "provider_id": "ethos:email:Google",
   "userid": "web3mq_userid",
   "did_type": "email",
-  "did_value": "web3mq@gmail.com",
+  "did_value": "ethos@gmail.com",
   "metadata": {
-    "email": "email@web3mq.com"
+    "email": "email@ethos.com"
   },
   "timestamp": 160000000,
   "provider_signature": "provider_signature"

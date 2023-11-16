@@ -41,7 +41,7 @@ position: 3
 > Connect the best Ethos's network node.
 
 ```ts
-import { Client } from "@web3mq/client";
+import { Client } from "@ethos/client";
 // 1. You must initialize the SDK, the init function is asynchronous
 
 const tempPubkey = localStorage.getItem("PUBLIC_KEY") || "";
@@ -66,7 +66,7 @@ await Client.init({
 > Create and get the Client Instance.
 
 ```typescript
-import { Client } from "@web3mq/client";
+import { Client } from "@ethos/client";
 // 1. You must initialize the SDK, the init function is asynchronous
 await Client.init({
   connectUrl: "example url", // The fastURL you saved to local
@@ -122,7 +122,7 @@ console.log(client);
 > Get sign client.
 
 ```ts
-import { Client, SignClientCallBackType } from "@web3mq/client";
+import { Client, SignClientCallBackType } from "@ethos/client";
 // 1. You must initialize the SDK, the init function is asynchronous
 await Client.init({
   connectUrl: "example url", // The fastURL you saved to local
@@ -148,7 +148,7 @@ await Client.getSignClient(
 > Create the client that connects to the DApp.
 
 ```ts
-import { Client } from "@web3mq/client";
+import { Client } from "@ethos/client";
 // 1. You must initialize the SDK, the init function is asynchronous
 await Client.init({
   connectUrl: "example url", // The fastURL you saved to local

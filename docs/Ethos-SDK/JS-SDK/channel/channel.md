@@ -30,7 +30,7 @@ After successful login, you can get the secret key pair from the returned result
 
 ```tsx
 import { useEffect, useState } from "react";
-import { Client } from "@web3mq/client";
+import { Client } from "@ethos/client";
 import { Child } from "./Child";
 
 export const App = () => {
@@ -256,7 +256,7 @@ Private chat channels don't need to be created, just send a message directly to 
 
 ```tsx
 import { useEffect } from "react";
-import { Client } from "@web3mq/client";
+import { Client } from "@ethos/client";
 
 interface IProps {
   client: Client;
@@ -317,7 +317,7 @@ Method of the channel class.
 
 ```tsx
 import { useEffect } from "react";
-import { Client } from "@web3mq/client";
+import { Client } from "@ethos/client";
 
 interface IProps {
   client: Client;
@@ -384,7 +384,7 @@ Method of the channel class.
 
 ```tsx
 import { useEffect } from "react";
-import { Client } from "@web3mq/client";
+import { Client } from "@ethos/client";
 
 interface IProps {
   client: Client;
@@ -486,7 +486,7 @@ Method of the channel class.
 
 ```tsx
 import { useEffect } from "react";
-import { Client } from "@web3mq/client";
+import { Client } from "@ethos/client";
 
 interface IProps {
   client: Client;
@@ -548,7 +548,7 @@ Method of the channel class.
 
 ```tsx
 import { useEffect } from "react";
-import { Client } from "@web3mq/client";
+import { Client } from "@ethos/client";
 
 interface IProps {
   client: Client;
@@ -614,7 +614,7 @@ Method of the channel class.
 
 ```tsx
 import { useEffect } from "react";
-import { Client } from "@web3mq/client";
+import { Client } from "@ethos/client";
 
 interface IProps {
   client: Client;
@@ -685,7 +685,7 @@ response json example
 
 ```tsx
 import { useEffect } from "react";
-import { Client } from "@web3mq/client";
+import { Client } from "@ethos/client";
 
 interface IProps {
   client: Client;
@@ -771,7 +771,7 @@ const params3 = {
 
 ```tsx
 import { useEffect } from "react";
-import { Client } from "@web3mq/client";
+import { Client } from "@ethos/client";
 
 interface IProps {
   client: Client;

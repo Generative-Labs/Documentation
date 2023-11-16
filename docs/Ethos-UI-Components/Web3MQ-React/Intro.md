@@ -11,9 +11,9 @@ sidebar_position: 0
 > Install @web3mq/react-components Library using a package manager of your choice
 
 ```bash
-npm install @web3mq/react-components
+npm install @ethos/react-components
 or
-yarn add @web3mq/react-components
+yarn add @ethos/react-components
 ```
 
 # Usage
@@ -26,7 +26,7 @@ In all example, the dependencies used to generate Web3mq are stored in the brows
 
 ```ts
 import { useState } from 'react';
-import {Client} from '@web3mq/client';
+import {Client} from '@ethos/client';
 
 const [fastestUrl, setFastUrl] = useState<string | null>(null);
 
@@ -53,9 +53,9 @@ The required props of `LoginModal`, `handleLoginEvent`, is the callback used for
 
 ```tsx
 import React, { useState } from 'react';
-import { Client, KeyPairsType } from '@web3mq/client';
-import { LoginModal } from '@web3mq/react-components';
-import '@web3mq/react-components/dist/css/index.css';
+import { Client, KeyPairsType } from '@ethos/client';
+import { LoginModal } from '@ethos/react-components';
+import '@ethos/react-components/dist/css/index.css';
 
 export const App = () => {
   const appType = 'pc'; // 'pc' | 'h5' | 'mobile'
@@ -147,7 +147,7 @@ export const App = () => {
 
 ```tsx
 import { useMemo, useState } from 'react';
-import { Client, KeyPairsType } from '@web3mq/client';
+import { Client, KeyPairsType } from '@ethos/client';
 
 const useLogin = () => {
   const hasKeys = useMemo(() => {
@@ -230,7 +230,7 @@ export default useLogin;
 ## Creating a Web3MQ Client
 
 ```tsx
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 const client = Client.getInstance('YOUR_ACCESS_TOKEN');
 ```
@@ -257,9 +257,9 @@ import {
   MessageList,
   MessageInput,
   Window,
-} from '@web3mq/react-components';
+} from '@ethos/react-components';
 import useLogin from './hooks/useLogin';
-import '@web3mq/react-components/dist/css/index.css';
+import '@ethos/react-components/dist/css/index.css';
 
 const App = () => {
   const { keys, fastestUrl, init, logout, handleLoginEvent } = useLogin();

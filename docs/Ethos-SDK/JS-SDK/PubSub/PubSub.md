@@ -37,7 +37,7 @@ After successful login, you can get the secret key pair from the returned result
 
 ```ts
 import { useEffect, useState } from 'react';
-import { Client } from '@web3mq/client'; 
+import { Client } from '@ethos/client'; 
 
 export const App = () => {
   const [fastestUrl, setFastUrl] = useState<string | null>(null);
@@ -78,7 +78,7 @@ export const App = () => {
 
 ```tsx
 import React, { useEffect, useState } from 'react';
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 interface IProps {
   client: Client;
@@ -237,7 +237,7 @@ export default Child;
 > Create your topic, customize the name of the topic
 
 ```tsx
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 interface IProps {
   client: Client;
@@ -264,7 +264,7 @@ export const Child = (props: IProps) => {
 > Subscribe to other topics by topicid.
 
 ```tsx
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 interface IProps {
   client: Client;
@@ -290,7 +290,7 @@ export const Child = (props: IProps) => {
 > Choose your topic and post content.
 
 ```tsx
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 interface IProps {
   client: Client;
@@ -321,7 +321,7 @@ export const Child = (props: IProps) => {
 
 ```tsx
 import { useEffect } from 'react';
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 interface IProps {
   client: Client;
@@ -364,7 +364,7 @@ export const Child = (props: IProps) => {
 
 ```tsx
 import { useEffect } from 'react';
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 interface IProps {
   client: Client;
@@ -407,7 +407,7 @@ export const Child = (props: IProps) => {
 
 ```tsx
 import { useEffect } from 'react';
-import { Client } from '@web3mq/client';
+import { Client } from '@ethos/client';
 
 interface IProps {
   client: Client;

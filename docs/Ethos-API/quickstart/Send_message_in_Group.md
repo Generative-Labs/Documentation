@@ -55,7 +55,7 @@ wsconn = GetWSConn();
 
 const topic = 'group id';
 
-var payload = new TextEncoder().encode('hello web3mq');
+var payload = new TextEncoder().encode('hello ethos');
 
 const signContent = msgid + userId + topic + nodeId + timestamp.toString();
 const fromSign = await getDataSignature(signContent);

@@ -86,7 +86,7 @@ _javascript example_
 ```js
 const WS_PROTOCOL = 'wss'; // ws or wss
 
-const HostURL = 'us-west-2.web3mq'; // choose one domain
+const HostURL = 'us-west-2.ethos'; // choose one domain
 
 const GetWSConn = () => {
   const wsurl = WS_PROTOCOL + '://' + HostURL + '/messages';
@@ -168,7 +168,7 @@ const PbTypeMessage = 0b00010000;
 let wsconn;
 wsconn = GetWSConn();
 
-var payload = new TextEncoder().encode('hello web3mq');
+var payload = new TextEncoder().encode('hello ethos');
 
 let msgReq: Web3MQRequestMessage = {
   payload: payload,

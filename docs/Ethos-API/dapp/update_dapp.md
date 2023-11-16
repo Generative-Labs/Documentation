@@ -43,7 +43,7 @@ _Body json params_
 ```json
 {
   "creator_id": "userid",
-  "dapp_id": "web3mq:im",
+  "dapp_id": "ethos:im",
   "dapp_type": "im",
   "domain": "www.yourdomain.com", //
   "dapp_name": "Web3mqIM",

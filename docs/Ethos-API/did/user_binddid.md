@@ -38,10 +38,10 @@ _Body json params_
 
 ```json
 {
-  "provider_id": "web3mq:email:Google",
+  "provider_id": "ethos:email:Google",
   "userid": "web3mq_userid",
   "did_type": "email",
-  "did_value": "web3mq@gmail.com",
+  "did_value": "ethos@gmail.com",
   "timestamp": 160000000,
   "web3mq_signature": "asdfasdfadsf"
 }
