@@ -93,7 +93,7 @@ export default function HomepageFeatures() {
               marginTop: "16px",
             }}
           >
-            <a className={styles.cardLink} to={card.href}>
+            <a className={styles.cardLink} href={card.href}>
               Get Started with {card.title} &#8594;
             </a>
           </div>
