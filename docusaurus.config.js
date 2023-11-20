@@ -5,15 +5,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Web3MQ API Documentation',
+  title: 'Ethos API Documentation',
   tagline: 'Web3-native decentralized communication protocol. Encrypted, efficient and borderless.',
   url: 'https://docs.web3mq.com/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'Web3MQ', // Usually your GitHub org/user name.
-  projectName: 'Web3MQ', // Usually your repo name.
+  organizationName: 'Ethos', // Usually your GitHub org/user name.
+  projectName: 'Ethos', // Usually your repo name.
 
   presets: [
     [
@@ -36,10 +36,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Home',
+        title: '',
         logo: {
           alt: 'Document Logo',
-          src: 'img/Web3MQLogo.png',
+          src: 'img/Nomos_Nerwork.svg',
         },
         items: [
           {
@@ -48,6 +48,12 @@ const config = {
             position: 'left',
             label: 'Document',
           },
+          // {
+          //   type: 'doc',
+          //   docId: 'Intro',
+          //   position: 'left',
+          //   label: 'Home',
+          // },
           // { to: '/blog', label: 'Blog', position: 'left' },
           // {
           //   href: 'https://github.com/facebook/docusaurus',
@@ -111,7 +117,7 @@ const config = {
         appId: 'LULEB9WV0U',
         // Public API key: it is safe to commit it
         apiKey: '9933043110ab8e7cf101b9bb08cd03bc',
-        indexName: 'web3mq',
+        indexName: 'ethos',
         contextualSearch: true,
       },
     }),
