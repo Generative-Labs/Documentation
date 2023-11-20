@@ -33,18 +33,18 @@ export const IntroPage = () => {
   return (
     <div className={ss.introContainer}>
       <div className={ss.introHead}>
-        <div className={ss.title}>Ethos Documentation</div>
-        <div className={ss.caption}>Web3-native decentralized communication protocol. Encrypted, efficient and borderless.</div>
+        <div className={ss.title}>Ethos Chain Documentation</div>
+        {/*<div className={ss.caption}>Web3-native decentralized communication protocol. Encrypted, efficient and borderless.</div>*/}
       </div>
       <div className={ss.introMain}>
         <div className={ss.titleOfWeb3MQ}>
           Learn about Ethos
         </div>
         <p className={ss.descriptOfWeb3MQ}>
-          Ethos is currently the fastest and most scalable social L1 & messaging network. Ethos, as a Web3 native communication protocol, fully embodies the fundamental characteristics of encryption by being decentralized and supporting distributed sovereignty. These characteristics empower Ethos to be a truly trustless network, which upholds the open and inclusive spirit of open source. Anyone can run the node, and the network will ultimately be governed by the community, minimizing the risk of a single point of failure resulting from centralized governance.
+          Ethos is built using a Web3 native state channel architecture provided by Nomos, allowing Ethos to provide not only trustless messaging, but also trustless interactions with L1/L2s.
         </p>
         <p className={ss.descriptOfWeb3MQ}>
-          WebMQ‘s sub-protocols (DAppMQ, PushMQ, and SocialMQ) outline and complete the Web3 communication infrastructure landscape in different aspects. DAppMQ bridges decentralized applications, supporting signature routing and authentication; PushMQ links decentralized applications to users, supporting one-way notifications to users; SocialMQ connects users to users, supporting encrypted messaging via direct messages (DMs) or group chat without a third party.
+          Ethos Chain's sub-protocols (DAppMQ, PushMQ, and SocialMQ) outline and complete the Web3 communication infrastructure landscape in different aspects. DAppMQ bridges decentralized applications, supporting signature routing and authentication; PushMQ links decentralized applications to users, supporting one-way notifications to users; SocialMQ connects users to users, supporting encrypted messaging via direct messages (DMs) or group chat without a third party.
         </p>
 
         <div className={ss.titleOfGetStart}>Getting started</div>
