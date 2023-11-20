@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Ethos API Documentation',
-  tagline: 'Web3-native decentralized communication protocol. Encrypted, efficient and borderless.',
+  tagline: ' The first appchain built on Nomos Network. ',
   url: 'https://docs.web3mq.com/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
