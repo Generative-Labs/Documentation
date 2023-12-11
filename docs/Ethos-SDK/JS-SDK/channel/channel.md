@@ -8,7 +8,8 @@ position: 4
 
 :::tip
 
-This is the detailed documentation on the channel module, before that please read the [Quickstart](/docs/Ethos-SDK/JS-SDK/types/#channelitemtype) tutorial if you haven't done so already!
+This is the detailed documentation on the channel module, before that please read
+the [Quickstart](/docs/Ethos-SDK/JS-SDK/types/#channelitemtype) tutorial if you haven't done so already!
 
 :::
 
@@ -73,7 +74,7 @@ Group chat permission currently only has `group:join` rule, which indicates the 
 
 :::
 
-This rule has three values: `creator_invite_friends`,`public`,`nft_validation`.
+This rule has four values: `creator_invite_friends`,`public`,`nft_validation`,`validate_by_creator`.
 
 #### `creator_invite_friends`
 
@@ -86,6 +87,21 @@ This rule has three values: `creator_invite_friends`,`public`,`nft_validation`.
   "group:join": {
     "type": "enum",
     "value": "creator_invite_friends"
+  }
+}
+```
+
+#### `validate_by_creator`
+
+> You need to submit an application to the creator, and you can join after the creator approves it.
+
+**Json example**
+
+```json
+{
+  "group:join": {
+    "type": "enum",
+    "value": "validate_by_creator"
   }
 }
 ```
@@ -122,7 +138,8 @@ This rule has three values: `creator_invite_friends`,`public`,`nft_validation`.
 
 :::tip
 
-When the value of the privilege is `nft_validation`, an additional `nfts` parameter is required, parameter type: [nfts](/docs/Ethos-SDK/JS-SDK/types/#nftpermissiontype)[].
+When the value of the privilege is `nft_validation`, an additional `nfts` parameter is required, parameter
+type: [nfts](/docs/Ethos-SDK/JS-SDK/types/#nftpermissiontype)[].
 
 :::
 
@@ -153,18 +170,23 @@ This `chat_type` has two values: `group`,`user`.
 
 ## Properties
 
-| name                   | type                                                                                        | Parameters Description                                                                               | response                                                                                                     | desc                                       |
-| ---------------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------ |
-| channelList            | Array of Object : [ChanneLitemType](/docs/Ethos-SDK/JS-SDK/types/#channelitemtype) \| null | -                                                                                                    | -                                                                                                            | channel list                               |
-| activeChannel          | object: [ChanneLitemType](/docs/Ethos-SDK/JS-SDK/types/#channelitemtype) \| null           | -                                                                                                    | -                                                                                                            | current active channel                     |
-| createRoom             | function                                                                                    | object: [CreateRoomParams](/docs/Ethos-SDK/JS-SDK/types/#createroomparams)                          | Promise: void                                                                                                | create a group channel                     |
-| queryChannels          | function                                                                                    | object: [PageParams](/docs/Ethos-SDK/JS-SDK/types/#pageparams)                                      | Promise: void                                                                                                | Get created or joined channels             |
-| setActiveChannel       | function                                                                                    | object: [ChannelItemType](/docs/Ethos-SDK/JS-SDK/types/#channelitemtype) \| null                    | Promise: void                                                                                                | Set the currently active channel           |
-| getGroupMemberList     | function                                                                                    | 1. object: [PageParams](/docs/Ethos-SDK/JS-SDK/types/#pageparams)<br/>2. string (Optional) : cahtid | Promise: Array of Object : [GroupMemberListItemType](/docs/Ethos-SDK/JS-SDK/types/#groupmemberlistitemtype) | Get all members of a channel               |
-| inviteGroupMember      | function                                                                                    | members: string[]                                                                                    | Promise: void                                                                                                | Invite members to a channel                |
-| joinGroup              | function                                                                                    | groupid: string                                                                                      | Promise: void                                                                                                | Join a group chat                          |
-| getGroupPermissions    | function                                                                                    | groupid: string                                                                                      | Promise: [SearchUsersResponse](/docs/Ethos-SDK/JS-SDK/types/#searchusersresponse)                           | Querying permissions for a channel         |
-| updateGroupPermissions | function                                                                                    | [UpdateGroupPermissionsParams](/docs/Ethos-SDK/JS-SDK/types/#updategrouppermissionsparams)          | Promise: void                                                                                                | Update permissions for a channel I created |
+| name                                  | type                                                                                       | Parameters Description                                                                                                                 | response                                                                                                    | desc                                                |
+| ------------------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
+| channelList                           | Array of Object : [ChanneLitemType](/docs/Ethos-SDK/JS-SDK/types/#channelitemtype) \| null | -                                                                                                                                      | -                                                                                                           | channel list                                        |
+| activeChannel                         | object: [ChanneLitemType](/docs/Ethos-SDK/JS-SDK/types/#channelitemtype) \| null           | -                                                                                                                                      | -                                                                                                           | current active channel                              |
+| createRoom                            | function                                                                                   | object: [CreateRoomParams](/docs/Ethos-SDK/JS-SDK/types/#createroomparams)                                                             | Promise: void                                                                                               | create a group channel                              |
+| queryChannels                         | function                                                                                   | object: [PageParams](/docs/Ethos-SDK/JS-SDK/types/#pageparams)                                                                         | Promise: void                                                                                               | Get created or joined channels                      |
+| setActiveChannel                      | function                                                                                   | object: [ChannelItemType](/docs/Ethos-SDK/JS-SDK/types/#channelitemtype) \| null                                                       | Promise: void                                                                                               | Set the currently active channel                    |
+| getGroupMemberList                    | function                                                                                   | 1. object: [PageParams](/docs/Ethos-SDK/JS-SDK/types/#pageparams)<br/>2. string (Optional) : cahtid                                    | Promise: Array of Object : [GroupMemberListItemType](/docs/Ethos-SDK/JS-SDK/types/#groupmemberlistitemtype) | Get all members of a channel                        |
+| inviteGroupMember                     | function                                                                                   | members: string[]                                                                                                                      | Promise: void                                                                                               | Invite members to a channel                         |
+| joinGroup                             | function                                                                                   | groupid: string                                                                                                                        | Promise: void                                                                                               | Join a group chat                                   |
+| getGroupPermissions                   | function                                                                                   | groupid: string                                                                                                                        | Promise: [SearchUsersResponse](/docs/Ethos-SDK/JS-SDK/types/#searchusersresponse)                           | Querying permissions for a channel                  |
+| updateGroupPermissions                | function                                                                                   | [UpdateGroupPermissionsParams](/docs/Ethos-SDK/JS-SDK/types/#updategrouppermissionsparams)                                             | Promise: void                                                                                               | Update permissions for a channel I created          |
+| queryGroups                           | function                                                                                   | 1. groupIds: string[] <br/>2. withMetadata: bool                                                                                       | Promise: Array of Object : [QueryGroupResponseType](/docs/Ethos-SDK/JS-SDK/types/#querygroupresponsetype)   | Query the list of group channels by groupids        |
+| getRequestJoinGroupSignContent        | function                                                                                   | object: [GetSignContentForRequestJoinGroupParams](/docs/Ethos-SDK/JS-SDK/types/#getsigncontentforrequestjoingroupparams)               | Promise: [GetRequestSignContentResponse](/docs/Ethos-SDK/JS-SDK/types/#getrequestsigncontentresponse)       | Get sign content for send join group request        |
+| requestJoinGroupBySignature           | function                                                                                   | object: [RequestJoinGroupBySignatureParams](/docs/Ethos-SDK/JS-SDK/types/#requestjoingroupbysignatureparams)                           | Promise: void                                                                                               | Confrim send join group request by signature        |
+| getApproveJoinGroupRequestSignContent | function                                                                                   | object: [GetSignContentForApproveJoinGroupRequestParams](/docs/Ethos-SDK/JS-SDK/types/#getsigncontentforapprovejoingrouprequestparams) | Promise: [GetRequestSignContentResponse](/docs/Ethos-SDK/JS-SDK/types/#getrequestsigncontentresponse)       | Get sign content for approve the join group request |
+| approveJoinGroupRequestBySignature    | function                                                                                   | object: [ApproveJoinGroupRequestBySignatureParams](/docs/Ethos-SDK/JS-SDK/types/#approvejoingrouprequestbysignatureparams)             | Promise: void                                                                                               | Confirm approve the join group request by signature |
 
 ### channelList : All chat channels created and joined by the currently logged in user.
 
@@ -245,7 +267,8 @@ Private chat channels don't need to be created, just send a message directly to 
 1. groupName: Optional field, To set the name of the created group chat.
 1. avatarUrl: Optional field, To set the avatar of the created group chat.
 1. groupid: Optional field, To set the chatid of the created group chat.
-1. permissions: Optional field, To set the [permissions](/docs/Ethos-SDK/JS-SDK/channel/#permission) of the created group chat.
+1. permissions: Optional field, To set the [permissions](/docs/Ethos-SDK/JS-SDK/channel/#permission) of the created
+   group chat.
 1. nfts: Optional field, Required when the value of the permission is set to `nft_validation`.
 
 #### Response : Promise: void
@@ -377,7 +400,8 @@ Method of the channel class.
 
 #### Usage Examples
 
-> When func called, triggers the `channel.activeChange` event, and then the value of `client.channel.activeChannel` is updated.
+> When func called, triggers the `channel.activeChange` event, and then the value of `client.channel.activeChannel` is
+> updated.
 
 > Set `activeChannel` to eliminate the need for `groupid`/`userid` in some methods, such
 > as `client.message.sendMessage`.
@@ -446,11 +470,12 @@ Method of the channel class.
    1. page: Required field, Page number of the current query
    1. size: Required field, Number of current queries
 
-1. string: Optional field, Members of a channel to be queried, When not passed, the members of activechannel are queried by default
+1. string: Optional field, Members of a channel to be queried, When not passed, the members of activechannel are queried
+   by default
 
 #### Response : Promise: Array of Object : [GroupMemberListItemType](/docs/Ethos-SDK/JS-SDK/types/#groupmemberlistitemtype)
 
-#### response json example
+#### Response json example
 
 ```json
 {
@@ -663,7 +688,7 @@ Method of the channel class.
 
 #### Response : Promise: object
 
-response json example
+Response json example
 
 ```json
 {
@@ -746,8 +771,18 @@ const params2 = {
     },
   },
 };
-// Permission: join by some nft
+// Permission: Need creator approve
 const params3 = {
+  groupid: channelList[0].chatid,
+  permissions: {
+    "group:join": {
+      type: "enum",
+      value: "validate_by_creator",
+    },
+  },
+};
+// Permission: join by some nft
+const params4 = {
   groupid: channelList[0].chatid,
   permissions: {
     "group:join": {
@@ -801,7 +836,6 @@ export const Child = (props: IProps) => {
       onClick={async () => {
         await client.channel.createRoom({ group_name: "hello world" });
         const { channelList } = client.channel;
-        
         // permission:  public
         const data = await client.channel.updateGroupPermissions({
           groupid: channelList[0].chatid,
@@ -844,6 +878,418 @@ export const Child = (props: IProps) => {
     >
       update group permissions
     </button>
+  );
+};
+```
+
+### queryGroups() : Query the list of group channels by groupids
+
+:::tip
+Method of the channel class.
+:::
+
+#### Params :
+
+1. Array of string :Required field, Group ids
+
+1. withMetadata: Optional field, Provide group creator information and number of members on demand
+
+#### Response : Promise: Array of Object : [QueryGroupResponseType](/docs/Ethos-SDK/JS-SDK/types/#querygroupresponsetype)
+
+#### Response json example
+
+```json
+[
+  {
+    "avatar_url": "",
+    "creator_id": "user:d81c20832c8f5a8b50194a4ef2d9a8ce958f7359ad9c5d2559c18069",
+    "group_name": "My Public Guild 3",
+    "groupid": "group:2f5d85953fec0d92e2da107d0a6d654b7e855235",
+    "is_group_member": true,
+    "permissions": {
+      "group:join": {
+        "type": "enum",
+        "value": "validate_by_creator"
+      }
+    },
+    "memberCount": 2,
+    "creatorInfo": {
+      "avatar_url": "",
+      "bind_did_list": [],
+      "is_my_following": false,
+      "nickname": "",
+      "stats": {
+        "total_followers": 0,
+        "total_following": 0
+      },
+      "timestamp": 1679968069637,
+      "userid": "user:d81c20832c8f5a8b50194a4ef2d9a8ce958f7359ad9c5d2559c18069",
+      "wallet_address": "0xa1ee15d498eb2b0020dc51b2fcc52d457bd2c068",
+      "wallet_type": "eth"
+    }
+  },
+  {
+    "avatar_url": "",
+    "creator_id": "user:d81c20832c8f5a8b50194a4ef2d9a8ce958f7359ad9c5d2559c18069",
+    "group_name": "My Private Guild 01",
+    "groupid": "group:db977bb234c644c27304b7ea7c82e0a0ebf7c6b7",
+    "is_group_member": false,
+    "permissions": {
+      "group:join": {
+        "type": "enum",
+        "value": "validate_by_creator"
+      }
+    },
+    "memberCount": 1,
+    "creatorInfo": {
+      "avatar_url": "",
+      "bind_did_list": [],
+      "is_my_following": false,
+      "nickname": "",
+      "stats": {
+        "total_followers": 0,
+        "total_following": 0
+      },
+      "timestamp": 1679968069637,
+      "userid": "user:d81c20832c8f5a8b50194a4ef2d9a8ce958f7359ad9c5d2559c18069",
+      "wallet_address": "0xa1ee15d498eb2b0020dc51b2fcc52d457bd2c068",
+      "wallet_type": "eth"
+    }
+  }
+]
+```
+
+#### Usage Examples
+
+> When func called, triggers the `channel.getList` event, and then the value of `client.channel.channelList` is updated.
+
+```tsx
+import { useEffect } from "react";
+import { Client } from "@web3mq/client";
+
+interface IProps {
+  client: Client;
+}
+
+export const Child = (props: IProps) => {
+  const { client } = props;
+
+  const queryGroup = (event: { type: any }) => {
+    const ids = [
+      "group:2f5d85953fec0d92e2da107d0a6d654b7e855235",
+      "group:db977bb234c644c27304b7ea7c82e0a0ebf7c6b7",
+    ];
+    const groupList = await client.channel.queryGroups(ids, true);
+    console.log(groupList, "groupList");
+  };
+
+  return (
+    <button
+      onClick={async () => {
+        await client.channel.queryChannels({
+          page: 1,
+          size: 10,
+        });
+      }}
+    >
+      query Groups
+    </button>
+  );
+};
+```
+
+### getRequestJoinGroupSignContent() : Get sign content for send join group request
+
+> Get sign content for send join group request
+
+:::tip
+Method of the channel class.
+:::
+
+#### Params : Object : [GetSignContentForRequestJoinGroupParams](/docs/Ethos-SDK/JS-SDK/types/#getsigncontentforrequestjoingroupparams)
+
+:::tip
+Didtype and walletaddress take precedence over those passed in by the user, otherwise the user currently connected to the ethos network is used, and if neither is available, an error is thrown requiring the wallet address and type to be passed in.
+:::
+**Fields of params**
+
+1. groupid: Required field,The channel id for which you want to join
+1. requestReason: Optional field, Reasons for requesting to join the group chat
+1. didType: Optional field, Types of wallet ready for signing, See: [BlockChainType](/docs/Ethos-SDK/JS-SDK/types/#blockchaintype)
+1. walletAddress: Optional field, Address of wallet ready for signing, See: [walletAddress](/docs/Ethos-SDK/JS-SDK/standards/#wallet-address)
+
+#### Response : Promise: [GetRequestSignContentResponse](/docs/Ethos-SDK/JS-SDK/types/#getrequestsigncontentresponse)
+
+#### Response json example
+
+```json
+{
+  "signContent": "Web3MQ wants you to sign in with your eth account:
+    0xa1ee15d498eb2b0020dc51b2fcc52d457bd2c068
+
+    For group join request signture
+
+    Nonce: c1a9ab61d6dafbca468b0892e6abb480f51a6910bb0095e61220fdff61529576
+    Issued At: 2023/12/11 21:42",
+  "requestTime": 1702302052339
+}
+```
+
+#### Usage Examples
+
+```tsx
+import { useEffect } from "react";
+import { Client } from "@web3mq/client";
+
+interface IProps {
+  client: Client;
+}
+
+export const Child = (props: IProps) => {
+  const { client } = props;
+  const handleClick = () => {
+    const walletType = "metamask";
+    const { address } = await Client.register.getAccount(walletType);
+    const reason = "test my guild request";
+    const res = await client.channel.getRequestJoinGroupSignContent({
+      groupid: requestGroupID,
+      requestReason: reason,
+      didType: BlockChainMap[walletType],
+      walletAddress: address,
+    });
+    console.log(res);
+  };
+
+  return (
+    <button onClick={handleClick}>
+      Get sign content for request join group
+    </button>
+  );
+};
+```
+
+### requestJoinGroupBySignature() :Confrim send join group request by signature
+
+> Confrim send join group request by signature
+
+:::tip
+Method of the channel class.
+:::
+
+#### Params : Object : [RequestJoinGroupBySignatureParams](/docs/Ethos-SDK/JS-SDK/types/#requestjoingroupbysignatureparams)
+
+:::tip
+Didtype and walletaddress take precedence over those passed in by the user, otherwise the user currently connected to the ethos network is used, and if neither is available, an error is thrown requiring the wallet address and type to be passed in.
+:::
+**Fields of params**
+
+1. didPubkey: Optional field, Tips: required When didType is starknet
+1. signature: Required field, Wallet sign res
+1. signContent: Required field, Sign content for confirm request join group
+1. requestTimestamp: Required field, Timestamp of request get sign content
+1. groupid: Required field,The channel id for which you want to join
+1. requestReason: Optional field, Reasons for requesting to join the group chat
+1. didType: Optional field, Types of walletfor signed, See: [BlockChainType](/docs/Ethos-SDK/JS-SDK/types/#blockchaintype)
+1. walletAddress: Optional field, Address of wallet ready for signed, See: [walletAddress](/docs/Ethos-SDK/JS-SDK/standards/#wallet-address)
+
+#### Response : Promise: void
+
+#### Usage Examples
+
+```tsx
+import { useEffect } from "react";
+import { Client } from "@web3mq/client";
+
+interface IProps {
+  client: Client;
+}
+
+export const Child = (props: IProps) => {
+  const { client } = props;
+  const handleClick = async () => {
+    const walletType = "metamask";
+    const { address } = await Client.register.getAccount(walletType);
+    const reason = "test my guild request";
+    const { requestTime, signContent } =
+      await client.channel.getRequestJoinGroupSignContent({
+        groupid: requestGroupID,
+        requestReason: reason,
+        didType: BlockChainMap[walletType],
+        walletAddress: address,
+      });
+    const { sign, publicKey } = await Client.register.sign(
+      signContent,
+      address,
+      walletType
+    );
+    await client.channel.requestJoinGroupBySignature({
+      didPubkey: publicKey,
+      signature: sign,
+      signContent,
+      requestTimestamp: requestTime,
+      groupid: requestGroupID,
+      requestReason: reason,
+      didType: BlockChainMap[walletType],
+      walletAddress: address,
+    });
+  };
+
+  return (
+    <button onClick={handleClick}>confirm request join group after sign</button>
+  );
+};
+```
+
+### getApproveJoinGroupRequestSignContent() : Get sign content for approve the join group request
+
+> Get sign content for approve the join group request
+
+:::tip
+Method of the channel class.
+:::
+
+#### Params : Object : [GetSignContentForApproveJoinGroupRequestParams](/docs/Ethos-SDK/JS-SDK/types/#getsigncontentforapprovejoingrouprequestparams)
+
+:::tip
+Didtype and walletaddress take precedence over those passed in by the user, otherwise the user currently connected to the ethos network is used, and if neither is available, an error is thrown requiring the wallet address and type to be passed in.
+:::
+
+**Fields of params**
+
+1. groupid: Required field, The channel id for approve user to join
+1. reson: Optional field, Reasons for appreove or reject to join the group chat
+1. requestUserid: Required field, The id of the user requesting to join
+1. isApprove: Required field, Is approve
+1. didType: Optional field, Types of wallet ready for signing, See: [BlockChainType](/docs/Ethos-SDK/JS-SDK/types/#blockchaintype)
+1. walletAddress: Optional field, Address of wallet ready for signing, See: [walletAddress](/docs/Ethos-SDK/JS-SDK/standards/#wallet-address)
+
+#### Response : Promise: [GetRequestSignContentResponse](/docs/Ethos-SDK/JS-SDK/types/#getrequestsigncontentresponse)
+
+#### Response json example
+
+```json
+{
+  "signContent": "Web3MQ wants you to sign in with your eth account:
+    0xa1ee15d498eb2b0020dc51b2fcc52d457bd2c068
+
+    For approve group join request signature
+
+    Nonce: c1a9ab61d6dafbca468b0892e6abb480f51a6910bb0095e61220fdff61529576
+    Issued At: 2023/12/11 21:42",
+  "requestTime": 1702302052339
+}
+```
+
+#### Usage Examples
+
+```tsx
+import { useEffect } from "react";
+import { Client } from "@web3mq/client";
+
+interface IProps {
+  client: Client;
+}
+
+export const Child = (props: IProps) => {
+  const { client } = props;
+  const handleClick = () => {
+    const walletType = "metamask";
+    const { address } = await Client.register.getAccount(walletType);
+    const reason = "test my guild request";
+    const res = await client.channel.getApproveJoinGroupRequestSignContent({
+      groupid: approveGroupID,
+      isApprove: true,
+      didType: BlockChainMap[walletType],
+      walletAddress: address,
+      requestUserid: requestUserid,
+      reason,
+    });
+    console.log(res);
+  };
+
+  return (
+    <button onClick={handleClick}>
+      Get sign content for approve join group request
+    </button>
+  );
+};
+```
+
+### approveJoinGroupRequestBySignature() :Confirm approve the join group request by signature
+
+> Confirm approve the join group request by signature
+
+:::tip
+Method of the channel class.
+:::
+
+#### Params : Object : [ApproveJoinGroupRequestBySignatureParams](/docs/Ethos-SDK/JS-SDK/types/#approvejoingrouprequestbysignatureparams)
+
+:::tip
+Didtype and walletaddress take precedence over those passed in by the user, otherwise the user currently connected to the ethos network is used, and if neither is available, an error is thrown requiring the wallet address and type to be passed in.
+:::
+**Fields of params**
+
+1. didPubkey: Optional field, Tips: required When didType is starknet
+1. signature: Required field, Wallet sign res
+1. signContent: Required field, Sign content for confirm request join group
+1. requestUserid: Required field, The id of the user requesting to join
+1. requestTimestamp: Required field, Timestamp of request get sign content
+1. isApprove: Required field, is approve
+1. groupid: Required field,The channel id for approve user to join
+1. requestReason: Optional field, Reasons for requesting to join the group chat
+1. didType: Optional field, Types of walletfor signed, See: [BlockChainType](/docs/Ethos-SDK/JS-SDK/types/#blockchaintype)
+1. walletAddress: Required field, Address of wallet ready for signed, See: [walletAddress](/docs/Ethos-SDK/JS-SDK/standards/#wallet-address)
+
+#### Response : Promise: void
+
+#### Usage Examples
+
+```tsx
+import { useEffect } from "react";
+import { Client } from "@web3mq/client";
+
+interface IProps {
+  client: Client;
+}
+
+export const Child = (props: IProps) => {
+  const { client } = props;
+  const handleClick = async () => {
+    const walletType = "metamask";
+    const { address } = await Client.register.getAccount(walletType);
+    const reason = "test my guild request";
+    const { requestTime, signContent } =
+      await client.channel.getApproveJoinGroupRequestSignContent({
+        groupid: approveGroupID,
+        isApprove: true,
+        didType: BlockChainMap[walletType],
+        walletAddress: address,
+        requestUserid: requestUserid,
+        reason,
+      });
+
+    const { sign, publicKey } = await Client.register.sign(
+      signContent,
+      address,
+      walletType
+    );
+    await client.channel.approveJoinGroupRequestBySignature({
+      didPubkey: publicKey,
+      signature: sign,
+      signContent,
+      requestTimestamp: requestTime,
+      groupid: approveGroupID,
+      requestReason: reason,
+      didType: BlockChainMap[walletType],
+      walletAddress: address,
+      requestUserid: requestUserid,
+      isApprove: true,
+    });
+  };
+
+  return (
+    <button onClick={handleClick}>confirm approve join group after sign</button>
   );
 };
 ```
