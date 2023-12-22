@@ -53,9 +53,9 @@ position: 7
 
 ### BlockChainType
 
-| name           | type                | format                                                              | desc           | eg                  |
-| -------------- | ------------------- | ------------------------------------------------------------------- | -------------- | ------------------- |
-| BlockChainType | "eth" \| "starknet" | [BlockChainType](/docs/Ethos-SDK/JS-SDK/standards/#blockchain-type) | wallet address | "eth" or "starknet" |
+| name           | type                | format                                                              | desc                         | eg                  |
+| -------------- | ------------------- | ------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| BlockChainType | "eth" \| "starknet" | [BlockChainType](/docs/Ethos-SDK/JS-SDK/standards/#blockchain-type) | chain type of wallet address | "eth" or "starknet" |
 
 ### AccountType
 
@@ -89,11 +89,10 @@ position: 7
 
 ### GetUserInfoParams
 
-| name      | type                                                         | format                                                           | desc                                  | eg         |
-| --------- | ------------------------------------------------------------ | ---------------------------------------------------------------- | ------------------------------------- | ---------- |
-| didType   | 'web3mq' \| [didType](/docs/Ethos-SDK/JS-SDK/types/#didtype) | 'web3mq' \| [didType](/docs/Ethos-SDK/JS-SDK/standards/#didtype) | did type                              | "eth"      |
-| didValue  | [didValue](/docs/Ethos-SDK/JS-SDK/types/#didvalue)           | [didValue](/docs/Ethos-SDK/JS-SDK/standards/#didvalue)           | did value,for example, wallet address | "0x000000" |
-| timestamp | number                                                       | -                                                                | time stamp                            | Date.now() |
+| name     | type   | format                                                           | desc                                  | eg         |
+| -------- | ------ | ---------------------------------------------------------------- | ------------------------------------- | ---------- |
+| didType  | string | 'web3mq' \| [didType](/docs/Ethos-SDK/JS-SDK/standards/#didtype) | did type                              | "eth"      |
+| didValue | string | [didValue](/docs/Ethos-SDK/JS-SDK/standards/#didvalue)           | did value,for example, wallet address | "0x000000" |
 
 ### EnvTypes
 
@@ -191,26 +190,26 @@ position: 7
 
 ### ContactListItemType
 
-| name           | type                                                                     | format                                                            | desc                       | eg                                             |
-| -------------- | ------------------------------------------------------------------------ | ----------------------------------------------------------------- | -------------------------- | ---------------------------------------------- |
-| avatar_url     | string                                                                   | -                                                                 | contactL avatar resources  | `https://www.xxx.com`                          |
-| follow_status  | [FollowStatus](/docs/Ethos-SDK/JS-SDK/types/#followstatus)               | -                                                                 | follow status with contact | "channel name"                                 |
-| nickname       | string                                                                   | -                                                                 | nickname of contact        |                                                |
-| permissions    | [UserPermissionsType](/docs/Ethos-SDK/JS-SDK/types/#userpermissionstype) | -                                                                 | permissions of contact     | {'user: chat': {type: "enum",value: "public"}} |
-| userid         | string                                                                   | [userid](/docs/Ethos-SDK/JS-SDK/standards/#userid)                | userid of contact          | "user: xxx"                                    |
-| wallet_address | string                                                                   | [walletAddress](/docs/Ethos-SDK/JS-SDK/standards/#wallet-address) | wallet address of contact  | "0x000000"                                     |
-| wallet_type    | [WalletType](/docs/Ethos-SDK/JS-SDK/types/#wallettype)                   | [walletType](/docs/Ethos-SDK/JS-SDK/standards/#blockchain-type)   | wallet type of contact     | "eth" or "starknet"                            |
+| name           | type                                                                     | format                                                              | desc                       | eg                                             |
+| -------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------- | -------------------------- | ---------------------------------------------- |
+| avatar_url     | string                                                                   | -                                                                   | contactL avatar resources  | `https://www.xxx.com`                          |
+| follow_status  | [FollowStatus](/docs/Ethos-SDK/JS-SDK/types/#followstatus)               | -                                                                   | follow status with contact | "channel name"                                 |
+| nickname       | string                                                                   | -                                                                   | nickname of contact        |                                                |
+| permissions    | [UserPermissionsType](/docs/Ethos-SDK/JS-SDK/types/#userpermissionstype) | -                                                                   | permissions of contact     | {'user: chat': {type: "enum",value: "public"}} |
+| userid         | string                                                                   | [userid](/docs/Ethos-SDK/JS-SDK/standards/#userid)                  | userid of contact          | "user: xxx"                                    |
+| wallet_address | string                                                                   | [walletAddress](/docs/Ethos-SDK/JS-SDK/standards/#wallet-address)   | wallet address of contact  | "0x000000"                                     |
+| wallet_type    | string                                                                   | [BlockChainType](/docs/Ethos-SDK/JS-SDK/standards/#blockchain-type) | chain type of contact      | "eth" or "starknet"                            |
 
 ### GroupMemberListItemType
 
-| name           | type                                                   | format                                                            | desc                      | eg                    |
-| -------------- | ------------------------------------------------------ | ----------------------------------------------------------------- | ------------------------- | --------------------- |
-| avatar_url     | string                                                 | -                                                                 | contactL avatar resources | `https://www.xxx.com` |
-| create_at      | number                                                 | -                                                                 | user create at            | `1695803377572`       |
-| nickname       | string                                                 | -                                                                 | nickname of contact       |                       |
-| userid         | string                                                 | [userid](/docs/Ethos-SDK/JS-SDK/standards/#userid)                | userid of contact         | "user: xxx"           |
-| wallet_address | string                                                 | [walletAddress](/docs/Ethos-SDK/JS-SDK/standards/#wallet-address) | wallet address of contact | "0x000000"            |
-| wallet_type    | [WalletType](/docs/Ethos-SDK/JS-SDK/types/#wallettype) | [walletType](/docs/Ethos-SDK/JS-SDK/standards/#blockchain-type)   | wallet type of contact    | "eth" or "starknet"   |
+| name           | type   | format                                                              | desc                      | eg                    |
+| -------------- | ------ | ------------------------------------------------------------------- | ------------------------- | --------------------- |
+| avatar_url     | string | -                                                                   | contactL avatar resources | `https://www.xxx.com` |
+| create_at      | number | -                                                                   | user create at            | `1695803377572`       |
+| nickname       | string | -                                                                   | nickname of contact       |                       |
+| userid         | string | [userid](/docs/Ethos-SDK/JS-SDK/standards/#userid)                  | userid of contact         | "user: xxx"           |
+| wallet_address | string | [walletAddress](/docs/Ethos-SDK/JS-SDK/standards/#wallet-address)   | wallet address of contact | "0x000000"            |
+| wallet_type    | string | [BlockChainType](/docs/Ethos-SDK/JS-SDK/standards/#blockchain-type) | chain type of contact     | "eth" or "starknet"   |
 
 ### FollowStatus
 
@@ -236,42 +235,42 @@ position: 7
 
 ### MessageStatus
 
-| name          | type                  | format | desc           | eg          |
-| ------------- | --------------------- | ------ | -------------- | ----------- |
-| MessageStatus | "delivered" \| "read" | -      | message status | "delivered" |
+| name          | type   | format                              | desc           | eg          |
+| ------------- | ------ | ----------------------------------- | -------------- | ----------- |
+| MessageStatus | string | "delivered" \| "read" \| "received" | message status | "delivered" |
 
-### MessageListItem
+### MessageItemType
 
-| name           | type                                                        | format | desc                          | eg                         |
-| -------------- | ----------------------------------------------------------- | ------ | ----------------------------- | -------------------------- |
-| cipher_suite   | string                                                      | -      | Encryption Type               | "NONE"                     |
-| from           | [userid](/docs/Ethos-SDK/JS-SDK/standards/#userid)          | -      | message sender user id        | "user: xxx"                |
-| topic          | string                                                      | -      | current channel if            | "group: xxx"\| "user: xxx" |
-| from_sign      | string                                                      | -      | from signature                | -                          |
-| messageid      | string                                                      | -      | message id                    | -                          |
-| payload_type   | string                                                      | -      | payload type                  | -                          |
-| timestamp      | number                                                      | -      | time stamp                    | -                          |
-| message_status | [MessageStatus](docs/Ethos-SDK/JS-SDK/types/#messagestatus) | -      | message status                | -                          |
-| payload        | string                                                      | -      | payload base64 encode content | -                          |
-| versions       | number                                                      | -      | versions                      | -                          |
+| name        | type   | format                                             | desc                                                                    | eg                         |
+| ----------- | ------ | -------------------------------------------------- | ----------------------------------------------------------------------- | -------------------------- |
+| senderId    | string | [userid](/docs/Ethos-SDK/JS-SDK/standards/#userid) | The [userid](/docs/Ethos-SDK/JS-SDK/standards/#userid) of this message. | "user: xxx"                |
+| topic       | string | userid or groupid                                  | The chat room id of this message.                                       | "group: xxx"\| "user: xxx" |
+| chatId      | string | userid or groupid                                  | The chat room id of this message.                                       | "group: xxx"\| "user: xxx" |
+| content     | string | -                                                  | Content of the message.                                                 | 'hello'                    |
+| contentType | string | 'text'                                             | Currently only one type of `text` is supported.                         | 'text                      |
+| timestamp   | number | -                                                  | Timestamp of when the message was sent.                                 | -                          |
+| messageId   | string | -                                                  | identity of message.                                                    | -                          |
+| date        | number | -                                                  | Date the message was sent.                                              | 2023-01-01                 |
+| time        | number | -                                                  | The time the message was sent.                                          | 12:00                      |
+| msgLoading  | string | 'success'\|'error' \| 'loading'                    | Indicates whether the message was sent successfully.                    | -                          |
 
 ### SearchUsersResponse
 
-| name           | type                                                   | format                                                            | desc           | eg                  |
-| -------------- | ------------------------------------------------------ | ----------------------------------------------------------------- | -------------- | ------------------- |
-| userid         | string                                                 | [userid](/docs/Ethos-SDK/JS-SDK/standards/#userid)                | userid of user | "user: xxx"         |
-| wallet_address | string                                                 | [walletAddress](/docs/Ethos-SDK/JS-SDK/standards/#wallet-address) | wallet address | "0x000000"          |
-| wallet_type    | [WalletType](/docs/Ethos-SDK/JS-SDK/types/#wallettype) | [walletType](/docs/Ethos-SDK/JS-SDK/standards/#blockchain-type)   | wallet type    | "eth" or "starknet" |
+| name           | type   | format                                                              | desc                         | eg                  |
+| -------------- | ------ | ------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| userid         | string | [userid](/docs/Ethos-SDK/JS-SDK/standards/#userid)                  | userid of user               | "user: xxx"         |
+| wallet_address | string | [walletAddress](/docs/Ethos-SDK/JS-SDK/standards/#wallet-address)   | wallet address               | "0x000000"          |
+| wallet_type    | string | [BlockChainType](/docs/Ethos-SDK/JS-SDK/standards/#blockchain-type) | chain type of wallet address | "eth" or "starknet" |
 
 ### UpdateMyProfileResponse
 
-| name           | type                                                   | format                                                            | desc            | eg                    |
-| -------------- | ------------------------------------------------------ | ----------------------------------------------------------------- | --------------- | --------------------- |
-| avatar_url     | string                                                 | -                                                                 | avatar resource | `https://www.xxx.com` |
-| nickname       | string                                                 | -                                                                 | nickname        | -                     |
-| userid         | string                                                 | [userid](/docs/Ethos-SDK/JS-SDK/standards/#userid)                | userid of user  | "user:xxx"            |
-| wallet_address | string                                                 | [walletAddress](/docs/Ethos-SDK/JS-SDK/standards/#wallet-address) | wallet address  | "0x000000"            |
-| wallet_type    | [WalletType](/docs/Ethos-SDK/JS-SDK/types/#wallettype) | [walletType](/docs/Ethos-SDK/JS-SDK/standards/#blockchain-type)   | userid of user  | "eth" or "starknet"   |
+| name           | type   | format                                                              | desc                  | eg                    |
+| -------------- | ------ | ------------------------------------------------------------------- | --------------------- | --------------------- |
+| avatar_url     | string | -                                                                   | avatar resource       | `https://www.xxx.com` |
+| nickname       | string | -                                                                   | nickname              | -                     |
+| userid         | string | [userid](/docs/Ethos-SDK/JS-SDK/standards/#userid)                  | userid of user        | "user:xxx"            |
+| wallet_address | string | [walletAddress](/docs/Ethos-SDK/JS-SDK/standards/#wallet-address)   | wallet address        | "0x000000"            |
+| wallet_type    | string | [BlockChainType](/docs/Ethos-SDK/JS-SDK/standards/#blockchain-type) | chain type of address | "eth" or "starknet"   |
 
 ### UserBindDidParams
 
@@ -297,15 +296,27 @@ position: 7
 | ----------- | ------------------------------------------------------------------------ | ------ | ---------------- | ---------------------------------------------- |
 | permissions | [UserPermissionsType](/docs/Ethos-SDK/JS-SDK/types/#userpermissionstype) | -      | user permissions | {'user: chat': {type: "enum",value: "public"}} |
 
-### NotifyResponse
+### NotificationType
 
-| name      | type                                                                                              | format | desc                       | eg  |
-| --------- | ------------------------------------------------------------------------------------------------- | ------ | -------------------------- | --- |
-| title     | string                                                                                            | -      | title of notification      | -   |
-| content   | string                                                                                            | -      | content of notification    | -   |
-| type      | "system.friend_request"\|"system.agree_friend_request"\|"system.group_invitation"\|"subscription" | -      | type of notification       | -   |
-| timestamp | number                                                                                            | -      | time stamp of notification | -   |
-| version   | number                                                                                            | -      | version of notification    | -   |
+| name      | type   | format                                                   | desc                       | eg         |
+| --------- | ------ | -------------------------------------------------------- | -------------------------- | ---------- |
+| come_from | string | [userid](/docs/Ethos-SDK/JS-SDK/standards/#userid)       | From which user            | "user:xxx" |
+| content   | string | -                                                        | content of notification    | -          |
+| messageId | string | -                                                        | id of notification         | -          |
+| metadata  | Object | -                                                        | metadata of notification   | -          |
+| read      | bool   | -                                                        | is read                    | -          |
+| timestamp | number | -                                                        | time stamp of notification | -          |
+| title     | string | -                                                        | title of notification      | -          |
+| type      | string | [Types](docs/Ethos-SDK/JS-SDK/notify/#notification-type) | type of notification       | -          |
+
+### QeuryNotificationsParams
+
+| name        | type   | format                                                          | isRqeuired | desc                                       | eg  |
+| ----------- | ------ | --------------------------------------------------------------- | ---------- | ------------------------------------------ | --- |
+| size        | number | -                                                               | true       | number of data items per page              | -   |
+| page        | number | -                                                               | true       | current page number                        | -   |
+| notice_type | string | [notice_type](/docs/Ethos-SDK/JS-SDK/notify/#notification-type) | false      | Query specific types of notifications      | -   |
+| read_status | string | [MessageStatus](/docs/Ethos-SDK/JS-SDK/types/#messagestatus)    | false      | Notification of querying a specific status | -   |
 
 ### SubscribeListType
 
@@ -345,21 +356,21 @@ position: 7
 
 ### GetMainKeypairParams
 
-| name      | type                                                   | format                                                 | desc             | eg         |
-| --------- | ------------------------------------------------------ | ------------------------------------------------------ | ---------------- | ---------- |
-| did_type  | [WalletType](/docs/Ethos-SDK/JS-SDK/types/#wallettype) | [WalletType](/docs/Ethos-SDK/JS-SDK/types/#wallettype) | wallet type      | "metamask" |
-| did_value | [didValue](/docs/Ethos-SDK/JS-SDK/types/#didvalue)     | [didValue](/docs/Ethos-SDK/JS-SDK/standards/#didvalue) | wallet address   | "0x000000" |
-| password  | string                                                 | -                                                      | password of user | -          |
+| name      | type   | format                                                         | desc             | eg                  |
+| --------- | ------ | -------------------------------------------------------------- | ---------------- | ------------------- |
+| did_type  | string | [BlockChainType](/docs/Ethos-SDK/JS-SDK/types/#blockchaintype) | wallet chain     | "eth" or "starknet" |
+| did_value | string | [didValue](/docs/Ethos-SDK/JS-SDK/standards/#didvalue)         | wallet address   | "0x000000"          |
+| password  | string | -                                                              | password of user | -                   |
 
 ### GetRegisterSignContentParams
 
-| name           | type                                                   | format                                                          | desc                                  | eg                     |
-| -------------- | ------------------------------------------------------ | --------------------------------------------------------------- | ------------------------------------- | ---------------------- |
-| didType        | [WalletType](/docs/Ethos-SDK/JS-SDK/types/#wallettype) | [WalletType](/docs/Ethos-SDK/JS-SDK/types/#wallettype)          | wallet type                           | "metamask"             |
-| didValue       | [didValue](/docs/Ethos-SDK/JS-SDK/types/#didvalue)     | [didValue](/docs/Ethos-SDK/JS-SDK/standards/#didvalue)          | did value,for example, wallet address | "0x000000"             |
-| mainPublicKey  | string                                                 | [PublicKey](/docs/Ethos-SDK/JS-SDK/standards/#master-publickey) | master public key                     | -                      |
-| signContentURI | string                                                 | -                                                               | url of the current page               | window.location.origin |
-| userid         | string                                                 | [userid](/docs/Ethos-SDK/JS-SDK/standards/#userid)              | useid of user                         | "user:xxx"             |
+| name           | type   | format                                                          | desc                                  | eg                     |
+| -------------- | ------ | --------------------------------------------------------------- | ------------------------------------- | ---------------------- |
+| didType        | string | [BlockChainType](/docs/Ethos-SDK/JS-SDK/types/#blockchaintype)  | wallet chain                          | "eth" or "starknet"    |
+| didValue       | string | [didValue](/docs/Ethos-SDK/JS-SDK/standards/#didvalue)          | did value,for example, wallet address | "0x000000"             |
+| mainPublicKey  | string | [PublicKey](/docs/Ethos-SDK/JS-SDK/standards/#master-publickey) | master public key                     | -                      |
+| signContentURI | string | -                                                               | url of the current page               | window.location.origin |
+| userid         | string | [userid](/docs/Ethos-SDK/JS-SDK/standards/#userid)              | useid of user                         | "user:xxx"             |
 
 ### GetSignContentResponse
 
@@ -384,29 +395,28 @@ position: 7
 
 ### LoginByKeysParams
 
-| name                   | type                                                   | format                                                            | desc                                          | eg         |
-| ---------------------- | ------------------------------------------------------ | ----------------------------------------------------------------- | --------------------------------------------- | ---------- |
-| didType                | [WalletType](/docs/Ethos-SDK/JS-SDK/types/#wallettype) | [WalletType](/docs/Ethos-SDK/JS-SDK/types/#wallettype)            | wallet type                                   | "metamask" |
-| didValue               | [didValue](/docs/Ethos-SDK/JS-SDK/types/#didvalue)     | [didValue](/docs/Ethos-SDK/JS-SDK/standards/#didvalue)            | did value,for example, wallet address         | "0x000000" |
-| mainPrivateKey         | string                                                 | [PrivateKey](/docs/Ethos-SDK/JS-SDK/standards/#master-privatekey) | master private key                            | -          |
-| mainPublicKey          | string                                                 | [PublicKey](/docs/Ethos-SDK/JS-SDK/standards/#master-publickey)   | master public key                             | -          |
-| password               | string                                                 | -                                                                 | Login password                                | -          |
-| pubkeyExpiredTimestamp | number                                                 | -                                                                 | the expiration time of the temporary key pair | -          |
-| userid                 | string                                                 | [userid](/docs/Ethos-SDK/JS-SDK/standards/#userid)                | useid of user                                 | "user:xxx" |
+| name                   | type                                               | format                                                            | desc                                          | eg                  |
+| ---------------------- | -------------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------------- | ------------------- |
+| didType                | string                                             | [BlockChainType](/docs/Ethos-SDK/JS-SDK/types/#blockchaintype)    | chain type of wallet address                  | "eth" or "starknet" |
+| didValue               | [didValue](/docs/Ethos-SDK/JS-SDK/types/#didvalue) | [didValue](/docs/Ethos-SDK/JS-SDK/standards/#didvalue)            | did value,for example, wallet address         | "0x000000"          |
+| mainPrivateKey         | string                                             | [PrivateKey](/docs/Ethos-SDK/JS-SDK/standards/#master-privatekey) | master private key                            | -                   |
+| mainPublicKey          | string                                             | [PublicKey](/docs/Ethos-SDK/JS-SDK/standards/#master-publickey)   | master public key                             | -                   |
+| password               | string                                             | -                                                                 | Login password                                | -                   |
+| pubkeyExpiredTimestamp | number                                             | -                                                                 | the expiration time of the temporary key pair | -                   |
+| userid                 | string                                             | [userid](/docs/Ethos-SDK/JS-SDK/standards/#userid)                | useid of user                                 | "user:xxx"          |
 
 ### RegisterBySignParams
 
-| name          | type                                                   | format                                                                     | desc                                  | eg         |
-| ------------- | ------------------------------------------------------ | -------------------------------------------------------------------------- | ------------------------------------- | ---------- |
-| avatar_base64 | string                                                 | -                                                                          | avatar resource is in base64 format   | -          |
-| avatar_url    | string                                                 | -                                                                          | avatar resource                       | -          |
-| did_pubkey    | string                                                 | [temporaryPublicKey](/docs/Ethos-SDK/JS-SDK/standards/#temporarypublickey) | temporary public key                  | -          |
-| didType       | [WalletType](/docs/Ethos-SDK/JS-SDK/types/#wallettype) | [WalletType](/docs/Ethos-SDK/JS-SDK/types/#wallettype)                     | wallet type                           | "metamask" |
-| didValue      | [didValue](/docs/Ethos-SDK/JS-SDK/types/#didvalue)     | [didValue](/docs/Ethos-SDK/JS-SDK/standards/#didvalue)                     | did value,for example, wallet address | "0x000000" |
-| mainPublicKey | string                                                 | [PublicKey](/docs/Ethos-SDK/JS-SDK/standards/#master-publickey)            | master public key                     | -          |
-| nickname      | string                                                 | -                                                                          | nickname                              | -          |
-| signature     | string                                                 | [signature](/docs/Ethos-SDK/JS-SDK/standards/#wallet-sign)                 | content of sign                       | -          |
-| userid        | string                                                 | [userid](/docs/Ethos-SDK/JS-SDK/standards/#userid)                         | useid of user                         | "user:xxx" |
+| name          | type   | format                                                                     | desc                                  | eg                  |
+| ------------- | ------ | -------------------------------------------------------------------------- | ------------------------------------- | ------------------- |
+| userid        | string | [userid](/docs/Ethos-SDK/JS-SDK/standards/#userid)                         | useid of user                         | "user:xxx"          |
+| didValue      | string | [didValue](/docs/Ethos-SDK/JS-SDK/standards/#didvalue)                     | did value,for example, wallet address | "0x000000"          |
+| mainPublicKey | string | [PublicKey](/docs/Ethos-SDK/JS-SDK/standards/#master-publickey)            | master public key                     | -                   |
+| signature     | string | [signature](/docs/Ethos-SDK/JS-SDK/standards/#wallet-sign)                 | content of sign                       | -                   |
+| did_pubkey    | string | [temporaryPublicKey](/docs/Ethos-SDK/JS-SDK/standards/#temporarypublickey) | temporary public key                  | -                   |
+| didType       | string | [BlockChainType](/docs/Ethos-SDK/JS-SDK/types/#blockchaintype)             | chain type of wallet address          | "starknet" or "eth" |
+| nickname      | string | -                                                                          | nickname                              | -                   |
+| avatar_url    | string | -                                                                          | avatar resource                       | -                   |
 
 ### RegisterApiResponse
 
@@ -442,16 +452,14 @@ position: 7
 
 ### ResetPasswordParams
 
-| name          | type                                               | format                                                     | desc                                  | eg         |
-| ------------- | -------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------- | ---------- |
-| avatar_base64 | string                                             | -                                                          | avatar resource is in base64 format   | -          |
-| avatar_url    | string                                             | -                                                          | avatar resource                       | -          |
-| did_type      | [didType](/docs/Ethos-SDK/JS-SDK/types/#didtype)   | [didType](/docs/Ethos-SDK/JS-SDK/standards/#didtype)       | did type                              | "eth"      |
-| did_value     | [didValue](/docs/Ethos-SDK/JS-SDK/types/#didvalue) | [didValue](/docs/Ethos-SDK/JS-SDK/standards/#didvalue)     | did value,for example, wallet address | "0x000000" |
-| nickname      | string                                             | -                                                          | nickname                              | -          |
-| password      | string                                             | -                                                          | Login password                        | -          |
-| signature     | string                                             | [signature](/docs/Ethos-SDK/JS-SDK/standards/#wallet-sign) | content of sign                       | -          |
-| userid        | string                                             | [userid](/docs/Ethos-SDK/JS-SDK/standards/#userid)         | useid of user                         | "user:xxx" |
+| name          | type   | format                                                                     | desc                                  | eg                  |
+| ------------- | ------ | -------------------------------------------------------------------------- | ------------------------------------- | ------------------- |
+| userid        | string | [userid](/docs/Ethos-SDK/JS-SDK/standards/#userid)                         | useid of user                         | "user:xxx"          |
+| didValue      | string | [didValue](/docs/Ethos-SDK/JS-SDK/standards/#didvalue)                     | did value,for example, wallet address | "0x000000"          |
+| mainPublicKey | string | [PublicKey](/docs/Ethos-SDK/JS-SDK/standards/#master-publickey)            | master public key                     | -                   |
+| signature     | string | [signature](/docs/Ethos-SDK/JS-SDK/standards/#wallet-sign)                 | content of sign                       | -                   |
+| did_pubkey    | string | [temporaryPublicKey](/docs/Ethos-SDK/JS-SDK/standards/#temporarypublickey) | temporary public key                  | -                   |
+| didType       | string | [BlockChainType](/docs/Ethos-SDK/JS-SDK/types/#blockchaintype)             | chain type of wallet address          | "starknet" or "eth" |
 
 ### ResetPasswordResponse
 
