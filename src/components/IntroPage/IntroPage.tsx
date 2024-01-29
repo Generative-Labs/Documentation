@@ -10,7 +10,7 @@ const cardList = [
     title: 'DAppMQ',
     icon: <NekworkIcon style={{height: '40px'}} />,
     description: 'Sovereign reach between decentralized applications (including Wallets, DIDs, GameFi, and other dapps) enabled by a fully open and trustless network',
-    href: '/docs/Ethos-SDK/JS-SDK/dappConnect/',
+    href: '/docs/Web3MQ-SDK/JS-SDK/dappConnect/',
   },
   {
     title: 'SocialMQ',
