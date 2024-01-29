@@ -28,17 +28,17 @@ position: 3
 
 ## Methods
 
-| name                                                               | type     | Parameters Description                                                                        | response                                                                             |
-| ------------------------------------------------------------------ | -------- | --------------------------------------------------------------------------------------------- |--------------------------------------------------------------------------------------|
-| [init](/docs/Ethos-SDK/JS-SDK/client/#init)                       | function | [InitOptions](/docs/Ethos-SDK/JS-SDK/types/#initoptions)                                     | Promise: [EthosAPiEndpoints](/docs/Ethos-SDK/JS-SDK/standards/#web3mq-api-endpoints) |
-| [getInstance](/docs/Ethos-SDK/JS-SDK/client/#getinstance)         | function | [KeyPairsType](/docs/Ethos-SDK/JS-SDK/types/#keypairstype)                                   | [Client](/docs/Ethos-SDK/JS-SDK/client)                                              |
-| [getSignClient](/docs/Ethos-SDK/JS-SDK/client/#getsignclient)     | function | ([SendTempConnectOptions](/docs/Ethos-SDK/JS-SDK/types/#sendtempconnectoptions), callbackFn) | void                                                                                 |
-| [initDappConnectClient](/docs/Ethos-SDK/JS-SDK/client/#getQrCodeClient) | function | ([SendTempConnectOptions](/docs/Ethos-SDK/JS-SDK/types/#sendtempconnectoptions), callbackFn) | void                                                                                 |
+| name                                                               | type     | Parameters Description                                                                        | response                                 |
+| ------------------------------------------------------------------ | -------- | --------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| [init](/docs/Ethos-SDK/JS-SDK/client/#init)                       | function | [InitOptions](/docs/Ethos-SDK/JS-SDK/types/#initoptions)                                     | Promise: [Web3MQAPiEndpoints](/docs/Ethos-SDK/JS-SDK/standards/#web3mq-api-endpoints)|
+| [getInstance](/docs/Ethos-SDK/JS-SDK/client/#getinstance)         | function | [KeyPairsType](/docs/Ethos-SDK/JS-SDK/types/#keypairstype)                                   | [Client](/docs/Ethos-SDK/JS-SDK/client) |
+| [getSignClient](/docs/Ethos-SDK/JS-SDK/client/#getsignclient)     | function | ([SendTempConnectOptions](/docs/Ethos-SDK/JS-SDK/types/#sendtempconnectoptions), callbackFn) | void                                     |
+| [initDappConnectClient](/docs/Ethos-SDK/JS-SDK/client/#getQrCodeClient) | function | ([SendTempConnectOptions](/docs/Ethos-SDK/JS-SDK/types/#sendtempconnectoptions), callbackFn) | void                                     |
 
 ## Methods
 
 ### init()
-> Connect the best Ethos's network node.
+> Connect the best Web3MQ's network node.
 
 ```ts
 import { Client } from "@web3mq/client";
