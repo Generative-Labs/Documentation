@@ -144,7 +144,7 @@ let wsconn = GetWSConn();
 
 let timestamp = Date.now();
 
-var payload = new TextEncoder().encode('hello ethos');
+var payload = new TextEncoder().encode('hello web3mq');
 
 const msgid = await GenerateMessageID(userId, topic, timestamp, payload);
 

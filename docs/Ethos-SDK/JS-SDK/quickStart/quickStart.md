@@ -107,7 +107,7 @@ Connect to these endpoints below, to access the Ethos Testnet.
 
 > Sign with wallet to register user and obtain message encryption keys
 
-For any first-time user of Ethos's network, you'll need to register on Ethos's network. Ethos's JS SDK takes care of
+For any first-time user of Web3MQ's network, you'll need to register on Web3MQ's network. Web3MQ's JS SDK takes care of
 the key generation process and subsequent wallet signing process. Client.register.register is a utility method that does
 this automatically.
 
@@ -194,7 +194,7 @@ loginDemo()
 
 #### Installation
 
-Install Ethos's react components using a package manager of your choice
+Install Web3MQ's react components using a package manager of your choice
 
 ```bash
 npm install @web3mq/react-components

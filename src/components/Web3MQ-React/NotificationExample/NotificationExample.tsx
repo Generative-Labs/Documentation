@@ -20,7 +20,7 @@ export const NotificationExample: React.FC = () => {
 
   if (!keys) {
     return (
-      <Button size='large' type='ghost'><a href="/docs/Ethos-UI-Components/Ethos-React/chatComponent/LoginModal#basic-usage" style={{textDecoration: 'none'}}>Please login first</a></Button>
+      <Button size='large' type='ghost'><a href="/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/LoginModal#basic-usage" style={{textDecoration: 'none'}}>Please login first</a></Button>
     );
   }
   if (!fastestUrl) {

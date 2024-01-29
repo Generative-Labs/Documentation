@@ -4,9 +4,9 @@ sidebar_position: 0
 
 # Intro
 
-Ethos Vue Component Libraries
+Web3MQ Vue Component Libraries
 :::warning
-Due to `@web3mq/client` update iteration, `@web3mq/vue-components` is not synchronized to support the latest version, please go to [@web3mq/React-components](/docs/Ethos-UI-Components/Ethos-React/Intro) first
+Due to `@web3mq/client` update iteration, `@web3mq/vue-components` is not synchronized to support the latest version, please go to [@web3mq/React-components](/docs/Ethos-UI-Components/Web3MQ-React/Intro) first
 :::
 ### Install with NPM
 
@@ -20,7 +20,7 @@ npm install @web3mq/vue-components
 yarn add @web3mq/vue-components
 ```
 
-## Creating a Ethos Client
+## Creating a Web3MQ Client
 
 ```tsx
 import { Web3MQ } from '@web3mq/client';
@@ -28,7 +28,7 @@ import { Web3MQ } from '@web3mq/client';
 const client = Web3MQ.getInstance('YOUR_ACCESS_TOKEN');
 ```
 
-## Your First App with Ethos Vue
+## Your First App with Web3MQ Vue
 
 #### Full Example
 
@@ -47,24 +47,24 @@ code={<VueMdx />}>
 
 ```vue
 <script lang="ts" setup>
-  import { Client } from '@web3mq/client';
-  import {
-    Chat,
-    DashBoard,
-    Channel,
-    Window,
-    MessageHeader,
-    MessageList,
-    MessageInput,
-  } from "@web3mq/vue-components";
-  import { ref } from 'vue';
+import { Client } from '@web3mq/client';
+import {
+  Chat,
+  DashBoard,
+  Channel,
+  Window,
+  MessageHeader,
+  MessageList,
+  MessageInput,
+} from "@web3mq/vue-components";
+import { ref } from 'vue';
 
-  // Use your own logic to decide which pattern to use
-  const appType = ref<'pc' | 'h5'>(window.innerWidth <= 600 ? 'h5' : 'pc');
+// Use your own logic to decide which pattern to use
+const appType = ref<'pc' | 'h5'>(window.innerWidth <= 600 ? 'h5' : 'pc');
 
-  const logout = () => {
-    // logout function
-  };
+const logout = () => {
+  // logout function
+};
 
 </script>
 <template>

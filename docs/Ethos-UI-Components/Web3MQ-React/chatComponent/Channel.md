@@ -13,7 +13,7 @@ The `Channel` component is a React Context provider that wraps all of the logic,
 
 The `Channel` component does not inject any UI, so its implementation is fairly simple.The `Channel` component listens for the `channel.activeChange` event and captures the latest `activeChannel` for its child components to fetch via `ChannelStateContext`.
 :::tip
-If your channelList list is empty, you can create a chat room in [createChannel](/docs/Ethos-UI-Components/Ethos-React/chatComponent/CreateChannel).
+If your channelList list is empty, you can create a chat room in [createChannel](/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/CreateChannel).
 :::
 
 import { Layout } from '@site/src/components/Layout'

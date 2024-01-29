@@ -168,7 +168,7 @@ const PbTypeMessage = 0b00010000;
 let wsconn;
 wsconn = GetWSConn();
 
-var payload = new TextEncoder().encode('hello ethos');
+var payload = new TextEncoder().encode('hello web3mq');
 
 let msgReq: Web3MQRequestMessage = {
   payload: payload,

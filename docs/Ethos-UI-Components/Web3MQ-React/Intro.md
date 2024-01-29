@@ -17,12 +17,12 @@ yarn add @web3mq/react-components
 ```
 
 # Usage
-**Before using the @web3mq/react-components component library, we need to understand a series of processes for initializing Ethos.And Ethos network nodes, key pairs and other dependencies need to be provided by the user to the component library**
+**Before using the @web3mq/react-components component library, we need to understand a series of processes for initializing Web3MQ.And Web3MQ network nodes, key pairs and other dependencies need to be provided by the user to the component library**
 
-In all example, the dependencies used to generate Ethos are stored in the browser cache, or the user can choose how they want to store them.
+In all example, the dependencies used to generate Web3mq are stored in the browser cache, or the user can choose how they want to store them.
 
 ## Initialize Client
-> Initialize Client and Connect to Ethos Network.[Details](/docs/Ethos-SDK/JS-SDK/quickStart/#initialize-client)
+> Initialize Client and Connect to Web3MQ Network.[Details](/docs/Ethos-SDK/JS-SDK/quickStart/#initialize-client)
 
 ```ts
 import { useState } from 'react';
@@ -46,10 +46,10 @@ const init = async () => {
 };
 ```
 
-## Get the Key pair for generating the Ethos client
-> First you need to register and login to get. [Details](/docs/Ethos-SDK/JS-SDK/quickStart/#register-user). But the @web3mq/react-components component library provides a `LoginModal` component to make it easier for you to get the dependencies for creating a Ethos Client.
+## Get the Key pair for generating the web3mq client
+> First you need to register and login to get. [Details](/docs/Ethos-SDK/JS-SDK/quickStart/#register-user). But the @web3mq/react-components component library provides a `LoginModal` component to make it easier for you to get the dependencies for creating a Web3MQ Client.
 
-The required props of `LoginModal`, `handleLoginEvent`, is the callback used for login or registration, in which you can get the data after login and registration. And you can also refer to the following examples. [Details](/docs/Ethos-UI-Components/Ethos-React/chatComponent/LoginModal#use-handleloginevent-prop)
+The required props of `LoginModal`, `handleLoginEvent`, is the callback used for login or registration, in which you can get the data after login and registration. And you can also refer to the following examples. [Details](/docs/Ethos-UI-Components/Web3MQ-React/chatComponent/LoginModal#use-handleloginevent-prop)
 
 ```tsx
 import React, { useState } from 'react';
@@ -143,7 +143,7 @@ export const App = () => {
 ```
 
 ## An example of initializing login hooks
-> The above two steps can be combined into a very simple hooks for login,Here is a simple hook function that provides dependencies for you to create Ethos Client.
+> The above two steps can be combined into a very simple hooks for login,Here is a simple hook function that provides dependencies for you to create web3MQ Client.
 
 ```tsx
 import { useMemo, useState } from 'react';
@@ -227,7 +227,7 @@ const useLogin = () => {
 export default useLogin;
 
 ```
-## Creating a Ethos Client
+## Creating a Web3MQ Client
 
 ```tsx
 import { Client } from '@web3mq/client';
@@ -235,7 +235,7 @@ import { Client } from '@web3mq/client';
 const client = Client.getInstance('YOUR_ACCESS_TOKEN');
 ```
 
-## Your First App with Ethos React
+## Your First App with Web3MQ React
 > Congratulations, we have reached the last step and combined with the login hooks, we can build a complete chat application interface!
 :::tip
 When using the `@web3mq/react-components` 

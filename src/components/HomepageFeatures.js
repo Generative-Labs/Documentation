@@ -49,7 +49,7 @@ const cardList = [
     icon: <UploadIcon />,
     description:
       "Actionable social connections among users of decentralized applications to de-fragmentize the current Web3 social ecosystem",
-    href: "/docs/Tutorials/ethos/",
+    href: "/docs/Tutorials/web3mq/",
   },
   {
     title: "PushMQ",
@@ -93,7 +93,7 @@ export default function HomepageFeatures() {
               marginTop: "16px",
             }}
           >
-            <a className={styles.cardLink} href={card.href}>
+            <a className={styles.cardLink} to={card.href}>
               Get Started with {card.title} &#8594;
             </a>
           </div>

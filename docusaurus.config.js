@@ -117,7 +117,7 @@ const config = {
         appId: 'LULEB9WV0U',
         // Public API key: it is safe to commit it
         apiKey: '9933043110ab8e7cf101b9bb08cd03bc',
-        indexName: 'ethos',
+        indexName: 'web3mq',
         contextualSearch: true,
       },
     }),
