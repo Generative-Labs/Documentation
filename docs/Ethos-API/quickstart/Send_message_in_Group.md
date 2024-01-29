@@ -26,7 +26,7 @@ message Web3MQRequestMessage {
 }
 ```
 
-use `Ethos JSSDK` or build protobuf yourself
+use `Web3MQ JSSDK` or build protobuf yourself
 
 **Send message**
 

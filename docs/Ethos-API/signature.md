@@ -6,12 +6,19 @@ order: 20
 sidebar_position: 20
 ---
 
-# Ethos Signature
+# Web3MQ Signature
 
-- Ethos use ed25519 key pair for signing of requests
+- Web3MQ use ed25519 key pair for signing of requests
 
 
 ## Signing requests data
+
+```tsx
+import React from 'react';
+import { Ed25519SignatureApp } from 'Web3MQ-Docs';
+
+export default () => <Ed25519SignatureApp />;
+```
 
 _code example_
 

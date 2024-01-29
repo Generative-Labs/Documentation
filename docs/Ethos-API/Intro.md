@@ -42,7 +42,7 @@ sidebar_position: 0
 - Send Message
 - Receive Message
 
-> You can use `Ethos JSSDK` or build protobuf yourself
+> You can use `Web3MQ JSSDK` or build protobuf yourself
 
 **Connect Command protobuf**
 
@@ -91,7 +91,7 @@ const HostURL = 'us-west-2.web3mq'; // choose one domain
 const GetWSConn = () => {
   const wsurl = WS_PROTOCOL + '://' + HostURL + '/messages';
   const wsconn = new WebSocket(wsurl);
-  wsconn.binaryType = 'arraybuffer'; // !important Ethos send message use protobuf
+  wsconn.binaryType = 'arraybuffer'; // !important Web3MQ send message use protobuf
   return wsconn;
 };
 
