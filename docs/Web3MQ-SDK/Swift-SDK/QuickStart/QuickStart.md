@@ -42,7 +42,7 @@ Let's get started by initializing the client.
 :::
 
 ```swift
-import Ethos
+import Web3MQ
 
 ChatClient.default.setup(appKey: "{AppKey}")
 ```
@@ -80,7 +80,7 @@ public protocol WalletConnector {
 
 ### Register
 
-For any first-time user of Ethos's network, you'll need to register on Ethos's network. SDK takes care of the key generation process and subsequent wallet signing process.
+For any first-time user of Web3MQ's network, you'll need to register on Web3MQ's network. SDK takes care of the key generation process and subsequent wallet signing process.
 
 ```swift
 // Keep your private key in a safe place!

@@ -7,7 +7,7 @@ sidebar_position: 1
 ## REQUIREMENTS
 
 - Dart SDK:  “>=2.18.5 <4.0.0”
-- A Ethos API Key
+- A Web3MQ API Key
 
 ## Add dependency
 
@@ -22,7 +22,7 @@ You should then run `flutter packages get`
 
 ## Initial the SDK
 
-For an API-key, see detail:  [https://docs.web3mq.com/docs/Ethos-API/dapp/create_dapp/](https://docs.web3mq.com/docs/Ethos-API/dapp/create_dapp/)  
+For an API-key, see detail:  [https://docs.web3mq.com/docs/Web3MQ-API/dapp/create_dapp/](https://docs.web3mq.com/docs/Web3MQ-API/dapp/create_dapp/)  
 
 ```dart
 final client = DappConnectClient(
