@@ -12,7 +12,7 @@ or
 yarn add web3
 ```
 
-Install Ethos's JS SDK using a package manager of your choice
+Install Web3MQ's JS SDK using a package manager of your choice
 
 ```bash
 npm install @web3mq/client
@@ -22,23 +22,23 @@ yarn add @web3mq/client
 
 ### Initialize Client
 
-> Initialize Client and Connect to Ethos Network
+> Initialize Client and Connect to Web3MQ Network
 
-In order to connect to the Ethos Network, both users and developers authenticate through wallet signatures, we
-demonstrate below with an Ethereum wallet via Metamask, but Ethos is built to be compatible with wallets across
+In order to connect to the Web3MQ Network, both users and developers authenticate through wallet signatures, we
+demonstrate below with an Ethereum wallet via Metamask, but Web3MQ is built to be compatible with wallets across
 different chains.
 
-#### Initialize Client and Connect to Ethos Network
+#### Initialize Client and Connect to Web3MQ Network
 
 :::note
 
 While we are committed to building an open and collectively owned public good, our early stage testnet requires an API
 key in order to connect. This is to control capacity to make sure that each early partner and developer is able to build
-a great experience on top of Ethos. [Apply here](https://web3mq.com/apply).
+a great experience on top of Web3MQ. [Apply here](https://web3mq.com/apply).
 
 :::
 
-As Ethos is a federated network, our default JS SDK client has a method to help you connect to the best node for you.
+As Web3MQ is a federated network, our default JS SDK client has a method to help you connect to the best node for you.
 
 Simply calling Client.init without connectUrl or an empty string returns a url of the best node determined for you, and
 this url can be stored locally.
@@ -67,8 +67,8 @@ const fastUrl = await Client.init({
 
 #### API endpoints
 
-During this initial testing phase, we've hosted complete networks of Ethos nodes in different regions around the globe.
-Connect to these endpoints below, to access the Ethos Testnet.
+During this initial testing phase, we've hosted complete networks of Web3MQ nodes in different regions around the globe.
+Connect to these endpoints below, to access the Web3MQ Testnet.
 
 - https://testnet-us-west-1-1.web3mq.com
 - https://testnet-us-west-1-2.web3mq.com
@@ -126,7 +126,7 @@ return {
 };
 ```
 
-2. You need to first generate a main key pair based on your custom password encryption, this secret key pair has the highest authority over your Ethos account, so you need to keep it very safe
+2. You need to first generate a main key pair based on your custom password encryption, this secret key pair has the highest authority over your web3mq account, so you need to keep it very safe
 ```tsx
 const walletType = 'eth' | 'starknet'
 const password = '123456'
@@ -168,7 +168,7 @@ const params = {
 const registerRes = await Client.register.register(params);
 // register success
 ```
-3. After successful registration, you can get a pair of temporary keys with the secret key pair you just generated and the password, this pair of keys is to allow you to login to the Ethos network more securely and quickly
+3. After successful registration, you can get a pair of temporary keys with the secret key pair you just generated and the password, this pair of keys is to allow you to login to the Web3MQ network more securely and quickly
 ```ts
 // login func
 const {
@@ -189,11 +189,11 @@ const {
 ### Get client instance
 
 :::tip
-Before that, let's take a look at the parameters of Client.init(), [InitOptions](/docs/Ethos-SDK/JS-SDK/types/#initoptions), two parameters that need special attention,
+Before that, let's take a look at the parameters of Client.init(), [InitOptions](/docs/Web3MQ-SDK/JS-SDK/types/#initoptions), two parameters that need special attention,
 1. didKey  (Format：walletType:walletAddress  eg:   eth:0x00000000000)
 2. tempPubkey  ( The temporary public key returned to you after a successful login )
 
-These two parameters ensure that your Ethos client is online, so after you have successfully logged in, you will need to pass this parameter every time you call the init method
+These two parameters ensure that your web3mq client is online, so after you have successfully logged in, you will need to pass this parameter every time you call the init method
 :::
 
 ```tsx
